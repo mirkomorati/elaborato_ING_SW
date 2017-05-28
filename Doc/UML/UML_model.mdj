@@ -1,7 +1,7 @@
 {
 	"_type": "Project",
 	"_id": "AAAAAAFF+h6SjaM2Hec=",
-	"name": "Untitled",
+	"name": "Elaborato_ING_SW",
 	"ownedElements": [
 		{
 			"_type": "UMLModel",
@@ -8094,5 +8094,6 @@
 			],
 			"visibility": "public"
 		}
-	]
+	],
+	"author": "Noè Murr, Mirko Morati"
 }
