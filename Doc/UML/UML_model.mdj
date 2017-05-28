@@ -22,662 +22,6 @@
 					"defaultDiagram": true
 				},
 				{
-					"_type": "UMLActor",
-					"_id": "AAAAAAFcTos4IVElHa8=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Medico",
-					"ownedElements": [
-						{
-							"_type": "UMLAssociation",
-							"_id": "AAAAAAFcT8Fyk1anEzM=",
-							"_parent": {
-								"$ref": "AAAAAAFcTos4IVElHa8="
-							},
-							"name": "Emette la ricetta",
-							"end1": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT8Fyk1aoqjE=",
-								"_parent": {
-									"$ref": "AAAAAAFcT8Fyk1anEzM="
-								},
-								"name": "1",
-								"reference": {
-									"$ref": "AAAAAAFcTos4IVElHa8="
-								},
-								"visibility": "public",
-								"navigable": false,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"end2": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT8Fyk1apGOs=",
-								"_parent": {
-									"$ref": "AAAAAAFcT8Fyk1anEzM="
-								},
-								"name": "...",
-								"reference": {
-									"$ref": "AAAAAAFcT8EIvVXU00k="
-								},
-								"visibility": "public",
-								"navigable": true,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"visibility": "public",
-							"isDerived": false
-						},
-						{
-							"_type": "UMLAssociation",
-							"_id": "AAAAAAFcT+0NVHT7zAw=",
-							"_parent": {
-								"$ref": "AAAAAAFcTos4IVElHa8="
-							},
-							"name": "Visita il paziente",
-							"end1": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT+0NVXT8ySo=",
-								"_parent": {
-									"$ref": "AAAAAAFcT+0NVHT7zAw="
-								},
-								"name": "1",
-								"reference": {
-									"$ref": "AAAAAAFcTos4IVElHa8="
-								},
-								"visibility": "public",
-								"navigable": true,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"end2": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT+0NVXT9F84=",
-								"_parent": {
-									"$ref": "AAAAAAFcT+0NVHT7zAw="
-								},
-								"name": "1",
-								"reference": {
-									"$ref": "AAAAAAFcT+oa/Wx/XC0="
-								},
-								"visibility": "public",
-								"navigable": true,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"visibility": "public",
-							"isDerived": false
-						}
-					],
-					"stereotype": "Utente",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false
-				},
-				{
-					"_type": "UMLActor",
-					"_id": "AAAAAAFcTouMPVFPyAM=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Medico Consorziato",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFcTouMZFF4H6Y=",
-							"_parent": {
-								"$ref": "AAAAAAFcTouMPVFPyAM="
-							},
-							"source": {
-								"$ref": "AAAAAAFcTouMPVFPyAM="
-							},
-							"target": {
-								"$ref": "AAAAAAFcTos4IVElHa8="
-							},
-							"visibility": "public"
-						}
-					],
-					"stereotype": "Utente",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false
-				},
-				{
-					"_type": "UMLActor",
-					"_id": "AAAAAAFcTovfClGLNiE=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Medico di Base",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFcTovfMFG0KNg=",
-							"_parent": {
-								"$ref": "AAAAAAFcTovfClGLNiE="
-							},
-							"source": {
-								"$ref": "AAAAAAFcTovfClGLNiE="
-							},
-							"target": {
-								"$ref": "AAAAAAFcTos4IVElHa8="
-							},
-							"visibility": "public"
-						}
-					],
-					"stereotype": "Utente",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false
-				},
-				{
-					"_type": "UMLUseCaseSubject",
-					"_id": "AAAAAAFcTozprVIBwDo=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Prescrizione Farmaci",
-					"visibility": "public"
-				},
-				{
-					"_type": "UMLUseCase",
-					"_id": "AAAAAAFcTo6br1IbjCQ=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Richiesta prescrizione",
-					"documentation": "# Specifica Richiesta di prescrizione\n\n--- \n## Pre-condizioni\n\n* Il __Paziente__ deve soffrire di una malattia cronica.\n\n---\n## Schema di base\n\n1. Il __Paziente__ sottopone alla __Segreteria__ una richiesta.\n2. Se il __Paziente__ non è registrato:\n    1. La __Segreteria__ provvederà a registrare il __Paziente__.\n3. La __Segreteria__ richiederà al paziente il nome del farmaco richiesto dal __Paziente__.\n4. La __Segreteria__ raccoglierà la richiesta del __Paziente__.\n\n---\n## Post-condizioni\n\n* La richiesta del __Paziente__ è stata raccolta.",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"extensionPoints": [
-						{
-							"_type": "UMLExtensionPoint",
-							"_id": "AAAAAAFcT6ENQ1EF7J4=",
-							"_parent": {
-								"$ref": "AAAAAAFcTo6br1IbjCQ="
-							},
-							"name": "Paziente non registrato",
-							"visibility": "public"
-						}
-					]
-				},
-				{
-					"_type": "UMLActor",
-					"_id": "AAAAAAFcTo8wKlJOJmg=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Paziente",
-					"ownedElements": [
-						{
-							"_type": "UMLAssociation",
-							"_id": "AAAAAAFcTpQYL1UnMX8=",
-							"_parent": {
-								"$ref": "AAAAAAFcTo8wKlJOJmg="
-							},
-							"name": "Il paziente effettua una richiesta",
-							"end1": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcTpQYL1Uo/70=",
-								"_parent": {
-									"$ref": "AAAAAAFcTpQYL1UnMX8="
-								},
-								"name": "1",
-								"reference": {
-									"$ref": "AAAAAAFcTo8wKlJOJmg="
-								},
-								"visibility": "public",
-								"navigable": false,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"end2": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcTpQYL1UpX2k=",
-								"_parent": {
-									"$ref": "AAAAAAFcTpQYL1UnMX8="
-								},
-								"name": "...",
-								"reference": {
-									"$ref": "AAAAAAFcTo6br1IbjCQ="
-								},
-								"visibility": "public",
-								"navigable": true,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"visibility": "public",
-							"isDerived": false
-						},
-						{
-							"_type": "UMLAssociation",
-							"_id": "AAAAAAFcT9+abV2CWaY=",
-							"_parent": {
-								"$ref": "AAAAAAFcTo8wKlJOJmg="
-							},
-							"name": "Ritira la ricetta",
-							"end1": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT9+abV2DQ18=",
-								"_parent": {
-									"$ref": "AAAAAAFcT9+abV2CWaY="
-								},
-								"name": "1",
-								"reference": {
-									"$ref": "AAAAAAFcTo8wKlJOJmg="
-								},
-								"visibility": "public",
-								"navigable": true,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"end2": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT9+abV2E+P4=",
-								"_parent": {
-									"$ref": "AAAAAAFcT9+abV2CWaY="
-								},
-								"name": "...",
-								"reference": {
-									"$ref": "AAAAAAFcT94iylpxbdg="
-								},
-								"visibility": "public",
-								"navigable": true,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"visibility": "public",
-							"isDerived": false
-						},
-						{
-							"_type": "UMLAssociation",
-							"_id": "AAAAAAFcT+wNgHJ+MZU=",
-							"_parent": {
-								"$ref": "AAAAAAFcTo8wKlJOJmg="
-							},
-							"name": "Si presenta alla visita",
-							"end1": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT+wNgHJ/Nak=",
-								"_parent": {
-									"$ref": "AAAAAAFcT+wNgHJ+MZU="
-								},
-								"name": "1",
-								"reference": {
-									"$ref": "AAAAAAFcTo8wKlJOJmg="
-								},
-								"visibility": "public",
-								"navigable": false,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"end2": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT+wNgHKAQdw=",
-								"_parent": {
-									"$ref": "AAAAAAFcT+wNgHJ+MZU="
-								},
-								"name": "1",
-								"reference": {
-									"$ref": "AAAAAAFcT+oa/Wx/XC0="
-								},
-								"visibility": "public",
-								"navigable": true,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"visibility": "public",
-							"isDerived": false
-						}
-					],
-					"stereotype": "Cliente",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false
-				},
-				{
-					"_type": "UMLActor",
-					"_id": "AAAAAAFcTo9vllJ6YmA=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Segreteria",
-					"ownedElements": [
-						{
-							"_type": "UMLAssociation",
-							"_id": "AAAAAAFcTpXz11a6NIc=",
-							"_parent": {
-								"$ref": "AAAAAAFcTo9vllJ6YmA="
-							},
-							"name": "riceve la richiesta",
-							"end1": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcTpXz2Fa7gvA=",
-								"_parent": {
-									"$ref": "AAAAAAFcTpXz11a6NIc="
-								},
-								"name": "1",
-								"reference": {
-									"$ref": "AAAAAAFcTo9vllJ6YmA="
-								},
-								"visibility": "public",
-								"navigable": true,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"end2": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcTpXz2Fa8O5U=",
-								"_parent": {
-									"$ref": "AAAAAAFcTpXz11a6NIc="
-								},
-								"name": "...",
-								"reference": {
-									"$ref": "AAAAAAFcTo6br1IbjCQ="
-								},
-								"visibility": "public",
-								"navigable": true,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"visibility": "public",
-							"isDerived": false
-						},
-						{
-							"_type": "UMLAssociation",
-							"_id": "AAAAAAFcT6AivE+ZHds=",
-							"_parent": {
-								"$ref": "AAAAAAFcTo9vllJ6YmA="
-							},
-							"name": "Registra il paziente",
-							"end1": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT6AivE+aGxo=",
-								"_parent": {
-									"$ref": "AAAAAAFcT6AivE+ZHds="
-								},
-								"name": "1",
-								"reference": {
-									"$ref": "AAAAAAFcTo9vllJ6YmA="
-								},
-								"visibility": "public",
-								"navigable": false,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"end2": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT6AivE+bgy0=",
-								"_parent": {
-									"$ref": "AAAAAAFcT6AivE+ZHds="
-								},
-								"name": "1",
-								"reference": {
-									"$ref": "AAAAAAFcT57dyU4R9hQ="
-								},
-								"visibility": "public",
-								"navigable": true,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"visibility": "public",
-							"isDerived": false
-						},
-						{
-							"_type": "UMLAssociation",
-							"_id": "AAAAAAFcT97cpltJxog=",
-							"_parent": {
-								"$ref": "AAAAAAFcTo9vllJ6YmA="
-							},
-							"name": "Consegna la ricetta in seguito ad una richiesta del paziente",
-							"end1": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT97cpltK+Zg=",
-								"_parent": {
-									"$ref": "AAAAAAFcT97cpltJxog="
-								},
-								"name": "1",
-								"reference": {
-									"$ref": "AAAAAAFcTo9vllJ6YmA="
-								},
-								"visibility": "public",
-								"navigable": false,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"end2": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFcT97cpltL8fI=",
-								"_parent": {
-									"$ref": "AAAAAAFcT97cpltJxog="
-								},
-								"name": "...",
-								"reference": {
-									"$ref": "AAAAAAFcT94iylpxbdg="
-								},
-								"visibility": "public",
-								"navigable": true,
-								"aggregation": "none",
-								"isReadOnly": false,
-								"isOrdered": false,
-								"isUnique": false,
-								"isDerived": false,
-								"isID": false
-							},
-							"visibility": "public",
-							"isDerived": false
-						}
-					],
-					"stereotype": "Utente",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false
-				},
-				{
-					"_type": "UMLUseCase",
-					"_id": "AAAAAAFcT57dyU4R9hQ=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Registrazione Paziente",
-					"ownedElements": [
-						{
-							"_type": "UMLExtend",
-							"_id": "AAAAAAFcT57d9k5Emxw=",
-							"_parent": {
-								"$ref": "AAAAAAFcT57dyU4R9hQ="
-							},
-							"source": {
-								"$ref": "AAAAAAFcT57dyU4R9hQ="
-							},
-							"target": {
-								"$ref": "AAAAAAFcTo6br1IbjCQ="
-							},
-							"visibility": "public"
-						},
-						{
-							"_type": "UMLExtend",
-							"_id": "AAAAAAFcT/UuE4XR8QQ=",
-							"_parent": {
-								"$ref": "AAAAAAFcT57dyU4R9hQ="
-							},
-							"source": {
-								"$ref": "AAAAAAFcT57dyU4R9hQ="
-							},
-							"target": {
-								"$ref": "AAAAAAFcT+9tt3uDJuc="
-							},
-							"visibility": "public"
-						}
-					],
-					"documentation": "# Specifica Registrazione del paziente\n\n---\n\n## Pre-condizioni\n\n* Il __Paziente__ __*NON*__ deve essere registrato.\n\n---\n\n## Schema di Base\n\n1. L' __Utente__ chiede i seguenti dati al __Paziente__:\n    1. Codice Sanitario univoco.\n    2. Il cognome.\n    3. Il nome.\n    4. La data di nascita.\n    5. Il luogo di nascita.\n    6. Indirizzo di residenza composto da:\n        * Cap\n        * Via\n        * Numero civico\n        * Città \n        * Provincia       \n\t7. *Eventuali* fattori di rischio   \n2. La __Utente__ immette i dati del paziente all'interno del Sw.\n\n---\n\n## Post-condizioni\n\n* Il __Paziente__ è stato registrato con successo\n\n",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false
-				},
-				{
-					"_type": "UMLUseCase",
-					"_id": "AAAAAAFcT8EIvVXU00k=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Emissione ricetta su Richiesta",
-					"documentation": "# Specifica dell'Emissione di ricetta su Richiesta\n---\n## Pre-condizioni\n\n* La richiesta deve essere stata presentata alla segreteria la quale deve averla registrata.\n--- \n## Schema di base\n\n1. Il __Medico__ legge la richiesta.\n2. Il __Medico__ compila la ricetta con i seguenti dati:\n\t1. Un identificativo legato al __Paziente__ (codice sanitario).\n    2. La data di scadenza.\n    3. I farmaci prescritti.\n3. Il sistema aggiunge in automatico i seguenti campi alla ricetta:\n\t1. La data di emissione.\n    2. Il codice identificativo univoco della ricetta.\n4. Se il __Medico__ lo desidera può cambiare la data di emissione.\n5. Il __Medico__ conferma la Ricetta la quale viene registrata nel DB delle ricette Emesse.\n--- \n## Post-condizioni\n\n* La ricetta è stata emessa.",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false
-				},
-				{
-					"_type": "UMLUseCase",
-					"_id": "AAAAAAFcT94iylpxbdg=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Consegna della ricetta",
-					"documentation": "# Specifiche Per la consegna della ricetta\n---\n## Pre-condizioni\n\n* Una richiesta deve essere stata emessa.\n--- \n\n## Schema di base\n\n1. Se la ricetta è stata richiesta dal paziente:\n\t1. Il __Paziente__ si reca in __Segreteria__.\n    2. La __Segreteria__ consegna la ricetta al __Paziente__.\n2. Se la ricetta è stata emessa in seguito ad una visita:\n\t1. Il __Medico__ consegna la ricetta direttamente al __Paziente__.\n--- \n## Post-condizioni\n\n* IL __Paziente__ è in possesso della ricetta.\n",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false
-				},
-				{
-					"_type": "UMLUseCase",
-					"_id": "AAAAAAFcT+oa/Wx/XC0=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Visita del medico da parte del paziente",
-					"documentation": "# Specifica della visita del paziente\n---\n\n## Pre-condizioni\n\n* il paziente non si sente troppo bene.\n--- \n\n## Schema di base\n\n1. Il __Medico__ visita il __Paziente__.\n2. Se il __Paziente__ necessita di un farmaco:\n\t1. Il __Medico__ emette la ricetta.\n--- \n## Post-condizioni \n* il paziente non si sente meglio ma potrebbe sentirsi meglio dopo aver comprato il farmaco.\n",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"extensionPoints": [
-						{
-							"_type": "UMLExtensionPoint",
-							"_id": "AAAAAAFcT+68vHqqJo8=",
-							"_parent": {
-								"$ref": "AAAAAAFcT+oa/Wx/XC0="
-							},
-							"name": "Il paziente necessita di un farmaco",
-							"visibility": "public"
-						}
-					]
-				},
-				{
-					"_type": "UMLUseCase",
-					"_id": "AAAAAAFcT+9tt3uDJuc=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Emissione della ricetta dopo una visita",
-					"ownedElements": [
-						{
-							"_type": "UMLExtend",
-							"_id": "AAAAAAFcT/AouX4fXOU=",
-							"_parent": {
-								"$ref": "AAAAAAFcT+9tt3uDJuc="
-							},
-							"source": {
-								"$ref": "AAAAAAFcT+9tt3uDJuc="
-							},
-							"target": {
-								"$ref": "AAAAAAFcT+oa/Wx/XC0="
-							},
-							"visibility": "public"
-						},
-						{
-							"_type": "UMLInclude",
-							"_id": "AAAAAAFcT/Eh+oHAMJE=",
-							"_parent": {
-								"$ref": "AAAAAAFcT+9tt3uDJuc="
-							},
-							"source": {
-								"$ref": "AAAAAAFcT+9tt3uDJuc="
-							},
-							"target": {
-								"$ref": "AAAAAAFcT94iylpxbdg="
-							},
-							"visibility": "public"
-						}
-					],
-					"documentation": "# Specifiche per l'emissione di una ricetta in seguito ad una visita\n--- \n## Pre-condizioni\n* Il __Paziente__ necessita di un farmaco.\n--- \n## Schema di base\n\n1. Se il __Paziente__ non è registrato:\n\t1. il __Medico__ registra il paziente.\n2. Il __Medico__ compila la ricetta con i seguenti dati:\n\t1. Un identificativo legato al __Paziente__ (codice sanitario).\n    2. La data di scadenza.\n    3. I farmaci prescritti.\n3. Il sistema aggiunge in automatico i seguenti campi alla ricetta:\n\t1. La data di emissione.\n    2. Il codice identificativo univoco della ricetta.\n4. Se il __Medico__ lo desidera può cambiare la data di emissione.\n5. Il __Medico__ conferma la Ricetta la quale viene registrata nel DB delle ricette Emesse.\n6. Il __Medico__ provvede alla consegna del farmaco.\n--- \n## Post-condizioni\n* Il paziente è munito della ricetta.\n",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false
-				},
-				{
 					"_type": "UMLPackage",
 					"_id": "AAAAAAFcUBxDx5OO/+8=",
 					"_parent": {
@@ -692,6 +36,507 @@
 								"$ref": "AAAAAAFcUBxDx5OO/+8="
 							},
 							"name": "Prescrizione farmaci",
+							"ownedElements": [
+								{
+									"_type": "UMLUseCaseSubject",
+									"_id": "AAAAAAFcTozprVIBwDo=",
+									"_parent": {
+										"$ref": "AAAAAAFcROe7RsJxyec="
+									},
+									"name": "Prescrizione Farmaci",
+									"ownedElements": [
+										{
+											"_type": "UMLUseCase",
+											"_id": "AAAAAAFcTo6br1IbjCQ=",
+											"_parent": {
+												"$ref": "AAAAAAFcTozprVIBwDo="
+											},
+											"name": "Richiesta prescrizione",
+											"documentation": "# Specifica Richiesta di prescrizione\n\n--- \n## Pre-condizioni\n\n* Il __Paziente__ deve soffrire di una malattia cronica.\n\n---\n## Schema di base\n\n1. Il __Paziente__ sottopone alla __Segreteria__ una richiesta.\n2. Se il __Paziente__ non è registrato:\n    1. La __Segreteria__ provvederà a registrare il __Paziente__.\n3. La __Segreteria__ richiederà al paziente il nome del farmaco richiesto dal __Paziente__.\n4. La __Segreteria__ raccoglierà la richiesta del __Paziente__.\n\n---\n## Post-condizioni\n\n* La richiesta del __Paziente__ è stata raccolta.",
+											"visibility": "public",
+											"isAbstract": false,
+											"isFinalSpecialization": false,
+											"isLeaf": false,
+											"extensionPoints": [
+												{
+													"_type": "UMLExtensionPoint",
+													"_id": "AAAAAAFcT6ENQ1EF7J4=",
+													"_parent": {
+														"$ref": "AAAAAAFcTo6br1IbjCQ="
+													},
+													"name": "Paziente non registrato",
+													"visibility": "public"
+												}
+											]
+										},
+										{
+											"_type": "UMLUseCase",
+											"_id": "AAAAAAFcT57dyU4R9hQ=",
+											"_parent": {
+												"$ref": "AAAAAAFcTozprVIBwDo="
+											},
+											"name": "Registrazione Paziente",
+											"ownedElements": [
+												{
+													"_type": "UMLExtend",
+													"_id": "AAAAAAFcT57d9k5Emxw=",
+													"_parent": {
+														"$ref": "AAAAAAFcT57dyU4R9hQ="
+													},
+													"source": {
+														"$ref": "AAAAAAFcT57dyU4R9hQ="
+													},
+													"target": {
+														"$ref": "AAAAAAFcTo6br1IbjCQ="
+													},
+													"visibility": "public"
+												},
+												{
+													"_type": "UMLExtend",
+													"_id": "AAAAAAFcT/UuE4XR8QQ=",
+													"_parent": {
+														"$ref": "AAAAAAFcT57dyU4R9hQ="
+													},
+													"source": {
+														"$ref": "AAAAAAFcT57dyU4R9hQ="
+													},
+													"target": {
+														"$ref": "AAAAAAFcT+9tt3uDJuc="
+													},
+													"visibility": "public"
+												}
+											],
+											"documentation": "# Specifica Registrazione del paziente\n\n---\n\n## Pre-condizioni\n\n* Il __Paziente__ __*NON*__ deve essere registrato.\n\n---\n\n## Schema di Base\n\n1. L' __Utente__ chiede i seguenti dati al __Paziente__:\n    1. Codice Sanitario univoco.\n    2. Il cognome.\n    3. Il nome.\n    4. La data di nascita.\n    5. Il luogo di nascita.\n    6. Indirizzo di residenza composto da:\n        * Cap\n        * Via\n        * Numero civico\n        * Città \n        * Provincia       \n\t7. *Eventuali* fattori di rischio   \n2. La __Utente__ immette i dati del paziente all'interno del Sw.\n\n---\n\n## Post-condizioni\n\n* Il __Paziente__ è stato registrato con successo\n\n",
+											"visibility": "public",
+											"isAbstract": false,
+											"isFinalSpecialization": false,
+											"isLeaf": false
+										},
+										{
+											"_type": "UMLUseCase",
+											"_id": "AAAAAAFcT8EIvVXU00k=",
+											"_parent": {
+												"$ref": "AAAAAAFcTozprVIBwDo="
+											},
+											"name": "Emissione ricetta su Richiesta",
+											"documentation": "# Specifica dell'Emissione di ricetta su Richiesta\n---\n## Pre-condizioni\n\n* La richiesta deve essere stata presentata alla segreteria la quale deve averla registrata.\n--- \n## Schema di base\n\n1. Il __Medico__ legge la richiesta.\n2. Il __Medico__ compila la ricetta con i seguenti dati:\n\t1. Un identificativo legato al __Paziente__ (codice sanitario).\n    2. La data di scadenza.\n    3. I farmaci prescritti.\n3. Il sistema aggiunge in automatico i seguenti campi alla ricetta:\n\t1. La data di emissione.\n    2. Il codice identificativo univoco della ricetta.\n4. Se il __Medico__ lo desidera può cambiare la data di emissione.\n5. Il __Medico__ conferma la Ricetta la quale viene registrata nel DB delle ricette Emesse.\n--- \n## Post-condizioni\n\n* La ricetta è stata emessa.",
+											"visibility": "public",
+											"isAbstract": false,
+											"isFinalSpecialization": false,
+											"isLeaf": false
+										},
+										{
+											"_type": "UMLUseCase",
+											"_id": "AAAAAAFcT94iylpxbdg=",
+											"_parent": {
+												"$ref": "AAAAAAFcTozprVIBwDo="
+											},
+											"name": "Consegna della ricetta",
+											"documentation": "# Specifiche Per la consegna della ricetta\n---\n## Pre-condizioni\n\n* Una richiesta deve essere stata emessa.\n--- \n\n## Schema di base\n\n1. Se la ricetta è stata richiesta dal paziente:\n\t1. Il __Paziente__ si reca in __Segreteria__.\n    2. La __Segreteria__ consegna la ricetta al __Paziente__.\n2. Se la ricetta è stata emessa in seguito ad una visita:\n\t1. Il __Medico__ consegna la ricetta direttamente al __Paziente__.\n--- \n## Post-condizioni\n\n* IL __Paziente__ è in possesso della ricetta.\n",
+											"visibility": "public",
+											"isAbstract": false,
+											"isFinalSpecialization": false,
+											"isLeaf": false
+										},
+										{
+											"_type": "UMLUseCase",
+											"_id": "AAAAAAFcT+oa/Wx/XC0=",
+											"_parent": {
+												"$ref": "AAAAAAFcTozprVIBwDo="
+											},
+											"name": "Visita del medico da parte del paziente",
+											"documentation": "# Specifica della visita del paziente\n---\n\n## Pre-condizioni\n\n* il paziente non si sente troppo bene.\n--- \n\n## Schema di base\n\n1. Il __Medico__ visita il __Paziente__.\n2. Se il __Paziente__ necessita di un farmaco:\n\t1. Il __Medico__ emette la ricetta.\n--- \n## Post-condizioni \n* il paziente non si sente meglio ma potrebbe sentirsi meglio dopo aver comprato il farmaco.\n",
+											"visibility": "public",
+											"isAbstract": false,
+											"isFinalSpecialization": false,
+											"isLeaf": false,
+											"extensionPoints": [
+												{
+													"_type": "UMLExtensionPoint",
+													"_id": "AAAAAAFcT+68vHqqJo8=",
+													"_parent": {
+														"$ref": "AAAAAAFcT+oa/Wx/XC0="
+													},
+													"name": "Il paziente necessita di un farmaco",
+													"visibility": "public"
+												}
+											]
+										},
+										{
+											"_type": "UMLUseCase",
+											"_id": "AAAAAAFcT+9tt3uDJuc=",
+											"_parent": {
+												"$ref": "AAAAAAFcTozprVIBwDo="
+											},
+											"name": "Emissione della ricetta dopo una visita",
+											"ownedElements": [
+												{
+													"_type": "UMLExtend",
+													"_id": "AAAAAAFcT/AouX4fXOU=",
+													"_parent": {
+														"$ref": "AAAAAAFcT+9tt3uDJuc="
+													},
+													"source": {
+														"$ref": "AAAAAAFcT+9tt3uDJuc="
+													},
+													"target": {
+														"$ref": "AAAAAAFcT+oa/Wx/XC0="
+													},
+													"visibility": "public"
+												},
+												{
+													"_type": "UMLInclude",
+													"_id": "AAAAAAFcT/Eh+oHAMJE=",
+													"_parent": {
+														"$ref": "AAAAAAFcT+9tt3uDJuc="
+													},
+													"source": {
+														"$ref": "AAAAAAFcT+9tt3uDJuc="
+													},
+													"target": {
+														"$ref": "AAAAAAFcT94iylpxbdg="
+													},
+													"visibility": "public"
+												}
+											],
+											"documentation": "# Specifiche per l'emissione di una ricetta in seguito ad una visita\n--- \n## Pre-condizioni\n* Il __Paziente__ necessita di un farmaco.\n--- \n## Schema di base\n\n1. Se il __Paziente__ non è registrato:\n\t1. il __Medico__ registra il paziente.\n2. Il __Medico__ compila la ricetta con i seguenti dati:\n\t1. Un identificativo legato al __Paziente__ (codice sanitario).\n    2. La data di scadenza.\n    3. I farmaci prescritti.\n3. Il sistema aggiunge in automatico i seguenti campi alla ricetta:\n\t1. La data di emissione.\n    2. Il codice identificativo univoco della ricetta.\n4. Se il __Medico__ lo desidera può cambiare la data di emissione.\n5. Il __Medico__ conferma la Ricetta la quale viene registrata nel DB delle ricette Emesse.\n6. Il __Medico__ provvede alla consegna del farmaco.\n--- \n## Post-condizioni\n* Il paziente è munito della ricetta.\n",
+											"visibility": "public",
+											"isAbstract": false,
+											"isFinalSpecialization": false,
+											"isLeaf": false
+										}
+									],
+									"visibility": "public"
+								},
+								{
+									"_type": "UMLActor",
+									"_id": "AAAAAAFcTos4IVElHa8=",
+									"_parent": {
+										"$ref": "AAAAAAFcROe7RsJxyec="
+									},
+									"name": "Medico",
+									"ownedElements": [
+										{
+											"_type": "UMLAssociation",
+											"_id": "AAAAAAFcT8Fyk1anEzM=",
+											"_parent": {
+												"$ref": "AAAAAAFcTos4IVElHa8="
+											},
+											"name": "Emette la ricetta",
+											"end1": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcT8Fyk1aoqjE=",
+												"_parent": {
+													"$ref": "AAAAAAFcT8Fyk1anEzM="
+												},
+												"name": "1",
+												"reference": {
+													"$ref": "AAAAAAFcTos4IVElHa8="
+												},
+												"visibility": "public",
+												"navigable": false,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"end2": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcT8Fyk1apGOs=",
+												"_parent": {
+													"$ref": "AAAAAAFcT8Fyk1anEzM="
+												},
+												"name": "...",
+												"reference": {
+													"$ref": "AAAAAAFcT8EIvVXU00k="
+												},
+												"visibility": "public",
+												"navigable": true,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"visibility": "public",
+											"isDerived": false
+										},
+										{
+											"_type": "UMLAssociation",
+											"_id": "AAAAAAFcT+0NVHT7zAw=",
+											"_parent": {
+												"$ref": "AAAAAAFcTos4IVElHa8="
+											},
+											"name": "Visita il paziente",
+											"end1": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcT+0NVXT8ySo=",
+												"_parent": {
+													"$ref": "AAAAAAFcT+0NVHT7zAw="
+												},
+												"name": "1",
+												"reference": {
+													"$ref": "AAAAAAFcTos4IVElHa8="
+												},
+												"visibility": "public",
+												"navigable": true,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"end2": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcT+0NVXT9F84=",
+												"_parent": {
+													"$ref": "AAAAAAFcT+0NVHT7zAw="
+												},
+												"name": "1",
+												"reference": {
+													"$ref": "AAAAAAFcT+oa/Wx/XC0="
+												},
+												"visibility": "public",
+												"navigable": true,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"visibility": "public",
+											"isDerived": false
+										}
+									],
+									"stereotype": "Utente",
+									"visibility": "public",
+									"isAbstract": false,
+									"isFinalSpecialization": false,
+									"isLeaf": false
+								},
+								{
+									"_type": "UMLActor",
+									"_id": "AAAAAAFcTouMPVFPyAM=",
+									"_parent": {
+										"$ref": "AAAAAAFcROe7RsJxyec="
+									},
+									"name": "Medico Consorziato",
+									"ownedElements": [
+										{
+											"_type": "UMLGeneralization",
+											"_id": "AAAAAAFcTouMZFF4H6Y=",
+											"_parent": {
+												"$ref": "AAAAAAFcTouMPVFPyAM="
+											},
+											"source": {
+												"$ref": "AAAAAAFcTouMPVFPyAM="
+											},
+											"target": {
+												"$ref": "AAAAAAFcTos4IVElHa8="
+											},
+											"visibility": "public"
+										}
+									],
+									"stereotype": "Utente",
+									"visibility": "public",
+									"isAbstract": false,
+									"isFinalSpecialization": false,
+									"isLeaf": false
+								},
+								{
+									"_type": "UMLActor",
+									"_id": "AAAAAAFcTovfClGLNiE=",
+									"_parent": {
+										"$ref": "AAAAAAFcROe7RsJxyec="
+									},
+									"name": "Medico di Base",
+									"ownedElements": [
+										{
+											"_type": "UMLGeneralization",
+											"_id": "AAAAAAFcTovfMFG0KNg=",
+											"_parent": {
+												"$ref": "AAAAAAFcTovfClGLNiE="
+											},
+											"source": {
+												"$ref": "AAAAAAFcTovfClGLNiE="
+											},
+											"target": {
+												"$ref": "AAAAAAFcTos4IVElHa8="
+											},
+											"visibility": "public"
+										}
+									],
+									"stereotype": "Utente",
+									"visibility": "public",
+									"isAbstract": false,
+									"isFinalSpecialization": false,
+									"isLeaf": false
+								},
+								{
+									"_type": "UMLActor",
+									"_id": "AAAAAAFcTo9vllJ6YmA=",
+									"_parent": {
+										"$ref": "AAAAAAFcROe7RsJxyec="
+									},
+									"name": "Segreteria",
+									"ownedElements": [
+										{
+											"_type": "UMLAssociation",
+											"_id": "AAAAAAFcTpXz11a6NIc=",
+											"_parent": {
+												"$ref": "AAAAAAFcTo9vllJ6YmA="
+											},
+											"name": "riceve la richiesta",
+											"end1": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcTpXz2Fa7gvA=",
+												"_parent": {
+													"$ref": "AAAAAAFcTpXz11a6NIc="
+												},
+												"name": "1",
+												"reference": {
+													"$ref": "AAAAAAFcTo9vllJ6YmA="
+												},
+												"visibility": "public",
+												"navigable": true,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"end2": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcTpXz2Fa8O5U=",
+												"_parent": {
+													"$ref": "AAAAAAFcTpXz11a6NIc="
+												},
+												"name": "...",
+												"reference": {
+													"$ref": "AAAAAAFcTo6br1IbjCQ="
+												},
+												"visibility": "public",
+												"navigable": true,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"visibility": "public",
+											"isDerived": false
+										},
+										{
+											"_type": "UMLAssociation",
+											"_id": "AAAAAAFcT6AivE+ZHds=",
+											"_parent": {
+												"$ref": "AAAAAAFcTo9vllJ6YmA="
+											},
+											"name": "Registra il paziente",
+											"end1": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcT6AivE+aGxo=",
+												"_parent": {
+													"$ref": "AAAAAAFcT6AivE+ZHds="
+												},
+												"name": "1",
+												"reference": {
+													"$ref": "AAAAAAFcTo9vllJ6YmA="
+												},
+												"visibility": "public",
+												"navigable": false,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"end2": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcT6AivE+bgy0=",
+												"_parent": {
+													"$ref": "AAAAAAFcT6AivE+ZHds="
+												},
+												"name": "1",
+												"reference": {
+													"$ref": "AAAAAAFcT57dyU4R9hQ="
+												},
+												"visibility": "public",
+												"navigable": true,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"visibility": "public",
+											"isDerived": false
+										},
+										{
+											"_type": "UMLAssociation",
+											"_id": "AAAAAAFcT97cpltJxog=",
+											"_parent": {
+												"$ref": "AAAAAAFcTo9vllJ6YmA="
+											},
+											"name": "Consegna la ricetta in seguito ad una richiesta del paziente",
+											"end1": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcT97cpltK+Zg=",
+												"_parent": {
+													"$ref": "AAAAAAFcT97cpltJxog="
+												},
+												"name": "1",
+												"reference": {
+													"$ref": "AAAAAAFcTo9vllJ6YmA="
+												},
+												"visibility": "public",
+												"navigable": false,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"end2": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcT97cpltL8fI=",
+												"_parent": {
+													"$ref": "AAAAAAFcT97cpltJxog="
+												},
+												"name": "...",
+												"reference": {
+													"$ref": "AAAAAAFcT94iylpxbdg="
+												},
+												"visibility": "public",
+												"navigable": true,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"visibility": "public",
+											"isDerived": false
+										}
+									],
+									"stereotype": "Utente",
+									"visibility": "public",
+									"isAbstract": false,
+									"isFinalSpecialization": false,
+									"isLeaf": false
+								}
+							],
 							"documentation": "Diagramma che identifica tutti i casi d'uso relativi alla prescrizione dei farmaci.",
 							"visible": true,
 							"defaultDiagram": false,
@@ -785,11 +630,11 @@
 													"containerExtending": false,
 													"left": 1904,
 													"top": 560,
-													"width": 73,
+													"width": 157,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from Prescrizione farmaci)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -1074,11 +919,11 @@
 													"containerExtending": false,
 													"left": 2096,
 													"top": 374,
-													"width": 73,
+													"width": 157,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from Prescrizione farmaci)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -1506,11 +1351,11 @@
 													"containerExtending": false,
 													"left": 2018,
 													"top": 150,
-													"width": 73,
+													"width": 157,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from Prescrizione farmaci)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -1937,11 +1782,11 @@
 													"containerExtending": false,
 													"left": -48,
 													"top": -16,
-													"width": 73,
+													"width": 157,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from Prescrizione farmaci)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -2112,11 +1957,11 @@
 													"containerExtending": false,
 													"left": 192,
 													"top": -32,
-													"width": 73,
+													"width": 161,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from Prescrizione Farmaci)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -2459,11 +2304,11 @@
 													"containerExtending": false,
 													"left": -176,
 													"top": -710,
-													"width": 73,
+													"width": 101,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from use_cases)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -2748,11 +2593,11 @@
 													"containerExtending": false,
 													"left": 1856,
 													"top": -928,
-													"width": 73,
+													"width": 157,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from Prescrizione farmaci)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -3884,11 +3729,11 @@
 													"containerExtending": false,
 													"left": 0,
 													"top": 0,
-													"width": 73,
+													"width": 161,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from Prescrizione Farmaci)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -4343,11 +4188,11 @@
 													"containerExtending": false,
 													"left": -48,
 													"top": 48,
-													"width": 73,
+													"width": 161,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from Prescrizione Farmaci)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -5082,11 +4927,11 @@
 													"containerExtending": false,
 													"left": -208,
 													"top": -16,
-													"width": 73,
+													"width": 161,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from Prescrizione Farmaci)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -6245,11 +6090,11 @@
 													"containerExtending": false,
 													"left": -128,
 													"top": 224,
-													"width": 73,
+													"width": 161,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from Prescrizione Farmaci)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -7439,11 +7284,11 @@
 													"containerExtending": false,
 													"left": -784,
 													"top": -240,
-													"width": 73,
+													"width": 161,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Model)",
+													"text": "(from Prescrizione Farmaci)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8099,6 +7944,2790 @@
 									}
 								}
 							]
+						},
+						{
+							"_type": "UMLUseCaseDiagram",
+							"_id": "AAAAAAFcUB/MhpTRSM8=",
+							"_parent": {
+								"$ref": "AAAAAAFcUBxDx5OO/+8="
+							},
+							"name": "Consegna farmaci",
+							"ownedElements": [
+								{
+									"_type": "UMLActor",
+									"_id": "AAAAAAFcUCEX6pWb+uo=",
+									"_parent": {
+										"$ref": "AAAAAAFcUB/MhpTRSM8="
+									},
+									"name": "Farmacista",
+									"ownedElements": [
+										{
+											"_type": "UMLAssociation",
+											"_id": "AAAAAAFcUCZWU5daK7M=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCEX6pWb+uo="
+											},
+											"name": "Riceve la richiesta",
+											"end1": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcUCZWU5dbcA4=",
+												"_parent": {
+													"$ref": "AAAAAAFcUCZWU5daK7M="
+												},
+												"reference": {
+													"$ref": "AAAAAAFcUCEX6pWb+uo="
+												},
+												"visibility": "public",
+												"navigable": true,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"end2": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAFcUCZWU5dcY30=",
+												"_parent": {
+													"$ref": "AAAAAAFcUCZWU5daK7M="
+												},
+												"reference": {
+													"$ref": "AAAAAAFcUCQ/BpYwcos="
+												},
+												"visibility": "public",
+												"navigable": true,
+												"aggregation": "none",
+												"isReadOnly": false,
+												"isOrdered": false,
+												"isUnique": false,
+												"isDerived": false,
+												"isID": false
+											},
+											"visibility": "public",
+											"isDerived": false
+										}
+									],
+									"stereotype": "Utente",
+									"visibility": "public",
+									"isAbstract": false,
+									"isFinalSpecialization": false,
+									"isLeaf": false
+								},
+								{
+									"_type": "UMLUseCaseSubject",
+									"_id": "AAAAAAFcUCO4gZYTvfs=",
+									"_parent": {
+										"$ref": "AAAAAAFcUB/MhpTRSM8="
+									},
+									"name": "Consegna farmaci",
+									"ownedElements": [
+										{
+											"_type": "UMLUseCase",
+											"_id": "AAAAAAFcUCQ/BpYwcos=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCO4gZYTvfs="
+											},
+											"name": "Richiesta farmaco",
+											"documentation": "# Specifiche per la richiesta di un farmaco.\n---\n## Pre-condizioni\n* Il paziente deve essere in possesso di una ricetta\n--- \n## sceneario principale\n1. Il __Paziente__ fornisce la ricetta al __Farmacista__\n2. Il __Farmacista__ chiede al paziente se preferisce o meno il farmaco generico.\n3. Se il __Paziente__ preferisce il farmaco generico:\n\t1. Se il __Farmacista__ è in possesso del farmaco:\n    \t1. Lo consegna al __Paziente__. \n        2. Segna sullo scontrino parlante che il __Paziente__ ha preferito il farmaco generico.\n        3. Segna che la ricetta è stata utilizzata.\n    2. Se il farmaco non è presente:\n    \t1. Il __Farmacista__ ordina il farmaco. \n4. Se il __Paziente__ preferisce il farmaco non generico:\n\t1. Se il farmaco è presente:\n    \t1. Lo consegna al __Paziente__.\n        2. Segna che la ricetta è stata utilizzata.\n\t2. Se il farmaco non è presente:\n    \t1. Il farmacista ordina il farmaco. \n--- \n## Post-condizioni\n* Il paziente è in possesso del farmaco oppure quest'ultimo è stato ordinato.",
+											"visibility": "public",
+											"isAbstract": false,
+											"isFinalSpecialization": false,
+											"isLeaf": false,
+											"extensionPoints": [
+												{
+													"_type": "UMLExtensionPoint",
+													"_id": "AAAAAAFcUCh5+pnyEJs=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCQ/BpYwcos="
+													},
+													"name": "Il farmaco non è presente",
+													"visibility": "public"
+												},
+												{
+													"_type": "UMLExtensionPoint",
+													"_id": "AAAAAAFcUCyI5po1sFI=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCQ/BpYwcos="
+													},
+													"name": "Il paziente preferisce il farmaco generico",
+													"visibility": "public"
+												}
+											]
+										},
+										{
+											"_type": "UMLUseCase",
+											"_id": "AAAAAAFcUC0hMpsO3k0=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCO4gZYTvfs="
+											},
+											"name": "Ordinazione del farmaco",
+											"ownedElements": [
+												{
+													"_type": "UMLExtend",
+													"_id": "AAAAAAFcUC+FcJ3hFq8=",
+													"_parent": {
+														"$ref": "AAAAAAFcUC0hMpsO3k0="
+													},
+													"source": {
+														"$ref": "AAAAAAFcUC0hMpsO3k0="
+													},
+													"target": {
+														"$ref": "AAAAAAFcUCQ/BpYwcos="
+													},
+													"visibility": "public"
+												}
+											],
+											"documentation": "# Specifiche per l'ordinazione di un farmaco.\n---\n## Pre-condizioni\n* Il farmaco non deve essere presente\n--- \n## sceneario principale\n1. Il __Farmacista__ ordina il farmaco.\n--- \n## Post-condizioni\n* Il farmaco è stato ordinato.",
+											"visibility": "public",
+											"isAbstract": false,
+											"isFinalSpecialization": false,
+											"isLeaf": false
+										}
+									],
+									"visibility": "public"
+								}
+							],
+							"visible": true,
+							"defaultDiagram": false,
+							"ownedViews": [
+								{
+									"_type": "UMLActorView",
+									"_id": "AAAAAAFcUCDZX/b3xi0=",
+									"_parent": {
+										"$ref": "AAAAAAFcUB/MhpTRSM8="
+									},
+									"model": {
+										"$ref": "AAAAAAFcTo8wKlJOJmg="
+									},
+									"subViews": [
+										{
+											"_type": "UMLNameCompartmentView",
+											"_id": "AAAAAAFcUCDZX/b4nxk=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCDZX/b3xi0="
+											},
+											"model": {
+												"$ref": "AAAAAAFcTo8wKlJOJmg="
+											},
+											"subViews": [
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCDZX/b5bro=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCDZX/b4nxk="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 133,
+													"top": 179,
+													"width": 54,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "«Cliente»",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCDZX/b6ttY=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCDZX/b4nxk="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;1",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 133,
+													"top": 194,
+													"width": 54,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "Paziente",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCDZX/b7v/U=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCDZX/b4nxk="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": -688,
+													"top": -1059,
+													"width": 101,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "(from use_cases)",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCDZX/b84c8=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCDZX/b4nxk="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": -688,
+													"top": -1059,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"horizontalAlignment": 1,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 128,
+											"top": 174,
+											"width": 64,
+											"height": 38,
+											"autoResize": false,
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFcUCDZX/b5bro="
+											},
+											"nameLabel": {
+												"$ref": "AAAAAAFcUCDZX/b6ttY="
+											},
+											"namespaceLabel": {
+												"$ref": "AAAAAAFcUCDZX/b7v/U="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFcUCDZX/b84c8="
+											}
+										},
+										{
+											"_type": "UMLAttributeCompartmentView",
+											"_id": "AAAAAAFcUCDZX/b9LfQ=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCDZX/b3xi0="
+											},
+											"model": {
+												"$ref": "AAAAAAFcTo8wKlJOJmg="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -64,
+											"top": -344,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLOperationCompartmentView",
+											"_id": "AAAAAAFcUCDZX/b+VGo=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCDZX/b3xi0="
+											},
+											"model": {
+												"$ref": "AAAAAAFcTo8wKlJOJmg="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -64,
+											"top": -344,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLReceptionCompartmentView",
+											"_id": "AAAAAAFcUCDZX/b/bvo=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCDZX/b3xi0="
+											},
+											"model": {
+												"$ref": "AAAAAAFcTo8wKlJOJmg="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -64,
+											"top": -344,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLTemplateParameterCompartmentView",
+											"_id": "AAAAAAFcUCDZX/cAekM=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCDZX/b3xi0="
+											},
+											"model": {
+												"$ref": "AAAAAAFcTo8wKlJOJmg="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -64,
+											"top": -344,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										}
+									],
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": true,
+									"containerExtending": false,
+									"left": 128,
+									"top": 120,
+									"width": 64,
+									"height": 93,
+									"autoResize": false,
+									"stereotypeDisplay": "label",
+									"showVisibility": true,
+									"showNamespace": false,
+									"showProperty": true,
+									"showType": true,
+									"nameCompartment": {
+										"$ref": "AAAAAAFcUCDZX/b4nxk="
+									},
+									"wordWrap": false,
+									"suppressAttributes": true,
+									"suppressOperations": true,
+									"suppressReceptions": true,
+									"showMultiplicity": true,
+									"showOperationSignature": true,
+									"attributeCompartment": {
+										"$ref": "AAAAAAFcUCDZX/b9LfQ="
+									},
+									"operationCompartment": {
+										"$ref": "AAAAAAFcUCDZX/b+VGo="
+									},
+									"receptionCompartment": {
+										"$ref": "AAAAAAFcUCDZX/b/bvo="
+									},
+									"templateParameterCompartment": {
+										"$ref": "AAAAAAFcUCDZX/cAekM="
+									}
+								},
+								{
+									"_type": "UMLActorView",
+									"_id": "AAAAAAFcUCEX65Wdn+g=",
+									"_parent": {
+										"$ref": "AAAAAAFcUB/MhpTRSM8="
+									},
+									"model": {
+										"$ref": "AAAAAAFcUCEX6pWb+uo="
+									},
+									"subViews": [
+										{
+											"_type": "UMLNameCompartmentView",
+											"_id": "AAAAAAFcUCEX65We8Xg=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCEX65Wdn+g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCEX6pWb+uo="
+											},
+											"subViews": [
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCEX65Wf8w0=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCEX65We8Xg="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 1037,
+													"top": 179,
+													"width": 68,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "«Utente»",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCEX65Wg9kA=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCEX65We8Xg="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;1",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 1037,
+													"top": 194,
+													"width": 68,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "Farmacista",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCEX65WhUgQ=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCEX65We8Xg="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 16,
+													"top": -64,
+													"width": 143,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "(from Consegna farmaci)",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCEX65WidC0=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCEX65We8Xg="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 16,
+													"top": -64,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"horizontalAlignment": 1,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 1032,
+											"top": 174,
+											"width": 78,
+											"height": 38,
+											"autoResize": false,
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFcUCEX65Wf8w0="
+											},
+											"nameLabel": {
+												"$ref": "AAAAAAFcUCEX65Wg9kA="
+											},
+											"namespaceLabel": {
+												"$ref": "AAAAAAFcUCEX65WhUgQ="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFcUCEX65WidC0="
+											}
+										},
+										{
+											"_type": "UMLAttributeCompartmentView",
+											"_id": "AAAAAAFcUCEX65Wjlus=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCEX65Wdn+g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCEX6pWb+uo="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 8,
+											"top": -32,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLOperationCompartmentView",
+											"_id": "AAAAAAFcUCEX7JWkfG8=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCEX65Wdn+g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCEX6pWb+uo="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 8,
+											"top": -32,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLReceptionCompartmentView",
+											"_id": "AAAAAAFcUCEX7JWlGSM=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCEX65Wdn+g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCEX6pWb+uo="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 8,
+											"top": -32,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLTemplateParameterCompartmentView",
+											"_id": "AAAAAAFcUCEX7JWmXfU=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCEX65Wdn+g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCEX6pWb+uo="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 8,
+											"top": -32,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										}
+									],
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": true,
+									"containerExtending": false,
+									"left": 1032,
+									"top": 120,
+									"width": 78,
+									"height": 93,
+									"autoResize": false,
+									"stereotypeDisplay": "label",
+									"showVisibility": true,
+									"showNamespace": false,
+									"showProperty": true,
+									"showType": true,
+									"nameCompartment": {
+										"$ref": "AAAAAAFcUCEX65We8Xg="
+									},
+									"wordWrap": false,
+									"suppressAttributes": true,
+									"suppressOperations": true,
+									"suppressReceptions": true,
+									"showMultiplicity": true,
+									"showOperationSignature": true,
+									"attributeCompartment": {
+										"$ref": "AAAAAAFcUCEX65Wjlus="
+									},
+									"operationCompartment": {
+										"$ref": "AAAAAAFcUCEX7JWkfG8="
+									},
+									"receptionCompartment": {
+										"$ref": "AAAAAAFcUCEX7JWlGSM="
+									},
+									"templateParameterCompartment": {
+										"$ref": "AAAAAAFcUCEX7JWmXfU="
+									}
+								},
+								{
+									"_type": "UMLUseCaseSubjectView",
+									"_id": "AAAAAAFcUCO4gpYVWgE=",
+									"_parent": {
+										"$ref": "AAAAAAFcUB/MhpTRSM8="
+									},
+									"model": {
+										"$ref": "AAAAAAFcUCO4gZYTvfs="
+									},
+									"subViews": [
+										{
+											"_type": "UMLNameCompartmentView",
+											"_id": "AAAAAAFcUCO4gpYWmMU=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCO4gpYVWgE="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCO4gZYTvfs="
+											},
+											"subViews": [
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCO4gpYXnr0=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCO4gpYWmMU="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 0,
+													"top": 0,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCO4gpYYuzU=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCO4gpYWmMU="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;1",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 325,
+													"top": 111,
+													"width": 607,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "Consegna farmaci",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCO4g5YZzlc=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCO4gpYWmMU="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 0,
+													"top": 0,
+													"width": 143,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "(from Consegna farmaci)",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCO4g5YahCk=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCO4gpYWmMU="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 0,
+													"top": 0,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"horizontalAlignment": 1,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 320,
+											"top": 104,
+											"width": 617,
+											"height": 25,
+											"autoResize": false,
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFcUCO4gpYXnr0="
+											},
+											"nameLabel": {
+												"$ref": "AAAAAAFcUCO4gpYYuzU="
+											},
+											"namespaceLabel": {
+												"$ref": "AAAAAAFcUCO4g5YZzlc="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFcUCO4g5YahCk="
+											}
+										}
+									],
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"left": 320,
+									"top": 104,
+									"width": 617,
+									"height": 376,
+									"autoResize": false,
+									"stereotypeDisplay": "label",
+									"showVisibility": true,
+									"showNamespace": false,
+									"showProperty": true,
+									"showType": true,
+									"nameCompartment": {
+										"$ref": "AAAAAAFcUCO4gpYWmMU="
+									},
+									"wordWrap": false
+								},
+								{
+									"_type": "UMLUseCaseView",
+									"_id": "AAAAAAFcUCQ/B5YyD7c=",
+									"_parent": {
+										"$ref": "AAAAAAFcUB/MhpTRSM8="
+									},
+									"model": {
+										"$ref": "AAAAAAFcUCQ/BpYwcos="
+									},
+									"subViews": [
+										{
+											"_type": "UMLNameCompartmentView",
+											"_id": "AAAAAAFcUCQ/B5Yzudg=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCQ/B5YyD7c="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCQ/BpYwcos="
+											},
+											"subViews": [
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCQ/CJY0Vzk=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCQ/B5Yzudg="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 517,
+													"top": 183,
+													"width": 265,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCQ/CJY1D2o=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCQ/B5Yzudg="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;1",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 557.5,
+													"top": 197,
+													"width": 184,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "Richiesta farmaco",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCQ/CJY2VXw=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCQ/B5Yzudg="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": -80,
+													"top": -80,
+													"width": 143,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "(from Consegna farmaci)",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUCQ/CJY3zEg=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCQ/B5Yzudg="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": -80,
+													"top": -80,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"horizontalAlignment": 1,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 552.5,
+											"top": 190,
+											"width": 194,
+											"height": 25,
+											"autoResize": false,
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFcUCQ/CJY0Vzk="
+											},
+											"nameLabel": {
+												"$ref": "AAAAAAFcUCQ/CJY1D2o="
+											},
+											"namespaceLabel": {
+												"$ref": "AAAAAAFcUCQ/CJY2VXw="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFcUCQ/CJY3zEg="
+											}
+										},
+										{
+											"_type": "UMLAttributeCompartmentView",
+											"_id": "AAAAAAFcUCQ/CJY4dx0=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCQ/B5YyD7c="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCQ/BpYwcos="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -40,
+											"top": -40,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLOperationCompartmentView",
+											"_id": "AAAAAAFcUCQ/CJY5ZfI=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCQ/B5YyD7c="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCQ/BpYwcos="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -40,
+											"top": -40,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLReceptionCompartmentView",
+											"_id": "AAAAAAFcUCQ/CZY63+g=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCQ/B5YyD7c="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCQ/BpYwcos="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -40,
+											"top": -40,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLTemplateParameterCompartmentView",
+											"_id": "AAAAAAFcUCQ/CZY7S1Q=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCQ/B5YyD7c="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCQ/BpYwcos="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 655,
+											"top": 168,
+											"width": 131,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLExtensionPointCompartmentView",
+											"_id": "AAAAAAFcUCQ/CZY8FUI=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCQ/B5YyD7c="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCQ/BpYwcos="
+											},
+											"subViews": [
+												{
+													"_type": "UMLExtensionPointView",
+													"_id": "AAAAAAFcUCh6CZn1TGk=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCQ/CZY8FUI="
+													},
+													"model": {
+														"$ref": "AAAAAAFcUCh5+pnyEJs="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 517,
+													"top": 242,
+													"width": 265,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "Il farmaco non è presente",
+													"horizontalAlignment": 0,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "UMLExtensionPointView",
+													"_id": "AAAAAAFcUCyI95o4wl8=",
+													"_parent": {
+														"$ref": "AAAAAAFcUCQ/CZY8FUI="
+													},
+													"model": {
+														"$ref": "AAAAAAFcUCyI5po1sFI="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 517,
+													"top": 257,
+													"width": 265,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "Il paziente preferisce il farmaco generico",
+													"horizontalAlignment": 0,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 512,
+											"top": 237,
+											"width": 275,
+											"height": 38,
+											"autoResize": false
+										}
+									],
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": true,
+									"containerExtending": false,
+									"left": 512,
+									"top": 168,
+									"width": 275,
+									"height": 108,
+									"autoResize": false,
+									"stereotypeDisplay": "none",
+									"showVisibility": true,
+									"showNamespace": false,
+									"showProperty": true,
+									"showType": true,
+									"nameCompartment": {
+										"$ref": "AAAAAAFcUCQ/B5Yzudg="
+									},
+									"wordWrap": false,
+									"suppressAttributes": true,
+									"suppressOperations": true,
+									"suppressReceptions": true,
+									"showMultiplicity": true,
+									"showOperationSignature": true,
+									"attributeCompartment": {
+										"$ref": "AAAAAAFcUCQ/CJY4dx0="
+									},
+									"operationCompartment": {
+										"$ref": "AAAAAAFcUCQ/CJY5ZfI="
+									},
+									"receptionCompartment": {
+										"$ref": "AAAAAAFcUCQ/CZY63+g="
+									},
+									"templateParameterCompartment": {
+										"$ref": "AAAAAAFcUCQ/CZY7S1Q="
+									},
+									"extensionPointCompartment": {
+										"$ref": "AAAAAAFcUCQ/CZY8FUI="
+									}
+								},
+								{
+									"_type": "UMLAssociationView",
+									"_id": "AAAAAAFcUCWOQpZrxpc=",
+									"_parent": {
+										"$ref": "AAAAAAFcUB/MhpTRSM8="
+									},
+									"model": {
+										"$ref": "AAAAAAFcUCWOQZZnMy4="
+									},
+									"subViews": [
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCWOQpZsNqw=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCWOQZZnMy4="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 328,
+											"top": 184,
+											"width": 119,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 0.2709467787052012,
+											"distance": 37.36308338453881,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"text": "+Richiede il farmaco",
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCWOQpZtoos=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCWOQZZnMy4="
+											},
+											"visible": null,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 351,
+											"top": 164,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 1.5707963267948966,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCWOQ5ZuMuk=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCWOQZZnMy4="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 351,
+											"top": 209,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCWOQ5ZvFps=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCWOQZZoLBw="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 216,
+											"top": 179,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 0.5235987755982988,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"edgePosition": 2,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCWOQ5Zwm+0=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCWOQZZoLBw="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 219,
+											"top": 165,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 0.7853981633974483,
+											"distance": 40,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"edgePosition": 2,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCWOQ5Zx1ho=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCWOQZZoLBw="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 212,
+											"top": 206,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -0.5235987755982988,
+											"distance": 25,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"edgePosition": 2,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCWOQ5ZygVM=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCWOQZZpiOE="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 486,
+											"top": 179,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -0.5235987755982988,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"edgePosition": 0,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCWOQ5ZzQSU=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCWOQZZpiOE="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 483,
+											"top": 165,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -0.7853981633974483,
+											"distance": 40,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"edgePosition": 0,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCWOQ5Z0FhQ=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCWOQZZpiOE="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 490,
+											"top": 206,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 0.5235987755982988,
+											"distance": 25,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"edgePosition": 0,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "UMLQualifierCompartmentView",
+											"_id": "AAAAAAFcUCWOQ5Z1+74=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCWOQZZoLBw="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 0,
+											"top": 0,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLQualifierCompartmentView",
+											"_id": "AAAAAAFcUCWORJZ2GyU=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCWOQpZrxpc="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCWOQZZpiOE="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 0,
+											"top": 0,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										}
+									],
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"head": {
+										"$ref": "AAAAAAFcUCQ/B5YyD7c="
+									},
+									"tail": {
+										"$ref": "AAAAAAFcUCDZX/b3xi0="
+									},
+									"lineStyle": 0,
+									"points": "191:200;512:200",
+									"stereotypeDisplay": "label",
+									"showVisibility": true,
+									"showProperty": true,
+									"nameLabel": {
+										"$ref": "AAAAAAFcUCWOQpZsNqw="
+									},
+									"stereotypeLabel": {
+										"$ref": "AAAAAAFcUCWOQpZtoos="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAFcUCWOQ5ZuMuk="
+									},
+									"showMultiplicity": true,
+									"showType": true,
+									"tailRoleNameLabel": {
+										"$ref": "AAAAAAFcUCWOQ5ZvFps="
+									},
+									"tailPropertyLabel": {
+										"$ref": "AAAAAAFcUCWOQ5Zwm+0="
+									},
+									"tailMultiplicityLabel": {
+										"$ref": "AAAAAAFcUCWOQ5Zx1ho="
+									},
+									"headRoleNameLabel": {
+										"$ref": "AAAAAAFcUCWOQ5ZygVM="
+									},
+									"headPropertyLabel": {
+										"$ref": "AAAAAAFcUCWOQ5ZzQSU="
+									},
+									"headMultiplicityLabel": {
+										"$ref": "AAAAAAFcUCWOQ5Z0FhQ="
+									},
+									"tailQualifiersCompartment": {
+										"$ref": "AAAAAAFcUCWOQ5Z1+74="
+									},
+									"headQualifiersCompartment": {
+										"$ref": "AAAAAAFcUCWORJZ2GyU="
+									}
+								},
+								{
+									"_type": "UMLAssociationView",
+									"_id": "AAAAAAFcUCZWVJdeT3g=",
+									"_parent": {
+										"$ref": "AAAAAAFcUB/MhpTRSM8="
+									},
+									"model": {
+										"$ref": "AAAAAAFcUCZWU5daK7M="
+									},
+									"subViews": [
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCZWVJdfhzY=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCZWU5daK7M="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 825,
+											"top": 182,
+											"width": 127,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -0.4825134907520874,
+											"distance": 23.706539182259394,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"text": "+Riceve la richiesta",
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCZWVJdgS54=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCZWU5daK7M="
+											},
+											"visible": null,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 908,
+											"top": 224,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 1.5707963267948966,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCZWVJdhnpE=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCZWU5daK7M="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 909,
+											"top": 179,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCZWVJdiYQY=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCZWU5dbcA4="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 1006,
+											"top": 208,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 0.5235987755982988,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"edgePosition": 2,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCZWVZdjmXw=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCZWU5dbcA4="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 1003,
+											"top": 222,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 0.7853981633974483,
+											"distance": 40,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"edgePosition": 2,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCZWVZdkpwk=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCZWU5dbcA4="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 1010,
+											"top": 181,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -0.5235987755982988,
+											"distance": 25,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"edgePosition": 2,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCZWVZdl9DQ=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCZWU5dcY30="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 811,
+											"top": 208,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -0.5235987755982988,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"edgePosition": 0,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCZWVZdmIkY=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCZWU5dcY30="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 814,
+											"top": 222,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -0.7853981633974483,
+											"distance": 40,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"edgePosition": 0,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUCZWVZdnqp0=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCZWU5dcY30="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 807,
+											"top": 181,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 0.5235987755982988,
+											"distance": 25,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"edgePosition": 0,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "UMLQualifierCompartmentView",
+											"_id": "AAAAAAFcUCZWVZdoOgs=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCZWU5dbcA4="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 0,
+											"top": 0,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLQualifierCompartmentView",
+											"_id": "AAAAAAFcUCZWVZdpOr0=",
+											"_parent": {
+												"$ref": "AAAAAAFcUCZWVJdeT3g="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUCZWU5dcY30="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 0,
+											"top": 0,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										}
+									],
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"head": {
+										"$ref": "AAAAAAFcUCQ/B5YyD7c="
+									},
+									"tail": {
+										"$ref": "AAAAAAFcUCEX65Wdn+g="
+									},
+									"lineStyle": 0,
+									"points": "1032:200;786:200",
+									"stereotypeDisplay": "label",
+									"showVisibility": true,
+									"showProperty": true,
+									"nameLabel": {
+										"$ref": "AAAAAAFcUCZWVJdfhzY="
+									},
+									"stereotypeLabel": {
+										"$ref": "AAAAAAFcUCZWVJdgS54="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAFcUCZWVJdhnpE="
+									},
+									"showMultiplicity": true,
+									"showType": true,
+									"tailRoleNameLabel": {
+										"$ref": "AAAAAAFcUCZWVJdiYQY="
+									},
+									"tailPropertyLabel": {
+										"$ref": "AAAAAAFcUCZWVZdjmXw="
+									},
+									"tailMultiplicityLabel": {
+										"$ref": "AAAAAAFcUCZWVZdkpwk="
+									},
+									"headRoleNameLabel": {
+										"$ref": "AAAAAAFcUCZWVZdl9DQ="
+									},
+									"headPropertyLabel": {
+										"$ref": "AAAAAAFcUCZWVZdmIkY="
+									},
+									"headMultiplicityLabel": {
+										"$ref": "AAAAAAFcUCZWVZdnqp0="
+									},
+									"tailQualifiersCompartment": {
+										"$ref": "AAAAAAFcUCZWVZdoOgs="
+									},
+									"headQualifiersCompartment": {
+										"$ref": "AAAAAAFcUCZWVZdpOr0="
+									}
+								},
+								{
+									"_type": "UMLUseCaseView",
+									"_id": "AAAAAAFcUC0hMpsQ2rM=",
+									"_parent": {
+										"$ref": "AAAAAAFcUB/MhpTRSM8="
+									},
+									"model": {
+										"$ref": "AAAAAAFcUC0hMpsO3k0="
+									},
+									"subViews": [
+										{
+											"_type": "UMLNameCompartmentView",
+											"_id": "AAAAAAFcUC0hMpsRs9E=",
+											"_parent": {
+												"$ref": "AAAAAAFcUC0hMpsQ2rM="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUC0hMpsO3k0="
+											},
+											"subViews": [
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUC0hMpsSVis=",
+													"_parent": {
+														"$ref": "AAAAAAFcUC0hMpsRs9E="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": -528,
+													"top": 0,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUC0hM5sTxW4=",
+													"_parent": {
+														"$ref": "AAAAAAFcUC0hMpsRs9E="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;1",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 567,
+													"top": 339.5,
+													"width": 152,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "Ordinazione del farmaco",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUC0hM5sUaLQ=",
+													"_parent": {
+														"$ref": "AAAAAAFcUC0hMpsRs9E="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": -528,
+													"top": 0,
+													"width": 143,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "(from Consegna farmaci)",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFcUC0hM5sVz0A=",
+													"_parent": {
+														"$ref": "AAAAAAFcUC0hMpsRs9E="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": -528,
+													"top": 0,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"horizontalAlignment": 1,
+													"verticalAlignment": 5,
+													"wordWrap": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 562,
+											"top": 332.5,
+											"width": 163,
+											"height": 25,
+											"autoResize": false,
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFcUC0hMpsSVis="
+											},
+											"nameLabel": {
+												"$ref": "AAAAAAFcUC0hM5sTxW4="
+											},
+											"namespaceLabel": {
+												"$ref": "AAAAAAFcUC0hM5sUaLQ="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFcUC0hM5sVz0A="
+											}
+										},
+										{
+											"_type": "UMLAttributeCompartmentView",
+											"_id": "AAAAAAFcUC0hM5sWZHE=",
+											"_parent": {
+												"$ref": "AAAAAAFcUC0hMpsQ2rM="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUC0hMpsO3k0="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -264,
+											"top": 0,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLOperationCompartmentView",
+											"_id": "AAAAAAFcUC0hM5sXn5o=",
+											"_parent": {
+												"$ref": "AAAAAAFcUC0hMpsQ2rM="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUC0hMpsO3k0="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -264,
+											"top": 0,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLReceptionCompartmentView",
+											"_id": "AAAAAAFcUC0hM5sYS1s=",
+											"_parent": {
+												"$ref": "AAAAAAFcUC0hMpsQ2rM="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUC0hMpsO3k0="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -264,
+											"top": 0,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLTemplateParameterCompartmentView",
+											"_id": "AAAAAAFcUC0hM5sZ9vs=",
+											"_parent": {
+												"$ref": "AAAAAAFcUC0hMpsQ2rM="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUC0hMpsO3k0="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -264,
+											"top": 0,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										},
+										{
+											"_type": "UMLExtensionPointCompartmentView",
+											"_id": "AAAAAAFcUC0hM5saRx0=",
+											"_parent": {
+												"$ref": "AAAAAAFcUC0hMpsQ2rM="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUC0hMpsO3k0="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": -264,
+											"top": 0,
+											"width": 10,
+											"height": 10,
+											"autoResize": false
+										}
+									],
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": true,
+									"containerExtending": false,
+									"left": 528,
+									"top": 328,
+									"width": 230,
+									"height": 35,
+									"autoResize": false,
+									"stereotypeDisplay": "label",
+									"showVisibility": true,
+									"showNamespace": false,
+									"showProperty": true,
+									"showType": true,
+									"nameCompartment": {
+										"$ref": "AAAAAAFcUC0hMpsRs9E="
+									},
+									"wordWrap": false,
+									"suppressAttributes": true,
+									"suppressOperations": true,
+									"suppressReceptions": true,
+									"showMultiplicity": true,
+									"showOperationSignature": true,
+									"attributeCompartment": {
+										"$ref": "AAAAAAFcUC0hM5sWZHE="
+									},
+									"operationCompartment": {
+										"$ref": "AAAAAAFcUC0hM5sXn5o="
+									},
+									"receptionCompartment": {
+										"$ref": "AAAAAAFcUC0hM5sYS1s="
+									},
+									"templateParameterCompartment": {
+										"$ref": "AAAAAAFcUC0hM5sZ9vs="
+									},
+									"extensionPointCompartment": {
+										"$ref": "AAAAAAFcUC0hM5saRx0="
+									}
+								},
+								{
+									"_type": "UMLExtendView",
+									"_id": "AAAAAAFcUC+FcZ3jcM0=",
+									"_parent": {
+										"$ref": "AAAAAAFcUB/MhpTRSM8="
+									},
+									"model": {
+										"$ref": "AAAAAAFcUC+FcJ3hFq8="
+									},
+									"subViews": [
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUC+FcZ3krqA=",
+											"_parent": {
+												"$ref": "AAAAAAFcUC+FcZ3jcM0="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUC+FcJ3hFq8="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 625,
+											"top": 294,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUC+FcZ3jcM0="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUC+FcZ3lqhM=",
+											"_parent": {
+												"$ref": "AAAAAAFcUC+FcZ3jcM0="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUC+FcJ3hFq8="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 584,
+											"top": 296,
+											"width": 53,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -4.679067588792275,
+											"distance": 30.01666203960727,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUC+FcZ3jcM0="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"text": "«extend»",
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFcUC+FcZ3m5uM=",
+											"_parent": {
+												"$ref": "AAAAAAFcUC+FcZ3jcM0="
+											},
+											"model": {
+												"$ref": "AAAAAAFcUC+FcJ3hFq8="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 654,
+											"top": 295,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "AAAAAAFcUC+FcZ3jcM0="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										}
+									],
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"head": {
+										"$ref": "AAAAAAFcUCQ/B5YyD7c="
+									},
+									"tail": {
+										"$ref": "AAAAAAFcUC0hMpsQ2rM="
+									},
+									"lineStyle": 0,
+									"points": "640:328;640:275",
+									"stereotypeDisplay": "label",
+									"showVisibility": true,
+									"showProperty": true,
+									"nameLabel": {
+										"$ref": "AAAAAAFcUC+FcZ3krqA="
+									},
+									"stereotypeLabel": {
+										"$ref": "AAAAAAFcUC+FcZ3lqhM="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAFcUC+FcZ3m5uM="
+									}
+								}
+							]
+						},
+						{
+							"_type": "UMLActor",
+							"_id": "AAAAAAFcTo8wKlJOJmg=",
+							"_parent": {
+								"$ref": "AAAAAAFcUBxDx5OO/+8="
+							},
+							"name": "Paziente",
+							"ownedElements": [
+								{
+									"_type": "UMLAssociation",
+									"_id": "AAAAAAFcTpQYL1UnMX8=",
+									"_parent": {
+										"$ref": "AAAAAAFcTo8wKlJOJmg="
+									},
+									"name": "Il paziente effettua una richiesta",
+									"end1": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFcTpQYL1Uo/70=",
+										"_parent": {
+											"$ref": "AAAAAAFcTpQYL1UnMX8="
+										},
+										"name": "1",
+										"reference": {
+											"$ref": "AAAAAAFcTo8wKlJOJmg="
+										},
+										"visibility": "public",
+										"navigable": false,
+										"aggregation": "none",
+										"isReadOnly": false,
+										"isOrdered": false,
+										"isUnique": false,
+										"isDerived": false,
+										"isID": false
+									},
+									"end2": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFcTpQYL1UpX2k=",
+										"_parent": {
+											"$ref": "AAAAAAFcTpQYL1UnMX8="
+										},
+										"name": "...",
+										"reference": {
+											"$ref": "AAAAAAFcTo6br1IbjCQ="
+										},
+										"visibility": "public",
+										"navigable": true,
+										"aggregation": "none",
+										"isReadOnly": false,
+										"isOrdered": false,
+										"isUnique": false,
+										"isDerived": false,
+										"isID": false
+									},
+									"visibility": "public",
+									"isDerived": false
+								},
+								{
+									"_type": "UMLAssociation",
+									"_id": "AAAAAAFcT9+abV2CWaY=",
+									"_parent": {
+										"$ref": "AAAAAAFcTo8wKlJOJmg="
+									},
+									"name": "Ritira la ricetta",
+									"end1": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFcT9+abV2DQ18=",
+										"_parent": {
+											"$ref": "AAAAAAFcT9+abV2CWaY="
+										},
+										"name": "1",
+										"reference": {
+											"$ref": "AAAAAAFcTo8wKlJOJmg="
+										},
+										"visibility": "public",
+										"navigable": true,
+										"aggregation": "none",
+										"isReadOnly": false,
+										"isOrdered": false,
+										"isUnique": false,
+										"isDerived": false,
+										"isID": false
+									},
+									"end2": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFcT9+abV2E+P4=",
+										"_parent": {
+											"$ref": "AAAAAAFcT9+abV2CWaY="
+										},
+										"name": "...",
+										"reference": {
+											"$ref": "AAAAAAFcT94iylpxbdg="
+										},
+										"visibility": "public",
+										"navigable": true,
+										"aggregation": "none",
+										"isReadOnly": false,
+										"isOrdered": false,
+										"isUnique": false,
+										"isDerived": false,
+										"isID": false
+									},
+									"visibility": "public",
+									"isDerived": false
+								},
+								{
+									"_type": "UMLAssociation",
+									"_id": "AAAAAAFcT+wNgHJ+MZU=",
+									"_parent": {
+										"$ref": "AAAAAAFcTo8wKlJOJmg="
+									},
+									"name": "Si presenta alla visita",
+									"end1": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFcT+wNgHJ/Nak=",
+										"_parent": {
+											"$ref": "AAAAAAFcT+wNgHJ+MZU="
+										},
+										"name": "1",
+										"reference": {
+											"$ref": "AAAAAAFcTo8wKlJOJmg="
+										},
+										"visibility": "public",
+										"navigable": false,
+										"aggregation": "none",
+										"isReadOnly": false,
+										"isOrdered": false,
+										"isUnique": false,
+										"isDerived": false,
+										"isID": false
+									},
+									"end2": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFcT+wNgHKAQdw=",
+										"_parent": {
+											"$ref": "AAAAAAFcT+wNgHJ+MZU="
+										},
+										"name": "1",
+										"reference": {
+											"$ref": "AAAAAAFcT+oa/Wx/XC0="
+										},
+										"visibility": "public",
+										"navigable": true,
+										"aggregation": "none",
+										"isReadOnly": false,
+										"isOrdered": false,
+										"isUnique": false,
+										"isDerived": false,
+										"isID": false
+									},
+									"visibility": "public",
+									"isDerived": false
+								},
+								{
+									"_type": "UMLAssociation",
+									"_id": "AAAAAAFcUCWOQZZnMy4=",
+									"_parent": {
+										"$ref": "AAAAAAFcTo8wKlJOJmg="
+									},
+									"name": "Richiede il farmaco",
+									"end1": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFcUCWOQZZoLBw=",
+										"_parent": {
+											"$ref": "AAAAAAFcUCWOQZZnMy4="
+										},
+										"reference": {
+											"$ref": "AAAAAAFcTo8wKlJOJmg="
+										},
+										"visibility": "public",
+										"navigable": false,
+										"aggregation": "none",
+										"isReadOnly": false,
+										"isOrdered": false,
+										"isUnique": false,
+										"isDerived": false,
+										"isID": false
+									},
+									"end2": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFcUCWOQZZpiOE=",
+										"_parent": {
+											"$ref": "AAAAAAFcUCWOQZZnMy4="
+										},
+										"reference": {
+											"$ref": "AAAAAAFcUCQ/BpYwcos="
+										},
+										"visibility": "public",
+										"navigable": true,
+										"aggregation": "none",
+										"isReadOnly": false,
+										"isOrdered": false,
+										"isUnique": false,
+										"isDerived": false,
+										"isID": false
+									},
+									"visibility": "public",
+									"isDerived": false
+								}
+							],
+							"stereotype": "Cliente",
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false
 						}
 					],
 					"documentation": "Package  che conterrà tutte i diagrammi sui casi d'uso ",
