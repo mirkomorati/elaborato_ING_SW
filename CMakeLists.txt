@@ -13,6 +13,14 @@ link_directories(${GTKMM_LIBRARY_DIRS})
 
 include_directories(${GTKMM_INCLUDE_DIRS})
 
+add_definitions(${GTKMM_CFLAGS} ${GTKMM_CFLAGS_OTHER})
+
 set(SRC_DIR code/src)
 set(HDR_DIR code/hdr)
+
+file(GLOB SRC "${SRC_DIR}/*.cpp")
+file(GLOB HDR "${HDR_DIR}/*.hpp")
+
+add_executable(elaborato ${SRC})
+
 
