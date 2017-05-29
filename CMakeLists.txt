@@ -7,7 +7,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}:${CMAKE_SOURCE_DIR}/cmake_modules)
 
 find_package(PkgConfig)
 
-pkg_check_modules(GTKMM gtkmm-3.0)
+pkg_check_modules(GTKMM REQUIRED gtkmm-3.0)
 
 link_directories(${GTKMM_LIBRARY_DIRS})
 
@@ -22,5 +22,7 @@ file(GLOB SRC "${SRC_DIR}/*.cpp")
 file(GLOB HDR "${HDR_DIR}/*.hpp")
 
 add_executable(elaborato ${SRC})
+
+target_link_libraries(elaborato ${GTKMM_LDFLAGS})
 
 
