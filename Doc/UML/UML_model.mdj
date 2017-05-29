@@ -144,7 +144,7 @@
 											"_parent": {
 												"$ref": "AAAAAAFcTozprVIBwDo="
 											},
-											"name": "Visita del medico da parte del paziente",
+											"name": "Visita del paziente da parte del medico",
 											"documentation": "# Specifica della visita del paziente\n---\n\n## Pre-condizioni\n\n* il paziente non si sente troppo bene.\n--- \n\n## Schema di base\n\n1. Il __Medico__ visita il __Paziente__.\n2. Se il __Paziente__ necessita di un farmaco:\n\t1. Il __Medico__ emette la ricetta.\n--- \n## Post-condizioni \n* il paziente non si sente meglio ma potrebbe sentirsi meglio dopo aver comprato il farmaco.\n",
 											"visibility": "public",
 											"isAbstract": false,
@@ -5750,7 +5750,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "Visita del medico da parte del paziente",
+													"text": "Visita del paziente da parte del medico",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8089,7 +8089,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "(from Consegna farmaci)",
+													"text": "(from use_cases)",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -10340,6 +10340,19 @@
 											},
 											"name": "Registrazione Non medico",
 											"documentation": "# Specifiche per la registrazione di un utente che non sia un medico \n--- \n## Pre-condizioni\n* L'utente non deve essere registrato.\n* L'utente non deve essere un medico.\n--- \n## Scenario principale \n\n1. L'utente inizia la procedura di registrazione.\n2. Il sistema chiede di fornire:\n\t1. Nome utente;\n    2. Password;\n    3. Conferma password;\n    4. Email.\n    5. Nome.\n    6. Cognome.\n    7. Data di Nascita.\n    8. Luogo di Nascita.\n3. Il sistema controlla che non siano presenti altri utenti con lo stesso nome utente o con la stessa mail.\n4. Il sistema controlla che il campo password ed il campo conferma password corrispondano.\n5. Il sistema Registra l'utente.\n--- \n## Post-condizioni\n* L'utente è registrato.\n",
+											"visibility": "public",
+											"isAbstract": false,
+											"isFinalSpecialization": false,
+											"isLeaf": false
+										},
+										{
+											"_type": "UMLUseCase",
+											"_id": "AAAAAAFcU5IU06mrMoo=",
+											"_parent": {
+												"$ref": "AAAAAAFcU4XNGqbUKYk="
+											},
+											"name": "Registrazione Medico",
+											"documentation": "# Specifiche per la registrazione di un medico\n--- \n## Pre-condizioni\n* Il medico non deve essere registrato.\n* L'utente deve essere un medico.\n--- \n## Scenario principale\n1. Il medico avvia la procedura.\n2. Il sistema chiede al medico i seguenti dati:\n\t1. Codice fiscale;\n    2. nome;\n    3. cognome;\n    4. data di nascita;\n    5. luogo di nascita;\n    6. Specializzazione (opzionale);\n    7. data di conseguimento della specializzazione (opzionale);\n3. Il sistema assegna un codice univoco a livello regionale al medico.\n4. Il sistema controlla che il medico non sia già registrato.\n5. Il sistema registra il medico.\n--- \n## Post-condizioni\n* Il medico è registrato e può usare il sistema.",
 											"visibility": "public",
 											"isAbstract": false,
 											"isFinalSpecialization": false,
@@ -13814,19 +13827,6 @@
 								}
 							],
 							"stereotype": "Utente",
-							"visibility": "public",
-							"isAbstract": false,
-							"isFinalSpecialization": false,
-							"isLeaf": false
-						},
-						{
-							"_type": "UMLUseCase",
-							"_id": "AAAAAAFcU5IU06mrMoo=",
-							"_parent": {
-								"$ref": "AAAAAAFcUBxDx5OO/+8="
-							},
-							"name": "Registrazione Medico",
-							"documentation": "# Specifiche per la registrazione di un medico\n--- \n## Pre-condizioni\n* Il medico non deve essere registrato.\n* L'utente deve essere un medico.\n--- \n## Scenario principale\n1. Il medico avvia la procedura.\n2. Il sistema chiede al medico i seguenti dati:\n\t1. Codice fiscale;\n    2. nome;\n    3. cognome;\n    4. data di nascita;\n    5. luogo di nascita;\n    6. Specializzazione (opzionale);\n    7. data di conseguimento della specializzazione (opzionale);\n3. Il sistema assegna un codice univoco a livello regionale al medico.\n4. Il sistema controlla che il medico non sia già registrato.\n5. Il sistema registra il medico.\n--- \n## Post-condizioni\n* Il medico è registrato e può usare il sistema.",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
