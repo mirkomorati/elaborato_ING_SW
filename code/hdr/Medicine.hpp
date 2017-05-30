@@ -7,8 +7,13 @@
 #ifndef _MEDICINE_H
 #define _MEDICINE_H
 
-class Medicine {
-public: 
+#include <string>
+#include <vector>
+#include <map>
+#include "ActivePrinciple.hpp"
+
+using namespace std;
+struct Medicine {
     string name;
     float price;
     string pharmaceutical_form;

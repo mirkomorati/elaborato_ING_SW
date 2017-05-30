@@ -7,6 +7,13 @@
 #ifndef _PATIENT_H
 #define _PATIENT_H
 
+#include <vector>
+#include <string>
+#include "Address.hpp"
+#include "time_utilities/Date.hpp"
+
+using namespace std;
+
 class Patient {
 public: 
     

@@ -7,9 +7,7 @@
 #ifndef _TIME_H
 #define _TIME_H
 
-class Time {
-public: 
-    
+struct Time {
     void get_time();
     
     void set_time();

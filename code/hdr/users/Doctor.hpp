@@ -7,8 +7,12 @@
 #ifndef _DOCTOR_H
 #define _DOCTOR_H
 
+#include <string>
+#include <vector>
+
 #include "User.hpp"
 
+using namespace std;
 
 class Doctor: public User {
 private: 

@@ -15,7 +15,7 @@
  * @return Bill
  */
 Bill Pharmacist::Sell() {
-    return null;
+
 }
 
 /**

@@ -8,6 +8,7 @@
 #define _PHARMACIST_H
 
 #include "User.hpp"
+#include "../Bill.hpp"
 
 
 class Pharmacist: public User {

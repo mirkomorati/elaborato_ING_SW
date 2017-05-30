@@ -7,11 +7,12 @@
 #ifndef _ACTIVEPRINCIPLE_H
 #define _ACTIVEPRINCIPLE_H
 
-class ActivePrinciple {
-public: 
-    string name;
-    string description;
-    string effect;
+#include <string>
+
+struct ActivePrinciple {
+    std::string name;
+    std::string description;
+    std::string effect;
 };
 
 #endif //_ACTIVEPRINCIPLE_H

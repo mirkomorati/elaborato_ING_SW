@@ -7,8 +7,15 @@
 #ifndef _PRESCRIPTION_H
 #define _PRESCRIPTION_H
 
-class Prescription {
-public: 
+#include <vector>
+#include <string>
+#include <map>
+
+#include "time_utilities/Date.hpp"
+
+using namespace std;
+
+struct Prescription {
     int patient_id;
     Date issue_date;
     Date expiry_date;

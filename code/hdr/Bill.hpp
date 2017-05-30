@@ -7,8 +7,15 @@
 #ifndef _BILL_H
 #define _BILL_H
 
-class Bill {
-public: 
+#include "users/Pharmacist.hpp"
+#include "time_utilities/Date.hpp"
+#include "time_utilities/Time.hpp"
+#include <map>
+#include <vector>
+
+using namespace std;
+struct Bill {
+
     Pharmacist pharmacist;
     vector<map<int, bool>> medicines;
     float subtotal;

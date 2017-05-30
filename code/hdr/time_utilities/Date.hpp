@@ -7,9 +7,7 @@
 #ifndef _DATE_H
 #define _DATE_H
 
-class Date {
-public: 
-    
+struct  Date {
     void get_date();
     
     void set_date();
