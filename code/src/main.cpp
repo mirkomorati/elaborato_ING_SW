@@ -1,6 +1,6 @@
-//
-// Created by Noè Murr on 29/05/2017.
-//
+/**
+ * Created by Noè Murr on 29/05/2017.
+ */
 
 #include <gtkmm-3.0/gtkmm.h>
 

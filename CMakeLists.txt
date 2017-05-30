@@ -18,10 +18,10 @@ add_definitions(${GTKMM_CFLAGS} ${GTKMM_CFLAGS_OTHER})
 set(SRC_DIR code/src)
 set(HDR_DIR code/hdr)
 
-file(GLOB SRC "${SRC_DIR}/*.cpp")
-file(GLOB HDR "${HDR_DIR}/*.hpp")
+file(GLOB_RECURSE SRC "${SRC_DIR}/*.cpp")
+file(GLOB_RECURSE HDR "${HDR_DIR}/*.hpp")
 
-add_executable(elaborato ${SRC})
+add_executable(elaborato ${SRC} ${HDR})
 
 target_link_libraries(elaborato ${GTKMM_LDFLAGS})
 
