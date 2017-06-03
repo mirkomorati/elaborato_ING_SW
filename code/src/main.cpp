@@ -18,13 +18,11 @@ int main(int argc, char *argv[])
 }*/
 
 #include "../hdr/Configuration.hpp"
-#include <iostream>
-
 using namespace mm;
 
 int main(int argc, char **argv){
   Configuration::set_config_file_name(
-      "/Users/noemurr/git/elaborato_ING_SW/tmp/config.json");
+      "../tmp/config.json");
 
   Configuration &config = Configuration::get_instance();
 

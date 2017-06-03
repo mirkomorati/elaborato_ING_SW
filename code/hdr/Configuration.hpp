@@ -20,16 +20,14 @@ namespace mm {
     json config;
 
   private:
-    Configuration() {};
-
     Configuration(const std::string &configuration_file_name);
+  public:
+    Configuration() = delete;
 
     // disallow default constructor and assign operator
-    Configuration(const Configuration &old);
-    const Configuration &operator=(const Configuration &old);
+    Configuration(const Configuration &old) = delete;
+    const Configuration &operator=(const Configuration &old) = delete;
 
-    ~Configuration(){};
-  public:
     static Configuration &get_instance() noexcept(false);
 
     static const std::string &get_config_file_name();
