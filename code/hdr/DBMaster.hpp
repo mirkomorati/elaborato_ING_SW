@@ -7,6 +7,7 @@
 
 #include <sqlite3.h>
 #include <string>
+#include "interfaces/ISerializable.hpp"
 
 namespace mm {
   class DBMaster {
@@ -26,6 +27,8 @@ namespace mm {
     static void set_db_file_name(const std::string &db_file_name);
 
     static DBMaster &get_instance() noexcept(false);
+
+    void add_to_db(const ISerializable &obj);
 
     ~DBMaster();
 

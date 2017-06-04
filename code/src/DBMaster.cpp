@@ -44,3 +44,17 @@ mm::DBMaster &mm::DBMaster::get_instance() {
 
   return *instance;
 }
+
+void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
+  sqlite3_stmt *stmt;
+  std::stringstream ss;
+
+  // preparing query
+  ss << "select * from " << obj.get_table_name() << " where ";
+  for (auto &it : obj.serialize()) {
+    ss << it.first << "='" << it.second << "' ";
+  }
+  ss << ";";
+
+
+}

@@ -4,6 +4,7 @@
  */
 
 
+#include <iostream>
 #include "../../hdr/interfaces/ISerializable.hpp"
 
 /**
@@ -31,4 +32,13 @@ mm::Serialized::~Serialized() {
   }
 }
 
-
+std::ostream &operator<<(std::ostream &os, const mm::Serialized &data){
+  switch (data.type){
+    case INTEGER:
+      return (os << data.data.integer);
+    case REAL:
+      return (os << data.data.real);
+    case TEXT:
+      return (os << data.data.text);
+  }
+}
