@@ -38,12 +38,16 @@ namespace mm {
 
   class ISerializable {
   public:
-
+    // return the data of the row that should be inserted in database
     virtual std::map<std::string, Serialized>
     serialize() = 0;
 
+    // build the object from the row of the database where the data are stored
     virtual void
     unserialize(std::map<std::string, Serialized>) = 0;
+
+    // return the table name where to save the data of the class
+    virtual std::string get_table_name() = 0;
 
   };
 }
