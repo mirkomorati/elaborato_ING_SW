@@ -18,13 +18,9 @@ namespace mm {
   };
 
   union SerializedUnion{
-    std::string text;
+    const char *text;
     int integer;
     double real;
-
-
-    SerializedUnion() noexcept;
-    ~SerializedUnion() noexcept {}
   };
 
   struct Serialized{
@@ -39,8 +35,6 @@ namespace mm {
 
     Serialized(StoredTypes t, SerializedUnion data) noexcept;
     Serialized() noexcept;
-
-    ~Serialized() noexcept;
   };
 
   std::ostream &operator<<(std::ostream &os, const Serialized &data);

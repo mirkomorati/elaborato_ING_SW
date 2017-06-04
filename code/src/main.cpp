@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 
 #include "../hdr/Configuration.hpp"
 #include "../hdr/DBMaster.hpp"
+#include "../hdr/Medicine.hpp"
 
 using namespace mm;
 
@@ -35,4 +36,6 @@ int main(int argc, char **argv){
   DBMaster::set_db_file_name(config.get<std::string>("db_name"));
 
   auto &db = DBMaster::get_instance();
+
+  db.add_to_db(Medicine("ciao", 23.4f));
 }

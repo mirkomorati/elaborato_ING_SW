@@ -44,21 +44,12 @@ std::ostream &mm::operator<<(std::ostream &os, const mm::Serialized &data){
     case mm::REAL:
       return (os << data.data.real);
     case mm::TEXT:
-      return (os << data.data.text);
+      return (os << "'" <<data.data.text << "'");
   }
   return os;
-}
-
-mm::Serialized::~Serialized() noexcept {
-  if(type == mm::TEXT){
-    data.text.~basic_string();
-  }
 }
 
 mm::Serialized::Serialized() noexcept {
   type = mm::INTEGER;
   data.integer = 0;
-}
-
-mm::SerializedUnion::SerializedUnion() noexcept : text() {
 }

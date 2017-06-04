@@ -51,40 +51,42 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
 
   // preparing query
   ss << "select count(*) from (select * from " << obj.get_table_name()
-     << " where " << obj.get_primary_key() << "='"
-     << obj.serialize()[obj.get_primary_key()] << "');";
+     << " where " << obj.get_primary_key() << "="
+     << obj.serialize()[obj.get_primary_key()] << ");";
 
   if (sqlite3_prepare(db,ss.str().c_str(), -1, &stmt, 0) == SQLITE_OK){
     if ((sqlite3_step(stmt)) == SQLITE_ROW) {
       auto serialized_map = obj.serialize();
       if(sqlite3_column_int(stmt, 0) >= 1){
         // esiste già la entry opera un update.
-        ss.clear();
-        ss << "update " << obj.get_table_name() << "set ";
+        ss.str(std::string());
+        ss << "update " << obj.get_table_name() << " set ";
         for (auto it = serialized_map.begin(); it != serialized_map.end();) {
-          ss << it->first << "='" << it->second << "'";
+          ss << it->first << "=" << it->second << "";
           if (++it != serialized_map.end())
             ss << ", ";
           else
             ss << " ";
         }
-        ss << " where " << obj.get_primary_key() << "='"
-           << obj.serialize()[obj.get_primary_key()] << "';";
+        ss << " where " << obj.get_primary_key() << "="
+           << obj.serialize()[obj.get_primary_key()] << ";";
         if (sqlite3_prepare(db,ss.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR){
           std::stringstream msg;
-          msg << "cannot update row with query: \"" << ss.str() << "\"";
+          msg << "cannot update row with query: \"" << ss.str() << "\""
+              << std::endl
+              << "sqlite error: " << sqlite3_errmsg(db);
           throw std::runtime_error(msg.str());
         }
       } else {
         // la entry non esiste opera un insert.
-        ss.clear();
+        ss.str(std::string());
         ss << "insert into " << obj.get_table_name() << " (";
         for (auto it = serialized_map.begin(); it != serialized_map.end();) {
           ss << it->first;
           if (++it != serialized_map.end())
             ss << ", ";
           else
-            ss << ")";
+            ss << ") ";
         }
         ss << "values (";
         for (auto it = serialized_map.begin(); it != serialized_map.end();) {
@@ -96,7 +98,9 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
         }
         if (sqlite3_prepare(db,ss.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR){
           std::stringstream msg;
-          msg << "cannot insert row with query: \"" << ss.str() << "\"";
+          msg << "cannot insert row with query: \"" << ss.str() << "\""
+              << std::endl
+              << "sqlite error: " << sqlite3_errmsg(db);
           throw std::runtime_error(msg.str());
         }
       }
@@ -104,6 +108,14 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
       throw std::runtime_error("cannot execute stmt");
     }
   } else {
-    throw std::runtime_error("cannot prepare stmt");
+    std::stringstream msg;
+    msg << "cannot prepare stmt"
+        << std::endl
+        << "sqlite error: " << sqlite3_errmsg(db);
+    throw std::runtime_error(msg.str());
+  }
+
+  if ((sqlite3_step(stmt)) != SQLITE_DONE){
+    std::cout << "perché cazzo non vai?: " << ss.str() << std::endl;
   }
 }
