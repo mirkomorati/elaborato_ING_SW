@@ -53,6 +53,8 @@ namespace mm {
     // return the table name where to save the data of the class
     virtual std::string get_table_name() const = 0;
 
+    // return the primary key column name.
+    virtual std::string get_primary_key() const = 0;
   };
 }
 #endif //_ISERIALIZABLE_H
