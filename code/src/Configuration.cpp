@@ -4,6 +4,7 @@
 
 #include "../hdr/Configuration.hpp"
 #include <stdexcept>
+#include <Carbon/Carbon.h>
 
 mm::Configuration *mm::Configuration::instance = nullptr;
 std::string mm::Configuration::config_file_name;
@@ -42,3 +43,13 @@ mm::Configuration::set_config_file_name(const std::string &config_file_name) {
     instance = nullptr;
   }
 }
+
+mm::key_not_found_error::key_not_found_error(const std::string &str)
+    : runtime_error(str){}
+
+const char *mm::key_not_found_error::what() const noexcept{
+  return std::runtime_error::what();
+}
+
+mm::key_not_found_error::key_not_found_error(const char *what)
+    : runtime_error(what) {}
