@@ -51,7 +51,7 @@ std::ostream &mm::operator<<(std::ostream &os, const mm::Serialized &data){
 
 mm::Serialized::~Serialized() noexcept {
   if(type == mm::TEXT){
-    data.text.~basic_string<char>();
+    data.text.~basic_string();
   }
 }
 
