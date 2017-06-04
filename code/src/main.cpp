@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
 }*/
 
 #include "../hdr/Configuration.hpp"
+#include "../hdr/DBMaster.hpp"
+
 using namespace mm;
 
 int main(int argc, char **argv){
@@ -29,4 +31,8 @@ int main(int argc, char **argv){
   std::cout << "configuration from: " << config.get_config_file_name()
             << std::endl << "\tdb_name: "
             << config.get<std::string>("db_name") << std::endl;
+
+  DBMaster::set_db_file_name(config.get<std::string>("db_name"));
+
+  auto &db = DBMaster::get_instance();
 }

@@ -13,10 +13,10 @@ namespace mm {
   private:
     sqlite3 *db;
     static std::string db_file_name;
+    static DBMaster *instance;
   private:
-    DBMaster(std::string db_file_name);
+    DBMaster() noexcept(false);
   public:
-    DBMaster() = delete;
     // disallow default constructor and assign operator
     DBMaster(const DBMaster &old) = delete;
     const DBMaster &operator=(const DBMaster &old) = delete;
@@ -24,6 +24,10 @@ namespace mm {
     static const std::string &get_db_file_name();
 
     static void set_db_file_name(const std::string &db_file_name);
+
+    static DBMaster &get_instance() noexcept(false);
+
+    ~DBMaster();
 
   };
 }

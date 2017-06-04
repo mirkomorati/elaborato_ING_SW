@@ -15,6 +15,7 @@ pkg_check_modules(GTKMM REQUIRED gtkmm-3.0)
 link_directories(${GTKMM_LIBRARY_DIRS})
 
 include_directories(${GTKMM_INCLUDE_DIRS})
+include_directories(${SQLITE3_INCLUDE_DIRS})
 
 add_definitions(${GTKMM_CFLAGS} ${GTKMM_CFLAGS_OTHER})
 
@@ -28,8 +29,10 @@ file(GLOB_RECURSE HDR "${HDR_DIR}/*.hpp")
 
 add_executable(elaborato ${SRC} ${HDR})
 add_executable(elaborato_cli ${SRC_DIR}/main.cpp ${SRC_DIR}/Configuration.cpp
-        ${HDR_DIR}/Configuration.hpp)
+        ${HDR_DIR}/Configuration.hpp ${SRC_DIR}/DBMaster.cpp
+        ${HDR_DIR}/DBMaster.hpp)
 
 target_link_libraries(elaborato ${GTKMM_LDFLAGS})
+target_link_libraries(elaborato_cli ${SQLITE3_LIBRARIES})
 
 

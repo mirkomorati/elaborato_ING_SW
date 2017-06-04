@@ -20,10 +20,8 @@ namespace mm {
     json config;
 
   private:
-    Configuration(const std::string &configuration_file_name);
+    Configuration() noexcept(false);
   public:
-    Configuration() = delete;
-
     // disallow default constructor and assign operator
     Configuration(const Configuration &old) = delete;
     const Configuration &operator=(const Configuration &old) = delete;
@@ -34,7 +32,7 @@ namespace mm {
 
     static void set_config_file_name(const std::string &config_file_name);
 
-    template <typename T> T get(std::string key) noexcept(false){
+    template <typename T> T get(std::string key) const noexcept(false){
       return config[key].get<T>();
     }
 

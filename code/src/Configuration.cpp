@@ -3,25 +3,28 @@
 //
 
 #include "../hdr/Configuration.hpp"
+#include <stdexcept>
 
 mm::Configuration *mm::Configuration::instance = nullptr;
 std::string mm::Configuration::config_file_name;
 
-mm::Configuration::Configuration(const std::string &configuration_file_name) {
+mm::Configuration::Configuration() noexcept(false) {
+  if (Configuration::config_file_name.empty())
+    throw std::invalid_argument(
+        "Set the path of the configuration file first. with a call to "
+            "mm::Configuration::set_db_file_name()");
 
-  std::ifstream config_file(configuration_file_name);
+  std::ifstream config_file(Configuration::config_file_name);
 
-  if(config_file.fail()) throw "error opening config file";
+  if(config_file.fail())
+    throw std::runtime_error("Cannot open the configuration file");
 
   // reading json
   config_file >> config;
 }
 
 mm::Configuration &mm::Configuration::get_instance() noexcept(false) {
-  if (Configuration::config_file_name.empty()) throw "set the "
-        "configuration file name first!";
-
-  if (instance == nullptr) instance = new Configuration(config_file_name);
+  if (instance == nullptr) instance = new Configuration();
 
   return *instance;
 }
@@ -34,5 +37,8 @@ void
 mm::Configuration::set_config_file_name(const std::string &config_file_name) {
   Configuration::config_file_name = config_file_name;
 
-  if (instance != nullptr) delete instance;
+  if (instance != nullptr){
+    delete instance;
+    instance = nullptr;
+  }
 }
