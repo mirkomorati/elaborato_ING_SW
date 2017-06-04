@@ -10,35 +10,55 @@
 /**
  * ISerializable implementation
  */
-bool mm::Serialized::isType(mm::StoredTypes type) const {
+bool mm::Serialized::isType(mm::StoredTypes type) const noexcept {
   return type == this->type;
 }
 
-const mm::SerializedUnion &mm::Serialized::get() const {
+const mm::SerializedUnion &mm::Serialized::get() const noexcept {
   return data;
 }
 
-mm::StoredTypes mm::Serialized::getType() const {
+mm::StoredTypes mm::Serialized::getType() const noexcept {
   return type;
 }
 
-mm::Serialized::Serialized(mm::StoredTypes t, mm::SerializedUnion data)
-    : type(t), data(data) {}
-
-mm::Serialized::~Serialized() {
-  if (type == StoredTypes::TEXT){
-    // su overflow è (&data.text)->string::~string()
-    data.text.string::~string();
+mm::Serialized::Serialized(mm::StoredTypes t, mm::SerializedUnion data) noexcept
+    : type(t) {
+  switch (t){
+    case INTEGER:
+      this->data.integer = data.integer;
+      break;
+    case REAL:
+      this->data.real = data.real;
+      break;
+    case TEXT:
+      this->data.text = data.text;
+      break;
   }
 }
 
-std::ostream &operator<<(std::ostream &os, const mm::Serialized &data){
+std::ostream &mm::operator<<(std::ostream &os, const mm::Serialized &data){
   switch (data.type){
-    case INTEGER:
+    case mm::INTEGER:
       return (os << data.data.integer);
-    case REAL:
+    case mm::REAL:
       return (os << data.data.real);
-    case TEXT:
+    case mm::TEXT:
       return (os << data.data.text);
   }
+  return os;
+}
+
+mm::Serialized::~Serialized() noexcept {
+  if(type == mm::TEXT){
+    data.text.~basic_string<char>();
+  }
+}
+
+mm::Serialized::Serialized() noexcept {
+  type = mm::INTEGER;
+  data.integer = 0;
+}
+
+mm::SerializedUnion::SerializedUnion() noexcept : text() {
 }
