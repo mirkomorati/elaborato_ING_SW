@@ -96,7 +96,7 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
         }
         if (sqlite3_prepare(db,ss.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR){
           std::stringstream msg;
-          msg << "cannot update row with query: \"" << ss.str() << "\"";
+          msg << "cannot insert row with query: \"" << ss.str() << "\"";
           throw std::runtime_error(msg.str());
         }
       }
