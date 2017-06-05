@@ -15,7 +15,7 @@
 
 using namespace std;
 namespace mm {
-  struct Medicine : ISerializable {
+  struct Drug : ISerializable {
     string name;
     float price;
     string pharmaceutical_form;
@@ -24,7 +24,7 @@ namespace mm {
     vector<map<ActivePrinciple, string>> active_principles;
 
   public:
-    Medicine(const string &name, float price);
+    Drug(const string &name, float price);
 
     map<string, Serialized> serialize() const override;
 
