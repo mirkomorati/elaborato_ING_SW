@@ -10,6 +10,12 @@
 #include "interfaces/ISerializable.hpp"
 
 namespace mm {
+
+  /**
+   * @brief Singleton che rappresenta il database, contiene tutte le funzioni
+   *        necessarie per scrivere un oggetto di tipo derivato da ISerializable
+   *        e per leggerlo. Nasconde le chiamate alle API C di sqlite3.
+   */
   class DBMaster {
   private:
     sqlite3 *db;

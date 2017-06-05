@@ -83,7 +83,7 @@ const mm::Serialized &mm::Serialized::operator=(const mm::Serialized &old) {
   return *this;
 }
 
-const std::string &mm::Serialized::get_str() const noexcept(false) {
+const std::string mm::Serialized::get_str() const noexcept(false) {
   if (type != mm::TEXT){
     throw std::runtime_error("The type of the object is not TEXT!");
   }

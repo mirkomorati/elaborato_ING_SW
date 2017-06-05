@@ -153,13 +153,19 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
     throw std::runtime_error(msg.str());
   }
 
-  if ((sqlite3_step(stmt)) == SQLITE_ERROR){
+  int rc = sqlite3_step(stmt);
+  if ( rc == SQLITE_ERROR){
     sqlite3_finalize(stmt);
     std::stringstream msg;
     msg << "cannot execute insert stmt: \"" << query.str() << "\""
         << std::endl
         << "sqlite error: " << sqlite3_errmsg(db);
     throw std::runtime_error(msg.str());
+  } else if (rc == SQLITE_DONE){
+    sqlite3_finalize(stmt);
+    std::stringstream msg;
+    msg << "there are no rows that correspond to the query: " << query.str();
+    throw std::runtime_error(msg.str()); // todo creare un eccezione apposta.
   }
 
   col_num = sqlite3_column_count(stmt);
