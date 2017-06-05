@@ -143,8 +143,6 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
   query << "select * from " << obj.get_table_name()
         << " where " << obj.get_primary_key() << " = " << id;
 
-  std::cout << "query: " << query.str() << std::endl;
-
   if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
     std::stringstream msg;
     msg << "cannot select rows with query: \"" << query.str() << "\""
