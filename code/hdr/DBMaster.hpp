@@ -30,6 +30,8 @@ namespace mm {
 
     void add_to_db(const ISerializable &obj);
 
+    void extract_from_db(ISerializable &obj, const Serialized &id);
+
     ~DBMaster();
 
   };
