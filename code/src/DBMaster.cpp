@@ -142,7 +142,9 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
   int col_num = 0;
 
   query << "select * from " << obj.get_table_name()
-        << " where " << obj.get_table_name() << " = " << id;
+        << " where " << obj.get_primary_key() << " = " << id;
+
+  std::cout << "query: " << query.str() << std::endl;
 
   if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
     std::stringstream msg;
@@ -164,29 +166,39 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
   col_num = sqlite3_column_count(stmt);
 
   for (int i = 0; i < col_num; ++i) {
-    SerializedUnion tmp;
     int type = sqlite3_column_type(stmt, i);
 
     switch (type) {
       case SQLITE_INTEGER:
-        tmp.integer = sqlite3_column_int(stmt, i);
-        serialized_map[sqlite3_column_name(stmt, i)] = Serialized(mm::INTEGER, tmp);
+        serialized_map[sqlite3_column_name(stmt, i)] =
+            Serialized(mm::INTEGER, sqlite3_column_int(stmt, i));
         break;
       case SQLITE_TEXT:
-        tmp.text = (const char *) sqlite3_column_text(stmt, i);
-        serialized_map[sqlite3_column_name(stmt, i)] = Serialized(mm::TEXT, tmp);
+        serialized_map[sqlite3_column_name(stmt, i)] =
+            Serialized(mm::TEXT, std::string((const char *) sqlite3_column_text
+                (stmt, i)));
         break;
       case SQLITE_FLOAT:
-        tmp.real = sqlite3_column_double(stmt, i);
-        serialized_map[sqlite3_column_name(stmt, i)] = Serialized(mm::REAL, tmp);
+        serialized_map[sqlite3_column_name(stmt, i)] =
+            Serialized(mm::REAL, sqlite3_column_double(stmt, i));
         break;
       default:{
+        std::stringstream msg;
+        msg << "data type not recognized: " << type << " name: "
+            << sqlite3_column_name(stmt, i) << " decltype: "
+            << sqlite3_column_decltype(stmt, i)
+            << " data: " << sqlite3_column_int(stmt, i)
+            << " col: " << i;
         sqlite3_finalize(stmt);
-        throw std::runtime_error("data type not recognized");
+        throw std::runtime_error(msg.str());
       }
     }
   }
   sqlite3_finalize(stmt);
+
+  for (auto &it : serialized_map){
+    std::cout << "first: " << it.first << "\nsecond " << it.second << std::endl;
+  }
 
   obj.unserialize(serialized_map);
 }

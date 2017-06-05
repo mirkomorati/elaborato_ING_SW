@@ -18,7 +18,7 @@ namespace mm {
   };
 
   union SerializedUnion{
-    const char *text;
+    char *text;
     int integer;
     double real;
   };
@@ -31,9 +31,20 @@ namespace mm {
   public:
     StoredTypes getType() const noexcept;
     bool isType(StoredTypes type) const noexcept;
-    const SerializedUnion &get() const noexcept;
+    //const SerializedUnion &get() const noexcept;
 
-    Serialized(StoredTypes t, SerializedUnion data) noexcept;
+    const std::string &get_str() const;
+    int get_int() const;
+    double get_real() const;
+
+    Serialized(StoredTypes t, std::string data) noexcept;
+    Serialized(StoredTypes t, int data) noexcept;
+    Serialized(StoredTypes t, double data) noexcept;
+    Serialized(const Serialized &old) noexcept;
+
+    const Serialized &operator=(const Serialized &old);
+
+    ~Serialized() noexcept;
     Serialized() noexcept;
   };
 

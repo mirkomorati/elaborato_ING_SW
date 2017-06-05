@@ -37,5 +37,11 @@ int main(int argc, char **argv){
 
   auto &db = DBMaster::get_instance();
 
-  db.add_to_db(Drug("ciao", 23.4f));
+  db.add_to_db(Drug("ciao", 22.4f));
+
+  Drug tmp("", 0.f);
+
+  db.extract_from_db(tmp, Serialized(mm::TEXT, "ciao"));
+
+  std::cout << "name: " << tmp.name << "\nprice: " << tmp.price << std::endl;
 }

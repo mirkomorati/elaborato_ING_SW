@@ -8,18 +8,18 @@
 
 
 map<string, mm::Serialized> mm::Drug::serialize() const {
+  // todo serialize decente
   map<string, mm::Serialized> map;
-  mm::SerializedUnion tmp;
-  tmp.text = name.c_str();
-  map["name"] = mm::Serialized(mm::TEXT, tmp);
-  tmp.real = price;
-  map["price"] = mm::Serialized(mm::REAL, tmp);
+  map["name"] = mm::Serialized(mm::TEXT, name);
+  map["price"] = mm::Serialized(mm::REAL, price);
 
   return map;
 }
 
-void mm::Drug::unserialize(map<string, mm::Serialized> map1) {
-
+void mm::Drug::unserialize(map<string, mm::Serialized> map) {
+  // todo aggiungere un unserialize decente
+  name = map["name"].get_str();
+  price = (float) map["price"].get_real();
 }
 
 string mm::Drug::get_table_name() const {

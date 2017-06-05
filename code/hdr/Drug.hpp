@@ -28,7 +28,7 @@ namespace mm {
 
     map<string, Serialized> serialize() const override;
 
-    void unserialize(map<string, Serialized> map1) override;
+    void unserialize(map<string, Serialized> map) override;
 
     string get_table_name() const override;
 
