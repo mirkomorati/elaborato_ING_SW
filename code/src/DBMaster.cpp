@@ -5,7 +5,6 @@
 #include "../hdr/DBMaster.hpp"
 #include <sstream>
 #include <iostream>
-#include <algorithm>
 
 std::string mm::DBMaster::db_file_name;
 mm::DBMaster *mm::DBMaster::instance = nullptr;
@@ -195,10 +194,6 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
     }
   }
   sqlite3_finalize(stmt);
-
-  for (auto &it : serialized_map){
-    std::cout << "first: " << it.first << "\nsecond " << it.second << std::endl;
-  }
 
   obj.unserialize(serialized_map);
 }

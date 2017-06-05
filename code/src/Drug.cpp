@@ -30,5 +30,4 @@ string mm::Drug::get_primary_key() const {
   return "name";
 }
 
-mm::Drug::Drug(const string &name, float price) : name(name),
-                                                          price(price) {}
+mm::Drug::Drug(const string &name, float price) : name(name), price(price) {}

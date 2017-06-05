@@ -33,9 +33,9 @@ namespace mm {
     bool isType(StoredTypes type) const noexcept;
     //const SerializedUnion &get() const noexcept;
 
-    const std::string &get_str() const;
-    int get_int() const;
-    double get_real() const;
+    const std::string &get_str() const noexcept(false);
+    int get_int() const noexcept(false);
+    double get_real() const noexcept(false);
 
     Serialized(StoredTypes t, std::string data) noexcept;
     Serialized(StoredTypes t, int data) noexcept;

@@ -8,16 +8,9 @@
 #include <sstream>
 #include "../../hdr/interfaces/ISerializable.hpp"
 
-/**
- * ISerializable implementation
- */
 bool mm::Serialized::isType(mm::StoredTypes type) const noexcept {
   return type == this->type;
 }
-
-/*const mm::SerializedUnion &mm::Serialized::get() const noexcept {
-  return data;
-}*/
 
 mm::StoredTypes mm::Serialized::getType() const noexcept {
   return type;
@@ -90,7 +83,7 @@ const mm::Serialized &mm::Serialized::operator=(const mm::Serialized &old) {
   return *this;
 }
 
-const std::string &mm::Serialized::get_str() const {
+const std::string &mm::Serialized::get_str() const noexcept(false) {
   if (type != mm::TEXT){
     throw std::runtime_error("The type of the object is not TEXT!");
   }
@@ -98,7 +91,7 @@ const std::string &mm::Serialized::get_str() const {
   return std::string(data.text);
 }
 
-int mm::Serialized::get_int() const {
+int mm::Serialized::get_int() const noexcept(false) {
   if (type != mm::INTEGER){
     throw std::runtime_error("The type of the object is not INTEGER!");
   }
@@ -106,12 +99,10 @@ int mm::Serialized::get_int() const {
   return data.integer;
 }
 
-double mm::Serialized::get_real() const {
+double mm::Serialized::get_real() const noexcept(false) {
   if (type != mm::REAL){
     throw std::runtime_error("The type of the object is not REAL!");
   }
 
   return data.real;
 }
-
-
