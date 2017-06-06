@@ -124,4 +124,7 @@ mm::Serialized::operator double() const {
   return get_real();
 }
 
+mm::Serialized::Serialized(float data) noexcept
+    : Serialized(static_cast<double>(data)){}
+
 

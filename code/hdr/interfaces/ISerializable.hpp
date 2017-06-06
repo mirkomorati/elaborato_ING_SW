@@ -63,6 +63,7 @@ namespace mm {
     Serialized(const char *c_str) noexcept;
     Serialized(int data) noexcept;
     Serialized(double data) noexcept;
+    Serialized(float data) noexcept;
     Serialized(const Serialized &old) noexcept;
 
     const Serialized &operator=(const Serialized &old);
