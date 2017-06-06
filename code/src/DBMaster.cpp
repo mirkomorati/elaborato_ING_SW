@@ -173,17 +173,14 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
 
     switch (type) {
       case SQLITE_INTEGER:
-        serialized_map[sqlite3_column_name(stmt, i)] =
-            Serialized(mm::INTEGER, sqlite3_column_int(stmt, i));
+        serialized_map[sqlite3_column_name(stmt, i)] = sqlite3_column_int(stmt, i);
         break;
       case SQLITE_TEXT:
         serialized_map[sqlite3_column_name(stmt, i)] =
-            Serialized(mm::TEXT, std::string((const char *) sqlite3_column_text
-                (stmt, i)));
+            std::string((const char *) sqlite3_column_text(stmt, i));
         break;
       case SQLITE_FLOAT:
-        serialized_map[sqlite3_column_name(stmt, i)] =
-            Serialized(mm::REAL, sqlite3_column_double(stmt, i));
+        serialized_map[sqlite3_column_name(stmt, i)] = sqlite3_column_double(stmt, i);
         break;
       default:{
         std::stringstream msg;

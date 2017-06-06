@@ -31,7 +31,7 @@ add_executable(elaborato ${SRC} ${HDR})
 add_executable(elaborato_cli ${SRC_DIR}/main.cpp ${SRC_DIR}/Configuration.cpp
         ${HDR_DIR}/Configuration.hpp ${SRC_DIR}/DBMaster.cpp
         ${HDR_DIR}/DBMaster.hpp ${SRC_DIR}/interfaces/ISerializable.cpp
-        ${SRC_DIR}/Drug.cpp)
+        ${SRC_DIR}/Drug.cpp ${SRC_DIR}/ActivePrinciple.cpp)
 
 target_link_libraries(elaborato ${GTKMM_LDFLAGS})
 target_link_libraries(elaborato_cli ${SQLITE3_LIBRARIES})

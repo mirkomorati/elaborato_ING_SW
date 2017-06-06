@@ -18,11 +18,17 @@ int main(int argc, char **argv){
 
   auto &db = DBMaster::get_instance();
 
-  db.add_to_db(Drug("ciao", 22.4f));
+  Drug to_add("ciao", 22.4f);
+  to_add.ATC_classification = "testing testing testing";
+  to_add.pharmaceutical_form = "water";
+  to_add.contraindications.push_back("death hello");
+  to_add.contraindications.push_back("test");
+
+  db.add_to_db(to_add);
 
   Drug tmp("", 0.f);
 
-  db.extract_from_db(tmp, Serialized(mm::TEXT, "ciao"));
+  db.extract_from_db(tmp, "ciao");
 
   std::cout << "name: " << tmp.name << "\nprice: " << tmp.price << std::endl;
 }

@@ -59,12 +59,16 @@ namespace mm {
     int get_int() const noexcept(false);
     double get_real() const noexcept(false);
 
-    Serialized(StoredTypes t, std::string data) noexcept;
-    Serialized(StoredTypes t, int data) noexcept;
-    Serialized(StoredTypes t, double data) noexcept;
+    Serialized(std::string data) noexcept;
+    Serialized(const char *c_str) noexcept;
+    Serialized(int data) noexcept;
+    Serialized(double data) noexcept;
     Serialized(const Serialized &old) noexcept;
 
     const Serialized &operator=(const Serialized &old);
+    operator int() const noexcept(false);
+    operator std::string() const noexcept(false);
+    operator double() const noexcept(false);
 
     ~Serialized() noexcept;
     Serialized() noexcept;

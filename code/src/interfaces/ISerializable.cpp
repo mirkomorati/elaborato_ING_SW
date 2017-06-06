@@ -33,17 +33,19 @@ mm::Serialized::Serialized() noexcept {
   data.integer = 0;
 }
 
-mm::Serialized::Serialized(mm::StoredTypes t, std::string data) noexcept
-  : type(t){
+mm::Serialized::Serialized(std::string data) noexcept
+  : type(mm::TEXT){
   this->data.text = new char[data.length()];
   strcpy(this->data.text, data.c_str());
 }
 
-mm::Serialized::Serialized(mm::StoredTypes t, int data) noexcept :type(t) {
+mm::Serialized::Serialized(int data) noexcept
+    :type(mm::INTEGER) {
   this->data.integer = data;
 }
 
-mm::Serialized::Serialized(mm::StoredTypes t, double data) noexcept : type(t){
+mm::Serialized::Serialized(double data) noexcept
+    : type(mm::REAL){
   this->data.real = data;
 }
 
@@ -106,3 +108,20 @@ double mm::Serialized::get_real() const noexcept(false) {
 
   return data.real;
 }
+
+mm::Serialized::Serialized(const char *c_str) noexcept
+    : Serialized(std::string(c_str)) {}
+
+mm::Serialized::operator int() const noexcept(false){
+  return get_int();
+}
+
+mm::Serialized::operator std::string() const noexcept(false) {
+  return get_str();
+}
+
+mm::Serialized::operator double() const {
+  return get_real();
+}
+
+

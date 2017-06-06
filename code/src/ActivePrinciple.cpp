@@ -9,3 +9,7 @@
 /**
  * ActivePrinciple implementation
  */
+std::ostream &
+mm::operator<<(std::ostream &os, const mm::ActivePrinciple &active_p) {
+  return os << active_p.name;
+}
