@@ -3,6 +3,7 @@
 #include "../hdr/Drug.hpp"
 
 using namespace mm;
+using namespace std;
 
 int main(int argc, char **argv){
   Configuration::set_config_file_name(
@@ -10,11 +11,11 @@ int main(int argc, char **argv){
 
   Configuration &config = Configuration::get_instance();
 
-  std::cout << "configuration from: " << config.get_config_file_name()
-            << std::endl << "\tdb_name: "
-            << config.get<std::string>("db_name") << std::endl;
+  cout << "configuration from: " << config.get_config_file_name()
+            << endl << "\tdb_name: "
+            << config.get<std::string>("db_name") << endl;
 
-  DBMaster::set_db_file_name(config.get<std::string>("db_name"));
+  DBMaster::set_db_file_name(config.get<string>("db_name"));
 
   auto &db = DBMaster::get_instance();
 
@@ -23,6 +24,8 @@ int main(int argc, char **argv){
   to_add.pharmaceutical_form = "water";
   to_add.contraindications.push_back("death hello");
   to_add.contraindications.push_back("test");
+  to_add.active_principles.push_back({"test", "test1"});
+  to_add.active_principles.push_back({"test2", "test3"});
 
   db.add_to_db(to_add);
 
@@ -30,5 +33,21 @@ int main(int argc, char **argv){
 
   db.extract_from_db(tmp, "ciao");
 
-  std::cout << "name: " << tmp.name << "\nprice: " << tmp.price << std::endl;
+  cout << "name:\t" << tmp.name << "\nprice: " << tmp.price << endl;
+  cout << "active principles: " << endl;
+
+  for (auto &p : tmp.active_principles){
+    cout << "\t" << p.first << " -> " << p.second << endl;
+  }
+
+  cout << "contraindications: " << endl;
+
+  for (auto &p : tmp.contraindications){
+    cout << "\t" << p << endl;
+  }
+
+  cout << "pharmaceutical form:\t" << tmp.pharmaceutical_form << endl;
+
+  cout << "ATC classification:\t" << tmp.ATC_classification << endl;
+
 }

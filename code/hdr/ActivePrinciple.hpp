@@ -13,6 +13,9 @@ namespace mm {
     friend std::ostream
     &operator<<(std::ostream &os, const ActivePrinciple &active_p);
 
+    ActivePrinciple(const std::string &name, const std::string &description,
+                    const std::string &effect);
+
     std::string name;
     std::string description;
     std::string effect;

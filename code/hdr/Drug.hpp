@@ -21,7 +21,7 @@ namespace mm {
     string pharmaceutical_form;
     vector<string> contraindications;
     string ATC_classification;
-    vector<map<ActivePrinciple, string>> active_principles;
+    vector<pair<string, string>> active_principles;
 
   public:
     Drug(const string &name, float price);
