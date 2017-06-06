@@ -7,7 +7,6 @@
 #ifndef _BILL_H
 #define _BILL_H
 
-#include "users/Pharmacist.hpp"
 #include "time_utilities/Date.hpp"
 #include "time_utilities/Time.hpp"
 #include <map>
@@ -16,7 +15,7 @@
 using namespace std;
 struct Bill {
 
-    Pharmacist pharmacist;
+    int pharmacist_id;
     vector<map<int, bool>> medicines;
     float subtotal;
     Date date;

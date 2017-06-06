@@ -10,6 +10,7 @@
 #include "User.hpp"
 #include "../Bill.hpp"
 
+struct Bill;
 
 class Pharmacist: public User {
 public: 

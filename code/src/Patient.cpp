@@ -11,10 +11,10 @@
  */
 
 
-void Patient::Patient() {
+Patient::Patient() {
 
 }
 
-void Patient::~Patient() {
+Patient::~Patient() {
 
 }

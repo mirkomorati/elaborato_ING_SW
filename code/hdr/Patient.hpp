@@ -17,9 +17,9 @@ using namespace std;
 class Patient {
 public: 
     
-    void Patient();
+    Patient();
     
-    void ~Patient();
+    ~Patient();
 private: 
     string health_code;
     string first_name;

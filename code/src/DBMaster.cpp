@@ -5,6 +5,7 @@
 #include "../hdr/DBMaster.hpp"
 #include <sstream>
 #include <iostream>
+#include <Carbon/Carbon.h>
 
 std::string mm::DBMaster::db_file_name;
 mm::DBMaster *mm::DBMaster::instance = nullptr;
@@ -163,7 +164,7 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
     sqlite3_finalize(stmt);
     std::stringstream msg;
     msg << "there are no rows that correspond to the query: " << query.str();
-    throw std::runtime_error(msg.str()); // todo creare un eccezione apposta.
+    throw record_not_found_error(msg.str());
   }
 
   col_num = sqlite3_column_count(stmt);
@@ -198,3 +199,14 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
 
   obj.unserialize(serialized_map);
 }
+
+mm::record_not_found_error::record_not_found_error(const char *msg)
+    : std::runtime_error(msg) {}
+
+mm::record_not_found_error::record_not_found_error(const std::string &msg)
+    : std::runtime_error(msg) {}
+
+const char *mm::record_not_found_error::what() const noexcept {
+  return std::runtime_error::what();
+}
+

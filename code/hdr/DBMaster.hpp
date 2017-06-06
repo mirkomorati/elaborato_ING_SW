@@ -7,6 +7,7 @@
 
 #include <sqlite3.h>
 #include <string>
+#include <stdexcept>
 #include "interfaces/ISerializable.hpp"
 
 namespace mm {
@@ -39,6 +40,17 @@ namespace mm {
     void extract_from_db(ISerializable &obj, const Serialized &id);
 
     ~DBMaster();
+
+  };
+
+  class record_not_found_error : std::runtime_error {
+  public:
+    record_not_found_error(const std::string &msg);
+
+    record_not_found_error(const char *msg);
+
+  private:
+    const char *what() const noexcept override;
 
   };
 }
