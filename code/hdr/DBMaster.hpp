@@ -10,6 +10,7 @@
 #include <stdexcept>
 #include "interfaces/ISerializable.hpp"
 
+using namespace std;
 namespace mm {
 
   /**
@@ -20,7 +21,7 @@ namespace mm {
   class DBMaster {
   private:
     sqlite3 *db;
-    static std::string db_file_name;
+    static string db_file_name;
     static DBMaster *instance;
   private:
     DBMaster() noexcept(false);
@@ -29,15 +30,18 @@ namespace mm {
     DBMaster(const DBMaster &old) = delete;
     const DBMaster &operator=(const DBMaster &old) = delete;
 
-    static const std::string &get_db_file_name();
+    static const string &get_db_file_name();
 
-    static void set_db_file_name(const std::string &db_file_name);
+    static void set_db_file_name(const string &db_file_name);
 
     static DBMaster &get_instance() noexcept(false);
 
     void add_to_db(const ISerializable &obj);
 
     void extract_from_db(ISerializable &obj, const Serialized &id);
+
+    vector<vector<Serialized>>
+    get_table(string name, unsigned int start, unsigned int end);
 
     ~DBMaster();
 

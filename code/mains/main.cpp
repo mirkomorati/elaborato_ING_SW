@@ -19,7 +19,7 @@ int main(int argc, char **argv){
 
   auto &db = DBMaster::get_instance();
 
-  Drug to_add("ciao", 22.4f);
+  Drug to_add("noi", 22.4f);
   to_add.ATC_classification = "testing testing testing";
   to_add.pharmaceutical_form = "water";
   to_add.contraindications.push_back("death hello");
@@ -31,7 +31,7 @@ int main(int argc, char **argv){
 
   Drug tmp("", 0.f);
 
-  db.extract_from_db(tmp, "ciao");
+  db.extract_from_db(tmp, "noi");
 
   cout << "name:\t" << tmp.name << "\nprice: " << tmp.price << endl;
   cout << "active principles: " << endl;

@@ -6,6 +6,7 @@
 #include <sstream>
 #include <iostream>
 #include <Carbon/Carbon.h>
+#include <vector>
 
 std::string mm::DBMaster::db_file_name;
 mm::DBMaster *mm::DBMaster::instance = nullptr;
@@ -49,6 +50,7 @@ mm::DBMaster &mm::DBMaster::get_instance() {
 void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
   sqlite3_stmt *stmt;
   std::stringstream ss;
+
 
   // preparing query
   ss << "select count(*) from (select * from " << obj.get_table_name()
@@ -198,6 +200,76 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
   sqlite3_finalize(stmt);
 
   obj.unserialize(serialized_map);
+}
+
+vector<vector<mm::Serialized>>
+mm::DBMaster::get_table(string name, unsigned int start, unsigned int end) {
+  using namespace std;
+  stringstream query;
+  sqlite3_stmt *stmt;
+  int col_num, row;
+  int st; // return of sqlite_step
+  vector<vector<mm::Serialized>> to_return;
+
+  if((int)(end - start) < 0)
+    throw invalid_argument("start - end must be positive!");
+
+  query << "select * from " << name << " limit " << end - start << " offset "
+        << start;
+
+  if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
+    std::stringstream msg;
+    msg << "cannot select rows with query: \"" << query.str() << "\""
+        << std::endl
+        << "sqlite error: " << sqlite3_errmsg(db);
+    throw std::runtime_error(msg.str());
+  }
+
+  col_num = sqlite3_column_count(stmt);
+  row = 0;
+
+  st = sqlite3_step(stmt);
+  while (st == SQLITE_ROW) {
+    to_return.push_back(vector<mm::Serialized>());
+    for (int i = 0; i < col_num; ++i) {
+      int type = sqlite3_column_type(stmt, i);
+
+      switch (type) {
+        case SQLITE_INTEGER:
+          to_return[row].push_back(sqlite3_column_int(stmt, i));
+          break;
+        case SQLITE_TEXT:
+          to_return[row].push_back(
+              string((const char *) sqlite3_column_text(stmt, i)));
+          break;
+        case SQLITE_FLOAT:
+          to_return[row].push_back(sqlite3_column_double(stmt, i));
+          break;
+        default: {
+          std::stringstream msg;
+          msg << "data type not recognized: " << type << " name: "
+              << sqlite3_column_name(stmt, i) << " decltype: "
+              << sqlite3_column_decltype(stmt, i)
+              << " data: " << sqlite3_column_int(stmt, i)
+              << " col: " << i;
+          sqlite3_finalize(stmt);
+          throw std::runtime_error(msg.str());
+        }
+      }
+    }
+    st = sqlite3_step(stmt);
+    row++;
+  }
+
+  if (st == SQLITE_ERROR){
+    stringstream ss;
+    ss << "error stepping on database " << sqlite3_errmsg(db);
+    throw runtime_error(ss.str());
+  }
+
+  sqlite3_finalize(stmt);
+
+  return to_return;
 }
 
 mm::record_not_found_error::record_not_found_error(const char *msg)
