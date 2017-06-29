@@ -3,7 +3,6 @@
  * @author Noè Murr, Mirko Morati
  */
 
-
 #include <iostream>
 #include <sstream>
 #include "../../hdr/interfaces/ISerializable.hpp"
