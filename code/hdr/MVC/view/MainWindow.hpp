@@ -7,7 +7,6 @@
 
 #include <gtkmm-3.0/gtkmm.h>
 
-
 namespace mm {
   class MainWindow {
   public:

@@ -12,12 +12,15 @@
 #include "../interfaces/ISerializable.hpp"
 #include <string>
 
-class User : public mm::ISerializable {
-private: 
+
+namespace mm {
+  class User : public mm::ISerializable {
+  private:
     std::string first_name;
     std::string last_name;
     Date birth_date;
     Address birth_place;
-};
+  };
+}
 
 #endif //_USER_H

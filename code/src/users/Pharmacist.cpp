@@ -14,13 +14,13 @@
 /**
  * @return Bill
  */
-Bill Pharmacist::Sell() {
+mm::Bill mm::Pharmacist::Sell() {
     return Bill();
 }
 
 /**
  * @return void
  */
-void Pharmacist::Order() {
+void mm::Pharmacist::Order() {
     return;
 }

@@ -35,7 +35,6 @@ int main(int argc, char **argv){
 }
  */
 
-#include <gtkmm-3.0/gtkmm.h>
 #include "../hdr/MVC/view/MainWindow.hpp"
 #include <iostream>
 

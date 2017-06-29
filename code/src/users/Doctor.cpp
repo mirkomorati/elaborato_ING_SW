@@ -10,7 +10,7 @@
  * Doctor implementation
  */
 map<string, mm::Serialized> mm::Doctor::serialize() const {
-  return nullptr;
+  return map<string, mm::Serialized>();
 }
 
 void mm::Doctor::unserialize(map<string, mm::Serialized> map1) {
@@ -18,11 +18,11 @@ void mm::Doctor::unserialize(map<string, mm::Serialized> map1) {
 }
 
 string mm::Doctor::get_table_name() const {
-  return nullptr;
+  return std::string();
 }
 
 string mm::Doctor::get_primary_key() const {
-  return nullptr;
+  return std::string();
 }
 
 vector<mm::Prescription>

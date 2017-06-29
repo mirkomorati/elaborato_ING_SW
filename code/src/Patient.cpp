@@ -11,10 +11,10 @@
  */
 
 
-Patient::Patient() {
+mm::Patient::Patient() {
 
 }
 
-Patient::~Patient() {
+mm::Patient::~Patient() {
 
 }

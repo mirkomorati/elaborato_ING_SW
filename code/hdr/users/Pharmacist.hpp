@@ -12,12 +12,14 @@
 
 struct Bill;
 
-class Pharmacist: public User {
-public: 
-    
+namespace mm {
+  class Pharmacist : public User {
+  public:
+
     Bill Sell();
-    
+
     void Order();
-};
+  };
+}
 
 #endif //_PHARMACIST_H

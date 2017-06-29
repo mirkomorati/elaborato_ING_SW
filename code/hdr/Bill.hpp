@@ -13,7 +13,8 @@
 #include <vector>
 
 using namespace std;
-struct Bill {
+namespace mm {
+  struct Bill {
 
     int pharmacist_id;
     vector<map<int, bool>> medicines;
@@ -21,6 +22,7 @@ struct Bill {
     Date date;
     Time time;
     int prescription_id;
-};
+  };
+}
 
 #endif //_BILL_H
