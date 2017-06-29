@@ -34,3 +34,4 @@
 cmake-build-debug/
 tmp/
 testcmake/
+!/tmp/db.sqlite3

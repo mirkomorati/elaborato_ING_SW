@@ -7,14 +7,16 @@
 #ifndef _DATE_H
 #define _DATE_H
 
-struct  Date {
+namespace mm {
+  struct Date {
     void get_date();
-    
+
     void set_date();
-private: 
+
+  private:
     int day;
     int month;
     int year;
-};
-
+  };
+}
 #endif //_DATE_H

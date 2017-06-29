@@ -39,10 +39,11 @@ mm::DBMaster::DBMaster() noexcept(false) {
 
 mm::DBMaster::~DBMaster() {
   sqlite3_close(db);
+  if (instance) delete instance;
 }
 
 mm::DBMaster &mm::DBMaster::get_instance() {
-  if(instance == nullptr) instance = new DBMaster();
+  if (not instance) instance = new DBMaster();
 
   return *instance;
 }

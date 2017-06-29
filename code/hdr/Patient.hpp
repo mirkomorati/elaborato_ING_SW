@@ -14,13 +14,15 @@
 
 using namespace std;
 
-class Patient {
-public: 
-    
+namespace mm {
+  class Patient {
+  public:
+
     Patient();
-    
+
     ~Patient();
-private: 
+
+  private:
     string health_code;
     string first_name;
     string last_name;
@@ -28,6 +30,7 @@ private:
     Address birth_place;
     Address address;
     vector<string> risk_factors;
-};
+  };
+}
 
 #endif //_PATIENT_H

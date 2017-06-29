@@ -9,9 +9,10 @@
 
 #include "../time_utilities/Date.hpp"
 #include "../Address.hpp"
+#include "../interfaces/ISerializable.hpp"
 #include <string>
 
-class User {
+class User : public mm::ISerializable {
 private: 
     std::string first_name;
     std::string last_name;
