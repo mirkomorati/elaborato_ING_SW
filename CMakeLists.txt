@@ -32,9 +32,10 @@ set(MAIN ${MAIN_DIR}/main.cpp)
 
 add_executable(elaborato ${MAIN} ${SRC} ${HDR})
 add_executable(elaborato_cli ${MAIN_CLI} ${SRC} ${HDR})
+add_executable(window ${SRC_DIR}/main.cpp ${SRC_DIR}/MVC/view/MainWindow.cpp code/src/MVC/model/ModelColumns.cpp code/hdr/MVC/model/ModelColumns.hpp)
 
 target_link_libraries(elaborato ${GTKMM_LDFLAGS})
 target_link_libraries(elaborato ${SQLITE3_LIBRARIES})
 target_link_libraries(elaborato_cli ${SQLITE3_LIBRARIES})
-
+target_link_libraries(window ${GTKMM_LDFLAGS})
 
