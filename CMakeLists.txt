@@ -29,15 +29,16 @@ file(GLOB_RECURSE SRC "${SRC_DIR}/*.cpp")
 file(GLOB_RECURSE HDR "${HDR_DIR}/*.hpp")
 set(MAIN_CLI ${MAIN_DIR}/main_cli.cpp)
 set(MAIN ${MAIN_DIR}/main.cpp)
+set(MAIN_WINDOW ${MAIN_DIR}/main_window.cpp)
 
 add_executable(elaborato ${MAIN} ${SRC} ${HDR})
 add_executable(elaborato_cli ${MAIN_CLI} ${SRC} ${HDR})
-add_executable(window code/mains/main.cpp ${SRC_DIR}/MVC/view/MainWindow.cpp
-        code/src/MVC/model/ModelColumns.cpp code/hdr/MVC/model/ModelColumns.hpp)
+add_executable(window ${MAIN_WINDOW} ${SRC} ${HDR})
 
 target_link_libraries(elaborato ${GTKMM_LDFLAGS})
 target_link_libraries(elaborato ${SQLITE3_LIBRARIES})
 target_link_libraries(elaborato_cli ${SQLITE3_LIBRARIES})
 target_link_libraries(elaborato_cli ${GTKMM_LDFLAGS})
 target_link_libraries(window ${GTKMM_LDFLAGS})
+target_link_libraries(window ${SQLITE3_LIBRARIES})
 

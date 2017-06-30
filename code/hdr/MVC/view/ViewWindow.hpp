@@ -2,17 +2,19 @@
 // Created by Mirko Morati on 04/06/17.
 //
 
-#ifndef _MAINWINDOW_H
-#define _MAINWINDOW_H
+#ifndef _VIEWWINDOW_H
+#define _VIEWWINDOW_H
 
 #include <gtkmm-3.0/gtkmm.h>
 
 namespace mm {
-  class MainWindow {
+  class ViewWindow {
   public:
-    MainWindow();
-    virtual ~MainWindow();
-    Gtk::ApplicationWindow &getWindow();
+    ViewWindow(std::string window_id);
+
+    virtual ~ViewWindow();
+
+    Gtk::ApplicationWindow &getViewWindow();
 
   private:
     Gtk::ApplicationWindow *window;
@@ -25,4 +27,4 @@ namespace mm {
   };
 }
 
-#endif //_MAINWINDOW_H
+#endif //_VIEWWINDOW_H

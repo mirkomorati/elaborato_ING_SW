@@ -2,10 +2,10 @@
 // Created by Mirko Morati on 04/06/17.
 //
 
-#include "../../../hdr/MVC/view/MainWindow.hpp"
+#include "../../../hdr/MVC/view/ViewWindow.hpp"
 #include <iostream>
 
-mm::MainWindow::MainWindow() {
+mm::ViewWindow::ViewWindow(std::string window_id) {
   try {
     refBuilder = Gtk::Builder::create_from_file("../glade/mainWindow.glade");
   }
@@ -22,14 +22,12 @@ mm::MainWindow::MainWindow() {
     std::cerr << "BuilderError: " << ex.what() << std::endl;
   }
 
-  //refBuilder->get_widget("mainWindow", window);
-  //window->set_visible(false);
-  refBuilder->get_widget("doctorWindow", window);
+  refBuilder->get_widget(window_id, window);
 }
 
-mm::MainWindow::~MainWindow() {}
+mm::ViewWindow::~ViewWindow() {}
 
 
-Gtk::ApplicationWindow &mm::MainWindow::getWindow() {
+Gtk::ApplicationWindow &mm::ViewWindow::getViewWindow() {
   return *window;
 }

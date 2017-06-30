@@ -8,6 +8,7 @@
 #include <sqlite3.h>
 #include <string>
 #include <stdexcept>
+#include <vector>
 #include "interfaces/ISerializable.hpp"
 
 using namespace std;
