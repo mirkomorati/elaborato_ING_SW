@@ -204,7 +204,7 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
 }
 
 vector<vector<mm::Serialized>>
-mm::DBMaster::get_table(string name, unsigned int start, unsigned int end) {
+mm::DBMaster::get_table(string name, unsigned int limit, unsigned int offset) {
   using namespace std;
   stringstream query;
   sqlite3_stmt *stmt;
@@ -212,11 +212,11 @@ mm::DBMaster::get_table(string name, unsigned int start, unsigned int end) {
   int st; // return of sqlite_step
   vector<vector<mm::Serialized>> to_return;
 
-  if((int)(end - start) < 0)
-    throw invalid_argument("start - end must be positive!");
+  if ((int) (limit - offset) < 0)
+    throw invalid_argument("limit - offset must be positive!");
 
-  query << "select * from " << name << " limit " << end - start << " offset "
-        << start;
+  query << "select * from " << name << " limit " << limit << " offset "
+        << offset;
 
   if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
     std::stringstream msg;

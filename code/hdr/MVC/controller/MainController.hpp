@@ -11,6 +11,8 @@
 namespace mm {
   class MainWindow;
 
+  class MainModel;
+
   class MainController {
   public:
     MainController();

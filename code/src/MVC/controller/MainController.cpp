@@ -14,7 +14,11 @@ mm::MainController::~MainController() {
 
 bool mm::MainController::login(std::string name, std::string password) {
   std::cout << "Nome: " << name << "\tPassword: " << password << std::endl;
-  return true;
+  auto login_data = model->getLoginData();
+  for (auto login : login_data) {
+    if (login.first == name && login.second == password) return true; // Login success
+  }
+  return false; // TODO: login failed
 }
 
 mm::MainController::MainController() {
