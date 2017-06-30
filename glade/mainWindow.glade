@@ -21,8 +21,8 @@
   <object class="GtkApplicationWindow" id="mainWindow">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="default_width">500</property>
-    <property name="default_height">200</property>
+    <property name="default_width">800</property>
+    <property name="default_height">500</property>
     <child>
       <object class="GtkBox" id="box1">
         <property name="name">box</property>
@@ -187,7 +187,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkStack" id="doctorStack">
+          <object class="GtkStack" id="mainStack">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
@@ -234,6 +234,8 @@
                   <object class="GtkEntry" id="loginPassword">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
+                    <property name="visibility">False</property>
+                    <property name="invisible_char">•</property>
                     <property name="input_purpose">password</property>
                   </object>
                   <packing>

@@ -46,6 +46,11 @@ void mm::MainWindow::onLoginButtonClicked() {
 
   if (controller->login(login_name->get_text(), login_password->get_text())) {
     std::cout << "Login eseguito con successo" << std::endl;
+    Gtk::Stack *stack;
+    Gtk::TreeView *drug_tree_view;
+    refBuilder->get_widget("mainStack", stack);
+    refBuilder->get_widget("drugTreeView", drug_tree_view);
+    stack->set_visible_child(*drug_tree_view);
   } else {
     std::cout << "login fallito" << std::endl;
   }
