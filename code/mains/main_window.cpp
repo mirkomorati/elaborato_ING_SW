@@ -1,4 +1,5 @@
-#include "../hdr/MVC/view/ViewWindow.hpp"
+#include "../hdr/MVC/view/MainWindow.hpp"
+#include "../hdr/MVC/controller/MainController.hpp"
 #include <iostream>
 
 using namespace mm;
@@ -8,6 +9,8 @@ int main(int argc, char **argv) {
       Gtk::Application::create(argc, argv,
                                "org.gtkmm.examples.base");
 
-  ViewWindow w = ViewWindow("loginWindow");
-  app->run(w.getViewWindow());
+  MainController mc;
+  MainWindow w = MainWindow("mainWindow", &mc);
+  mc.setWindow(&w);
+  app->run(w.getMainWindow());
 }
