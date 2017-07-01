@@ -7,6 +7,7 @@
 
 #include <gtkmm-3.0/gtkmm.h>
 #include "../controller/MainController.hpp"
+#include <mutex>
 
 namespace mm {
     class MainController;
@@ -21,10 +22,13 @@ namespace mm {
 
         void onLoginButtonClicked();
 
+        void loginUpdate(int doctor_id);
+
     private:
         Gtk::ApplicationWindow *window;
         Gtk::Button *login_button;
         MainController *controller;
+        std::mutex mutex;
 
     protected:
         //Signal handlers
