@@ -4,8 +4,6 @@
  */
 
 
-#include "../../hdr/users/Secretary.hpp"
-
 /**
  * Secretary implementation
  */

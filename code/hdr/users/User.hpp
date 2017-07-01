@@ -14,13 +14,13 @@
 
 
 namespace mm {
-  class User : public mm::ISerializable {
-  private:
-    std::string first_name;
-    std::string last_name;
-    Date birth_date;
-    Address birth_place;
-  };
+    class User : public mm::ISerializable {
+    private:
+        std::string first_name;
+        std::string last_name;
+        Date birth_date;
+        Address birth_place;
+    };
 }
 
 #endif //_USER_H

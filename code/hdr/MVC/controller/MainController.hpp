@@ -9,28 +9,28 @@
 #include "../model/MainModel.hpp"
 
 namespace mm {
-  class MainWindow;
+    class MainWindow;
 
-  class MainModel;
+    class MainModel;
 
-  class MainController {
-  public:
-    MainController();
+    class MainController {
+    public:
+        MainController();
 
-    MainController(MainWindow *window, MainModel *model);
+        MainController(MainWindow *window, MainModel *model);
 
-    ~MainController();
+        ~MainController();
 
-    void setWindow(MainWindow *window);
+        void setWindow(MainWindow *window);
 
-    void setModel(MainModel *model);
+        void setModel(MainModel *model);
 
-    bool login(std::string name, std::string password);
+        bool login(std::string name, std::string password);
 
-  private:
-    MainWindow *window;
-    MainModel *model;
-  };
+    private:
+        MainWindow *window;
+        MainModel *model;
+    };
 }
 
 #endif //ELABORATO_ING_SW_MAINCONTROLLER_HPP

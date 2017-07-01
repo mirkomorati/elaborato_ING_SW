@@ -16,16 +16,16 @@
 using namespace std;
 
 namespace mm {
-  struct Prescription {
-    int patient_id;
-    Date issue_date;
-    Date expiry_date;
-    vector<int> drug_ids;
-    string id;
-    vector<map<int, int>> negative_interactions;
-    bool used;
-    int bill_id;
-  };
+    struct Prescription {
+        int patient_id;
+        Date issue_date;
+        Date expiry_date;
+        vector<int> drug_ids;
+        string id;
+        vector<map<int, int>> negative_interactions;
+        bool used;
+        int bill_id;
+    };
 }
 
 #endif //_PRESCRIPTION_H

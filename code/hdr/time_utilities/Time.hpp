@@ -9,9 +9,10 @@
 
 struct Time {
     void get_time();
-    
+
     void set_time();
-private: 
+
+private:
     int seconds;
     int minutes;
     int hours;

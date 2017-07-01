@@ -4,8 +4,6 @@
  */
 
 
-#include "../../hdr/users/User.hpp"
-
 /**
  * User implementation
  */

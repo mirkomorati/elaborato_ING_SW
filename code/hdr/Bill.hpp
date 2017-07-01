@@ -14,15 +14,15 @@
 
 using namespace std;
 namespace mm {
-  struct Bill {
+    struct Bill {
 
-    int pharmacist_id;
-    vector<map<int, bool>> medicines;
-    float subtotal;
-    Date date;
-    Time time;
-    int prescription_id;
-  };
+        int pharmacist_id;
+        vector<map<int, bool>> medicines;
+        float subtotal;
+        Date date;
+        Time time;
+        int prescription_id;
+    };
 }
 
 #endif //_BILL_H

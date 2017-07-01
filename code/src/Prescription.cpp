@@ -4,8 +4,6 @@
  */
 
 
-#include "../hdr/Prescription.hpp"
-
 /**
  * Prescription implementation
  */

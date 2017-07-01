@@ -8,20 +8,21 @@
 #define _ACTIVEPRINCIPLE_H
 
 #include <string>
+
 namespace mm {
-  struct ActivePrinciple {
-    friend std::ostream
-    &operator<<(std::ostream &os, const ActivePrinciple &active_p);
+    struct ActivePrinciple {
+        friend std::ostream
+        &operator<<(std::ostream &os, const ActivePrinciple &active_p);
 
-    ActivePrinciple(const std::string &name, const std::string &description,
-                    const std::string &effect);
+        ActivePrinciple(const std::string &name, const std::string &description,
+                        const std::string &effect);
 
-    std::string name;
-    std::string description;
-    std::string effect;
-  };
+        std::string name;
+        std::string description;
+        std::string effect;
+    };
 
-  std::ostream &operator<<(std::ostream &os, const ActivePrinciple &active_p);
+    std::ostream &operator<<(std::ostream &os, const ActivePrinciple &active_p);
 }
 
 #endif //_ACTIVEPRINCIPLE_H

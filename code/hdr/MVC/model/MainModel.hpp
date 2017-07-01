@@ -9,18 +9,18 @@
 #include <vector>
 
 namespace mm {
-  class MainController;
+    class MainController;
 
-  class MainModel {
-  public:
-    MainModel(MainController *controller);
+    class MainModel {
+    public:
+        MainModel(MainController *controller);
 
-    std::vector<std::pair<std::string, std::string>> getLoginData();
+        std::vector<std::pair<std::string, std::string>> getLoginData();
 
-  private:
-    MainController *controller;
+    private:
+        MainController *controller;
 
-  };
+    };
 }
 
 #endif //ELABORATO_ING_SW_MAINMODEL_HPP

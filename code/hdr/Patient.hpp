@@ -15,22 +15,22 @@
 using namespace std;
 
 namespace mm {
-  class Patient {
-  public:
+    class Patient {
+    public:
 
-    Patient();
+        Patient();
 
-    ~Patient();
+        ~Patient();
 
-  private:
-    string health_code;
-    string first_name;
-    string last_name;
-    Date birth_date;
-    Address birth_place;
-    Address address;
-    vector<string> risk_factors;
-  };
+    private:
+        string health_code;
+        string first_name;
+        string last_name;
+        Date birth_date;
+        Address birth_place;
+        Address address;
+        vector<string> risk_factors;
+    };
 }
 
 #endif //_PATIENT_H

@@ -4,8 +4,6 @@
  */
 
 
-#include "../hdr/Bill.hpp"
-
 /**
  * Bill implementation
  */

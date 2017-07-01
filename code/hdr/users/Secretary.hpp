@@ -10,8 +10,8 @@
 #include "User.hpp"
 
 namespace mm {
-  class Secretary : public User {
-  };
+    class Secretary : public User {
+    };
 }
 
 #endif //_SECRETARY_H

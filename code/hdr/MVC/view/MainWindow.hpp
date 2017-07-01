@@ -9,29 +9,29 @@
 #include "../controller/MainController.hpp"
 
 namespace mm {
-  class MainController;
+    class MainController;
 
-  class MainWindow {
-  public:
-    MainWindow(std::string window_id, MainController *controller);
+    class MainWindow {
+    public:
+        MainWindow(std::string window_id, MainController *controller);
 
-    virtual ~MainWindow();
+        virtual ~MainWindow();
 
-    Gtk::ApplicationWindow &getMainWindow();
+        Gtk::ApplicationWindow &getMainWindow();
 
-    void onLoginButtonClicked();
+        void onLoginButtonClicked();
 
-  private:
-    Gtk::ApplicationWindow *window;
-    Gtk::Button *login_button;
-    MainController *controller;
+    private:
+        Gtk::ApplicationWindow *window;
+        Gtk::Button *login_button;
+        MainController *controller;
 
-  protected:
-    //Signal handlers
+    protected:
+        //Signal handlers
 
-    //Child widgets
-    Glib::RefPtr<Gtk::Builder> refBuilder;
-  };
+        //Child widgets
+        Glib::RefPtr<Gtk::Builder> refBuilder;
+    };
 }
 
 #endif //_MAINWINDOW_H

@@ -10,11 +10,11 @@
 #include <string>
 
 struct Address {
-  std::string street_address;
-  std::string civic_number;
-  std::string zip_code;
-  std::string city;
-  std::string country;
+    std::string street_address;
+    std::string civic_number;
+    std::string zip_code;
+    std::string city;
+    std::string country;
 };
 
 #endif //_ADDRESS_H
