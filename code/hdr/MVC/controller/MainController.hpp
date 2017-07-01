@@ -7,6 +7,7 @@
 
 #include "../view/MainWindow.hpp"
 #include "../model/MainModel.hpp"
+#include <thread>
 
 namespace mm {
     class MainWindow;
@@ -25,7 +26,7 @@ namespace mm {
 
         void setModel(MainModel *model);
 
-        int login(std::string name, std::string password);
+        void login(std::string name, std::string password);
 
     private:
         MainWindow *window;

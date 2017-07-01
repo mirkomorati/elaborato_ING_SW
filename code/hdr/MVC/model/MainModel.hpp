@@ -7,6 +7,7 @@
 
 #include "../controller/MainController.hpp"
 #include <vector>
+#include <tuple>
 
 namespace mm {
     class MainController;

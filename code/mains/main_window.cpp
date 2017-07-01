@@ -24,9 +24,13 @@ int main(int argc, char **argv) {
                                      "org.gtkmm.examples.base");
 
     MainController mc;
-    MainWindow mw = MainWindow("mainWindow", &mc);
-    MainModel mm = MainModel(&mc);
+    MainWindow mw("mainWindow", &mc);
+    MainModel mm(&mc);
+
     mc.setModel(&mm);
     mc.setWindow(&mw);
+
     app->run(mw.getMainWindow());
+
+
 }
