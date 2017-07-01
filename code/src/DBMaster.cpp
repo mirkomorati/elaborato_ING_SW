@@ -208,7 +208,7 @@ mm::DBMaster::get_table(string name, unsigned int limit, unsigned int offset) {
     stringstream query;
     sqlite3_stmt *stmt;
     int col_num, row;
-    int st; // return of sqlite_step
+    int st; // return ostream sqlite_step
     vector<vector<mm::Serialized>> to_return;
 
     if (limit == 0) {

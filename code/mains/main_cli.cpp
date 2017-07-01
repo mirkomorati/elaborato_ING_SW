@@ -5,6 +5,7 @@
 #include "../hdr/Configuration.hpp"
 #include "../hdr/DBMaster.hpp"
 #include "../hdr/Drug.hpp"
+#include <plog/Log.h>
 
 using namespace mm;
 using namespace std;
@@ -20,6 +21,10 @@ int main(int argc, char **argv) {
          << config.get<std::string>("db_name") << endl;
 
     DBMaster::set_db_file_name(config.get<string>("db_name"));
+
+    plog::init(plog::debug, config.get<string>("log_name").c_str());
+
+    LOGD << "test di log" << std::endl;
 
     auto &db = DBMaster::get_instance();
 

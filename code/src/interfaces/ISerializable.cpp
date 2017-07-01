@@ -86,7 +86,7 @@ const mm::Serialized &mm::Serialized::operator=(const mm::Serialized &old) {
 
 const std::string mm::Serialized::get_str() const noexcept(false) {
     if (type != mm::TEXT) {
-        throw std::runtime_error("The type of the object is not TEXT!");
+        throw std::runtime_error("The type ostream the object is not TEXT!");
     }
 
     return std::string(data.text);
@@ -94,7 +94,7 @@ const std::string mm::Serialized::get_str() const noexcept(false) {
 
 int mm::Serialized::get_int() const noexcept(false) {
     if (type != mm::INTEGER) {
-        throw std::runtime_error("The type of the object is not INTEGER!");
+        throw std::runtime_error("The type ostream the object is not INTEGER!");
     }
 
     return data.integer;
@@ -102,7 +102,7 @@ int mm::Serialized::get_int() const noexcept(false) {
 
 double mm::Serialized::get_real() const noexcept(false) {
     if (type != mm::REAL) {
-        throw std::runtime_error("The type of the object is not REAL!");
+        throw std::runtime_error("The type ostream the object is not REAL!");
     }
 
     return data.real;
