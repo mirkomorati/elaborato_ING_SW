@@ -41,6 +41,11 @@ mm::MainWindow::MainWindow(std::string window_id, MainController *controller)
 
     login_button->signal_clicked().connect(
         sigc::mem_fun(*this, &MainWindow::onLoginButtonClicked), false);
+
+    //////////////////
+    // SKIPPO IL LOGIN
+    //////////////////
+    loginUpdate(222);
 }
 
 mm::MainWindow::~MainWindow() {
@@ -68,13 +73,14 @@ void mm::MainWindow::loginUpdate(int doctor_id) {
     if (doctor_id != -1) {
         std::cout << "Login eseguito con successo" << std::endl;
         std::cout << "Doctor_id: " << doctor_id << std::endl;
+
         Gtk::Stack *stack;
-        Gtk::TreeView *drug_tree_view;
         Gtk::MenuBar *menu_bar;
+
         refBuilder->get_widget("mainStack", stack);
-        refBuilder->get_widget("drugTreeView", drug_tree_view);
         refBuilder->get_widget("menuBar", menu_bar);
-        stack->set_visible_child(*drug_tree_view);
+
+        stack->set_visible_child("patientPaned");
         menu_bar->set_visible(true);
     } else {
         Gtk::Label *login_error;
