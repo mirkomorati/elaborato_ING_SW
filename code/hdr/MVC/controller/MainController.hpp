@@ -25,7 +25,7 @@ namespace mm {
 
         void setModel(MainModel *model);
 
-        bool login(std::string name, std::string password);
+        int login(std::string name, std::string password);
 
     private:
         MainWindow *window;

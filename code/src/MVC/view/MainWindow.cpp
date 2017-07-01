@@ -29,11 +29,9 @@ mm::MainWindow::MainWindow(std::string window_id, MainController *controller) : 
 
   window->signal_key_release_event().connect([this](GdkEventKey *e) -> bool {
     if (e->keyval == GDK_KEY_Return) {
-      std::cout << "TRUE Event key: " << e->keyval << std::endl;
       onLoginButtonClicked();
       return true;
     }
-    std::cout << "FALSE Event key: " << e->keyval << std::endl;
     return false;
   });
 
@@ -55,8 +53,11 @@ void mm::MainWindow::onLoginButtonClicked() {
   refBuilder->get_widget("loginName", login_name);
   refBuilder->get_widget("loginPassword", login_password);
 
-  if (controller->login(login_name->get_text(), login_password->get_text())) {
+  int doctor_id = controller->login(login_name->get_text(),
+                                    login_password->get_text());
+  if (doctor_id != -1) {
     std::cout << "Login eseguito con successo" << std::endl;
+    std::cout << "Doctor_id: " << doctor_id << std::endl;
     Gtk::Stack *stack;
     Gtk::TreeView *drug_tree_view;
     Gtk::MenuBar *menu_bar;

@@ -15,7 +15,7 @@ namespace mm {
     public:
         MainModel(MainController *controller);
 
-        std::vector<std::pair<std::string, std::string>> getLoginData();
+        std::vector<std::tuple<std::string, std::string, int>> getLoginData();
 
     private:
         MainController *controller;
