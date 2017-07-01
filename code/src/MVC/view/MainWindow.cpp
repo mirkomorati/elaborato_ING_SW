@@ -74,18 +74,57 @@ void mm::MainWindow::loginUpdate(int doctor_id) {
         std::cout << "Login eseguito con successo" << std::endl;
         std::cout << "Doctor_id: " << doctor_id << std::endl;
 
-        Gtk::Stack *stack;
-        Gtk::MenuBar *menu_bar;
-
-        refBuilder->get_widget("mainStack", stack);
-        refBuilder->get_widget("menuBar", menu_bar);
-
-        stack->set_visible_child("patientPaned");
-        menu_bar->set_visible(true);
+        patientView(doctor_id);
     } else {
         Gtk::Label *login_error;
         refBuilder->get_widget("loginError", login_error);
         login_error->set_visible(true);
         std::cout << "login fallito" << std::endl;
     }
+}
+
+// è qui temporaneamente
+class PatientCols : public Gtk::TreeModel::ColumnRecord {
+public:
+    PatientCols() {
+        // This order must match the column order in the .glade file
+        this->add(this->first_name);
+        this->add(this->second_name);
+        this->add(this->fiscal_code);
+    }
+
+    // These types must match those for the model in the .glade file
+    Gtk::TreeModelColumn<Glib::ustring> first_name;
+    Gtk::TreeModelColumn<Glib::ustring> second_name;
+    Gtk::TreeModelColumn<Glib::ustring> fiscal_code;
+};
+
+void mm::MainWindow::patientView(int doctor_id) {
+    Gtk::Stack *stack;
+    Gtk::MenuBar *menu_bar;
+    Gtk::TreeView *patient_tree_view;
+    Gtk::CellRenderer *cell_renderer;
+    //Glib::RefPtr<Gtk::ListStore> patient_list_store;
+
+    refBuilder->get_widget("mainStack", stack);
+    refBuilder->get_widget("menuBar", menu_bar);
+    refBuilder->get_widget("patientTreeView", patient_tree_view);
+
+    auto patient_list = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(
+        refBuilder->get_object("patientList"));
+
+    PatientCols patient_cols;
+
+    //patient_list->set_property("visible", true);
+
+    Gtk::TreeModel::iterator patient_iterator = patient_list->append();
+    Gtk::TreeModel::Row patient_row = *patient_iterator;
+
+    patient_row[patient_cols.first_name] = "Mirko";
+    patient_row[patient_cols.second_name] = "Morati";
+    patient_row[patient_cols.fiscal_code] = "QUALCOSA";
+    patient_tree_view->set_visible(true);
+
+    stack->set_visible_child("patientPaned");
+    menu_bar->set_visible(true);
 }

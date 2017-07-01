@@ -466,7 +466,7 @@
                           <object class="GtkTreeSelection"/>
                         </child>
                         <child>
-                          <object class="GtkTreeViewColumn" id="name1">
+                          <object class="GtkTreeViewColumn" id="patientFirstName">
                             <property name="title" translatable="yes">Nome</property>
                             <property name="clickable">True</property>
                             <property name="reorderable">True</property>
@@ -474,7 +474,7 @@
                           </object>
                         </child>
                         <child>
-                          <object class="GtkTreeViewColumn" id="surname">
+                          <object class="GtkTreeViewColumn" id="patientSecondName">
                             <property name="title" translatable="yes">Cognome</property>
                             <property name="clickable">True</property>
                             <property name="reorderable">True</property>
@@ -482,7 +482,7 @@
                           </object>
                         </child>
                         <child>
-                          <object class="GtkTreeViewColumn" id="fiscalCode">
+                          <object class="GtkTreeViewColumn" id="patientFiscalCode">
                             <property name="title" translatable="yes">Cod. Fiscale</property>
                             <property name="clickable">True</property>
                             <property name="reorderable">True</property>

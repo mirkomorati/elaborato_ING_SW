@@ -35,6 +35,8 @@ namespace mm {
 
         //Child widgets
         Glib::RefPtr<Gtk::Builder> refBuilder;
+
+        void patientView(int doctor_id);
     };
 }
 
