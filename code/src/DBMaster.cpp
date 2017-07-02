@@ -297,3 +297,13 @@ mm::DBMaster::get_table(string name) {
     return get_table(name, 0, 0);
 }
 
+mm::record_not_found_error::record_not_found_error(const char *msg)
+        : std::runtime_error(msg) {}
+
+mm::record_not_found_error::record_not_found_error(const std::string &msg)
+        : std::runtime_error(msg) {}
+
+const char *mm::record_not_found_error::what() const noexcept {
+    return std::runtime_error::what();
+}
+
