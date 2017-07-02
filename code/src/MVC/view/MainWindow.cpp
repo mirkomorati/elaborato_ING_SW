@@ -88,9 +88,9 @@ class PatientCols : public Gtk::TreeModel::ColumnRecord {
 public:
     PatientCols() {
         // This order must match the column order in the .glade file
-        this->add(this->first_name);
-        this->add(this->second_name);
-        this->add(this->fiscal_code);
+        add(first_name);
+        add(second_name);
+        add(fiscal_code);
     }
 
     // These types must match those for the model in the .glade file
@@ -98,6 +98,8 @@ public:
     Gtk::TreeModelColumn<Glib::ustring> second_name;
     Gtk::TreeModelColumn<Glib::ustring> fiscal_code;
 };
+
+PatientCols patient_cols;
 
 void mm::MainWindow::patientView(int doctor_id) {
     Gtk::Stack *stack;
@@ -110,20 +112,15 @@ void mm::MainWindow::patientView(int doctor_id) {
     refBuilder->get_widget("menuBar", menu_bar);
     refBuilder->get_widget("patientTreeView", patient_tree_view);
 
-    auto patient_list = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(
-        refBuilder->get_object("patientList"));
+    auto refListStore = Gtk::ListStore::create(patient_cols);
 
-    PatientCols patient_cols;
+    Gtk::TreeModel::Row row = *(refListStore->append());
 
-    //patient_list->set_property("visible", true);
 
-    Gtk::TreeModel::iterator patient_iterator = patient_list->append();
-    Gtk::TreeModel::Row patient_row = *patient_iterator;
-
-    patient_row[patient_cols.first_name] = "Mirko";
-    patient_row[patient_cols.second_name] = "Morati";
-    patient_row[patient_cols.fiscal_code] = "QUALCOSA";
-    patient_tree_view->set_visible(true);
+    row[patient_cols.first_name] = "Mirko";
+    row[patient_cols.second_name] = "Morati";
+    row[patient_cols.fiscal_code] = "QUALCOSA";
+    patient_tree_view->set_model(refListStore);
 
     stack->set_visible_child("patientPaned");
     menu_bar->set_visible(true);

@@ -185,6 +185,17 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
             case SQLITE_FLOAT:
                 serialized_map[sqlite3_column_name(stmt, i)] = sqlite3_column_double(stmt, i);
                 break;
+            case SQLITE_NULL: {
+                string t(sqlite3_column_decltype(stmt, i));
+                if (t == "TEXT") {
+                    serialized_map[sqlite3_column_name(stmt, i)] = "";
+                } else if (t == "REAL") {
+                    serialized_map[sqlite3_column_name(stmt, i)] = 0.0f;
+                } else {
+                    serialized_map[sqlite3_column_name(stmt, i)] = 0;
+                }
+                break;
+            }
             default: {
                 std::stringstream msg;
                 msg << "data type not recognized: " << type << " name: "
@@ -198,6 +209,14 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
         }
     }
     sqlite3_finalize(stmt);
+    string t;
+    try {
+        t = static_cast<string>(serialized_map["fiscal_code"]);
+    } catch (std::runtime_error &e) {
+        cout << "no" << endl;
+    }
+
+    cout << t << endl;
 
     obj.unserialize(serialized_map);
 }

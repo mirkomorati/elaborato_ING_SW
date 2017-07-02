@@ -5,6 +5,7 @@
 #include "../hdr/Configuration.hpp"
 #include "../hdr/DBMaster.hpp"
 #include "../hdr/Drug.hpp"
+#include "../hdr/users/Doctor.hpp"
 #include <plog/Log.h>
 
 using namespace mm;
@@ -67,5 +68,11 @@ int main(int argc, char **argv) {
         cout << row[0] << "\t";
     }
     cout << endl;
+
+    Doctor me;
+
+    db.extract_from_db(me, 222);
+
+    cout << "mirko è: " << me.getFiscal_code() << endl;
 
 }

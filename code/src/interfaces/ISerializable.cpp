@@ -34,7 +34,7 @@ mm::Serialized::Serialized() noexcept {
 
 mm::Serialized::Serialized(std::string data) noexcept
         : type(mm::TEXT) {
-    this->data.text = new char[data.length()];
+    this->data.text = new char[data.length() + 1];
     strcpy(this->data.text, data.c_str());
 }
 
@@ -56,7 +56,7 @@ mm::Serialized::~Serialized() noexcept {
 
 mm::Serialized::Serialized(const mm::Serialized &old) noexcept : type(old.type) {
     if (type == mm::TEXT) {
-        this->data.text = new char[strlen(old.data.text)];
+        this->data.text = new char[strlen(old.data.text) + 1];
         strcpy(this->data.text, old.data.text);
     } else if (type == mm::INTEGER) {
         this->data.integer = old.data.integer;
@@ -67,17 +67,17 @@ mm::Serialized::Serialized(const mm::Serialized &old) noexcept : type(old.type) 
 
 const mm::Serialized &mm::Serialized::operator=(const mm::Serialized &old) {
     switch (old.type) {
-        case INTEGER:
-            this->type = old.type;
+        case mm::INTEGER:
+            this->type = mm::INTEGER;
             this->data.integer = old.data.integer;
             break;
-        case REAL:
-            this->type = old.type;
+        case mm::REAL:
+            this->type = mm::REAL;
             this->data.real = old.data.real;
             break;
-        case TEXT:
-            this->type = old.type;
-            this->data.text = new char[strlen(old.data.text)];
+        case mm::TEXT:
+            this->type = mm::TEXT;
+            this->data.text = new char[strlen(old.data.text) + 1];
             strcpy(this->data.text, old.data.text);
             break;
     }

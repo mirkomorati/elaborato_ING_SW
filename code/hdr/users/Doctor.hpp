@@ -20,9 +20,8 @@ namespace mm {
     class Doctor : public User {
     private:
         string fiscal_code;
-        string regional_id;
+        int regional_id;
         string specialization;
-        vector<int> prescriptions_id;
 
     public:
         vector<Prescription> get_prescriptions(Patient patient,
@@ -39,11 +38,17 @@ namespace mm {
 /*----------------------------------------------------------------------------*/
         map<string, mm::Serialized> serialize() const override;
 
-        void unserialize(map<string, mm::Serialized> map1) override;
+        void unserialize(map<string, mm::Serialized> map) override;
 
         string get_table_name() const override;
 
         string get_primary_key() const override;
+
+        const string &getFiscal_code() const;
+
+        const int &getRegional_id() const;
+
+        const string &getSpecialization() const;
     };
 }
 
