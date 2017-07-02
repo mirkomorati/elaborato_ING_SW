@@ -5,12 +5,12 @@
 #ifndef ELABORATO_ING_SW_MAINCONTROLLER_HPP
 #define ELABORATO_ING_SW_MAINCONTROLLER_HPP
 
-#include "../view/MainWindow.hpp"
+#include "../view/MainView.hpp"
 #include "../model/MainModel.hpp"
 #include <thread>
 
 namespace mm {
-    class MainWindow;
+    class MainView;
 
     class MainModel;
 
@@ -18,18 +18,20 @@ namespace mm {
     public:
         MainController();
 
-        MainController(MainWindow *window, MainModel *model);
+        MainController(MainView *window, MainModel *model);
 
         ~MainController();
 
-        void setWindow(MainWindow *window);
+        void setWindow(MainView *window);
 
         void setModel(MainModel *model);
 
         void login(std::string name, std::string password);
 
+        void login(int id);
+
     private:
-        MainWindow *window;
+        MainView *view;
         MainModel *model;
     };
 }

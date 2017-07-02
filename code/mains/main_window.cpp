@@ -1,4 +1,4 @@
-#include "../hdr/MVC/view/MainWindow.hpp"
+#include "../hdr/MVC/view/MainView.hpp"
 #include "../hdr/DBMaster.hpp"
 #include "../hdr/Configuration.hpp"
 
@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
                                      "org.gtkmm.examples.base");
 
     MainController mc;
-    MainWindow mw("mainWindow", &mc);
+    MainView mw("mainWindow", &mc);
     MainModel mm(&mc);
 
     mc.setModel(&mm);

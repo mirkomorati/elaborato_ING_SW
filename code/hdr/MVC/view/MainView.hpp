@@ -7,16 +7,17 @@
 
 #include <gtkmm-3.0/gtkmm.h>
 #include "../controller/MainController.hpp"
+#include "PatientTreeView.hpp"
 #include <mutex>
 
 namespace mm {
     class MainController;
 
-    class MainWindow {
+    class MainView {
     public:
-        MainWindow(std::string window_id, MainController *controller);
+        MainView(std::string window_id, MainController *controller);
 
-        virtual ~MainWindow();
+        virtual ~MainView();
 
         Gtk::ApplicationWindow &getMainWindow();
 
@@ -26,6 +27,7 @@ namespace mm {
 
     private:
         Gtk::ApplicationWindow *window;
+        mm::PatientTreeView patient_tree_view;
         Gtk::Button *login_button;
         MainController *controller;
         std::mutex mutex;
@@ -39,5 +41,18 @@ namespace mm {
         void patientView(int doctor_id);
     };
 }
+
+
+/*
+ * LEGGI QUESTE RIGHE
+ * Io ora devo andare e probabilmente metterai le mani sul codice prima di me.
+ * Per poter eliminare in sicurezza una view bisogna essere SICURI che non vi siano
+ * dei metodi della view che sono stati invocati, lo stesso vale per i controller o per
+ * i model. È necessario aggiungere dei mutex che vengano lockati in ogni metodo in modo che
+ * il padre di ogni oggetto possa efficacemente eliminarlo.
+ *
+ * Almeno questa è l'idea che mi è venuta in 10 minuti.
+ *
+ */
 
 #endif //_MAINWINDOW_H

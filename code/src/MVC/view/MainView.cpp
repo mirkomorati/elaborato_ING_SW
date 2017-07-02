@@ -2,10 +2,10 @@
 // Created by Mirko Morati on 04/06/17.
 //
 
-#include "../../../hdr/MVC/view/MainWindow.hpp"
+#include "../../../hdr/MVC/view/MainView.hpp"
 #include <iostream>
 
-mm::MainWindow::MainWindow(std::string window_id, MainController *controller)
+mm::MainView::MainView(std::string window_id, MainController *controller)
     : controller(controller) {
     try {
         refBuilder = Gtk::Builder::create_from_file(
@@ -27,20 +27,19 @@ mm::MainWindow::MainWindow(std::string window_id, MainController *controller)
     refBuilder->get_widget(window_id, window);
     refBuilder->get_widget("loginButton", login_button);
 
-    /*  // NON FUNZIONA
-    window->add_events(Gdk::FOCUS_CHANGE_MASK);
+    // NON FUNZIONA
+    /*view->add_events(Gdk::KEY_RELEASE_MASK);
 
-    window->signal_key_release_event().connect([this](GdkEventKey *e) -> bool {
+    view->signal_key_release_event().connect([this](GdkEventKey *e) -> bool {
         if (e->keyval == GDK_KEY_Return) {
             onLoginButtonClicked();
             return true;
         }
         return false;
-    }, false);
-    */
+    });*/
 
     login_button->signal_clicked().connect(
-        sigc::mem_fun(*this, &MainWindow::onLoginButtonClicked), false);
+            sigc::mem_fun(*this, &MainView::onLoginButtonClicked));
 
     //////////////////
     // SKIPPO IL LOGIN
@@ -48,17 +47,17 @@ mm::MainWindow::MainWindow(std::string window_id, MainController *controller)
     loginUpdate(222);
 }
 
-mm::MainWindow::~MainWindow() {
+mm::MainView::~MainView() {
     if (window) delete window;
     if (login_button) delete login_button;
 }
 
 
-Gtk::ApplicationWindow &mm::MainWindow::getMainWindow() {
+Gtk::ApplicationWindow &mm::MainView::getMainWindow() {
     return *window;
 }
 
-void mm::MainWindow::onLoginButtonClicked() {
+void mm::MainView::onLoginButtonClicked() {
     std::lock_guard<std::mutex> lock(mutex);
     Gtk::Entry *login_name, *login_password;
     refBuilder->get_widget("loginName", login_name);
@@ -68,7 +67,7 @@ void mm::MainWindow::onLoginButtonClicked() {
                       login_password->get_text());
 }
 
-void mm::MainWindow::loginUpdate(int doctor_id) {
+void mm::MainView::loginUpdate(int doctor_id) {
     std::lock_guard<std::mutex> lock(mutex);
     if (doctor_id != -1) {
         std::cout << "Login eseguito con successo" << std::endl;
@@ -101,7 +100,7 @@ public:
 
 PatientCols patient_cols;
 
-void mm::MainWindow::patientView(int doctor_id) {
+void mm::MainView::patientView(int doctor_id) {
     Gtk::Stack *stack;
     Gtk::MenuBar *menu_bar;
     Gtk::TreeView *patient_tree_view;
@@ -120,6 +119,16 @@ void mm::MainWindow::patientView(int doctor_id) {
     row[patient_cols.first_name] = "Mirko";
     row[patient_cols.second_name] = "Morati";
     row[patient_cols.fiscal_code] = "QUALCOSA";
+
+    row = *(refListStore->append()++);
+
+    row[patient_cols.first_name] = "Noè";
+    row[patient_cols.second_name] = "";
+    row[patient_cols.fiscal_code] = "Madonna";
+
+    patient_tree_view->append_column("Nome", patient_cols.first_name);
+    patient_tree_view->append_column("Cognome", patient_cols.second_name);
+    patient_tree_view->append_column("Cod. Fiscale", patient_cols.fiscal_code);
     patient_tree_view->set_model(refListStore);
 
     stack->set_visible_child("patientPaned");
