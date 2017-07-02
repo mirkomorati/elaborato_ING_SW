@@ -12,6 +12,8 @@
 #include "../controller/MainController.hpp"
 
 namespace mm {
+    class LoginController;
+
     class LoginView {
     private:
         // graphic elements

@@ -44,7 +44,7 @@ mm::MainView::MainView(std::string window_id, MainController *controller)
     //////////////////
     // SKIPPO IL LOGIN
     //////////////////
-    loginUpdate(222);
+    //loginUpdate(222);
 }
 
 mm::MainView::~MainView() {

@@ -12,6 +12,8 @@
 #include "../view/LoginView.hpp"
 
 namespace mm {
+    class LoginView;
+
     class LoginController {
     private:
         LoginModel *model;
