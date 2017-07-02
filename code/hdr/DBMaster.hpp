@@ -52,17 +52,6 @@ namespace mm {
         ~DBMaster();
 
     };
-
-    class record_not_found_error : std::runtime_error {
-    public:
-        record_not_found_error(const std::string &msg);
-
-        record_not_found_error(const char *msg);
-
-    private:
-        const char *what() const noexcept override;
-
-    };
 }
 
 #endif //ELABORATO_ING_SW_DBMASTER_HPP
