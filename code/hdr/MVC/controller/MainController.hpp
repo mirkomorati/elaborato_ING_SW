@@ -12,7 +12,10 @@
 namespace mm {
     class MainView;
 
+    class LoginModel;
     class MainModel;
+
+    class LoginController;
 
     class MainController {
     public:
@@ -30,9 +33,15 @@ namespace mm {
 
         void login(int id);
 
+        LoginController *get_view_controller();
+
     private:
         MainView *view;
         MainModel *model;
+
+        // controllers
+        LoginController *login_controller;
+        std::mutex login_mutex;
     };
 }
 

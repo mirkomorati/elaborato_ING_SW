@@ -6,12 +6,14 @@
 #include "../../../hdr/MVC/view/LoginView.hpp"
 
 void mm::LoginView::onLoginButtonClicked() {
+    std::lock_guard<std::mutex> lock(delete_mutex);
     controller->login(login_name->get_text(),
                       login_pswd->get_text());
 }
 
-mm::LoginView::LoginView(mm::MainView *parent, mm::LoginController *controller, Glib::RefPtr<Gtk::Builder> refBuilder)
-        : controller(controller), parent(parent) {
+mm::LoginView::LoginView(mm::MainView *parent, mm::LoginController *controller, Glib::RefPtr<Gtk::Builder> refBuilder,
+                         std::mutex &mutex)
+        : controller(controller), parent(parent), delete_mutex(mutex) {
 
     // ottengo le informazioni di cui ho bisogno.
     refBuilder->get_widget("loginButton", login_button);
@@ -24,6 +26,7 @@ mm::LoginView::LoginView(mm::MainView *parent, mm::LoginController *controller, 
 }
 
 void mm::LoginView::loginFailed() {
+    std::lock_guard<std::mutex> lock(delete_mutex);
     login_error->set_visible(true);
 }
 

@@ -23,3 +23,7 @@ void mm::LoginController::login(std::string name, std::string pswd) {
 
     login_thread.detach();
 }
+
+mm::LoginController::LoginController(mm::LoginModel *model, mm::LoginView *view, mm::MainController *parent,
+                                     std::mutex &delete_mutex) : model(model), view(view), parent(parent),
+                                                                 delete_mutex(delete_mutex) {}

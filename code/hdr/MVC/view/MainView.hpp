@@ -8,10 +8,13 @@
 #include <gtkmm-3.0/gtkmm.h>
 #include "../controller/MainController.hpp"
 #include "PatientTreeView.hpp"
+#include "LoginView.hpp"
 #include <mutex>
 
 namespace mm {
     class MainController;
+
+    class LoginView;
 
     class MainView {
     public:
@@ -26,7 +29,16 @@ namespace mm {
         void loginUpdate(int doctor_id);
 
     private:
+        // mutex of views
+        std::mutex login_mutex;
+
+        // gtk objects
         Gtk::ApplicationWindow *window;
+
+        // views
+        LoginView *login_view;
+
+        // other.
         mm::PatientTreeView patient_tree_view;
         Gtk::Button *login_button;
         MainController *controller;

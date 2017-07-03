@@ -5,10 +5,7 @@
 #include "../../../hdr/MVC/model/MainModel.hpp"
 #include "../../../hdr/DBMaster.hpp"
 
-mm::MainModel::MainModel(mm::MainController *controller) : controller(
-    controller) {
 
-}
 
 std::vector<std::tuple<std::string, std::string, int>>
 mm::MainModel::getLoginData() {
@@ -22,4 +19,17 @@ mm::MainModel::getLoginData() {
         to_ret.push_back(login_data);
     }
     return to_ret;
+}
+
+mm::LoginModel *mm::MainModel::get_login_model() {
+    return login_model;
+}
+
+mm::MainModel::MainModel(mm::MainController *controller, mm::MainView *view) :
+        controller(controller), view(view) {
+    login_model = new LoginModel();
+}
+
+mm::MainModel::~MainModel() {
+    if (login_model) delete login_model;
 }

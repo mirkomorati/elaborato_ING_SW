@@ -14,14 +14,20 @@
 namespace mm {
     class LoginView;
 
+    class MainController;
+
     class LoginController {
     private:
         LoginModel *model;
         LoginView *view;
         MainController *parent;
 
+        std::mutex &delete_mutex;
+
     public:
         void login(std::string name, std::string pswd);
+
+        LoginController(LoginModel *model, LoginView *view, MainController *parent, std::mutex &delete_mutex);
     };
 }
 

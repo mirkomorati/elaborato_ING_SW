@@ -27,6 +27,8 @@ mm::MainView::MainView(std::string window_id, MainController *controller)
     refBuilder->get_widget(window_id, window);
     refBuilder->get_widget("loginButton", login_button);
 
+    login_view = new LoginView(this, controller->get_view_controller(), refBuilder, login_mutex);
+
     // NON FUNZIONA
     /*view->add_events(Gdk::KEY_RELEASE_MASK);
 
@@ -38,8 +40,8 @@ mm::MainView::MainView(std::string window_id, MainController *controller)
         return false;
     });*/
 
-    login_button->signal_clicked().connect(
-            sigc::mem_fun(*this, &MainView::onLoginButtonClicked));
+    //login_button->signal_clicked().connect(
+    //sigc::mem_fun(*this, &MainView::onLoginButtonClicked));
 
     //////////////////
     // SKIPPO IL LOGIN
@@ -49,7 +51,7 @@ mm::MainView::MainView(std::string window_id, MainController *controller)
 
 mm::MainView::~MainView() {
     if (window) delete window;
-    if (login_button) delete login_button;
+    if (login_view) delete login_view;
 }
 
 
@@ -70,9 +72,10 @@ void mm::MainView::onLoginButtonClicked() {
 void mm::MainView::loginUpdate(int doctor_id) {
     std::lock_guard<std::mutex> lock(mutex);
     if (doctor_id != -1) {
+        std::lock_guard<std::mutex> login_lock(login_mutex);
         std::cout << "Login eseguito con successo" << std::endl;
         std::cout << "Doctor_id: " << doctor_id << std::endl;
-
+        delete login_view;
         patientView(doctor_id);
     } else {
         Gtk::Label *login_error;

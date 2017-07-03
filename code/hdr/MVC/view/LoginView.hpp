@@ -14,6 +14,8 @@
 namespace mm {
     class LoginController;
 
+    class MainView;
+
     class LoginView {
     private:
         // graphic elements
@@ -24,10 +26,12 @@ namespace mm {
         // logic
         LoginController *controller;
         MainView *parent;
+        std::mutex &delete_mutex;
 
     public:
 
-        LoginView(mm::MainView *parent, LoginController *controller, Glib::RefPtr<Gtk::Builder> refBuilder);
+        LoginView(mm::MainView *parent, LoginController *controller, Glib::RefPtr<Gtk::Builder> refBuilder,
+                  std::mutex &mutex);
 
         void onLoginButtonClicked();
 
