@@ -1,6 +1,7 @@
-#include "../hdr/MVC/view/MainView.hpp"
+#include "../hdr/controller/MainController.hpp"
 #include "../hdr/DBMaster.hpp"
 #include "../hdr/Configuration.hpp"
+#include <gtkmm-3.0/gtkmm.h>
 
 using namespace mm;
 using namespace std;
@@ -17,20 +18,8 @@ int main(int argc, char **argv) {
 
     DBMaster::set_db_file_name(config.get<string>("db_name"));
 
-    auto &db = DBMaster::get_instance();
-
-    auto app =
-            Gtk::Application::create(argc, argv,
-                                     "org.gtkmm.examples.base");
-
     MainController mc;
-    MainView mw("mainWindow", &mc);
-    MainModel mm(&mc);
+    mc.run();
 
-    mc.setModel(&mm);
-    mc.setWindow(&mw);
-
-    app->run(mw.getMainWindow());
-
-
+    return 0;
 }

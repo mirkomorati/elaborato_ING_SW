@@ -15,7 +15,7 @@ namespace mm {
         MainModel *parent;
 
     public:
-        std::vector<std::tuple<std::string, std::string, int>> getLoginData();
+        std::vector<std::tuple<std::string, std::string, int>> get_login_data();
     };
 }
 

@@ -2,7 +2,7 @@
 // Created by Mirko Morati on 04/06/17.
 //
 
-#include "../../../hdr/MVC/view/MainView.hpp"
+#include "../../../../code/hdr/MVC/view/MainView.hpp"
 #include <iostream>
 
 mm::MainView::MainView(std::string window_id, MainController *controller)
@@ -29,29 +29,16 @@ mm::MainView::MainView(std::string window_id, MainController *controller)
 
     login_view = new LoginView(this, refBuilder, login_mutex);
 
-    // NON FUNZIONA
-    /*view->add_events(Gdk::KEY_RELEASE_MASK);
-
-    view->signal_key_release_event().connect([this](GdkEventKey *e) -> bool {
-        if (e->keyval == GDK_KEY_Return) {
-            onLoginButtonClicked();
-            return true;
-        }
-        return false;
-    });*/
-
-    //login_button->signal_clicked().connect(
-    //sigc::mem_fun(*this, &MainView::onLoginButtonClicked));
-
     //////////////////
     // SKIPPO IL LOGIN
     //////////////////
-    //loginUpdate(222);
+    //login_update(222);
 }
 
 mm::MainView::~MainView() {
     if (window) delete window;
     if (login_view) delete login_view;
+    if (patient_tree_view) delete patient_tree_view;
 }
 
 
@@ -69,7 +56,7 @@ void mm::MainView::onLoginButtonClicked() {
                       login_password->get_text());
 }
 
-void mm::MainView::loginUpdate(int doctor_id) {
+void mm::MainView::login_update(int doctor_id) {
     std::lock_guard<std::mutex> lock(mutex);
     if (doctor_id != -1) {
         std::lock_guard<std::mutex> login_lock(login_mutex);
@@ -77,45 +64,22 @@ void mm::MainView::loginUpdate(int doctor_id) {
         std::cout << "Doctor_id: " << doctor_id << std::endl;
         delete login_view;
         login_view = nullptr;
-        patientView(doctor_id);
+        patient_view(doctor_id);
     } else {
         std::cout << "login fallito" << std::endl;
         login_view->loginFailed();
     }
 }
 
-// è qui temporaneamente
-class PatientCols : public Gtk::TreeModel::ColumnRecord {
-public:
-    PatientCols() {
-        // This order must match the column order in the .glade file
-        add(first_name);
-        add(second_name);
-        add(fiscal_code);
-    }
+void mm::MainView::patient_view(int doctor_id) {
+    patient_tree_view = new PatientTreeView(this, refBuilder, doctor_id);
+    auto &patient_cols = patient_tree_view->get_cols();
 
-    // These types must match those for the model in the .glade file
-    Gtk::TreeModelColumn<Glib::ustring> first_name;
-    Gtk::TreeModelColumn<Glib::ustring> second_name;
-    Gtk::TreeModelColumn<Glib::ustring> fiscal_code;
-};
-
-PatientCols patient_cols;
-
-void mm::MainView::patientView(int doctor_id) {
     Gtk::Stack *stack;
     Gtk::MenuBar *menu_bar;
-    Gtk::TreeView *patient_tree_view;
-    Gtk::CellRenderer *cell_renderer;
-    //Glib::RefPtr<Gtk::ListStore> patient_list_store;
 
     refBuilder->get_widget("mainStack", stack);
     refBuilder->get_widget("menuBar", menu_bar);
-    refBuilder->get_widget("patientTreeView", patient_tree_view);
-
-    auto refListStore = Gtk::ListStore::create(patient_cols);
-
-    Gtk::TreeModel::Row row = *(refListStore->append());
 
 
     row[patient_cols.first_name] = "Mirko";

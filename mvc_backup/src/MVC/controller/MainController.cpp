@@ -2,7 +2,7 @@
 // Created by Mirko Morati on 30/06/17.
 //
 
-#include "../../../hdr/MVC/controller/MainController.hpp"
+#include "../../../../code/hdr/MVC/controller/MainController.hpp"
 #include <iostream>
 
 mm::MainController::MainController(mm::MainView *window, mm::MainModel *model)
@@ -17,14 +17,14 @@ void mm::MainController::login(std::string name, std::string password) {
     std::cout << "Nome: " << name << "\tPassword: " << password << std::endl;
 
     std::thread login_thread([this](std::string name, std::string password) {
-        auto login_data = model->getLoginData();
+        auto login_data = model->get_login_data();
         for (auto login : login_data) {
             if (std::get<0>(login) == name && std::get<1>(login) == password) {
-                view->loginUpdate(std::get<2>(login));
+                view->login_update(std::get<2>(login));
                 return 0;
             }
         }
-        view->loginUpdate(-1);
+        view->login_update(-1);
         return -1;
     }, name, password);
 
@@ -41,4 +41,12 @@ void mm::MainController::setWindow(mm::MainView *window) {
 
 void mm::MainController::setModel(mm::MainModel *model) {
     MainController::model = model;
+}
+
+mm::MainController::MainController() {
+
+}
+
+mm::MainController::MainController() {
+
 }

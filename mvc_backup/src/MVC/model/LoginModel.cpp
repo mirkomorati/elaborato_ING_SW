@@ -2,11 +2,11 @@
 // Created by Noè Murr on 02/07/2017.
 //
 
-#include "../../../hdr/MVC/model/LoginModel.hpp"
-#include "../../../hdr/DBMaster.hpp"
+#include "../../../../code/hdr/MVC/model/LoginModel.hpp"
+#include "../../../../code/hdr/DBMaster.hpp"
 
 std::vector<std::tuple<std::string, std::string, int>>
-mm::LoginModel::getLoginData() {
+mm::LoginModel::get_login_data() {
     auto &db = DBMaster::get_instance();
     std::tuple<std::string, std::string, int> data;
     std::vector<decltype(data)> to_return;

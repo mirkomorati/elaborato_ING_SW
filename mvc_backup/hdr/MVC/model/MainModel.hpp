@@ -24,11 +24,10 @@ namespace mm {
 
         virtual ~MainModel();
 
-        std::vector<std::tuple<std::string, std::string, int>> getLoginData();
+        std::vector<std::tuple<std::string, std::string, int>> get_login_data();
 
     private:
         MainController *controller;
-        LoginModel *login_model;
 
     };
 }

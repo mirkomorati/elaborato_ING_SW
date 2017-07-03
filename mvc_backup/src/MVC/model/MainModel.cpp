@@ -2,21 +2,19 @@
 // Created by Mirko Morati on 30/06/17.
 //
 
-#include "../../../hdr/MVC/model/MainModel.hpp"
-#include "../../../hdr/DBMaster.hpp"
+#include "../../../../code/hdr/MVC/model/MainModel.hpp"
+#include "../../../../code/hdr/DBMaster.hpp"
 
 
 
 std::vector<std::tuple<std::string, std::string, int>>
-mm::MainModel::getLoginData() {
-    return login_model->getLoginData();
+mm::MainModel::get_login_data() {
+    return LoginModel().get_login_data();
 }
 
 mm::MainModel::MainModel(mm::MainController *controller) :
         controller(controller) {
-    login_model = new LoginModel();
 }
 
 mm::MainModel::~MainModel() {
-    if (login_model) delete login_model;
 }

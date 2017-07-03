@@ -3,7 +3,7 @@
 //
 
 #include <gtkmm/entry.h>
-#include "../../../hdr/MVC/view/LoginView.hpp"
+#include "../../../../code/hdr/MVC/view/LoginView.hpp"
 
 void mm::LoginView::onLoginButtonClicked() {
     std::lock_guard<std::mutex> lock(delete_mutex);
@@ -30,3 +30,6 @@ void mm::LoginView::loginFailed() {
     login_error->set_visible(true);
 }
 
+mm::LoginView::LoginView(LoginController controller) {
+
+}
