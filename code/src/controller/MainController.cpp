@@ -11,8 +11,10 @@ mm::MainController::MainController() {
 }
 
 void mm::MainController::run() {
-    int argc = 0;
-    char **argv = nullptr;
+    int argc = 1;
+    char **argv = new char *[1];
+    argv[0] = new char[1];
+    argv[0][0] = 'D';
     auto app = Gtk::Application::create(argc, argv, "it.mm.org");
 
     app->run(main_view->get_app_window());

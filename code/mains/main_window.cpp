@@ -7,6 +7,7 @@ using namespace mm;
 using namespace std;
 
 int main(int argc, char **argv) {
+    Glib::init();
     Configuration::set_config_file_name(
             "../tmp/config.json");
 
