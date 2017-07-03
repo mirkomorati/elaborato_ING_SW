@@ -7,7 +7,6 @@
 
 mm::MainController::MainController(mm::MainView *window, mm::MainModel *model)
         : view(window), model(model) {
-    login_controller = new LoginController(model->get_login_model(), view->get_login_view(), this, login_mutex);
 }
 
 mm::MainController::~MainController() {
@@ -42,12 +41,4 @@ void mm::MainController::setWindow(mm::MainView *window) {
 
 void mm::MainController::setModel(mm::MainModel *model) {
     MainController::model = model;
-}
-
-void mm::MainController::login(int id) {
-    view->loginUpdate(id);
-}
-
-mm::LoginController *mm::MainController::get_view_controller() {
-    return login_controller;
 }

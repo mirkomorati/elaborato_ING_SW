@@ -20,17 +20,14 @@ namespace mm {
 
     class MainModel {
     public:
-        MainModel(MainController *controller, MainView *view);
+        MainModel(MainController *controller);
 
         virtual ~MainModel();
 
         std::vector<std::tuple<std::string, std::string, int>> getLoginData();
 
-        LoginModel *get_login_model();
-
     private:
         MainController *controller;
-        MainView *view;
         LoginModel *login_model;
 
     };

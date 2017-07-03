@@ -27,7 +27,7 @@ mm::MainView::MainView(std::string window_id, MainController *controller)
     refBuilder->get_widget(window_id, window);
     refBuilder->get_widget("loginButton", login_button);
 
-    login_view = new LoginView(this, controller->get_view_controller(), refBuilder, login_mutex);
+    login_view = new LoginView(this, refBuilder, login_mutex);
 
     // NON FUNZIONA
     /*view->add_events(Gdk::KEY_RELEASE_MASK);
@@ -76,12 +76,11 @@ void mm::MainView::loginUpdate(int doctor_id) {
         std::cout << "Login eseguito con successo" << std::endl;
         std::cout << "Doctor_id: " << doctor_id << std::endl;
         delete login_view;
+        login_view = nullptr;
         patientView(doctor_id);
     } else {
-        Gtk::Label *login_error;
-        refBuilder->get_widget("loginError", login_error);
-        login_error->set_visible(true);
         std::cout << "login fallito" << std::endl;
+        login_view->loginFailed();
     }
 }
 
@@ -136,4 +135,8 @@ void mm::MainView::patientView(int doctor_id) {
 
     stack->set_visible_child("patientPaned");
     menu_bar->set_visible(true);
+}
+
+mm::MainController *mm::MainView::get_controller() {
+    return controller;
 }

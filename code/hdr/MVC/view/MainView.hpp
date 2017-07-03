@@ -28,6 +28,8 @@ namespace mm {
 
         void loginUpdate(int doctor_id);
 
+        MainController *get_controller();
+
     private:
         // mutex of views
         std::mutex login_mutex;

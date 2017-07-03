@@ -14,7 +14,9 @@ mm::LoginModel::getLoginData() {
     auto table = db.get_table("login");
 
     for (auto row : table) {
-        data = std::make_tuple(row[0], row[1], row[2]);
+        data = std::make_tuple(row[0].get_str(), row[1].get_str(), row[2].get_int());
         to_return.push_back(data);
     }
+
+    return to_return;
 }

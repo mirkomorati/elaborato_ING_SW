@@ -8,7 +8,6 @@
 #include <gtkmm/button.h>
 #include <gtkmm/builder.h>
 #include <gtkmm/label.h>
-#include "../controller/LoginController.hpp"
 #include "../controller/MainController.hpp"
 
 namespace mm {
@@ -23,14 +22,12 @@ namespace mm {
         Gtk::Entry *login_name, *login_pswd;
         Gtk::Label *login_error;
 
-        // logic
-        LoginController *controller;
         MainView *parent;
         std::mutex &delete_mutex;
 
     public:
 
-        LoginView(mm::MainView *parent, LoginController *controller, Glib::RefPtr<Gtk::Builder> refBuilder,
+        LoginView(mm::MainView *parent, Glib::RefPtr<Gtk::Builder> refBuilder,
                   std::mutex &mutex);
 
         void onLoginButtonClicked();
