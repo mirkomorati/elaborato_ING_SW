@@ -17,17 +17,19 @@ namespace mm {
     public:
         MainController();
 
+        virtual ~MainController();
+
         void run();
 
-        const LoginController &get_login_controller() const;
+        LoginController &get_login_controller();
 
-        const PatientController &get_patient_controller() const;
+        PatientController &get_patient_controller();
 
     private:
         LoginController login_controller;
         PatientController patient_controller;
 
-        MainView main_view;
+        MainView *main_view;
     };
 }
 
