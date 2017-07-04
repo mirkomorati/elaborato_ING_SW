@@ -44,10 +44,12 @@ namespace mm {
         void extract_from_db(ISerializable &obj, const Serialized &id);
 
         vector<vector<Serialized>>
-        get_table(string name, unsigned int limit, unsigned int offset);
+        get_table(string name, unsigned int limit = 0, unsigned int offset = 0);
 
-        vector<vector<Serialized>>
-        get_table(string name);
+        /*vector<vector<Serialized>>
+        get_table(string name);*/
+
+        vector<map<string, Serialized>> get_rows(string table_name, string id_name, Serialized id);
 
         ~DBMaster();
 

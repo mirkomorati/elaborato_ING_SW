@@ -6,7 +6,9 @@
 #define ELABORATO_ING_SW_PATIENTVIEW_HPP
 
 #include <gtkmm/toolbutton.h>
+#include <gtkmm/liststore.h>
 #include "../controller/PatientController.hpp"
+#include "../model/PatientTreeModel.hpp"
 
 namespace mm {
     class PatientController;
@@ -14,6 +16,9 @@ namespace mm {
     class PatientView {
     public:
         PatientView(PatientController *controller);
+
+        void set_patient_tree_model(PatientTreeModel &patient_tree_model,
+                                    Glib::RefPtr<Gtk::ListStore> patient_list_store);
 
     private:
         PatientController *controller;

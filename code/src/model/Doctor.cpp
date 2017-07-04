@@ -5,7 +5,8 @@
 
 
 #include <iostream>
-#include "../../hdr/users/Doctor.hpp"
+#include "../../hdr/model/Doctor.hpp"
+#include "../../hdr/DBMaster.hpp"
 
 
 map<string, mm::Serialized> mm::Doctor::serialize() const {
@@ -20,8 +21,8 @@ map<string, mm::Serialized> mm::Doctor::serialize() const {
 void mm::Doctor::unserialize(map<string, mm::Serialized> map) {
     regional_id = static_cast<int>(map["regional_id"]);
     fiscal_code = static_cast<string>(map["fiscal_code"]);
-    cout << fiscal_code << endl;
     specialization = static_cast<string>(map["specialization"]);
+    get_patients_from_db();
 }
 
 string mm::Doctor::get_table_name() const {
@@ -48,8 +49,14 @@ mm::Doctor::get_drugs(mm::Date start, mm::Date end) {
     return vector<mm::Drug, allocator<mm::Drug>>();
 }
 
-vector<mm::Patient, allocator<mm::Patient>> mm::Doctor::get_patients() {
-    return vector<mm::Patient, allocator<mm::Patient>>();
+void mm::Doctor::get_patients_from_db() {
+    auto rows = DBMaster::get_instance().get_rows("patients", "doctor_id", regional_id);
+
+    for (auto &row : rows) {
+        Patient tmp;
+        tmp.unserialize(row);
+        patients.push_back(tmp);
+    }
 }
 
 vector<mm::Patient, allocator<mm::Patient>>
@@ -67,4 +74,8 @@ const int &mm::Doctor::getRegional_id() const {
 
 const string &mm::Doctor::getSpecialization() const {
     return specialization;
+}
+
+vector<mm::Patient> &mm::Doctor::get_patients() {
+    return patients;
 }

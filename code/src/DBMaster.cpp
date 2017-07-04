@@ -223,7 +223,6 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
 
 vector<vector<mm::Serialized>>
 mm::DBMaster::get_table(string name, unsigned int limit, unsigned int offset) {
-    using namespace std;
     stringstream query;
     sqlite3_stmt *stmt;
     int col_num, row;
@@ -292,9 +291,83 @@ mm::DBMaster::get_table(string name, unsigned int limit, unsigned int offset) {
     return to_return;
 }
 
-vector<vector<mm::Serialized, allocator<mm::Serialized>>, allocator<vector<mm::Serialized, allocator<mm::Serialized>>>>
+/*vector<vector<mm::Serialized, allocator<mm::Serialized>>, allocator<vector<mm::Serialized, allocator<mm::Serialized>>>>
 mm::DBMaster::get_table(string name) {
     return get_table(name, 0, 0);
+}*/
+
+vector<map<string, mm::Serialized>>
+mm::DBMaster::get_rows(string table_name, string id_name, mm::Serialized id) {
+    stringstream query;
+    sqlite3_stmt *stmt;
+    vector<map<string, mm::Serialized>> to_return;
+
+    query << "select * from " << table_name << " where " << id_name << "='";
+
+    switch (id.getType()) {
+        case INTEGER:
+            query << id.get_int() << "'";
+            break;
+        case REAL:
+            query << id.get_real() << "'";
+            break;
+        case TEXT:
+            query << id.get_str() << "'";
+            break;
+    }
+
+    if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
+        std::stringstream msg;
+        msg << "cannot select rows with query: \"" << query.str() << "\""
+            << std::endl
+            << "sqlite error: " << sqlite3_errmsg(db);
+        throw std::runtime_error(msg.str());
+    }
+
+    int col_num = sqlite3_column_count(stmt);
+    while (sqlite3_step(stmt) != SQLITE_DONE) {
+        map<string, Serialized> serialized_map;
+        for (int i = 0; i < col_num; ++i) {
+            int type = sqlite3_column_type(stmt, i);
+
+            switch (type) {
+                case SQLITE_INTEGER:
+                    serialized_map[sqlite3_column_name(stmt, i)] = sqlite3_column_int(stmt, i);
+                    break;
+                case SQLITE_TEXT:
+                    serialized_map[sqlite3_column_name(stmt, i)] =
+                            std::string((const char *) sqlite3_column_text(stmt, i));
+                    break;
+                case SQLITE_FLOAT:
+                    serialized_map[sqlite3_column_name(stmt, i)] = sqlite3_column_double(stmt, i);
+                    break;
+                case SQLITE_NULL: {
+                    string t(sqlite3_column_decltype(stmt, i));
+                    if (t == "TEXT") {
+                        serialized_map[sqlite3_column_name(stmt, i)] = "";
+                    } else if (t == "REAL") {
+                        serialized_map[sqlite3_column_name(stmt, i)] = 0.0f;
+                    } else {
+                        serialized_map[sqlite3_column_name(stmt, i)] = 0;
+                    }
+                    break;
+                }
+                default: {
+                    std::stringstream msg;
+                    msg << "data type not recognized: " << type << " name: "
+                        << sqlite3_column_name(stmt, i) << " decltype: "
+                        << sqlite3_column_decltype(stmt, i)
+                        << " data: " << sqlite3_column_int(stmt, i)
+                        << " col: " << i;
+                    sqlite3_finalize(stmt);
+                    throw std::runtime_error(msg.str());
+                }
+            }
+        }
+        to_return.push_back(serialized_map);
+    }
+
+    return to_return;
 }
 
 mm::record_not_found_error::record_not_found_error(const char *msg)

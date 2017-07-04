@@ -6,7 +6,7 @@
 #include <thread>
 #include "../../hdr/controller/LoginController.hpp"
 #include "../../hdr/RefBuilder.hpp"
-#include "../../hdr/LoginModel.hpp"
+#include "../../hdr/model/LoginModel.hpp"
 
 
 void mm::LoginController::set_view(LoginView *view) {
@@ -31,7 +31,7 @@ void mm::LoginController::login_button_handler() {
         for (auto login : login_data) {
             if (std::get<0>(login) == name && std::get<1>(login) == password) {
                 login_view->login_update(true);
-
+                parent->set_doctor(get<2>(login));
                 return 0;
             }
         }

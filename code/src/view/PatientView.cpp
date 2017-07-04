@@ -19,3 +19,16 @@ mm::PatientView::PatientView(mm::PatientController *controller) : controller(con
     edit_patient->signal_clicked().connect(sigc::mem_fun(
             controller, &mm::PatientController::edit_patient_handler));
 }
+
+void mm::PatientView::set_patient_tree_model(PatientTreeModel &patient_tree_model,
+                                             Glib::RefPtr<Gtk::ListStore> patient_list_store) {
+    Gtk::TreeView *patient_tree_view;
+
+    RefBuilder::get_instance().get_widget("patientTreeView", patient_tree_view);
+
+    patient_tree_view->append_column("Nome", patient_tree_model.first_name);
+    patient_tree_view->append_column("Cognome", patient_tree_model.last_name);
+    patient_tree_view->append_column("Cod. Fiscale", patient_tree_model.fiscal_code);
+    patient_tree_view->set_model(patient_list_store);
+
+}

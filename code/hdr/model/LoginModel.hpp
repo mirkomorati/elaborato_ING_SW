@@ -5,7 +5,7 @@
 #ifndef ELABORATO_ING_SW_LOGINMODEL_HPP
 #define ELABORATO_ING_SW_LOGINMODEL_HPP
 
-#include "DBMaster.hpp"
+#include "../DBMaster.hpp"
 #include <vector>
 #include <tuple>
 

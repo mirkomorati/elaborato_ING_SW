@@ -29,12 +29,13 @@ namespace mm {
 
         Gtk::ApplicationWindow &get_main_window();
 
+        void set_doctor(int doctor_id);
+
         void setup();
 
     private:
         LoginController *login_controller;
         PatientController *patient_controller;
-
         MainView *main_view;
     };
 }

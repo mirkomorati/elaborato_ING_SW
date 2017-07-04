@@ -35,3 +35,7 @@ void mm::MainController::setup() {
     patient_controller->set_parent(this);
     main_view->setup();
 }
+
+void mm::MainController::set_doctor(int doctor_id) {
+    patient_controller->set_doctor(doctor_id);
+}

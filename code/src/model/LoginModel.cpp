@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "../hdr/LoginModel.hpp"
+#include "../../hdr/model/LoginModel.hpp"
 
 std::vector<std::tuple<std::string, std::string, int>>
 mm::LoginModel::get_login_data() {

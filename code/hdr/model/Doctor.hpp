@@ -10,9 +10,9 @@
 #include <string>
 #include <vector>
 
-#include "User.hpp"
+#include "../users/User.hpp"
 #include "../Prescription.hpp"
-#include "../Patient.hpp"
+#include "Patient.hpp"
 #include "../Drug.hpp"
 
 using namespace std;
@@ -22,6 +22,9 @@ namespace mm {
         string fiscal_code;
         int regional_id;
         string specialization;
+        vector<Patient> patients;
+
+        void get_patients_from_db();
 
     public:
         vector<Prescription> get_prescriptions(Patient patient,
@@ -31,7 +34,7 @@ namespace mm {
 
         vector<Drug> get_drugs(Date start, Date end);
 
-        vector<Patient> get_patients();
+        vector<Patient, allocator<Patient>> &get_patients();
 
         vector<Patient> get_patients(Drug drug);
 
