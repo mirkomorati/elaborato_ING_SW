@@ -12,7 +12,7 @@ mm::MainView::MainView(mm::MainController &controller)
           patient_view(controller.get_patient_controller()) {
     try {
         refBuilder = Gtk::Builder::create_from_file(
-                "../../glade/mainWindow.glade");
+                "../glade/mainWindow.glade");
     }
     catch (const Glib::ConvertError &ex) {
         std::cerr << "ConvertError: " << ex.what() << std::endl;
