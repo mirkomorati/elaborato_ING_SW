@@ -27,15 +27,15 @@ void mm::LoginController::login_button_handler() {
               << text_password << std::endl;
 
     std::thread login_thread([this](std::string name, std::string password) {
-        LoginModel model;
-        auto login_data = model.get_login_data();
+        auto login_data = LoginModel().get_login_data();
         for (auto login : login_data) {
             if (std::get<0>(login) == name && std::get<1>(login) == password) {
-                login_view->login_update(std::get<2>(login));
+                login_view->login_update(true);
+
                 return 0;
             }
         }
-        login_view->login_update(-1);
+        login_view->login_update(false);
         return -1;
     }, text_name, text_password);
 
@@ -43,4 +43,8 @@ void mm::LoginController::login_button_handler() {
 }
 
 mm::LoginController::LoginController() {
+}
+
+void mm::LoginController::set_parent(mm::MainController *parent) {
+    LoginController::parent = parent;
 }

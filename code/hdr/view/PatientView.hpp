@@ -5,6 +5,7 @@
 #ifndef ELABORATO_ING_SW_PATIENTVIEW_HPP
 #define ELABORATO_ING_SW_PATIENTVIEW_HPP
 
+#include <gtkmm/toolbutton.h>
 #include "../controller/PatientController.hpp"
 
 namespace mm {
@@ -12,10 +13,14 @@ namespace mm {
 
     class PatientView {
     public:
-        PatientView(PatientController &controller);
+        PatientView(PatientController *controller);
 
     private:
-        PatientController &controller;
+        PatientController *controller;
+
+        Gtk::ToolButton *add_patient;
+        Gtk::ToolButton *edit_patient;
+        Gtk::ToolButton *remove_patient;
     };
 }
 

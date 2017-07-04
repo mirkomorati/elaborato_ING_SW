@@ -13,6 +13,10 @@
 namespace mm {
     class MainView;
 
+    class LoginController;
+
+    class PatientController;
+
     class MainController {
     public:
         MainController();
@@ -28,8 +32,8 @@ namespace mm {
         void setup();
 
     private:
-        LoginController login_controller;
-        PatientController patient_controller;
+        LoginController *login_controller;
+        PatientController *patient_controller;
 
         MainView *main_view;
     };

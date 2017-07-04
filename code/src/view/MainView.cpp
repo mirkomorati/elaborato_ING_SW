@@ -7,8 +7,9 @@
 #include "../../hdr/RefBuilder.hpp"
 
 mm::MainView::MainView(mm::MainController &controller)
-        : controller(controller), login_view(controller.get_login_controller()),
-          patient_view(controller.get_patient_controller()) {
+        : controller(controller) {
+    login_view = new LoginView(&controller.get_login_controller());
+    patient_view = new PatientView(&controller.get_patient_controller());
 
     auto &refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("mainWindow", window);
@@ -19,11 +20,40 @@ Gtk::ApplicationWindow &mm::MainView::get_app_window() {
 }
 
 mm::LoginView &mm::MainView::get_login_view() {
-    return login_view;
+    return *login_view;
 }
 
 mm::PatientView &mm::MainView::get_patient_view() {
-    return patient_view;
+    return *patient_view;
+}
+
+mm::MainView::~MainView() {
+    delete login_view;
+    delete patient_view;
+}
+
+void mm::MainView::setup() {
+    login_view->set_parent(this);
+}
+
+void mm::MainView::change_stack_page(mm::StackPage page) {
+    auto &refBuilder = RefBuilder::get_instance();
+    Gtk::Stack *stack;
+    Gtk::MenuBar *menu_bar;
+
+    refBuilder.get_widget("mainStack", stack);
+    refBuilder.get_widget("menuBar", menu_bar);
+
+    switch (page) {
+        case LOGIN:
+            menu_bar->set_visible(false);
+            stack->set_visible_child("loginGrid");
+            break;
+        case PATIENT:
+            menu_bar->set_visible(true);
+            stack->set_visible_child("patientPaned");
+            break;
+    }
 }
 
 

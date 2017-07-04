@@ -13,9 +13,20 @@
 namespace mm {
     class MainController;
 
+    class LoginView;
+
+    class PatientView;
+
+    enum StackPage {
+        LOGIN,
+        PATIENT
+    };
+
     class MainView {
     public:
         MainView(MainController &controller);
+
+        ~MainView();
 
         Gtk::ApplicationWindow &get_app_window();
 
@@ -23,9 +34,13 @@ namespace mm {
 
         PatientView &get_patient_view();
 
+        void setup();
+
+        void change_stack_page(StackPage page);
+
     private:
-        LoginView login_view;
-        PatientView patient_view;
+        LoginView *login_view;
+        PatientView *patient_view;
 
         MainController &controller;
 

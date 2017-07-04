@@ -323,8 +323,8 @@
                 </child>
               </object>
               <packing>
-                <property name="name">loginGrid</property>
-                <property name="title" translatable="yes">loginGrid</property>
+                <property name="name">page0</property>
+                <property name="title" translatable="yes">page0</property>
               </packing>
             </child>
             <child>
@@ -401,7 +401,7 @@
                         <property name="can_focus">False</property>
                         <property name="hexpand">True</property>
                         <child>
-                          <object class="GtkToolButton" id="addPatient1">
+                          <object class="GtkToolButton" id="addPatient">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="label" translatable="yes">add patient</property>
@@ -414,7 +414,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkToolButton" id="removePatient1">
+                          <object class="GtkToolButton" id="removePatient">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="label" translatable="yes">remove patient</property>
@@ -427,7 +427,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkToolButton" id="editPatient1">
+                          <object class="GtkToolButton" id="editPatient">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="label" translatable="yes">edit patient</property>

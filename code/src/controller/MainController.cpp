@@ -4,8 +4,9 @@
 
 #include "../../hdr/controller/MainController.hpp"
 
-mm::MainController::MainController()
-    : login_controller(), patient_controller() {
+mm::MainController::MainController() {
+    login_controller = new LoginController();
+    patient_controller = new PatientController();
 }
 
 Gtk::ApplicationWindow &mm::MainController::get_main_window() {
@@ -13,19 +14,24 @@ Gtk::ApplicationWindow &mm::MainController::get_main_window() {
 }
 
 mm::LoginController &mm::MainController::get_login_controller() {
-    return login_controller;
+    return *login_controller;
 }
 
 mm::PatientController &mm::MainController::get_patient_controller() {
-    return patient_controller;
+    return *patient_controller;
 }
 
 mm::MainController::~MainController() {
     delete main_view;
+    delete patient_controller;
+    delete login_controller;
 }
 
 void mm::MainController::setup() {
     main_view = new MainView(*this);
-    login_controller.set_view(&main_view->get_login_view());
-    patient_controller.set_view(&main_view->get_patient_view());
+    login_controller->set_view(&main_view->get_login_view());
+    login_controller->set_parent(this);
+    patient_controller->set_view(&main_view->get_patient_view());
+    patient_controller->set_parent(this);
+    main_view->setup();
 }

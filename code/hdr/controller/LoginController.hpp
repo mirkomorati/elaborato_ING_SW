@@ -10,6 +10,8 @@
 namespace mm {
     class LoginView;
 
+    class MainController;
+
     class LoginController {
     public:
         LoginController();
@@ -18,9 +20,11 @@ namespace mm {
 
         void login_button_handler();
 
+        void set_parent(MainController *parent);
+
     private:
         LoginView *login_view;
-
+        MainController *parent;
     };
 }
 
