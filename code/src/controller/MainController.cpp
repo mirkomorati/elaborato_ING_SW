@@ -10,14 +10,8 @@ mm::MainController::MainController() {
     patient_controller.set_view(main_view->get_patient_view());
 }
 
-void mm::MainController::run() {
-    int argc = 1;
-    char **argv = new char *[1];
-    argv[0] = new char[1];
-    argv[0][0] = 'D';
-    auto app = Gtk::Application::create(argc, argv, "it.mm.org");
-
-    app->run(main_view->get_app_window());
+Gtk::ApplicationWindow &mm::MainController::get_main_window() {
+    return main_view->get_app_window();
 }
 
 mm::LoginController &mm::MainController::get_login_controller() {

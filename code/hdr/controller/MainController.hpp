@@ -19,11 +19,11 @@ namespace mm {
 
         virtual ~MainController();
 
-        void run();
-
         LoginController &get_login_controller();
 
         PatientController &get_patient_controller();
+
+        Gtk::ApplicationWindow &get_main_window();
 
     private:
         LoginController login_controller;

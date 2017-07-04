@@ -19,8 +19,10 @@ int main(int argc, char **argv) {
 
     DBMaster::set_db_file_name(config.get<string>("db_name"));
 
+    auto app = Gtk::Application::create();
+
     MainController mc;
-    mc.run();
+    app->run(mc.get_main_window());
 
     return 0;
 }
