@@ -12,8 +12,10 @@ namespace mm {
 
     class PatientController {
 
+        PatientView *view;
+
     public:
-        void set_view(PatientView &view);
+        void set_view(PatientView *view);
     };
 }
 

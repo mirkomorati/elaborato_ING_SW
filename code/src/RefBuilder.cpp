@@ -5,6 +5,8 @@
 #include <iostream>
 #include "../hdr/RefBuilder.hpp"
 
+mm::RefBuilder *mm::RefBuilder::instance;
+
 mm::RefBuilder &mm::RefBuilder::get_instance() {
     if (not instance) instance = new RefBuilder();
 
@@ -28,9 +30,4 @@ mm::RefBuilder::RefBuilder() {
     catch (const Gtk::BuilderError &ex) {
         std::cerr << "BuilderError: " << ex.what() << std::endl;
     }
-}
-
-template<typename T>
-void mm::RefBuilder::get_widget(const Glib::ustring &name, T *widget) {
-    refBuilder->get_widget(name, widget);
 }

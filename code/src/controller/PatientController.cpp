@@ -4,6 +4,6 @@
 
 #include "../../hdr/controller/PatientController.hpp"
 
-void mm::PatientController::set_view(PatientView &view) {
-
+void mm::PatientController::set_view(PatientView *view) {
+    this->view = view;
 }

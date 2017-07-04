@@ -6,8 +6,8 @@
 
 mm::MainController::MainController() {
     main_view = new MainView(*this);
-    login_controller.set_view(main_view->get_login_view());
-    patient_controller.set_view(main_view->get_patient_view());
+    login_controller.set_view(&main_view->get_login_view());
+    patient_controller.set_view(&main_view->get_patient_view());
 }
 
 Gtk::ApplicationWindow &mm::MainController::get_main_window() {

@@ -13,7 +13,7 @@ namespace mm {
 
     class LoginView {
     public:
-        LoginView(LoginController controller);
+        LoginView(LoginController &controller);
 
     private:
         LoginController &controller;

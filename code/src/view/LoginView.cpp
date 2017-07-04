@@ -4,6 +4,6 @@
 
 #include "../../hdr/view/LoginView.hpp"
 
-mm::LoginView::LoginView(LoginController controller) : controller(controller) {
+mm::LoginView::LoginView(LoginController &controller) : controller(controller) {
 
 }
