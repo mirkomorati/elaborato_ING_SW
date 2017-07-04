@@ -11,9 +11,15 @@ namespace mm {
     class LoginView;
 
     class LoginController {
-
     public:
+        LoginController();
         void set_view(LoginView &view);
+
+        void login_button_handler();
+
+    private:
+        LoginView &login_view;
+
     };
 }
 

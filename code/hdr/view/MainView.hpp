@@ -5,8 +5,7 @@
 #ifndef ELABORATO_ING_SW_MAINVIEW_HPP
 #define ELABORATO_ING_SW_MAINVIEW_HPP
 
-#include <gtkmm/applicationwindow.h>
-#include <gtkmm/builder.h>
+#include <gtkmm-3.0/gtkmm.h>
 #include "../controller/MainController.hpp"
 #include "PatientView.hpp"
 #include "LoginView.hpp"
@@ -29,7 +28,6 @@ namespace mm {
         PatientView patient_view;
 
         MainController &controller;
-        Glib::RefPtr<Gtk::Builder> refBuilder;
 
         Gtk::ApplicationWindow *window;
     };

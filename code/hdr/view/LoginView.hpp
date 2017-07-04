@@ -6,6 +6,7 @@
 #define ELABORATO_ING_SW_LOGINVIEW_HPP
 
 #include "../controller/LoginController.hpp"
+#include <gtkmm-3.0/gtkmm.h>
 
 namespace mm {
     class LoginController;
