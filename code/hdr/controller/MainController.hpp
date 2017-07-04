@@ -25,6 +25,8 @@ namespace mm {
 
         Gtk::ApplicationWindow &get_main_window();
 
+        void setup();
+
     private:
         LoginController login_controller;
         PatientController patient_controller;

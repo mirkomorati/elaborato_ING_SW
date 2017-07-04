@@ -15,9 +15,12 @@ namespace mm {
     public:
         LoginView(LoginController &controller);
 
+        void login_update(int doctor_id);
+
     private:
         LoginController &controller;
 
+        Gtk::Button *button;
     };
 }
 

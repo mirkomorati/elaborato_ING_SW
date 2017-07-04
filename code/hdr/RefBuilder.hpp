@@ -13,7 +13,7 @@ namespace mm {
         static RefBuilder &get_instance();
 
         template<typename T>
-        void get_widget(const Glib::ustring &name, T *widget) {
+        void get_widget(const Glib::ustring &name, T &widget) {
             refBuilder->get_widget(name, widget);
         }
 
