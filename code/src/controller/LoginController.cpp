@@ -21,9 +21,10 @@ void mm::LoginController::login_button_handler() {
 
     refBuilder.get_widget("loginName", name);
     refBuilder.get_widget("loginPassword", password);
-
-    std::cout << "Nome: " << name->get_text() << "\tPassword: "
-              << password->get_text() << std::endl;
+    std::string text_name = name->get_text();
+    std::string text_password = password->get_text();
+    std::cout << "Nome: " << text_name << "\tPassword: "
+              << text_password << std::endl;
 
     std::thread login_thread([this](std::string name, std::string password) {
         LoginModel model;
@@ -36,7 +37,7 @@ void mm::LoginController::login_button_handler() {
         }
         login_view->login_update(-1);
         return -1;
-    }, name->get_text(), password->get_text());
+    }, text_name, text_password);
 
     login_thread.detach();
 }
