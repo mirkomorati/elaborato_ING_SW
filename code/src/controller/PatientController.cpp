@@ -16,6 +16,7 @@ void mm::PatientController::set_parent(mm::MainController *parent) {
 
 void mm::PatientController::add_patient_handler() {
     std::cout << "Add Patient Click" << std::endl;
+    patient_view->add_patient_show_dialog();
 }
 
 void mm::PatientController::remove_patient_handler() {

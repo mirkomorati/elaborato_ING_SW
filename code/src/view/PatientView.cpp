@@ -32,3 +32,10 @@ void mm::PatientView::set_patient_tree_model(PatientTreeModel &patient_tree_mode
     patient_tree_view->set_model(patient_list_store);
 
 }
+
+void mm::PatientView::add_patient_show_dialog() {
+    Gtk::Dialog *add_patient_dialog;
+    RefBuilder::get_instance().get_widget("addPatientDialog",
+                                          add_patient_dialog);
+    add_patient_dialog->show();
+}

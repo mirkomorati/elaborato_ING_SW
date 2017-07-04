@@ -20,6 +20,8 @@ namespace mm {
         void set_patient_tree_model(PatientTreeModel &patient_tree_model,
                                     Glib::RefPtr<Gtk::ListStore> patient_list_store);
 
+        void add_patient_show_dialog();
+
     private:
         PatientController *controller;
 
