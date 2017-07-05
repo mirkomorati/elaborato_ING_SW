@@ -3,6 +3,7 @@
 //
 
 #include <gtkmm/builder.h>
+#include <iostream>
 #include "../../hdr/view/MainView.hpp"
 #include "../../hdr/RefBuilder.hpp"
 
@@ -13,6 +14,9 @@ mm::MainView::MainView(mm::MainController &controller)
 
     auto &refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("mainWindow", window);
+    refBuilder.get_widget("logoutButton", logout_menu);
+
+    logout_menu->signal_activate().connect(sigc::mem_fun(controller, &mm::MainController::on_button_logout_clicked));
 }
 
 Gtk::ApplicationWindow &mm::MainView::get_app_window() {
@@ -48,6 +52,7 @@ void mm::MainView::change_stack_page(mm::StackPage page) {
         case LOGIN:
             menu_bar->set_visible(false);
             stack->set_visible_child("loginGrid");
+            cout << "login page" << endl;
             break;
         case PATIENT:
             menu_bar->set_visible(true);

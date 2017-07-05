@@ -45,6 +45,7 @@ namespace mm {
         MainController &controller;
 
         Gtk::ApplicationWindow *window;
+        Gtk::MenuItem *logout_menu;
     };
 }
 

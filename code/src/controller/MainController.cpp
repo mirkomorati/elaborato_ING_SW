@@ -39,3 +39,7 @@ void mm::MainController::setup() {
 void mm::MainController::set_doctor(int doctor_id) {
     patient_controller->set_doctor(doctor_id);
 }
+
+void mm::MainController::on_button_logout_clicked() {
+    main_view->change_stack_page(LOGIN);
+}

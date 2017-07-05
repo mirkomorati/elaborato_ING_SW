@@ -33,6 +33,8 @@ namespace mm {
 
         void setup();
 
+        void on_button_logout_clicked();
+
     private:
         LoginController *login_controller;
         PatientController *patient_controller;
