@@ -72,9 +72,11 @@ mm::PatientController::row_selected_handler(const Gtk::TreeModel::Path &path,
 }
 
 void mm::PatientController::set_prescription_tree_view(std::string patient_id) {
-    // TODO: popolare la tree view delle prescrizioni relative a un paziente
     DBMaster::get_instance().extract_from_db(patient, patient_id);
     auto &prescriptions = patient.get_prescriptions();
+
+    // TODO: questo non funziona, bisogna trovare un modo per cancellare le row
+    // if (prescription_list_store) prescription_list_store->clear();
 
     prescription_list_store = Gtk::ListStore::create(prescription_tree_model);
 
