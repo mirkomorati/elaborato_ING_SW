@@ -14,9 +14,9 @@ mm::MainView::MainView(mm::MainController &controller)
 
     auto &refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("mainWindow", window);
-    refBuilder.get_widget("logoutButton", logout_menu);
+    //refBuilder.get_widget("logoutButton", logout_menu);
 
-    logout_menu->signal_activate().connect(sigc::mem_fun(controller, &mm::MainController::on_button_logout_clicked));
+    //logout_menu->signal_activate().connect(sigc::mem_fun(controller, &mm::MainController::on_button_logout_clicked));
 }
 
 Gtk::ApplicationWindow &mm::MainView::get_app_window() {

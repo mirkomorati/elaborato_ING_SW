@@ -86,8 +86,12 @@ const string &mm::Patient::get_address() const {
     return address;
 }
 
-const vector<string> &mm::Patient::get_risk_factors() const {
-    return risk_factors;
+string &mm::Patient::get_risk_factors() {
+    ostringstream ss;
+    copy(risk_factors.begin(), risk_factors.end(),
+         ostream_iterator<string>(ss, ", "));
+    string ret = ss.str();
+    return ret;
 }
 
 const string &mm::Patient::get_fiscal_code() const {

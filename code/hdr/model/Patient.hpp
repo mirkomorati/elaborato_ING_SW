@@ -45,7 +45,7 @@ namespace mm {
 
         const string &get_fiscal_code() const;
 
-        const vector<string> &get_risk_factors() const;
+        string &get_risk_factors();
 
     private:
         string health_code;

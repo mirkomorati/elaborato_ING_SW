@@ -9,6 +9,7 @@
 #include "MainController.hpp"
 #include "../model/Doctor.hpp"
 #include "../model/PatientTreeModel.hpp"
+#include "../model/PrescriptionTreeModel.hpp"
 
 namespace mm {
     class PatientView;
@@ -22,6 +23,8 @@ namespace mm {
         void set_parent(mm::MainController *parent);
 
         void set_doctor(int doctor_id);
+
+        void set_prescription_tree_view(std::string patient_id);
 
         void add_patient_handler();
 
@@ -38,6 +41,8 @@ namespace mm {
         Doctor doctor;
         PatientTreeModel patient_tree_model;
         Glib::RefPtr<Gtk::ListStore> patient_list_store;
+        PrescriptionTreeModel prescription_tree_model;
+        Glib::RefPtr<Gtk::ListStore> prescription_list_store;
     };
 }
 

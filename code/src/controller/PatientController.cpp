@@ -39,6 +39,11 @@ void mm::PatientController::set_doctor(int doctor_id) {
         row[patient_tree_model.first_name] = patients[i].get_first_name();
         row[patient_tree_model.last_name] = patients[i].get_last_name();
         row[patient_tree_model.fiscal_code] = patients[i].get_fiscal_code();
+        row[patient_tree_model.health_code] = patients[i].get_health_code();
+        row[patient_tree_model.birth_date] = patients[i].get_birth_date();
+        row[patient_tree_model.birth_place] = patients[i].get_birth_place();
+        row[patient_tree_model.address] = patients[i].get_address();
+        row[patient_tree_model.risk_factors] = patients[i].get_risk_factors();
 
         if (i < patients.size() - 1)
             row = *(patient_list_store->append()++);
@@ -60,5 +65,27 @@ mm::PatientController::row_selected_handler(const Gtk::TreeModel::Path &path,
                   << ", fiscal code = "
                   << row[patient_tree_model.fiscal_code] << std::endl;
         patient_view->patient_detail_show(row, patient_tree_model);
+
+        auto fiscal_code = static_cast<Glib::ustring>(row[patient_tree_model.fiscal_code]);
+        set_prescription_tree_view(fiscal_code.raw());
     }
+}
+
+void mm::PatientController::set_prescription_tree_view(std::string patient_id) {
+    // TODO: popolare la tree view delle prescrizioni relative a un paziente
+
+    prescription_list_store = Gtk::ListStore::create(prescription_tree_model);
+
+    auto row = *prescription_list_store->append();
+
+    row[prescription_tree_model.patient_id] = "Prova1";
+    row[prescription_tree_model.prescription_id] = "Prova1";
+    row[prescription_tree_model.issue_date] = "Prova1";
+    row[prescription_tree_model.expiry_date] = "Prova1";
+    row[prescription_tree_model.drugs] = "Prova1";
+    row[prescription_tree_model.negative_interactions] = "Prova1";
+    row[prescription_tree_model.used] = "Prova1";
+
+    patient_view->set_prescription_tree_model(prescription_tree_model,
+                                              prescription_list_store);
 }

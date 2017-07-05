@@ -2,6 +2,7 @@
 // Created by Noè Murr on 03/07/2017.
 //
 
+#include <iostream>
 #include "../../hdr/view/PatientView.hpp"
 #include "../../hdr/RefBuilder.hpp"
 
@@ -63,6 +64,32 @@ void mm::PatientView::patient_detail_show(Gtk::TreeModel::Row row,
     detail_first_name->set_label(row[patient_tree_model.first_name]);
     detail_last_name->set_label(row[patient_tree_model.last_name]);
     detail_fiscal_code->set_label(row[patient_tree_model.fiscal_code]);
+    detail_health_code->set_label(row[patient_tree_model.health_code]);
+    detail_birth_date->set_label(row[patient_tree_model.birth_date]);
+    detail_birth_place->set_label(row[patient_tree_model.birth_place]);
+    detail_address->set_label(row[patient_tree_model.address]);
+}
 
-    //TODO: finire l'implementazione quando sarà finita la classe paziente
+void mm::PatientView::set_prescription_tree_model(
+    PrescriptionTreeModel &prescription_tree_model,
+    Glib::RefPtr<Gtk::ListStore> prescription_list_store) {
+    std::cout << "Setting prescription tree model" << std::endl;
+    RefBuilder::get_instance().get_widget("prescriptionTreeView",
+                                          prescription_tree_view);
+
+    prescription_tree_view->append_column("Paziente",
+                                          prescription_tree_model.patient_id);
+    prescription_tree_view->append_column("ID",
+                                          prescription_tree_model.prescription_id);
+    prescription_tree_view->append_column("Data Emissione",
+                                          prescription_tree_model.issue_date);
+    prescription_tree_view->append_column("Data Scadenza",
+                                          prescription_tree_model.expiry_date);
+    prescription_tree_view->append_column("Farmaci",
+                                          prescription_tree_model.drugs);
+    prescription_tree_view->append_column("Interazioni",
+                                          prescription_tree_model.negative_interactions);
+    prescription_tree_view->append_column("Usata",
+                                          prescription_tree_model.used);
+    prescription_tree_view->set_model(prescription_list_store);
 }

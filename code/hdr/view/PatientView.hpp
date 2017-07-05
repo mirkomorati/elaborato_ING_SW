@@ -11,6 +11,7 @@
 #include <gtkmm/grid.h>
 #include "../controller/PatientController.hpp"
 #include "../model/PatientTreeModel.hpp"
+#include "../model/PrescriptionTreeModel.hpp"
 
 namespace mm {
     class PatientController;
@@ -21,6 +22,10 @@ namespace mm {
 
         void set_patient_tree_model(PatientTreeModel &patient_tree_model,
                                     Glib::RefPtr<Gtk::ListStore> patient_list_store);
+
+        void set_prescription_tree_model(
+            PrescriptionTreeModel &prescription_tree_model,
+            Glib::RefPtr<Gtk::ListStore> prescription_list_store);
 
         void add_patient_show_dialog();
 
@@ -34,6 +39,7 @@ namespace mm {
         Gtk::ToolButton *edit_patient;
         Gtk::ToolButton *remove_patient;
         Gtk::TreeView *patient_tree_view;
+        Gtk::TreeView *prescription_tree_view;
         Gtk::Grid *patient_detail;
     };
 }

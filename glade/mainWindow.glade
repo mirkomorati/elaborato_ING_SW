@@ -1170,7 +1170,19 @@
                       </packing>
                     </child>
                     <child>
-                      <placeholder/>
+                      <object class="GtkTreeView" id="prescriptionTreeView">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="enable_grid_lines">both</property>
+                        <child internal-child="selection">
+                          <object class="GtkTreeSelection"/>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
                     </child>
                     <child>
                       <placeholder/>
