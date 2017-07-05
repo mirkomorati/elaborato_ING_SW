@@ -6,11 +6,7 @@
 
 #include <sstream>
 #include "../../hdr/model/Patient.hpp"
-
-/**
- * Patient implementation
- */
-
+#include "../../hdr/DBMaster.hpp"
 
 mm::Patient::Patient() {
 
@@ -52,6 +48,7 @@ void mm::Patient::unserialize(map<string, mm::Serialized> map) {
     while (getline(risk_list, tmp, ';')) {
         risk_factors.push_back(tmp);
     }
+    get_prescriptions_from_db();
 }
 
 string mm::Patient::get_table_name() const {
@@ -96,4 +93,18 @@ string &mm::Patient::get_risk_factors() {
 
 const string &mm::Patient::get_fiscal_code() const {
     return fiscal_code;
+}
+
+void mm::Patient::get_prescriptions_from_db() {
+    auto rows = DBMaster::get_instance().get_rows("prescriptions", "patient_id",
+                                                  health_code);
+    for (auto &row : rows) {
+        Prescription tmp;
+        tmp.unserialize(row);
+        prescriptions.push_back(tmp);
+    }
+}
+
+vector<mm::Prescription> &mm::Patient::get_prescriptions() {
+    return prescriptions;
 }

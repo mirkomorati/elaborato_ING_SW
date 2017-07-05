@@ -73,18 +73,27 @@ mm::PatientController::row_selected_handler(const Gtk::TreeModel::Path &path,
 
 void mm::PatientController::set_prescription_tree_view(std::string patient_id) {
     // TODO: popolare la tree view delle prescrizioni relative a un paziente
+    DBMaster::get_instance().extract_from_db(patient, patient_id);
+    auto &prescriptions = patient.get_prescriptions();
 
     prescription_list_store = Gtk::ListStore::create(prescription_tree_model);
 
     auto row = *prescription_list_store->append();
 
-    row[prescription_tree_model.patient_id] = "Prova1";
-    row[prescription_tree_model.prescription_id] = "Prova1";
-    row[prescription_tree_model.issue_date] = "Prova1";
-    row[prescription_tree_model.expiry_date] = "Prova1";
-    row[prescription_tree_model.drugs] = "Prova1";
-    row[prescription_tree_model.negative_interactions] = "Prova1";
-    row[prescription_tree_model.used] = "Prova1";
+    for (int i = 0; i < prescriptions.size(); i++) {
+        row[prescription_tree_model.patient_id] = std::to_string(
+            prescriptions[i].get_patient_id());
+        row[prescription_tree_model.prescription_id] = std::to_string(
+            prescriptions[i].get_prescription_id());
+        row[prescription_tree_model.issue_date] = prescriptions[i].get_issue_date();
+        row[prescription_tree_model.expire_date] = prescriptions[i].get_expire_date();
+        row[prescription_tree_model.drug_ids] = prescriptions[i].get_drug_ids();
+        row[prescription_tree_model.negative_interactions] = prescriptions[i].get_negative_interactions();
+        row[prescription_tree_model.used] = prescriptions[i].is_used() ? "si"
+                                                                       : "no";
+        if (i < prescriptions.size() - 1)
+            row = *(prescription_list_store->append()++);
+    }
 
     patient_view->set_prescription_tree_model(prescription_tree_model,
                                               prescription_list_store);

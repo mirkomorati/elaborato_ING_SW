@@ -84,9 +84,9 @@ void mm::PatientView::set_prescription_tree_model(
     prescription_tree_view->append_column("Data Emissione",
                                           prescription_tree_model.issue_date);
     prescription_tree_view->append_column("Data Scadenza",
-                                          prescription_tree_model.expiry_date);
+                                          prescription_tree_model.expire_date);
     prescription_tree_view->append_column("Farmaci",
-                                          prescription_tree_model.drugs);
+                                          prescription_tree_model.drug_ids);
     prescription_tree_view->append_column("Interazioni",
                                           prescription_tree_model.negative_interactions);
     prescription_tree_view->append_column("Usata",

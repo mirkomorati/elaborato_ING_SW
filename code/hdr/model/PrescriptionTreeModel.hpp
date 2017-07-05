@@ -13,8 +13,8 @@ namespace mm {
 
         Gtk::TreeModelColumn<Glib::ustring> patient_id;
         Gtk::TreeModelColumn<Glib::ustring> issue_date;
-        Gtk::TreeModelColumn<Glib::ustring> expiry_date;
-        Gtk::TreeModelColumn<Glib::ustring> drugs;
+        Gtk::TreeModelColumn<Glib::ustring> expire_date;
+        Gtk::TreeModelColumn<Glib::ustring> drug_ids;
         Gtk::TreeModelColumn<Glib::ustring> prescription_id;
         Gtk::TreeModelColumn<Glib::ustring> negative_interactions;
         Gtk::TreeModelColumn<Glib::ustring> used;

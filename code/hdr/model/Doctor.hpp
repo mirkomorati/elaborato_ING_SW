@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "../users/User.hpp"
-#include "../Prescription.hpp"
+#include "Prescription.hpp"
 #include "Patient.hpp"
 #include "../Drug.hpp"
 

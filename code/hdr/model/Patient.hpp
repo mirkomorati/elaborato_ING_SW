@@ -12,11 +12,12 @@
 #include "../Address.hpp"
 #include "../time_utilities/Date.hpp"
 #include "../interfaces/ISerializable.hpp"
+#include "Prescription.hpp"
 
 using namespace std;
 
 namespace mm {
-    class Patient : ISerializable {
+    class Patient : public ISerializable {
     public:
 
         Patient();
@@ -47,6 +48,8 @@ namespace mm {
 
         string &get_risk_factors();
 
+        vector<Prescription> &get_prescriptions();
+
     private:
         string health_code;
         string first_name;
@@ -56,6 +59,9 @@ namespace mm {
         string birth_place;
         string address;
         vector<string> risk_factors;
+        vector<Prescription> prescriptions;
+
+        void get_prescriptions_from_db();
     };
 }
 

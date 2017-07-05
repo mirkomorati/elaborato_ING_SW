@@ -36,17 +36,17 @@ string mm::Doctor::get_primary_key() const {
 vector<mm::Prescription>
 mm::Doctor::get_prescriptions(mm::Patient patient, mm::Date start,
                               mm::Date end) {
-    return vector<mm::Prescription, allocator<mm::Prescription>>();
+    return vector<mm::Prescription>();
 }
 
-vector<mm::Prescription, allocator<mm::Prescription>>
+vector<mm::Prescription>
 mm::Doctor::get_prescriptions(mm::Drug drug) {
-    return vector<mm::Prescription, allocator<mm::Prescription>>();
+    return vector<mm::Prescription>();
 }
 
-vector<mm::Drug, allocator<mm::Drug>>
+vector<mm::Drug>
 mm::Doctor::get_drugs(mm::Date start, mm::Date end) {
-    return vector<mm::Drug, allocator<mm::Drug>>();
+    return vector<mm::Drug>();
 }
 
 void mm::Doctor::get_patients_from_db() {
@@ -59,9 +59,9 @@ void mm::Doctor::get_patients_from_db() {
     }
 }
 
-vector<mm::Patient, allocator<mm::Patient>>
+vector<mm::Patient>
 mm::Doctor::get_patients(mm::Drug drug) {
-    return vector<mm::Patient, allocator<mm::Patient>>();
+    return vector<mm::Patient>();
 }
 
 const string &mm::Doctor::getFiscal_code() const {
