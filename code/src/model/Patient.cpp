@@ -4,6 +4,7 @@
  */
 
 
+#include <sstream>
 #include "../../hdr/model/Patient.hpp"
 
 /**
@@ -20,7 +21,22 @@ mm::Patient::~Patient() {
 }
 
 map<string, mm::Serialized> mm::Patient::serialize() const {
-    return map<string, mm::Serialized>();
+    map<string, Serialized> serialized_map;
+    serialized_map["first_name"] = first_name;
+    serialized_map["last_name"] = last_name;
+    serialized_map["fiscal_code"] = fiscal_code;
+    serialized_map["health_code"] = health_code;
+    serialized_map["address"] = address;
+    serialized_map["birth_date"] = birth_date;
+    serialized_map["birth_place"] = birth_place;
+    stringstream risk_list;
+    for (int i = 0; i < risk_factors.size(); i++) {
+        risk_list << risk_factors[i];
+        if (i < risk_factors.size() - 1) risk_list << ";";
+    }
+    serialized_map["risk_factors"] = risk_list.str();
+
+    return serialized_map;
 }
 
 void mm::Patient::unserialize(map<string, mm::Serialized> map) {
@@ -28,15 +44,22 @@ void mm::Patient::unserialize(map<string, mm::Serialized> map) {
     last_name = map["last_name"].get_str();
     fiscal_code = map["fiscal_code"].get_str();
     health_code = map["health_code"].get_str();
-    // TODO : Finire unserialize
+    address = map["address"].get_str();
+    birth_date = map["birth_date"].get_str();
+    birth_place = map["birth_place"].get_str();
+    istringstream risk_list(map["risk_factors"].get_str());
+    string tmp;
+    while (getline(risk_list, tmp, ';')) {
+        risk_factors.push_back(tmp);
+    }
 }
 
 string mm::Patient::get_table_name() const {
-    return nullptr;
+    return "patients";
 }
 
 string mm::Patient::get_primary_key() const {
-    return nullptr;
+    return "health_code";
 }
 
 const string &mm::Patient::get_health_code() const {
@@ -51,15 +74,15 @@ const string &mm::Patient::get_last_name() const {
     return last_name;
 }
 
-const mm::Date &mm::Patient::get_birth_date() const {
+const string &mm::Patient::get_birth_date() const {
     return birth_date;
 }
 
-const Address &mm::Patient::get_birth_place() const {
+const string &mm::Patient::get_birth_place() const {
     return birth_place;
 }
 
-const Address &mm::Patient::get_address() const {
+const string &mm::Patient::get_address() const {
     return address;
 }
 

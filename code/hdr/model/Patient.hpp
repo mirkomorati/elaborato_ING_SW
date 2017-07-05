@@ -37,11 +37,11 @@ namespace mm {
 
         const string &get_last_name() const;
 
-        const Date &get_birth_date() const;
+        const string &get_birth_date() const;
 
-        const Address &get_birth_place() const;
+        const string &get_birth_place() const;
 
-        const Address &get_address() const;
+        const string &get_address() const;
 
         const string &get_fiscal_code() const;
 
@@ -52,9 +52,9 @@ namespace mm {
         string first_name;
         string last_name;
         string fiscal_code;
-        Date birth_date;
-        Address birth_place;
-        Address address;
+        string birth_date;
+        string birth_place;
+        string address;
         vector<string> risk_factors;
     };
 }
