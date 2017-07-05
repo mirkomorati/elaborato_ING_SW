@@ -29,6 +29,9 @@ namespace mm {
 
         void edit_patient_handler();
 
+        void row_selected_handler(const Gtk::TreeModel::Path &path,
+                                  Gtk::TreeViewColumn *column);
+
     private:
         PatientView *patient_view;
         MainController *parent;

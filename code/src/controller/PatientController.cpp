@@ -46,3 +46,18 @@ void mm::PatientController::set_doctor(int doctor_id) {
 
     patient_view->set_patient_tree_model(patient_tree_model, patient_list_store);
 }
+
+void
+mm::PatientController::row_selected_handler(const Gtk::TreeModel::Path &path,
+                                            Gtk::TreeViewColumn *column) {
+    auto iter = patient_list_store->get_iter(path);
+    if (iter) {
+        Gtk::TreeModel::Row row = *iter;
+        std::cout << "Row activated: first name = "
+                  << row[patient_tree_model.first_name]
+                  << ", last name = "
+                  << row[patient_tree_model.last_name]
+                  << ", fiscal code = "
+                  << row[patient_tree_model.fiscal_code] << std::endl;
+    }
+}

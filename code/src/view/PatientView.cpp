@@ -22,7 +22,6 @@ mm::PatientView::PatientView(mm::PatientController *controller) : controller(con
 
 void mm::PatientView::set_patient_tree_model(PatientTreeModel &patient_tree_model,
                                              Glib::RefPtr<Gtk::ListStore> patient_list_store) {
-    Gtk::TreeView *patient_tree_view;
 
     RefBuilder::get_instance().get_widget("patientTreeView", patient_tree_view);
 
@@ -31,6 +30,8 @@ void mm::PatientView::set_patient_tree_model(PatientTreeModel &patient_tree_mode
     patient_tree_view->append_column("Cod. Fiscale", patient_tree_model.fiscal_code);
     patient_tree_view->set_model(patient_list_store);
 
+    patient_tree_view->signal_row_activated().connect(sigc::mem_fun(
+        controller, &mm::PatientController::row_selected_handler));
 }
 
 void mm::PatientView::add_patient_show_dialog() {
