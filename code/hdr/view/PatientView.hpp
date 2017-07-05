@@ -8,6 +8,7 @@
 #include <gtkmm/toolbutton.h>
 #include <gtkmm/liststore.h>
 #include <gtkmm/treeview.h>
+#include <gtkmm/grid.h>
 #include "../controller/PatientController.hpp"
 #include "../model/PatientTreeModel.hpp"
 
@@ -23,6 +24,9 @@ namespace mm {
 
         void add_patient_show_dialog();
 
+        void patient_detail_show(Gtk::TreeModel::Row row,
+                                 PatientTreeModel &patient_tree_model);
+
     private:
         PatientController *controller;
 
@@ -30,6 +34,7 @@ namespace mm {
         Gtk::ToolButton *edit_patient;
         Gtk::ToolButton *remove_patient;
         Gtk::TreeView *patient_tree_view;
+        Gtk::Grid *patient_detail;
     };
 }
 

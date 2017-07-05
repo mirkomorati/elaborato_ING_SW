@@ -59,5 +59,6 @@ mm::PatientController::row_selected_handler(const Gtk::TreeModel::Path &path,
                   << row[patient_tree_model.last_name]
                   << ", fiscal code = "
                   << row[patient_tree_model.fiscal_code] << std::endl;
+        patient_view->patient_detail_show(row, patient_tree_model);
     }
 }
