@@ -5,7 +5,7 @@
 #include "../hdr/Configuration.hpp"
 #include "../hdr/DBMaster.hpp"
 #include "../hdr/Drug.hpp"
-#include "../hdr/users/Doctor.hpp"
+#include "../hdr/model/Doctor.hpp"
 #include <plog/Log.h>
 
 using namespace mm;
@@ -71,8 +71,10 @@ int main(int argc, char **argv) {
 
     Doctor me;
 
-    db.extract_from_db(me, 222);
+    db.extract_from_db(me, 111);
 
     cout << "mirko è: " << me.getFiscal_code() << endl;
+
+    me.get_patients_from_db();
 
 }

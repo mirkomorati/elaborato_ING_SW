@@ -1,4 +1,4 @@
-#include "../hdr/MVC/view/MainView.hpp"
+#include "../hdr/controller/MainController.hpp"
 #include "../hdr/DBMaster.hpp"
 #include "../hdr/Configuration.hpp"
 
@@ -6,6 +6,7 @@ using namespace mm;
 using namespace std;
 
 int main(int argc, char **argv) {
+    Glib::init();
     Configuration::set_config_file_name(
             "../tmp/config.json");
 
@@ -17,20 +18,11 @@ int main(int argc, char **argv) {
 
     DBMaster::set_db_file_name(config.get<string>("db_name"));
 
-    auto &db = DBMaster::get_instance();
-
-    auto app =
-            Gtk::Application::create(argc, argv,
-                                     "org.gtkmm.examples.base");
+    auto app = Gtk::Application::create(argc, argv, "it.mm.org");
 
     MainController mc;
-    MainView mw("mainWindow", &mc);
-    MainModel mm(&mc);
+    mc.setup();
+    app->run(mc.get_main_window());
 
-    mc.setModel(&mm);
-    mc.setWindow(&mw);
-
-    app->run(mw.getMainWindow());
-
-
+    return 0;
 }
