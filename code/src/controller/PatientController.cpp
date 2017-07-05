@@ -66,8 +66,8 @@ mm::PatientController::row_selected_handler(const Gtk::TreeModel::Path &path,
                   << row[patient_tree_model.fiscal_code] << std::endl;
         patient_view->patient_detail_show(row, patient_tree_model);
 
-        auto fiscal_code = static_cast<Glib::ustring>(row[patient_tree_model.fiscal_code]);
-        set_prescription_tree_view(fiscal_code.raw());
+        auto patient_id = static_cast<Glib::ustring>(row[patient_tree_model.health_code]);
+        set_prescription_tree_view(patient_id.raw());
     }
 }
 
