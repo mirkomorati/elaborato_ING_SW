@@ -939,34 +939,6 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="detailFirstName">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="width_chars">10</property>
-                            <attributes>
-                              <attribute name="background" value="#ffffffffffff"/>
-                            </attributes>
-                          </object>
-                          <packing>
-                            <property name="left_attach">1</property>
-                            <property name="top_attach">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkLabel" id="detailLastName">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="width_chars">10</property>
-                            <attributes>
-                              <attribute name="background" value="#eeeeeeeeecec"/>
-                            </attributes>
-                          </object>
-                          <packing>
-                            <property name="left_attach">3</property>
-                            <property name="top_attach">0</property>
-                          </packing>
-                        </child>
-                        <child>
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
@@ -974,20 +946,6 @@
                           </object>
                           <packing>
                             <property name="left_attach">4</property>
-                            <property name="top_attach">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkLabel" id="detailFiscalCode">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="width_chars">15</property>
-                            <attributes>
-                              <attribute name="background" value="#eeeeeeeeecec"/>
-                            </attributes>
-                          </object>
-                          <packing>
-                            <property name="left_attach">5</property>
                             <property name="top_attach">0</property>
                           </packing>
                         </child>
@@ -1003,19 +961,6 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="detailBirthDate">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <attributes>
-                              <attribute name="background" value="#eeeeeeeeecec"/>
-                            </attributes>
-                          </object>
-                          <packing>
-                            <property name="left_attach">1</property>
-                            <property name="top_attach">1</property>
-                          </packing>
-                        </child>
-                        <child>
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
@@ -1023,20 +968,6 @@
                           </object>
                           <packing>
                             <property name="left_attach">2</property>
-                            <property name="top_attach">1</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkLabel" id="detailBirthPlace">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="width_chars">10</property>
-                            <attributes>
-                              <attribute name="background" value="#eeeeeeeeecec"/>
-                            </attributes>
-                          </object>
-                          <packing>
-                            <property name="left_attach">3</property>
                             <property name="top_attach">1</property>
                           </packing>
                         </child>
@@ -1052,20 +983,6 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="detailHealthCode">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="width_chars">10</property>
-                            <attributes>
-                              <attribute name="background" value="#eeeeeeeeecec"/>
-                            </attributes>
-                          </object>
-                          <packing>
-                            <property name="left_attach">7</property>
-                            <property name="top_attach">0</property>
-                          </packing>
-                        </child>
-                        <child>
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
@@ -1077,17 +994,81 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="detailAddress">
+                          <object class="GtkEntry" id="detailFirstName">
                             <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="width_chars">10</property>
-                            <attributes>
-                              <attribute name="background" value="#eeeeeeeeecec"/>
-                            </attributes>
+                            <property name="can_focus">True</property>
+                            <property name="editable">False</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="detailBirthDate">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="editable">False</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="detailLastName">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="editable">False</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">3</property>
+                            <property name="top_attach">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="detailBirthPlace">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="editable">False</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">3</property>
+                            <property name="top_attach">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="detailFiscalCode">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="editable">False</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">5</property>
+                            <property name="top_attach">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="detailAddress">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="editable">False</property>
                           </object>
                           <packing>
                             <property name="left_attach">5</property>
                             <property name="top_attach">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="detailHealthCode">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="editable">False</property>
+                            <property name="width_chars">3</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">7</property>
+                            <property name="top_attach">0</property>
                           </packing>
                         </child>
                         <child>
