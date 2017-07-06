@@ -15,8 +15,9 @@
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="addPatientOk">
                 <property name="label" translatable="yes">Ok</property>
+                <property name="name">addPatientOk</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -28,8 +29,9 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="addPatientCancel">
                 <property name="label" translatable="yes">Annulla</property>
+                <property name="name">addPatientCancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>

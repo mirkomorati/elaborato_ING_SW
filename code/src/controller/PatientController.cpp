@@ -106,6 +106,7 @@ void mm::PatientController::on_add_patient_dialog_ok_button_pressed() {
     auto &refBuilder = RefBuilder::get_instance();
     Patient patient;
     stringstream address;
+    stringstream birth_address;
 
     // fields
     Gtk::Entry *first_name;
@@ -113,23 +114,32 @@ void mm::PatientController::on_add_patient_dialog_ok_button_pressed() {
     Gtk::Entry *fiscal_code;
     Gtk::Entry *health_code;
     Gtk::Entry *birth_date;
-    //Gtk::Entry *birth_place;
     Gtk::Entry *street;
     Gtk::Entry *civic;
     Gtk::Entry *zip_code;
     Gtk::Entry *city;
     Gtk::Entry *country;
+    Gtk::Entry *birth_street;
+    Gtk::Entry *birth_civic;
+    Gtk::Entry *birth_zip_code;
+    Gtk::Entry *birth_city;
+    Gtk::Entry *birth_country;
 
     refBuilder.get_widget("addFirstName", first_name);
     refBuilder.get_widget("addLastName", last_name);
     refBuilder.get_widget("addFiscalCode", fiscal_code);
-    refBuilder.get_widget("addHealthCode", health_code); //
+    refBuilder.get_widget("addHealthCode", health_code);
     refBuilder.get_widget("addBirthDate", birth_date);
-    refBuilder.get_widget("addStreetAddress", street);
-    refBuilder.get_widget("addCivic", civic);
-    refBuilder.get_widget("addZipCode", zip_code);
-    refBuilder.get_widget("addCity", city);
-    refBuilder.get_widget("addCountry", country);
+    refBuilder.get_widget("addStreetAddress", birth_street);
+    refBuilder.get_widget("addCivic", birth_civic);
+    refBuilder.get_widget("addZipCode", birth_zip_code);
+    refBuilder.get_widget("addCity", birth_city);
+    refBuilder.get_widget("addCountry", birth_country);
+    refBuilder.get_widget("addStreetAddress1", street);
+    refBuilder.get_widget("addCivic1", civic);
+    refBuilder.get_widget("addZipCode1", zip_code);
+    refBuilder.get_widget("addCity1", city);
+    refBuilder.get_widget("addCountry1", country);
 
     patient.set_first_name(first_name->get_text());
     patient.set_last_name(last_name->get_text());
@@ -139,6 +149,10 @@ void mm::PatientController::on_add_patient_dialog_ok_button_pressed() {
 
     address << street->get_text() << " " << civic->get_text() << ", " << zip_code->get_text() << ", "
             << city->get_text() << ", " << country->get_text();
+
+    birth_address << birth_street->get_text() << " " << birth_civic->get_text() << ", "
+                  << birth_zip_code->get_text() << ", " << birth_city->get_text() << ", "
+                  << birth_country->get_text();
 
     patient.set_address(address.str());
     patient.set_doctor_id(doctor.get_regional_id());

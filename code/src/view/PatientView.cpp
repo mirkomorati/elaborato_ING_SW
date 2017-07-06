@@ -112,29 +112,37 @@ void mm::PatientView::dispose_add_patient_dialog() {
 
     refBuilder.get_widget("addPatientDialog",
                           add_patient_dialog);
-    // fields
     Gtk::Entry *first_name;
     Gtk::Entry *last_name;
     Gtk::Entry *fiscal_code;
     Gtk::Entry *health_code;
     Gtk::Entry *birth_date;
-    //Gtk::Entry *birth_place;
     Gtk::Entry *street;
     Gtk::Entry *civic;
     Gtk::Entry *zip_code;
     Gtk::Entry *city;
     Gtk::Entry *country;
+    Gtk::Entry *birth_street;
+    Gtk::Entry *birth_civic;
+    Gtk::Entry *birth_zip_code;
+    Gtk::Entry *birth_city;
+    Gtk::Entry *birth_country;
 
     refBuilder.get_widget("addFirstName", first_name);
     refBuilder.get_widget("addLastName", last_name);
     refBuilder.get_widget("addFiscalCode", fiscal_code);
-    refBuilder.get_widget("addHealthCode", health_code); //
+    refBuilder.get_widget("addHealthCode", health_code);
     refBuilder.get_widget("addBirthDate", birth_date);
-    refBuilder.get_widget("addStreetAddress", street);
-    refBuilder.get_widget("addCivic", civic);
-    refBuilder.get_widget("addZipCode", zip_code);
-    refBuilder.get_widget("addCity", city);
-    refBuilder.get_widget("addCountry", country);
+    refBuilder.get_widget("addStreetAddress", birth_street);
+    refBuilder.get_widget("addCivic", birth_civic);
+    refBuilder.get_widget("addZipCode", birth_zip_code);
+    refBuilder.get_widget("addCity", birth_city);
+    refBuilder.get_widget("addCountry", birth_country);
+    refBuilder.get_widget("addStreetAddress1", street);
+    refBuilder.get_widget("addCivic1", civic);
+    refBuilder.get_widget("addZipCode1", zip_code);
+    refBuilder.get_widget("addCity1", city);
+    refBuilder.get_widget("addCountry1", country);
 
     first_name->set_text("");
     last_name->set_text("");
@@ -146,6 +154,11 @@ void mm::PatientView::dispose_add_patient_dialog() {
     zip_code->set_text("");
     city->set_text("");
     country->set_text("");
+    birth_street->set_text("");
+    birth_civic->set_text("");
+    birth_zip_code->set_text("");
+    birth_city->set_text("");
+    birth_country->set_text("");
 
     add_patient_dialog->close();
 }
