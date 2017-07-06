@@ -73,7 +73,7 @@ int main(int argc, char **argv) {
 
     db.extract_from_db(me, 111);
 
-    cout << "mirko è: " << me.getFiscal_code() << endl;
+    cout << "mirko è: " << me.get_fiscal_code() << endl;
 
     me.get_patients_from_db();
 

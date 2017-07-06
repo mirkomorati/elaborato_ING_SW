@@ -37,9 +37,20 @@ void mm::PatientView::set_patient_tree_model(PatientTreeModel &patient_tree_mode
 
 void mm::PatientView::add_patient_show_dialog() {
     Gtk::Dialog *add_patient_dialog;
-    RefBuilder::get_instance().get_widget("addPatientDialog",
+    Gtk::Button *ok_button;
+    Gtk::Button *cancel_button;
+    auto ref_builder = RefBuilder::get_instance();
+    ref_builder.get_widget("addPatientDialog",
                                           add_patient_dialog);
+    ref_builder.get_widget("addPatientOk", ok_button);
+    ref_builder.get_widget("addPatientCancel", cancel_button);
+
     add_patient_dialog->show();
+
+    ok_button->signal_clicked().connect(sigc::mem_fun(controller,
+                                                      &PatientController::on_add_patient_dialog_ok_button_pressed));
+    cancel_button->signal_clicked().connect(sigc::mem_fun(controller,
+                                                          &PatientController::on_add_patient_dialog_cancel_button_pressed));
 }
 
 void mm::PatientView::patient_detail_show(Gtk::TreeModel::Row row,
@@ -93,4 +104,48 @@ void mm::PatientView::set_prescription_tree_model(
     prescription_tree_view->append_column("Usata",
                                           prescription_tree_model.used);
     prescription_tree_view->set_model(prescription_list_store);
+}
+
+void mm::PatientView::dispose_add_patient_dialog() {
+    Gtk::Dialog *add_patient_dialog;
+    auto &refBuilder = RefBuilder::get_instance();
+
+    refBuilder.get_widget("addPatientDialog",
+                          add_patient_dialog);
+    // fields
+    Gtk::Entry *first_name;
+    Gtk::Entry *last_name;
+    Gtk::Entry *fiscal_code;
+    Gtk::Entry *health_code;
+    Gtk::Entry *birth_date;
+    //Gtk::Entry *birth_place;
+    Gtk::Entry *street;
+    Gtk::Entry *civic;
+    Gtk::Entry *zip_code;
+    Gtk::Entry *city;
+    Gtk::Entry *country;
+
+    refBuilder.get_widget("addFirstName", first_name);
+    refBuilder.get_widget("addLastName", last_name);
+    refBuilder.get_widget("addFiscalCode", fiscal_code);
+    refBuilder.get_widget("addHealthCode", health_code); //
+    refBuilder.get_widget("addBirthDate", birth_date);
+    refBuilder.get_widget("addStreetAddress", street);
+    refBuilder.get_widget("addCivic", civic);
+    refBuilder.get_widget("addZipCode", zip_code);
+    refBuilder.get_widget("addCity", city);
+    refBuilder.get_widget("addCountry", country);
+
+    first_name->set_text("");
+    last_name->set_text("");
+    fiscal_code->set_text("");
+    health_code->set_text("");
+    birth_date->set_text("");
+    street->set_text("");
+    civic->set_text("");
+    zip_code->set_text("");
+    city->set_text("");
+    country->set_text("");
+
+    add_patient_dialog->close();
 }

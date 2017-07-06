@@ -46,7 +46,25 @@ namespace mm {
 
         const string &get_fiscal_code() const;
 
-        string &get_risk_factors();
+        string &get_risk_factors() const;
+
+        int get_doctor_id() const;
+
+        void set_health_code(const string &health_code);
+
+        void set_first_name(const string &first_name);
+
+        void set_last_name(const string &last_name);
+
+        void set_fiscal_code(const string &fiscal_code);
+
+        void set_birth_date(const string &birth_date);
+
+        void set_birth_place(const string &birth_place);
+
+        void set_address(const string &address);
+
+        void set_doctor_id(int doctor_id);
 
         vector<Prescription> &get_prescriptions();
 
@@ -58,6 +76,7 @@ namespace mm {
         string birth_date;
         string birth_place;
         string address;
+        int doctor_id;
         vector<string> risk_factors;
         vector<Prescription> prescriptions;
 

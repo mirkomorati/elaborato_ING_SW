@@ -29,6 +29,8 @@ namespace mm {
 
         void add_patient_show_dialog();
 
+        void dispose_add_patient_dialog();
+
         void patient_detail_show(Gtk::TreeModel::Row row,
                                  PatientTreeModel &patient_tree_model);
 

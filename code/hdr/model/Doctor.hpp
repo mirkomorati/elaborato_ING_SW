@@ -17,8 +17,12 @@
 
 using namespace std;
 namespace mm {
-    class Doctor : public User {
+    class Doctor : public ISerializable {
     private:
+        std::string first_name;
+        std::string last_name;
+        string birth_date;
+        string birth_place;
         string fiscal_code;
         int regional_id;
         string specialization;
@@ -38,6 +42,14 @@ namespace mm {
 
         vector<Patient> get_patients(Drug drug);
 
+        const string &getFirst_name() const;
+
+        const string &getLast_name() const;
+
+        const string &getBirth_date() const;
+
+        const string &getBirth_place() const;
+
 /*----------------------------------------------------------------------------*/
         map<string, mm::Serialized> serialize() const override;
 
@@ -47,11 +59,11 @@ namespace mm {
 
         string get_primary_key() const override;
 
-        const string &getFiscal_code() const;
+        const string &get_fiscal_code() const;
 
-        const int &getRegional_id() const;
+        const int &get_regional_id() const;
 
-        const string &getSpecialization() const;
+        const string &get_specialization() const;
     };
 }
 

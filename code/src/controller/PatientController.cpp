@@ -5,6 +5,7 @@
 #include <iostream>
 #include "../../hdr/controller/PatientController.hpp"
 #include "../../hdr/DBMaster.hpp"
+#include "../../hdr/RefBuilder.hpp"
 
 void mm::PatientController::set_view(PatientView *view) {
     this->patient_view = view;
@@ -99,4 +100,55 @@ void mm::PatientController::set_prescription_tree_view(std::string patient_id) {
 
     patient_view->set_prescription_tree_model(prescription_tree_model,
                                               prescription_list_store);
+}
+
+void mm::PatientController::on_add_patient_dialog_ok_button_pressed() {
+    auto &refBuilder = RefBuilder::get_instance();
+    Patient patient;
+    stringstream address;
+
+    // fields
+    Gtk::Entry *first_name;
+    Gtk::Entry *last_name;
+    Gtk::Entry *fiscal_code;
+    Gtk::Entry *health_code;
+    Gtk::Entry *birth_date;
+    //Gtk::Entry *birth_place;
+    Gtk::Entry *street;
+    Gtk::Entry *civic;
+    Gtk::Entry *zip_code;
+    Gtk::Entry *city;
+    Gtk::Entry *country;
+
+    refBuilder.get_widget("addFirstName", first_name);
+    refBuilder.get_widget("addLastName", last_name);
+    refBuilder.get_widget("addFiscalCode", fiscal_code);
+    refBuilder.get_widget("addHealthCode", health_code); //
+    refBuilder.get_widget("addBirthDate", birth_date);
+    refBuilder.get_widget("addStreetAddress", street);
+    refBuilder.get_widget("addCivic", civic);
+    refBuilder.get_widget("addZipCode", zip_code);
+    refBuilder.get_widget("addCity", city);
+    refBuilder.get_widget("addCountry", country);
+
+    patient.set_first_name(first_name->get_text());
+    patient.set_last_name(last_name->get_text());
+    patient.set_fiscal_code(fiscal_code->get_text());
+    patient.set_health_code(health_code->get_text());
+    patient.set_birth_date(birth_date->get_text());
+
+    address << street->get_text() << " " << civic->get_text() << ", " << zip_code->get_text() << ", "
+            << city->get_text() << ", " << country->get_text();
+
+    patient.set_address(address.str());
+    patient.set_doctor_id(doctor.get_regional_id());
+
+    DBMaster::get_instance().add_to_db(patient);
+
+    patient_view->dispose_add_patient_dialog();
+
+}
+
+void mm::PatientController::on_add_patient_dialog_cancel_button_pressed() {
+    patient_view->dispose_add_patient_dialog();
 }

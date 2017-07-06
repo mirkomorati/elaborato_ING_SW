@@ -35,6 +35,10 @@ namespace mm {
         void row_selected_handler(const Gtk::TreeModel::Path &path,
                                   Gtk::TreeViewColumn *column);
 
+        void on_add_patient_dialog_ok_button_pressed();
+
+        void on_add_patient_dialog_cancel_button_pressed();
+
     private:
         PatientView *patient_view;
         MainController *parent;
