@@ -43,7 +43,6 @@ namespace mm {
         PatientView *patient_view;
         MainController *parent;
         Doctor doctor;
-        Patient patient;
         PatientTreeModel patient_tree_model;
         Glib::RefPtr<Gtk::ListStore> patient_list_store;
         PrescriptionTreeModel prescription_tree_model;

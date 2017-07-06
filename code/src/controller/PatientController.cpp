@@ -73,14 +73,21 @@ mm::PatientController::row_selected_handler(const Gtk::TreeModel::Path &path,
 }
 
 void mm::PatientController::set_prescription_tree_view(std::string patient_id) {
+    Patient patient;
     DBMaster::get_instance().extract_from_db(patient, patient_id);
+
     auto &prescriptions = patient.get_prescriptions();
+
+    std::cout << "Prescriptions: ";
+    for (auto p : prescriptions) {
+        std::cout << p.get_prescription_id() << " ";
+    }
+    std::cout << std::endl;
 
     // TODO: questo non funziona, bisogna trovare un modo per cancellare le row
     // if (prescription_list_store) prescription_list_store->clear();
 
     prescription_list_store = Gtk::ListStore::create(prescription_tree_model);
-
     auto row = *prescription_list_store->append();
 
     for (int i = 0; i < prescriptions.size(); i++) {
@@ -94,6 +101,7 @@ void mm::PatientController::set_prescription_tree_view(std::string patient_id) {
         row[prescription_tree_model.negative_interactions] = prescriptions[i].get_negative_interactions();
         row[prescription_tree_model.used] = prescriptions[i].is_used() ? "si"
                                                                        : "no";
+
         if (i < prescriptions.size() - 1)
             row = *(prescription_list_store->append()++);
     }

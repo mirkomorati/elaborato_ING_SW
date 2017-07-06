@@ -88,6 +88,8 @@ void mm::PatientView::set_prescription_tree_model(
     std::cout << "Setting prescription tree model" << std::endl;
     RefBuilder::get_instance().get_widget("prescriptionTreeView",
                                           prescription_tree_view);
+    // Non il metodo migliore
+    prescription_tree_view->remove_all_columns();
 
     prescription_tree_view->append_column("Paziente",
                                           prescription_tree_model.patient_id);
