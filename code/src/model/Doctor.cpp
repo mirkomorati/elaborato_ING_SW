@@ -13,15 +13,24 @@ map<string, mm::Serialized> mm::Doctor::serialize() const {
     map<string, mm::Serialized> serialized;
     serialized["regional_id"] = regional_id;
     serialized["fiscal_code"] = fiscal_code;
-    serialized["specialization"] = specialization;
+    serialized["first_name"] = first_name;
+    serialized["last_name"] = last_name;
+    serialized["fiscal_code"] = fiscal_code;
+    serialized["birth_place"] = birth_place;
+    serialized["birth_place"] = birth_place;
 
     return serialized;
 }
 
 void mm::Doctor::unserialize(map<string, mm::Serialized> map) {
-    regional_id = static_cast<int>(map["regional_id"]);
-    fiscal_code = static_cast<string>(map["fiscal_code"]);
-    specialization = static_cast<string>(map["specialization"]);
+    regional_id = map["regional_id"].get_int();
+    fiscal_code = map["fiscal_code"].get_str();
+    specialization = map["specialization"].get_str();
+    first_name = map["first_name"].get_str();
+    last_name = map["last_name"].get_str();
+    fiscal_code = map["fiscal_code"].get_str();
+    birth_place = map["birth_place"].get_str();
+    birth_place = map["birth_place"].get_str();
     get_patients_from_db();
 }
 
@@ -78,4 +87,20 @@ const string &mm::Doctor::getSpecialization() const {
 
 vector<mm::Patient> &mm::Doctor::get_patients() {
     return patients;
+}
+
+const string &mm::Doctor::getFirst_name() const {
+    return first_name;
+}
+
+const string &mm::Doctor::getLast_name() const {
+    return last_name;
+}
+
+const string &mm::Doctor::getBirth_date() const {
+    return birth_date;
+}
+
+const string &mm::Doctor::getBirth_place() const {
+    return birth_place;
 }
