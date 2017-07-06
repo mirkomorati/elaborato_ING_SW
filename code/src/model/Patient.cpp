@@ -25,6 +25,7 @@ map<string, mm::Serialized> mm::Patient::serialize() const {
     serialized_map["address"] = address;
     serialized_map["birth_date"] = birth_date;
     serialized_map["birth_place"] = birth_place;
+    serialized_map["doctor_id"] = doctor_id;
     stringstream risk_list;
     for (int i = 0; i < risk_factors.size(); i++) {
         risk_list << risk_factors[i];
@@ -43,6 +44,7 @@ void mm::Patient::unserialize(map<string, mm::Serialized> map) {
     address = map["address"].get_str();
     birth_date = map["birth_date"].get_str();
     birth_place = map["birth_place"].get_str();
+    doctor_id = map["doctor_id"].get_int();
     istringstream risk_list(map["risk_factors"].get_str());
     string tmp;
     while (getline(risk_list, tmp, ';')) {
@@ -83,7 +85,7 @@ const string &mm::Patient::get_address() const {
     return address;
 }
 
-string &mm::Patient::get_risk_factors() {
+string &mm::Patient::get_risk_factors() const {
     ostringstream ss;
     copy(risk_factors.begin(), risk_factors.end(),
          ostream_iterator<string>(ss, ", "));
@@ -107,4 +109,40 @@ void mm::Patient::get_prescriptions_from_db() {
 
 vector<mm::Prescription> &mm::Patient::get_prescriptions() {
     return prescriptions;
+}
+
+void mm::Patient::set_health_code(const string &health_code) {
+    Patient::health_code = health_code;
+}
+
+void mm::Patient::set_first_name(const string &first_name) {
+    Patient::first_name = first_name;
+}
+
+void mm::Patient::set_last_name(const string &last_name) {
+    Patient::last_name = last_name;
+}
+
+void mm::Patient::set_fiscal_code(const string &fiscal_code) {
+    Patient::fiscal_code = fiscal_code;
+}
+
+void mm::Patient::set_birth_date(const string &birth_date) {
+    Patient::birth_date = birth_date;
+}
+
+void mm::Patient::set_birth_place(const string &birth_place) {
+    Patient::birth_place = birth_place;
+}
+
+void mm::Patient::set_address(const string &address) {
+    Patient::address = address;
+}
+
+void mm::Patient::set_doctor_id(int doctor_id) {
+    Patient::doctor_id = doctor_id;
+}
+
+int mm::Patient::get_doctor_id() const {
+    return doctor_id;
 }

@@ -73,15 +73,15 @@ mm::Doctor::get_patients(mm::Drug drug) {
     return vector<mm::Patient>();
 }
 
-const string &mm::Doctor::getFiscal_code() const {
+const string &mm::Doctor::get_fiscal_code() const {
     return fiscal_code;
 }
 
-const int &mm::Doctor::getRegional_id() const {
+const int &mm::Doctor::get_regional_id() const {
     return regional_id;
 }
 
-const string &mm::Doctor::getSpecialization() const {
+const string &mm::Doctor::get_specialization() const {
     return specialization;
 }
 

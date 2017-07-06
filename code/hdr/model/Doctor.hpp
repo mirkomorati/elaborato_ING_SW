@@ -59,11 +59,11 @@ namespace mm {
 
         string get_primary_key() const override;
 
-        const string &getFiscal_code() const;
+        const string &get_fiscal_code() const;
 
-        const int &getRegional_id() const;
+        const int &get_regional_id() const;
 
-        const string &getSpecialization() const;
+        const string &get_specialization() const;
     };
 }
 
