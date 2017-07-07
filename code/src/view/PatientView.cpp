@@ -89,7 +89,6 @@ void mm::PatientView::patient_detail_show(Gtk::TreeModel::Row row,
 void mm::PatientView::set_prescription_tree_model(
     PrescriptionTreeModel &prescription_tree_model,
     Glib::RefPtr<Gtk::ListStore> prescription_list_store) {
-    // TODO: non deve ripetersi ogni volta che seleziono un paziente
     RefBuilder::get_instance().get_widget("prescriptionTreeView",
                                           prescription_tree_view);
     // Non il metodo migliore

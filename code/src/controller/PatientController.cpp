@@ -22,6 +22,7 @@ void mm::PatientController::add_patient_handler() {
 
 void mm::PatientController::remove_patient_handler() {
     std::cout << "Remove Patient Click" << std::endl;
+
 }
 
 void mm::PatientController::edit_patient_handler() {

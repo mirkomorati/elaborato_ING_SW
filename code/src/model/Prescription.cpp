@@ -31,6 +31,8 @@ std::map<std::string, mm::Serialized> mm::Prescription::serialize() const {
     } else {
         serialized_map["used"] = "no";
     }
+
+    return serialized_map;
 }
 
 void mm::Prescription::unserialize(std::map<std::string, Serialized> map) {
