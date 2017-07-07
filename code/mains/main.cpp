@@ -1,6 +1,6 @@
 #include "../hdr/Configuration.hpp"
 #include "../hdr/DBMaster.hpp"
-#include "../hdr/Drug.hpp"
+#include "../hdr/model/Drug.hpp"
 
 using namespace mm;
 using namespace std;

@@ -6,7 +6,7 @@
 
 #include <sstream>
 #include <iostream>
-#include "../hdr/Drug.hpp"
+#include "../../hdr/model/Drug.hpp"
 
 
 map<string, mm::Serialized> mm::Drug::serialize() const {

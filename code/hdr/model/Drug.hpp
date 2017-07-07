@@ -10,8 +10,8 @@
 #include <string>
 #include <vector>
 #include <map>
-#include "ActivePrinciple.hpp"
-#include "../hdr/interfaces/ISerializable.hpp"
+#include "../ActivePrinciple.hpp"
+#include "../interfaces/ISerializable.hpp"
 
 using namespace std;
 namespace mm {

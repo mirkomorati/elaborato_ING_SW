@@ -13,7 +13,7 @@
 #include "../users/User.hpp"
 #include "Prescription.hpp"
 #include "Patient.hpp"
-#include "../Drug.hpp"
+#include "Drug.hpp"
 
 using namespace std;
 namespace mm {

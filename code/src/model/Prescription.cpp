@@ -91,6 +91,7 @@ string &mm::Prescription::get_drug_ids() {
     copy(drug_ids.begin(), drug_ids.end(),
          ostream_iterator<string>(ss, ", "));
     string ret = ss.str();
+    ret = ret.substr(0, ret.length() - 2);
     return ret;
 }
 
@@ -99,8 +100,8 @@ string &mm::Prescription::get_negative_interactions() {
     for (auto row : negative_interactions) {
         ss << row.first << ": " << row.second << "; ";
     }
-    ss.seekp(-2, ss.cur);
     string ret = ss.str();
+    ret = ret.substr(0, ret.length() - 2);
     return ret;
 }
 

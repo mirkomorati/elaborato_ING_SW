@@ -3,7 +3,6 @@
  * @author Noè Murr, Mirko Morati
  */
 
-
 #ifndef _PATIENT_H
 #define _PATIENT_H
 

@@ -4,7 +4,7 @@
 
 #include "../hdr/Configuration.hpp"
 #include "../hdr/DBMaster.hpp"
-#include "../hdr/Drug.hpp"
+#include "../hdr/model/Drug.hpp"
 #include "../hdr/model/Doctor.hpp"
 #include <plog/Log.h>
 
