@@ -159,3 +159,8 @@ void mm::PatientController::on_add_patient_dialog_ok_button_pressed() {
 void mm::PatientController::on_add_patient_dialog_cancel_button_pressed() {
     patient_view->dispose_add_patient_dialog();
 }
+
+void mm::PatientController::select_date_handler() {
+    cout << "select data pressed" << endl;
+    patient_view->add_select_date_dialog();
+}

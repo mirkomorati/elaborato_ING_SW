@@ -39,6 +39,8 @@ namespace mm {
 
         void on_add_patient_dialog_cancel_button_pressed();
 
+        void select_date_handler();
+
     private:
         PatientView *patient_view;
         MainController *parent;

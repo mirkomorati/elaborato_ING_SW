@@ -8,10 +8,12 @@
 
 mm::PatientView::PatientView(mm::PatientController *controller) : controller(controller) {
     auto &refBuilder = RefBuilder::get_instance();
+    Gtk::Button *select_date;
 
     refBuilder.get_widget("addPatient", add_patient);
     refBuilder.get_widget("removePatient", remove_patient);
     refBuilder.get_widget("editPatient", edit_patient);
+    refBuilder.get_widget("selectDateButton", select_date);
 
     add_patient->signal_clicked().connect(sigc::mem_fun(
             controller, &mm::PatientController::add_patient_handler));
@@ -19,6 +21,9 @@ mm::PatientView::PatientView(mm::PatientController *controller) : controller(con
             controller, &mm::PatientController::remove_patient_handler));
     edit_patient->signal_clicked().connect(sigc::mem_fun(
             controller, &mm::PatientController::edit_patient_handler));
+    select_date->signal_clicked().connect(sigc::mem_fun(
+            controller, &mm::PatientController::select_date_handler));
+
 }
 
 void mm::PatientView::set_patient_tree_model(PatientTreeModel &patient_tree_model,
@@ -162,4 +167,12 @@ void mm::PatientView::dispose_add_patient_dialog() {
     birth_country->set_text("");
 
     add_patient_dialog->close();
+}
+
+void mm::PatientView::add_select_date_dialog() {
+    Gtk::Dialog *dialog;
+    RefBuilder::get_instance().get_widget("selectDateDialog", dialog);
+
+    dialog->show();
+
 }
