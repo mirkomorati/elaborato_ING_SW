@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <string>
+#include <gtkmm/treemodelcolumn.h>
 #include "../Address.hpp"
 #include "../time_utilities/Date.hpp"
 #include "../interfaces/ISerializable.hpp"
@@ -18,7 +19,19 @@ using namespace std;
 namespace mm {
     class Patient : public ISerializable {
     public:
+        struct TreeModel : Gtk::TreeModelColumnRecord {
+            TreeModel();
 
+            Gtk::TreeModelColumn<Glib::ustring> first_name;
+            Gtk::TreeModelColumn<Glib::ustring> last_name;
+            Gtk::TreeModelColumn<Glib::ustring> fiscal_code;
+            Gtk::TreeModelColumn<Glib::ustring> health_code;
+            Gtk::TreeModelColumn<Glib::ustring> birth_date;
+            Gtk::TreeModelColumn<Glib::ustring> birth_place;
+            Gtk::TreeModelColumn<Glib::ustring> address;
+            Gtk::TreeModelColumn<Glib::ustring> risk_factors;
+        };
+    public:
         Patient();
 
         ~Patient();

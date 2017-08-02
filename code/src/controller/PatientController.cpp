@@ -91,8 +91,7 @@ void mm::PatientController::set_prescription_tree_view(std::string patient_id) {
         row[prescription_tree_model.expire_date] = prescriptions[i].get_expire_date();
         row[prescription_tree_model.drug_ids] = prescriptions[i].get_drug_ids();
         row[prescription_tree_model.negative_interactions] = prescriptions[i].get_negative_interactions();
-        row[prescription_tree_model.used] = prescriptions[i].is_used() ? "si"
-                                                                       : "no";
+        row[prescription_tree_model.used] = prescriptions[i].is_used() ? "si" : "no";
 
         if (i < prescriptions.size() - 1)
             row = *(prescription_list_store->append()++);

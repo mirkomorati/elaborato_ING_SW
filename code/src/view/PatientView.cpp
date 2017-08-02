@@ -26,7 +26,7 @@ mm::PatientView::PatientView(mm::PatientController *controller) : controller(con
 
 }
 
-void mm::PatientView::set_patient_tree_model(PatientTreeModel &patient_tree_model,
+void mm::PatientView::set_patient_tree_model(Patient::TreeModel &patient_tree_model,
                                              Glib::RefPtr<Gtk::ListStore> patient_list_store) {
 
     RefBuilder::get_instance().get_widget("patientTreeView", patient_tree_view);
@@ -64,7 +64,7 @@ void mm::PatientView::add_patient_show_dialog() {
 }
 
 void mm::PatientView::patient_detail_show(Gtk::TreeModel::Row row,
-                                          PatientTreeModel &patient_tree_model) {
+                                          Patient::TreeModel &patient_tree_model) {
     auto &refBuilder = RefBuilder::get_instance();
     Gtk::Entry *detail_first_name;
     Gtk::Entry *detail_last_name;
@@ -92,8 +92,8 @@ void mm::PatientView::patient_detail_show(Gtk::TreeModel::Row row,
 }
 
 void mm::PatientView::set_prescription_tree_model(
-    PrescriptionTreeModel &prescription_tree_model,
-    Glib::RefPtr<Gtk::ListStore> prescription_list_store) {
+        Prescription::TreeModel &prescription_tree_model,
+        Glib::RefPtr<Gtk::ListStore> prescription_list_store) {
     RefBuilder::get_instance().get_widget("prescriptionTreeView",
                                           prescription_tree_view);
     // Non il metodo migliore

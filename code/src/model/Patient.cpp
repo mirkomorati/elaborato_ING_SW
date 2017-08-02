@@ -146,3 +146,14 @@ void mm::Patient::set_doctor_id(int doctor_id) {
 int mm::Patient::get_doctor_id() const {
     return doctor_id;
 }
+
+mm::Patient::TreeModel::TreeModel() {
+    add(first_name);
+    add(last_name);
+    add(fiscal_code);
+    add(health_code);
+    add(birth_date);
+    add(birth_place);
+    add(address);
+    add(risk_factors);
+}

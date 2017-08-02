@@ -10,8 +10,8 @@
 #include <gtkmm/treeview.h>
 #include <gtkmm/grid.h>
 #include "../controller/PatientController.hpp"
-#include "../model/PatientTreeModel.hpp"
-#include "../model/PrescriptionTreeModel.hpp"
+#include "../model/Patient.hpp"
+#include "../model/Prescription.hpp"
 
 namespace mm {
     class PatientController;
@@ -20,19 +20,20 @@ namespace mm {
     public:
         PatientView(PatientController *controller);
 
-        void set_patient_tree_model(PatientTreeModel &patient_tree_model,
+        // todo potrebbe esserci un segfault controlla oggetto tmp.
+        void set_patient_tree_model(Patient::TreeModel &patient_tree_model,
                                     Glib::RefPtr<Gtk::ListStore> patient_list_store);
 
         void set_prescription_tree_model(
-            PrescriptionTreeModel &prescription_tree_model,
-            Glib::RefPtr<Gtk::ListStore> prescription_list_store);
+                Prescription::TreeModel &prescription_tree_model,
+                Glib::RefPtr<Gtk::ListStore> prescription_list_store);
 
         void add_patient_show_dialog();
 
         void dispose_add_patient_dialog();
 
         void patient_detail_show(Gtk::TreeModel::Row row,
-                                 PatientTreeModel &patient_tree_model);
+                                 Patient::TreeModel &patient_tree_model);
 
         void show_select_date_dialog();
 

@@ -8,8 +8,6 @@
 #include "../view/PatientView.hpp"
 #include "MainController.hpp"
 #include "../model/Doctor.hpp"
-#include "../model/PatientTreeModel.hpp"
-#include "../model/PrescriptionTreeModel.hpp"
 
 namespace mm {
     class PatientView;
@@ -45,9 +43,9 @@ namespace mm {
         PatientView *patient_view;
         MainController *parent;
         Doctor doctor;
-        PatientTreeModel patient_tree_model;
+        Patient::TreeModel patient_tree_model;
         Glib::RefPtr<Gtk::ListStore> patient_list_store;
-        PrescriptionTreeModel prescription_tree_model;
+        Prescription::TreeModel prescription_tree_model;
         Glib::RefPtr<Gtk::ListStore> prescription_list_store;
     };
 }

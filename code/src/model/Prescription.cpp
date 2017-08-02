@@ -114,3 +114,14 @@ bool mm::Prescription::is_used() const {
 int mm::Prescription::get_bill_id() const {
     return bill_id;
 }
+
+mm::Prescription::TreeModel::TreeModel() {
+    add(patient_id);
+    add(issue_date);
+    add(expire_date);
+    add(drug_ids);
+    add(prescription_id);
+    add(negative_interactions);
+    add(used);
+    add(bill_id);
+}

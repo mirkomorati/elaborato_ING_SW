@@ -10,6 +10,7 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <gtkmm/treemodelcolumn.h>
 #include "../time_utilities/Date.hpp"
 #include "../interfaces/ISerializable.hpp"
 
@@ -17,6 +18,20 @@ using namespace std;
 
 namespace mm {
     class Prescription : public ISerializable {
+    public:
+        struct TreeModel : Gtk::TreeModelColumnRecord {
+            TreeModel();
+
+            Gtk::TreeModelColumn<Glib::ustring> patient_id;
+            Gtk::TreeModelColumn<Glib::ustring> issue_date;
+            Gtk::TreeModelColumn<Glib::ustring> expire_date;
+            Gtk::TreeModelColumn<Glib::ustring> drug_ids;
+            Gtk::TreeModelColumn<Glib::ustring> prescription_id;
+            Gtk::TreeModelColumn<Glib::ustring> negative_interactions;
+            Gtk::TreeModelColumn<Glib::ustring> used;
+            Gtk::TreeModelColumn<Glib::ustring> bill_id;
+
+        };
     public:
         map<string, Serialized> serialize() const override;
 
