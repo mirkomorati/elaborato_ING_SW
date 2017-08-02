@@ -10,7 +10,7 @@
 #include <tuple>
 
 namespace mm {
-    class LoginModel {
+    class AuthenticationModel {
     public:
         std::vector<std::tuple<std::string, std::string, int>> get_login_data();
     };

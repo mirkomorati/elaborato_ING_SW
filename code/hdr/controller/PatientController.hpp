@@ -35,9 +35,9 @@ namespace mm {
         void row_selected_handler(const Gtk::TreeModel::Path &path,
                                   Gtk::TreeViewColumn *column);
 
-        void on_add_patient_dialog_ok_button_pressed();
+        void on_add_patient_dialog_ok_handler();
 
-        void on_add_patient_dialog_cancel_button_pressed();
+        void on_add_patient_dialog_cancel_handler();
 
         void select_date_handler();
 

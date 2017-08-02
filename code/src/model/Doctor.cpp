@@ -89,18 +89,18 @@ vector<mm::Patient> &mm::Doctor::get_patients() {
     return patients;
 }
 
-const string &mm::Doctor::getFirst_name() const {
+const string &mm::Doctor::get_first_name() const {
     return first_name;
 }
 
-const string &mm::Doctor::getLast_name() const {
+const string &mm::Doctor::get_last_name() const {
     return last_name;
 }
 
-const string &mm::Doctor::getBirth_date() const {
+const string &mm::Doctor::get_birth_date() const {
     return birth_date;
 }
 
-const string &mm::Doctor::getBirth_place() const {
+const string &mm::Doctor::get_birth_place() const {
     return birth_place;
 }

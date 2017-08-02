@@ -6,7 +6,7 @@
 #include <thread>
 #include "../../hdr/controller/LoginController.hpp"
 #include "../../hdr/RefBuilder.hpp"
-#include "../../hdr/model/LoginModel.hpp"
+#include "../../hdr/model/AuthenticationModel.hpp"
 
 
 void mm::LoginController::set_view(LoginView *view) {
@@ -27,7 +27,7 @@ void mm::LoginController::login_button_handler() {
               << text_password << std::endl;
 
     std::thread login_thread([this](std::string name, std::string password) {
-        auto login_data = LoginModel().get_login_data();
+        auto login_data = AuthenticationModel().get_login_data();
         for (auto login : login_data) {
             if (std::get<0>(login) == name && std::get<1>(login) == password) {
                 login_view->login_update(true);

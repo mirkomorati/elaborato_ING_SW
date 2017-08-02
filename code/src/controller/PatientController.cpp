@@ -102,7 +102,7 @@ void mm::PatientController::set_prescription_tree_view(std::string patient_id) {
                                               prescription_list_store);
 }
 
-void mm::PatientController::on_add_patient_dialog_ok_button_pressed() {
+void mm::PatientController::on_add_patient_dialog_ok_handler() {
     auto &refBuilder = RefBuilder::get_instance();
     Patient patient;
     stringstream address;
@@ -156,11 +156,10 @@ void mm::PatientController::on_add_patient_dialog_ok_button_pressed() {
 
 }
 
-void mm::PatientController::on_add_patient_dialog_cancel_button_pressed() {
+void mm::PatientController::on_add_patient_dialog_cancel_handler() {
     patient_view->dispose_add_patient_dialog();
 }
 
 void mm::PatientController::select_date_handler() {
-    cout << "select data pressed" << endl;
-    patient_view->add_select_date_dialog();
+    patient_view->show_select_date_dialog();
 }

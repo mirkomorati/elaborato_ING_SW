@@ -42,13 +42,13 @@ namespace mm {
 
         vector<Patient> get_patients(Drug drug);
 
-        const string &getFirst_name() const;
+        const string &get_first_name() const;
 
-        const string &getLast_name() const;
+        const string &get_last_name() const;
 
-        const string &getBirth_date() const;
+        const string &get_birth_date() const;
 
-        const string &getBirth_place() const;
+        const string &get_birth_place() const;
 
 /*----------------------------------------------------------------------------*/
         map<string, mm::Serialized> serialize() const override;

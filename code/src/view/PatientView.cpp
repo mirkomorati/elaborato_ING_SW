@@ -58,9 +58,9 @@ void mm::PatientView::add_patient_show_dialog() {
     add_patient_dialog->show();
 
     ok_button->signal_clicked().connect(sigc::mem_fun(controller,
-                                                      &PatientController::on_add_patient_dialog_ok_button_pressed));
+                                                      &PatientController::on_add_patient_dialog_ok_handler));
     cancel_button->signal_clicked().connect(sigc::mem_fun(controller,
-                                                          &PatientController::on_add_patient_dialog_cancel_button_pressed));
+                                                          &PatientController::on_add_patient_dialog_cancel_handler));
 }
 
 void mm::PatientView::patient_detail_show(Gtk::TreeModel::Row row,
@@ -169,7 +169,7 @@ void mm::PatientView::dispose_add_patient_dialog() {
     add_patient_dialog->close();
 }
 
-void mm::PatientView::add_select_date_dialog() {
+void mm::PatientView::show_select_date_dialog() {
     Gtk::Dialog *dialog;
     RefBuilder::get_instance().get_widget("selectDateDialog", dialog);
 
