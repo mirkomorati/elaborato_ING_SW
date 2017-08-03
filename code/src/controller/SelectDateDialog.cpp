@@ -4,10 +4,10 @@
 
 #include <iostream>
 #include <string>
-#include "../../hdr/controller/SelectDateDialogController.hpp"
+#include "../../hdr/controller/SelectDateDialog.hpp"
 #include "../../hdr/RefBuilder.hpp"
 
-void mm::SelectDateDialogController::ok_handler() {
+void mm::controller::SelectDateDialog::ok_handler() {
     auto &refBuilder = RefBuilder::get_instance();
     Gtk::Calendar *select_date_calendar;
     Gtk::RadioButton *by_month;
@@ -35,19 +35,19 @@ void mm::SelectDateDialogController::ok_handler() {
     view->dispose_dialog();
 }
 
-void mm::SelectDateDialogController::cancel_handler() {
+void mm::controller::SelectDateDialog::cancel_handler() {
     view->dispose_dialog();
 }
 
-void mm::SelectDateDialogController::show_dialog() {
+void mm::controller::SelectDateDialog::show_dialog() {
     view->show_dialog();
 }
 
-void mm::SelectDateDialogController::set_view() {
-    view = new SelectDateDialogView();
+void mm::controller::SelectDateDialog::set_view() {
+    view = new mm::view::SelectDateDialog();
     view->set_controller(this);
 }
 
-mm::SelectDateDialogController::~SelectDateDialogController() {
+mm::controller::SelectDateDialog::~SelectDateDialog() {
     delete (view);
 }

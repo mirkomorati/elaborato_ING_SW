@@ -9,7 +9,7 @@
 #include "../../hdr/model/Drug.hpp"
 
 
-map<string, mm::Serialized> mm::Drug::serialize() const {
+map<string, mm::Serialized> mm::model::Drug::serialize() const {
     map<string, mm::Serialized> map;
     std::stringstream ss;
 
@@ -35,7 +35,7 @@ map<string, mm::Serialized> mm::Drug::serialize() const {
     return map;
 }
 
-void mm::Drug::unserialize(map<string, mm::Serialized> map) {
+void mm::model::Drug::unserialize(map<string, mm::Serialized> map) {
     using namespace std;
     const string delimiter = "\n";
     const string principles_spacer = ": ";
@@ -72,12 +72,12 @@ void mm::Drug::unserialize(map<string, mm::Serialized> map) {
 
 }
 
-string mm::Drug::get_table_name() const {
+string mm::model::Drug::get_table_name() const {
     return "drugs";
 }
 
-string mm::Drug::get_primary_key() const {
+string mm::model::Drug::get_primary_key() const {
     return "name";
 }
 
-mm::Drug::Drug(const string &name, float price) : name(name), price(price) {}
+mm::model::Drug::Drug(const string &name, float price) : name(name), price(price) {}

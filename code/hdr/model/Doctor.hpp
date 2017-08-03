@@ -17,54 +17,56 @@
 
 using namespace std;
 namespace mm {
-    class Doctor : public ISerializable {
-    private:
-        std::string first_name;
-        std::string last_name;
-        string birth_date;
-        string birth_place;
-        string fiscal_code;
-        int regional_id;
-        string specialization;
-        vector<Patient> patients;
+    namespace model {
+        class Doctor : public ISerializable {
+        private:
+            std::string first_name;
+            std::string last_name;
+            string birth_date;
+            string birth_place;
+            string fiscal_code;
+            int regional_id;
+            string specialization;
+            vector<model::Patient> patients;
 
-        void get_patients_from_db();
+            void get_patients_from_db();
 
-    public:
-        vector<Prescription> get_prescriptions(Patient patient,
-                                               Date start, Date end);
+        public:
+            vector<model::Prescription> get_prescriptions(Patient patient,
+                                                          Date start, Date end);
 
-        vector<Prescription> get_prescriptions(Drug drug);
+            vector<model::Prescription> get_prescriptions(model::Drug drug);
 
-        vector<Drug> get_drugs(Date start, Date end);
+            vector<model::Drug> get_drugs(Date start, Date end);
 
-        vector<Patient, allocator<Patient>> &get_patients();
+            vector<model::Patient> &get_patients();
 
-        vector<Patient> get_patients(Drug drug);
+            vector<model::Patient> get_patients(model::Drug drug);
 
-        const string &get_first_name() const;
+            const string &get_first_name() const;
 
-        const string &get_last_name() const;
+            const string &get_last_name() const;
 
-        const string &get_birth_date() const;
+            const string &get_birth_date() const;
 
-        const string &get_birth_place() const;
+            const string &get_birth_place() const;
 
 /*----------------------------------------------------------------------------*/
-        map<string, mm::Serialized> serialize() const override;
+            map<string, mm::Serialized> serialize() const override;
 
-        void unserialize(map<string, mm::Serialized> map) override;
+            void unserialize(map<string, mm::Serialized> map) override;
 
-        string get_table_name() const override;
+            string get_table_name() const override;
 
-        string get_primary_key() const override;
+            string get_primary_key() const override;
 
-        const string &get_fiscal_code() const;
+            const string &get_fiscal_code() const;
 
-        const int &get_regional_id() const;
+            const int &get_regional_id() const;
 
-        const string &get_specialization() const;
-    };
+            const string &get_specialization() const;
+        };
+    }
 }
 
 #endif //_DOCTOR_H

@@ -3,19 +3,19 @@
 //
 
 #include <iostream>
-#include "../../hdr/view/LoginView.hpp"
+#include "../../hdr/view/Login.hpp"
 #include "../../hdr/RefBuilder.hpp"
 
-mm::LoginView::LoginView(LoginController *controller) : controller(controller) {
+mm::view::Login::Login(controller::Login *controller) : controller(controller) {
     auto &refBuilder = RefBuilder::get_instance();
 
     refBuilder.get_widget("loginButton", button);
 
     button->signal_clicked().connect(sigc::mem_fun(
-        controller, &mm::LoginController::login_button_handler));
+            controller, &mm::controller::Login::login_button_handler));
 }
 
-void mm::LoginView::login_update(bool success) {
+void mm::view::Login::login_update(bool success) {
     if (success) {
         std::cout << "Login eseguito" << std::endl;
         parent->change_stack_page(PATIENT);
@@ -28,6 +28,6 @@ void mm::LoginView::login_update(bool success) {
     }
 }
 
-void mm::LoginView::set_parent(mm::MainView *parent) {
+void mm::view::Login::set_parent(mm::view::Main *parent) {
     this->parent = parent;
 }

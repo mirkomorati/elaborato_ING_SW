@@ -8,7 +8,7 @@
 #include <sstream>
 #include "../../hdr/model/Prescription.hpp"
 
-std::map<std::string, mm::Serialized> mm::Prescription::serialize() const {
+std::map<std::string, mm::Serialized> mm::model::Prescription::serialize() const {
     map<string, Serialized> serialized_map;
     serialized_map["patient_id"] = patient_id;
     serialized_map["prescription_id"] = prescription_id;
@@ -31,7 +31,7 @@ std::map<std::string, mm::Serialized> mm::Prescription::serialize() const {
     return serialized_map;
 }
 
-void mm::Prescription::unserialize(std::map<std::string, Serialized> map) {
+void mm::model::Prescription::unserialize(std::map<std::string, Serialized> map) {
     patient_id = map["patient_id"].get_int();
     prescription_id = map["prescription_id"].get_int();
     issue_date = map["issue_date"].get_str();
@@ -60,31 +60,31 @@ void mm::Prescription::unserialize(std::map<std::string, Serialized> map) {
     used = map["expire_date"].get_str() == "si";
 }
 
-string mm::Prescription::get_table_name() const {
+string mm::model::Prescription::get_table_name() const {
     return "prescriptions";
 }
 
-string mm::Prescription::get_primary_key() const {
+string mm::model::Prescription::get_primary_key() const {
     return "prescription_id";
 }
 
-int mm::Prescription::get_patient_id() const {
+int mm::model::Prescription::get_patient_id() const {
     return patient_id;
 }
 
-int mm::Prescription::get_prescription_id() const {
+int mm::model::Prescription::get_prescription_id() const {
     return prescription_id;
 }
 
-const string &mm::Prescription::get_issue_date() const {
+const string &mm::model::Prescription::get_issue_date() const {
     return issue_date;
 }
 
-const string &mm::Prescription::get_expire_date() const {
+const string &mm::model::Prescription::get_expire_date() const {
     return expire_date;
 }
 
-string &mm::Prescription::get_drug_ids() {
+string &mm::model::Prescription::get_drug_ids() {
     ostringstream ss;
     copy(drug_ids.begin(), drug_ids.end(),
          ostream_iterator<string>(ss, ", "));
@@ -93,7 +93,7 @@ string &mm::Prescription::get_drug_ids() {
     return ret;
 }
 
-string &mm::Prescription::get_negative_interactions() {
+string &mm::model::Prescription::get_negative_interactions() {
     ostringstream ss;
     for (auto row : negative_interactions) {
         ss << row.first << ": " << row.second << "; ";
@@ -103,15 +103,15 @@ string &mm::Prescription::get_negative_interactions() {
     return ret;
 }
 
-bool mm::Prescription::is_used() const {
+bool mm::model::Prescription::is_used() const {
     return used;
 }
 
-int mm::Prescription::get_bill_id() const {
+int mm::model::Prescription::get_bill_id() const {
     return bill_id;
 }
 
-mm::Prescription::TreeModel::TreeModel() {
+mm::model::Prescription::TreeModel::TreeModel() {
     add(patient_id);
     add(issue_date);
     add(expire_date);

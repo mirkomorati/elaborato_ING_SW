@@ -3,33 +3,33 @@
 //
 
 #include <iostream>
-#include "../../hdr/controller/PatientController.hpp"
+#include "../../hdr/controller/Patient.hpp"
 #include "../../hdr/DBMaster.hpp"
 #include "../../hdr/RefBuilder.hpp"
 
-void mm::PatientController::set_view(PatientView *view) {
+void mm::controller::Patient::set_view(view::Patient *view) {
     this->patient_view = view;
 }
 
-void mm::PatientController::set_parent(mm::MainController *parent) {
+void mm::controller::Patient::set_parent(mm::controller::Main *parent) {
     this->parent = parent;
 }
 
-void mm::PatientController::add_patient_handler() {
+void mm::controller::Patient::add_patient_handler() {
     std::cout << "Add Patient Click" << std::endl;
     patient_view->add_patient_show_dialog();
 }
 
-void mm::PatientController::remove_patient_handler() {
+void mm::controller::Patient::remove_patient_handler() {
     std::cout << "Remove Patient Click" << std::endl;
 
 }
 
-void mm::PatientController::edit_patient_handler() {
+void mm::controller::Patient::edit_patient_handler() {
     std::cout << "Edit Patient Click" << std::endl;
 }
 
-void mm::PatientController::set_doctor(int doctor_id) {
+void mm::controller::Patient::set_doctor(int doctor_id) {
     DBMaster::get_instance().extract_from_db(doctor, doctor_id);
     auto &patients = doctor.get_patients();
 
@@ -54,9 +54,8 @@ void mm::PatientController::set_doctor(int doctor_id) {
     patient_view->set_patient_tree_model(patient_tree_model, patient_list_store);
 }
 
-void
-mm::PatientController::row_selected_handler(const Gtk::TreeModel::Path &path,
-                                            Gtk::TreeViewColumn *column) {
+void mm::controller::Patient::row_selected_handler(const Gtk::TreeModel::Path &path,
+                                                   Gtk::TreeViewColumn *column) {
     auto iter = patient_list_store->get_iter(path);
     if (iter) {
         Gtk::TreeModel::Row row = *iter;
@@ -73,8 +72,8 @@ mm::PatientController::row_selected_handler(const Gtk::TreeModel::Path &path,
     }
 }
 
-void mm::PatientController::set_prescription_tree_view(std::string patient_id) {
-    Patient patient;
+void mm::controller::Patient::set_prescription_tree_view(std::string patient_id) {
+    model::Patient patient;
     DBMaster::get_instance().extract_from_db(patient, patient_id);
 
     auto &prescriptions = patient.get_prescriptions();
@@ -101,9 +100,9 @@ void mm::PatientController::set_prescription_tree_view(std::string patient_id) {
                                               prescription_list_store);
 }
 
-void mm::PatientController::on_add_patient_dialog_ok_handler() {
+void mm::controller::Patient::on_add_patient_dialog_ok_handler() {
     auto &refBuilder = RefBuilder::get_instance();
-    Patient patient;
+    model::Patient patient;
     stringstream address;
     stringstream birth_address;
 
@@ -155,15 +154,15 @@ void mm::PatientController::on_add_patient_dialog_ok_handler() {
 
 }
 
-void mm::PatientController::on_add_patient_dialog_cancel_handler() {
+void mm::controller::Patient::on_add_patient_dialog_cancel_handler() {
     patient_view->dispose_add_patient_dialog();
 }
 
-void mm::PatientController::select_date_handler() {
+void mm::controller::Patient::select_date_handler() {
     select_date_controller.show_dialog();
 }
 
-mm::PatientController::PatientController() {
+mm::controller::Patient::Patient() {
     select_date_controller.set_view();
 }
 

@@ -8,15 +8,15 @@
 #include "../../hdr/model/Patient.hpp"
 #include "../../hdr/DBMaster.hpp"
 
-mm::Patient::Patient() {
+mm::model::Patient::Patient() {
 
 }
 
-mm::Patient::~Patient() {
+mm::model::Patient::~Patient() {
 
 }
 
-map<string, mm::Serialized> mm::Patient::serialize() const {
+map<string, mm::Serialized> mm::model::Patient::serialize() const {
     map<string, Serialized> serialized_map;
     serialized_map["first_name"] = first_name;
     serialized_map["last_name"] = last_name;
@@ -36,7 +36,7 @@ map<string, mm::Serialized> mm::Patient::serialize() const {
     return serialized_map;
 }
 
-void mm::Patient::unserialize(map<string, mm::Serialized> map) {
+void mm::model::Patient::unserialize(map<string, mm::Serialized> map) {
     first_name = map["first_name"].get_str();
     last_name = map["last_name"].get_str();
     fiscal_code = map["fiscal_code"].get_str();
@@ -53,39 +53,39 @@ void mm::Patient::unserialize(map<string, mm::Serialized> map) {
     get_prescriptions_from_db();
 }
 
-string mm::Patient::get_table_name() const {
+string mm::model::Patient::get_table_name() const {
     return "patients";
 }
 
-string mm::Patient::get_primary_key() const {
+string mm::model::Patient::get_primary_key() const {
     return "health_code";
 }
 
-const string &mm::Patient::get_health_code() const {
+const string &mm::model::Patient::get_health_code() const {
     return health_code;
 }
 
-const string &mm::Patient::get_first_name() const {
+const string &mm::model::Patient::get_first_name() const {
     return first_name;
 }
 
-const string &mm::Patient::get_last_name() const {
+const string &mm::model::Patient::get_last_name() const {
     return last_name;
 }
 
-const string &mm::Patient::get_birth_date() const {
+const string &mm::model::Patient::get_birth_date() const {
     return birth_date;
 }
 
-const string &mm::Patient::get_birth_place() const {
+const string &mm::model::Patient::get_birth_place() const {
     return birth_place;
 }
 
-const string &mm::Patient::get_address() const {
+const string &mm::model::Patient::get_address() const {
     return address;
 }
 
-string &mm::Patient::get_risk_factors() const {
+string &mm::model::Patient::get_risk_factors() const {
     ostringstream ss;
     copy(risk_factors.begin(), risk_factors.end(),
          ostream_iterator<string>(ss, ", "));
@@ -93,11 +93,11 @@ string &mm::Patient::get_risk_factors() const {
     return ret;
 }
 
-const string &mm::Patient::get_fiscal_code() const {
+const string &mm::model::Patient::get_fiscal_code() const {
     return fiscal_code;
 }
 
-void mm::Patient::get_prescriptions_from_db() {
+void mm::model::Patient::get_prescriptions_from_db() {
     auto rows = DBMaster::get_instance().get_rows("prescriptions", "patient_id",
                                                   health_code);
     for (auto &row : rows) {
@@ -107,47 +107,47 @@ void mm::Patient::get_prescriptions_from_db() {
     }
 }
 
-vector<mm::Prescription> &mm::Patient::get_prescriptions() {
+vector<mm::model::Prescription> &mm::model::Patient::get_prescriptions() {
     return prescriptions;
 }
 
-void mm::Patient::set_health_code(const string &health_code) {
-    Patient::health_code = health_code;
+void mm::model::Patient::set_health_code(const string &health_code) {
+    this->health_code = health_code;
 }
 
-void mm::Patient::set_first_name(const string &first_name) {
-    Patient::first_name = first_name;
+void mm::model::Patient::set_first_name(const string &first_name) {
+    this->first_name = first_name;
 }
 
-void mm::Patient::set_last_name(const string &last_name) {
-    Patient::last_name = last_name;
+void mm::model::Patient::set_last_name(const string &last_name) {
+    this->last_name = last_name;
 }
 
-void mm::Patient::set_fiscal_code(const string &fiscal_code) {
-    Patient::fiscal_code = fiscal_code;
+void mm::model::Patient::set_fiscal_code(const string &fiscal_code) {
+    this->fiscal_code = fiscal_code;
 }
 
-void mm::Patient::set_birth_date(const string &birth_date) {
-    Patient::birth_date = birth_date;
+void mm::model::Patient::set_birth_date(const string &birth_date) {
+    this->birth_date = birth_date;
 }
 
-void mm::Patient::set_birth_place(const string &birth_place) {
-    Patient::birth_place = birth_place;
+void mm::model::Patient::set_birth_place(const string &birth_place) {
+    this->birth_place = birth_place;
 }
 
-void mm::Patient::set_address(const string &address) {
-    Patient::address = address;
+void mm::model::Patient::set_address(const string &address) {
+    this->address = address;
 }
 
-void mm::Patient::set_doctor_id(int doctor_id) {
-    Patient::doctor_id = doctor_id;
+void mm::model::Patient::set_doctor_id(int doctor_id) {
+    this->doctor_id = doctor_id;
 }
 
-int mm::Patient::get_doctor_id() const {
+int mm::model::Patient::get_doctor_id() const {
     return doctor_id;
 }
 
-mm::Patient::TreeModel::TreeModel() {
+mm::model::Patient::TreeModel::TreeModel() {
     add(first_name);
     add(last_name);
     add(fiscal_code);

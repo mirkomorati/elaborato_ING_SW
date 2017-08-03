@@ -3,10 +3,10 @@
 //
 
 #include <iostream>
-#include "../../hdr/view/PatientView.hpp"
+#include "../../hdr/view/Patient.hpp"
 #include "../../hdr/RefBuilder.hpp"
 
-mm::PatientView::PatientView(mm::PatientController *controller) : controller(controller) {
+mm::view::Patient::Patient(mm::controller::Patient *controller) : controller(controller) {
     auto &refBuilder = RefBuilder::get_instance();
     Gtk::Button *select_date;
 
@@ -16,18 +16,18 @@ mm::PatientView::PatientView(mm::PatientController *controller) : controller(con
     refBuilder.get_widget("selectDateButton", select_date);
 
     add_patient->signal_clicked().connect(sigc::mem_fun(
-            controller, &mm::PatientController::add_patient_handler));
+            controller, &mm::controller::Patient::add_patient_handler));
     remove_patient->signal_clicked().connect(sigc::mem_fun(
-            controller, &mm::PatientController::remove_patient_handler));
+            controller, &mm::controller::Patient::remove_patient_handler));
     edit_patient->signal_clicked().connect(sigc::mem_fun(
-            controller, &mm::PatientController::edit_patient_handler));
+            controller, &mm::controller::Patient::edit_patient_handler));
     select_date->signal_clicked().connect(sigc::mem_fun(
-            controller, &mm::PatientController::select_date_handler));
+            controller, &mm::controller::Patient::select_date_handler));
 
 }
 
-void mm::PatientView::set_patient_tree_model(Patient::TreeModel &patient_tree_model,
-                                             Glib::RefPtr<Gtk::ListStore> patient_list_store) {
+void mm::view::Patient::set_patient_tree_model(model::Patient::TreeModel &patient_tree_model,
+                                               Glib::RefPtr<Gtk::ListStore> patient_list_store) {
 
     RefBuilder::get_instance().get_widget("patientTreeView", patient_tree_view);
 
@@ -42,10 +42,10 @@ void mm::PatientView::set_patient_tree_model(Patient::TreeModel &patient_tree_mo
     }
 
     patient_tree_view->signal_row_activated().connect(sigc::mem_fun(
-        controller, &mm::PatientController::row_selected_handler));
+            controller, &mm::controller::Patient::row_selected_handler));
 }
 
-void mm::PatientView::add_patient_show_dialog() {
+void mm::view::Patient::add_patient_show_dialog() {
     Gtk::Dialog *add_patient_dialog;
     Gtk::Button *ok_button;
     Gtk::Button *cancel_button;
@@ -58,13 +58,13 @@ void mm::PatientView::add_patient_show_dialog() {
     add_patient_dialog->show();
 
     ok_button->signal_clicked().connect(sigc::mem_fun(controller,
-                                                      &PatientController::on_add_patient_dialog_ok_handler));
+                                                      &mm::controller::Patient::on_add_patient_dialog_ok_handler));
     cancel_button->signal_clicked().connect(sigc::mem_fun(controller,
-                                                          &PatientController::on_add_patient_dialog_cancel_handler));
+                                                          &mm::controller::Patient::on_add_patient_dialog_cancel_handler));
 }
 
-void mm::PatientView::patient_detail_show(Gtk::TreeModel::Row row,
-                                          Patient::TreeModel &patient_tree_model) {
+void mm::view::Patient::patient_detail_show(Gtk::TreeModel::Row row,
+                                            model::Patient::TreeModel &patient_tree_model) {
     auto &refBuilder = RefBuilder::get_instance();
     Gtk::Entry *detail_first_name;
     Gtk::Entry *detail_last_name;
@@ -91,8 +91,8 @@ void mm::PatientView::patient_detail_show(Gtk::TreeModel::Row row,
     detail_address->set_text(row[patient_tree_model.address]);
 }
 
-void mm::PatientView::set_prescription_tree_model(
-        Prescription::TreeModel &prescription_tree_model,
+void mm::view::Patient::set_prescription_tree_model(
+        model::Prescription::TreeModel &prescription_tree_model,
         Glib::RefPtr<Gtk::ListStore> prescription_list_store) {
     RefBuilder::get_instance().get_widget("prescriptionTreeView",
                                           prescription_tree_view);
@@ -121,7 +121,7 @@ void mm::PatientView::set_prescription_tree_model(
     prescription_tree_view->set_model(prescription_list_store);
 }
 
-void mm::PatientView::dispose_add_patient_dialog() {
+void mm::view::Patient::dispose_add_patient_dialog() {
     Gtk::Dialog *add_patient_dialog;
     auto &refBuilder = RefBuilder::get_instance();
 

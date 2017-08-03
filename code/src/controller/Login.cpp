@@ -4,16 +4,16 @@
 
 #include <iostream>
 #include <thread>
-#include "../../hdr/controller/LoginController.hpp"
+#include "../../hdr/controller/Login.hpp"
 #include "../../hdr/RefBuilder.hpp"
-#include "../../hdr/model/AuthenticationModel.hpp"
+#include "../../hdr/model/Authentication.hpp"
 
 
-void mm::LoginController::set_view(LoginView *view) {
-    login_view = view;
+void mm::controller::Login::set_view(view::Login *view) {
+    this->view = view;
 }
 
-void mm::LoginController::login_button_handler() {
+void mm::controller::Login::login_button_handler() {
     auto &refBuilder = RefBuilder::get_instance();
 
     Gtk::Entry *name;
@@ -27,24 +27,21 @@ void mm::LoginController::login_button_handler() {
               << text_password << std::endl;
 
     std::thread login_thread([this](std::string name, std::string password) {
-        auto login_data = AuthenticationModel().get_login_data();
+        auto login_data = mm::model::Authentication().get_login_data();
         for (auto login : login_data) {
             if (std::get<0>(login) == name && std::get<1>(login) == password) {
-                login_view->login_update(true);
+                view->login_update(true);
                 parent->set_doctor(get<2>(login));
                 return 0;
             }
         }
-        login_view->login_update(false);
+        view->login_update(false);
         return -1;
     }, text_name, text_password);
 
     login_thread.detach();
 }
 
-mm::LoginController::LoginController() {
-}
-
-void mm::LoginController::set_parent(mm::MainController *parent) {
-    LoginController::parent = parent;
+void mm::controller::Login::set_parent(mm::controller::Main *parent) {
+    this->parent = parent;
 }

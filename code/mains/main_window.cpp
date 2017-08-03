@@ -1,4 +1,4 @@
-#include "../hdr/controller/MainController.hpp"
+#include "../hdr/controller/Main.hpp"
 #include "../hdr/DBMaster.hpp"
 #include "../hdr/Configuration.hpp"
 
@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
 
     auto app = Gtk::Application::create(argc, argv, "it.mm.org");
 
-    MainController mc;
+    controller::Main mc;
     mc.setup();
     app->run(mc.get_main_window());
 

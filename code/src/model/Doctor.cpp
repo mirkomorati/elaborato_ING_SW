@@ -9,7 +9,7 @@
 #include "../../hdr/DBMaster.hpp"
 
 
-map<string, mm::Serialized> mm::Doctor::serialize() const {
+map<string, mm::Serialized> mm::model::Doctor::serialize() const {
     map<string, mm::Serialized> serialized;
     serialized["regional_id"] = regional_id;
     serialized["fiscal_code"] = fiscal_code;
@@ -22,7 +22,7 @@ map<string, mm::Serialized> mm::Doctor::serialize() const {
     return serialized;
 }
 
-void mm::Doctor::unserialize(map<string, mm::Serialized> map) {
+void mm::model::Doctor::unserialize(map<string, mm::Serialized> map) {
     regional_id = map["regional_id"].get_int();
     fiscal_code = map["fiscal_code"].get_str();
     specialization = map["specialization"].get_str();
@@ -34,31 +34,31 @@ void mm::Doctor::unserialize(map<string, mm::Serialized> map) {
     get_patients_from_db();
 }
 
-string mm::Doctor::get_table_name() const {
+string mm::model::Doctor::get_table_name() const {
     return "doctors";
 }
 
-string mm::Doctor::get_primary_key() const {
+string mm::model::Doctor::get_primary_key() const {
     return "regional_id";
 }
 
-vector<mm::Prescription>
-mm::Doctor::get_prescriptions(mm::Patient patient, mm::Date start,
-                              mm::Date end) {
-    return vector<mm::Prescription>();
+vector<mm::model::Prescription>
+mm::model::Doctor::get_prescriptions(mm::model::Patient patient, mm::Date start,
+                                     mm::Date end) {
+    return vector<mm::model::Prescription>();
 }
 
-vector<mm::Prescription>
-mm::Doctor::get_prescriptions(mm::Drug drug) {
-    return vector<mm::Prescription>();
+vector<mm::model::Prescription>
+mm::model::Doctor::get_prescriptions(mm::model::Drug drug) {
+    return vector<mm::model::Prescription>();
 }
 
-vector<mm::Drug>
-mm::Doctor::get_drugs(mm::Date start, mm::Date end) {
-    return vector<mm::Drug>();
+vector<mm::model::Drug>
+mm::model::Doctor::get_drugs(mm::Date start, mm::Date end) {
+    return vector<mm::model::Drug>();
 }
 
-void mm::Doctor::get_patients_from_db() {
+void mm::model::Doctor::get_patients_from_db() {
     auto rows = DBMaster::get_instance().get_rows("patients", "doctor_id", regional_id);
 
     for (auto &row : rows) {
@@ -68,39 +68,39 @@ void mm::Doctor::get_patients_from_db() {
     }
 }
 
-vector<mm::Patient>
-mm::Doctor::get_patients(mm::Drug drug) {
-    return vector<mm::Patient>();
+vector<mm::model::Patient>
+mm::model::Doctor::get_patients(mm::model::Drug drug) {
+    return vector<mm::model::Patient>();
 }
 
-const string &mm::Doctor::get_fiscal_code() const {
+const string &mm::model::Doctor::get_fiscal_code() const {
     return fiscal_code;
 }
 
-const int &mm::Doctor::get_regional_id() const {
+const int &mm::model::Doctor::get_regional_id() const {
     return regional_id;
 }
 
-const string &mm::Doctor::get_specialization() const {
+const string &mm::model::Doctor::get_specialization() const {
     return specialization;
 }
 
-vector<mm::Patient> &mm::Doctor::get_patients() {
+vector<mm::model::Patient> &mm::model::Doctor::get_patients() {
     return patients;
 }
 
-const string &mm::Doctor::get_first_name() const {
+const string &mm::model::Doctor::get_first_name() const {
     return first_name;
 }
 
-const string &mm::Doctor::get_last_name() const {
+const string &mm::model::Doctor::get_last_name() const {
     return last_name;
 }
 
-const string &mm::Doctor::get_birth_date() const {
+const string &mm::model::Doctor::get_birth_date() const {
     return birth_date;
 }
 
-const string &mm::Doctor::get_birth_place() const {
+const string &mm::model::Doctor::get_birth_place() const {
     return birth_place;
 }

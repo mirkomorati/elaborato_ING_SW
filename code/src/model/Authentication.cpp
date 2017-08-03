@@ -3,10 +3,10 @@
 //
 
 #include <iostream>
-#include "../../hdr/model/AuthenticationModel.hpp"
+#include "../../hdr/model/Authentication.hpp"
 
 std::vector<std::tuple<std::string, std::string, int>>
-mm::AuthenticationModel::get_login_data() {
+mm::model::Authentication::get_login_data() {
     auto &db = DBMaster::get_instance();
 
     std::tuple<std::string, std::string, int> data;
