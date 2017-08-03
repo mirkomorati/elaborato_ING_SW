@@ -8,6 +8,7 @@
 #include "../view/PatientView.hpp"
 #include "MainController.hpp"
 #include "../model/Doctor.hpp"
+#include "SelectDateDialogController.hpp"
 
 namespace mm {
     class PatientView;
@@ -16,6 +17,8 @@ namespace mm {
 
     class PatientController {
     public:
+        PatientController();
+
         void set_view(PatientView *patient_view);
 
         void set_parent(mm::MainController *parent);
@@ -47,6 +50,7 @@ namespace mm {
         Glib::RefPtr<Gtk::ListStore> patient_list_store;
         Prescription::TreeModel prescription_tree_model;
         Glib::RefPtr<Gtk::ListStore> prescription_list_store;
+        SelectDateDialogController select_date_controller;
     };
 }
 

@@ -26,11 +26,7 @@ std::map<std::string, mm::Serialized> mm::Prescription::serialize() const {
     }
     negative_interaction_list.seekp(-1, negative_interaction_list.cur);
     serialized_map["negative_interactions"] = negative_interaction_list.str();
-    if (used) {
-        serialized_map["used"] = "si";
-    } else {
-        serialized_map["used"] = "no";
-    }
+    serialized_map["used"] = used ? "si" : "no";
 
     return serialized_map;
 }

@@ -35,8 +35,6 @@ namespace mm {
         void patient_detail_show(Gtk::TreeModel::Row row,
                                  Patient::TreeModel &patient_tree_model);
 
-        void show_select_date_dialog();
-
     private:
         PatientController *controller;
 

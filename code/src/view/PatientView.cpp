@@ -168,11 +168,3 @@ void mm::PatientView::dispose_add_patient_dialog() {
 
     add_patient_dialog->close();
 }
-
-void mm::PatientView::show_select_date_dialog() {
-    Gtk::Dialog *dialog;
-    RefBuilder::get_instance().get_widget("selectDateDialog", dialog);
-
-    dialog->show();
-
-}

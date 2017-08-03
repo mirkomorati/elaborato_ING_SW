@@ -160,5 +160,10 @@ void mm::PatientController::on_add_patient_dialog_cancel_handler() {
 }
 
 void mm::PatientController::select_date_handler() {
-    patient_view->show_select_date_dialog();
+    select_date_controller.show_dialog();
 }
+
+mm::PatientController::PatientController() {
+    select_date_controller.set_view();
+}
+

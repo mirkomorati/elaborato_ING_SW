@@ -75,6 +75,6 @@ int main(int argc, char **argv) {
 
     cout << "mirko è: " << me.get_fiscal_code() << endl;
 
-    me.get_patients_from_db();
+    me.get_patients();
 
 }
