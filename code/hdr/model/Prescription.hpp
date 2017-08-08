@@ -52,11 +52,11 @@ namespace mm {
 
             const string &get_expire_date() const;
 
-            string &get_drug_ids_as_string();
+            string get_drug_ids_as_string();
 
             const vector<string> &get_drug_ids() const;
 
-            string &get_negative_interactions();
+            string get_negative_interactions();
 
             bool is_used() const;
 

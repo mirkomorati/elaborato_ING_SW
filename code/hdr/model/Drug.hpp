@@ -57,7 +57,7 @@ namespace mm {
 
             const vector<pair<string, string>> &get_active_principles() const;
 
-            const string &get_active_principles_as_string() const;
+            const string get_active_principles_as_string() const;
 
         private:
             string name;

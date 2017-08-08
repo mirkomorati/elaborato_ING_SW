@@ -116,7 +116,7 @@ const string mm::model::Drug::get_contraindications_as_string() const {
     return ret;
 }
 
-const string &mm::model::Drug::get_active_principles_as_string() const {
+const string mm::model::Drug::get_active_principles_as_string() const {
     ostringstream ss;
     // todo sistemare unserialize o capire perché è vuoto
     if (active_principles.empty()) return "ERROR empty";

@@ -85,7 +85,7 @@ const string &mm::model::Prescription::get_expire_date() const {
     return expire_date;
 }
 
-string &mm::model::Prescription::get_drug_ids_as_string() {
+string mm::model::Prescription::get_drug_ids_as_string() {
     ostringstream ss;
     copy(drug_ids.begin(), drug_ids.end(),
          ostream_iterator<string>(ss, ", "));
@@ -94,7 +94,7 @@ string &mm::model::Prescription::get_drug_ids_as_string() {
     return ret;
 }
 
-string &mm::model::Prescription::get_negative_interactions() {
+string mm::model::Prescription::get_negative_interactions() {
     ostringstream ss;
     for (auto row : negative_interactions) {
         ss << row.first << ": " << row.second << "; ";
