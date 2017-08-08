@@ -13,6 +13,7 @@
 #include <gtkmm/treemodelcolumn.h>
 #include "../time_utilities/Date.hpp"
 #include "../interfaces/ISerializable.hpp"
+#include "Drug.hpp"
 
 using namespace std;
 
@@ -51,7 +52,9 @@ namespace mm {
 
             const string &get_expire_date() const;
 
-            string &get_drug_ids();
+            string &get_drug_ids_as_string();
+
+            const vector<string> &get_drug_ids() const;
 
             string &get_negative_interactions();
 

@@ -52,7 +52,11 @@ namespace mm {
             Glib::RefPtr<Gtk::ListStore> patient_list_store;
             model::Prescription::TreeModel prescription_tree_model;
             Glib::RefPtr<Gtk::ListStore> prescription_list_store;
+            Glib::RefPtr<Gtk::ListStore> drug_list_store;
+            model::Drug::TreeModel drug_tree_model;
             controller::SelectDateDialog select_date_controller;
+
+            void set_drugs_tree_view(const string patient_id);
         };
     }
 }

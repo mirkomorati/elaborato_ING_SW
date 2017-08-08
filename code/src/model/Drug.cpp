@@ -81,3 +81,60 @@ string mm::model::Drug::get_primary_key() const {
 }
 
 mm::model::Drug::Drug(const string &name, float price) : name(name), price(price) {}
+
+const string &mm::model::Drug::get_name() const {
+    return name;
+}
+
+float mm::model::Drug::get_price() const {
+    return price;
+}
+
+const string &mm::model::Drug::get_pharmaceutical_form() const {
+    return pharmaceutical_form;
+}
+
+const vector<string> &mm::model::Drug::get_contraindications() const {
+    return contraindications;
+}
+
+const string &mm::model::Drug::get_ATC_classification() const {
+    return ATC_classification;
+}
+
+const vector<pair<string, string>> &mm::model::Drug::get_active_principles() const {
+    return active_principles;
+}
+
+const string &mm::model::Drug::get_contraindications_as_string() const {
+    ostringstream ss;
+    // todo sistemare unserialize o capire perché è vuoto
+    if (contraindications.empty()) return "ERROR empty";
+    copy(contraindications.begin(), contraindications.end(), ostream_iterator<string>(ss, ", "));
+    string ret = ss.str();
+    ret = ret.substr(0, ret.length() - 2);
+    return ret;
+}
+
+const string &mm::model::Drug::get_active_principles_as_string() const {
+    ostringstream ss;
+    // todo sistemare unserialize o capire perché è vuoto
+    if (active_principles.empty()) return "ERROR empty";
+    for (auto &p : active_principles) {
+        ss << p.first << ", " << p.second;
+    }
+    string ret = ss.str();
+    ret = ret.substr(0, ret.length() - 2);
+    return ret;
+}
+
+mm::model::Drug::Drug() {}
+
+mm::model::Drug::TreeModel::TreeModel() {
+    add(name);
+    add(pharmaceutical_form);
+    add(ATC_classification);
+    add(contraindications);
+    add(active_principles);
+    add(price);
+}

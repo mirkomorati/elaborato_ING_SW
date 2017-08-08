@@ -64,6 +64,8 @@ namespace mm {
 
             int get_doctor_id() const;
 
+            vector<model::Prescription> &get_prescriptions();
+
             void set_health_code(const string &health_code);
 
             void set_first_name(const string &first_name);
@@ -79,8 +81,6 @@ namespace mm {
             void set_address(const string &address);
 
             void set_doctor_id(int doctor_id);
-
-            vector<model::Prescription> &get_prescriptions();
 
         private:
             string health_code;

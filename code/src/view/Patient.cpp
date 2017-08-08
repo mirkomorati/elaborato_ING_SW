@@ -113,7 +113,7 @@ void mm::view::Patient::set_prescription_tree_model(
                                           prescription_tree_model.negative_interactions);
     prescription_tree_view->append_column("Usata",
                                           prescription_tree_model.used);
-    for (int i = 0; i <= 6; i++) {
+    for (int i = 0; i < 7; i++) {
         prescription_tree_view->get_column_cell_renderer(
             i)->property_xalign().set_value(0);
     }
@@ -167,4 +167,30 @@ void mm::view::Patient::dispose_add_patient_dialog() {
     birth_country->set_text("");
 
     add_patient_dialog->close();
+}
+
+void mm::view::Patient::set_drug_tree_model(mm::model::Drug::TreeModel &drug_tree_model,
+                                            Glib::RefPtr<Gtk::ListStore> drug_list_store) {
+    RefBuilder::get_instance().get_widget("drugTreeView", drug_tree_view);
+    // Non il metodo migliore
+    drug_tree_view->remove_all_columns();
+
+    drug_tree_view->append_column("Nome",
+                                  drug_tree_model.name);
+    drug_tree_view->append_column("Forma Farmaceutica",
+                                  drug_tree_model.pharmaceutical_form);
+    drug_tree_view->append_column("Classificazione ATC",
+                                  drug_tree_model.ATC_classification);
+    drug_tree_view->append_column("Controindicazioni",
+                                  drug_tree_model.contraindications);
+    drug_tree_view->append_column("Principi Attivi",
+                                  drug_tree_model.active_principles);
+    drug_tree_view->append_column("Prezzo",
+                                  drug_tree_model.price);
+    for (int i = 0; i < 6; i++) {
+        drug_tree_view->get_column_cell_renderer(
+                i)->property_xalign().set_value(0);
+    }
+
+    drug_tree_view->set_model(drug_list_store);
 }

@@ -10,22 +10,30 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <gtkmm/treemodelcolumn.h>
 #include "../ActivePrinciple.hpp"
 #include "../interfaces/ISerializable.hpp"
 
 using namespace std;
 namespace mm {
     namespace model {
-        struct Drug : ISerializable {
-            string name;
-            float price;
-            string pharmaceutical_form;
-            vector<string> contraindications;
-            string ATC_classification;
-            vector<pair<string, string>> active_principles;
+        class Drug : public ISerializable {
+        public:
+            struct TreeModel : Gtk::TreeModelColumnRecord {
+                TreeModel();
 
+                Gtk::TreeModelColumn<Glib::ustring> name;
+                Gtk::TreeModelColumn<Glib::ustring> pharmaceutical_form;
+                Gtk::TreeModelColumn<Glib::ustring> ATC_classification;
+                Gtk::TreeModelColumn<Glib::ustring> contraindications;
+                Gtk::TreeModelColumn<Glib::ustring> active_principles;
+                Gtk::TreeModelColumn<Glib::ustring> price;
+
+            };
         public:
             Drug(const string &name, float price);
+
+            Drug();
 
             map<string, Serialized> serialize() const override;
 
@@ -34,6 +42,30 @@ namespace mm {
             string get_table_name() const override;
 
             string get_primary_key() const override;
+
+            const string &get_name() const;
+
+            float get_price() const;
+
+            const string &get_pharmaceutical_form() const;
+
+            const vector<string> &get_contraindications() const;
+
+            const string &get_contraindications_as_string() const;
+
+            const string &get_ATC_classification() const;
+
+            const vector<pair<string, string>> &get_active_principles() const;
+
+            const string &get_active_principles_as_string() const;
+
+        private:
+            string name;
+            float price;
+            string pharmaceutical_form;
+            vector<string> contraindications;
+            string ATC_classification;
+            vector<pair<string, string>> active_principles;
         };
     }
 }

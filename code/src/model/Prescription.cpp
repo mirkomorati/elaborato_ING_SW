@@ -7,6 +7,7 @@
 #include <map>
 #include <sstream>
 #include "../../hdr/model/Prescription.hpp"
+#include "../../hdr/DBMaster.hpp"
 
 std::map<std::string, mm::Serialized> mm::model::Prescription::serialize() const {
     map<string, Serialized> serialized_map;
@@ -84,7 +85,7 @@ const string &mm::model::Prescription::get_expire_date() const {
     return expire_date;
 }
 
-string &mm::model::Prescription::get_drug_ids() {
+string &mm::model::Prescription::get_drug_ids_as_string() {
     ostringstream ss;
     copy(drug_ids.begin(), drug_ids.end(),
          ostream_iterator<string>(ss, ", "));
@@ -109,6 +110,10 @@ bool mm::model::Prescription::is_used() const {
 
 int mm::model::Prescription::get_bill_id() const {
     return bill_id;
+}
+
+const vector<string> &mm::model::Prescription::get_drug_ids() const {
+    return drug_ids;
 }
 
 mm::model::Prescription::TreeModel::TreeModel() {

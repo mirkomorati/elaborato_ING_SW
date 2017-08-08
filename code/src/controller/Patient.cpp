@@ -69,6 +69,7 @@ void mm::controller::Patient::row_selected_handler(const Gtk::TreeModel::Path &p
 
         auto patient_id = static_cast<Glib::ustring>(row[patient_tree_model.health_code]);
         set_prescription_tree_view(patient_id.raw());
+        set_drugs_tree_view(patient_id.raw());
     }
 }
 
@@ -88,7 +89,7 @@ void mm::controller::Patient::set_prescription_tree_view(std::string patient_id)
             prescriptions[i].get_prescription_id());
         row[prescription_tree_model.issue_date] = prescriptions[i].get_issue_date();
         row[prescription_tree_model.expire_date] = prescriptions[i].get_expire_date();
-        row[prescription_tree_model.drug_ids] = prescriptions[i].get_drug_ids();
+        row[prescription_tree_model.drug_ids] = prescriptions[i].get_drug_ids_as_string();
         row[prescription_tree_model.negative_interactions] = prescriptions[i].get_negative_interactions();
         row[prescription_tree_model.used] = prescriptions[i].is_used() ? "si" : "no";
 
@@ -98,6 +99,43 @@ void mm::controller::Patient::set_prescription_tree_view(std::string patient_id)
 
     patient_view->set_prescription_tree_model(prescription_tree_model,
                                               prescription_list_store);
+}
+
+void mm::controller::Patient::set_drugs_tree_view(const string patient_id) {
+    std::vector<std::string> drug_ids;
+    std::vector<model::Drug> drugs;
+    model::Patient patient;
+    DBMaster::get_instance().extract_from_db(patient, patient_id);
+    auto &prescriptions = patient.get_prescriptions();
+
+    for (auto &prescription : prescriptions)
+        for (auto &drug : prescription.get_drug_ids())
+            drug_ids.push_back(drug);
+
+    for (auto &drug : drug_ids) {
+        model::Drug tmp;
+        DBMaster::get_instance().extract_from_db(tmp, drug);
+        drugs.push_back(tmp);
+    }
+
+    drug_list_store = Gtk::ListStore::create(drug_tree_model);
+    auto row = *drug_list_store->append();
+
+    for (int i = 0; i < drugs.size(); i++) {
+        row[drug_tree_model.name] = drugs[i].get_name();
+        row[drug_tree_model.pharmaceutical_form] = drugs[i].get_pharmaceutical_form();
+        row[drug_tree_model.ATC_classification] = drugs[i].get_ATC_classification();
+        row[drug_tree_model.contraindications] = drugs[i].get_contraindications_as_string();
+        row[drug_tree_model.active_principles] = drugs[i].get_active_principles_as_string();
+        row[drug_tree_model.price] = std::to_string(drugs[i].get_price());
+
+        if (i < drugs.size() - 1)
+            row = *(drug_list_store->append()++);
+    }
+
+
+    patient_view->set_drug_tree_model(drug_tree_model, drug_list_store);
+
 }
 
 void mm::controller::Patient::on_add_patient_dialog_ok_handler() {

@@ -31,6 +31,11 @@ namespace mm {
                     model::Prescription::TreeModel &prescription_tree_model,
                     Glib::RefPtr<Gtk::ListStore> prescription_list_store);
 
+            void set_drug_tree_model(
+                    model::Drug::TreeModel &drug_tree_model,
+                    Glib::RefPtr<Gtk::ListStore> drug_list_store);
+
+
             void add_patient_show_dialog();
 
             void dispose_add_patient_dialog();
@@ -45,6 +50,7 @@ namespace mm {
             Gtk::ToolButton *remove_patient;
             Gtk::TreeView *patient_tree_view;
             Gtk::TreeView *prescription_tree_view;
+            Gtk::TreeView *drug_tree_view;
             Gtk::Grid *patient_detail;
         };
     }
