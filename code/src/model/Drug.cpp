@@ -98,7 +98,7 @@ const vector<string> &mm::model::Drug::get_contraindications() const {
     return contraindications;
 }
 
-const string &mm::model::Drug::get_ATC_classification() const {
+const string mm::model::Drug::get_ATC_classification() const {
     return ATC_classification;
 }
 
@@ -106,7 +106,7 @@ const vector<pair<string, string>> &mm::model::Drug::get_active_principles() con
     return active_principles;
 }
 
-const string &mm::model::Drug::get_contraindications_as_string() const {
+const string mm::model::Drug::get_contraindications_as_string() const {
     ostringstream ss;
     // todo sistemare unserialize o capire perché è vuoto
     if (contraindications.empty()) return "ERROR empty";

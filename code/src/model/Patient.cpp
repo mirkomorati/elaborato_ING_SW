@@ -85,7 +85,7 @@ const string &mm::model::Patient::get_address() const {
     return address;
 }
 
-string &mm::model::Patient::get_risk_factors() const {
+string mm::model::Patient::get_risk_factors() const {
     ostringstream ss;
     copy(risk_factors.begin(), risk_factors.end(),
          ostream_iterator<string>(ss, ", "));

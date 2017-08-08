@@ -51,9 +51,9 @@ namespace mm {
 
             const vector<string> &get_contraindications() const;
 
-            const string &get_contraindications_as_string() const;
+            const string get_contraindications_as_string() const;
 
-            const string &get_ATC_classification() const;
+            const string get_ATC_classification() const;
 
             const vector<pair<string, string>> &get_active_principles() const;
 

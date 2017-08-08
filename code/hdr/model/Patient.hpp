@@ -60,7 +60,7 @@ namespace mm {
 
             const string &get_fiscal_code() const;
 
-            string &get_risk_factors() const;
+            string get_risk_factors() const;
 
             int get_doctor_id() const;
 
