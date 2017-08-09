@@ -27,7 +27,7 @@ map<string, mm::Serialized> mm::model::Patient::serialize() const {
     serialized_map["birth_place"] = birth_place;
     serialized_map["doctor_id"] = doctor_id;
     stringstream risk_list;
-    for (int i = 0; i < risk_factors.size(); i++) {
+    for (size_t i = 0; i < risk_factors.size(); i++) {
         risk_list << risk_factors[i];
         if (i < risk_factors.size() - 1) risk_list << ";";
     }

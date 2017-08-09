@@ -37,7 +37,7 @@ void mm::controller::Patient::set_doctor(int doctor_id) {
 
     auto row = *patient_list_store->append();
 
-    for (int i = 0; i < patients.size(); i++) {
+    for (size_t i = 0; i < patients.size(); i++) {
         row[patient_tree_model.first_name] = patients[i].get_first_name();
         row[patient_tree_model.last_name] = patients[i].get_last_name();
         row[patient_tree_model.fiscal_code] = patients[i].get_fiscal_code();
@@ -82,7 +82,7 @@ void mm::controller::Patient::set_prescription_tree_view(std::string patient_id)
     prescription_list_store = Gtk::ListStore::create(prescription_tree_model);
     auto row = *prescription_list_store->append();
 
-    for (int i = 0; i < prescriptions.size(); i++) {
+    for (size_t i = 0; i < prescriptions.size(); i++) {
         row[prescription_tree_model.patient_id] = std::to_string(
             prescriptions[i].get_patient_id());
         row[prescription_tree_model.prescription_id] = std::to_string(
@@ -121,7 +121,7 @@ void mm::controller::Patient::set_drugs_tree_view(const string patient_id) {
     drug_list_store = Gtk::ListStore::create(drug_tree_model);
     auto row = *drug_list_store->append();
 
-    for (int i = 0; i < drugs.size(); i++) {
+    for (size_t i = 0; i < drugs.size(); i++) {
         row[drug_tree_model.name] = drugs[i].get_name();
         row[drug_tree_model.pharmaceutical_form] = drugs[i].get_pharmaceutical_form();
         row[drug_tree_model.ATC_classification] = drugs[i].get_ATC_classification();

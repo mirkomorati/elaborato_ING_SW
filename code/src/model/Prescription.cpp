@@ -16,7 +16,7 @@ std::map<std::string, mm::Serialized> mm::model::Prescription::serialize() const
     serialized_map["issue_date"] = issue_date;
     serialized_map["expire_date"] = expire_date;
     stringstream drug_list;
-    for (int i = 0; i < drug_ids.size(); i++) {
+    for (size_t i = 0; i < drug_ids.size(); i++) {
         drug_list << drug_ids[i];
         if (i < drug_ids.size() - 1) drug_list << ";";
     }
