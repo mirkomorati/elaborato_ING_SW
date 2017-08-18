@@ -46,9 +46,6 @@ namespace mm {
         vector<vector<Serialized>>
         get_table(string name, unsigned int limit = 0, unsigned int offset = 0);
 
-        /*vector<vector<Serialized>>
-        get_table(string name);*/
-
         vector<map<string, Serialized>> get_rows(string table_name, string id_name, Serialized id);
 
         ~DBMaster();

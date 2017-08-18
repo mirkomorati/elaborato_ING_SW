@@ -27,7 +27,16 @@ void mm::controller::Login::login_button_handler() {
               << text_password << std::endl;
 
     std::thread login_thread([this](std::string name, std::string password) {
-        auto login_data = mm::model::Authentication().get_login_data();
+        model::authentication::Login account;
+        if (model::authentication::check_login(name, password, account)) {
+            view->login_update(true);
+            parent->set_doctor(account.regional_id);
+            return 0;
+        }
+
+        view->login_update(false);
+        return -1;
+        /*auto login_data = mm::model::authentication::get_login_data();
         for (auto login : login_data) {
             if (std::get<0>(login) == name && std::get<1>(login) == password) {
                 view->login_update(true);
@@ -36,7 +45,7 @@ void mm::controller::Login::login_button_handler() {
             }
         }
         view->login_update(false);
-        return -1;
+        return -1;*/
     }, text_name, text_password);
 
     login_thread.detach();

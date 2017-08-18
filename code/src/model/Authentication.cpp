@@ -5,25 +5,39 @@
 #include <iostream>
 #include "../../hdr/model/Authentication.hpp"
 
-std::vector<std::tuple<std::string, std::string, int>>
-mm::model::Authentication::get_login_data() {
-    auto &db = DBMaster::get_instance();
-
-    std::tuple<std::string, std::string, int> data;
-    std::vector<decltype(data)> to_return;
-
-    auto table = db.get_table("login");
-
-    std::cout << "Data: " << std::endl;
-    for (auto row : table) {
-        data = std::make_tuple(row[0].get_str(), row[1].get_str(),
-                               row[2].get_int());
-        std::cout << get<0>(data) << " "
-                  << get<1>(data) << " "
-                  << get<2>(data) << std::endl;
-        to_return.push_back(data);
+bool mm::model::authentication::check_login(std::string usr, std::string psw, authentication::Login &account) {
+    Login login;
+    try {
+        DBMaster::get_instance().extract_from_db(login, std::move(usr));
+    } catch (record_not_found_error &e) { // wrong username
+        return false;
     }
 
-    return to_return;
+    if (login.password != psw) return false; // wrong password
 
+    // login successful
+    account = std::move(login);
+    return true;
 };
+
+map<string, mm::Serialized> mm::model::authentication::Login::serialize() const {
+    std::map<std::string, mm::Serialized> serialized;
+    serialized["name"] = user_name;
+    serialized["password"] = password;
+    serialized["regional_id"] = regional_id;
+    return serialized;
+}
+
+void mm::model::authentication::Login::unserialize(map<string, mm::Serialized> map) {
+    user_name = map["name"].get_str();
+    password = map["password"].get_str();
+    regional_id = map["regional_id"].get_int();
+}
+
+string mm::model::authentication::Login::get_table_name() const {
+    return "login";
+}
+
+string mm::model::authentication::Login::get_primary_key() const {
+    return "name";
+}
