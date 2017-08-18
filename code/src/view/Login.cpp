@@ -8,11 +8,16 @@
 
 mm::view::Login::Login(controller::Login *controller) : controller(controller) {
     auto &refBuilder = RefBuilder::get_instance();
+    Gtk::Window *window;
 
     refBuilder.get_widget("loginButton", button);
+    refBuilder.get_widget("mainWindow", window);
 
     button->signal_clicked().connect(sigc::mem_fun(
             controller, &mm::controller::Login::login_button_handler));
+
+    window->signal_key_press_event().connect(sigc::mem_fun(controller, &mm::controller::Login::key_pressed_handler),
+                                             false);
 }
 
 void mm::view::Login::login_update(bool success) {

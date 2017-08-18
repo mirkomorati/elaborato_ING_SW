@@ -45,3 +45,11 @@ void mm::controller::Login::login_button_handler() {
 void mm::controller::Login::set_parent(mm::controller::Main *parent) {
     this->parent = parent;
 }
+
+bool mm::controller::Login::key_pressed_handler(GdkEventKey *event) {
+    if (event->keyval == GDK_KEY_Return) {
+        login_button_handler();
+        return true;
+    }
+    return false;
+}

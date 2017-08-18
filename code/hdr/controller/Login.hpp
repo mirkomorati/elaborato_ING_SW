@@ -6,6 +6,7 @@
 #define ELABORATO_ING_SW_LOGIN_CONTROLLER_HPP
 
 #include "../view/Login.hpp"
+#include <gdk/gdk.h>
 
 namespace mm {
     namespace view {
@@ -22,6 +23,8 @@ namespace mm {
             void login_button_handler();
 
             void set_parent(controller::Main *parent);
+
+            bool key_pressed_handler(GdkEventKey *event);
 
         private:
             view::Login *view;
