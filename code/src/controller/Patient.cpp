@@ -108,7 +108,6 @@ void mm::controller::Patient::set_drugs_tree_view(const string patient_id) {
     DBMaster::get_instance().extract_from_db(patient, patient_id);
     auto &prescriptions = patient.get_prescriptions();
 
-    // todo change it drugs are in csv
     for (auto &prescription : prescriptions)
         for (auto &drug : prescription.get_drug_ids())
             drug_ids.push_back(drug);

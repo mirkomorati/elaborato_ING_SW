@@ -2,7 +2,6 @@
 // Created by Mirko Morati on 04/07/17.
 //
 
-#include <iostream>
 #include "../../hdr/model/Authentication.hpp"
 
 bool mm::model::authentication::check_login(std::string usr, std::string psw, authentication::Login &account) {

@@ -210,18 +210,6 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id)
     }
     sqlite3_finalize(stmt);
 
-    // todo che è sta roba?
-    /*
-    string t;
-    try {
-        t = static_cast<string>(serialized_map["fiscal_code"]);
-    } catch (std::runtime_error &e) {
-        cout << "no" << endl;
-    }
-
-    cout << t << endl;
-    */
-
     obj.unserialize(serialized_map);
 }
 

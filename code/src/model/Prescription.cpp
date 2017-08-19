@@ -45,6 +45,7 @@ void mm::model::Prescription::unserialize(std::map<std::string, Serialized> map)
     istringstream negative_interaction_list(
         map["negative_interactions"].get_str());
     while (getline(negative_interaction_list, tmp, ';')) {
+        // todo questo è un porcaio
         string delims = ":";
         vector<string> results;
         size_t lastOffset = 0;

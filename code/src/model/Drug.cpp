@@ -37,39 +37,26 @@ map<string, mm::Serialized> mm::model::Drug::serialize() const {
 
 void mm::model::Drug::unserialize(map<string, mm::Serialized> map) {
     using namespace std;
-    const string delimiter = "\n";
-    const string principles_spacer = ": ";
-    size_t pos = 0;
+    const char delimiter = ';';
+    const char active_principle_delimiter = ':';
 
     name = map.at("name").get_str();
     price = (float) map.at("price").get_real();
     pharmaceutical_form = map.at("pharmaceutical_form").get_str();
     ATC_classification = map.at("ATC_classification").get_str();
-    string cont_string = map.at("contraindications");
-    string active_principle_str = map.at("active_principles");
+    istringstream cont_string(map.at("contraindications").get_str());
+    istringstream active_principle_str(map.at("active_principles").get_str());
 
-    while ((pos = cont_string.find(delimiter)) != string::npos) {
-        contraindications.push_back(cont_string.substr(0, pos));
-        cont_string.erase(0, pos + delimiter.length());
+    string tmp;
+    while (getline(cont_string, tmp, delimiter)) {
+        contraindications.push_back(tmp);
     }
 
-    pos = 0;
-
-    while ((pos = active_principle_str.find(delimiter)) != string::npos) {
-        size_t spacer_pos;
-        string actual_principle;
-
-        actual_principle = active_principle_str.substr(0, pos); // until \n
-        spacer_pos = actual_principle.find(principles_spacer);
-
-        active_principles.push_back(
-                {actual_principle.substr(0, spacer_pos),
-                 actual_principle.substr(spacer_pos + principles_spacer.length())});
-
-
-        active_principle_str.erase(0, pos + delimiter.length());
+    while (getline(active_principle_str, tmp, delimiter)) {
+        unsigned long pos = tmp.find(active_principle_delimiter);
+        if (pos == string::npos) active_principles.emplace_back(tmp, "");
+        else active_principles.emplace_back(tmp.substr(0, pos), tmp.substr(pos + 1));
     }
-
 }
 
 string mm::model::Drug::get_table_name() const {
@@ -108,7 +95,6 @@ const vector<pair<string, string>> &mm::model::Drug::get_active_principles() con
 
 const string mm::model::Drug::get_contraindications_as_string() const {
     ostringstream ss;
-    // todo sistemare unserialize o capire perché è vuoto
     if (contraindications.empty()) return "ERROR empty";
     copy(contraindications.begin(), contraindications.end(), ostream_iterator<string>(ss, ", "));
     string ret = ss.str();
@@ -118,7 +104,6 @@ const string mm::model::Drug::get_contraindications_as_string() const {
 
 const string mm::model::Drug::get_active_principles_as_string() const {
     ostringstream ss;
-    // todo sistemare unserialize o capire perché è vuoto
     if (active_principles.empty()) return "ERROR empty";
     for (auto &p : active_principles) {
         ss << p.first << ", " << p.second;
