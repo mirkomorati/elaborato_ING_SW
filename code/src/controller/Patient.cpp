@@ -127,12 +127,10 @@ void mm::controller::Patient::set_drugs_tree_view(const string patient_id) {
         row[drug_tree_model.ATC_classification] = drugs[i].get_ATC_classification();
         row[drug_tree_model.contraindications] = drugs[i].get_contraindications_as_string();
         row[drug_tree_model.active_principles] = drugs[i].get_active_principles_as_string();
-        row[drug_tree_model.price] = std::to_string(drugs[i].get_price());
-
+        row[drug_tree_model.price] = drugs[i].get_price_as_string();
         if (i < drugs.size() - 1)
             row = *(drug_list_store->append()++);
     }
-
 
     patient_view->set_drug_tree_model(drug_tree_model, drug_list_store);
 

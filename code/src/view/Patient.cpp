@@ -66,13 +66,13 @@ void mm::view::Patient::add_patient_show_dialog() {
 void mm::view::Patient::patient_detail_show(Gtk::TreeModel::Row row,
                                             model::Patient::TreeModel &patient_tree_model) {
     auto &refBuilder = RefBuilder::get_instance();
-    Gtk::Entry *detail_first_name;
-    Gtk::Entry *detail_last_name;
-    Gtk::Entry *detail_fiscal_code;
-    Gtk::Entry *detail_health_code;
-    Gtk::Entry *detail_birth_date;
-    Gtk::Entry *detail_birth_place;
-    Gtk::Entry *detail_address;
+    Gtk::Label *detail_first_name;
+    Gtk::Label *detail_last_name;
+    Gtk::Label *detail_fiscal_code;
+    Gtk::Label *detail_health_code;
+    Gtk::Label *detail_birth_date;
+    Gtk::Label *detail_birth_place;
+    Gtk::Label *detail_address;
 
     refBuilder.get_widget("detailFirstName", detail_first_name);
     refBuilder.get_widget("detailLastName", detail_last_name);
@@ -82,13 +82,13 @@ void mm::view::Patient::patient_detail_show(Gtk::TreeModel::Row row,
     refBuilder.get_widget("detailBirthPlace", detail_birth_place);
     refBuilder.get_widget("detailAddress", detail_address);
 
-    detail_first_name->set_text(row[patient_tree_model.first_name]);
-    detail_last_name->set_text(row[patient_tree_model.last_name]);
-    detail_fiscal_code->set_text(row[patient_tree_model.fiscal_code]);
-    detail_health_code->set_text(row[patient_tree_model.health_code]);
-    detail_birth_date->set_text(row[patient_tree_model.birth_date]);
-    detail_birth_place->set_text(row[patient_tree_model.birth_place]);
-    detail_address->set_text(row[patient_tree_model.address]);
+    detail_first_name->set_label(row[patient_tree_model.first_name]);
+    detail_last_name->set_label(row[patient_tree_model.last_name]);
+    detail_fiscal_code->set_label(row[patient_tree_model.fiscal_code]);
+    detail_health_code->set_label(row[patient_tree_model.health_code]);
+    detail_birth_date->set_label(row[patient_tree_model.birth_date]);
+    detail_birth_place->set_label(row[patient_tree_model.birth_place]);
+    detail_address->set_label(row[patient_tree_model.address]);
 }
 
 void mm::view::Patient::set_prescription_tree_model(
@@ -190,6 +190,9 @@ void mm::view::Patient::set_drug_tree_model(mm::model::Drug::TreeModel &drug_tre
     for (int i = 0; i < 6; i++) {
         drug_tree_view->get_column_cell_renderer(
                 i)->property_xalign().set_value(0);
+
+        drug_tree_view->get_column_cell_renderer(i)->set_property("wrap-width", 200);
+        drug_tree_view->get_column_cell_renderer(i)->set_property("wrap-mode", Pango::WrapMode::WRAP_WORD);
     }
 
     drug_tree_view->set_model(drug_list_store);

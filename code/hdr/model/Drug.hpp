@@ -59,6 +59,8 @@ namespace mm {
 
             const string get_active_principles_as_string() const;
 
+            const string get_price_as_string() const;
+
         private:
             string name;
             float price;

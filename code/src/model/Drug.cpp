@@ -6,6 +6,7 @@
 
 #include <sstream>
 #include <iostream>
+#include <iomanip>
 #include "../../hdr/model/Drug.hpp"
 
 
@@ -109,11 +110,17 @@ const string mm::model::Drug::get_active_principles_as_string() const {
         ss << p.first << ", " << p.second;
     }
     string ret = ss.str();
-    ret = ret.substr(0, ret.length() - 2);
+    //ret = ret.substr(0, ret.length() - 2);
     return ret;
 }
 
 mm::model::Drug::Drug() {}
+
+const string mm::model::Drug::get_price_as_string() const {
+    std::stringstream ss;
+    ss << std::setw(2) << price;
+    return ss.str();
+}
 
 mm::model::Drug::TreeModel::TreeModel() {
     add(name);
