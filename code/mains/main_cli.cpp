@@ -3,10 +3,7 @@
 //
 
 #include "../hdr/Configuration.hpp"
-#include "../hdr/DBMaster.hpp"
-#include "../hdr/model/Drug.hpp"
-#include "../hdr/model/Doctor.hpp"
-#include <plog/Log.h>
+#include "../hdr/log.hpp"
 
 using namespace mm;
 using namespace std;
@@ -21,60 +18,11 @@ int main(int argc, char **argv) {
          << endl << "\tdb_name: "
          << config.get<std::string>("db_name") << endl;
 
-    DBMaster::set_db_file_name(config.get<string>("db_name"));
+    LoggerFactory::init(config);
 
-    plog::init(plog::debug, config.get<string>("log_name").c_str());
+    Logger &log = LoggerFactory::get_instance().get_logger("test");
 
-    LOGD << "test di log" << std::endl;
+    log << "proviamo " << 1 << " " << 2.0f << " " << 3.2 << false << endl;
 
-    auto &db = DBMaster::get_instance();
-
-    Drug to_add("loro", 22.4f);
-    to_add.ATC_classification = "testing testing testing";
-    to_add.pharmaceutical_form = "water";
-    to_add.contraindications.push_back("death hello");
-    to_add.contraindications.push_back("test");
-    to_add.active_principles.push_back({"test", "test1"});
-    to_add.active_principles.push_back({"test2", "test3"});
-
-    db.add_to_db(to_add);
-
-    Drug tmp("", 0.f);
-
-    db.extract_from_db(tmp, "loro");
-
-    cout << "name:\t" << tmp.name << "\nprice: " << tmp.price << endl;
-    cout << "active principles: " << endl;
-
-    for (auto &p : tmp.active_principles) {
-        cout << "\t" << p.first << " -> " << p.second << endl;
-    }
-
-    cout << "contraindications: " << endl;
-
-    for (auto &p : tmp.contraindications) {
-        cout << "\t" << p << endl;
-    }
-
-    cout << "pharmaceutical form:\t" << tmp.pharmaceutical_form << endl;
-
-    cout << "ATC classification:\t" << tmp.ATC_classification << endl;
-
-
-    auto table = db.get_table("drugs", 0, 4);
-
-    cout << "uscita: ";
-    for (auto row : table) {
-        cout << row[0] << "\t";
-    }
-    cout << endl;
-
-    Doctor me;
-
-    db.extract_from_db(me, 111);
-
-    cout << "mirko è: " << me.get_fiscal_code() << endl;
-
-    me.get_patients();
-
+    return 0;
 }

@@ -1,4 +1,4 @@
 {
   "db_name": "../database/db.sqlite3",
-  "log_name": "../tmp/log.txt"
+  "log_prefix": "../tmp/log/"
 }
