@@ -9,6 +9,7 @@
 #include "Login.hpp"
 #include "Patient.hpp"
 #include "../view/Main.hpp"
+#include <gdk/gdk.h>
 
 namespace mm {
     namespace view {
@@ -16,6 +17,12 @@ namespace mm {
     }
 
     namespace controller {
+
+        enum StackPage {
+            LOGIN,
+            PATIENT
+        };
+
         class Login;
 
         class Patient;
@@ -38,10 +45,17 @@ namespace mm {
 
             void on_button_logout_clicked();
 
+            StackPage get_actual_page() const;
+
+            void set_actual_page(StackPage actual_page);
+
+            bool key_pressed_handler(GdkEventKey *event);
+
         private:
             controller::Login *login_controller;
             controller::Patient *patient_controller;
             view::Main *main_view;
+            StackPage actual_page;
         };
     }
 }

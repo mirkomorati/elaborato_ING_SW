@@ -43,3 +43,21 @@ void mm::controller::Main::set_doctor(int doctor_id) {
 void mm::controller::Main::on_button_logout_clicked() {
     main_view->change_stack_page(view::LOGIN);
 }
+
+mm::controller::StackPage mm::controller::Main::get_actual_page() const {
+    return actual_page;
+}
+
+void mm::controller::Main::set_actual_page(mm::controller::StackPage actual_page) {
+    Main::actual_page = actual_page;
+}
+
+bool mm::controller::Main::key_pressed_handler(GdkEventKey *event) {
+    if (actual_page == LOGIN) {
+        if (event->keyval == GDK_KEY_Return) {
+            login_controller->login_button_handler();
+            return true;
+        }
+    }
+    return false;
+}

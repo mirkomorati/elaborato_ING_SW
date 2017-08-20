@@ -17,6 +17,8 @@ mm::view::Main::Main(mm::controller::Main &controller)
     //refBuilder.get_widget("logoutButton", logout_menu);
 
     //logout_menu->signal_activate().connect(sigc::mem_fun(controller, &mm::Main::on_button_logout_clicked));
+    window->signal_key_press_event().connect(sigc::mem_fun(controller, &mm::controller::Main::key_pressed_handler),
+                                             false);
 }
 
 Gtk::ApplicationWindow &mm::view::Main::get_app_window() {
@@ -53,10 +55,12 @@ void mm::view::Main::change_stack_page(mm::view::StackPage page) {
             menu_bar->set_visible(false);
             stack->set_visible_child("loginGrid");
             cout << "login page" << endl;
+            controller.set_actual_page(mm::controller::StackPage::LOGIN);
             break;
         case PATIENT:
             menu_bar->set_visible(true);
             stack->set_visible_child("patientPaned");
+            controller.set_actual_page(mm::controller::StackPage::PATIENT);
             break;
     }
 }
