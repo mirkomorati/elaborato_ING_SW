@@ -42,6 +42,7 @@ void mm::controller::Main::set_doctor(int doctor_id) {
 
 void mm::controller::Main::on_button_logout_clicked() {
     main_view->change_stack_page(view::LOGIN);
+    patient_controller->set_doctor(-1);
 }
 
 mm::controller::StackPage mm::controller::Main::get_actual_page() const {

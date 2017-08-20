@@ -521,8 +521,9 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="quitMenu">
                         <property name="label">gtk-quit</property>
+                        <property name="name">quitMenu</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
@@ -627,6 +628,7 @@
             <property name="can_focus">False</property>
             <child>
               <object class="GtkGrid" id="loginGrid">
+                <property name="name">loginGrid</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="halign">center</property>
@@ -758,8 +760,8 @@
                 </child>
               </object>
               <packing>
-                <property name="name">page0</property>
-                <property name="title" translatable="yes">page0</property>
+                <property name="name">loginGrid</property>
+                <property name="title" translatable="yes">loginGrid</property>
               </packing>
             </child>
             <child>

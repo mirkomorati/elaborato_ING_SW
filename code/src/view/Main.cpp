@@ -14,9 +14,9 @@ mm::view::Main::Main(mm::controller::Main &controller)
 
     auto &refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("mainWindow", window);
-    //refBuilder.get_widget("logoutButton", logout_menu);
+    refBuilder.get_widget("quitMenu", logout_menu);
 
-    //logout_menu->signal_activate().connect(sigc::mem_fun(controller, &mm::Main::on_button_logout_clicked));
+    logout_menu->signal_activate().connect(sigc::mem_fun(controller, &mm::controller::Main::on_button_logout_clicked));
     window->signal_key_press_event().connect(sigc::mem_fun(controller, &mm::controller::Main::key_pressed_handler),
                                              false);
 }

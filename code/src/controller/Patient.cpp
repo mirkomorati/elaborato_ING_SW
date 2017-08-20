@@ -30,7 +30,16 @@ void mm::controller::Patient::edit_patient_handler() {
 }
 
 void mm::controller::Patient::set_doctor(int doctor_id) {
-    DBMaster::get_instance().extract_from_db(doctor, doctor_id);
+
+    try {
+        DBMaster::get_instance().extract_from_db(doctor, doctor_id);
+    } catch (record_not_found_error &e) {
+        patient_list_store = Gtk::ListStore::create(patient_tree_model);
+        patient_view->set_patient_tree_model(patient_tree_model, patient_list_store);
+        doctor = model::Doctor();
+        return;
+    }
+
     auto &patients = doctor.get_patients();
 
     patient_list_store = Gtk::ListStore::create(patient_tree_model);
