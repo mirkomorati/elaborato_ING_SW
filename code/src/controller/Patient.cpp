@@ -31,13 +31,18 @@ void mm::controller::Patient::edit_patient_handler() {
 
 void mm::controller::Patient::set_doctor(int doctor_id) {
 
-    try {
-        DBMaster::get_instance().extract_from_db(doctor, doctor_id);
-    } catch (record_not_found_error &e) {
+    if (doctor_id == doctor.get_regional_id()) {
         patient_list_store = Gtk::ListStore::create(patient_tree_model);
         patient_view->set_patient_tree_model(patient_tree_model, patient_list_store);
-        doctor = model::Doctor();
-        return;
+    } else {
+
+        try {
+            DBMaster::get_instance().extract_from_db(doctor, doctor_id);
+        } catch (record_not_found_error &e) {
+            patient_list_store = Gtk::ListStore::create(patient_tree_model);
+            patient_view->set_patient_tree_model(patient_tree_model, patient_list_store);
+            return;
+        }
     }
 
     auto &patients = doctor.get_patients();
@@ -84,7 +89,15 @@ void mm::controller::Patient::row_selected_handler(const Gtk::TreeModel::Path &p
 
 void mm::controller::Patient::set_prescription_tree_view(std::string patient_id) {
     model::Patient patient;
-    DBMaster::get_instance().extract_from_db(patient, patient_id);
+
+    try {
+        DBMaster::get_instance().extract_from_db(patient, patient_id);
+    } catch (record_not_found_error &e) {
+        prescription_list_store = Gtk::ListStore::create(prescription_tree_model);
+        patient_view->set_prescription_tree_model(prescription_tree_model, prescription_list_store);
+        doctor = model::Doctor();
+        return;
+    }
 
     auto &prescriptions = patient.get_prescriptions();
 
@@ -114,7 +127,15 @@ void mm::controller::Patient::set_drugs_tree_view(const string patient_id) {
     std::vector<std::string> drug_ids;
     std::vector<model::Drug> drugs;
     model::Patient patient;
-    DBMaster::get_instance().extract_from_db(patient, patient_id);
+
+    try {
+        DBMaster::get_instance().extract_from_db(patient, patient_id);
+    } catch (record_not_found_error &e) {
+        drug_list_store = Gtk::ListStore::create(drug_tree_model);
+        patient_view->set_drug_tree_model(drug_tree_model, drug_list_store);
+        return;
+    }
+
     auto &prescriptions = patient.get_prescriptions();
 
     for (auto &prescription : prescriptions)
@@ -209,5 +230,11 @@ void mm::controller::Patient::select_date_handler() {
 
 mm::controller::Patient::Patient() {
     select_date_controller.set_view();
+}
+
+void mm::controller::Patient::unselect_patient() {
+    set_doctor(doctor.get_regional_id());
+    set_drugs_tree_view("");
+    set_prescription_tree_view("");
 }
 

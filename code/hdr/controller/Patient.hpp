@@ -44,6 +44,8 @@ namespace mm {
 
             void select_date_handler();
 
+            void unselect_patient();
+
         private:
             view::Patient *patient_view;
             controller::Main *parent;

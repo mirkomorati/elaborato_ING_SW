@@ -2,6 +2,7 @@
 // Created by Noè Murr on 03/07/2017.
 //
 
+#include <iostream>
 #include "../../hdr/controller/Main.hpp"
 
 mm::controller::Main::Main() {
@@ -58,6 +59,10 @@ bool mm::controller::Main::key_pressed_handler(GdkEventKey *event) {
         if (event->keyval == GDK_KEY_Return) {
             login_controller->login_button_handler();
             return true;
+        }
+    } else if (actual_page == PATIENT) {
+        if (event->keyval == GDK_KEY_Escape) {
+            patient_controller->unselect_patient();
         }
     }
     return false;
