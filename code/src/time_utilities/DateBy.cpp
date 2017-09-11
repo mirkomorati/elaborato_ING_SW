@@ -6,3 +6,8 @@
 
 mm::util::DateBy::DateBy(Date date, std::string by) : date(date), by(by) {
 }
+
+std::ostream &mm::util::operator<<(std::ostream &os, const mm::util::DateBy &by) {
+    os << "date: " << by.date << " by: " << by.by;
+    return os;
+}

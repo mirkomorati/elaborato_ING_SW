@@ -6,6 +6,7 @@
 #define ELABORATO_ING_SW_DATEBY_HPP
 
 #include <string>
+#include <ostream>
 #include "Date.hpp"
 
 namespace mm {
@@ -13,9 +14,13 @@ namespace mm {
         struct DateBy {
             DateBy(Date date = {}, std::string by = "");
 
+            friend std::ostream &operator<<(std::ostream &os, const DateBy &by);
+
             Date date;
             std::string by;
         };
+
+        std::ostream &operator<<(std::ostream &os, const DateBy &by);
     }
 }
 
