@@ -30,7 +30,11 @@ void mm::controller::SelectDateDialog::ok_handler() {
     else if (by_year->get_active()) active = "year";
 
     select_date_calendar->get_date(year, month, day);
-    std::cout << "Selected date: " << day << "/" << month << "/" << year << " by " << active << std::endl;
+    std::cout << "Selected date_by: " << day << "/" << month << "/" << year << " by " << active << std::endl;
+
+    date_by = util::DateBy({(int) day, (int) month, (int) year}, active);
+
+    parent->mask_by_selected_date(date_by);
 
     view->dispose_dialog();
 }
@@ -50,4 +54,12 @@ void mm::controller::SelectDateDialog::set_view() {
 
 mm::controller::SelectDateDialog::~SelectDateDialog() {
     delete (view);
+}
+
+mm::util::DateBy mm::controller::SelectDateDialog::get_date() {
+    return date_by;
+}
+
+void mm::controller::SelectDateDialog::set_parent(mm::controller::Patient *parent) {
+    SelectDateDialog::parent = parent;
 }

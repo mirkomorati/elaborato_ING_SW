@@ -11,10 +11,8 @@
  */
 
 
-void mm::Date::get_date() {
-
+mm::util::Date::Date(int day, int month, int year) : day(day), month(month), year(year) {
 }
 
-void mm::Date::set_date() {
-
+mm::util::Date::Date() : day(-1), month(-1), year(-1) {
 }

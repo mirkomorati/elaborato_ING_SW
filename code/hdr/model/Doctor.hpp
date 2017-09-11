@@ -33,11 +33,11 @@ namespace mm {
 
         public:
             vector<model::Prescription> get_prescriptions(Patient patient,
-                                                          Date start, Date end);
+                                                          util::Date start, util::Date end);
 
             vector<model::Prescription> get_prescriptions(model::Drug drug);
 
-            vector<model::Drug> get_drugs(Date start, Date end);
+            vector<model::Drug> get_drugs(util::Date start, util::Date end);
 
             vector<model::Patient> &get_patients();
 

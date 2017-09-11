@@ -70,6 +70,7 @@ void mm::controller::Patient::set_doctor(int doctor_id) {
 
 void mm::controller::Patient::row_selected_handler(const Gtk::TreeModel::Path &path,
                                                    Gtk::TreeViewColumn *column) {
+    auto selection = column->get_tree_view()->get_selection();
     auto iter = patient_list_store->get_iter(path);
     if (iter) {
         Gtk::TreeModel::Row row = *iter;
@@ -80,7 +81,7 @@ void mm::controller::Patient::row_selected_handler(const Gtk::TreeModel::Path &p
                   << ", fiscal code = "
                   << row[patient_tree_model.fiscal_code] << std::endl;
         patient_view->patient_detail_show(row, patient_tree_model);
-
+        selection->unselect_all();
         auto patient_id = static_cast<Glib::ustring>(row[patient_tree_model.health_code]);
         set_prescription_tree_view(patient_id.raw());
         set_drugs_tree_view(patient_id.raw());
@@ -225,16 +226,27 @@ void mm::controller::Patient::on_add_patient_dialog_cancel_handler() {
 }
 
 void mm::controller::Patient::select_date_handler() {
-    select_date_controller.show_dialog();
+    select_date_controller->set_parent(this);
+    select_date_controller->show_dialog();
 }
 
 mm::controller::Patient::Patient() {
-    select_date_controller.set_view();
+    select_date_controller = new SelectDateDialog();
+    select_date_controller->set_view();
 }
 
 void mm::controller::Patient::unselect_patient() {
     set_doctor(doctor.get_regional_id());
     set_drugs_tree_view("");
     set_prescription_tree_view("");
+}
+
+void mm::controller::Patient::mask_by_selected_date(mm::util::DateBy date) {
+    std::cout << "Masking by : " << date.date.day << date.date.month << date.date.year << " by " << date.by
+              << std::endl;
+}
+
+mm::controller::Patient::~Patient() {
+    delete (select_date_controller);
 }
 

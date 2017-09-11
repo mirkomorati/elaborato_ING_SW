@@ -19,7 +19,7 @@ namespace mm {
         int pharmacist_id;
         vector<map<int, bool>> medicines;
         float subtotal;
-        Date date;
+        util::Date date;
         Time time;
         int prescription_id;
     };

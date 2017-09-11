@@ -40,7 +40,7 @@ void mm::view::Patient::set_patient_tree_model(model::Patient::TreeModel &patien
         patient_tree_view->get_column_cell_renderer(
             i)->property_xalign().set_value(0);
     }
-
+    auto selection = patient_tree_view->get_selection();
     patient_tree_view->signal_row_activated().connect(sigc::mem_fun(
             controller, &mm::controller::Patient::row_selected_handler));
 }

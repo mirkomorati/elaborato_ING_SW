@@ -8,15 +8,16 @@
 #define _DATE_H
 
 namespace mm {
-    struct Date {
-        void get_date();
+    namespace util {
+        struct Date {
+            Date(int day, int month, int year);
 
-        void set_date();
+            Date();
 
-    private:
-        int day;
-        int month;
-        int year;
-    };
+            int day;
+            int month;
+            int year;
+        };
+    }
 }
 #endif //_DATE_H

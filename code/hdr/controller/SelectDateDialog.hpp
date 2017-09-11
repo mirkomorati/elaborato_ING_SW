@@ -6,6 +6,8 @@
 #define ELABORATO_ING_SW_SELECTDATEDIALOG_HPP
 
 #include "../view/SelectDateDialog.hpp"
+#include "../time_utilities/DateBy.hpp"
+#include "Patient.hpp"
 
 namespace mm {
     namespace view {
@@ -13,6 +15,8 @@ namespace mm {
     }
 
     namespace controller {
+        class Patient;
+
         class SelectDateDialog {
         public:
             virtual ~SelectDateDialog();
@@ -25,8 +29,14 @@ namespace mm {
 
             void set_view();
 
+            void set_parent(Patient *parent);
+
+            util::DateBy get_date();
+
         private:
+            controller::Patient *parent;
             view::SelectDateDialog *view;
+            util::DateBy date_by;
         };
     }
 }

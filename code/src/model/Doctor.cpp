@@ -43,8 +43,8 @@ string mm::model::Doctor::get_primary_key() const {
 }
 
 vector<mm::model::Prescription>
-mm::model::Doctor::get_prescriptions(mm::model::Patient patient, mm::Date start,
-                                     mm::Date end) {
+mm::model::Doctor::get_prescriptions(mm::model::Patient patient, mm::util::Date start,
+                                     mm::util::Date end) {
     return vector<mm::model::Prescription>();
 }
 
@@ -54,7 +54,7 @@ mm::model::Doctor::get_prescriptions(mm::model::Drug drug) {
 }
 
 vector<mm::model::Drug>
-mm::model::Doctor::get_drugs(mm::Date start, mm::Date end) {
+mm::model::Doctor::get_drugs(mm::util::Date start, mm::util::Date end) {
     return vector<mm::model::Drug>();
 }
 

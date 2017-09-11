@@ -18,7 +18,7 @@ namespace mm {
     private:
         std::string first_name;
         std::string last_name;
-        Date birth_date;
+        util::Date birth_date;
         Address birth_place;
     };
 }
