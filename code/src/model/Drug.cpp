@@ -107,10 +107,9 @@ const string mm::model::Drug::get_active_principles_as_string() const {
     ostringstream ss;
     if (active_principles.empty()) return "ERROR empty";
     for (auto &p : active_principles) {
-        ss << p.first << ", " << p.second;
+        ss << p.first << ", " << p.second << std::endl;
     }
     string ret = ss.str();
-    //ret = ret.substr(0, ret.length() - 2);
     return ret;
 }
 

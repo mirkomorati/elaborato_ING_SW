@@ -188,11 +188,11 @@ void mm::view::Patient::set_drug_tree_model(mm::model::Drug::TreeModel &drug_tre
     drug_tree_view->append_column("Prezzo",
                                   drug_tree_model.price);
     for (int i = 0; i < 6; i++) {
-        drug_tree_view->get_column_cell_renderer(
-                i)->property_xalign().set_value(0);
-
-        drug_tree_view->get_column_cell_renderer(i)->set_property("wrap-width", 200);
-        drug_tree_view->get_column_cell_renderer(i)->set_property("wrap-mode", Pango::WrapMode::WRAP_WORD);
+        drug_tree_view->get_column(i)->set_min_width(100);
+        drug_tree_view->get_column(i)->set_resizable(true);
+        drug_tree_view->get_column_cell_renderer(i)->property_xalign().set_value(0);
+        drug_tree_view->get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
+        drug_tree_view->get_column_cell_renderer(i)->set_property("ellipsize", Pango::EllipsizeMode::ELLIPSIZE_END);
     }
 
     drug_tree_view->set_model(drug_list_store);
