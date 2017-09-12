@@ -38,8 +38,8 @@ string mm::model::Doctor::get_table_name() const {
     return "doctors";
 }
 
-string mm::model::Doctor::get_primary_key() const {
-    return "regional_id";
+vector<string> mm::model::Doctor::get_primary_key() const {
+    return {"regional_id"};
 }
 
 vector<mm::model::Prescription>

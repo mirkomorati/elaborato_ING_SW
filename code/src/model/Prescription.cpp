@@ -66,8 +66,8 @@ string mm::model::Prescription::get_table_name() const {
     return "prescriptions";
 }
 
-string mm::model::Prescription::get_primary_key() const {
-    return "prescription_id";
+vector<string> mm::model::Prescription::get_primary_key() const {
+    return {"prescription_id"};
 }
 
 int mm::model::Prescription::get_patient_id() const {

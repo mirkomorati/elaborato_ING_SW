@@ -37,6 +37,6 @@ string mm::model::authentication::Login::get_table_name() const {
     return "login";
 }
 
-string mm::model::authentication::Login::get_primary_key() const {
-    return "name";
+vector<string> mm::model::authentication::Login::get_primary_key() const {
+    return {"name"};
 }

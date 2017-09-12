@@ -57,8 +57,8 @@ string mm::model::Patient::get_table_name() const {
     return "patients";
 }
 
-string mm::model::Patient::get_primary_key() const {
-    return "health_code";
+vector<string> mm::model::Patient::get_primary_key() const {
+    return {"health_code"};
 }
 
 const string &mm::model::Patient::get_health_code() const {

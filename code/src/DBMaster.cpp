@@ -50,12 +50,19 @@ mm::DBMaster &mm::DBMaster::get_instance() {
 void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
     sqlite3_stmt *stmt;
     std::stringstream ss;
-
+    auto primary_keys = obj.get_primary_key();
 
     // preparing query
     ss << "select count(*) from (select * from " << obj.get_table_name()
-       << " where " << obj.get_primary_key() << "="
-       << obj.serialize()[obj.get_primary_key()] << ");";
+       << " where ";
+
+    for (int i = 0; i < primary_keys.size(); ++i) {
+        ss << primary_keys[i] << " = " << obj.serialize()[primary_keys[i]];
+        if (i + 1 < primary_keys.size()) // there is at least one other key
+            ss << " and ";
+        else // there is no more keys
+            ss << ");";
+    }
 
     if (sqlite3_prepare(db, ss.str().c_str(), -1, &stmt, 0) == SQLITE_OK) {
         if ((sqlite3_step(stmt)) == SQLITE_ROW) {
@@ -71,8 +78,12 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
                     else
                         ss << " ";
                 }
-                ss << " where " << obj.get_primary_key() << "="
-                   << obj.serialize()[obj.get_primary_key()] << ";";
+                ss << " where ";
+                for (int i = 0; i < primary_keys.size(); ++i) {
+                    ss << primary_keys[i] << " = " << obj.serialize()[primary_keys[i]];
+                    if (i + 1 < primary_keys.size()) // there is at least one other key
+                        ss << " and ";
+                }
 
                 sqlite3_finalize(stmt); // previous stmt
 
@@ -136,15 +147,23 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
     sqlite3_finalize(stmt);
 }
 
-void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const Serialized &id) {
+void mm::DBMaster::extract_from_db(mm::ISerializable &obj, initializer_list<Serialized> ids) {
     // query
     std::stringstream query;
     std::map<std::string, Serialized> serialized_map;
     sqlite3_stmt *stmt;
     int col_num = 0;
+    vector<Serialized> primary_keys_values(ids);
+    auto primary_keys = obj.get_primary_key();
+    auto length = (primary_keys_values.size() > primary_keys.size()) ? primary_keys.size() : primary_keys_values.size();
 
-    query << "select * from " << obj.get_table_name()
-          << " where " << obj.get_primary_key() << " = " << id;
+    query << "select * from " << obj.get_table_name() << " where ";
+
+    for (int i = 0; i < length; ++i) {
+        query << primary_keys[i] << " = " << primary_keys_values[i];
+        if (i + 1 < length) // there is at least one other key
+            query << " and ";
+    }
 
     if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
         std::stringstream msg;
@@ -360,6 +379,10 @@ mm::DBMaster::get_rows(string table_name, string id_name, mm::Serialized id) {
     }
 
     return to_return;
+}
+
+void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const mm::Serialized &id) {
+    extract_from_db(obj, {id});
 }
 
 mm::record_not_found_error::record_not_found_error(const char *msg)

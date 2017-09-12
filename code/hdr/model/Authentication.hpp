@@ -24,7 +24,7 @@ namespace mm {
 
                 string get_table_name() const override;
 
-                string get_primary_key() const override;
+                vector<string> get_primary_key() const override;
             };
 
             bool check_login(std::string usr, std::string psw, authentication::Login &account);

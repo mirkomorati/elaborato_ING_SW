@@ -64,8 +64,8 @@ string mm::model::Drug::get_table_name() const {
     return "drugs";
 }
 
-string mm::model::Drug::get_primary_key() const {
-    return "name";
+vector<string> mm::model::Drug::get_primary_key() const {
+    return {"name"};
 }
 
 mm::model::Drug::Drug(const string &name, float price) : name(name), price(price) {}

@@ -58,7 +58,7 @@ namespace mm {
 
             string get_table_name() const override;
 
-            string get_primary_key() const override;
+            vector<string> get_primary_key() const override;
 
             const string &get_fiscal_code() const;
 
