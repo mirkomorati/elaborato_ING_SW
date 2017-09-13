@@ -125,7 +125,6 @@ void mm::controller::Patient::set_prescription_tree_view(std::string patient_id)
 }
 
 void mm::controller::Patient::set_drugs_tree_view(const string patient_id) {
-    std::vector<std::string> drug_ids;
     std::vector<model::Drug> drugs;
     model::Patient patient;
 
@@ -139,14 +138,13 @@ void mm::controller::Patient::set_drugs_tree_view(const string patient_id) {
 
     auto &prescriptions = patient.get_prescriptions();
 
-    for (auto &prescription : prescriptions)
-        for (auto &drug : prescription.get_drug_ids())
-            drug_ids.push_back(drug);
-
-    for (auto &drug : drug_ids) {
-        model::Drug tmp;
-        DBMaster::get_instance().extract_from_db(tmp, drug);
-        drugs.push_back(tmp);
+    for (auto &prescription : prescriptions) {
+        auto drug_ids = prescription.get_drug_ids();
+        for (auto &drug : drug_ids) {
+            model::Drug tmp;
+            DBMaster::get_instance().extract_from_db(tmp, {drug.first, drug.second});
+            drugs.push_back(tmp);
+        }
     }
 
     drug_list_store = Gtk::ListStore::create(drug_tree_model);

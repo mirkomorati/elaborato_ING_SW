@@ -20,9 +20,9 @@ map<string, mm::Serialized> mm::model::Drug::serialize() const {
     map["ATC_classification"] = ATC_classification;
 
     for (auto &it : active_principles) {
-        ss << it.first << ": " << it.second << std::endl;
+        ss << it.first << ":" << it.second << ";";
     }
-
+    ss.seekp(-1, ss.cur);
     map["active_principles"] = ss.str();
 
     ss.str("");
@@ -65,7 +65,7 @@ string mm::model::Drug::get_table_name() const {
 }
 
 vector<string> mm::model::Drug::get_primary_key() const {
-    return {"name"};
+    return {"name", "pharmaceutical_form"};
 }
 
 mm::model::Drug::Drug(const string &name, float price) : name(name), price(price) {}

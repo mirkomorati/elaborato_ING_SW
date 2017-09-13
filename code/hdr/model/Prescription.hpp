@@ -54,7 +54,7 @@ namespace mm {
 
             string get_drug_ids_as_string();
 
-            const vector<string> &get_drug_ids() const;
+            const vector<pair<string, string>> &get_drug_ids() const;
 
             string get_negative_interactions();
 
@@ -67,7 +67,7 @@ namespace mm {
             int prescription_id;
             string issue_date;
             string expire_date;
-            vector<string> drug_ids;
+            vector<pair<string, string>> drug_ids;
             map<string, string> negative_interactions;
             bool used;
             int bill_id; // ?
