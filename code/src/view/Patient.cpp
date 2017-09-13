@@ -200,10 +200,12 @@ void mm::view::Patient::set_drug_tree_model(mm::model::Drug::TreeModel &drug_tre
 
 void mm::view::Patient::unselect_patient() const {
     patient_tree_view->get_selection()->unselect_all();
+    unset_prescription_model();
 }
 
 void mm::view::Patient::unselect_prescription() const {
     prescription_tree_view->get_selection()->unselect_all();
+    unset_drug_model();
 }
 
 void mm::view::Patient::unselect_drug() const {
