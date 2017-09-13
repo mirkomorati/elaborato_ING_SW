@@ -199,21 +199,15 @@ void mm::view::Patient::set_drug_tree_model(mm::model::Drug::TreeModel &drug_tre
 }
 
 void mm::view::Patient::unselect_patient() const {
-    auto select = patient_tree_view->get_selection();
-    if (select->count_selected_rows() > 0)
-        select->unselect(select->get_selected());
+    patient_tree_view->get_selection()->unselect_all();
 }
 
 void mm::view::Patient::unselect_prescription() const {
-    auto select = prescription_tree_view->get_selection();
-    if (select->count_selected_rows() > 0)
-        select->unselect(select->get_selected());
+    prescription_tree_view->get_selection()->unselect_all();
 }
 
 void mm::view::Patient::unselect_drug() const {
-    auto select = drug_tree_view->get_selection();
-    if (select->count_selected_rows() > 0)
-        select->unselect(select->get_selected());
+    drug_tree_view->get_selection()->unselect_all();
 }
 
 void mm::view::Patient::unset_patient_model() const {
