@@ -56,7 +56,7 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
     ss << "select count(*) from (select * from " << obj.get_table_name()
        << " where ";
 
-    for (int i = 0; i < primary_keys.size(); ++i) {
+    for (size_t i = 0; i < primary_keys.size(); ++i) {
         ss << primary_keys[i] << " = " << obj.serialize()[primary_keys[i]];
         if (i + 1 < primary_keys.size()) // there is at least one other key
             ss << " and ";
@@ -79,7 +79,7 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
                         ss << " ";
                 }
                 ss << " where ";
-                for (int i = 0; i < primary_keys.size(); ++i) {
+                for (size_t i = 0; i < primary_keys.size(); ++i) {
                     ss << primary_keys[i] << " = " << obj.serialize()[primary_keys[i]];
                     if (i + 1 < primary_keys.size()) // there is at least one other key
                         ss << " and ";
@@ -159,7 +159,7 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, initializer_list<Seri
 
     query << "select * from " << obj.get_table_name() << " where ";
 
-    for (int i = 0; i < length; ++i) {
+    for (size_t i = 0; i < length; ++i) {
         query << primary_keys[i] << " = " << primary_keys_values[i];
         if (i + 1 < length) // there is at least one other key
             query << " and ";
