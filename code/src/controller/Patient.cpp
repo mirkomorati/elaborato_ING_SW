@@ -32,15 +32,13 @@ void mm::controller::Patient::edit_patient_handler() {
 void mm::controller::Patient::set_doctor(int doctor_id) {
 
     if (doctor_id == doctor.get_regional_id()) {
-        patient_list_store = Gtk::ListStore::create(patient_tree_model);
-        patient_view->set_patient_tree_model(patient_tree_model, patient_list_store);
+        patient_view->unset_patient_model();
     } else {
 
         try {
             DBMaster::get_instance().extract_from_db(doctor, doctor_id);
         } catch (record_not_found_error &e) {
-            patient_list_store = Gtk::ListStore::create(patient_tree_model);
-            patient_view->set_patient_tree_model(patient_tree_model, patient_list_store);
+            patient_view->unset_patient_model();
             return;
         }
     }
@@ -94,8 +92,7 @@ void mm::controller::Patient::set_prescription_tree_view(std::string patient_id)
     try {
         DBMaster::get_instance().extract_from_db(patient, patient_id);
     } catch (record_not_found_error &e) {
-        prescription_list_store = Gtk::ListStore::create(prescription_tree_model);
-        patient_view->set_prescription_tree_model(prescription_tree_model, prescription_list_store);
+        patient_view->unset_prescription_model();
         doctor = model::Doctor();
         return;
     }
@@ -131,8 +128,7 @@ void mm::controller::Patient::set_drugs_tree_view(const string patient_id) {
     try {
         DBMaster::get_instance().extract_from_db(patient, patient_id);
     } catch (record_not_found_error &e) {
-        drug_list_store = Gtk::ListStore::create(drug_tree_model);
-        patient_view->set_drug_tree_model(drug_tree_model, drug_list_store);
+        patient_view->unset_drug_model();
         return;
     }
 
@@ -234,9 +230,9 @@ mm::controller::Patient::Patient() {
 }
 
 void mm::controller::Patient::unselect_patient() {
-    set_doctor(doctor.get_regional_id());
-    set_drugs_tree_view("");
-    set_prescription_tree_view("");
+    patient_view->unselect_patient();
+    patient_view->unselect_prescription();
+    patient_view->unselect_drug();
 }
 
 void mm::controller::Patient::mask_by_selected_date(mm::util::DateBy date) {

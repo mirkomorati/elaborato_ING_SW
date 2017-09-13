@@ -197,3 +197,39 @@ void mm::view::Patient::set_drug_tree_model(mm::model::Drug::TreeModel &drug_tre
 
     drug_tree_view->set_model(drug_list_store);
 }
+
+void mm::view::Patient::unselect_patient() const {
+    auto select = patient_tree_view->get_selection();
+    if (select->count_selected_rows() > 0)
+        select->unselect(select->get_selected());
+}
+
+void mm::view::Patient::unselect_prescription() const {
+    auto select = prescription_tree_view->get_selection();
+    if (select->count_selected_rows() > 0)
+        select->unselect(select->get_selected());
+}
+
+void mm::view::Patient::unselect_drug() const {
+    auto select = drug_tree_view->get_selection();
+    if (select->count_selected_rows() > 0)
+        select->unselect(select->get_selected());
+}
+
+void mm::view::Patient::unset_patient_model() const {
+    patient_tree_view->unset_model();
+    patient_tree_view->remove_all_columns();
+}
+
+void mm::view::Patient::unset_prescription_model() const {
+    prescription_tree_view->unset_model();
+    prescription_tree_view->remove_all_columns();
+}
+
+void mm::view::Patient::unset_drug_model() const {
+    drug_tree_view->unset_model();
+    drug_tree_view->remove_all_columns();
+}
+
+
+
