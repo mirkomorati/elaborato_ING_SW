@@ -45,12 +45,30 @@ vector<string> mm::model::Doctor::get_primary_key() const {
 vector<mm::model::Prescription>
 mm::model::Doctor::get_prescriptions(mm::model::Patient patient, mm::util::Date start,
                                      mm::util::Date end) {
-    return vector<mm::model::Prescription>();
+    /* todo aggiungere un operatore di uguaglianza a patient per poter stabilire se il paziente è
+     * effettivamente del medico
+     * */
+
+    // not need to interact with db
+    vector<Prescription> to_ret;
+    for (auto &pr : patient.get_prescriptions()) {
+        mm::util::Date tmp_date;
+        tmp_date.set_from_str(pr.get_issue_date());
+        if (tmp_date >= start and tmp_date <= end) {
+            to_ret.push_back(pr);
+        }
+    }
+
+    return to_ret;
 }
 
 vector<mm::model::Prescription>
 mm::model::Doctor::get_prescriptions(mm::model::Drug drug) {
-    return vector<mm::model::Prescription>();
+    vector<Prescription> to_ret;
+
+    // todo aggiungere un operatore di uguaglianza a Drug per poterli confrontare.
+    // N.B. qui è necessario un accesso al db.
+    return to_ret;
 }
 
 vector<mm::model::Drug>

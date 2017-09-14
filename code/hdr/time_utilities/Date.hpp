@@ -18,6 +18,20 @@ namespace mm {
 
             friend std::ostream &operator<<(std::ostream &os, const Date &date);
 
+            void set_from_str(std::string str);
+
+            bool operator==(const Date &rhs) const;
+
+            bool operator!=(const Date &rhs) const;
+
+            bool operator<(const Date &rhs) const;
+
+            bool operator>(const Date &rhs) const;
+
+            bool operator<=(const Date &rhs) const;
+
+            bool operator>=(const Date &rhs) const;
+
             int day;
             int month;
             int year;

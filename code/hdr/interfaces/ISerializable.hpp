@@ -24,7 +24,7 @@ namespace mm {
     enum StoredTypes {
         INTEGER,  // mapped to an int
         REAL,     // mapped to a double
-        TEXT      // mapped to a std::string
+        TEXT      // mapped to a std::str
     };
 
     /**

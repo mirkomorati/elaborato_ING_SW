@@ -303,7 +303,7 @@ mm::DBMaster::get_table(string name, unsigned int limit, unsigned int offset) {
 }
 
 /*vector<vector<mm::Serialized, allocator<mm::Serialized>>, allocator<vector<mm::Serialized, allocator<mm::Serialized>>>>
-mm::DBMaster::get_table(string name) {
+mm::DBMaster::get_table(str name) {
     return get_table(name, 0, 0);
 }*/
 

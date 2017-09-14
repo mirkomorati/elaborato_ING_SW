@@ -39,8 +39,7 @@ namespace mm {
 
             void edit_patient_handler();
 
-            void row_selected_handler(const Gtk::TreeModel::Path &path,
-                                      Gtk::TreeViewColumn *column);
+            void row_selected_handler(const Gtk::TreeModel::Path &path, Gtk::TreeViewColumn *column);
 
             void on_add_patient_dialog_ok_handler();
 
@@ -64,7 +63,7 @@ namespace mm {
             model::Drug::TreeModel drug_tree_model;
             controller::SelectDateDialog *select_date_controller;
 
-            void set_drugs_tree_view(const string patient_id);
+            void set_drugs_tree_view(const string &patient_id);
         };
     }
 }

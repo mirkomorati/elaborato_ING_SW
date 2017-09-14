@@ -121,7 +121,7 @@ void mm::controller::Patient::set_prescription_tree_view(std::string patient_id)
                                               prescription_list_store);
 }
 
-void mm::controller::Patient::set_drugs_tree_view(const string patient_id) {
+void mm::controller::Patient::set_drugs_tree_view(const string &patient_id) {
     std::vector<model::Drug> drugs;
     model::Patient patient;
 
