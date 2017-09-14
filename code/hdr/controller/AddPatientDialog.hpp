@@ -6,6 +6,7 @@
 #define ELABORATO_ING_SW_ADDPATIENTDIALOG_HPP
 
 #include "../view/AddPatientDialog.hpp"
+#include "SelectDateDialog.hpp"
 #include "Patient.hpp"
 
 namespace mm {
@@ -25,6 +26,10 @@ namespace mm {
             void ok_handler();
 
             void cancel_handler();
+
+            void select_birth_date_handler();
+
+            void select_birth_date_get_date(util::Date date);
 
             void set_view();
 

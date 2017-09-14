@@ -1,5 +1,5 @@
 //
-// Created by Mirko Morati on 03/08/17.
+// Created by Mirko Morati on 14/09/17.
 //
 
 #ifndef ELABORATO_ING_SW_SELECTDATEDIALOGVIEW_HPP
@@ -25,4 +25,4 @@ namespace mm {
 }
 
 
-#endif //ELABORATO_ING_SW_SELECTDATEDIALOGVIEW_HPP
+#endif //ELABORATO_ING_SW_SELECTDATEDIALOG_HPP

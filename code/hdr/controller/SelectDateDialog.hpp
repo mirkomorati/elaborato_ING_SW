@@ -1,13 +1,13 @@
 //
-// Created by Mirko Morati on 03/08/17.
+// Created by Mirko Morati on 14/09/17.
 //
 
 #ifndef ELABORATO_ING_SW_SELECTDATEDIALOG_HPP
 #define ELABORATO_ING_SW_SELECTDATEDIALOG_HPP
 
 #include "../view/SelectDateDialog.hpp"
-#include "../time_utilities/DateBy.hpp"
-#include "Patient.hpp"
+#include "../time_utilities/Date.hpp"
+#include "AddPatientDialog.hpp"
 
 namespace mm {
     namespace view {
@@ -15,7 +15,7 @@ namespace mm {
     }
 
     namespace controller {
-        class Patient;
+        class AddPatientDialog;
 
         class SelectDateDialog {
         public:
@@ -29,14 +29,15 @@ namespace mm {
 
             void set_view();
 
-            void set_parent(Patient *parent);
+            // todo: questa funzione deve essere polimorfica
+            void set_parent(AddPatientDialog *parent);
 
-            util::DateBy get_date();
+            util::Date get_date();
 
         private:
-            controller::Patient *parent;
+            controller::AddPatientDialog *parent;
             view::SelectDateDialog *view;
-            util::DateBy date_by;
+            util::Date date;
         };
     }
 }

@@ -20,6 +20,8 @@ namespace mm {
 
             void set_from_str(std::string str);
 
+            const std::string get_text();
+
             bool operator==(const Date &rhs) const;
 
             bool operator!=(const Date &rhs) const;

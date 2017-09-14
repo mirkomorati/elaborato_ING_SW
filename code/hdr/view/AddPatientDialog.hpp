@@ -5,7 +5,7 @@
 #ifndef ELABORATO_ING_SW_ADDPATIENTDIALOGVIEW_HPP
 #define ELABORATO_ING_SW_ADDPATIENTDIALOGVIEW_HPP
 
-#include "../controller/SelectDateDialog.hpp"
+#include "../controller/SelectDateByDialog.hpp"
 
 namespace mm {
     namespace controller {

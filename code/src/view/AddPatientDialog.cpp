@@ -23,14 +23,19 @@ void mm::view::AddPatientDialog::dispose_dialog() {
 void mm::view::AddPatientDialog::set_controller(mm::controller::AddPatientDialog *controller) {
     Gtk::Button *ok_button;
     Gtk::Button *cancel_button;
+    Gtk::Button *add_birth_date;
     auto ref_builder = RefBuilder::get_instance();
 
     ref_builder.get_widget("addPatientOk", ok_button);
     ref_builder.get_widget("addPatientCancel", cancel_button);
+    ref_builder.get_widget("addBirthDate", add_birth_date);
 
     ok_button->signal_clicked().connect(sigc::mem_fun(controller,
                                                       &mm::controller::AddPatientDialog::ok_handler));
     cancel_button->signal_clicked().connect(sigc::mem_fun(controller,
                                                           &mm::controller::AddPatientDialog::cancel_handler));
+    add_birth_date->signal_clicked().connect(sigc::mem_fun(controller,
+                                                           &mm::controller::AddPatientDialog::select_birth_date_handler));
+
 }
 

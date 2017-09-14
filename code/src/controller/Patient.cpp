@@ -166,7 +166,7 @@ void mm::controller::Patient::select_date_handler() {
 }
 
 mm::controller::Patient::Patient() {
-    select_date_controller = new SelectDateDialog();
+    select_date_controller = new SelectDateByDialog();
     add_patient_controller = new AddPatientDialog();
     select_date_controller->set_view();
     add_patient_controller->set_view();

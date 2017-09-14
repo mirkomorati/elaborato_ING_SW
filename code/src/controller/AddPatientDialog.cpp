@@ -6,6 +6,7 @@
 #include "../../hdr/RefBuilder.hpp"
 #include "../../hdr/controller/AddPatientDialog.hpp"
 #include "../../hdr/DBMaster.hpp"
+#include "../../hdr/controller/SelectDateDialog.hpp"
 
 void mm::controller::AddPatientDialog::ok_handler() {
     auto &refBuilder = RefBuilder::get_instance();
@@ -18,7 +19,7 @@ void mm::controller::AddPatientDialog::ok_handler() {
     Gtk::Entry *last_name;
     Gtk::Entry *fiscal_code;
     Gtk::Entry *health_code;
-    Gtk::Entry *birth_date;
+    Gtk::Button *birth_date;
     Gtk::Entry *street;
     Gtk::Entry *civic;
     Gtk::Entry *zip_code;
@@ -44,7 +45,7 @@ void mm::controller::AddPatientDialog::ok_handler() {
     patient.set_last_name(last_name->get_text());
     patient.set_fiscal_code(fiscal_code->get_text());
     patient.set_health_code(health_code->get_text());
-    patient.set_birth_date(birth_date->get_text());
+    patient.set_birth_date(birth_date->get_label());
 
     address << street->get_text() << " " << civic->get_text() << ", " << zip_code->get_text() << ", "
             << city->get_text() << ", " << country->get_text();
@@ -80,4 +81,17 @@ mm::controller::AddPatientDialog::~AddPatientDialog() {
 
 void mm::controller::AddPatientDialog::set_parent(mm::controller::Patient *parent) {
     AddPatientDialog::parent = parent;
+}
+
+void mm::controller::AddPatientDialog::select_birth_date_handler() {
+    mm::controller::SelectDateDialog *select_date_controller = new mm::controller::SelectDateDialog();
+    select_date_controller->set_view();
+    select_date_controller->set_parent(this);
+    select_date_controller->show_dialog();
+}
+
+void mm::controller::AddPatientDialog::select_birth_date_get_date(util::Date date) {
+    Gtk::Button *add_birth_date;
+    RefBuilder::get_instance().get_widget("addBirthDate", add_birth_date);
+    add_birth_date->set_label(date.get_text());
 }

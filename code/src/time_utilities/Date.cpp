@@ -73,3 +73,10 @@ bool mm::util::Date::operator>=(const mm::util::Date &rhs) const {
         }
     }
 }
+
+const std::string mm::util::Date::get_text() {
+    using namespace std;
+    stringstream ss;
+    ss << day << "/" << month << "/" << year;
+    return ss.str();
+}

@@ -8,7 +8,7 @@
 #include "../view/Patient.hpp"
 #include "Main.hpp"
 #include "../model/Doctor.hpp"
-#include "SelectDateDialog.hpp"
+#include "SelectDateByDialog.hpp"
 #include "AddPatientDialog.hpp"
 
 namespace mm {
@@ -17,7 +17,8 @@ namespace mm {
     }
     namespace controller {
         class Main;
-        class SelectDateDialog;
+
+        class SelectDateByDialog;
 
         class AddPatientDialog;
 
@@ -61,7 +62,7 @@ namespace mm {
             Glib::RefPtr<Gtk::ListStore> prescription_list_store;
             Glib::RefPtr<Gtk::ListStore> drug_list_store;
             model::Drug::TreeModel drug_tree_model;
-            controller::SelectDateDialog *select_date_controller;
+            controller::SelectDateByDialog *select_date_controller;
             controller::AddPatientDialog *add_patient_controller;
 
             void set_drugs_tree_view(const string &patient_id);
