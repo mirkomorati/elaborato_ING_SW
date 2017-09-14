@@ -10,34 +10,27 @@
 #include "Patient.hpp"
 
 namespace mm {
-    namespace view {
-        class AddPatientDialog;
-    }
-
     namespace controller {
         class Patient;
 
-        class AddPatientDialog {
+        class AddPatientDialog : public controller::Dialog {
         public:
             virtual ~AddPatientDialog();
-
-            void show_dialog();
 
             void ok_handler();
 
             void cancel_handler();
 
+            void set_view();
+
             void select_birth_date_handler();
 
             void select_birth_date_get_date(util::Date date);
-
-            void set_view();
 
             void set_parent(Patient *parent);
 
         private:
             controller::Patient *parent;
-            view::AddPatientDialog *view;
         };
     }
 }

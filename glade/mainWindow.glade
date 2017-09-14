@@ -209,7 +209,7 @@
                       <object class="GtkEntry" id="addBirthCountry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="width_chars">2</property>
+                        <property name="width_chars">4</property>
                       </object>
                       <packing>
                         <property name="left_attach">2</property>
@@ -354,7 +354,7 @@
                       <object class="GtkEntry" id="addCountry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="width_chars">2</property>
+                        <property name="width_chars">4</property>
                       </object>
                       <packing>
                         <property name="left_attach">2</property>
@@ -649,6 +649,7 @@
     <property name="title" translatable="yes">MED-H</property>
     <property name="default_width">1024</property>
     <property name="default_height">720</property>
+    <property name="gravity">center</property>
     <child>
       <object class="GtkBox" id="box1">
         <property name="name">box</property>
@@ -816,6 +817,7 @@
           <object class="GtkStack" id="mainStack">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="transition_type">slide-up-down</property>
             <child>
               <object class="GtkGrid" id="loginGrid">
                 <property name="name">loginGrid</property>

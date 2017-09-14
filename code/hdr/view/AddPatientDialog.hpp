@@ -6,20 +6,13 @@
 #define ELABORATO_ING_SW_ADDPATIENTDIALOGVIEW_HPP
 
 #include "../controller/SelectDateByDialog.hpp"
+#include "Dialog.hpp"
 
 namespace mm {
-    namespace controller {
-        class AddPatientDialog;
-    }
-
     namespace view {
-        class AddPatientDialog {
+        class AddPatientDialog : public view::Dialog {
         public:
-            void set_controller(controller::AddPatientDialog *controller);
-
-            void show_dialog();
-
-            void dispose_dialog();
+            AddPatientDialog();
         };
     }
 }

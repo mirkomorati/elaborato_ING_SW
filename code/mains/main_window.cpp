@@ -22,6 +22,7 @@ int main(int argc, char **argv) {
 
     controller::Main mc;
     mc.setup();
+    if (mc.get_main_window().set_icon_from_file("../glade/icon.png")) cout << "ICON SET" << std::endl;
     app->run(mc.get_main_window());
 
     return 0;

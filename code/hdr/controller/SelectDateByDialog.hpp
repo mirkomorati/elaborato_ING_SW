@@ -10,18 +10,12 @@
 #include "Patient.hpp"
 
 namespace mm {
-    namespace view {
-        class SelectDateByDialog;
-    }
-
     namespace controller {
         class Patient;
 
-        class SelectDateByDialog {
+        class SelectDateByDialog : public controller::Dialog {
         public:
-            virtual ~SelectDateByDialog();
-
-            void show_dialog();
+            ~SelectDateByDialog();
 
             void ok_handler();
 
@@ -35,7 +29,6 @@ namespace mm {
 
         private:
             controller::Patient *parent;
-            view::SelectDateByDialog *view;
             util::DateBy date_by;
         };
     }
