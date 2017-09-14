@@ -147,6 +147,15 @@ int mm::model::Patient::get_doctor_id() const {
     return doctor_id;
 }
 
+bool mm::model::Patient::operator==(const mm::model::Patient &rhs) const {
+    return static_cast<const ISerializable &>(*this) == static_cast<const ISerializable &>(rhs) &&
+           health_code == rhs.health_code;
+}
+
+bool mm::model::Patient::operator!=(const mm::model::Patient &rhs) const {
+    return !(rhs == *this);
+}
+
 mm::model::Patient::TreeModel::TreeModel() {
     add(first_name);
     add(last_name);

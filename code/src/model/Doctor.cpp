@@ -45,11 +45,11 @@ vector<string> mm::model::Doctor::get_primary_key() const {
 vector<mm::model::Prescription>
 mm::model::Doctor::get_prescriptions(mm::model::Patient patient, mm::util::Date start,
                                      mm::util::Date end) {
-    /* todo aggiungere un operatore di uguaglianza a patient per poter stabilire se il paziente è
-     * effettivamente del medico
-     * */
 
-    // not need to interact with db
+    if (std::find(patients.begin(), patients.end(), patient) == patients.end()) {
+        throw std::invalid_argument("the patients does not belong to the doctor");
+    }
+
     vector<Prescription> to_ret;
     for (auto &pr : patient.get_prescriptions()) {
         mm::util::Date tmp_date;
