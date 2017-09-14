@@ -9,6 +9,7 @@
 #include "Main.hpp"
 #include "../model/Doctor.hpp"
 #include "SelectDateDialog.hpp"
+#include "AddPatientDialog.hpp"
 
 namespace mm {
     namespace view {
@@ -16,8 +17,9 @@ namespace mm {
     }
     namespace controller {
         class Main;
-
         class SelectDateDialog;
+
+        class AddPatientDialog;
 
         class Patient {
         public:
@@ -31,6 +33,8 @@ namespace mm {
 
             void set_doctor(int doctor_id);
 
+            model::Doctor get_doctor();
+
             void set_prescription_tree_view(std::string patient_id);
 
             void add_patient_handler();
@@ -40,10 +44,6 @@ namespace mm {
             void edit_patient_handler();
 
             void row_selected_handler(const Gtk::TreeModel::Path &path, Gtk::TreeViewColumn *column);
-
-            void on_add_patient_dialog_ok_handler();
-
-            void on_add_patient_dialog_cancel_handler();
 
             void select_date_handler();
 
@@ -62,6 +62,7 @@ namespace mm {
             Glib::RefPtr<Gtk::ListStore> drug_list_store;
             model::Drug::TreeModel drug_tree_model;
             controller::SelectDateDialog *select_date_controller;
+            controller::AddPatientDialog *add_patient_controller;
 
             void set_drugs_tree_view(const string &patient_id);
         };

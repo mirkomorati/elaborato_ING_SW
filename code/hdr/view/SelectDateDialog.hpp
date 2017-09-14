@@ -20,8 +20,6 @@ namespace mm {
             void show_dialog();
 
             void dispose_dialog();
-
-        private:
         };
     }
 }

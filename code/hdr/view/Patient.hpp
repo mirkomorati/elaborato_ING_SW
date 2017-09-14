@@ -47,11 +47,6 @@ namespace mm {
 
             void unselect_drug() const;
 
-
-            void add_patient_show_dialog();
-
-            void dispose_add_patient_dialog();
-
             void patient_detail_show(Gtk::TreeModel::Row row,
                                      model::Patient::TreeModel &patient_tree_model);
 
@@ -63,7 +58,6 @@ namespace mm {
             Gtk::TreeView *patient_tree_view;
             Gtk::TreeView *prescription_tree_view;
             Gtk::TreeView *drug_tree_view;
-            Gtk::Grid *patient_detail;
         };
     }
 }

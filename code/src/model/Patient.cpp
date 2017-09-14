@@ -148,8 +148,7 @@ int mm::model::Patient::get_doctor_id() const {
 }
 
 bool mm::model::Patient::operator==(const mm::model::Patient &rhs) const {
-    return static_cast<const ISerializable &>(*this) == static_cast<const ISerializable &>(rhs) &&
-           health_code == rhs.health_code;
+    return health_code == rhs.health_code;
 }
 
 bool mm::model::Patient::operator!=(const mm::model::Patient &rhs) const {

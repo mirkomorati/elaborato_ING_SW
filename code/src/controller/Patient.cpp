@@ -16,17 +16,16 @@ void mm::controller::Patient::set_parent(mm::controller::Main *parent) {
 }
 
 void mm::controller::Patient::add_patient_handler() {
-    std::cout << "Add Patient Click" << std::endl;
-    patient_view->add_patient_show_dialog();
+    add_patient_controller->set_parent(this);
+    add_patient_controller->show_dialog();
 }
 
 void mm::controller::Patient::remove_patient_handler() {
-    std::cout << "Remove Patient Click" << std::endl;
 
 }
 
 void mm::controller::Patient::edit_patient_handler() {
-    std::cout << "Edit Patient Click" << std::endl;
+
 }
 
 void mm::controller::Patient::set_doctor(int doctor_id) {
@@ -161,64 +160,6 @@ void mm::controller::Patient::set_drugs_tree_view(const string &patient_id) {
 
 }
 
-void mm::controller::Patient::on_add_patient_dialog_ok_handler() {
-    auto &refBuilder = RefBuilder::get_instance();
-    model::Patient patient;
-    stringstream address;
-    stringstream birth_address;
-
-    // fields
-    Gtk::Entry *first_name;
-    Gtk::Entry *last_name;
-    Gtk::Entry *fiscal_code;
-    Gtk::Entry *health_code;
-    Gtk::Entry *birth_date;
-    Gtk::Entry *street;
-    Gtk::Entry *civic;
-    Gtk::Entry *zip_code;
-    Gtk::Entry *city;
-    Gtk::Entry *country;
-    Gtk::Entry *birth_city;
-    Gtk::Entry *birth_country;
-
-    refBuilder.get_widget("addFirstName", first_name);
-    refBuilder.get_widget("addLastName", last_name);
-    refBuilder.get_widget("addFiscalCode", fiscal_code);
-    refBuilder.get_widget("addHealthCode", health_code);
-    refBuilder.get_widget("addBirthDate", birth_date);
-    refBuilder.get_widget("addBirthCity", birth_city);
-    refBuilder.get_widget("addBirthCountry", birth_country);
-    refBuilder.get_widget("addStreetAddress", street);
-    refBuilder.get_widget("addCivic", civic);
-    refBuilder.get_widget("addZipCode", zip_code);
-    refBuilder.get_widget("addCity", city);
-    refBuilder.get_widget("addCountry", country);
-
-    patient.set_first_name(first_name->get_text());
-    patient.set_last_name(last_name->get_text());
-    patient.set_fiscal_code(fiscal_code->get_text());
-    patient.set_health_code(health_code->get_text());
-    patient.set_birth_date(birth_date->get_text());
-
-    address << street->get_text() << " " << civic->get_text() << ", " << zip_code->get_text() << ", "
-            << city->get_text() << ", " << country->get_text();
-
-    birth_address << birth_city->get_text() << ", "
-                  << birth_country->get_text();
-
-    patient.set_address(address.str());
-    patient.set_doctor_id(doctor.get_regional_id());
-
-    DBMaster::get_instance().add_to_db(patient);
-
-    patient_view->dispose_add_patient_dialog();
-
-}
-
-void mm::controller::Patient::on_add_patient_dialog_cancel_handler() {
-    patient_view->dispose_add_patient_dialog();
-}
-
 void mm::controller::Patient::select_date_handler() {
     select_date_controller->set_parent(this);
     select_date_controller->show_dialog();
@@ -226,7 +167,9 @@ void mm::controller::Patient::select_date_handler() {
 
 mm::controller::Patient::Patient() {
     select_date_controller = new SelectDateDialog();
+    add_patient_controller = new AddPatientDialog();
     select_date_controller->set_view();
+    add_patient_controller->set_view();
 }
 
 void mm::controller::Patient::unselect_patient() {
@@ -242,5 +185,10 @@ void mm::controller::Patient::mask_by_selected_date(mm::util::DateBy date) {
 
 mm::controller::Patient::~Patient() {
     delete (select_date_controller);
+    delete (add_patient_controller);
+}
+
+mm::model::Doctor mm::controller::Patient::get_doctor() {
+    return doctor;
 }
 

@@ -126,8 +126,7 @@ bool mm::model::Drug::operator!=(const mm::model::Drug &rhs) const {
 }
 
 bool mm::model::Drug::operator==(const mm::model::Drug &rhs) const {
-    return static_cast<const ISerializable &>(*this) == static_cast<const ISerializable &>(rhs) &&
-           name == rhs.name && pharmaceutical_form == rhs.pharmaceutical_form;
+    return name == rhs.name && pharmaceutical_form == rhs.pharmaceutical_form;
 }
 
 mm::model::Drug::TreeModel::TreeModel() {

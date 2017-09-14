@@ -28,7 +28,6 @@ mm::view::Patient::Patient(mm::controller::Patient *controller) : controller(con
 
 void mm::view::Patient::set_patient_tree_model(model::Patient::TreeModel &patient_tree_model,
                                                Glib::RefPtr<Gtk::ListStore> patient_list_store) {
-
     RefBuilder::get_instance().get_widget("patientTreeView", patient_tree_view);
 
     patient_tree_view->append_column("Nome", patient_tree_model.first_name);
@@ -43,24 +42,6 @@ void mm::view::Patient::set_patient_tree_model(model::Patient::TreeModel &patien
     auto selection = patient_tree_view->get_selection();
     patient_tree_view->signal_row_activated().connect(sigc::mem_fun(
             controller, &mm::controller::Patient::row_selected_handler));
-}
-
-void mm::view::Patient::add_patient_show_dialog() {
-    Gtk::Dialog *add_patient_dialog;
-    Gtk::Button *ok_button;
-    Gtk::Button *cancel_button;
-    auto ref_builder = RefBuilder::get_instance();
-    ref_builder.get_widget("addPatientDialog",
-                                          add_patient_dialog);
-    ref_builder.get_widget("addPatientOk", ok_button);
-    ref_builder.get_widget("addPatientCancel", cancel_button);
-
-    add_patient_dialog->show();
-
-    ok_button->signal_clicked().connect(sigc::mem_fun(controller,
-                                                      &mm::controller::Patient::on_add_patient_dialog_ok_handler));
-    cancel_button->signal_clicked().connect(sigc::mem_fun(controller,
-                                                          &mm::controller::Patient::on_add_patient_dialog_cancel_handler));
 }
 
 void mm::view::Patient::patient_detail_show(Gtk::TreeModel::Row row,
@@ -123,54 +104,6 @@ void mm::view::Patient::set_prescription_tree_model(
     }
 
     prescription_tree_view->set_model(prescription_list_store);
-}
-
-void mm::view::Patient::dispose_add_patient_dialog() {
-    Gtk::Dialog *add_patient_dialog;
-    auto &refBuilder = RefBuilder::get_instance();
-
-    refBuilder.get_widget("addPatientDialog",
-                          add_patient_dialog);
-    Gtk::Entry *first_name;
-    Gtk::Entry *last_name;
-    Gtk::Entry *fiscal_code;
-    Gtk::Entry *health_code;
-    Gtk::Entry *birth_date;
-    Gtk::Entry *street;
-    Gtk::Entry *civic;
-    Gtk::Entry *zip_code;
-    Gtk::Entry *city;
-    Gtk::Entry *country;
-    Gtk::Entry *birth_city;
-    Gtk::Entry *birth_country;
-
-    refBuilder.get_widget("addFirstName", first_name);
-    refBuilder.get_widget("addLastName", last_name);
-    refBuilder.get_widget("addFiscalCode", fiscal_code);
-    refBuilder.get_widget("addHealthCode", health_code);
-    refBuilder.get_widget("addBirthDate", birth_date);
-    refBuilder.get_widget("addCity", birth_city);
-    refBuilder.get_widget("addCountry", birth_country);
-    refBuilder.get_widget("addStreetAddress", street);
-    refBuilder.get_widget("addCivic", civic);
-    refBuilder.get_widget("addZipCode", zip_code);
-    refBuilder.get_widget("addCity", city);
-    refBuilder.get_widget("addCountry", country);
-
-    first_name->set_text("");
-    last_name->set_text("");
-    fiscal_code->set_text("");
-    health_code->set_text("");
-    birth_date->set_text("");
-    street->set_text("");
-    civic->set_text("");
-    zip_code->set_text("");
-    city->set_text("");
-    country->set_text("");
-    birth_city->set_text("");
-    birth_country->set_text("");
-
-    add_patient_dialog->close();
 }
 
 void mm::view::Patient::set_drug_tree_model(mm::model::Drug::TreeModel &drug_tree_model,
