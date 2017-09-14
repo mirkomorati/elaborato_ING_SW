@@ -114,8 +114,12 @@ void mm::view::Patient::set_prescription_tree_model(
     prescription_tree_view->append_column("Usata",
                                           prescription_tree_model.used);
     for (int i = 0; i < 7; i++) {
-        prescription_tree_view->get_column_cell_renderer(
-            i)->property_xalign().set_value(0);
+        prescription_tree_view->get_column_cell_renderer(i)->property_xalign().set_value(0);
+        prescription_tree_view->get_column(i)->set_min_width(100);
+        prescription_tree_view->get_column(i)->set_resizable(true);
+        prescription_tree_view->get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
+        prescription_tree_view->get_column_cell_renderer(i)->set_property("ellipsize",
+                                                                          Pango::EllipsizeMode::ELLIPSIZE_END);
     }
 
     prescription_tree_view->set_model(prescription_list_store);

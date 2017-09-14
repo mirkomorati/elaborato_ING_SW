@@ -61,6 +61,10 @@ namespace mm {
 
             const string get_price_as_string() const;
 
+            bool operator==(const Drug &rhs) const;
+
+            bool operator!=(const Drug &rhs) const;
+
         private:
             string name;
             float price;

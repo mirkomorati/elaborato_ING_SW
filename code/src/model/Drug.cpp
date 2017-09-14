@@ -121,6 +121,15 @@ const string mm::model::Drug::get_price_as_string() const {
     return ss.str();
 }
 
+bool mm::model::Drug::operator!=(const mm::model::Drug &rhs) const {
+    return !(rhs == *this);
+}
+
+bool mm::model::Drug::operator==(const mm::model::Drug &rhs) const {
+    return static_cast<const ISerializable &>(*this) == static_cast<const ISerializable &>(rhs) &&
+           name == rhs.name && pharmaceutical_form == rhs.pharmaceutical_form;
+}
+
 mm::model::Drug::TreeModel::TreeModel() {
     add(name);
     add(pharmaceutical_form);

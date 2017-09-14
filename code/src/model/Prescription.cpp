@@ -79,7 +79,7 @@ void mm::model::Prescription::unserialize(std::map<std::string, Serialized> map)
         }
         negative_interactions[results[0]] = results[1];
     }
-    used = map["used"].get_str() == "si";
+    used = (map["used"].get_str() == "si");
 }
 
 string mm::model::Prescription::get_table_name() const {
