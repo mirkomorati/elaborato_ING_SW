@@ -6,6 +6,7 @@
 #define ELABORATO_ING_SW_SELECTDATEDIALOGVIEW_HPP
 
 #include "../controller/SelectDateDialog.hpp"
+#include "Dialog.hpp"
 
 namespace mm {
     namespace controller {
@@ -13,13 +14,9 @@ namespace mm {
     }
 
     namespace view {
-        class SelectDateDialog {
+        class SelectDateDialog : public view::Dialog {
         public:
-            void set_controller(controller::SelectDateDialog *controller);
-
-            void show_dialog();
-
-            void dispose_dialog();
+            SelectDateDialog();
         };
     }
 }

@@ -6,20 +6,13 @@
 #define ELABORATO_ING_SW_SELECTDATEBYDIALOGVIEW_HPP
 
 #include "../controller/SelectDateByDialog.hpp"
+#include "Dialog.hpp"
 
 namespace mm {
-    namespace controller {
-        class SelectDateByDialog;
-    }
-
     namespace view {
-        class SelectDateByDialog {
+        class SelectDateByDialog : public view::Dialog {
         public:
-            void set_controller(controller::SelectDateByDialog *controller);
-
-            void show_dialog();
-
-            void dispose_dialog();
+            SelectDateByDialog();
         };
     }
 }
