@@ -15,8 +15,12 @@ mm::RefBuilder &mm::RefBuilder::get_instance() {
 
 mm::RefBuilder::RefBuilder() {
     try {
+        /*
         refBuilder = Gtk::Builder::create_from_file(
             "../glade/mainWindow.glade");
+            */
+        refBuilder = Gtk::Builder::create_from_file(
+                "../../../../glade/mainWindow.glade");
     }
     catch (const Glib::ConvertError &ex) {
         std::cerr << "ConvertError: " << ex.what() << std::endl;
