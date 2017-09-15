@@ -6,14 +6,6 @@
 #include "../../hdr/controller/SelectDateDialog.hpp"
 #include "../../hdr/RefBuilder.hpp"
 
-mm::controller::SelectDateDialog::~SelectDateDialog() {
-    delete view;
-}
-
-void mm::controller::SelectDateDialog::show_dialog() {
-    view->show_dialog();
-}
-
 void mm::controller::SelectDateDialog::ok_handler() {
     Gtk::Calendar *select_date_calendar;
     RefBuilder::get_instance().get_widget("selectDateCalendar", select_date_calendar);
@@ -32,7 +24,8 @@ void mm::controller::SelectDateDialog::ok_handler() {
 
 void mm::controller::SelectDateDialog::set_view() {
     view = new mm::view::SelectDateDialog();
-    view->set_controller(this);
+    view->set_button_handler(this, "selectDateOk", &controller::SelectDateDialog::ok_handler);
+    view->set_button_handler(this, "selectDateCancel", &controller::SelectDateDialog::cancel_handler);
 }
 
 void mm::controller::SelectDateDialog::cancel_handler() {
@@ -45,4 +38,8 @@ mm::util::Date mm::controller::SelectDateDialog::get_date() {
 
 void mm::controller::SelectDateDialog::set_parent(mm::controller::AddPatientDialog *parent) {
     this->parent = parent;
+}
+
+mm::controller::SelectDateDialog::~SelectDateDialog() {
+    delete parent;
 }

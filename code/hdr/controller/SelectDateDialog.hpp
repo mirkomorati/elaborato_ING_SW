@@ -17,11 +17,10 @@ namespace mm {
     namespace controller {
         class AddPatientDialog;
 
-        class SelectDateDialog {
+        class SelectDateDialog : public controller::Dialog {
         public:
-            virtual ~SelectDateDialog();
 
-            void show_dialog();
+            ~SelectDateDialog();
 
             void ok_handler();
 
@@ -36,7 +35,6 @@ namespace mm {
 
         private:
             controller::AddPatientDialog *parent;
-            view::SelectDateDialog *view;
             util::Date date;
         };
     }

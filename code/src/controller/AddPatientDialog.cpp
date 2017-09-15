@@ -6,7 +6,6 @@
 #include "../../hdr/RefBuilder.hpp"
 #include "../../hdr/controller/AddPatientDialog.hpp"
 #include "../../hdr/DBMaster.hpp"
-#include "../../hdr/controller/SelectDateDialog.hpp"
 
 void mm::controller::AddPatientDialog::ok_handler() {
     auto &refBuilder = RefBuilder::get_instance();
@@ -66,13 +65,12 @@ void mm::controller::AddPatientDialog::cancel_handler() {
     view->dispose_dialog();
 }
 
-void mm::controller::AddPatientDialog::show_dialog() {
-    view->show_dialog();
-}
-
 void mm::controller::AddPatientDialog::set_view() {
     view = new mm::view::AddPatientDialog();
-    view->set_controller(this);
+    view->set_button_handler(this, "addPatientOk", &controller::AddPatientDialog::ok_handler);
+    view->set_button_handler(this, "addPatientCancel", &controller::AddPatientDialog::cancel_handler);
+    view->set_button_handler(this, "addBirthDate", &controller::AddPatientDialog::select_birth_date_handler);
+
 }
 
 mm::controller::AddPatientDialog::~AddPatientDialog() {
