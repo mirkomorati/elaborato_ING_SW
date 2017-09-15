@@ -4,14 +4,24 @@
 
 #include "../../hdr/controller/Register.hpp"
 
-const mm::controller::Main &mm::controller::Register::getMain_controller() const {
+mm::controller::Register *mm::controller::Register::instance = nullptr;
+
+mm::controller::Main &mm::controller::Register::getMain_controller() {
     return main_controller;
 }
 
-const mm::controller::Login &mm::controller::Register::getLogin_controller() const {
+mm::controller::Login &mm::controller::Register::getLogin_controller() {
     return login_controller;
 }
 
-const mm::controller::Patient &mm::controller::Register::getPatient_controller() const {
+mm::controller::Patient &mm::controller::Register::getPatient_controller() {
     return patient_controller;
+}
+
+mm::controller::Register::Register() {}
+
+mm::controller::Register &mm::controller::Register::get_instance() {
+    if (instance == nullptr) instance = new Register();
+
+    return *instance;
 }

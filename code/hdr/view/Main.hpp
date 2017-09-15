@@ -27,7 +27,7 @@ namespace mm {
 
         class Main {
         public:
-            explicit Main(controller::Main &controller);
+            explicit Main();
 
             ~Main();
 

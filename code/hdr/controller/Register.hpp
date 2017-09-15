@@ -18,15 +18,26 @@ namespace mm {
             Patient patient_controller;
             // todo da aggiungere i controller.
 
+            // istanza della classe.
+            static Register *instance;
+
+            // costruttore
+            Register();
+
+            ~Register() = default;
+
         public:
-            const Main &getMain_controller() const;
+            Main &getMain_controller();
 
-            const Login &getLogin_controller() const;
+            Login &getLogin_controller();
 
-            const Patient &getPatient_controller() const;
+            Patient &getPatient_controller();
 
-            Register() = delete;
+            Register(const Register &other) = delete;
 
+            const Register &operator=(const Register &old) = delete;
+
+            static Register &get_instance();
         };
     }
 }

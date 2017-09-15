@@ -7,6 +7,7 @@
 #include "../../hdr/controller/Login.hpp"
 #include "../../hdr/RefBuilder.hpp"
 #include "../../hdr/model/Authentication.hpp"
+#include "../../hdr/controller/Register.hpp"
 #include <plog/Log.h>
 
 
@@ -31,7 +32,7 @@ void mm::controller::Login::login_button_handler() {
         model::authentication::Login account;
         if (model::authentication::check_login(name, password, account)) {
             view->login_update(true);
-            parent->set_doctor(account.regional_id);
+            Register::get_instance().getMain_controller().set_doctor(account.regional_id);
             return 0;
         }
 
@@ -41,9 +42,5 @@ void mm::controller::Login::login_button_handler() {
     }, text_name, text_password);
 
     login_thread.detach();
-}
-
-void mm::controller::Login::set_parent(mm::controller::Main *parent) {
-    this->parent = parent;
 }
 

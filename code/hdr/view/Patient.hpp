@@ -21,7 +21,7 @@ namespace mm {
 
         class Patient {
         public:
-            explicit Patient(controller::Patient *controller);
+            explicit Patient();
 
             // todo potrebbe esserci un segfault controlla oggetto tmp.
             void set_patient_tree_model(model::Patient::TreeModel &patient_tree_model,
