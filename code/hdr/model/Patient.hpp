@@ -82,6 +82,8 @@ namespace mm {
 
             void set_doctor_id(int doctor_id);
 
+            bool is_valid();
+
             bool operator==(const Patient &rhs) const;
 
             bool operator!=(const Patient &rhs) const;

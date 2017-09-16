@@ -407,15 +407,33 @@
             </child>
             <child>
               <object class="GtkButton" id="addBirthDate">
-                <property name="label" translatable="yes">button</property>
+                <property name="label" translatable="yes">Seleziona Data</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="always_show_image">True</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">4</property>
               </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="addPatientError">
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Uno o più campi non sono validi</property>
+                <attributes>
+                  <attribute name="font-desc" value="&lt;Enter Value&gt; 10"/>
+                  <attribute name="foreground" value="#efef29292929"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">8</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
             </child>
           </object>
           <packing>
@@ -586,6 +604,7 @@
             </child>
             <child>
               <object class="GtkButton" id="addIssueDate">
+                <property name="label" translatable="yes">Seleziona Data</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -597,6 +616,7 @@
             </child>
             <child>
               <object class="GtkButton" id="addExpireDate">
+                <property name="label" translatable="yes">Seleziona Data</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -642,6 +662,11 @@
     <property name="can_focus">False</property>
     <property name="stock">gtk-missing-image</property>
   </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">calendar_32x32.png</property>
+  </object>
   <object class="GtkListStore" id="patientList"/>
   <object class="GtkApplicationWindow" id="mainWindow">
     <property name="visible">True</property>
@@ -649,6 +674,7 @@
     <property name="title" translatable="yes">MED-H</property>
     <property name="default_width">1024</property>
     <property name="default_height">720</property>
+    <property name="icon_name">MED-H</property>
     <property name="gravity">center</property>
     <child>
       <object class="GtkBox" id="box1">
@@ -1019,7 +1045,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkScrolledWindow">
+                      <object class="GtkScrolledWindow" id="patientScrolledWindow">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">center</property>

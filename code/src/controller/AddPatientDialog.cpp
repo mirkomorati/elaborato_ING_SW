@@ -54,11 +54,18 @@ void mm::controller::AddPatientDialog::ok_handler() {
     patient.set_address(address.str());
     patient.set_doctor_id(parent->get_doctor().get_regional_id());
 
-    DBMaster::get_instance().add_to_db(patient);
+    if (patient.is_valid()) {
 
-    view->dispose_dialog();
-    // todo: devo riaggiornare la view dei pazienti con quello appena aggiunto, sembra che questo metodo non funzioni
-    // parent->set_doctor(parent->get_doctor().get_regional_id());
+        DBMaster::get_instance().add_to_db(patient);
+
+        view->dispose_dialog();
+        // todo: devo riaggiornare la view dei pazienti con quello appena aggiunto, sembra che questo metodo non funzioni
+        // parent->set_doctor(parent->get_doctor().get_regional_id());
+    } else {
+        Gtk::Label *error;
+        refBuilder.get_widget("addPatientError", error);
+        error->set_visible(true);
+    }
 }
 
 void mm::controller::AddPatientDialog::cancel_handler() {

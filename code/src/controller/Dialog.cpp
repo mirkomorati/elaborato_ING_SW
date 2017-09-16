@@ -5,7 +5,7 @@
 #include "../../hdr/controller/Dialog.hpp"
 
 mm::controller::Dialog::~Dialog() {
-    delete view;
+    if (view) delete view;
 }
 
 void mm::controller::Dialog::show_dialog() {
