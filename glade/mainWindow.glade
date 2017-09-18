@@ -445,6 +445,38 @@
       </object>
     </child>
   </object>
+  <object class="GtkAdjustment" id="adjustment1">
+    <property name="upper">100</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkListStore" id="drugList">
+    <columns>
+      <!-- column-name Nome -->
+      <column type="gchararray"/>
+      <!-- column-name Forma -->
+      <column type="gchararray"/>
+      <!-- column-name Controindicazioni -->
+      <column type="gchararray"/>
+      <!-- column-name Principi -->
+      <column type="gchararray"/>
+      <!-- column-name ATC -->
+      <column type="gchararray"/>
+      <!-- column-name Prezzo -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-missing-image</property>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">calendar_32x32.png</property>
+  </object>
+  <object class="GtkTextBuffer" id="negativeInteractionsBuffer"/>
   <object class="GtkDialog" id="addPrescriptionDialog">
     <property name="can_focus">False</property>
     <property name="type_hint">dialog</property>
@@ -552,17 +584,6 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Interazioni</property>
-              </object>
-              <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">5</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkEntry" id="addPatientId">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -580,26 +601,6 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">1</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkEntry" id="addDrugIds">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">4</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkEntry" id="addNegativeInteractions">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">5</property>
               </packing>
             </child>
             <child>
@@ -626,6 +627,95 @@
                 <property name="top_attach">3</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkComboBoxText" id="addDrugId1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Interazioni</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">9</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkComboBoxText" id="addDrugId2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkComboBoxText" id="addDrugId3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">6</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkComboBoxText" id="addDrugId4">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">7</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkComboBoxText" id="addDrugId5">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">8</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTextView" id="addNegativeInteractions">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="pixels_above_lines">4</property>
+                <property name="pixels_below_lines">4</property>
+                <property name="wrap_mode">word</property>
+                <property name="top_margin">4</property>
+                <property name="bottom_margin">4</property>
+                <property name="buffer">negativeInteractionsBuffer</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">9</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -635,37 +725,6 @@
         </child>
       </object>
     </child>
-  </object>
-  <object class="GtkAdjustment" id="adjustment1">
-    <property name="upper">100</property>
-    <property name="step_increment">1</property>
-    <property name="page_increment">10</property>
-  </object>
-  <object class="GtkListStore" id="drugList">
-    <columns>
-      <!-- column-name Nome -->
-      <column type="gchararray"/>
-      <!-- column-name Forma -->
-      <column type="gchararray"/>
-      <!-- column-name Controindicazioni -->
-      <column type="gchararray"/>
-      <!-- column-name Principi -->
-      <column type="gchararray"/>
-      <!-- column-name ATC -->
-      <column type="gchararray"/>
-      <!-- column-name Prezzo -->
-      <column type="gchararray"/>
-    </columns>
-  </object>
-  <object class="GtkImage" id="image1">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-missing-image</property>
-  </object>
-  <object class="GtkImage" id="image2">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixbuf">calendar_32x32.png</property>
   </object>
   <object class="GtkListStore" id="patientList"/>
   <object class="GtkApplicationWindow" id="mainWindow">

@@ -10,6 +10,7 @@
 #include "../model/Doctor.hpp"
 #include "SelectDateByDialog.hpp"
 #include "AddPatientDialog.hpp"
+#include "AddPrescriptionDialog.hpp"
 
 namespace mm {
     namespace view {
@@ -21,6 +22,8 @@ namespace mm {
         class SelectDateByDialog;
 
         class AddPatientDialog;
+
+        class AddPrescriptionDialog;
 
         class Patient {
         public:
@@ -39,6 +42,8 @@ namespace mm {
             void set_prescription_tree_view(std::string patient_id);
 
             void add_patient_handler();
+
+            void add_prescription_handler();
 
             void remove_patient_handler();
 
@@ -64,6 +69,7 @@ namespace mm {
             model::Drug::TreeModel drug_tree_model;
             controller::SelectDateByDialog *select_date_controller;
             controller::AddPatientDialog *add_patient_controller;
+            controller::AddPrescriptionDialog *add_prescription_controller;
 
             void set_drugs_tree_view(const string &patient_id);
         };

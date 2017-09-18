@@ -15,7 +15,7 @@ namespace mm {
 
         class AddPatientDialog : public controller::Dialog {
         public:
-            virtual ~AddPatientDialog();
+            ~AddPatientDialog();
 
             void ok_handler();
 

@@ -168,8 +168,10 @@ void mm::controller::Patient::select_date_handler() {
 mm::controller::Patient::Patient() {
     select_date_controller = new SelectDateByDialog();
     add_patient_controller = new AddPatientDialog();
+    add_prescription_controller = new AddPrescriptionDialog();
     select_date_controller->set_view();
     add_patient_controller->set_view();
+    add_prescription_controller->set_view();
 }
 
 void mm::controller::Patient::unselect_patient() {
@@ -186,9 +188,15 @@ void mm::controller::Patient::mask_by_selected_date(mm::util::DateBy date) {
 mm::controller::Patient::~Patient() {
     delete (select_date_controller);
     delete (add_patient_controller);
+    delete (add_prescription_controller);
 }
 
 mm::model::Doctor mm::controller::Patient::get_doctor() {
     return doctor;
+}
+
+void mm::controller::Patient::add_prescription_handler() {
+    add_prescription_controller->set_parent(this);
+    add_prescription_controller->show_dialog();
 }
 

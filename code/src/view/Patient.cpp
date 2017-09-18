@@ -9,11 +9,13 @@
 mm::view::Patient::Patient(mm::controller::Patient *controller) : controller(controller) {
     auto &refBuilder = RefBuilder::get_instance();
     Gtk::Button *select_date;
+    Gtk::ToolButton *add_prescription;
 
     refBuilder.get_widget("addPatient", add_patient);
     refBuilder.get_widget("removePatient", remove_patient);
     refBuilder.get_widget("editPatient", edit_patient);
     refBuilder.get_widget("selectDateButton", select_date);
+    refBuilder.get_widget("addPrescription", add_prescription);
 
     add_patient->signal_clicked().connect(sigc::mem_fun(
             controller, &mm::controller::Patient::add_patient_handler));
@@ -23,6 +25,8 @@ mm::view::Patient::Patient(mm::controller::Patient *controller) : controller(con
             controller, &mm::controller::Patient::edit_patient_handler));
     select_date->signal_clicked().connect(sigc::mem_fun(
             controller, &mm::controller::Patient::select_date_handler));
+    add_prescription->signal_clicked().connect(sigc::mem_fun(
+            controller, &mm::controller::Patient::add_prescription_handler));
 
 }
 
