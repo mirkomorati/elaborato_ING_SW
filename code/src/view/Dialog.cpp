@@ -22,3 +22,8 @@ void mm::view::Dialog::dispose_dialog() {
     RefBuilder::get_instance().get_widget(name, dialog);
     dialog->close();
 }
+
+void mm::view::Dialog::set_combo_box(std::vector<std::string> combo_text) {
+
+}
+

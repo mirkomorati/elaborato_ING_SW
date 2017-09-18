@@ -28,7 +28,7 @@ namespace mm {
 
             void set_view();
 
-            // todo: questa funzione deve essere polimorfica. Qua il parent serve
+            // todo: questa funzione deve essere polimorfica.
             void set_parent(AddPatientDialog *parent);
 
             util::Date get_date();

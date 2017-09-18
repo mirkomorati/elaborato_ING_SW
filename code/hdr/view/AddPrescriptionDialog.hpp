@@ -13,6 +13,8 @@ namespace mm {
         class AddPrescriptionDialog : public view::Dialog {
         public:
             AddPrescriptionDialog();
+
+            virtual void set_combo_box(std::vector<std::string> text);
         };
     }
 }

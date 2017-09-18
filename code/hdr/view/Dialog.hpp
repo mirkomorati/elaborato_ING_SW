@@ -31,6 +31,8 @@ namespace mm {
 
             void dispose_dialog();
 
+            virtual void set_combo_box(std::vector<std::string> combo_text);
+
         private:
             const std::string name;
         };
