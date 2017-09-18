@@ -65,7 +65,7 @@ mm::Serialized::Serialized(const mm::Serialized &old) noexcept : type(old.type) 
     }
 }
 
-const mm::Serialized &mm::Serialized::operator=(const mm::Serialized &old) {
+mm::Serialized &mm::Serialized::operator=(const mm::Serialized &old) {
     switch (old.type) {
         case mm::INTEGER:
             this->type = mm::INTEGER;

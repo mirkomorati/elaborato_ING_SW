@@ -74,7 +74,7 @@ namespace mm {
 
         Serialized(const Serialized &old) noexcept;
 
-        const Serialized &operator=(const Serialized &old);
+        Serialized &operator=(const Serialized &old);
 
         operator int() const noexcept(false);
 
