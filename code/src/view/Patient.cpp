@@ -5,8 +5,9 @@
 #include <iostream>
 #include "../../hdr/view/Patient.hpp"
 #include "../../hdr/RefBuilder.hpp"
+#include "../../hdr/controller/Register.hpp"
 
-mm::view::Patient::Patient(mm::controller::Patient *controller) : controller(controller) {
+mm::view::Patient::Patient() : controller(&controller::Register::get_instance().getPatient_controller()) {
     auto &refBuilder = RefBuilder::get_instance();
     Gtk::Button *select_date;
     Gtk::ToolButton *add_prescription;

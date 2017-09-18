@@ -21,11 +21,8 @@ namespace mm {
 
             void login_button_handler();
 
-            void set_parent(controller::Main *parent);
-
         private:
             view::Login *view;
-            controller::Main *parent;
         };
     }
 }

@@ -29,13 +29,9 @@ namespace mm {
 
         class Main {
         public:
-            Main();
+            Main() = default;
 
             virtual ~Main();
-
-            controller::Login &get_login_controller();
-
-            Patient &get_patient_controller();
 
             Gtk::ApplicationWindow &get_main_window();
 
@@ -52,8 +48,6 @@ namespace mm {
             bool key_pressed_handler(GdkEventKey *event);
 
         private:
-            controller::Login *login_controller;
-            controller::Patient *patient_controller;
             view::Main *main_view;
             StackPage actual_page;
         };

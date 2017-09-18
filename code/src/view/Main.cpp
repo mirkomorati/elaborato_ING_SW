@@ -6,11 +6,12 @@
 #include <iostream>
 #include "../../hdr/view/Main.hpp"
 #include "../../hdr/RefBuilder.hpp"
+#include "../../hdr/controller/Register.hpp"
 
-mm::view::Main::Main(mm::controller::Main &controller)
-        : controller(controller) {
-    login_view = new Login(&controller.get_login_controller());
-    patient_view = new Patient(&controller.get_patient_controller());
+mm::view::Main::Main()
+        : controller(controller::Register::get_instance().getMain_controller()) {
+    login_view = new Login();
+    patient_view = new Patient();
 
     auto &refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("mainWindow", window);

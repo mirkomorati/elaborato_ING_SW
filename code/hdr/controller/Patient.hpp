@@ -59,7 +59,6 @@ namespace mm {
 
         private:
             view::Patient *patient_view;
-            controller::Main *parent;
             model::Doctor doctor;
             model::Patient::TreeModel patient_tree_model;
             Glib::RefPtr<Gtk::ListStore> patient_list_store;

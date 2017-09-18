@@ -19,7 +19,7 @@ namespace mm {
 
         class Login {
         public:
-            explicit Login(controller::Login *controller);
+            explicit Login();
 
             void login_update(bool success);
 
