@@ -19,10 +19,8 @@ void mm::controller::AddPrescriptionDialog::set_view() {
     view->set_button_handler(this, "addPrescriptionCancel", &controller::AddPrescriptionDialog::cancel_handler);
 }
 
-void mm::controller::AddPrescriptionDialog::set_parent(mm::controller::Patient *parent) {
+mm::controller::AddPrescriptionDialog::~AddPrescriptionDialog() {}
 
-}
-
-mm::controller::AddPrescriptionDialog::~AddPrescriptionDialog() {
-    delete parent;
+mm::controller::AddPrescriptionDialog::AddPrescriptionDialog() {
+    this->set_view();
 }

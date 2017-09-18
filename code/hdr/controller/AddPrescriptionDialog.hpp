@@ -13,6 +13,8 @@ namespace mm {
     namespace controller {
         class AddPrescriptionDialog : public controller::Dialog {
         public:
+            AddPrescriptionDialog();
+
             ~AddPrescriptionDialog();
 
             void ok_handler() override;
@@ -20,11 +22,6 @@ namespace mm {
             void cancel_handler() override;
 
             void set_view() override;
-
-            void set_parent(Patient *parent);
-
-        private:
-            controller::Patient *parent;
         };
     }
 }

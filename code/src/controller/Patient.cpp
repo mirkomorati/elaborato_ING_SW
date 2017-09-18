@@ -6,18 +6,14 @@
 #include "../../hdr/controller/Patient.hpp"
 #include "../../hdr/DBMaster.hpp"
 #include "../../hdr/RefBuilder.hpp"
+#include "../../hdr/controller/Register.hpp"
 
 void mm::controller::Patient::set_view(view::Patient *view) {
     this->patient_view = view;
 }
 
-void mm::controller::Patient::set_parent(mm::controller::Main *parent) {
-    this->parent = parent;
-}
-
 void mm::controller::Patient::add_patient_handler() {
-    add_patient_controller->set_parent(this);
-    add_patient_controller->show_dialog();
+    controller::Register::get_instance().get_add_patient_dialog().show_dialog();
 }
 
 void mm::controller::Patient::remove_patient_handler() {
@@ -160,19 +156,11 @@ void mm::controller::Patient::set_drugs_tree_view(const string &patient_id) {
 
 }
 
-void mm::controller::Patient::select_date_handler() {
-    select_date_controller->set_parent(this);
-    select_date_controller->show_dialog();
+void mm::controller::Patient::select_date_by_handler() {
+    controller::Register::get_instance().get_select_date_by_dialog().show_dialog();
 }
 
-mm::controller::Patient::Patient() {
-    select_date_controller = new SelectDateByDialog();
-    add_patient_controller = new AddPatientDialog();
-    add_prescription_controller = new AddPrescriptionDialog();
-    select_date_controller->set_view();
-    add_patient_controller->set_view();
-    add_prescription_controller->set_view();
-}
+mm::controller::Patient::Patient() {}
 
 void mm::controller::Patient::unselect_patient() {
     patient_view->unselect_patient();
@@ -185,18 +173,13 @@ void mm::controller::Patient::mask_by_selected_date(mm::util::DateBy date) {
               << std::endl;
 }
 
-mm::controller::Patient::~Patient() {
-    delete (select_date_controller);
-    delete (add_patient_controller);
-    delete (add_prescription_controller);
-}
+mm::controller::Patient::~Patient() {}
 
 mm::model::Doctor mm::controller::Patient::get_doctor() {
     return doctor;
 }
 
 void mm::controller::Patient::add_prescription_handler() {
-    add_prescription_controller->set_parent(this);
-    add_prescription_controller->show_dialog();
+    controller::Register::get_instance().get_add_prescription_dialog().show_dialog();
 }
 

@@ -15,6 +15,8 @@ namespace mm {
 
         class SelectDateByDialog : public controller::Dialog {
         public:
+            SelectDateByDialog();
+
             ~SelectDateByDialog();
 
             void ok_handler();

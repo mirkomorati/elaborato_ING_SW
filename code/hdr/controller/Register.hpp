@@ -13,10 +13,14 @@ namespace mm {
          * Classe che contiene l'insieme di tutti i controller
          */
         class Register {
-            Main main_controller;
-            Login login_controller;
-            Patient patient_controller;
             // todo da aggiungere i controller.
+            Main main;
+            Login login;
+            Patient patient;
+            SelectDateDialog select_date_dialog;
+            AddPatientDialog add_patient_dialog;
+            AddPrescriptionDialog add_prescription_dialog;
+            SelectDateByDialog select_date_by_dialog;
 
             // istanza della classe.
             static Register *instance;
@@ -27,11 +31,19 @@ namespace mm {
             ~Register() = default;
 
         public:
-            Main &getMain_controller();
+            Main &get_main();
 
-            Login &getLogin_controller();
+            Login &get_login();
 
-            Patient &getPatient_controller();
+            Patient &get_patient();
+
+            SelectDateDialog &get_select_date_dialog();
+
+            AddPatientDialog &get_add_patient_dialog();
+
+            AddPrescriptionDialog &get_add_prescription_dialog();
+
+            SelectDateByDialog &get_select_date_by_dialog();
 
             Register(const Register &other) = delete;
 

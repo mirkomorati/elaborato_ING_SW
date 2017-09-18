@@ -32,7 +32,7 @@ void mm::controller::Login::login_button_handler() {
         model::authentication::Login account;
         if (model::authentication::check_login(name, password, account)) {
             view->login_update(true);
-            Register::get_instance().getMain_controller().set_doctor(account.regional_id);
+            Register::get_instance().get_main().set_doctor(account.regional_id);
             return 0;
         }
 

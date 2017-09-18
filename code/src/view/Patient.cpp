@@ -7,7 +7,7 @@
 #include "../../hdr/RefBuilder.hpp"
 #include "../../hdr/controller/Register.hpp"
 
-mm::view::Patient::Patient() : controller(&controller::Register::get_instance().getPatient_controller()) {
+mm::view::Patient::Patient() : controller(&controller::Register::get_instance().get_patient()) {
     auto &refBuilder = RefBuilder::get_instance();
     Gtk::Button *select_date;
     Gtk::ToolButton *add_prescription;
@@ -25,7 +25,7 @@ mm::view::Patient::Patient() : controller(&controller::Register::get_instance().
     edit_patient->signal_clicked().connect(sigc::mem_fun(
             controller, &mm::controller::Patient::edit_patient_handler));
     select_date->signal_clicked().connect(sigc::mem_fun(
-            controller, &mm::controller::Patient::select_date_handler));
+            controller, &mm::controller::Patient::select_date_by_handler));
     add_prescription->signal_clicked().connect(sigc::mem_fun(
             controller, &mm::controller::Patient::add_prescription_handler));
 

@@ -17,13 +17,6 @@ namespace mm {
         class Patient;
     }
     namespace controller {
-        class Main;
-
-        class SelectDateByDialog;
-
-        class AddPatientDialog;
-
-        class AddPrescriptionDialog;
 
         class Patient {
         public:
@@ -32,8 +25,6 @@ namespace mm {
             virtual ~Patient();
 
             void set_view(view::Patient *patient_view);
-
-            void set_parent(controller::Main *parent);
 
             void set_doctor(int doctor_id);
 
@@ -51,7 +42,7 @@ namespace mm {
 
             void row_selected_handler(const Gtk::TreeModel::Path &path, Gtk::TreeViewColumn *column);
 
-            void select_date_handler();
+            void select_date_by_handler();
 
             void mask_by_selected_date(util::DateBy date);
 
@@ -66,9 +57,6 @@ namespace mm {
             Glib::RefPtr<Gtk::ListStore> prescription_list_store;
             Glib::RefPtr<Gtk::ListStore> drug_list_store;
             model::Drug::TreeModel drug_tree_model;
-            controller::SelectDateByDialog *select_date_controller;
-            controller::AddPatientDialog *add_patient_controller;
-            controller::AddPrescriptionDialog *add_prescription_controller;
 
             void set_drugs_tree_view(const string &patient_id);
         };

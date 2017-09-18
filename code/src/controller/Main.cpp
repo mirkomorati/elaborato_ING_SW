@@ -17,18 +17,18 @@ mm::controller::Main::~Main() {
 
 void mm::controller::Main::setup() {
     main_view = new view::Main();
-    Register::get_instance().getLogin_controller().set_view(&main_view->get_login_view());
-    Register::get_instance().getPatient_controller().set_view(&main_view->get_patient_view());
+    Register::get_instance().get_login().set_view(&main_view->get_login_view());
+    Register::get_instance().get_patient().set_view(&main_view->get_patient_view());
     main_view->setup();
 }
 
 void mm::controller::Main::set_doctor(int doctor_id) {
-    Register::get_instance().getPatient_controller().set_doctor(doctor_id);
+    Register::get_instance().get_patient().set_doctor(doctor_id);
 }
 
 void mm::controller::Main::on_button_logout_clicked() {
     main_view->change_stack_page(view::LOGIN);
-    Register::get_instance().getPatient_controller().set_doctor(-1);
+    Register::get_instance().get_patient().set_doctor(-1);
 }
 
 mm::controller::StackPage mm::controller::Main::get_actual_page() const {
@@ -42,12 +42,12 @@ void mm::controller::Main::set_actual_page(mm::controller::StackPage actual_page
 bool mm::controller::Main::key_pressed_handler(GdkEventKey *event) {
     if (actual_page == LOGIN) {
         if (event->keyval == GDK_KEY_Return) {
-            Register::get_instance().getLogin_controller().login_button_handler();
+            Register::get_instance().get_login().login_button_handler();
             return true;
         }
     } else if (actual_page == PATIENT) {
         if (event->keyval == GDK_KEY_Escape) {
-            Register::get_instance().getPatient_controller().unselect_patient();
+            Register::get_instance().get_patient().unselect_patient();
         }
     }
     return false;

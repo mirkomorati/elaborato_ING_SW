@@ -6,6 +6,7 @@
 #include "../../hdr/RefBuilder.hpp"
 #include "../../hdr/controller/AddPatientDialog.hpp"
 #include "../../hdr/DBMaster.hpp"
+#include "../../hdr/controller/Register.hpp"
 
 void mm::controller::AddPatientDialog::ok_handler() {
     auto &refBuilder = RefBuilder::get_instance();
@@ -52,7 +53,7 @@ void mm::controller::AddPatientDialog::ok_handler() {
     birth_address << birth_city->get_text() << ", " << birth_country->get_text();
 
     patient.set_address(address.str());
-    patient.set_doctor_id(parent->get_doctor().get_regional_id());
+    patient.set_doctor_id(controller::Register::get_instance().get_patient().get_doctor().get_regional_id());
 
     if (patient.is_valid()) {
 
@@ -60,7 +61,6 @@ void mm::controller::AddPatientDialog::ok_handler() {
 
         view->dispose_dialog();
         // todo: devo riaggiornare la view dei pazienti con quello appena aggiunto, sembra che questo metodo non funzioni
-        // parent->set_doctor(parent->get_doctor().get_regional_id());
     } else {
         Gtk::Label *error;
         refBuilder.get_widget("addPatientError", error);
@@ -84,10 +84,6 @@ mm::controller::AddPatientDialog::~AddPatientDialog() {
     delete (view);
 }
 
-void mm::controller::AddPatientDialog::set_parent(mm::controller::Patient *parent) {
-    AddPatientDialog::parent = parent;
-}
-
 void mm::controller::AddPatientDialog::select_birth_date_handler() {
     mm::controller::SelectDateDialog *select_date_controller = new mm::controller::SelectDateDialog();
     select_date_controller->set_view();
@@ -99,4 +95,8 @@ void mm::controller::AddPatientDialog::select_birth_date_get_date(util::Date dat
     Gtk::Button *add_birth_date;
     RefBuilder::get_instance().get_widget("addBirthDate", add_birth_date);
     add_birth_date->set_label(date.get_text());
+}
+
+mm::controller::AddPatientDialog::AddPatientDialog() {
+    this->set_view();
 }

@@ -11,10 +11,10 @@
 
 namespace mm {
     namespace controller {
-        class Patient;
-
         class AddPatientDialog : public controller::Dialog {
         public:
+            AddPatientDialog();
+
             ~AddPatientDialog();
 
             void ok_handler();
@@ -26,11 +26,6 @@ namespace mm {
             void select_birth_date_handler();
 
             void select_birth_date_get_date(util::Date date);
-
-            void set_parent(Patient *parent);
-
-        private:
-            controller::Patient *parent;
         };
     }
 }

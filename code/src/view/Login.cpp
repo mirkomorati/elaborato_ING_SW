@@ -7,7 +7,7 @@
 #include "../../hdr/RefBuilder.hpp"
 #include "../../hdr/controller/Register.hpp"
 
-mm::view::Login::Login() : controller(&controller::Register::get_instance().getLogin_controller()) {
+mm::view::Login::Login() : controller(&controller::Register::get_instance().get_login()) {
     auto &refBuilder = RefBuilder::get_instance();
 
     refBuilder.get_widget("loginButton", button);
