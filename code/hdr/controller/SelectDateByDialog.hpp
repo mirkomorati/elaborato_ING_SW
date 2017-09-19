@@ -33,6 +33,8 @@ namespace mm {
 
             static Dialog *create();
 
+            void show_dialog() override;
+
         private:
             controller::Patient *parent;
             view::SelectDateByDialog *view;

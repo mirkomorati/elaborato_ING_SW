@@ -28,6 +28,8 @@ namespace mm {
 
             static Dialog *create();
 
+            void show_dialog() override;
+
         private:
             view::AddPrescriptionDialog *view;
         };

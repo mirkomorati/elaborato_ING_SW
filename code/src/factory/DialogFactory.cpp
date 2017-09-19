@@ -27,7 +27,7 @@ void mm::factory::DialogFactory::register_dialog(const std::string &dialog_name,
 }
 
 mm::controller::Dialog *mm::factory::DialogFactory::create_dialog(const std::string &dialog_name) {
-    std::map::iterator it = factory_map.find(dialog_name);
+    auto it = factory_map.find(dialog_name);
     if (it != factory_map.end()) return it->second();
     return NULL;
 }

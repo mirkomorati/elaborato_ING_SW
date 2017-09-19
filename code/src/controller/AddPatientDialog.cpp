@@ -59,7 +59,7 @@ void mm::controller::AddPatientDialog::ok_handler() {
 
         DBMaster::get_instance().add_to_db(patient);
 
-        view->dispose_dialog();
+        this->free();
         // todo: devo riaggiornare la view dei pazienti con quello appena aggiunto, sembra che questo metodo non funzioni
     } else {
         Gtk::Label *error;
@@ -69,7 +69,7 @@ void mm::controller::AddPatientDialog::ok_handler() {
 }
 
 void mm::controller::AddPatientDialog::cancel_handler() {
-    view->dispose_dialog();
+    this->free();
 }
 
 void mm::controller::AddPatientDialog::set_view() {
@@ -101,6 +101,8 @@ mm::controller::AddPatientDialog::AddPatientDialog() {
 }
 
 void mm::controller::AddPatientDialog::free() {
+    std::cout << "Freed AddPatientDialog Controller: " << this << std::endl;
+    view->dispose_dialog();
     delete this;
 }
 

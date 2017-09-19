@@ -6,17 +6,17 @@
 #include "../../hdr/DBMaster.hpp"
 
 void mm::controller::AddPrescriptionDialog::ok_handler() {
-    view->dispose_dialog();
+    this->free();
 }
 
 void mm::controller::AddPrescriptionDialog::cancel_handler() {
-    view->dispose_dialog();
+    this->free();
 }
 
 void mm::controller::AddPrescriptionDialog::set_view() {
     view = new mm::view::AddPrescriptionDialog();
-    view->set_button_handler(this, "addPrescriptionOk", &controller::AddPrescriptionDialog::ok_handler);
-    view->set_button_handler(this, "addPrescriptionCancel", &controller::AddPrescriptionDialog::cancel_handler);
+    view->set_ok_handler(this, &controller::Dialog::ok_handler);
+    view->set_cancel_handler(this, &controller::Dialog::cancel_handler);
     mm::model::Drug drug;
     // questo potrebbe essere il metodo corretto, ma get_rows non funziona con chiavi primarie composte
     // drug.unserialize(mm::DBMaster::get_instance().get_rows(drug.get_table_name(), drug.get_primary_key(), .......))
@@ -40,9 +40,14 @@ mm::controller::AddPrescriptionDialog::AddPrescriptionDialog() {
 }
 
 void mm::controller::AddPrescriptionDialog::free() {
+    view->dispose_dialog();
     delete this;
 }
 
 mm::controller::Dialog *mm::controller::AddPrescriptionDialog::create() {
     return new AddPrescriptionDialog();
+}
+
+void mm::controller::AddPrescriptionDialog::show_dialog() {
+    view->show_dialog();
 }

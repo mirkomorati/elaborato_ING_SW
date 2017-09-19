@@ -9,7 +9,6 @@
 #include <gtkmm/button.h>
 #include "../controller/Dialog.hpp"
 #include "../RefBuilder.hpp"
-#include "AddPatientDialog.hpp"
 
 namespace mm {
     namespace view {

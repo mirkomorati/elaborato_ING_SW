@@ -36,11 +36,11 @@ void mm::controller::SelectDateByDialog::ok_handler() {
 
     parent->mask_by_selected_date(date_by);
 
-    view->dispose_dialog();
+    this->free();
 }
 
 void mm::controller::SelectDateByDialog::cancel_handler() {
-    view->dispose_dialog();
+    this->free();
 }
 
 void mm::controller::SelectDateByDialog::set_view() {
@@ -66,9 +66,14 @@ mm::controller::SelectDateByDialog::SelectDateByDialog() {
 }
 
 void mm::controller::SelectDateByDialog::free() {
+    view->dispose_dialog();
     delete this;
 }
 
 mm::controller::Dialog *mm::controller::SelectDateByDialog::create() {
     return new SelectDateByDialog();
+}
+
+void mm::controller::SelectDateByDialog::show_dialog() {
+    view->show_dialog();
 }

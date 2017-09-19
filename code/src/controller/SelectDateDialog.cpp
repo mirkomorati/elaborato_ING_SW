@@ -46,6 +46,7 @@ mm::controller::SelectDateDialog::~SelectDateDialog() {
 }
 
 void mm::controller::SelectDateDialog::free() {
+    std::cout << "Freed SelectDateDialog Controller: " << this << std::endl;
     delete this;
 }
 

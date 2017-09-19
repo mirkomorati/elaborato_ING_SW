@@ -29,34 +29,10 @@ namespace mm {
 
             DialogFactory &operator=(const DialogFactory &) { return *this; }
 
-            std::map factory_map;
+            std::map<std::string, create_dialog_function> factory_map;
         };
     }
 }
-/*
-// Factory for creating instances of IAnimal
-class AnimalFactory
-{
-private:
-    AnimalFactory();
-    AnimalFactory(const AnimalFactory &) { }
-    AnimalFactory &operator=(const AnimalFactory &) { return *this; }
-
-    typedef map FactoryMap;
-    FactoryMap m_FactoryMap;
-public:
-    ~AnimalFactory() { m_FactoryMap.clear(); }
-
-    static AnimalFactory *Get()
-    {
-        static AnimalFactory instance;
-        return &instance;
-    }
-
-    void Register(const string &animalName, CreateAnimalFn pfnCreate);
-    IAnimal *CreateAnimal(const string &animalName);
-};
- */
 
 
 #endif //ELABORATO_ING_SW_DIALOGFACTORY_HPP

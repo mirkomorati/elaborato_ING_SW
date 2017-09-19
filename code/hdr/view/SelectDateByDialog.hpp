@@ -5,7 +5,6 @@
 #ifndef ELABORATO_ING_SW_SELECTDATEBYDIALOGVIEW_HPP
 #define ELABORATO_ING_SW_SELECTDATEBYDIALOGVIEW_HPP
 
-#include "../controller/SelectDateByDialog.hpp"
 #include "Dialog.hpp"
 
 namespace mm {
