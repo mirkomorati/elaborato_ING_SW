@@ -14,7 +14,11 @@ namespace mm {
         public:
             AddPrescriptionDialog();
 
-            virtual void set_combo_box(std::vector<std::string> text);
+            void set_ok_handler(controller::Dialog *controller, void (controller::Dialog::*handler)(void)) override;
+
+            void set_cancel_handler(controller::Dialog *controller, void (controller::Dialog::*handler)(void)) override;
+
+            void set_combo_box(std::vector<std::string> text);
         };
     }
 }

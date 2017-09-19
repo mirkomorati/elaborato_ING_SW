@@ -7,15 +7,25 @@
 
 #include "../controller/SelectDateByDialog.hpp"
 #include "Dialog.hpp"
+#include "../controller/AddPatientDialog.hpp"
 
 namespace mm {
+    namespace controller {
+        class AddPatientDialog;
+    }
     namespace view {
         class AddPatientDialog : public view::Dialog {
         public:
             AddPatientDialog();
+
+            void set_ok_handler(controller::Dialog *controller, void (controller::Dialog::*handler)(void)) override;
+
+            void set_cancel_handler(controller::Dialog *controller, void (controller::Dialog::*handler)(void)) override;
+
+            void set_select_date_handler(controller::AddPatientDialog *controller,
+                                         void (controller::AddPatientDialog::*handler)(void));
         };
     }
 }
-
 
 #endif //ELABORATO_ING_SW_ADDPATIENTDIALOGVIEW_HPP

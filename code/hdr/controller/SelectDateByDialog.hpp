@@ -19,18 +19,23 @@ namespace mm {
 
             ~SelectDateByDialog();
 
-            void ok_handler();
+            void ok_handler() override;
 
-            void cancel_handler();
+            void cancel_handler() override;
 
-            void set_view();
+            void set_view() override;
 
             void set_parent(Patient *parent);
 
             util::DateBy get_date();
 
+            void free();
+
+            static Dialog *create();
+
         private:
             controller::Patient *parent;
+            view::SelectDateByDialog *view;
             util::DateBy date_by;
         };
     }

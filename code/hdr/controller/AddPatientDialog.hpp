@@ -10,6 +10,9 @@
 #include "Patient.hpp"
 
 namespace mm {
+    namespace view {
+        class AddPatientDialog;
+    }
     namespace controller {
         class AddPatientDialog : public controller::Dialog {
         public:
@@ -17,15 +20,24 @@ namespace mm {
 
             ~AddPatientDialog();
 
-            void ok_handler();
+            void ok_handler() override;
 
-            void cancel_handler();
+            void cancel_handler() override;
 
-            void set_view();
+            void set_view() override;
+
+            void show_dialog() override;
 
             void select_birth_date_handler();
 
             void select_birth_date_get_date(util::Date date);
+
+            void free();
+
+            static Dialog *create();
+
+        private:
+            view::AddPatientDialog *view;
         };
     }
 }

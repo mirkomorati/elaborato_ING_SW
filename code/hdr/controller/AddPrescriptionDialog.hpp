@@ -8,6 +8,7 @@
 
 #include "Dialog.hpp"
 #include "Patient.hpp"
+#include "../view/AddPrescriptionDialog.hpp"
 
 namespace mm {
     namespace controller {
@@ -22,6 +23,13 @@ namespace mm {
             void cancel_handler() override;
 
             void set_view() override;
+
+            void free();
+
+            static Dialog *create();
+
+        private:
+            view::AddPrescriptionDialog *view;
         };
     }
 }

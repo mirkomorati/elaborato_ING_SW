@@ -21,3 +21,17 @@ void mm::view::AddPrescriptionDialog::set_combo_box(std::vector<std::string> tex
         }
     }
 }
+
+void mm::view::AddPrescriptionDialog::set_ok_handler(mm::controller::Dialog *controller,
+                                                     void (controller::Dialog::*handler)(void)) {
+    Gtk::Button *button;
+    RefBuilder::get_instance().get_widget("addPrescriptionOk", button);
+    button->signal_clicked().connect(sigc::mem_fun(controller, handler));
+}
+
+void mm::view::AddPrescriptionDialog::set_cancel_handler(mm::controller::Dialog *controller,
+                                                         void (controller::Dialog::*handler)(void)) {
+    Gtk::Button *button;
+    RefBuilder::get_instance().get_widget("addPrescriptionCancel", button);
+    button->signal_clicked().connect(sigc::mem_fun(controller, handler));
+}

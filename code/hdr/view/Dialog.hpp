@@ -9,29 +9,23 @@
 #include <gtkmm/button.h>
 #include "../controller/Dialog.hpp"
 #include "../RefBuilder.hpp"
+#include "AddPatientDialog.hpp"
 
 namespace mm {
-    namespace controller {
-        class Dialog;
-    }
     namespace view {
         class Dialog {
         public:
             Dialog(std::string name);
 
-            template<class T>
-            void set_button_handler(T *controller, std::string button_name, void (T::*handler)(void)) {
-                Gtk::Button *button;
-                RefBuilder::get_instance().get_widget(button_name, button);
-
-                button->signal_clicked().connect(sigc::mem_fun(controller, handler));
-            }
-
             void show_dialog();
 
             void dispose_dialog();
 
-            virtual void set_combo_box(std::vector<std::string> combo_text);
+            virtual void
+            set_ok_handler(mm::controller::Dialog *controller, void (mm::controller::Dialog::*handler)(void)) = 0;
+
+            virtual void
+            set_cancel_handler(mm::controller::Dialog *controller, void (mm::controller::Dialog::*handler)(void)) = 0;
 
         private:
             const std::string name;

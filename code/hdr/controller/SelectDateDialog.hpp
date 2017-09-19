@@ -19,22 +19,30 @@ namespace mm {
 
         class SelectDateDialog : public controller::Dialog {
         public:
+            SelectDateDialog();
 
             ~SelectDateDialog();
 
-            void ok_handler();
+            void ok_handler() override;
 
-            void cancel_handler();
+            void cancel_handler() override;
 
-            void set_view();
+            void set_view() override;
 
-            // todo: questa funzione deve essere polimorfica.
+            void show_dialog() override;
+
+            // todo: questa funzione deve essere polimorfa.
             void set_parent(AddPatientDialog *parent);
 
             util::Date get_date();
 
+            void free();
+
+            static Dialog *create();
+
         private:
             controller::AddPatientDialog *parent;
+            view::SelectDateDialog *view;
             util::Date date;
         };
     }

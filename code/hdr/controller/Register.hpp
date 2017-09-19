@@ -17,10 +17,6 @@ namespace mm {
             Main main;
             Login login;
             Patient patient;
-            SelectDateDialog select_date_dialog;
-            AddPatientDialog add_patient_dialog;
-            AddPrescriptionDialog add_prescription_dialog;
-            SelectDateByDialog select_date_by_dialog;
 
             // istanza della classe.
             static Register *instance;
@@ -36,14 +32,6 @@ namespace mm {
             Login &get_login();
 
             Patient &get_patient();
-
-            SelectDateDialog &get_select_date_dialog();
-
-            AddPatientDialog &get_add_patient_dialog();
-
-            AddPrescriptionDialog &get_add_prescription_dialog();
-
-            SelectDateByDialog &get_select_date_by_dialog();
 
             Register(const Register &other) = delete;
 

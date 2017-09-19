@@ -74,10 +74,9 @@ void mm::controller::AddPatientDialog::cancel_handler() {
 
 void mm::controller::AddPatientDialog::set_view() {
     view = new mm::view::AddPatientDialog();
-    view->set_button_handler(this, "addPatientOk", &controller::AddPatientDialog::ok_handler);
-    view->set_button_handler(this, "addPatientCancel", &controller::AddPatientDialog::cancel_handler);
-    view->set_button_handler(this, "addBirthDate", &controller::AddPatientDialog::select_birth_date_handler);
-
+    view->set_ok_handler(this, &controller::Dialog::ok_handler);
+    view->set_cancel_handler(this, &controller::Dialog::cancel_handler);
+    view->set_select_date_handler(this, &controller::AddPatientDialog::select_birth_date_handler);
 }
 
 mm::controller::AddPatientDialog::~AddPatientDialog() {
@@ -99,4 +98,16 @@ void mm::controller::AddPatientDialog::select_birth_date_get_date(util::Date dat
 
 mm::controller::AddPatientDialog::AddPatientDialog() {
     this->set_view();
+}
+
+void mm::controller::AddPatientDialog::free() {
+    delete this;
+}
+
+mm::controller::Dialog *mm::controller::AddPatientDialog::create() {
+    return new AddPatientDialog();
+}
+
+void mm::controller::AddPatientDialog::show_dialog() {
+    view->show_dialog();
 }

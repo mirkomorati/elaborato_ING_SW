@@ -25,19 +25,3 @@ mm::controller::Register &mm::controller::Register::get_instance() {
 
     return *instance;
 }
-
-mm::controller::SelectDateDialog &mm::controller::Register::get_select_date_dialog() {
-    return select_date_dialog;
-}
-
-mm::controller::AddPatientDialog &mm::controller::Register::get_add_patient_dialog() {
-    return add_patient_dialog;
-}
-
-mm::controller::AddPrescriptionDialog &mm::controller::Register::get_add_prescription_dialog() {
-    return add_prescription_dialog;
-}
-
-mm::controller::SelectDateByDialog &mm::controller::Register::get_select_date_by_dialog() {
-    return select_date_by_dialog;
-}

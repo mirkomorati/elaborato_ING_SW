@@ -4,10 +4,3 @@
 
 #include "../../hdr/controller/Dialog.hpp"
 
-mm::controller::Dialog::~Dialog() {
-    if (view) delete view;
-}
-
-void mm::controller::Dialog::show_dialog() {
-    view->show_dialog();
-}

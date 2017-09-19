@@ -45,8 +45,8 @@ void mm::controller::SelectDateByDialog::cancel_handler() {
 
 void mm::controller::SelectDateByDialog::set_view() {
     view = new mm::view::SelectDateByDialog();
-    view->set_button_handler(this, "selectDateByOk", &mm::controller::SelectDateByDialog::ok_handler);
-    view->set_button_handler(this, "selectDateByCancel", &mm::controller::SelectDateByDialog::cancel_handler);
+    view->set_ok_handler(this, &controller::Dialog::ok_handler);
+    view->set_cancel_handler(this, &controller::Dialog::cancel_handler);
 }
 
 mm::controller::SelectDateByDialog::~SelectDateByDialog() {
@@ -63,4 +63,12 @@ void mm::controller::SelectDateByDialog::set_parent(mm::controller::Patient *par
 
 mm::controller::SelectDateByDialog::SelectDateByDialog() {
     this->set_view();
+}
+
+void mm::controller::SelectDateByDialog::free() {
+    delete this;
+}
+
+mm::controller::Dialog *mm::controller::SelectDateByDialog::create() {
+    return new SelectDateByDialog();
 }

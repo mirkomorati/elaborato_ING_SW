@@ -3,7 +3,6 @@
 //
 
 #include "../../hdr/controller/AddPrescriptionDialog.hpp"
-#include "../../hdr/view/AddPrescriptionDialog.hpp"
 #include "../../hdr/DBMaster.hpp"
 
 void mm::controller::AddPrescriptionDialog::ok_handler() {
@@ -30,11 +29,20 @@ void mm::controller::AddPrescriptionDialog::set_view() {
         combo_text.push_back(ss.str());
     }
     view->set_combo_box(combo_text);
-    std::cout << "after combo" << std::endl;
 }
 
-mm::controller::AddPrescriptionDialog::~AddPrescriptionDialog() {}
+mm::controller::AddPrescriptionDialog::~AddPrescriptionDialog() {
+    delete view;
+}
 
 mm::controller::AddPrescriptionDialog::AddPrescriptionDialog() {
     this->set_view();
+}
+
+void mm::controller::AddPrescriptionDialog::free() {
+    delete this;
+}
+
+mm::controller::Dialog *mm::controller::AddPrescriptionDialog::create() {
+    return new AddPrescriptionDialog();
 }

@@ -10,9 +10,15 @@
 
 namespace mm {
     namespace view {
-        class SelectDateByDialog : public view::Dialog {
+        class SelectDateByDialog : public Dialog {
         public:
             SelectDateByDialog();
+
+            void
+            set_ok_handler(mm::controller::Dialog *controller, void (mm::controller::Dialog::*handler)(void)) override;
+
+            void set_cancel_handler(mm::controller::Dialog *controller,
+                                    void (mm::controller::Dialog::*handler)(void)) override;
         };
     }
 }

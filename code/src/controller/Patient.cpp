@@ -7,13 +7,14 @@
 #include "../../hdr/DBMaster.hpp"
 #include "../../hdr/RefBuilder.hpp"
 #include "../../hdr/controller/Register.hpp"
+#include "../../hdr/factory/DialogFactory.hpp"
 
 void mm::controller::Patient::set_view(view::Patient *view) {
     this->patient_view = view;
 }
 
 void mm::controller::Patient::add_patient_handler() {
-    controller::Register::get_instance().get_add_patient_dialog().show_dialog();
+    factory::DialogFactory::get_instance()->create_dialog("addPatientDialog")->show_dialog();
 }
 
 void mm::controller::Patient::remove_patient_handler() {
@@ -157,7 +158,7 @@ void mm::controller::Patient::set_drugs_tree_view(const string &patient_id) {
 }
 
 void mm::controller::Patient::select_date_by_handler() {
-    controller::Register::get_instance().get_select_date_by_dialog().show_dialog();
+    factory::DialogFactory::get_instance()->create_dialog("selectDateByDialog")->show_dialog();
 }
 
 mm::controller::Patient::Patient() {}
@@ -180,6 +181,6 @@ mm::model::Doctor mm::controller::Patient::get_doctor() {
 }
 
 void mm::controller::Patient::add_prescription_handler() {
-    controller::Register::get_instance().get_add_prescription_dialog().show_dialog();
+    factory::DialogFactory::get_instance()->create_dialog("addPrescriptionDialog")->show_dialog();
 }
 

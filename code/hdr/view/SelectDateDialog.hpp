@@ -17,6 +17,12 @@ namespace mm {
         class SelectDateDialog : public view::Dialog {
         public:
             SelectDateDialog();
+
+            void
+            set_ok_handler(mm::controller::Dialog *controller, void (mm::controller::Dialog::*handler)(void)) override;
+
+            void set_cancel_handler(mm::controller::Dialog *controller,
+                                    void (mm::controller::Dialog::*handler)(void)) override;
         };
     }
 }
