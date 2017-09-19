@@ -42,7 +42,6 @@ void mm::controller::SelectDateDialog::set_parent(mm::controller::AddPatientDial
 
 mm::controller::SelectDateDialog::~SelectDateDialog() {
     delete view;
-    delete parent;
 }
 
 void mm::controller::SelectDateDialog::free() {

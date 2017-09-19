@@ -14,7 +14,9 @@ void mm::controller::Patient::set_view(view::Patient *view) {
 }
 
 void mm::controller::Patient::add_patient_handler() {
-    factory::DialogFactory::get_instance()->create_dialog("AddPatientDialog")->show_dialog();
+    auto c = factory::DialogFactory::get_instance()->create_dialog("AddPatientDialog");
+    c->show_dialog();
+    std::cout << "Patient--> AddPatientDialog p: " << c << std::endl;
 }
 
 void mm::controller::Patient::remove_patient_handler() {

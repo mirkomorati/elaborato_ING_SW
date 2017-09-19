@@ -18,12 +18,17 @@ namespace mm {
         public:
             AddPatientDialog();
 
+            virtual ~AddPatientDialog();
+
             void set_ok_handler(controller::Dialog *controller, void (controller::Dialog::*handler)(void)) override;
 
             void set_cancel_handler(controller::Dialog *controller, void (controller::Dialog::*handler)(void)) override;
 
             void set_select_date_handler(controller::AddPatientDialog *controller,
                                          void (controller::AddPatientDialog::*handler)(void));
+
+        private:
+            sigc::connection c_select_date;
         };
     }
 }

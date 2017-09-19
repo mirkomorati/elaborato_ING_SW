@@ -50,7 +50,6 @@ void mm::controller::SelectDateByDialog::set_view() {
 }
 
 mm::controller::SelectDateByDialog::~SelectDateByDialog() {
-    delete parent;
 }
 
 mm::util::DateBy mm::controller::SelectDateByDialog::get_date() {
