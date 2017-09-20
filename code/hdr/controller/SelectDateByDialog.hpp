@@ -7,11 +7,11 @@
 
 #include "../view/SelectDateByDialog.hpp"
 #include "../time_utilities/DateBy.hpp"
-#include "Patient.hpp"
+#include "Application.hpp"
 
 namespace mm {
     namespace controller {
-        class Patient;
+        class Application;
 
         class SelectDateByDialog : public controller::Dialog {
         public:
@@ -25,7 +25,7 @@ namespace mm {
 
             void set_view() override;
 
-            void set_parent(Patient *parent);
+            void set_parent(Application *parent);
 
             util::DateBy get_date();
 
@@ -36,7 +36,7 @@ namespace mm {
             void show_dialog() override;
 
         private:
-            controller::Patient *parent;
+            controller::Application *parent;
             view::SelectDateByDialog *view;
             util::DateBy date_by;
         };

@@ -26,6 +26,8 @@ namespace mm {
             virtual void
             set_cancel_handler(mm::controller::Dialog *controller, void (mm::controller::Dialog::*handler)(void)) = 0;
 
+            virtual ~Dialog();
+
         protected:
             const std::string name;
             sigc::connection c_ok, c_cancel;

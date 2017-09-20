@@ -31,7 +31,6 @@ namespace mm {
 
             void show_dialog() override;
 
-            // todo: questa funzione deve essere polimorfa.
             void set_parent(AddPatientDialog *parent);
 
             util::Date get_date();

@@ -25,7 +25,7 @@ namespace mm {
             void set_cancel_handler(controller::Dialog *controller, void (controller::Dialog::*handler)(void)) override;
 
             void set_select_date_handler(controller::AddPatientDialog *controller,
-                                         void (controller::AddPatientDialog::*handler)(void));
+                                         void (controller::AddPatientDialog::*handler)());
 
         private:
             sigc::connection c_select_date;

@@ -14,6 +14,7 @@ namespace mm {
     }
 
     namespace view {
+
         class SelectDateDialog : public view::Dialog {
         public:
             SelectDateDialog();

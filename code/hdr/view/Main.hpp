@@ -7,7 +7,7 @@
 
 #include <gtkmm-3.0/gtkmm.h>
 #include "../controller/Main.hpp"
-#include "Patient.hpp"
+#include "Application.hpp"
 #include "Login.hpp"
 
 namespace mm {
@@ -16,7 +16,7 @@ namespace mm {
     }
 
     namespace view {
-        class Patient;
+        class Application;
 
         class Login;
 
@@ -35,7 +35,7 @@ namespace mm {
 
             view::Login &get_login_view();
 
-            view::Patient &get_patient_view();
+            view::Application &get_patient_view();
 
             void setup();
 
@@ -43,7 +43,7 @@ namespace mm {
 
         private:
             view::Login *login_view;
-            Patient *patient_view;
+            Application *patient_view;
 
             controller::Main &controller;
 

@@ -14053,7 +14053,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "Patient",
+													"text": "Application",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -14400,7 +14400,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+Patient()",
+													"text": "+Application()",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -14429,7 +14429,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+~Patient()",
+													"text": "+~Application()",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -15822,7 +15822,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "-patient: Patient",
+													"text": "-patient: Application",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -25229,7 +25229,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFcVIQRXMs8yCs="
 							},
-							"name": "Patient",
+							"name": "Application",
 							"ownedElements": [
 								{
 									"_type": "UMLDependency",
@@ -25401,7 +25401,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFcVIWU9suADkw="
 									},
-									"name": "Patient",
+									"name": "Application",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -25415,7 +25415,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFcVIWU9suADkw="
 									},
-									"name": "~Patient",
+									"name": "~Application",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,

@@ -31,7 +31,5 @@ void mm::view::AddPatientDialog::set_select_date_handler(mm::controller::AddPati
 }
 
 mm::view::AddPatientDialog::~AddPatientDialog() {
-    c_ok.disconnect();
-    c_cancel.disconnect();
-    c_select_date.disconnect();
+    if (not c_select_date.empty()) c_select_date.disconnect();
 }

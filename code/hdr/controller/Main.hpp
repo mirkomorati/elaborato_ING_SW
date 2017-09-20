@@ -7,7 +7,7 @@
 
 
 #include "Login.hpp"
-#include "Patient.hpp"
+#include "Application.hpp"
 #include "../view/Main.hpp"
 #include <gdk/gdk.h>
 
@@ -25,7 +25,7 @@ namespace mm {
 
         class Login;
 
-        class Patient;
+        class Application;
 
         class Main {
         public:

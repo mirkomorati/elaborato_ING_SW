@@ -1,33 +1,23 @@
+#include "../../hdr/controller/Application.hpp"
+#include "../../hdr/factory/DialogFactory.hpp"
+
+/*
 //
 // Created by Noè Murr on 03/07/2017.
 //
 
 #include <iostream>
-#include "../../hdr/controller/Patient.hpp"
+#include "../../hdr/controller/Application.hpp"
 #include "../../hdr/DBMaster.hpp"
 #include "../../hdr/RefBuilder.hpp"
 #include "../../hdr/controller/Register.hpp"
 #include "../../hdr/factory/DialogFactory.hpp"
 
-void mm::controller::Patient::set_view(view::Patient *view) {
+void mm::controller::Application::set_view(view::Application *view) {
     this->patient_view = view;
 }
 
-void mm::controller::Patient::add_patient_handler() {
-    auto c = factory::DialogFactory::get_instance()->create_dialog("AddPatientDialog");
-    c->show_dialog();
-    std::cout << "Patient--> AddPatientDialog p: " << c << std::endl;
-}
-
-void mm::controller::Patient::remove_patient_handler() {
-
-}
-
-void mm::controller::Patient::edit_patient_handler() {
-
-}
-
-void mm::controller::Patient::set_doctor(int doctor_id) {
+void mm::controller::Application::set_doctor(int doctor_id) {
 
     if (doctor_id == doctor.get_regional_id()) {
         patient_view->unset_patient_model();
@@ -64,7 +54,7 @@ void mm::controller::Patient::set_doctor(int doctor_id) {
     patient_view->set_patient_tree_model(patient_tree_model, patient_list_store);
 }
 
-void mm::controller::Patient::row_selected_handler(const Gtk::TreeModel::Path &path,
+void mm::controller::Application::row_selected_handler(const Gtk::TreeModel::Path &path,
                                                    Gtk::TreeViewColumn *column) {
     auto selection = column->get_tree_view()->get_selection();
     auto iter = patient_list_store->get_iter(path);
@@ -84,7 +74,7 @@ void mm::controller::Patient::row_selected_handler(const Gtk::TreeModel::Path &p
     }
 }
 
-void mm::controller::Patient::set_prescription_tree_view(std::string patient_id) {
+void mm::controller::Application::set_prescription_tree_view(std::string patient_id) {
     model::Patient patient;
 
     try {
@@ -119,7 +109,7 @@ void mm::controller::Patient::set_prescription_tree_view(std::string patient_id)
                                               prescription_list_store);
 }
 
-void mm::controller::Patient::set_drugs_tree_view(const string &patient_id) {
+void mm::controller::Application::set_drugs_tree_view(const string &patient_id) {
     std::vector<model::Drug> drugs;
     model::Patient patient;
 
@@ -159,30 +149,47 @@ void mm::controller::Patient::set_drugs_tree_view(const string &patient_id) {
 
 }
 
-void mm::controller::Patient::select_date_by_handler() {
-    factory::DialogFactory::get_instance()->create_dialog("SelectDateByDialog")->show_dialog();
-}
-
-mm::controller::Patient::Patient() {}
-
-void mm::controller::Patient::unselect_patient() {
+void mm::controller::Application::unselect_patient() {
     patient_view->unselect_patient();
     patient_view->unselect_prescription();
     patient_view->unselect_drug();
 }
 
-void mm::controller::Patient::mask_by_selected_date(mm::util::DateBy date) {
-    std::cout << "Masking by : " << date.date.day << date.date.month << date.date.year << " by " << date.by
-              << std::endl;
-}
+mm::controller::Application::~Application() {}
 
-mm::controller::Patient::~Patient() {}
-
-mm::model::Doctor mm::controller::Patient::get_doctor() {
+mm::model::Doctor mm::controller::Application::get_doctor() {
     return doctor;
 }
 
-void mm::controller::Patient::add_prescription_handler() {
+*/
+
+mm::controller::Application::Application() : model(new model::Application) {}
+
+mm::model::Doctor mm::controller::Application::get_doctor() {
+    return model->doc;
+}
+
+void mm::controller::Application::add_patient_handler() {
+    factory::DialogFactory::get_instance()->create_dialog("AddPatientDialog")->show_dialog();
+}
+
+void mm::controller::Application::add_prescription_handler() {
     factory::DialogFactory::get_instance()->create_dialog("AddPrescriptionDialog")->show_dialog();
 }
 
+void mm::controller::Application::remove_patient_handler() {
+    // todo implement
+}
+
+void mm::controller::Application::edit_patient_handler() {
+    // todo implement
+}
+
+void mm::controller::Application::select_date_by_handler() {
+    factory::DialogFactory::get_instance()->create_dialog("SelectDateByDialog")->show_dialog();
+}
+
+void mm::controller::Application::mask_by_selected_date(mm::util::DateBy date) {
+    std::cout << "Masking by : " << date.date.day << date.date.month << date.date.year << " by " << date.by
+              << std::endl;
+}

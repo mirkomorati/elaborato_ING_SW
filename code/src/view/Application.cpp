@@ -3,11 +3,11 @@
 //
 
 #include <iostream>
-#include "../../hdr/view/Patient.hpp"
+#include "../../hdr/view/Application.hpp"
 #include "../../hdr/RefBuilder.hpp"
 #include "../../hdr/controller/Register.hpp"
 
-mm::view::Patient::Patient() : controller(&controller::Register::get_instance().get_patient()) {
+mm::view::Application::Application() : controller(&controller::Register::get_instance().get_patient()) {
     auto &refBuilder = RefBuilder::get_instance();
     Gtk::Button *select_date;
     Gtk::ToolButton *add_prescription;
@@ -19,19 +19,19 @@ mm::view::Patient::Patient() : controller(&controller::Register::get_instance().
     refBuilder.get_widget("addPrescription", add_prescription);
 
     add_patient->signal_clicked().connect(sigc::mem_fun(
-            controller, &mm::controller::Patient::add_patient_handler));
+            controller, &mm::controller::Application::add_patient_handler));
     remove_patient->signal_clicked().connect(sigc::mem_fun(
-            controller, &mm::controller::Patient::remove_patient_handler));
+            controller, &mm::controller::Application::remove_patient_handler));
     edit_patient->signal_clicked().connect(sigc::mem_fun(
-            controller, &mm::controller::Patient::edit_patient_handler));
+            controller, &mm::controller::Application::edit_patient_handler));
     select_date->signal_clicked().connect(sigc::mem_fun(
-            controller, &mm::controller::Patient::select_date_by_handler));
+            controller, &mm::controller::Application::select_date_by_handler));
     add_prescription->signal_clicked().connect(sigc::mem_fun(
-            controller, &mm::controller::Patient::add_prescription_handler));
+            controller, &mm::controller::Application::add_prescription_handler));
 
 }
 
-void mm::view::Patient::set_patient_tree_model(model::Patient::TreeModel &patient_tree_model,
+void mm::view::Application::set_patient_tree_model(model::Patient::TreeModel &patient_tree_model,
                                                Glib::RefPtr<Gtk::ListStore> patient_list_store) {
     RefBuilder::get_instance().get_widget("patientTreeView", patient_tree_view);
 
@@ -46,10 +46,10 @@ void mm::view::Patient::set_patient_tree_model(model::Patient::TreeModel &patien
     }
     auto selection = patient_tree_view->get_selection();
     patient_tree_view->signal_row_activated().connect(sigc::mem_fun(
-            controller, &mm::controller::Patient::row_selected_handler));
+            controller, &mm::controller::Application::row_selected_handler));
 }
 
-void mm::view::Patient::patient_detail_show(Gtk::TreeModel::Row row,
+void mm::view::Application::patient_detail_show(Gtk::TreeModel::Row row,
                                             model::Patient::TreeModel &patient_tree_model) {
     auto &refBuilder = RefBuilder::get_instance();
     Gtk::Label *detail_first_name;
@@ -77,7 +77,7 @@ void mm::view::Patient::patient_detail_show(Gtk::TreeModel::Row row,
     detail_address->set_label(row[patient_tree_model.address]);
 }
 
-void mm::view::Patient::set_prescription_tree_model(
+void mm::view::Application::set_prescription_tree_model(
         model::Prescription::TreeModel &prescription_tree_model,
         Glib::RefPtr<Gtk::ListStore> prescription_list_store) {
     RefBuilder::get_instance().get_widget("prescriptionTreeView",
@@ -111,8 +111,8 @@ void mm::view::Patient::set_prescription_tree_model(
     prescription_tree_view->set_model(prescription_list_store);
 }
 
-void mm::view::Patient::set_drug_tree_model(mm::model::Drug::TreeModel &drug_tree_model,
-                                            Glib::RefPtr<Gtk::ListStore> drug_list_store) {
+void mm::view::Application::set_drug_tree_model(mm::model::Drug::TreeModel &drug_tree_model,
+                                                Glib::RefPtr<Gtk::ListStore> drug_list_store) {
     RefBuilder::get_instance().get_widget("drugTreeView", drug_tree_view);
     // Non il metodo migliore
     drug_tree_view->remove_all_columns();
@@ -140,31 +140,31 @@ void mm::view::Patient::set_drug_tree_model(mm::model::Drug::TreeModel &drug_tre
     drug_tree_view->set_model(drug_list_store);
 }
 
-void mm::view::Patient::unselect_patient() const {
+void mm::view::Application::unselect_patient() const {
     patient_tree_view->get_selection()->unselect_all();
     unset_prescription_model();
 }
 
-void mm::view::Patient::unselect_prescription() const {
+void mm::view::Application::unselect_prescription() const {
     prescription_tree_view->get_selection()->unselect_all();
     unset_drug_model();
 }
 
-void mm::view::Patient::unselect_drug() const {
+void mm::view::Application::unselect_drug() const {
     drug_tree_view->get_selection()->unselect_all();
 }
 
-void mm::view::Patient::unset_patient_model() const {
+void mm::view::Application::unset_patient_model() const {
     patient_tree_view->unset_model();
     patient_tree_view->remove_all_columns();
 }
 
-void mm::view::Patient::unset_prescription_model() const {
+void mm::view::Application::unset_prescription_model() const {
     prescription_tree_view->unset_model();
     prescription_tree_view->remove_all_columns();
 }
 
-void mm::view::Patient::unset_drug_model() const {
+void mm::view::Application::unset_drug_model() const {
     drug_tree_view->unset_model();
     drug_tree_view->remove_all_columns();
 }

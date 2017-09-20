@@ -9,19 +9,19 @@
 #include <gtkmm/liststore.h>
 #include <gtkmm/treeview.h>
 #include <gtkmm/grid.h>
-#include "../controller/Patient.hpp"
+#include "../controller/Application.hpp"
 #include "../model/Patient.hpp"
 #include "../model/Prescription.hpp"
 
 namespace mm {
     namespace controller {
-        class Patient;
+        class Application;
     }
     namespace view {
 
-        class Patient {
+        class Application {
         public:
-            explicit Patient();
+            explicit Application();
 
             // todo potrebbe esserci un segfault controlla oggetto tmp.
             void set_patient_tree_model(model::Patient::TreeModel &patient_tree_model,
@@ -51,7 +51,7 @@ namespace mm {
                                      model::Patient::TreeModel &patient_tree_model);
 
         private:
-            controller::Patient *controller;
+            controller::Application *controller;
             Gtk::ToolButton *add_patient;
             Gtk::ToolButton *edit_patient;
             Gtk::ToolButton *remove_patient;

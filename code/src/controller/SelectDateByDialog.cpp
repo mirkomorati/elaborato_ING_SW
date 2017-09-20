@@ -56,7 +56,7 @@ mm::util::DateBy mm::controller::SelectDateByDialog::get_date() {
     return date_by;
 }
 
-void mm::controller::SelectDateByDialog::set_parent(mm::controller::Patient *parent) {
+void mm::controller::SelectDateByDialog::set_parent(mm::controller::Application *parent) {
     SelectDateByDialog::parent = parent;
 }
 

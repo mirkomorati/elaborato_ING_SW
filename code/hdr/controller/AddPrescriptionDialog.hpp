@@ -7,7 +7,7 @@
 
 
 #include "Dialog.hpp"
-#include "Patient.hpp"
+#include "Application.hpp"
 #include "../view/AddPrescriptionDialog.hpp"
 
 namespace mm {

@@ -14,7 +14,7 @@ mm::controller::Login &mm::controller::Register::get_login() {
     return login;
 }
 
-mm::controller::Patient &mm::controller::Register::get_patient() {
+mm::controller::Application &mm::controller::Register::get_patient() {
     return patient;
 }
 

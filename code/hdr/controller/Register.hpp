@@ -13,10 +13,11 @@ namespace mm {
          * Classe che contiene l'insieme di tutti i controller
          */
         class Register {
-            // todo da aggiungere i controller.
+            // todo eliminare il register
+
             Main main;
             Login login;
-            Patient patient;
+            Application patient;
 
             // istanza della classe.
             static Register *instance;
@@ -31,7 +32,7 @@ namespace mm {
 
             Login &get_login();
 
-            Patient &get_patient();
+            Application &get_patient();
 
             Register(const Register &other) = delete;
 
