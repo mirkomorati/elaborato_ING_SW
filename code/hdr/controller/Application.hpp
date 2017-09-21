@@ -22,11 +22,11 @@ namespace mm {
         public:
             Application();
 
-            void set_doctor(int doctor_id, bool lock = true);
+            void set_doctor(int doctor_id, bool notify_on = true);
 
             model::Doctor get_doctor();
 
-            void set_prescription_tree_view(std::string patient_id, bool lock = true);
+            void set_prescription_tree_view(std::string patient_id, bool notify_on = true);
 
             void add_patient_handler();
 
@@ -44,7 +44,7 @@ namespace mm {
 
             void unselect_patient();
 
-            void set_drugs_tree_view(const string &patient_id, bool lock = true);
+            void set_drugs_tree_view(const string &patient_id, bool notify_on = true);
 
             std::shared_ptr<model::Application> get_model();
 

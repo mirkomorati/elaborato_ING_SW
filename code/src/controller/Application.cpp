@@ -9,7 +9,6 @@
 //
 
 mm::model::Doctor mm::controller::Application::get_doctor() {
-    lock_guard<mutex> lg(model->mutex);
     return model->doctor.first;
 }
 
@@ -39,15 +38,13 @@ void mm::controller::Application::mask_by_selected_date(mm::util::DateBy date) {
 }
 
 void mm::controller::Application::unselect_patient() {
-    lock_guard<mutex> lg(model->mutex);
     model->drug_tree_view_row_selected.first = not(model->drug_tree_view_row_selected.second = true);
     model->patient_tree_row_selected.first = not(model->patient_tree_row_selected.second = true);
     model->prescription_tree_view_row_selected.first = not(model->prescription_tree_view_row_selected.second = true);
     notify();
 }
 
-void mm::controller::Application::set_prescription_tree_view(std::string patient_id, bool lock) {
-    if (lock) lock_guard<mutex> lg(model->mutex);
+void mm::controller::Application::set_prescription_tree_view(std::string patient_id, bool notify_on) {
     model::Patient patient;
 
     try {
@@ -81,11 +78,10 @@ void mm::controller::Application::set_prescription_tree_view(std::string patient
     model->prescription_list_store.second = true;
     model->prescription_tree_model.second = true;
 
-    if (lock) notify();
+    if (notify_on) notify();
 }
 
-void mm::controller::Application::set_doctor(int doctor_id, bool lock) {
-    if (lock) lock_guard<mutex> lg(model->mutex);
+void mm::controller::Application::set_doctor(int doctor_id, bool notify_on) {
     if (doctor_id == model->doctor.first.get_regional_id()) {
         model->patient_list_store.first->clear();
     } else {
@@ -122,12 +118,11 @@ void mm::controller::Application::set_doctor(int doctor_id, bool lock) {
     model->patient_list_store.second = true;
     model->patient_tree_model.second = true;
 
-    if (lock) notify();
+    if (notify_on) notify();
 }
 
 void mm::controller::Application::row_selected_handler(const Gtk::TreeModel::Path &path,
                                                        Gtk::TreeViewColumn *column) {
-    lock_guard<mutex> lg(model->mutex);
 
     auto selection = column->get_tree_view()->get_selection();
     auto iter = model->patient_list_store.first->get_iter(path);
@@ -152,8 +147,7 @@ void mm::controller::Application::row_selected_handler(const Gtk::TreeModel::Pat
     notify();
 }
 
-void mm::controller::Application::set_drugs_tree_view(const string &patient_id, bool lock) {
-    if (lock) lock_guard<mutex> lg(model->mutex);
+void mm::controller::Application::set_drugs_tree_view(const string &patient_id, bool notify_on) {
     std::vector<model::Drug> drugs;
     model::Patient patient;
 
@@ -192,7 +186,7 @@ void mm::controller::Application::set_drugs_tree_view(const string &patient_id, 
     model->drug_list_store.second = true;
     model->drug_tree_model.second = true;
 
-    if (lock) notify();
+    if (notify_on) notify();
 }
 
 shared_ptr<mm::model::Application> mm::controller::Application::get_model() {

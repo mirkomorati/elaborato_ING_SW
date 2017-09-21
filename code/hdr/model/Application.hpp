@@ -12,7 +12,6 @@
 namespace mm {
     namespace model {
         struct Application {
-            std::mutex mutex;
             std::pair<Doctor, bool> doctor;
             std::pair<Patient::TreeModel, bool> patient_tree_model;
             std::pair<Prescription::TreeModel, bool> prescription_tree_model;
