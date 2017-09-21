@@ -82,28 +82,29 @@ const std::string mm::util::Date::get_text() {
 }
 
 bool mm::util::Date::is_valid() {
-    return (((day >= 1 and day <= 31) and
-             (month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12)))
-           or (((day >= 1 and day <= 30) and (month == 4 or month == 6 or month == 9 or month == 11)))
-           or (((day >= 1 and day <= 28) and (month == 2)))
-           or ((day == 29 and month == 2 and (year % 400 == 0 or (year % 4 == 0 and year % 100 != 0))));
+    return (day > 0 and month > 0 and year > 0) and ((((day >= 1 and day <= 31) and
+                                                       (month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12)))
+                                                     or ((day >= 1 and day <= 30) and
+                                                         (month == 4 or month == 6 or month == 9 or month == 11))
+                                                     or ((day >= 1 and day <= 28) and (month == 2))
+                                                     or ((day == 29 and month == 2 and
+                                                          (year % 400 == 0 or (year % 4 == 0 and year % 100 != 0)))));
 }
 
 int mm::util::Date::get_current_year() {
-
     std::time_t t = std::time(nullptr);
     std::tm *time_p = std::localtime(&t);
-    time_p->tm_year;
+    return time_p->tm_year + 1900;
 }
 
 int mm::util::Date::get_current_day() {
     std::time_t t = std::time(nullptr);
     std::tm *time_p = std::localtime(&t);
-    time_p->tm_mday;
+    return time_p->tm_mday;
 }
 
 int mm::util::Date::get_current_month() {
     std::time_t t = std::time(nullptr);
     std::tm *time_p = std::localtime(&t);
-    time_p->tm_mon;
+    return time_p->tm_mon + 1;
 }

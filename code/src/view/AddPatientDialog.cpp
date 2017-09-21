@@ -10,11 +10,11 @@ mm::view::AddPatientDialog::AddPatientDialog() : view::Dialog("addPatientDialog"
     RefBuilder::get_instance().get_widget("addBirthDateMonth", combo_month);
     RefBuilder::get_instance().get_widget("addBirthDateYear", combo_year);
     for (int i = 1; i <= 31; i++)
-        combo_day->add_label(Glib::ustring::format(i));
+        combo_day->append(Glib::ustring::format(i));
     for (int i = 1; i <= 12; i++)
-        combo_month->add_label(Glib::ustring((i < 10 ? "0" : "")).append(Glib::ustring::format(i)));
-    for (int i = 1900; i <= util::Date::get_current_year(); i++)
-        combo_year->add_label(Glib::ustring::format(i));
+        combo_month->append(Glib::ustring((i < 10 ? "0" : "")).append(Glib::ustring::format(i)));
+    for (int i = util::Date::get_current_year(); i >= 1920; i--)
+        combo_year->append(Glib::ustring::format(i));
     this->set_add_birth_date();
 }
 
@@ -56,7 +56,7 @@ void mm::view::AddPatientDialog::set_add_birth_date(mm::util::Date date) {
     RefBuilder::get_instance().get_widget("addBirthDateMonth", combo_month);
     RefBuilder::get_instance().get_widget("addBirthDateYear", combo_year);
     combo_day->set_active_text(Glib::ustring::format(date.day));
-    combo_month->set_active_text(Glib::ustring::format(date.month));
+    combo_month->set_active_text(Glib::ustring(date.month < 10 ? "0" : "").append(Glib::ustring::format(date.month)));
     combo_year->set_active_text(Glib::ustring::format(date.year));
 }
 
@@ -66,6 +66,7 @@ void mm::view::AddPatientDialog::set_add_birth_date() {
     RefBuilder::get_instance().get_widget("addBirthDateMonth", combo_month);
     RefBuilder::get_instance().get_widget("addBirthDateYear", combo_year);
     combo_day->set_active_text(Glib::ustring::format(util::Date::get_current_day()));
-    combo_month->set_active_text(Glib::ustring::format(util::Date::get_current_month()));
+    combo_month->set_active_text(Glib::ustring(util::Date::get_current_month() < 10 ? "0" : "").append(
+            Glib::ustring::format(util::Date::get_current_month())));
     combo_year->set_active_text(Glib::ustring::format(util::Date::get_current_year()));
 }
