@@ -11,7 +11,7 @@
 mm::view::Main::Main()
         : controller(controller::Register::get_instance().get_main()) {
     login_view = new Login();
-    patient_view = new Application();
+    patient_view = new Application(controller::Register::get_instance().get_patient());
 
     auto &refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("mainWindow", window);
