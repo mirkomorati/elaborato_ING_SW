@@ -31,6 +31,8 @@ namespace mm {
 
         private:
             std::vector<sigc::connection> connections;
+
+            void set_add_birth_date();
         };
     }
 }

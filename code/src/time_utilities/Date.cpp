@@ -88,3 +88,24 @@ bool mm::util::Date::is_valid() {
            or (((day >= 1 and day <= 28) and (month == 2)))
            or ((day == 29 and month == 2 and (year % 400 == 0 or (year % 4 == 0 and year % 100 != 0))));
 }
+
+int mm::util::Date::get_current_year() {
+
+    std::time_t t = std::time(nullptr);
+    std::tm *time_p = std::localtime(&t);
+    time_p->tm_year;
+}
+
+}
+
+int mm::util::Date::get_current_day() {
+    std::time_t t = std::time(nullptr);
+    std::tm *time_p = std::localtime(&t);
+    time_p->tm_mday;
+}
+
+int mm::util::Date::get_current_month() {
+    std::time_t t = std::time(nullptr);
+    std::tm *time_p = std::localtime(&t);
+    time_p->tm_mon;
+}

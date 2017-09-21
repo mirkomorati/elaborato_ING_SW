@@ -13,13 +13,16 @@ void mm::controller::AddPatientDialog::ok_handler() {
     model::Patient patient;
     stringstream address;
     stringstream birth_address;
+    stringstream birth_date;
 
     // fields
     Gtk::Entry *first_name;
     Gtk::Entry *last_name;
     Gtk::Entry *fiscal_code;
     Gtk::Entry *health_code;
-    Gtk::Button *birth_date;
+    Gtk::ComboBoxText *add_birth_day;
+    Gtk::ComboBoxText *add_birth_month;
+    Gtk::ComboBoxText *add_birth_year;
     Gtk::Entry *street;
     Gtk::Entry *civic;
     Gtk::Entry *zip_code;
@@ -32,7 +35,9 @@ void mm::controller::AddPatientDialog::ok_handler() {
     refBuilder.get_widget("addLastName", last_name);
     refBuilder.get_widget("addFiscalCode", fiscal_code);
     refBuilder.get_widget("addHealthCode", health_code);
-    refBuilder.get_widget("addBirthDate", birth_date);
+    refBuilder.get_widget("addBirthDateDay", add_birth_day);
+    refBuilder.get_widget("addBirthDateMonth", add_birth_month);
+    refBuilder.get_widget("addBirthDateYear", add_birth_year);
     refBuilder.get_widget("addBirthCity", birth_city);
     refBuilder.get_widget("addBirthCountry", birth_country);
     refBuilder.get_widget("addStreetAddress", street);
@@ -45,7 +50,10 @@ void mm::controller::AddPatientDialog::ok_handler() {
     patient.set_last_name(last_name->get_text());
     patient.set_fiscal_code(fiscal_code->get_text());
     patient.set_health_code(health_code->get_text());
-    patient.set_birth_date(birth_date->get_label());
+    birth_date << add_birth_day->get_active_text().c_str() << "/"
+               << add_birth_month->get_active_text().c_str() << "/"
+               << add_birth_year->get_active_text().c_str();
+    patient.set_birth_date(birth_date.str());
 
     address << street->get_text() << " " << civic->get_text() << ", " << zip_code->get_text() << ", "
             << city->get_text() << ", " << country->get_text();
@@ -60,7 +68,7 @@ void mm::controller::AddPatientDialog::ok_handler() {
         DBMaster::get_instance().add_to_db(patient);
 
         view->dispose_dialog();
-        // todo: devo riaggiornare la view dei pazienti con quello appena aggiunto, sembra che questo metodo non funzioni
+        // todo: devo riaggiornare la view dei pazienti con quello appena aggiunto
     } else {
         Gtk::Label *error;
         refBuilder.get_widget("addPatientError", error);
@@ -110,13 +118,11 @@ void mm::controller::AddPatientDialog::select_birth_date_get_date(util::Date dat
 }
 
 mm::controller::AddPatientDialog::AddPatientDialog() {
-    static int i = 0;
-    std::cout << "Istanza numero: " << i++ << std::endl;
     this->set_view();
 }
 
 void mm::controller::AddPatientDialog::free() {
-    std::cout << "Freed AddPatientDialog Controller: " << this << std::endl;
+    std::cout << "Freed AddPatientDialog Controller --> " << this << std::endl;
     delete this;
 }
 

@@ -39,6 +39,12 @@ namespace mm {
             int day;
             int month;
             int year;
+
+            static int get_current_day();
+
+            static int get_current_month();
+
+            static int get_current_year();
         };
 
         std::ostream &operator<<(std::ostream &os, const Date &date);
