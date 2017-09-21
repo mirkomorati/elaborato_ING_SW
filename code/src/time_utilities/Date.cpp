@@ -96,8 +96,6 @@ int mm::util::Date::get_current_year() {
     time_p->tm_year;
 }
 
-}
-
 int mm::util::Date::get_current_day() {
     std::time_t t = std::time(nullptr);
     std::tm *time_p = std::localtime(&t);

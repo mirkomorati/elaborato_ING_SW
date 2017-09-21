@@ -46,8 +46,8 @@ void mm::controller::Application::unselect_patient() {
     notify();
 }
 
-void mm::controller::Application::set_prescription_tree_view(std::string patient_id) {
-    lock_guard<mutex> lg(model->mutex);
+void mm::controller::Application::set_prescription_tree_view(std::string patient_id, bool lock) {
+    if (lock) lock_guard<mutex> lg(model->mutex);
     model::Patient patient;
 
     try {
@@ -81,11 +81,11 @@ void mm::controller::Application::set_prescription_tree_view(std::string patient
     model->prescription_list_store.second = true;
     model->prescription_tree_model.second = true;
 
-    notify();
+    if (lock) notify();
 }
 
-void mm::controller::Application::set_doctor(int doctor_id) {
-    lock_guard<mutex> lg(model->mutex);
+void mm::controller::Application::set_doctor(int doctor_id, bool lock) {
+    if (lock) lock_guard<mutex> lg(model->mutex);
     if (doctor_id == model->doctor.first.get_regional_id()) {
         model->patient_list_store.first.clear();
     } else {
@@ -122,7 +122,7 @@ void mm::controller::Application::set_doctor(int doctor_id) {
     model->patient_list_store.second = true;
     model->patient_tree_model.second = true;
 
-    notify();
+    if (lock) notify();
 }
 
 void mm::controller::Application::row_selected_handler(const Gtk::TreeModel::Path &path,
@@ -145,13 +145,15 @@ void mm::controller::Application::row_selected_handler(const Gtk::TreeModel::Pat
 
         model->selected_patient_row.second = true;
 
-        set_prescription_tree_view(patient_id.raw());
-        set_drugs_tree_view(patient_id.raw());
+        set_prescription_tree_view(patient_id.raw(), false);
+        set_drugs_tree_view(patient_id.raw(), false);
     }
+
+    notify();
 }
 
-void mm::controller::Application::set_drugs_tree_view(const string &patient_id) {
-    lock_guard<mutex> lg(model->mutex);
+void mm::controller::Application::set_drugs_tree_view(const string &patient_id, bool lock) {
+    if (lock) lock_guard<mutex> lg(model->mutex);
     std::vector<model::Drug> drugs;
     model::Patient patient;
 
@@ -173,7 +175,7 @@ void mm::controller::Application::set_drugs_tree_view(const string &patient_id) 
         }
     }
 
-    model->drug_list_store.first.clear();
+    model->drug_list_store.first->clear();
     auto row = *model->drug_list_store.first->append();
 
     for (size_t i = 0; i < drugs.size(); i++) {
@@ -190,7 +192,7 @@ void mm::controller::Application::set_drugs_tree_view(const string &patient_id) 
     model->drug_list_store.second = true;
     model->drug_tree_model.second = true;
 
-    notify();
+    if (lock) notify();
 }
 
 shared_ptr<mm::model::Application> mm::controller::Application::get_model() {
