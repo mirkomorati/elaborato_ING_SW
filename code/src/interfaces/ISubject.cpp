@@ -3,6 +3,7 @@
 //
 
 #include <Carbon/Carbon.h>
+#include <thread>
 #include "../../hdr/interfaces/IObserver.hpp"
 #include "../../hdr/interfaces/ISubject.hpp"
 
@@ -15,7 +16,11 @@ void mm::ISubject::detach(mm::IObserver *obj) noexcept(false) {
 }
 
 void mm::ISubject::notify() {
-    for (auto obs : observer_set) obs->update();
+    // todo asincrono
+    for (auto obs : observer_set) {
+        std::thread tmp(obs->update());
+        tmp.detach();
+    }
 }
 
 mm::observer_not_found_error::observer_not_found_error(const std::string &error) : runtime_error(error) {}
