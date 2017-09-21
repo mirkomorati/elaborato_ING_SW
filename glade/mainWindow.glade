@@ -1308,6 +1308,8 @@
                   <object class="GtkComboBoxText" id="addBirthDateDay">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
                   </object>
                   <packing>
                     <property name="left_attach">0</property>
@@ -1318,6 +1320,8 @@
                   <object class="GtkComboBoxText" id="addBirthDateMonth">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -1328,6 +1332,8 @@
                   <object class="GtkComboBoxText" id="addBirthDateYear">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>
