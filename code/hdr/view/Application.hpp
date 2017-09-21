@@ -12,6 +12,8 @@
 #include "../controller/Application.hpp"
 #include "../model/Patient.hpp"
 #include "../model/Prescription.hpp"
+#include "../interfaces/IObserver.hpp"
+#include "../model/Application.hpp"
 
 namespace mm {
     namespace controller {
@@ -19,45 +21,58 @@ namespace mm {
     }
     namespace view {
 
-        class Application {
+        class Application : public IObserver {
         public:
-            explicit Application();
+            explicit Application(controller::Application &c);
 
-            // todo potrebbe esserci un segfault controlla oggetto tmp.
-            void set_patient_tree_model(model::Patient::TreeModel &patient_tree_model,
-                                        Glib::RefPtr<Gtk::ListStore> patient_list_store);
+            /* // todo potrebbe esserci un segfault controlla oggetto tmp.
+             void set_patient_tree_model(model::Patient::TreeModel &patient_tree_model,
+                                         Glib::RefPtr<Gtk::ListStore> patient_list_store);
 
-            void unset_patient_model() const;
+             void unset_patient_model() const;
 
-            void set_prescription_tree_model(
-                    model::Prescription::TreeModel &prescription_tree_model,
-                    Glib::RefPtr<Gtk::ListStore> prescription_list_store);
+             void set_prescription_tree_model(
+                     model::Prescription::TreeModel &prescription_tree_model,
+                     Glib::RefPtr<Gtk::ListStore> prescription_list_store);
 
-            void unset_prescription_model() const;
+             void unset_prescription_model() const;
 
-            void set_drug_tree_model(
-                    model::Drug::TreeModel &drug_tree_model,
-                    Glib::RefPtr<Gtk::ListStore> drug_list_store);
+             void set_drug_tree_model(
+                     model::Drug::TreeModel &drug_tree_model,
+                     Glib::RefPtr<Gtk::ListStore> drug_list_store);
 
-            void unset_drug_model() const;
+             void unset_drug_model() const;
 
-            void unselect_patient() const;
+             void unselect_patient() const;
 
-            void unselect_prescription() const;
+             void unselect_prescription() const;
 
-            void unselect_drug() const;
+             void unselect_drug() const;
 
-            void patient_detail_show(Gtk::TreeModel::Row row,
-                                     model::Patient::TreeModel &patient_tree_model);
+             void patient_detail_show(Gtk::TreeModel::Row row,
+                                      model::Patient::TreeModel &patient_tree_model);*/
+
+            void show_patient_details();
+
+            void set_patient_tree();
+
+            void set_prescription_tree();
+
+            void set_drug_tree();
+
+            void unselect_patient();
+
+            void unselect_prescription();
+
+            void unselect_drug();
+
+
+            void update() override;
+
+
 
         private:
-            controller::Application *controller;
-            Gtk::ToolButton *add_patient;
-            Gtk::ToolButton *edit_patient;
-            Gtk::ToolButton *remove_patient;
-            Gtk::TreeView *patient_tree_view;
-            Gtk::TreeView *prescription_tree_view;
-            Gtk::TreeView *drug_tree_view;
+            shared_ptr<model::Application> model;
         };
     }
 }

@@ -20,7 +20,7 @@ namespace mm {
         class Application : public ISubject {
 
         public:
-            Application() = default;
+            Application();
 
             void set_doctor(int doctor_id);
 
