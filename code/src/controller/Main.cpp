@@ -31,7 +31,7 @@ void mm::controller::Main::on_button_logout_clicked() {
     Register::get_instance().get_patient().set_doctor(-1);
 }
 
-mm::controller::StackPage mm::controller::Main::get_actual_page() const {
+mm::controller::StackPage mm::controller::Main::get_current_page() const {
     return actual_page;
 }
 
@@ -51,4 +51,20 @@ bool mm::controller::Main::key_pressed_handler(GdkEventKey *event) {
         }
     }
     return false;
+}
+
+void mm::controller::Main::about_dialog_response(int response_id) {
+    Gtk::AboutDialog *about_dialog;
+    RefBuilder::get_instance().get_widget("aboutDialog", about_dialog);
+    about_dialog->hide();
+}
+
+void mm::controller::Main::about_dialog_handler() {
+    Gtk::AboutDialog *about_dialog;
+    RefBuilder::get_instance().get_widget("aboutDialog", about_dialog);
+    about_dialog->show();
+}
+
+bool mm::controller::Main::about_dialog_link(const Glib::ustring &uri) {
+    std::system(Glib::ustring("open ").append(uri).c_str());
 }

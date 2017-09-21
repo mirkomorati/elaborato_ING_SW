@@ -53,7 +53,7 @@ void mm::controller::Application::set_prescription_tree_view(std::string patient
     try {
         DBMaster::get_instance().extract_from_db(patient, std::move(patient_id));
     } catch (record_not_found_error &e) {
-        model->prescription_list_store.first.clear();
+        model->prescription_list_store.first->clear();
         model->prescription_list_store.second = true;
         return;
     }
@@ -87,7 +87,7 @@ void mm::controller::Application::set_prescription_tree_view(std::string patient
 void mm::controller::Application::set_doctor(int doctor_id, bool lock) {
     if (lock) lock_guard<mutex> lg(model->mutex);
     if (doctor_id == model->doctor.first.get_regional_id()) {
-        model->patient_list_store.first.clear();
+        model->patient_list_store.first->clear();
     } else {
 
         try {

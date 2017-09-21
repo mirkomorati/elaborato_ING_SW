@@ -41,11 +41,17 @@ namespace mm {
 
             void on_button_logout_clicked();
 
-            StackPage get_actual_page() const;
+            StackPage get_current_page() const;
 
             void set_actual_page(StackPage actual_page);
 
             bool key_pressed_handler(GdkEventKey *event);
+
+            void about_dialog_response(int response_id);
+
+            void about_dialog_handler();
+
+            bool about_dialog_link(const Glib::ustring &uri);
 
         private:
             view::Main *main_view;

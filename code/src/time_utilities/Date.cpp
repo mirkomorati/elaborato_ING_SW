@@ -18,11 +18,6 @@ mm::util::Date::Date(int day, int month, int year) : day(day), month(month), yea
 mm::util::Date::Date() : day(-1), month(-1), year(-1) {
 }
 
-std::ostream &mm::util::operator<<(std::ostream &os, const mm::util::Date &date) {
-    os << date.day << "/" << date.month << "/" << date.year << std::endl;
-    return os;
-}
-
 void mm::util::Date::set_from_str(std::string str) {
     auto token_vector = str::split(str, '/');
     if (token_vector.size() != 3) throw std::invalid_argument("format must be dd/mm/yyyy");
@@ -77,18 +72,17 @@ bool mm::util::Date::operator>=(const mm::util::Date &rhs) const {
 const std::string mm::util::Date::get_text() {
     using namespace std;
     stringstream ss;
-    ss << day << "/" << month << "/" << year;
+    ss << day << "/" << (month < 10 ? "0" : "") << month << "/" << year;
     return ss.str();
 }
 
 bool mm::util::Date::is_valid() {
-    return (day > 0 and month > 0 and year > 0) and ((((day >= 1 and day <= 31) and
-                                                       (month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12)))
-                                                     or ((day >= 1 and day <= 30) and
-                                                         (month == 4 or month == 6 or month == 9 or month == 11))
-                                                     or ((day >= 1 and day <= 28) and (month == 2))
-                                                     or ((day == 29 and month == 2 and
-                                                          (year % 400 == 0 or (year % 4 == 0 and year % 100 != 0)))));
+    return (day > 0 and month > 0 and year > 0) and
+           ((((day >= 1 and day <= 31) and
+              (month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12))) or
+            ((day >= 1 and day <= 30) and (month == 4 or month == 6 or month == 9 or month == 11)) or
+            ((day >= 1 and day <= 28) and (month == 2)) or
+            ((day == 29 and month == 2 and (year % 400 == 0 or (year % 4 == 0 and year % 100 != 0)))));
 }
 
 int mm::util::Date::get_current_year() {
@@ -107,4 +101,41 @@ int mm::util::Date::get_current_month() {
     std::time_t t = std::time(nullptr);
     std::tm *time_p = std::localtime(&t);
     return time_p->tm_mon + 1;
+}
+
+void mm::util::Date::operator+=(int days) {
+    int days_per_month[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    day += days;
+    while (day > days_per_month[month]) {
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            days_per_month[2] = 29;
+        }
+        day -= days_per_month[month];
+        month++;
+        if (month > 12) {
+            month = 1;
+            year++;
+        }
+    }
+}
+
+mm::util::Date mm::util::Date::operator+(int days) {
+    int days_per_month[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    day += days;
+    while (day > days_per_month[month]) {
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            days_per_month[2] = 29;
+        }
+        day -= days_per_month[month];
+        month++;
+        if (month > 12) {
+            month = 1;
+            year++;
+        }
+    }
+    return {day, month, year};
+}
+
+mm::util::Date mm::util::Date::get_current_date() {
+    return {util::Date::get_current_day(), util::Date::get_current_month(), util::Date::get_current_year()};
 }
