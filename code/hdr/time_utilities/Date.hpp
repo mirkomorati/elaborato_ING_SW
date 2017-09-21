@@ -16,8 +16,6 @@ namespace mm {
 
             Date();
 
-            friend std::ostream &operator<<(std::ostream &os, const Date &date);
-
             void set_from_str(std::string str);
 
             const std::string get_text();
@@ -36,6 +34,15 @@ namespace mm {
 
             bool operator>=(const Date &rhs) const;
 
+            void operator+=(int days);
+
+            Date operator+(int days);
+
+            friend std::ostream &operator<<(std::ostream &os, const Date &date) {
+                os << date.day << "/" << (date.month < 10 ? "0" : "") << date.month << "/" << date.year << std::endl;
+                return os;
+            }
+
             int day;
             int month;
             int year;
@@ -45,9 +52,9 @@ namespace mm {
             static int get_current_month();
 
             static int get_current_year();
-        };
 
-        std::ostream &operator<<(std::ostream &os, const Date &date);
+            static Date get_current_date();
+        };
     }
 }
 #endif //_DATE_H

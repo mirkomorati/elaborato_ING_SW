@@ -18,6 +18,7 @@ void mm::controller::AddPrescriptionDialog::set_view() {
     view->set_ok_handler(this, &controller::Dialog::ok_handler);
     view->set_cancel_handler(this, &controller::Dialog::cancel_handler);
     mm::model::Drug drug;
+
     // questo potrebbe essere il metodo corretto, ma get_rows non funziona con chiavi primarie composte
     // drug.unserialize(mm::DBMaster::get_instance().get_rows(drug.get_table_name(), drug.get_primary_key(), .......))
 

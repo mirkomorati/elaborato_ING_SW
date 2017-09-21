@@ -13,13 +13,21 @@ mm::view::Main::Main()
     login_view = new Login();
     patient_view = new Application(controller::Register::get_instance().get_patient());
 
+    Gtk::ImageMenuItem *about;
+    Gtk::AboutDialog *about_dialog;
     auto &refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("mainWindow", window);
     refBuilder.get_widget("quitMenu", logout_menu);
+    refBuilder.get_widget("aboutMenuItem", about);
+    refBuilder.get_widget("aboutDialog", about_dialog);
 
     logout_menu->signal_activate().connect(sigc::mem_fun(controller, &mm::controller::Main::on_button_logout_clicked));
     window->signal_key_press_event().connect(sigc::mem_fun(controller, &mm::controller::Main::key_pressed_handler),
                                              false);
+    about->signal_activate().connect(sigc::mem_fun(controller, &mm::controller::Main::about_dialog_handler));
+    about_dialog->signal_response().connect(sigc::mem_fun(controller, &mm::controller::Main::about_dialog_response));
+    about_dialog->signal_activate_link().connect(sigc::mem_fun(controller, &mm::controller::Main::about_dialog_link),
+                                                 false);
 }
 
 Gtk::ApplicationWindow &mm::view::Main::get_app_window() {

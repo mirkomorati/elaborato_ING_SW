@@ -187,7 +187,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="aboutMenuItem">
                         <property name="label">gtk-about</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -881,6 +881,49 @@
       </object>
     </child>
   </object>
+  <object class="GtkAboutDialog" id="aboutDialog">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">About</property>
+    <property name="modal">True</property>
+    <property name="type_hint">dialog</property>
+    <property name="transient_for">mainWindow</property>
+    <property name="program_name">MED-H</property>
+    <property name="version">0.01</property>
+    <property name="comments" translatable="yes">Elaborato del corso di Ingegneria del Software 2016/2017</property>
+    <property name="website">http://www.github.com/mirkomorati/elaborato_ING_SW</property>
+    <property name="website_label" translatable="yes">Link al progetto</property>
+    <property name="authors">Noè Murr
+Morati Mirko</property>
+    <property name="logo">logoverona.jpg</property>
+    <property name="license_type">mit-x11</property>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
   <object class="GtkDialog" id="addPatientDialog">
     <property name="can_focus">False</property>
     <property name="modal">True</property>
@@ -1090,6 +1133,7 @@
                       <object class="GtkEntry" id="addBirthCountry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="hexpand">True</property>
                         <property name="width_chars">4</property>
                       </object>
                       <packing>
@@ -1235,6 +1279,7 @@
                       <object class="GtkEntry" id="addCountry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="hexpand">True</property>
                         <property name="width_chars">4</property>
                       </object>
                       <packing>
@@ -1488,30 +1533,6 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="addIssueDate">
-                <property name="label" translatable="yes">Seleziona Data</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">2</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="addExpireDate">
-                <property name="label" translatable="yes">Seleziona Data</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">3</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkComboBoxText" id="addDrugId1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -1586,6 +1607,30 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">9</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="addIssueDate">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="editable">False</property>
+                <property name="width_chars">10</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="addExpireDate">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="editable">False</property>
+                <property name="width_chars">10</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">3</property>
               </packing>
             </child>
             <child>
