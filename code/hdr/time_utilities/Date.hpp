@@ -22,6 +22,8 @@ namespace mm {
 
             const std::string get_text();
 
+            bool is_valid();
+
             bool operator==(const Date &rhs) const;
 
             bool operator!=(const Date &rhs) const;

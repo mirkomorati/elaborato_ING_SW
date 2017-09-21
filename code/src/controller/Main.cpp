@@ -18,7 +18,7 @@ mm::controller::Main::~Main() {
 void mm::controller::Main::setup() {
     main_view = new view::Main();
     Register::get_instance().get_login().set_view(&main_view->get_login_view());
-    Register::get_instance().get_patient().set_view(&main_view->get_patient_view());
+    //Register::get_instance().get_patient().set_view(&main_view->get_patient_view());
     main_view->setup();
 }
 

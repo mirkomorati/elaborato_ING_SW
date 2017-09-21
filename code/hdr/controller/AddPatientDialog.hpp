@@ -28,7 +28,7 @@ namespace mm {
 
             void show_dialog() override;
 
-            void select_birth_date_handler();
+            void add_birth_date_handler();
 
             void select_birth_date_get_date(util::Date date);
 

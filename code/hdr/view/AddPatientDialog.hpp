@@ -25,10 +25,12 @@ namespace mm {
             void set_cancel_handler(controller::Dialog *controller, void (controller::Dialog::*handler)(void)) override;
 
             void set_select_date_handler(controller::AddPatientDialog *controller,
-                                         void (controller::AddPatientDialog::*handler)());
+                                         void (controller::AddPatientDialog::*handler)(void));
+
+            void set_add_birth_date(util::Date date);
 
         private:
-            sigc::connection c_select_date;
+            std::vector<sigc::connection> connections;
         };
     }
 }

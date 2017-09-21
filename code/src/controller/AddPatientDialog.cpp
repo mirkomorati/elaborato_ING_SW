@@ -77,18 +77,30 @@ void mm::controller::AddPatientDialog::set_view() {
     view = new mm::view::AddPatientDialog();
     view->set_ok_handler(this, &controller::Dialog::ok_handler);
     view->set_cancel_handler(this, &controller::Dialog::cancel_handler);
-    view->set_select_date_handler(this, &controller::AddPatientDialog::select_birth_date_handler);
+    view->set_select_date_handler(this, &controller::AddPatientDialog::add_birth_date_handler);
 }
 
 mm::controller::AddPatientDialog::~AddPatientDialog() {
     delete view;
 }
 
-void mm::controller::AddPatientDialog::select_birth_date_handler() {
-    mm::controller::SelectDateDialog *select_date_controller = new mm::controller::SelectDateDialog();
-    select_date_controller->set_view();
-    select_date_controller->set_parent(this);
-    select_date_controller->show_dialog();
+void mm::controller::AddPatientDialog::add_birth_date_handler() {
+    Gtk::ComboBoxText *combo_day, *combo_month, *combo_year;
+    RefBuilder::get_instance().get_widget("addBirthDateDay", combo_day);
+    RefBuilder::get_instance().get_widget("addBirthDateMonth", combo_month);
+    RefBuilder::get_instance().get_widget("addBirthDateYear", combo_year);
+    int day, month, year;
+    day = std::atoi(combo_day->get_active_text().c_str());
+    month = std::atoi(combo_month->get_active_text().c_str());
+    year = std::atoi(combo_year->get_active_text().c_str());
+    util::Date date = util::Date(day, month, year);
+
+    if (!date.is_valid()) {
+        if ((date.day >= 29 && date.day <= 31) && date.month == 2)
+            view->set_add_birth_date(util::Date(28, 2, date.year));
+        else
+            view->set_add_birth_date(util::Date(30, date.month, date.year));
+    }
 }
 
 void mm::controller::AddPatientDialog::select_birth_date_get_date(util::Date date) {

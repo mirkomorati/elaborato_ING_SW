@@ -18,7 +18,7 @@ void mm::ISubject::detach(mm::IObserver *obj) noexcept(false) {
 void mm::ISubject::notify() {
     // todo asincrono
     for (auto obs : observer_set) {
-        std::thread tmp(obs->update());
+        std::thread tmp = std::thread(&IObserver::update, obs);
         tmp.detach();
     }
 }
