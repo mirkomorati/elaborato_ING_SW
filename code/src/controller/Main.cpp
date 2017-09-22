@@ -18,7 +18,6 @@ mm::controller::Main::~Main() {
 void mm::controller::Main::setup() {
     main_view = new view::Main();
     Register::get_instance().get_login().set_view(&main_view->get_login_view());
-    //Register::get_instance().get_patient().set_view(&main_view->get_patient_view());
     main_view->setup();
 }
 
@@ -51,20 +50,4 @@ bool mm::controller::Main::key_pressed_handler(GdkEventKey *event) {
         }
     }
     return false;
-}
-
-void mm::controller::Main::about_dialog_response(int response_id) {
-    Gtk::AboutDialog *about_dialog;
-    RefBuilder::get_instance().get_widget("aboutDialog", about_dialog);
-    about_dialog->hide();
-}
-
-void mm::controller::Main::about_dialog_handler() {
-    Gtk::AboutDialog *about_dialog;
-    RefBuilder::get_instance().get_widget("aboutDialog", about_dialog);
-    about_dialog->show();
-}
-
-bool mm::controller::Main::about_dialog_link(const Glib::ustring &uri) {
-    std::system(Glib::ustring("open ").append(uri).c_str());
 }

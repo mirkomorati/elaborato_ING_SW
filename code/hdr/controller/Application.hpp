@@ -40,6 +40,12 @@ namespace mm {
 
             void select_date_by_handler();
 
+            void about_dialog_response(int response_id);
+
+            void about_dialog_handler();
+
+            bool about_dialog_link(const Glib::ustring &uri);
+
             void mask_by_selected_date(util::DateBy date);
 
             void unselect_patient();

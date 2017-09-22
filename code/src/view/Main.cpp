@@ -13,21 +13,14 @@ mm::view::Main::Main()
     login_view = new Login();
     patient_view = new Application(controller::Register::get_instance().get_patient());
 
-    Gtk::ImageMenuItem *about;
-    Gtk::AboutDialog *about_dialog;
     auto &refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("mainWindow", window);
     refBuilder.get_widget("quitMenu", logout_menu);
-    refBuilder.get_widget("aboutMenuItem", about);
-    refBuilder.get_widget("aboutDialog", about_dialog);
 
-    logout_menu->signal_activate().connect(sigc::mem_fun(controller, &mm::controller::Main::on_button_logout_clicked));
-    window->signal_key_press_event().connect(sigc::mem_fun(controller, &mm::controller::Main::key_pressed_handler),
-                                             false);
-    about->signal_activate().connect(sigc::mem_fun(controller, &mm::controller::Main::about_dialog_handler));
-    about_dialog->signal_response().connect(sigc::mem_fun(controller, &mm::controller::Main::about_dialog_response));
-    about_dialog->signal_activate_link().connect(sigc::mem_fun(controller, &mm::controller::Main::about_dialog_link),
-                                                 false);
+    logout_menu->signal_activate().connect(sigc::mem_fun(
+            controller, &mm::controller::Main::on_button_logout_clicked));
+    window->signal_key_press_event().connect(sigc::mem_fun(
+            controller, &mm::controller::Main::key_pressed_handler), false);
 }
 
 Gtk::ApplicationWindow &mm::view::Main::get_app_window() {
@@ -49,6 +42,15 @@ mm::view::Main::~Main() {
 
 void mm::view::Main::setup() {
     login_view->set_parent(this);
+    auto css_provider = Gtk::CssProvider::create();
+    // todo spostare il file in un posto migliore (cartella delle resources..?)
+    try {
+        css_provider->load_from_path("../../../../glade/style.css");
+    } catch (Gtk::CssProviderError &ex) {
+        cout << "CssProviderError: " << ex.what();
+    }
+    Gtk::StyleContext::add_provider_for_screen(Gdk::Screen::get_default(), css_provider,
+                                               800);  // 800 = Gtk::STYLE_PROVIDER_PRIORITY_USER che non trovo
 }
 
 void mm::view::Main::change_stack_page(mm::view::StackPage page) {

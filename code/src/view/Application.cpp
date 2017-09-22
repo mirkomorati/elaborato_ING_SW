@@ -58,6 +58,8 @@ mm::view::Application::Application(mm::controller::Application &c)
     Gtk::ToolButton *remove_patient;
     Gtk::ToolButton *edit_patient;
     Gtk::TreeView *patient_tree_view;
+    Gtk::ImageMenuItem *about;
+    Gtk::AboutDialog *about_dialog;
 
     refBuilder.get_widget("addPatient", add_patient);
     refBuilder.get_widget("removePatient", remove_patient);
@@ -65,6 +67,8 @@ mm::view::Application::Application(mm::controller::Application &c)
     refBuilder.get_widget("selectDateButton", select_date);
     refBuilder.get_widget("addPrescription", add_prescription);
     refBuilder.get_widget("patientTreeView", patient_tree_view);
+    refBuilder.get_widget("aboutMenuItem", about);
+    refBuilder.get_widget("aboutDialog", about_dialog);
 
 
     add_patient->signal_clicked().connect(sigc::mem_fun(
@@ -79,7 +83,12 @@ mm::view::Application::Application(mm::controller::Application &c)
             &c, &mm::controller::Application::add_prescription_handler));
     patient_tree_view->signal_row_activated().connect(sigc::mem_fun(
             &c, &mm::controller::Application::row_selected_handler));
-
+    about->signal_activate().connect(sigc::mem_fun(
+            &c, &mm::controller::Application::about_dialog_handler));
+    about_dialog->signal_response().connect(sigc::mem_fun(
+            &c, &mm::controller::Application::about_dialog_response));
+    about_dialog->signal_activate_link().connect(sigc::mem_fun(
+            &c, &mm::controller::Application::about_dialog_link), false);
     c.attach(this);
 }
 
@@ -194,8 +203,3 @@ void mm::view::Application::unselect_drug() {
     drug_tree_view->unset_model();
     drug_tree_view->remove_all_columns();
 }
-
-
-
-
-

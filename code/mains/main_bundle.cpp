@@ -26,6 +26,7 @@ int main(int argc, char **argv) {
 
     controller::Main mc;
     mc.setup();
+
     app->run(mc.get_main_window());
 
     return 0;

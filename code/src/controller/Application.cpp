@@ -121,6 +121,23 @@ void mm::controller::Application::set_doctor(int doctor_id, bool notify_on) {
     if (notify_on) notify();
 }
 
+void mm::controller::Application::about_dialog_response(int response_id) {
+    Gtk::AboutDialog *about_dialog;
+    RefBuilder::get_instance().get_widget("aboutDialog", about_dialog);
+    about_dialog->hide();
+}
+
+void mm::controller::Application::about_dialog_handler() {
+    Gtk::AboutDialog *about_dialog;
+    RefBuilder::get_instance().get_widget("aboutDialog", about_dialog);
+    about_dialog->show();
+}
+
+bool mm::controller::Application::about_dialog_link(const Glib::ustring &uri) {
+    std::system(Glib::ustring("open ").append(uri).c_str());
+}
+
+
 void mm::controller::Application::row_selected_handler(const Gtk::TreeModel::Path &path,
                                                        Gtk::TreeViewColumn *column) {
 

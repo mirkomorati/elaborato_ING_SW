@@ -2,6 +2,7 @@
 <!-- Generated with glade 3.20.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
+  <!-- interface-css-provider-path style.css -->
   <object class="GtkAdjustment" id="adjustment1">
     <property name="upper">100</property>
     <property name="step_increment">1</property>
@@ -36,6 +37,9 @@
   <object class="GtkTextBuffer" id="negativeInteractionsBuffer"/>
   <object class="GtkListStore" id="patientList"/>
   <object class="GtkApplicationWindow" id="mainWindow">
+    <property name="name">mainWindow</property>
+    <property name="width_request">1024</property>
+    <property name="height_request">700</property>
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">MED-H</property>
@@ -46,6 +50,8 @@
     <child>
       <object class="GtkBox" id="box1">
         <property name="name">box</property>
+        <property name="width_request">1024</property>
+        <property name="height_request">700</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
@@ -416,6 +422,8 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">center</property>
+                        <property name="hexpand">True</property>
+                        <property name="vexpand">True</property>
                         <property name="shadow_type">in</property>
                         <property name="min_content_width">250</property>
                         <property name="propagate_natural_width">True</property>
@@ -838,6 +846,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="hexpand">True</property>
+                                <property name="vexpand">True</property>
                                 <property name="enable_grid_lines">both</property>
                                 <child internal-child="selection">
                                   <object class="GtkTreeSelection"/>
@@ -880,6 +889,9 @@
         </child>
       </object>
     </child>
+    <style>
+      <class name="mainWindow"/>
+    </style>
   </object>
   <object class="GtkAboutDialog" id="aboutDialog">
     <property name="can_focus">False</property>
@@ -894,7 +906,7 @@
     <property name="website_label" translatable="yes">Link al progetto</property>
     <property name="authors">Noè Murr
 Morati Mirko</property>
-    <property name="logo">logoverona.jpg</property>
+    <property name="logo">logoverona.png</property>
     <property name="license_type">mit-x11</property>
     <child internal-child="vbox">
       <object class="GtkBox">

@@ -47,12 +47,6 @@ namespace mm {
 
             bool key_pressed_handler(GdkEventKey *event);
 
-            void about_dialog_response(int response_id);
-
-            void about_dialog_handler();
-
-            bool about_dialog_link(const Glib::ustring &uri);
-
         private:
             view::Main *main_view;
             StackPage actual_page;
