@@ -68,10 +68,10 @@ void mm::view::Main::change_stack_page(mm::view::StackPage page) {
             cout << "login page" << endl;
             controller.set_actual_page(mm::controller::StackPage::LOGIN);
             break;
-        case PATIENT:
+        case APPLICATION:
             menu_bar->set_visible(true);
             stack->set_visible_child("patientPaned");
-            controller.set_actual_page(mm::controller::StackPage::PATIENT);
+            controller.set_actual_page(mm::controller::StackPage::APPLICATION);
             break;
     }
 }

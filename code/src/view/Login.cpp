@@ -20,7 +20,7 @@ mm::view::Login::Login() : controller(&controller::Register::get_instance().get_
 void mm::view::Login::login_update(bool success) {
     if (success) {
         std::cout << "Login eseguito" << std::endl;
-        parent->change_stack_page(PATIENT);
+        parent->change_stack_page(APPLICATION);
     } else {
         Gtk::Label *login_error;
 

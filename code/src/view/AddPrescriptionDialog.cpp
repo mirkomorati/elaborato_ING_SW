@@ -17,6 +17,11 @@ mm::view::AddPrescriptionDialog::AddPrescriptionDialog() : Dialog("addPrescripti
     add_expire_date->set_text(Glib::ustring((current_date + 30).get_text()));
 }
 
+void mm::view::AddPrescriptionDialog::reset_view() {
+    auto &refBuilder = mm::RefBuilder::get_instance();
+
+}
+
 void mm::view::AddPrescriptionDialog::set_combo_box(std::vector<std::string> text) {
     auto &refBuilder = mm::RefBuilder::get_instance();
     Gtk::ComboBoxText *add_drug_ids[5];

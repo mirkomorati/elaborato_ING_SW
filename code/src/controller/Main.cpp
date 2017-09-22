@@ -44,7 +44,7 @@ bool mm::controller::Main::key_pressed_handler(GdkEventKey *event) {
             Register::get_instance().get_login().login_button_handler();
             return true;
         }
-    } else if (actual_page == PATIENT) {
+    } else if (actual_page == APPLICATION) {
         if (event->keyval == GDK_KEY_Escape) {
             Register::get_instance().get_patient().unselect_patient();
         }

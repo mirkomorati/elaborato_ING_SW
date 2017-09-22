@@ -222,11 +222,11 @@
                 <property name="name">loginGrid</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="halign">center</property>
-                <property name="valign">center</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
                 <property name="row_spacing">20</property>
+                <property name="row_homogeneous">True</property>
+                <property name="column_homogeneous">True</property>
                 <child>
                   <object class="GtkGrid" id="login">
                     <property name="visible">True</property>
@@ -334,14 +334,39 @@
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">MED-H</property>
                     <attributes>
-                      <attribute name="font-desc" value="&lt;Enter Value&gt; 20"/>
+                      <attribute name="font-desc" value="&lt;Enter Value&gt; 24"/>
                       <attribute name="weight" value="bold"/>
                     </attributes>
+                    <style>
+                      <class name="loginTitle"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">0</property>
                   </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <placeholder/>
@@ -889,9 +914,6 @@
         </child>
       </object>
     </child>
-    <style>
-      <class name="mainWindow"/>
-    </style>
   </object>
   <object class="GtkAboutDialog" id="aboutDialog">
     <property name="can_focus">False</property>

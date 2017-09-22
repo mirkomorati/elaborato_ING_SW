@@ -9,9 +9,11 @@ background-image: -gtk-gradient (linear,
 }
 */
 
-#mainWindow {
+#loginGrid {
     background-image: -gtk-gradient (linear, left top, left bottom,
-    color-stop(0.0, #4CA1AF),
-        /*color-stop(0.50,rgba(56,145,218,1)),
-        color-stop(0.51,rgba(34,131,216,1)),*/ color-stop(1.00, #C4E0E5));
+    color-stop(0.0, #4CA1AF), color-stop(1.00, #C4E0E5));
+}
+
+label.loginTitle {
+    color: #ffffff;
 }
