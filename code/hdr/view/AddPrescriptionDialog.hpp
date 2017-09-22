@@ -19,6 +19,19 @@ namespace mm {
             void set_cancel_handler(controller::Dialog *controller, void (controller::Dialog::*handler)(void)) override;
 
             void set_combo_box(std::vector<std::string> text);
+
+            void reset_view();
+
+        private:
+            Gtk::Button *ok_button;
+            Gtk::Button *cancel_button;
+            Gtk::Entry *add_patient_id;
+            Gtk::Entry *add_prescription_id;
+            Gtk::Entry *add_issue_date;
+            Gtk::Entry *add_expire_date;
+            Gtk::TextView *add_negative_interactions;
+            Gtk::ComboBoxText *add_drug_ids[5];
+
         };
     }
 }

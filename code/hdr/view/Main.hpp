@@ -23,7 +23,7 @@ namespace mm {
 
         enum StackPage {
             LOGIN,
-            PATIENT
+            APPLICATION
         };
 
         class Main {
