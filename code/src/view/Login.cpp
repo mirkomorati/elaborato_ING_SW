@@ -5,31 +5,29 @@
 #include <iostream>
 #include "../../hdr/view/Login.hpp"
 #include "../../hdr/RefBuilder.hpp"
-#include "../../hdr/controller/Register.hpp"
 
-mm::view::Login::Login() : controller(&controller::Register::get_instance().get_login()) {
+
+mm::view::Login::Login(mm::controller::Main &c) : model(c.get_model()) {
     auto &refBuilder = RefBuilder::get_instance();
+    Gtk::Button *button;
 
     refBuilder.get_widget("loginButton", button);
 
-    button->signal_clicked().connect(sigc::mem_fun(
-            controller, &mm::controller::Login::login_button_handler));
+    button->signal_clicked().connect(sigc::mem_fun(&c, &mm::controller::Main::login_button_handler));
 
+    c.attach(this);
 }
 
-void mm::view::Login::login_update(bool success) {
-    if (success) {
-        std::cout << "Login eseguito" << std::endl;
-        parent->change_stack_page(PATIENT);
-    } else {
-        Gtk::Label *login_error;
-
-        std::cout << "Login fallito" << std::endl;
-        RefBuilder::get_instance().get_widget("loginError", login_error);
-        login_error->set_visible(true);
+void mm::view::Login::update() {
+    if (model->login_failed.second and model->login_failed.first) {
+        login_failed();
     }
 }
 
-void mm::view::Login::set_parent(mm::view::Main *parent) {
-    this->parent = parent;
+void mm::view::Login::login_failed() {
+    Gtk::Label *login_error;
+
+    std::cout << "Login fallito" << std::endl;
+    RefBuilder::get_instance().get_widget("loginError", login_error);
+    login_error->set_visible(true);
 }

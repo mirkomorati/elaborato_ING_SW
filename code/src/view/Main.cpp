@@ -8,26 +8,29 @@
 #include "../../hdr/RefBuilder.hpp"
 #include "../../hdr/controller/Register.hpp"
 
-mm::view::Main::Main()
+/*mm::view::Main::Main(controller::Main &c)
         : controller(controller::Register::get_instance().get_main()) {
     login_view = new Login();
     patient_view = new Application(controller::Register::get_instance().get_patient());
 
+    Gtk::ImageMenuItem *about;
+    Gtk::AboutDialog *about_dialog;
     auto &refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("mainWindow", window);
     refBuilder.get_widget("quitMenu", logout_menu);
+    refBuilder.get_widget("aboutMenuItem", about);
+    refBuilder.get_widget("aboutDialog", about_dialog);
 
-    logout_menu->signal_activate().connect(sigc::mem_fun(
-            controller, &mm::controller::Main::on_button_logout_clicked));
-    window->signal_key_press_event().connect(sigc::mem_fun(
-            controller, &mm::controller::Main::key_pressed_handler), false);
-}
+    logout_menu->signal_activate().connect(sigc::mem_fun(controller, &mm::controller::Main::on_button_logout_clicked));
+    window->signal_key_press_event().connect(sigc::mem_fun(controller, &mm::controller::Main::key_pressed_handler),
+                                             false);
+    about->signal_activate().connect(sigc::mem_fun(controller, &mm::controller::Main::about_dialog_handler));
+    about_dialog->signal_response().connect(sigc::mem_fun(controller, &mm::controller::Main::about_dialog_response));
+    about_dialog->signal_activate_link().connect(sigc::mem_fun(controller, &mm::controller::Main::about_dialog_link),
+                                                 false);
+}*/
 
-Gtk::ApplicationWindow &mm::view::Main::get_app_window() {
-    return *window;
-}
-
-mm::view::Login &mm::view::Main::get_login_view() {
+/*mm::view::Login &mm::view::Main::get_login_view() {
     return *login_view;
 }
 
@@ -42,18 +45,33 @@ mm::view::Main::~Main() {
 
 void mm::view::Main::setup() {
     login_view->set_parent(this);
-    auto css_provider = Gtk::CssProvider::create();
-    // todo spostare il file in un posto migliore (cartella delle resources..?)
-    try {
-        css_provider->load_from_path("../../../../glade/style.css");
-    } catch (Gtk::CssProviderError &ex) {
-        cout << "CssProviderError: " << ex.what();
-    }
-    Gtk::StyleContext::add_provider_for_screen(Gdk::Screen::get_default(), css_provider,
-                                               800);  // 800 = Gtk::STYLE_PROVIDER_PRIORITY_USER che non trovo
 }
 
-void mm::view::Main::change_stack_page(mm::view::StackPage page) {
+}*/
+
+mm::view::Main::Main(controller::Main &c) : model(c.get_model()) {
+    Gtk::ImageMenuItem *about;
+    Gtk::AboutDialog *about_dialog;
+    //Gtk::MenuItem *logout_menu;
+    auto &refBuilder = RefBuilder::get_instance();
+    refBuilder.get_widget("mainWindow", window);
+    //refBuilder.get_widget("quitMenu", logout_menu);
+    refBuilder.get_widget("aboutMenuItem", about);
+    refBuilder.get_widget("aboutDialog", about_dialog);
+
+    //logout_menu->signal_activate().connect(sigc::mem_fun(&c, &mm::controller::Main::on_button_logout_clicked));
+    window->signal_key_press_event().connect(sigc::mem_fun(&c, &mm::controller::Main::key_pressed_handler), false);
+    about->signal_activate().connect(sigc::mem_fun(&c, &mm::controller::Main::about_dialog_handler));
+    about_dialog->signal_response().connect(sigc::mem_fun(&c, &mm::controller::Main::about_dialog_response));
+    about_dialog->signal_activate_link().connect(sigc::mem_fun(&c, &mm::controller::Main::about_dialog_link), false);
+}
+
+Gtk::ApplicationWindow &mm::view::Main::get_app_window() {
+    return *window;
+}
+
+void mm::view::Main::change_stack_page() {
+    auto page = model->stackPage.first;
     auto &refBuilder = RefBuilder::get_instance();
     Gtk::Stack *stack;
     Gtk::MenuBar *menu_bar;
@@ -62,18 +80,24 @@ void mm::view::Main::change_stack_page(mm::view::StackPage page) {
     refBuilder.get_widget("menuBar", menu_bar);
 
     switch (page) {
-        case LOGIN:
+        case model::LOGIN:
             menu_bar->set_visible(false);
             stack->set_visible_child("loginGrid");
             cout << "login page" << endl;
-            controller.set_actual_page(mm::controller::StackPage::LOGIN);
             break;
-        case PATIENT:
+        case model::APPLICATION:
             menu_bar->set_visible(true);
             stack->set_visible_child("patientPaned");
-            controller.set_actual_page(mm::controller::StackPage::PATIENT);
             break;
     }
 }
 
+void mm::view::Main::update() {
+
+    if (model->stackPage.second) {
+        change_stack_page();
+        model->stackPage.second = false;
+    }
+
+}
 

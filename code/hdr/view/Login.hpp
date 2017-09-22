@@ -5,31 +5,24 @@
 #ifndef ELABORATO_ING_SW_LOGINVIEW_HPP
 #define ELABORATO_ING_SW_LOGINVIEW_HPP
 
-#include "../controller/Login.hpp"
-#include "Main.hpp"
+#include "../controller/Main.hpp"
+#include "../model/Main.hpp"
 #include <gtkmm-3.0/gtkmm.h>
 
 namespace mm {
-    namespace controller {
-        class Login;
-    }
 
     namespace view {
-        class Main;
-
-        class Login {
+        class Login : public IObserver {
         public:
-            explicit Login();
+            Login(controller::Main &c);
 
-            void login_update(bool success);
-
-            void set_parent(view::Main *parent);
+            void update() override;
 
         private:
-            view::Main *parent;
-            controller::Login *controller;
+            std::shared_ptr<model::Main> model;
 
-            Gtk::Button *button;
+            void login_failed();
+
         };
     }
 }

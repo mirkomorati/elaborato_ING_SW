@@ -3,6 +3,7 @@
 #include "../../hdr/controller/Application.hpp"
 #include "../../hdr/factory/DialogFactory.hpp"
 #include "../../hdr/DBMaster.hpp"
+#include "../../hdr/model/Authentication.hpp"
 
 //
 // Created by Noè Murr on 03/07/2017.
@@ -210,4 +211,12 @@ shared_ptr<mm::model::Application> mm::controller::Application::get_model() {
     return model;
 }
 
-mm::controller::Application::Application() : model(new model::Application) {}
+mm::controller::Application::Application() : model(new model::Application) {
+    model::authentication::Login::get_instance().attach(this);
+}
+
+void mm::controller::Application::update() {
+    if (model::authentication::Login::get_instance().is_changed) {
+        set_doctor(model::authentication::Login::get_instance().regional_id);
+    }
+}

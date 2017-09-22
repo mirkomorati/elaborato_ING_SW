@@ -4,7 +4,7 @@
 
 #include "../../hdr/model/Authentication.hpp"
 
-bool mm::model::authentication::check_login(std::string usr, std::string psw, authentication::Login &account) {
+bool mm::model::authentication::check_login(std::string usr, std::string psw) {
     Login login;
     try {
         DBMaster::get_instance().extract_from_db(login, std::move(usr));
@@ -14,8 +14,10 @@ bool mm::model::authentication::check_login(std::string usr, std::string psw, au
 
     if (login.password != psw) return false; // wrong password
 
+    login.is_changed = true;
+
     // login successful
-    account = std::move(login);
+    Login::get_instance() = login;
     return true;
 };
 
@@ -39,4 +41,22 @@ string mm::model::authentication::Login::get_table_name() const {
 
 vector<string> mm::model::authentication::Login::get_primary_key() const {
     return {"name"};
+}
+
+mm::model::authentication::Login &mm::model::authentication::Login::get_instance() {
+    static Login instance;
+
+    return instance;
+}
+
+mm::model::authentication::Login::Login() : user_name(""), password(""), regional_id(-999), is_changed(false) {}
+
+mm::model::authentication::Login &
+mm::model::authentication::Login::operator=(const mm::model::authentication::Login &other) {
+    this->is_changed = other.is_changed;
+    this->password = other.password;
+    this->user_name = other.user_name;
+    this->regional_id = other.regional_id;
+
+    return *this;
 }

@@ -17,7 +17,7 @@
 namespace mm {
     namespace controller {
 
-        class Application : public ISubject {
+        class Application : public ISubject, public IObserver {
 
         public:
             Application();
@@ -53,6 +53,8 @@ namespace mm {
             void set_drugs_tree_view(const string &patient_id, bool notify_on = true);
 
             std::shared_ptr<model::Application> get_model();
+
+            void update() override;
 
         private:
             std::shared_ptr<model::Application> model;

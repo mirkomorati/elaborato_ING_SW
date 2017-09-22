@@ -6,6 +6,7 @@
 #include "../../hdr/view/Application.hpp"
 #include "../../hdr/RefBuilder.hpp"
 #include "../../hdr/controller/Register.hpp"
+#include "../../hdr/model/Authentication.hpp"
 
 void mm::view::Application::update() {
 

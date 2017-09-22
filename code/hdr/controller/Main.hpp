@@ -6,50 +6,32 @@
 #define ELABORATO_ING_SW_MAINCONTROLLER_HPP
 
 
-#include "Login.hpp"
 #include "Application.hpp"
-#include "../view/Main.hpp"
+#include "../model/Main.hpp"
+#include "../interfaces/ISubject.hpp"
 #include <gdk/gdk.h>
 
 namespace mm {
-    namespace view {
-        class Main;
-    }
-
     namespace controller {
 
-        enum StackPage {
-            LOGIN,
-            PATIENT
-        };
-
-        class Login;
-
-        class Application;
-
-        class Main {
+        class Main : public ISubject {
         public:
-            Main() = default;
+            Main();
 
-            virtual ~Main();
+            void about_dialog_response(int response_id);
 
-            Gtk::ApplicationWindow &get_main_window();
+            void about_dialog_handler();
 
-            void set_doctor(int doctor_id);
-
-            void setup();
-
-            void on_button_logout_clicked();
-
-            StackPage get_current_page() const;
-
-            void set_actual_page(StackPage actual_page);
+            bool about_dialog_link(const Glib::ustring &uri);
 
             bool key_pressed_handler(GdkEventKey *event);
 
+            const std::shared_ptr<model::Main> &get_model() const;
+
+            void login_button_handler();
+
         private:
-            view::Main *main_view;
-            StackPage actual_page;
+            std::shared_ptr<model::Main> model;
         };
     }
 }

@@ -16,7 +16,6 @@ namespace mm {
             // todo eliminare il register
 
             Main main;
-            Login login;
             Application patient;
 
             // istanza della classe.
@@ -29,8 +28,6 @@ namespace mm {
 
         public:
             Main &get_main();
-
-            Login &get_login();
 
             Application &get_patient();
 

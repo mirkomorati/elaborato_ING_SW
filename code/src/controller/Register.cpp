@@ -10,10 +10,6 @@ mm::controller::Main &mm::controller::Register::get_main() {
     return main;
 }
 
-mm::controller::Login &mm::controller::Register::get_login() {
-    return login;
-}
-
 mm::controller::Application &mm::controller::Register::get_patient() {
     return patient;
 }

@@ -9,6 +9,7 @@
 #include "../controller/Main.hpp"
 #include "Application.hpp"
 #include "Login.hpp"
+#include "../model/Main.hpp"
 
 namespace mm {
     namespace controller {
@@ -16,7 +17,7 @@ namespace mm {
     }
 
     namespace view {
-        class Application;
+        /*class Application;
 
         class Login;
 
@@ -33,13 +34,13 @@ namespace mm {
 
             Gtk::ApplicationWindow &get_app_window();
 
-            view::Login &get_login_view();
+            view::Login &get_login_view(); // no
 
-            view::Application &get_patient_view();
+            view::Application &get_patient_view(); // no
 
-            void setup();
+            void setup(); // no
 
-            void change_stack_page(StackPage page);
+            void change_stack_page(StackPage page); // si
 
         private:
             view::Login *login_view;
@@ -49,6 +50,21 @@ namespace mm {
 
             Gtk::ApplicationWindow *window;
             Gtk::MenuItem *logout_menu;
+        };*/
+
+        class Main : public IObserver {
+        public:
+            Main(controller::Main &c);
+
+            Gtk::ApplicationWindow &get_app_window();
+
+            void change_stack_page();
+
+            void update() override;
+
+        private:
+            shared_ptr<model::Main> model;
+            Gtk::ApplicationWindow *window;
         };
     }
 }

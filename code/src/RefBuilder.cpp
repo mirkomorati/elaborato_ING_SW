@@ -16,7 +16,8 @@ mm::RefBuilder &mm::RefBuilder::get_instance() {
 
 mm::RefBuilder::RefBuilder() {
     try {
-        refBuilder = Gtk::Builder::create_from_file(Configuration::get_instance().get<std::string>("glade_file"));
+        auto tmp = Configuration::get_instance().get<std::string>("glade_file");
+        refBuilder = Gtk::Builder::create_from_file(tmp);
     }
     catch (const Glib::ConvertError &ex) {
         std::cerr << "ConvertError: " << ex.what() << std::endl;
