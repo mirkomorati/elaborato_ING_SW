@@ -64,6 +64,8 @@ mm::view::Main::Main(controller::Main &c) : model(c.get_model()) {
     about->signal_activate().connect(sigc::mem_fun(&c, &mm::controller::Main::about_dialog_handler));
     about_dialog->signal_response().connect(sigc::mem_fun(&c, &mm::controller::Main::about_dialog_response));
     about_dialog->signal_activate_link().connect(sigc::mem_fun(&c, &mm::controller::Main::about_dialog_link), false);
+
+    c.attach(this);
 }
 
 Gtk::ApplicationWindow &mm::view::Main::get_app_window() {

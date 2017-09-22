@@ -6,17 +6,16 @@
 #include "../hdr/Configuration.hpp"
 #include "../hdr/DBMaster.hpp"
 
+Glib::RefPtr<Gtk::Application> mm::MedH::app;
+
 mm::MedH::MedH() : main_view(main_controller), login_view(main_controller), app_view(app_controller) {}
 
-int mm::MedH::run(int argc, char **argv) {
-    auto app = Gtk::Application::create(argc, argv, "it.mm.org");
+int mm::MedH::run() {
 
-    app->run(main_view.get_app_window());
-
-    return 0;
+    return app->run(main_view.get_app_window());
 }
 
-void mm::MedH::init() {
+void mm::MedH::init(int argc, char **argv) {
     Glib::init();
 
     Configuration::set_config_file_name("../../../../tmp/config.json");
@@ -29,4 +28,6 @@ void mm::MedH::init() {
          << "glade file : " << config.get<std::string>("glade_file");
 
     DBMaster::set_db_file_name(config.get<string>("db_name"));
+
+    app = Gtk::Application::create(argc, argv, "it.mm.org");
 }

@@ -7,9 +7,9 @@
 
 int main(int argc, char **argv) {
 
-    mm::MedH::init();
+    mm::MedH::init(argc, argv);
 
     mm::MedH my_app;
 
-    return my_app.run(argc, argv);
+    return my_app.run();
 }

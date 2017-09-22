@@ -2,6 +2,7 @@
 <!-- Generated with glade 3.20.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
+  <!-- interface-css-provider-path style.css -->
   <object class="GtkAdjustment" id="adjustment1">
     <property name="upper">100</property>
     <property name="step_increment">1</property>
@@ -36,6 +37,9 @@
   <object class="GtkTextBuffer" id="negativeInteractionsBuffer"/>
   <object class="GtkListStore" id="patientList"/>
   <object class="GtkApplicationWindow" id="mainWindow">
+    <property name="name">mainWindow</property>
+    <property name="width_request">1024</property>
+    <property name="height_request">700</property>
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">MED-H</property>
@@ -46,6 +50,8 @@
     <child>
       <object class="GtkBox" id="box1">
         <property name="name">box</property>
+        <property name="width_request">1024</property>
+        <property name="height_request">700</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
@@ -187,7 +193,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="aboutMenuItem">
                         <property name="label">gtk-about</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -216,11 +222,11 @@
                 <property name="name">loginGrid</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="halign">center</property>
-                <property name="valign">center</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
                 <property name="row_spacing">20</property>
+                <property name="row_homogeneous">True</property>
+                <property name="column_homogeneous">True</property>
                 <child>
                   <object class="GtkGrid" id="login">
                     <property name="visible">True</property>
@@ -328,14 +334,39 @@
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">MED-H</property>
                     <attributes>
-                      <attribute name="font-desc" value="&lt;Enter Value&gt; 20"/>
+                      <attribute name="font-desc" value="&lt;Enter Value&gt; 24"/>
                       <attribute name="weight" value="bold"/>
                     </attributes>
+                    <style>
+                      <class name="loginTitle"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">0</property>
                   </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <placeholder/>
@@ -416,6 +447,8 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">center</property>
+                        <property name="hexpand">True</property>
+                        <property name="vexpand">True</property>
                         <property name="shadow_type">in</property>
                         <property name="min_content_width">250</property>
                         <property name="propagate_natural_width">True</property>
@@ -838,6 +871,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="hexpand">True</property>
+                                <property name="vexpand">True</property>
                                 <property name="enable_grid_lines">both</property>
                                 <child internal-child="selection">
                                   <object class="GtkTreeSelection"/>
@@ -877,6 +911,49 @@
             <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAboutDialog" id="aboutDialog">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">About</property>
+    <property name="modal">True</property>
+    <property name="type_hint">dialog</property>
+    <property name="transient_for">mainWindow</property>
+    <property name="program_name">MED-H</property>
+    <property name="version">0.01</property>
+    <property name="comments" translatable="yes">Elaborato del corso di Ingegneria del Software 2016/2017</property>
+    <property name="website">http://www.github.com/mirkomorati/elaborato_ING_SW</property>
+    <property name="website_label" translatable="yes">Link al progetto</property>
+    <property name="authors">Noè Murr
+Morati Mirko</property>
+    <property name="logo">logoverona.png</property>
+    <property name="license_type">mit-x11</property>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
         </child>
       </object>
     </child>
@@ -1090,6 +1167,7 @@
                       <object class="GtkEntry" id="addBirthCountry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="hexpand">True</property>
                         <property name="width_chars">4</property>
                       </object>
                       <packing>
@@ -1235,6 +1313,7 @@
                       <object class="GtkEntry" id="addCountry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="hexpand">True</property>
                         <property name="width_chars">4</property>
                       </object>
                       <packing>
@@ -1287,19 +1366,6 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="addBirthDate">
-                <property name="label" translatable="yes">Seleziona Data</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="always_show_image">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">4</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkLabel" id="addPatientError">
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">Uno o più campi non sono validi</property>
@@ -1311,6 +1377,52 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">8</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkGrid">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkComboBoxText" id="addBirthDateDay">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="addBirthDateMonth">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="addBirthDateYear">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">4</property>
               </packing>
             </child>
             <child>
@@ -1455,30 +1567,6 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="addIssueDate">
-                <property name="label" translatable="yes">Seleziona Data</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">2</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="addExpireDate">
-                <property name="label" translatable="yes">Seleziona Data</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">3</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkComboBoxText" id="addDrugId1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -1553,6 +1641,30 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">9</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="addIssueDate">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="editable">False</property>
+                <property name="width_chars">10</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="addExpireDate">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="editable">False</property>
+                <property name="width_chars">10</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">3</property>
               </packing>
             </child>
             <child>

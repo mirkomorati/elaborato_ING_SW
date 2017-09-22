@@ -14,6 +14,7 @@ namespace mm {
      * rappresenta l'applicazione stessa, si occupa di gestire tutti i controller e le view.
      */
     class MedH {
+
         controller::Main main_controller;
         controller::Application app_controller;
 
@@ -24,9 +25,11 @@ namespace mm {
     public:
         MedH();
 
-        static void init();
+        static void init(int argc, char **argv);
 
-        int run(int argc, char **argv);
+        static Glib::RefPtr<Gtk::Application> app;
+
+        int run();
     };
 }
 
