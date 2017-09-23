@@ -65,6 +65,16 @@ mm::view::Main::Main(controller::Main &c) : model(c.get_model()) {
     about_dialog->signal_response().connect(sigc::mem_fun(&c, &mm::controller::Main::about_dialog_response));
     about_dialog->signal_activate_link().connect(sigc::mem_fun(&c, &mm::controller::Main::about_dialog_link), false);
 
+    auto css_provider = Gtk::CssProvider::create();
+    // todo spostare il file in un posto migliore (cartella delle resources..?)
+    try {
+        css_provider->load_from_path("../../../../glade/style.css");
+    } catch (Gtk::CssProviderError &ex) {
+        std::cout << "CssProviderError: " << ex.what() << std::endl;
+    }
+    Gtk::StyleContext::add_provider_for_screen(Gdk::Screen::get_default(), css_provider,
+                                               800);  // 800 = Gtk::STYLE_PROVIDER_PRIORITY_USER che non trovo
+
     c.attach(this);
 }
 
@@ -90,6 +100,7 @@ void mm::view::Main::change_stack_page() {
         case model::APPLICATION:
             menu_bar->set_visible(true);
             stack->set_visible_child("patientPaned");
+            Gtk::StyleContext::remove_provider_for_screen(Gdk::Screen::get_default(), Gtk::CssProvider::get_default());
             break;
     }
 }
