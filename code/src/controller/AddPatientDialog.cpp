@@ -102,7 +102,7 @@ void mm::controller::AddPatientDialog::add_birth_date_handler() {
     month = std::atoi(combo_month->get_active_text().c_str());
     year = std::atoi(combo_year->get_active_text().c_str());
     util::Date date = util::Date(day, month, year);
-    std::cout << "Validating date: " << date;
+    std::cout << "Validating date: " << date << std::endl;
     if (!date.is_valid()) {
         if ((date.day >= 29 && date.day <= 31) && date.month == 2)
             view->set_add_birth_date(util::Date(28, 2, date.year));
