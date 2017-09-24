@@ -62,6 +62,8 @@ void mm::controller::AddPatientDialog::ok_handler() {
 
     patient.set_address(address.str());
     patient.set_doctor_id(controller::Register::get_instance().get_patient().get_doctor().get_regional_id());
+    patient.set_birth_place(birth_address.str());
+    // todo bisogna aggiungere il codice del medico altrimenti non è possibile salvare un paziente nel db
 
     if (patient.is_valid()) {
 
