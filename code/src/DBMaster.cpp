@@ -302,11 +302,6 @@ mm::DBMaster::get_table(string name, unsigned int limit, unsigned int offset) {
     return to_return;
 }
 
-/*vector<vector<mm::Serialized, allocator<mm::Serialized>>, allocator<vector<mm::Serialized, allocator<mm::Serialized>>>>
-mm::DBMaster::get_table(str name) {
-    return get_table(name, 0, 0);
-}*/
-
 vector<map<string, mm::Serialized>>
 mm::DBMaster::get_rows(string table_name, string id_name, mm::Serialized id) {
     stringstream query;
@@ -315,7 +310,7 @@ mm::DBMaster::get_rows(string table_name, string id_name, mm::Serialized id) {
 
     query << "select * from " << table_name << " where " << id_name << "='";
 
-    switch (id.getType()) {
+    switch (id.get_type()) {
         case INTEGER:
             query << id.get_int() << "'";
             break;
@@ -383,6 +378,43 @@ mm::DBMaster::get_rows(string table_name, string id_name, mm::Serialized id) {
 
 void mm::DBMaster::extract_from_db(mm::ISerializable &obj, const mm::Serialized &id) {
     extract_from_db(obj, {id});
+}
+
+void mm::DBMaster::remove_from_db(const mm::ISerializable &obj) {
+    std::stringstream query;
+    auto primary_keys_names = obj.get_primary_key();
+    auto obj_map = obj.serialize();
+    sqlite3_stmt *stmt;
+
+    query << "delete from " << obj.get_table_name() << " where ";
+
+    for (size_t i = 0; i < primary_keys_names.size(); ++i) {
+        query << primary_keys_names[i] << " = " << obj_map[primary_keys_names[i]] << "";
+
+        if (i + 1 < primary_keys_names.size()) // there is at least one other key
+            query << " and ";
+    }
+
+    if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
+        std::stringstream msg;
+        msg << "cannot select rows with query: \"" << query.str() << "\""
+            << std::endl
+            << "sqlite error: " << sqlite3_errmsg(db);
+        throw std::runtime_error(msg.str());
+    }
+
+    int rc = sqlite3_step(stmt);
+    if (rc == SQLITE_ERROR) {
+        sqlite3_finalize(stmt);
+        std::stringstream msg;
+        msg << "cannot execute stmt: \"" << query.str() << "\""
+            << std::endl
+            << "sqlite error: " << sqlite3_errmsg(db);
+        throw std::runtime_error(msg.str());
+    }
+
+    sqlite3_finalize(stmt);
+
 }
 
 mm::record_not_found_error::record_not_found_error(const char *msg)

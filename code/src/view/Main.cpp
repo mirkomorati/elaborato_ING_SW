@@ -11,7 +11,7 @@
 /*mm::view::Main::Main(controller::Main &c)
         : controller(controller::Register::get_instance().get_main()) {
     login_view = new Login();
-    patient_view = new Application(controller::Register::get_instance().get_patient());
+    patient_view = new Application(controller::Register::get_instance().get_patient_from_health_code());
 
     Gtk::ImageMenuItem *about;
     Gtk::AboutDialog *about_dialog;

@@ -52,7 +52,7 @@ namespace mm {
         SerializedUnion data;
         StoredTypes type;
     public:
-        StoredTypes getType() const noexcept;
+        StoredTypes get_type() const noexcept;
 
         bool isType(StoredTypes type) const noexcept;
 

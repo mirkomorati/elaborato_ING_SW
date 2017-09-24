@@ -11,10 +11,13 @@
 
 namespace mm {
     /**
-     * rappresenta l'applicazione stessa, si occupa di gestire tutti i controller e le view.
+     * @brief rappresenta l'applicazione stessa, si occupa di creare, inizializzare e gestire tutte i controller e
+     * le view che vengono utilizzate durante l'esecuzione del programma.
+     *
+     * Prima di creare un oggetto di MedH è necessario che sia stata chiamata la funzione statica init, che si occupa
+     * di creare un applicazione ed inizializzare tutte le librerie usate.
      */
     class MedH {
-
         controller::Main main_controller;
         controller::Application app_controller;
 
@@ -29,6 +32,7 @@ namespace mm {
 
         static Glib::RefPtr<Gtk::Application> app;
 
+        /// l'ancia il main loop del programma.
         int run();
     };
 }

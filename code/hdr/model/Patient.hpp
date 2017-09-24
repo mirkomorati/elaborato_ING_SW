@@ -20,7 +20,7 @@ namespace mm {
     namespace model {
         class Patient : public ISerializable {
         public:
-            struct TreeModel : Gtk::TreeModelColumnRecord {
+            struct TreeModel : public Gtk::TreeModelColumnRecord {
                 TreeModel();
 
                 Gtk::TreeModelColumn<Glib::ustring> first_name;
