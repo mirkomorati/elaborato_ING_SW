@@ -43,6 +43,12 @@ namespace mm {
 
             vector<model::Patient> get_patients(model::Drug drug);
 
+            model::Patient get_patient_from_health_code(std::string health_code);
+
+            model::Patient get_patient_from_fiscal_code(std::string fiscal_code);
+
+            void remove_patient(const Patient &patient);
+
             const string &get_first_name() const;
 
             const string &get_last_name() const;

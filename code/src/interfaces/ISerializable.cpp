@@ -11,7 +11,7 @@ bool mm::Serialized::isType(mm::StoredTypes type) const noexcept {
     return type == this->type;
 }
 
-mm::StoredTypes mm::Serialized::getType() const noexcept {
+mm::StoredTypes mm::Serialized::get_type() const noexcept {
     return type;
 }
 

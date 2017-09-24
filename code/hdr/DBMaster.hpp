@@ -41,6 +41,8 @@ namespace mm {
 
         void add_to_db(const ISerializable &obj);
 
+        void remove_from_db(const ISerializable &obj);
+
         void extract_from_db(ISerializable &obj, initializer_list<Serialized> ids);
 
         void extract_from_db(ISerializable &obj, const Serialized &id);

@@ -22,7 +22,33 @@ void mm::controller::Application::add_prescription_handler() {
 }
 
 void mm::controller::Application::remove_patient_handler() {
-    // todo implement
+    // todo gestire il doppio click.
+    model::Patient tmp_patient;
+    string test;
+
+    if (model->selected_patient_row.first)
+        model->selected_patient_row.first.get_value(2, test);
+    else {
+        cerr << "no patient selected" << endl;
+        return;
+    }
+
+    try {
+        tmp_patient = model->doctor.first.get_patient_from_fiscal_code(test);
+    } catch (std::runtime_error &e) {
+        cerr << "cannot find patient";
+        return;
+    }
+
+    try {
+        model->doctor.first.remove_patient(tmp_patient);
+    } catch (std::runtime_error &e) {
+        cerr << "cannot remove patient: " << e.what();
+    }
+
+    model->patient_list_store.first->erase(model->selected_patient_row.first);
+    model->patient_list_store.second = true;
+    notify();
 }
 
 void mm::controller::Application::edit_patient_handler() {
