@@ -5,6 +5,7 @@
 #include "../hdr/MedH.hpp"
 #include "../hdr/Configuration.hpp"
 #include "../hdr/DBMaster.hpp"
+#include <spdlog/spdlog.h>
 
 Glib::RefPtr<Gtk::Application> mm::MedH::app;
 
@@ -28,6 +29,9 @@ void mm::MedH::init(int argc, char **argv) {
          << "glade file : " << config.get<std::string>("glade_file");
 
     DBMaster::set_db_file_name(config.get<string>("db_name"));
+
+    auto console = spdlog::stdout_color_mt("out");
+    auto error = spdlog::stderr_color_mt("err");
 
     app = Gtk::Application::create(argc, argv, "it.mm.org");
 }

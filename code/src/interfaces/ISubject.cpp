@@ -16,7 +16,6 @@ void mm::ISubject::detach(mm::IObserver *obj) noexcept(false) {
 }
 
 void mm::ISubject::notify() {
-    // todo asincrono
     for (auto obs : observer_set) {
         obs->update();
     }
