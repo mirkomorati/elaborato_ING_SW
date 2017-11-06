@@ -7,7 +7,7 @@
 
 int main(int argc, char **argv) {
 
-    mm::MedH::init(argc, argv);
+    if (not mm::MedH::init(argc, argv)) return -1;
 
     mm::MedH my_app;
 

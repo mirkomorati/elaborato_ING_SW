@@ -28,7 +28,7 @@ namespace mm {
     public:
         MedH();
 
-        static void init(int argc, char **argv);
+        static bool init(int argc, char **argv);
 
         static Glib::RefPtr<Gtk::Application> app;
 
