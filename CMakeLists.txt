@@ -7,6 +7,11 @@ set(CMAKE_CXX_FLAGS -Wextra)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake_modules")
 
+# debug mode 
+if (${CMAKE_BUILD_TYPE} MATCHES Debug)
+    add_definitions(-DDEBUG)
+endif (${CMAKE_BUILD_TYPE} MATCHES Debug)
+
 # icon files to copy in the bundle
 set(OSX_ICON_FILES ${CMAKE_SOURCE_DIR}/glade/med-h.icns)
 # set where in the bundle to put the icns files

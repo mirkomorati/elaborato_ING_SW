@@ -7,6 +7,8 @@
 #include "../hdr/DBMaster.hpp"
 #include <spdlog/spdlog.h>
 
+#define DEFAULT_CONFIG_FILE "../../../../tmp/config.json"
+
 Glib::RefPtr<Gtk::Application> mm::MedH::app;
 
 mm::MedH::MedH() : main_view(main_controller), login_view(main_controller), app_view(app_controller) {}
@@ -22,14 +24,22 @@ bool mm::MedH::init(int argc, char **argv) {
     auto console = spdlog::stdout_color_mt("out");
     auto error = spdlog::stderr_color_mt("err");
     error->set_level(spdlog::level::trace); // print all messages.
-
-    Configuration::set_config_file_name("../../../../tmp/config.json");
+#ifdef DEBUG
+    Configuration::set_config_file_name(DEFAULT_CONFIG_FILE);
+#else
+    if(argc < 2){
+        console->info("No configuration file provvided, using the default {}", DEFAULT_CONFIG_FILE);
+        Configuration::set_config_file_name(DEFAULT_CONFIG_FILE);
+    } else {
+        Configuration::set_config_file_name(argv[1]);
+    }
+#endif
 
     // configurations settings
     try {
         Configuration &config = Configuration::get_instance();
 
-        console->info("configurations loaded from {}", config.get_config_file_name());
+        console->info("configurations successfully loaded from {}", config.get_config_file_name());
 
         try {
             if (config.get<bool>("debug")) {

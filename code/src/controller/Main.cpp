@@ -4,6 +4,7 @@
 //
 
 #include <iostream>
+#include <spdlog/spdlog.h>
 #include "../../hdr/controller/Main.hpp"
 #include "../../hdr/controller/Register.hpp"
 #include "../../hdr/model/Authentication.hpp"
@@ -48,16 +49,15 @@ const shared_ptr<mm::model::Main> &mm::controller::Main::get_model() const {
 
 void mm::controller::Main::login_button_handler() {
     auto &refBuilder = RefBuilder::get_instance();
+    auto log = spdlog::get("out");
 
     Gtk::Entry *name;
     Gtk::Entry *password;
 
     refBuilder.get_widget("loginName", name);
     refBuilder.get_widget("loginPassword", password);
-    std::string text_name = name->get_text();
-    std::string text_password = password->get_text();
-    std::cout << "Nome: " << text_name << "\tPassword: "
-              << text_password << std::endl;
+    log->debug("try to log in with username: {} and password: {}", static_cast<std::string>(name->get_text()),
+               static_cast<std::string>(password->get_text()));
 
     if (model::authentication::check_login(name->get_text(), password->get_text())) {
         model->stackPage.first = model::APPLICATION;
