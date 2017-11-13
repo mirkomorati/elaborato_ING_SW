@@ -14,7 +14,9 @@ mm::model::Doctor mm::controller::Application::get_doctor() {
 }
 
 void mm::controller::Application::add_patient_handler() {
-    factory::DialogFactory::get_instance()->create_dialog("AddPatientDialog")->show_dialog();
+    auto dialog = factory::DialogFactory::get_instance()->create_dialog("AddPatientDialog");
+    dialog->attach(this);
+    dialog->show_dialog();
 }
 
 void mm::controller::Application::add_prescription_handler() {

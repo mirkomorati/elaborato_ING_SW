@@ -30,5 +30,5 @@ mm::controller::Dialog *mm::factory::DialogFactory::create_dialog(const std::str
     auto it = factory_map.find(dialog_name);
     std::cout << "Dialog Factory --> name: " << dialog_name << std::endl;
     if (it != factory_map.end()) return it->second();
-    return NULL;
+    return nullptr;
 }

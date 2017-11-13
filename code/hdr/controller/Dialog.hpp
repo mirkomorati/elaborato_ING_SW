@@ -5,9 +5,11 @@
 #ifndef ELABORATO_ING_SW_DIALOG_HPP
 #define ELABORATO_ING_SW_DIALOG_HPP
 
+#include "../interfaces/ISubject.hpp"
+
 namespace mm {
     namespace controller {
-        class Dialog {
+        class Dialog : public ISubject {
         public:
             virtual void ok_handler() = 0;
 

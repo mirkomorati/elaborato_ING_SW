@@ -70,7 +70,8 @@ void mm::controller::AddPatientDialog::ok_handler() {
         DBMaster::get_instance().add_to_db(patient);
 
         view->dispose_dialog();
-        // todo risolvere il problema dell'aggiornamento della view.
+        mm::model::authentication::Login::get_instance().is_changed = true;
+        notify();
     } else {
         Gtk::Label *error;
         refBuilder.get_widget("addPatientError", error);
