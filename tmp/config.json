@@ -1,5 +1,6 @@
 {
   "db_name": "../../../../database/db.sqlite3",
   "glade_file": "../../../../glade/mainWindow.glade",
-  "log_prefix": "../tmp/log/"
+  "log_prefix": "../tmp/log/",
+  "debug": true
 }

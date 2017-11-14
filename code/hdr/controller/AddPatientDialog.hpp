@@ -8,6 +8,7 @@
 #include "../view/AddPatientDialog.hpp"
 #include "SelectDateDialog.hpp"
 #include "Application.hpp"
+#include "../interfaces/ISubject.hpp"
 
 namespace mm {
     namespace view {

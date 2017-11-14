@@ -7,6 +7,7 @@
 #include "../../hdr/controller/AddPatientDialog.hpp"
 #include "../../hdr/DBMaster.hpp"
 #include "../../hdr/controller/Register.hpp"
+#include "../../hdr/model/Authentication.hpp"
 
 void mm::controller::AddPatientDialog::ok_handler() {
     auto &refBuilder = RefBuilder::get_instance();
@@ -61,17 +62,16 @@ void mm::controller::AddPatientDialog::ok_handler() {
     birth_address << birth_city->get_text() << ", " << birth_country->get_text();
 
     patient.set_address(address.str());
-    // patient.set_doctor_id(controller::Register::get_instance().get_patient().get_doctor().get_regional_id()); non vale
-    // più da quando non instanziamo più i controller mediante il register.
+    patient.set_doctor_id(mm::model::authentication::Login::get_instance().regional_id);
     patient.set_birth_place(birth_address.str());
-    // todo bisogna aggiungere il codice del medico altrimenti non è possibile salvare un paziente nel db
 
     if (patient.is_valid()) {
 
         DBMaster::get_instance().add_to_db(patient);
 
         view->dispose_dialog();
-        // todo: devo riaggiornare la view dei pazienti con quello appena aggiunto
+        mm::model::authentication::Login::get_instance().is_changed = true;
+        notify();
     } else {
         Gtk::Label *error;
         refBuilder.get_widget("addPatientError", error);

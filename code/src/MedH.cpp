@@ -5,6 +5,9 @@
 #include "../hdr/MedH.hpp"
 #include "../hdr/Configuration.hpp"
 #include "../hdr/DBMaster.hpp"
+#include <spdlog/spdlog.h>
+
+#define DEFAULT_CONFIG_FILE "../../../../tmp/config.json"
 
 Glib::RefPtr<Gtk::Application> mm::MedH::app;
 
@@ -15,19 +18,50 @@ int mm::MedH::run() {
     return app->run(main_view.get_app_window());
 }
 
-void mm::MedH::init(int argc, char **argv) {
+bool mm::MedH::init(int argc, char **argv) {
     Glib::init();
 
-    Configuration::set_config_file_name("../../../../tmp/config.json");
+    auto console = spdlog::stdout_color_mt("out");
+    auto error = spdlog::stderr_color_mt("err");
+    error->set_level(spdlog::level::trace); // print all messages.
+#ifdef DEBUG
+    Configuration::set_config_file_name(DEFAULT_CONFIG_FILE);
+#else
+    if(argc < 2){
+        console->info("No configuration file provvided, using the default {}", DEFAULT_CONFIG_FILE);
+        Configuration::set_config_file_name(DEFAULT_CONFIG_FILE);
+    } else {
+        Configuration::set_config_file_name(argv[1]);
+    }
+#endif
 
-    Configuration &config = Configuration::get_instance();
+    // configurations settings
+    try {
+        Configuration &config = Configuration::get_instance();
 
-    cout << "configuration from: " << config.get_config_file_name()
-         << endl << "\tdb_name: "
-         << config.get<std::string>("db_name") << endl
-         << "glade file : " << config.get<std::string>("glade_file");
+        console->info("configurations successfully loaded from {}", config.get_config_file_name());
 
-    DBMaster::set_db_file_name(config.get<string>("db_name"));
+        try {
+            if (config.get<bool>("debug")) {
+                console->set_level(spdlog::level::debug);
+            }
+        } catch (key_not_found_error &e) {
+            error->info("cannot get the debug flag in configuration... default mode applied: No debug");
+        }
+
+        console->debug("glade file: {}", config.get<std::string>("glade_file"));
+        console->debug("database file: {}", config.get<std::string>("db_name"));
+
+        DBMaster::set_db_file_name(config.get<string>("db_name"));
+
+    } catch (invalid_argument &e) {
+        error->critical(e.what());
+        return false;
+    } catch (runtime_error &e) {
+        error->critical(e.what());
+        return false;
+    }
 
     app = Gtk::Application::create(argc, argv, "it.mm.org");
+    return true;
 }
