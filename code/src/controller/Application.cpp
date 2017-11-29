@@ -113,14 +113,13 @@ void mm::controller::Application::set_prescription_tree_view(std::string patient
 void mm::controller::Application::set_doctor(int doctor_id, bool notify_on) {
     if (doctor_id == model->doctor.first.get_regional_id()) {
         model->patient_list_store.first->clear();
-    } else {
+    }
 
-        try {
-            DBMaster::get_instance().extract_from_db(model->doctor.first, doctor_id);
-        } catch (record_not_found_error &e) {
-            model->patient_tree_row_selected.first = not(model->patient_tree_row_selected.second = true);
-            return;
-        }
+    try {
+        DBMaster::get_instance().extract_from_db(model->doctor.first, doctor_id);
+    } catch (record_not_found_error &e) {
+        model->patient_tree_row_selected.first = not(model->patient_tree_row_selected.second = true);
+        return;
     }
 
     auto &patients = model->doctor.first.get_patients();
