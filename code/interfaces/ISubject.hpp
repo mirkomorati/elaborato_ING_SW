@@ -29,7 +29,7 @@ namespace mm {
 
         void detach(IObserver *obj) noexcept(false);
 
-        void notify();
+        void notify() const;
     };
 }
 

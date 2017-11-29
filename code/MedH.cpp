@@ -66,8 +66,23 @@ bool mm::MedH::init() {
 mm::MedH::MedH(int argc, char **argv) : window(new LoginWindow) {
     this->app = Gtk::Application::create(argc, argv, "it.mm.org");
     if (not window->init()) throw std::runtime_error("cannot init the window");
+    window->attach(this);
 }
 
 void mm::MedH::update() {
-    if (window->getNextWindow() == window->getNextWindow()) return; // nothing to do.
+
+    if (window->getNextWindow() == window->getName()) return; // nothing to do.
+
+    switch (window->getNextWindow()) {
+        case LOGIN:
+            break; // da studiare
+        case MAIN: {
+            Gtk::Stack *stack;
+            RefBuilder::get_instance().get_widget("mainStack", stack);
+            stack->set_visible_child("patientPaned");
+            window.reset(nullptr); // should be window.reset(new MainWindow);
+            // window->init();
+            break;
+        }
+    }
 }

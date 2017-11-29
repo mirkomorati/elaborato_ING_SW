@@ -19,6 +19,10 @@ namespace mm {
         WindowName getName() const override;
 
         WindowName getNextWindow() const override;
+
+    private:
+
+        void onLoginButtonClicked();
     };
 }
 

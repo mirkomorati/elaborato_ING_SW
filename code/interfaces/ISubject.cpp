@@ -15,7 +15,7 @@ void mm::ISubject::detach(mm::IObserver *obj) noexcept(false) {
     if (observer_set.erase(obj) == 0) throw observer_not_found_error("cannot find objserver obj");
 }
 
-void mm::ISubject::notify() {
+void mm::ISubject::notify() const {
     for (auto obs : observer_set) {
         obs->update();
     }
