@@ -25,6 +25,9 @@ namespace mm {
         void update() override;
 
     private:
+        void onAddPatientClicked();
+
+        void onAddPrescriptionClicked();
 
     };
 }
