@@ -156,9 +156,14 @@ bool mm::model::Patient::operator!=(const mm::model::Patient &rhs) const {
 }
 
 bool mm::model::Patient::is_valid() {
-    return !first_name.empty() && !last_name.empty() && !fiscal_code.empty()
-           && !birth_date.empty() && !birth_place.empty() && !address.empty()
-           && doctor_id != 0 && !health_code.empty();
+    return !first_name.empty()
+           && !last_name.empty()
+           && !fiscal_code.empty()
+           && !birth_date.empty()
+           && !birth_place.empty()
+           && !address.empty()
+           && doctor_id != 0
+           && !health_code.empty();
 }
 
 mm::model::Patient::TreeModel::TreeModel() {
