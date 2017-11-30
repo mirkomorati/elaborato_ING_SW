@@ -19,6 +19,8 @@ namespace mm {
     private:
         void dispose() override;
 
+        void birthDateChanged();
+
         void okHandler();
 
         void cancelHandler();
