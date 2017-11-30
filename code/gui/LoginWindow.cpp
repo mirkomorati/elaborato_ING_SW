@@ -7,10 +7,14 @@
 #include "LoginWindow.hpp"
 #include "../RefBuilder.hpp"
 #include "../model/Authentication.hpp"
+#include <gdk/gdk.h>
 
 bool mm::LoginWindow::init() {
     Gtk::Button *button;
+    Gtk::Window *window;
     RefBuilder::get_instance().get_widget("loginButton", button);
+    RefBuilder::get_instance().get_widget("mainWindow", window);
+    window->signal_key_release_event().connect(sigc::mem_fun(this, &mm::LoginWindow::onKeyPressed));
     button->signal_clicked().connect(sigc::mem_fun(this, &mm::LoginWindow::onLoginButtonClicked));
     return true;
 }
@@ -47,4 +51,12 @@ void mm::LoginWindow::onLoginButtonClicked() {
         refBuilder.get_widget("loginError", error);
         error->set_visible(true);
     }
+}
+
+bool mm::LoginWindow::onKeyPressed(GdkEventKey *event) {
+    if (event->keyval == GDK_KEY_Return) {
+        onLoginButtonClicked();
+        return true;
+    }
+    return false;
 }

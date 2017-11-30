@@ -22,6 +22,8 @@ namespace mm {
     private:
 
         void onLoginButtonClicked();
+
+        bool onKeyPressed(GdkEventKey *event);
     };
 }
 

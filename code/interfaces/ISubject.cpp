@@ -15,8 +15,8 @@ void mm::ISubject::detach(mm::IObserver *obj) noexcept(false) {
 }
 
 void mm::ISubject::notify() const {
-    // a copy of the set is necessary couse if the update function destroyes the
-    // object this object we fall in an undefined behaviuor
+    // a copy of the set is necessary couse if the update function destroyes the "this"
+    // object we fall in an undefined behaviuor
     std::set<IObserver *> observer_copy_set = observer_set;
     for (auto obs : observer_copy_set) {
         obs->update();
