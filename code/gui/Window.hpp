@@ -20,12 +20,11 @@ namespace mm {
     class Window : public ISubject {
     public:
         virtual bool init() = 0; // imposta tutti i gestori delle chiamate di tutti gli eventi che lo riguardano.
-        virtual WindowName
-        getName() const = 0; // Ritorna il nome della classe, serve per capire che controllore è instanziato
-        virtual WindowName
-        getNextWindow() const = 0; // Deve ritornare il nome della classe che dovrà essere come controllore
-        // successivamente e questa, se il nome è uguale a getName allora nulla deve
-        // essere cambiato.
+        virtual WindowName getName() const = 0; // Ritorna il nome della classe, serve per capire che controllore è i
+        // nstanziato
+        virtual WindowName getNextWindow() const = 0;   // Deve ritornare il nome della classe che dovrà essere come
+        // controllore successivamente e questa, se il nome è uguale a
+        // getName allora nulla deve essere cambiato.
     };
 }
 

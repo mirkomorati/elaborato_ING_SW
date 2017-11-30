@@ -11,11 +11,11 @@ void mm::ISubject::attach(mm::IObserver *obj) noexcept {
 }
 
 void mm::ISubject::detach(mm::IObserver *obj) noexcept(false) {
-    if (observer_set.erase(obj) == 0) throw observer_not_found_error("cannot find objserver obj");
+    if (observer_set.erase(obj) == 0) throw observer_not_found_error("cannot find observer obj");
 }
 
 void mm::ISubject::notify() const {
-    // a copy of the set is necessary couse if the update function destroyes the "this"
+    // a copy of the set is necessary cause if the update function destroyes the "this"
     // object we fall in an undefined behaviuor
     std::set<IObserver *> observer_copy_set = observer_set;
     for (auto obs : observer_copy_set) {

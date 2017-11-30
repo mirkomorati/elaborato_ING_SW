@@ -91,7 +91,7 @@ void mm::MedH::update() {
             Gtk::Stack *stack;
             RefBuilder::get_instance().get_widget("mainStack", stack);
             stack->set_visible_child("patientPaned");
-            window.reset(new MainWindow); // I can't destroy the object here.
+            window.reset(new MainWindow);
             window->init();
             window->attach(this);
             break;

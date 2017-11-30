@@ -21,7 +21,7 @@ namespace mm {
 
         Glib::RefPtr<Gtk::Application> app;
 
-        /// l'ancia il main loop del programma.
+        /// lancia il main loop del programma.
         int run();
 
 
