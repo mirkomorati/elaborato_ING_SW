@@ -16,14 +16,14 @@ bool mm::LoginWindow::init() {
 }
 
 mm::WindowName mm::LoginWindow::getName() const {
-    return name;
+    return LOGIN;
 }
 
 mm::WindowName mm::LoginWindow::getNextWindow() const {
     return next;
 }
 
-mm::LoginWindow::LoginWindow() : name(LOGIN), next(name) {}
+mm::LoginWindow::LoginWindow() : next(LOGIN) {}
 
 void mm::LoginWindow::onLoginButtonClicked() {
     auto &refBuilder = RefBuilder::get_instance();

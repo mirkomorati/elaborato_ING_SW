@@ -30,6 +30,9 @@ namespace mm {
         void detach(IObserver *obj) noexcept(false);
 
         void notify() const;
+
+        virtual ~ISubject();
+
     };
 }
 

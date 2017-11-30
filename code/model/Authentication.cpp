@@ -60,3 +60,14 @@ mm::model::authentication::Login::operator=(const mm::model::authentication::Log
 
     return *this;
 }
+
+void mm::model::authentication::Login::logout() {
+    password = "";
+    user_name = "";
+    regional_id = -999;
+    is_changed = true;
+}
+
+bool mm::model::authentication::Login::isLog() const {
+    return regional_id != -999;
+}

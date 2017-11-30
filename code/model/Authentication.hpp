@@ -32,6 +32,11 @@ namespace mm {
 
                 static Login &get_instance();
 
+                void logout();
+
+                bool isLog() const;
+
+
             private:
                 explicit Login();
 

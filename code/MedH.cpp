@@ -7,6 +7,8 @@
 #include "DBMaster.hpp"
 #include "RefBuilder.hpp"
 #include "gui/LoginWindow.hpp"
+#include "gui/MainWindow.hpp"
+#include "model/Authentication.hpp"
 #include <spdlog/spdlog.h>
 
 #define DEFAULT_CONFIG_FILE "../../../../tmp/config.json"
@@ -74,14 +76,24 @@ void mm::MedH::update() {
     if (window->getNextWindow() == window->getName()) return; // nothing to do.
 
     switch (window->getNextWindow()) {
-        case LOGIN:
-            break; // da studiare
+        case LOGIN: {
+            /*// session destroyed
+            model::authentication::Login::get_instance().logout();
+            Gtk::Stack *stack;
+            RefBuilder::get_instance().get_widget("mainStack", stack);
+            stack->set_visible_child("loginGrid");
+            window.reset(new LoginWindow);
+            window->init();
+            window->attach(this);*/
+            break;
+        }
         case MAIN: {
             Gtk::Stack *stack;
             RefBuilder::get_instance().get_widget("mainStack", stack);
             stack->set_visible_child("patientPaned");
-            window.reset(nullptr); // should be window.reset(new MainWindow);
-            // window->init();
+            window.reset(new MainWindow); // I can't destroy the object here.
+            window->init();
+            window->attach(this);
             break;
         }
     }

@@ -3,7 +3,6 @@
 //
 
 #include <Carbon/Carbon.h>
-#include <thread>
 #include "IObserver.hpp"
 #include "ISubject.hpp"
 
@@ -16,9 +15,16 @@ void mm::ISubject::detach(mm::IObserver *obj) noexcept(false) {
 }
 
 void mm::ISubject::notify() const {
-    for (auto obs : observer_set) {
+    // a copy of the set is necessary couse if the update function destroyes the
+    // object this object we fall in an undefined behaviuor
+    std::set<IObserver *> observer_copy_set = observer_set;
+    for (auto obs : observer_copy_set) {
         obs->update();
     }
+}
+
+mm::ISubject::~ISubject() {
+    observer_set.clear();
 }
 
 mm::observer_not_found_error::observer_not_found_error(const std::string &error) : runtime_error(error) {}
