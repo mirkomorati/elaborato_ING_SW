@@ -85,7 +85,6 @@ void mm::AddPatientDialog::birthDateChanged() {
 }
 
 void mm::AddPatientDialog::okHandler() {
-    // todo gestire ok
     mm::model::Patient patient;
     stringstream address;
     stringstream birth_address;
@@ -162,3 +161,6 @@ void mm::AddPatientDialog::dispose() {
     notify();
 }
 
+mm::AddPatientDialog::~AddPatientDialog() {
+    // todo gestire il reset dei campi.
+}

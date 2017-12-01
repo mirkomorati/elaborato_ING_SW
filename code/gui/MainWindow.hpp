@@ -8,11 +8,15 @@
 #include "Window.hpp"
 #include "Dialog.hpp"
 #include <list>
+#include <gtkmm/liststore.h>
 
 namespace mm {
     class MainWindow : public Window, public IObserver {
         WindowName next;
         std::list<std::unique_ptr<Dialog>> dialogList;
+
+        //-------------------List stores-------------------//
+        Glib::RefPtr<Gtk::ListStore> patientListStore;
     public:
         MainWindow();
 
@@ -25,9 +29,16 @@ namespace mm {
         void update() override;
 
     private:
+        //-------------------singal handlers-------------------//
         void onAddPatientClicked();
 
         void onAddPrescriptionClicked();
+
+        //-------------------graphics updates-------------------//
+
+        void updatePatientTreeView();
+
+        void updatePrescritpionTreeView();
 
     };
 }

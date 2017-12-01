@@ -31,6 +31,8 @@ namespace mm {
                 Gtk::TreeModelColumn<Glib::ustring> risk_factors;
             };
 
+            static TreeModel patientTreeModel;
+
         public:
             Patient();
 

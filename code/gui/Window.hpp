@@ -17,7 +17,7 @@ namespace mm {
         MAIN
     };
 
-    class Window : public ISubject {
+    class Window : public ISubject, public sigc::trackable {
     public:
         virtual bool init() = 0; // imposta tutti i gestori delle chiamate di tutti gli eventi che lo riguardano.
         virtual WindowName getName() const = 0; // Ritorna il nome della classe, serve per capire che controllore è i

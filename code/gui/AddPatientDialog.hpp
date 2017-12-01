@@ -6,6 +6,7 @@
 #define ELABORATO_ING_SW_ADDPATIENTDIALOG_HPP
 
 #include "Dialog.hpp"
+#include <sigc++-2.0/sigc++/sigc++.h>
 
 namespace mm {
     class AddPatientDialog : public Dialog {
@@ -15,6 +16,8 @@ namespace mm {
         void show() override;
 
         bool isActive() override;
+
+        virtual ~AddPatientDialog();
 
     private:
         void dispose() override;

@@ -8,6 +8,8 @@
 #include "Patient.hpp"
 #include "../DBMaster.hpp"
 
+mm::model::Patient::TreeModel mm::model::Patient::patientTreeModel;
+
 mm::model::Patient::Patient() {
 
 }
