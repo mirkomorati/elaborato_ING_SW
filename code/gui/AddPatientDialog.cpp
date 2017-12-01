@@ -65,9 +65,14 @@ void mm::AddPatientDialog::birthDateChanged() {
     RefBuilder::get_instance().get_widget("addBirthDateMonth", add_birth_month);
     RefBuilder::get_instance().get_widget("addBirthDateYear", add_birth_year);
 
-    day = std::atoi(add_birth_day->get_active_text().c_str());
-    month = std::atoi(add_birth_month->get_active_text().c_str());
-    year = std::atoi(add_birth_year->get_active_text().c_str());
+    try {
+        day = std::stoi(add_birth_day->get_active_text().c_str());
+        month = std::stoi(add_birth_month->get_active_text().c_str());
+        year = std::stoi(add_birth_year->get_active_text().c_str());
+    } catch (...) {
+        throw std::logic_error("invalid integer from a comboBox, that's no good!!!");
+    }
+
     date = util::Date(day, month, year);
 
     std::cout << "Validating date: " << date << std::endl;
@@ -124,7 +129,6 @@ void mm::AddPatientDialog::okHandler() {
     patient.set_first_name(first_name->get_text());
     patient.set_last_name(last_name->get_text());
     patient.set_fiscal_code(fiscal_code->get_text());
-    patient.set_health_code(health_code->get_text());
     birth_date << add_birth_day->get_active_text().c_str() << "/"
                << add_birth_month->get_active_text().c_str() << "/"
                << add_birth_year->get_active_text().c_str();

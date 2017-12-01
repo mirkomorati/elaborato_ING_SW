@@ -19,7 +19,7 @@ namespace mm {
         class Drug : public ISerializable {
         public:
             struct TreeModel : Gtk::TreeModelColumnRecord {
-                TreeModel();
+                TreeModel() noexcept;
 
                 Gtk::TreeModelColumn<Glib::ustring> name;
                 Gtk::TreeModelColumn<Glib::ustring> pharmaceutical_form;
@@ -35,7 +35,7 @@ namespace mm {
         public:
             Drug(const string &name, float price);
 
-            Drug();
+            Drug() = default;
 
             map<string, Serialized> serialize() const override;
 

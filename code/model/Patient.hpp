@@ -19,12 +19,11 @@ namespace mm {
         class Patient : public ISerializable {
         public:
             struct TreeModel : public Gtk::TreeModelColumnRecord {
-                TreeModel();
+                TreeModel() noexcept;
 
                 Gtk::TreeModelColumn<Glib::ustring> first_name;
                 Gtk::TreeModelColumn<Glib::ustring> last_name;
                 Gtk::TreeModelColumn<Glib::ustring> fiscal_code;
-                Gtk::TreeModelColumn<Glib::ustring> health_code;
                 Gtk::TreeModelColumn<Glib::ustring> birth_date;
                 Gtk::TreeModelColumn<Glib::ustring> birth_place;
                 Gtk::TreeModelColumn<Glib::ustring> address;
@@ -34,9 +33,9 @@ namespace mm {
             static TreeModel patientTreeModel;
 
         public:
-            Patient();
+            Patient() = default;
 
-            ~Patient();
+            ~Patient() = default;
 
             map<string, Serialized> serialize() const override;
 
@@ -45,8 +44,6 @@ namespace mm {
             string get_table_name() const override;
 
             vector<string> get_primary_key() const override;
-
-            const string &get_health_code() const;
 
             const string &get_first_name() const;
 
@@ -62,11 +59,7 @@ namespace mm {
 
             string get_risk_factors() const;
 
-            int get_doctor_id() const;
-
             vector<Prescription> get_prescriptions();
-
-            void set_health_code(const string &health_code);
 
             void set_first_name(const string &first_name);
 
@@ -89,7 +82,6 @@ namespace mm {
             bool operator!=(const Patient &rhs) const;
 
         private:
-            string health_code;
             string first_name;
             string last_name;
             string fiscal_code;

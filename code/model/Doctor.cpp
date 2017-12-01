@@ -138,15 +138,6 @@ void mm::model::Doctor::remove_patient(const mm::model::Patient &patient) {
     patients.erase(it);
 }
 
-mm::model::Patient mm::model::Doctor::get_patient_from_health_code(std::string health_code) {
-    for (auto &p : patients) {
-        if (p.get_health_code() == health_code)
-            return p;
-    }
-
-    throw std::runtime_error("patient not found");
-}
-
 mm::model::Patient mm::model::Doctor::get_patient_from_fiscal_code(std::string fiscal_code) {
     for (auto &p : patients) {
         if (p.get_fiscal_code() == fiscal_code)

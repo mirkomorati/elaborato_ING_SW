@@ -21,7 +21,7 @@ namespace mm {
         class Prescription : public ISerializable {
         public:
             struct TreeModel : Gtk::TreeModelColumnRecord {
-                TreeModel();
+                TreeModel() noexcept;
 
                 Gtk::TreeModelColumn<Glib::ustring> patient_id;
                 Gtk::TreeModelColumn<Glib::ustring> issue_date;
@@ -45,7 +45,7 @@ namespace mm {
 
             vector<string> get_primary_key() const override;
 
-            int get_patient_id() const;
+            string get_patient_id() const;
 
             int get_prescription_id() const;
 
@@ -55,25 +55,20 @@ namespace mm {
 
             string get_drug_ids_as_string();
 
-            const vector<pair<string, string>> &get_drug_ids() const;
-
             const vector<Drug> get_drugs() const;
 
             string get_negative_interactions();
 
             bool is_used() const;
 
-            int get_bill_id() const;
-
         private:
-            int patient_id;
+            string patient_id;
             int prescription_id;
             string issue_date;
             string expire_date;
             vector<pair<string, string>> drug_ids;
             map<string, string> negative_interactions;
             bool used;
-            int bill_id; // ?
         };
     }
 }

@@ -114,8 +114,6 @@ const string mm::model::Drug::get_active_principles_as_string() const {
     return ret;
 }
 
-mm::model::Drug::Drug() {}
-
 const string mm::model::Drug::get_price_as_string() const {
     std::stringstream ss;
     ss << std::setw(2) << price;
@@ -130,7 +128,7 @@ bool mm::model::Drug::operator==(const mm::model::Drug &rhs) const {
     return name == rhs.name && pharmaceutical_form == rhs.pharmaceutical_form;
 }
 
-mm::model::Drug::TreeModel::TreeModel() {
+mm::model::Drug::TreeModel::TreeModel() noexcept {
     add(name);
     add(pharmaceutical_form);
     add(ATC_classification);

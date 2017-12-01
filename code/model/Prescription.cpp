@@ -26,15 +26,6 @@ std::map<std::string, mm::Serialized> mm::model::Prescription::serialize() const
     ss.seekp(-1, ss.cur);
     serialized_map["drug_ids"] = ss.str();
 
-    /*
-    for (size_t i = 0; i < drug_ids.size(); i++) {
-        drug_list << drug_ids[i];
-        if (i < drug_ids.size() - 1) drug_list << ";";
-    }
-    */
-
-    // serialized_map["drug_ids"] = drug_list.str();
-
     stringstream negative_interaction_list;
     for (auto row : negative_interactions) {
         negative_interaction_list << row.first << ":" << row.second << ";";
@@ -51,7 +42,7 @@ void mm::model::Prescription::unserialize(std::map<std::string, Serialized> map)
     const char delimiter = ';';
     const char drug_ids_delimiter = ':';
 
-    patient_id = map["patient_id"].get_int();
+    patient_id = map["patient_id"].get_str();
     prescription_id = map["prescription_id"].get_int();
     issue_date = map["issue_date"].get_str();
     expire_date = map["expire_date"].get_str();
@@ -68,11 +59,11 @@ void mm::model::Prescription::unserialize(std::map<std::string, Serialized> map)
     istringstream negative_interaction_list(map["negative_interactions"].get_str());
     while (getline(negative_interaction_list, tmp, ';')) {
         // todo questo è fatto male, molto male
-        string delims = ":";
+        string delimiter2 = ":";
         vector<string> results;
         size_t lastOffset = 0;
         while (true) {
-            size_t offset = tmp.find_first_of(delims, lastOffset);
+            size_t offset = tmp.find_first_of(delimiter2, lastOffset);
             results.push_back(tmp.substr(lastOffset, offset - lastOffset));
             if (offset == string::npos)
                 break;
@@ -92,7 +83,7 @@ vector<string> mm::model::Prescription::get_primary_key() const {
     return {"prescription_id"};
 }
 
-int mm::model::Prescription::get_patient_id() const {
+string mm::model::Prescription::get_patient_id() const {
     return patient_id;
 }
 
@@ -132,14 +123,6 @@ bool mm::model::Prescription::is_used() const {
     return used;
 }
 
-int mm::model::Prescription::get_bill_id() const {
-    return bill_id;
-}
-
-const vector<pair<string, string>> &mm::model::Prescription::get_drug_ids() const {
-    return drug_ids;
-}
-
 const vector<mm::model::Drug> mm::model::Prescription::get_drugs() const {
     vector<Drug> toReturn;
 
@@ -155,7 +138,7 @@ const vector<mm::model::Drug> mm::model::Prescription::get_drugs() const {
     return toReturn;
 }
 
-mm::model::Prescription::TreeModel::TreeModel() {
+mm::model::Prescription::TreeModel::TreeModel() noexcept {
     add(patient_id);
     add(issue_date);
     add(expire_date);

@@ -121,7 +121,6 @@ void mm::MainWindow::onAddPatientClicked() {
 void mm::MainWindow::updatePatientTreeView() {
     model::Doctor doctor;
     std::vector<model::Patient> patients;
-    Gtk::TreeView *patientTreeView;
 
     try {
         DBMaster::get_instance().extract_from_db(doctor, model::authentication::Login::get_instance().regional_id);
@@ -138,7 +137,6 @@ void mm::MainWindow::updatePatientTreeView() {
         row[model::Patient::patientTreeModel.first_name] = patients[i].get_first_name();
         row[model::Patient::patientTreeModel.last_name] = patients[i].get_last_name();
         row[model::Patient::patientTreeModel.fiscal_code] = patients[i].get_fiscal_code();
-        row[model::Patient::patientTreeModel.health_code] = patients[i].get_health_code();
         row[model::Patient::patientTreeModel.birth_date] = patients[i].get_birth_date();
         row[model::Patient::patientTreeModel.birth_place] = patients[i].get_birth_place();
         row[model::Patient::patientTreeModel.address] = patients[i].get_address();
@@ -157,7 +155,7 @@ void mm::MainWindow::updatePrescriptionTreeView() {
 
     if (not sel) return;
 
-    Glib::ustring patientId = static_cast<Glib::ustring>((*sel)[model::Patient::patientTreeModel.health_code]);
+    Glib::ustring patientId = static_cast<Glib::ustring>((*sel)[model::Patient::patientTreeModel.fiscal_code]);
     model::Patient patient;
     std::vector<model::Prescription> prescriptions;
 
@@ -173,7 +171,7 @@ void mm::MainWindow::updatePrescriptionTreeView() {
     auto row = *prescriptionListStore->append();
 
     for (size_t i = 0; i < prescriptions.size(); i++) {
-        row[model::Prescription::prescriptionTreeModel.patient_id] = std::to_string(prescriptions[i].get_patient_id());
+        row[model::Prescription::prescriptionTreeModel.patient_id] = prescriptions[i].get_patient_id();
         row[model::Prescription::prescriptionTreeModel.prescription_id] = std::to_string(
                 prescriptions[i].get_prescription_id());
         row[model::Prescription::prescriptionTreeModel.issue_date] = prescriptions[i].get_issue_date();

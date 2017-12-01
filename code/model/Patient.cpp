@@ -10,20 +10,11 @@
 
 mm::model::Patient::TreeModel mm::model::Patient::patientTreeModel;
 
-mm::model::Patient::Patient() {
-
-}
-
-mm::model::Patient::~Patient() {
-
-}
-
 map<string, mm::Serialized> mm::model::Patient::serialize() const {
     map<string, Serialized> serialized_map;
     serialized_map["first_name"] = first_name;
     serialized_map["last_name"] = last_name;
     serialized_map["fiscal_code"] = fiscal_code;
-    serialized_map["health_code"] = health_code;
     serialized_map["address"] = address;
     serialized_map["birth_date"] = birth_date;
     serialized_map["birth_place"] = birth_place;
@@ -42,7 +33,6 @@ void mm::model::Patient::unserialize(map<string, mm::Serialized> map) {
     first_name = map["first_name"].get_str();
     last_name = map["last_name"].get_str();
     fiscal_code = map["fiscal_code"].get_str();
-    health_code = map["health_code"].get_str();
     address = map["address"].get_str();
     birth_date = map["birth_date"].get_str();
     birth_place = map["birth_place"].get_str();
@@ -59,11 +49,7 @@ string mm::model::Patient::get_table_name() const {
 }
 
 vector<string> mm::model::Patient::get_primary_key() const {
-    return {"health_code"};
-}
-
-const string &mm::model::Patient::get_health_code() const {
-    return health_code;
+    return {"fiscal_code"};
 }
 
 const string &mm::model::Patient::get_first_name() const {
@@ -101,7 +87,7 @@ const string &mm::model::Patient::get_fiscal_code() const {
 vector<mm::model::Prescription> mm::model::Patient::get_prescriptions() {
     vector<Prescription> prescriptions;
     auto rows = DBMaster::get_instance().get_rows("prescriptions", "patient_id",
-                                                  health_code);
+                                                  fiscal_code);
     for (auto &row : rows) {
         Prescription tmp;
         tmp.unserialize(row);
@@ -110,10 +96,6 @@ vector<mm::model::Prescription> mm::model::Patient::get_prescriptions() {
 
     return prescriptions;
 
-}
-
-void mm::model::Patient::set_health_code(const string &health_code) {
-    this->health_code = health_code;
 }
 
 void mm::model::Patient::set_first_name(const string &first_name) {
@@ -144,12 +126,8 @@ void mm::model::Patient::set_doctor_id(int doctor_id) {
     this->doctor_id = doctor_id;
 }
 
-int mm::model::Patient::get_doctor_id() const {
-    return doctor_id;
-}
-
 bool mm::model::Patient::operator==(const mm::model::Patient &rhs) const {
-    return health_code == rhs.health_code;
+    return fiscal_code == rhs.fiscal_code;
 }
 
 bool mm::model::Patient::operator!=(const mm::model::Patient &rhs) const {
@@ -163,15 +141,13 @@ bool mm::model::Patient::is_valid() {
            && !birth_date.empty()
            && !birth_place.empty()
            && !address.empty()
-           && doctor_id != 0
-           && !health_code.empty();
+           && doctor_id != 0;
 }
 
-mm::model::Patient::TreeModel::TreeModel() {
+mm::model::Patient::TreeModel::TreeModel() noexcept {
     add(first_name);
     add(last_name);
     add(fiscal_code);
-    add(health_code);
     add(birth_date);
     add(birth_place);
     add(address);

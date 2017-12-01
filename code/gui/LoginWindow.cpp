@@ -7,7 +7,6 @@
 #include "LoginWindow.hpp"
 #include "../RefBuilder.hpp"
 #include "../model/Authentication.hpp"
-#include <gdk/gdk.h>
 
 bool mm::LoginWindow::init() {
     Gtk::Button *button;
