@@ -274,3 +274,6 @@ void mm::AddPatientDialog::reset() {
     birth_country->set_text("");
 }
 
+mm::AddPatientDialog::~AddPatientDialog() {
+    // todo gestire il reset dei campi.
+}

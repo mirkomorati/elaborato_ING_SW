@@ -34,6 +34,8 @@ namespace mm {
 
             };
 
+            static TreeModel prescriptionTreeModel;
+
         public:
             map<string, Serialized> serialize() const override;
 
@@ -54,6 +56,8 @@ namespace mm {
             string get_drug_ids_as_string();
 
             const vector<pair<string, string>> &get_drug_ids() const;
+
+            const vector<Drug> get_drugs() const;
 
             string get_negative_interactions();
 

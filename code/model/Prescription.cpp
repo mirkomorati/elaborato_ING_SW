@@ -9,6 +9,8 @@
 #include "Prescription.hpp"
 #include "../DBMaster.hpp"
 
+mm::model::Prescription::TreeModel mm::model::Prescription::prescriptionTreeModel;
+
 std::map<std::string, mm::Serialized> mm::model::Prescription::serialize() const {
     map<string, Serialized> serialized_map;
     serialized_map["patient_id"] = patient_id;
@@ -136,6 +138,21 @@ int mm::model::Prescription::get_bill_id() const {
 
 const vector<pair<string, string>> &mm::model::Prescription::get_drug_ids() const {
     return drug_ids;
+}
+
+const vector<mm::model::Drug> mm::model::Prescription::get_drugs() const {
+    vector<Drug> toReturn;
+
+    for (auto ids : drug_ids) {
+        try {
+            Drug tmp;
+            DBMaster::get_instance().extract_from_db(tmp, {ids.first, ids.second});
+            toReturn.push_back(std::move(tmp));
+        } catch (record_not_found_error &e) {
+            throw std::runtime_error("cannot get drug of a prescription");
+        }
+    }
+    return toReturn;
 }
 
 mm::model::Prescription::TreeModel::TreeModel() {

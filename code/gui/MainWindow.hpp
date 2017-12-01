@@ -8,11 +8,19 @@
 #include "Window.hpp"
 #include "Dialog.hpp"
 #include <list>
+#include <gtkmm/liststore.h>
+#include <gtkmm/treeviewcolumn.h>
 
 namespace mm {
     class MainWindow : public Window, public IObserver {
         WindowName next;
         std::list<std::unique_ptr<Dialog>> dialogList;
+
+        //-------------------List stores-------------------//
+        Glib::RefPtr<Gtk::ListStore> patientListStore;
+        Glib::RefPtr<Gtk::ListStore> prescriptionListStore;
+        Glib::RefPtr<Gtk::ListStore> drugListStore;
+
     public:
         MainWindow();
 
@@ -25,9 +33,22 @@ namespace mm {
         void update() override;
 
     private:
+        //-------------------signal handlers-------------------//
         void onAddPatientClicked();
 
         void onAddPrescriptionClicked();
+
+        void onSelectedPatient(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *);
+
+        void onSelectedPrescription(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *);
+
+        //-------------------graphics updates-------------------//
+
+        void updatePatientTreeView();
+
+        void updatePrescriptionTreeView();
+
+        void updateDrugTreeView();
 
     };
 }

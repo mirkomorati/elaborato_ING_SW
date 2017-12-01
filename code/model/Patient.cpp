@@ -8,6 +8,8 @@
 #include "Patient.hpp"
 #include "../DBMaster.hpp"
 
+mm::model::Patient::TreeModel mm::model::Patient::patientTreeModel;
+
 mm::model::Patient::Patient() {
 
 }
@@ -50,7 +52,6 @@ void mm::model::Patient::unserialize(map<string, mm::Serialized> map) {
     while (getline(risk_list, tmp, ';')) {
         risk_factors.push_back(tmp);
     }
-    get_prescriptions_from_db();
 }
 
 string mm::model::Patient::get_table_name() const {
@@ -97,7 +98,8 @@ const string &mm::model::Patient::get_fiscal_code() const {
     return fiscal_code;
 }
 
-void mm::model::Patient::get_prescriptions_from_db() {
+vector<mm::model::Prescription> mm::model::Patient::get_prescriptions() {
+    vector<Prescription> prescriptions;
     auto rows = DBMaster::get_instance().get_rows("prescriptions", "patient_id",
                                                   health_code);
     for (auto &row : rows) {
@@ -105,10 +107,9 @@ void mm::model::Patient::get_prescriptions_from_db() {
         tmp.unserialize(row);
         prescriptions.push_back(tmp);
     }
-}
 
-vector<mm::model::Prescription> &mm::model::Patient::get_prescriptions() {
     return prescriptions;
+
 }
 
 void mm::model::Patient::set_health_code(const string &health_code) {

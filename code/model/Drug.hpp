@@ -30,6 +30,8 @@ namespace mm {
 
             };
 
+            static TreeModel drugTreeModel;
+
         public:
             Drug(const string &name, float price);
 
