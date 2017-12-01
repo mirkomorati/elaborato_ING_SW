@@ -9,6 +9,7 @@
 #include "Dialog.hpp"
 #include <list>
 #include <gtkmm/liststore.h>
+#include <gtkmm/treeviewcolumn.h>
 
 namespace mm {
     class MainWindow : public Window, public IObserver {
@@ -39,13 +40,13 @@ namespace mm {
 
         void onAddPrescriptionClicked();
 
-        void onSelectedPatient(const Gtk::TreeModel::Path &path, Gtk::TreeViewColumn *column);
+        void onSelectedPatient(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *);
 
         //-------------------graphics updates-------------------//
 
         void updatePatientTreeView();
 
-        void updatePrescritpionTreeView();
+        void updatePrescriptionTreeView();
 
     };
 }

@@ -11,22 +11,22 @@
 #include "../model/Authentication.hpp"
 
 bool mm::MainWindow::init() {
+    Gtk::TreeView *patientTreeView;
+    Gtk::TreeView *prescriptionTreeView;
     Gtk::ToolButton *add_patient_button;
     Gtk::ToolButton *add_prescription_button;
 
+    RefBuilder::get_instance().get_widget("prescriptionTreeView", prescriptionTreeView);
+    RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
     RefBuilder::get_instance().get_widget("addPatient", add_patient_button);
     RefBuilder::get_instance().get_widget("addPrescription", add_prescription_button);
 
     add_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPatientClicked));
     add_prescription_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPrescriptionClicked));
+    patientTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPatient));
+
 
     // setting the tree view
-
-    Gtk::TreeView *patientTreeView;
-    Gtk::TreeView *prescriptionTreeView;
-    RefBuilder::get_instance().get_widget("prescriptionTreeView", prescriptionTreeView);
-    RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
-
     patientTreeView->append_column("Nome", model::Patient::patientTreeModel.first_name);
     patientTreeView->append_column("Cognome", model::Patient::patientTreeModel.last_name);
     patientTreeView->append_column("Cod. Fiscale", model::Patient::patientTreeModel.fiscal_code);
@@ -82,7 +82,7 @@ void mm::MainWindow::update() {
         if (not(*it)->isActive()) dialogList.erase(it);
 
     updatePatientTreeView();
-    updatePrescritpionTreeView();
+    updatePrescriptionTreeView();
 }
 
 void mm::MainWindow::onAddPrescriptionClicked() {
@@ -128,16 +128,19 @@ void mm::MainWindow::updatePatientTreeView() {
     }
 }
 
-void mm::MainWindow::updatePrescritpionTreeView() {
-    if (selectedPatient == "") {
-        prescriptionListStore->clear();
-        return;
-    }
+void mm::MainWindow::updatePrescriptionTreeView() {
+    Gtk::TreeView *patientTreeView;
+    RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
+    auto sel = patientTreeView->get_selection()->get_selected();
+
+    if (not sel) return;
+
+    Glib::ustring patientId = static_cast<Glib::ustring>((*sel)[model::Patient::patientTreeModel.health_code]);
     model::Patient patient;
     std::vector<model::Prescription> prescriptions;
 
     try {
-        DBMaster::get_instance().extract_from_db(patient, selectedPatient);
+        DBMaster::get_instance().extract_from_db(patient, static_cast<std::string>(patientId));
     } catch (record_not_found_error &e) {
         throw std::runtime_error("cannot get the Patient from the db...");
     }
@@ -161,4 +164,8 @@ void mm::MainWindow::updatePrescritpionTreeView() {
             row = *(prescriptionListStore->append()++);
     }
 
+}
+
+void mm::MainWindow::onSelectedPatient(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *) {
+    updatePrescriptionTreeView();
 }
