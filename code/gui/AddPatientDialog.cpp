@@ -12,7 +12,6 @@
 
 mm::AddPatientDialog::AddPatientDialog() {
     is_active = true;
-
     auto refBuilder = RefBuilder::get_instance();
 
     Gtk::Button *ok_button;
@@ -21,7 +20,6 @@ mm::AddPatientDialog::AddPatientDialog() {
     Gtk::Entry *first_name;
     Gtk::Entry *last_name;
     Gtk::Entry *fiscal_code;
-    Gtk::Entry *health_code;
     Gtk::Entry *street;
     Gtk::Entry *civic;
     Gtk::Entry *zip_code;
@@ -36,7 +34,6 @@ mm::AddPatientDialog::AddPatientDialog() {
     refBuilder.get_widget("addFirstName", first_name);
     refBuilder.get_widget("addLastName", last_name);
     refBuilder.get_widget("addFiscalCode", fiscal_code);
-    refBuilder.get_widget("addHealthCode", health_code);
     refBuilder.get_widget("addBirthCity", birth_city);
     refBuilder.get_widget("addBirthCountry", birth_country);
     refBuilder.get_widget("addStreetAddress", street);
@@ -112,7 +109,7 @@ void mm::AddPatientDialog::birthDateChanged() {
 
     date = util::Date(day, month, year);
 
-    log->info("[AddPatientDialog] Validating date: {}", date.get_text());
+    //log->info("[AddPatientDialog] Validating date: {}", date.get_text());
 
     if (!date.is_valid()) {
         if ((date.day >= 29 && date.day <= 31) && date.month == 2) {
@@ -144,7 +141,6 @@ void mm::AddPatientDialog::okHandler() {
     Gtk::Entry *first_name;
     Gtk::Entry *last_name;
     Gtk::Entry *fiscal_code;
-    Gtk::Entry *health_code;
     Gtk::Entry *street;
     Gtk::Entry *civic;
     Gtk::Entry *zip_code;
@@ -159,7 +155,6 @@ void mm::AddPatientDialog::okHandler() {
     refBuilder.get_widget("addFirstName", first_name);
     refBuilder.get_widget("addLastName", last_name);
     refBuilder.get_widget("addFiscalCode", fiscal_code);
-    refBuilder.get_widget("addHealthCode", health_code);
     refBuilder.get_widget("addBirthCity", birth_city);
     refBuilder.get_widget("addBirthCountry", birth_country);
     refBuilder.get_widget("addStreetAddress", street);
@@ -224,7 +219,6 @@ void mm::AddPatientDialog::reset() {
     Gtk::Entry *first_name;
     Gtk::Entry *last_name;
     Gtk::Entry *fiscal_code;
-    Gtk::Entry *health_code;
     Gtk::Entry *street;
     Gtk::Entry *civic;
     Gtk::Entry *zip_code;
@@ -241,7 +235,6 @@ void mm::AddPatientDialog::reset() {
     refBuilder.get_widget("addFirstName", first_name);
     refBuilder.get_widget("addLastName", last_name);
     refBuilder.get_widget("addFiscalCode", fiscal_code);
-    refBuilder.get_widget("addHealthCode", health_code);
     refBuilder.get_widget("addBirthCity", birth_city);
     refBuilder.get_widget("addBirthCountry", birth_country);
     refBuilder.get_widget("addStreetAddress", street);
@@ -268,7 +261,6 @@ void mm::AddPatientDialog::reset() {
     first_name->set_text("");
     last_name->set_text("");
     fiscal_code->set_text("");
-    health_code->set_text("");
     street->set_text("");
     civic->set_text("");
     zip_code->set_text("");
