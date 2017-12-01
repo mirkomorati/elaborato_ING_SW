@@ -34,6 +34,8 @@ namespace mm {
 
             };
 
+            static TreeModel prescriptionTreeModel;
+
         public:
             map<string, Serialized> serialize() const override;
 

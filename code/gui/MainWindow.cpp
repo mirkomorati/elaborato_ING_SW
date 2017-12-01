@@ -23,6 +23,8 @@ bool mm::MainWindow::init() {
     // setting the tree view
 
     Gtk::TreeView *patientTreeView;
+    Gtk::TreeView *prescriptionTreeView;
+    RefBuilder::get_instance().get_widget("prescriptionTreeView", prescriptionTreeView);
     RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
 
     patientTreeView->append_column("Nome", model::Patient::patientTreeModel.first_name);
@@ -34,7 +36,25 @@ bool mm::MainWindow::init() {
         patientTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
     }
 
+    prescriptionTreeView->append_column("Paziente", model::Prescription::prescriptionTreeModel.patient_id);
+    prescriptionTreeView->append_column("ID", model::Prescription::prescriptionTreeModel.prescription_id);
+    prescriptionTreeView->append_column("Data Emissione", model::Prescription::prescriptionTreeModel.issue_date);
+    prescriptionTreeView->append_column("Data Scadenza", model::Prescription::prescriptionTreeModel.expire_date);
+    prescriptionTreeView->append_column("Farmaci", model::Prescription::prescriptionTreeModel.drug_ids);
+    prescriptionTreeView->append_column("Interazioni",
+                                        model::Prescription::prescriptionTreeModel.negative_interactions);
+    prescriptionTreeView->append_column("Usata", model::Prescription::prescriptionTreeModel.used);
 
+    for (int i = 0; i < 7; i++) {
+        prescriptionTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
+        prescriptionTreeView->get_column(i)->set_min_width(100);
+        prescriptionTreeView->get_column(i)->set_resizable(true);
+        prescriptionTreeView->get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
+        prescriptionTreeView->get_column_cell_renderer(i)->set_property("ellipsize",
+                                                                        Pango::EllipsizeMode::ELLIPSIZE_END);
+    }
+
+    prescriptionTreeView->set_model(prescriptionListStore);
 
     // updating the view for the first time
 
@@ -51,18 +71,22 @@ mm::WindowName mm::MainWindow::getNextWindow() const {
     return next;
 }
 
-mm::MainWindow::MainWindow() : next(MAIN),
-                               patientListStore(Gtk::ListStore::create(model::Patient::patientTreeModel)) {}
+mm::MainWindow::MainWindow() :
+        next(MAIN),
+        patientListStore(Gtk::ListStore::create(model::Patient::patientTreeModel)),
+        prescriptionListStore(Gtk::ListStore::create(model::Prescription::prescriptionTreeModel)),
+        selectedPatient("") {}
 
 void mm::MainWindow::update() {
     for (auto it = dialogList.begin(); it != dialogList.end(); ++it)
         if (not(*it)->isActive()) dialogList.erase(it);
 
     updatePatientTreeView();
+    updatePrescritpionTreeView();
 }
 
 void mm::MainWindow::onAddPrescriptionClicked() {
-
+    // todo
 }
 
 void mm::MainWindow::onAddPatientClicked() {
@@ -105,5 +129,36 @@ void mm::MainWindow::updatePatientTreeView() {
 }
 
 void mm::MainWindow::updatePrescritpionTreeView() {
+    if (selectedPatient == "") {
+        prescriptionListStore->clear();
+        return;
+    }
+    model::Patient patient;
+    std::vector<model::Prescription> prescriptions;
+
+    try {
+        DBMaster::get_instance().extract_from_db(patient, selectedPatient);
+    } catch (record_not_found_error &e) {
+        throw std::runtime_error("cannot get the Patient from the db...");
+    }
+
+    prescriptions = patient.get_prescriptions();
+
+    prescriptionListStore->clear();
+    auto row = *prescriptionListStore->append();
+
+    for (size_t i = 0; i < prescriptions.size(); i++) {
+        row[model::Prescription::prescriptionTreeModel.patient_id] = std::to_string(prescriptions[i].get_patient_id());
+        row[model::Prescription::prescriptionTreeModel.prescription_id] = std::to_string(
+                prescriptions[i].get_prescription_id());
+        row[model::Prescription::prescriptionTreeModel.issue_date] = prescriptions[i].get_issue_date();
+        row[model::Prescription::prescriptionTreeModel.expire_date] = prescriptions[i].get_expire_date();
+        row[model::Prescription::prescriptionTreeModel.drug_ids] = prescriptions[i].get_drug_ids_as_string();
+        row[model::Prescription::prescriptionTreeModel.negative_interactions] = prescriptions[i].get_negative_interactions();
+        row[model::Prescription::prescriptionTreeModel.used] = prescriptions[i].is_used() ? "si" : "no";
+
+        if (i < prescriptions.size() - 1)
+            row = *(prescriptionListStore->append()++);
+    }
 
 }

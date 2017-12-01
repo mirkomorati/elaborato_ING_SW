@@ -9,6 +9,8 @@
 #include "Prescription.hpp"
 #include "../DBMaster.hpp"
 
+mm::model::Prescription::TreeModel mm::model::Prescription::prescriptionTreeModel;
+
 std::map<std::string, mm::Serialized> mm::model::Prescription::serialize() const {
     map<string, Serialized> serialized_map;
     serialized_map["patient_id"] = patient_id;

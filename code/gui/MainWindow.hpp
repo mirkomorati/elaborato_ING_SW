@@ -17,6 +17,11 @@ namespace mm {
 
         //-------------------List stores-------------------//
         Glib::RefPtr<Gtk::ListStore> patientListStore;
+        Glib::RefPtr<Gtk::ListStore> prescriptionListStore;
+
+        //-------------------Communication between handlers-------------------//
+        std::string selectedPatient; // todo questa non serve posso ottenerla dalla treeView.
+
     public:
         MainWindow();
 
@@ -29,10 +34,12 @@ namespace mm {
         void update() override;
 
     private:
-        //-------------------singal handlers-------------------//
+        //-------------------signal handlers-------------------//
         void onAddPatientClicked();
 
         void onAddPrescriptionClicked();
+
+        void onSelectedPatient(const Gtk::TreeModel::Path &path, Gtk::TreeViewColumn *column);
 
         //-------------------graphics updates-------------------//
 
