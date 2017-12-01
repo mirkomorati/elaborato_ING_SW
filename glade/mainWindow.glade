@@ -1304,7 +1304,6 @@ Morati Mirko</property>
                       <object class="GtkEntry" id="addCountry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="hexpand">True</property>
                         <property name="width_chars">4</property>
                       </object>
                       <packing>

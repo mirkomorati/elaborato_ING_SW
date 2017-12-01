@@ -5,8 +5,8 @@
 #ifndef ELABORATO_ING_SW_ADDPATIENTDIALOG_HPP
 #define ELABORATO_ING_SW_ADDPATIENTDIALOG_HPP
 
+#include <gtkmm/entry.h>
 #include "Dialog.hpp"
-#include <sigc++-2.0/sigc++/sigc++.h>
 
 namespace mm {
     class AddPatientDialog : public Dialog {
@@ -19,7 +19,10 @@ namespace mm {
 
         virtual ~AddPatientDialog();
 
+        void reset() override;
+
     private:
+
         void dispose() override;
 
         void birthDateChanged();
@@ -27,6 +30,8 @@ namespace mm {
         void okHandler();
 
         void cancelHandler();
+
+        void entryTextChanged(const Glib::ustring &text, int *pos, Gtk::Entry *entry);
 
         bool is_active;
     };

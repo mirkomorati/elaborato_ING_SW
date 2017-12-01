@@ -14,6 +14,7 @@ namespace mm {
         virtual void show() = 0; // it shows the dialog
         virtual void dispose() = 0; // close the dialog
         virtual bool isActive() = 0; // it return false if the dialog may be destructed
+        virtual void reset() = 0; // reset dialog content
     };
 }
 
