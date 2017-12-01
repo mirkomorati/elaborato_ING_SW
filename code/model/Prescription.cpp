@@ -140,6 +140,21 @@ const vector<pair<string, string>> &mm::model::Prescription::get_drug_ids() cons
     return drug_ids;
 }
 
+const vector<mm::model::Drug> mm::model::Prescription::get_drugs() const {
+    vector<Drug> toReturn;
+
+    for (auto ids : drug_ids) {
+        try {
+            Drug tmp;
+            DBMaster::get_instance().extract_from_db(tmp, {ids.first, ids.second});
+            toReturn.push_back(std::move(tmp));
+        } catch (record_not_found_error &e) {
+            throw std::runtime_error("cannot get drug of a prescription");
+        }
+    }
+    return toReturn;
+}
+
 mm::model::Prescription::TreeModel::TreeModel() {
     add(patient_id);
     add(issue_date);

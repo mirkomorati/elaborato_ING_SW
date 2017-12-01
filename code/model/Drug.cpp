@@ -9,6 +9,7 @@
 #include <iomanip>
 #include "Drug.hpp"
 
+mm::model::Drug::TreeModel mm::model::Drug::drugTreeModel;
 
 map<string, mm::Serialized> mm::model::Drug::serialize() const {
     map<string, mm::Serialized> map;

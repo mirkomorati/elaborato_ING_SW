@@ -13,17 +13,20 @@
 bool mm::MainWindow::init() {
     Gtk::TreeView *patientTreeView;
     Gtk::TreeView *prescriptionTreeView;
+    Gtk::TreeView *drugTreeView;
     Gtk::ToolButton *add_patient_button;
     Gtk::ToolButton *add_prescription_button;
 
     RefBuilder::get_instance().get_widget("prescriptionTreeView", prescriptionTreeView);
     RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
+    RefBuilder::get_instance().get_widget("drugTreeView", drugTreeView);
     RefBuilder::get_instance().get_widget("addPatient", add_patient_button);
     RefBuilder::get_instance().get_widget("addPrescription", add_prescription_button);
 
     add_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPatientClicked));
     add_prescription_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPrescriptionClicked));
     patientTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPatient));
+    prescriptionTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPrescription));
 
 
     // setting the tree view
@@ -56,6 +59,25 @@ bool mm::MainWindow::init() {
 
     prescriptionTreeView->set_model(prescriptionListStore);
 
+
+    drugTreeView->remove_all_columns();
+
+    drugTreeView->append_column("Nome", model::Drug::drugTreeModel.name);
+    drugTreeView->append_column("Forma Farmaceutica", model::Drug::drugTreeModel.pharmaceutical_form);
+    drugTreeView->append_column("Classificazione ATC", model::Drug::drugTreeModel.ATC_classification);
+    drugTreeView->append_column("Controindicazioni", model::Drug::drugTreeModel.contraindications);
+    drugTreeView->append_column("Principi Attivi", model::Drug::drugTreeModel.active_principles);
+    drugTreeView->append_column("Prezzo", model::Drug::drugTreeModel.price);
+
+    for (int i = 0; i < 6; i++) {
+        drugTreeView->get_column(i)->set_min_width(100);
+        drugTreeView->get_column(i)->set_resizable(true);
+        drugTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
+        drugTreeView->get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
+        drugTreeView->get_column_cell_renderer(i)->set_property("ellipsize", Pango::EllipsizeMode::ELLIPSIZE_END);
+    }
+
+    drugTreeView->set_model(drugListStore);
     // updating the view for the first time
 
     updatePatientTreeView();
@@ -75,7 +97,7 @@ mm::MainWindow::MainWindow() :
         next(MAIN),
         patientListStore(Gtk::ListStore::create(model::Patient::patientTreeModel)),
         prescriptionListStore(Gtk::ListStore::create(model::Prescription::prescriptionTreeModel)),
-        selectedPatient("") {}
+        drugListStore(Gtk::ListStore::create(model::Drug::drugTreeModel)) {}
 
 void mm::MainWindow::update() {
     for (auto it = dialogList.begin(); it != dialogList.end(); ++it)
@@ -168,4 +190,45 @@ void mm::MainWindow::updatePrescriptionTreeView() {
 
 void mm::MainWindow::onSelectedPatient(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *) {
     updatePrescriptionTreeView();
+}
+
+void mm::MainWindow::updateDrugTreeView() {
+    Gtk::TreeView *prescriptionTreeView;
+    RefBuilder::get_instance().get_widget("prescriptionTreeView", prescriptionTreeView);
+    auto sel = prescriptionTreeView->get_selection()->get_selected();
+
+    if (not sel) return;
+
+    Glib::ustring prescriptionId = static_cast<Glib::ustring>((*sel)[model::Prescription::prescriptionTreeModel.prescription_id]);
+    model::Prescription prescription;
+    std::vector<model::Drug> drugs;
+
+    try {
+        DBMaster::get_instance().extract_from_db(prescription, static_cast<std::string>(prescriptionId));
+    } catch (record_not_found_error &e) {
+        throw std::runtime_error("cannot get the prescription from the db...");
+    }
+
+    drugs = prescription.get_drugs();
+
+    drugListStore->clear();
+    auto row = *drugListStore->append();
+
+    for (size_t i = 0; i < drugs.size(); i++) {
+        row[model::Drug::drugTreeModel.name] = drugs[i].get_name();
+        row[model::Drug::drugTreeModel.pharmaceutical_form] = drugs[i].get_pharmaceutical_form();
+        row[model::Drug::drugTreeModel.ATC_classification] = drugs[i].get_ATC_classification();
+        row[model::Drug::drugTreeModel.contraindications] = drugs[i].get_contraindications_as_string();
+        row[model::Drug::drugTreeModel.active_principles] = drugs[i].get_active_principles_as_string();
+        row[model::Drug::drugTreeModel.price] = drugs[i].get_price_as_string();
+
+        if (i < drugs.size() - 1)
+            row = *(drugListStore->append()++);
+    }
+
+
+}
+
+void mm::MainWindow::onSelectedPrescription(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *) {
+    updateDrugTreeView();
 }
