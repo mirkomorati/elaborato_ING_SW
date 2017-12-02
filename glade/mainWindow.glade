@@ -1162,7 +1162,7 @@ Morati Mirko</property>
                       <object class="GtkEntry" id="addBirthCountry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="hexpand">True</property>
+                        <property name="max_length">2</property>
                         <property name="width_chars">4</property>
                       </object>
                       <packing>
@@ -1263,6 +1263,7 @@ Morati Mirko</property>
                       <object class="GtkEntry" id="addZipCode">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="max_length">5</property>
                         <property name="width_chars">5</property>
                         <property name="input_purpose">digits</property>
                       </object>
@@ -1319,6 +1320,7 @@ Morati Mirko</property>
                       <object class="GtkEntry" id="addCountry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="max_length">2</property>
                         <property name="width_chars">4</property>
                       </object>
                       <packing>
@@ -1629,11 +1631,45 @@ Morati Mirko</property>
               </packing>
             </child>
             <child>
-              <object class="GtkEntry" id="addIssueDate">
+              <object class="GtkGrid">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="editable">False</property>
-                <property name="width_chars">10</property>
+                <child>
+                  <object class="GtkComboBoxText" id="addIssueDateDay">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="addIssueDateMonth">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="addIssueDateYear">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -1641,11 +1677,45 @@ Morati Mirko</property>
               </packing>
             </child>
             <child>
-              <object class="GtkEntry" id="addExpireDate">
+              <object class="GtkGrid">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="editable">False</property>
-                <property name="width_chars">10</property>
+                <child>
+                  <object class="GtkComboBoxText" id="addExpireDateDay">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="addExpireDateMonth">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="addExpireDateYear">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="active">1</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
               </object>
               <packing>
                 <property name="left_attach">1</property>

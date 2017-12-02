@@ -14,23 +14,6 @@ mm::AddPatientDialog::AddPatientDialog() {
     is_active = true;
     auto refBuilder = RefBuilder::get_instance();
 
-    Gtk::Button *ok_button;
-    Gtk::Button *cancel_button;
-
-    Gtk::Entry *first_name;
-    Gtk::Entry *last_name;
-    Gtk::Entry *fiscal_code;
-    Gtk::Entry *street;
-    Gtk::Entry *civic;
-    Gtk::Entry *zip_code;
-    Gtk::Entry *city;
-    Gtk::Entry *country;
-    Gtk::Entry *birth_city;
-    Gtk::Entry *birth_country;
-    Gtk::ComboBoxText *add_birth_day;
-    Gtk::ComboBoxText *add_birth_month;
-    Gtk::ComboBoxText *add_birth_year;
-
     refBuilder.get_widget("addFirstName", first_name);
     refBuilder.get_widget("addLastName", last_name);
     refBuilder.get_widget("addFiscalCode", fiscal_code);
@@ -47,6 +30,8 @@ mm::AddPatientDialog::AddPatientDialog() {
 
     refBuilder.get_widget("addPatientOk", ok_button);
     refBuilder.get_widget("addPatientCancel", cancel_button);
+
+    reset();
 
     first_name->signal_insert_text().connect(
             sigc::bind(sigc::mem_fun(this, &mm::AddPatientDialog::entryTextChanged), first_name));
@@ -71,8 +56,6 @@ mm::AddPatientDialog::AddPatientDialog() {
     add_birth_year->signal_changed().connect(sigc::mem_fun(this, &mm::AddPatientDialog::birthDateChanged));
     ok_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPatientDialog::okHandler));
     cancel_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPatientDialog::cancelHandler));
-
-    reset();
 }
 
 void mm::AddPatientDialog::show() {
@@ -89,15 +72,8 @@ bool mm::AddPatientDialog::isActive() {
 void mm::AddPatientDialog::birthDateChanged() {
     auto log = spdlog::get("out");
 
-    Gtk::ComboBoxText *add_birth_day;
-    Gtk::ComboBoxText *add_birth_month;
-    Gtk::ComboBoxText *add_birth_year;
     util::Date date;
     int day, month, year;
-
-    RefBuilder::get_instance().get_widget("addBirthDateDay", add_birth_day);
-    RefBuilder::get_instance().get_widget("addBirthDateMonth", add_birth_month);
-    RefBuilder::get_instance().get_widget("addBirthDateYear", add_birth_year);
 
     try {
         day = std::stoi(add_birth_day->get_active_text().c_str());
@@ -137,34 +113,6 @@ void mm::AddPatientDialog::okHandler() {
     stringstream birth_address;
     stringstream birth_date;
     auto refBuilder = RefBuilder::get_instance();
-
-    Gtk::Entry *first_name;
-    Gtk::Entry *last_name;
-    Gtk::Entry *fiscal_code;
-    Gtk::Entry *street;
-    Gtk::Entry *civic;
-    Gtk::Entry *zip_code;
-    Gtk::Entry *city;
-    Gtk::Entry *country;
-    Gtk::Entry *birth_city;
-    Gtk::Entry *birth_country;
-    Gtk::ComboBoxText *add_birth_day;
-    Gtk::ComboBoxText *add_birth_month;
-    Gtk::ComboBoxText *add_birth_year;
-
-    refBuilder.get_widget("addFirstName", first_name);
-    refBuilder.get_widget("addLastName", last_name);
-    refBuilder.get_widget("addFiscalCode", fiscal_code);
-    refBuilder.get_widget("addBirthCity", birth_city);
-    refBuilder.get_widget("addBirthCountry", birth_country);
-    refBuilder.get_widget("addStreetAddress", street);
-    refBuilder.get_widget("addCivic", civic);
-    refBuilder.get_widget("addZipCode", zip_code);
-    refBuilder.get_widget("addCity", city);
-    refBuilder.get_widget("addCountry", country);
-    refBuilder.get_widget("addBirthDateDay", add_birth_day);
-    refBuilder.get_widget("addBirthDateMonth", add_birth_month);
-    refBuilder.get_widget("addBirthDateYear", add_birth_year);
 
     patient.set_first_name(first_name->get_text());
     patient.set_last_name(last_name->get_text());
@@ -216,35 +164,7 @@ void mm::AddPatientDialog::reset() {
     auto log = spdlog::get("out");
     auto refBuilder = RefBuilder::get_instance();
 
-    Gtk::Entry *first_name;
-    Gtk::Entry *last_name;
-    Gtk::Entry *fiscal_code;
-    Gtk::Entry *street;
-    Gtk::Entry *civic;
-    Gtk::Entry *zip_code;
-    Gtk::Entry *city;
-    Gtk::Entry *country;
-    Gtk::Entry *birth_city;
-    Gtk::Entry *birth_country;
-    Gtk::ComboBoxText *add_birth_day;
-    Gtk::ComboBoxText *add_birth_month;
-    Gtk::ComboBoxText *add_birth_year;
-
     log->info("[AddPatientDialog] Resetting");
-
-    refBuilder.get_widget("addFirstName", first_name);
-    refBuilder.get_widget("addLastName", last_name);
-    refBuilder.get_widget("addFiscalCode", fiscal_code);
-    refBuilder.get_widget("addBirthCity", birth_city);
-    refBuilder.get_widget("addBirthCountry", birth_country);
-    refBuilder.get_widget("addStreetAddress", street);
-    refBuilder.get_widget("addCivic", civic);
-    refBuilder.get_widget("addZipCode", zip_code);
-    refBuilder.get_widget("addCity", city);
-    refBuilder.get_widget("addCountry", country);
-    refBuilder.get_widget("addBirthDateDay", add_birth_day);
-    refBuilder.get_widget("addBirthDateMonth", add_birth_month);
-    refBuilder.get_widget("addBirthDateYear", add_birth_year);
 
     for (int i = 1; i <= 31; i++)
         add_birth_day->append(Glib::ustring::format(i));
