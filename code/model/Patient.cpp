@@ -138,7 +138,7 @@ bool mm::model::Patient::operator!=(const mm::model::Patient &rhs) const {
 bool mm::model::Patient::is_valid() {
     return !first_name.empty()
            && !last_name.empty()
-           && !fiscalCodeIsValid()
+           && !fiscal_code.empty() // todo use fiscalCodeIsValid() for now it does not work.
            && !birth_date.empty()
            && !birth_place.empty()
            && !address.empty()

@@ -9,18 +9,18 @@
 #include <gtkmm/entry.h>
 
 namespace mm {
-    struct EntryController {
-        EntryController();
+    struct EntryController : public sigc::trackable {
+        EntryController() = delete;
 
-        EntryController(Gtk::Entry *entry);
+        EntryController(const std::string &entryId);
 
         void entryTextChanged(const Glib::ustring &text, int *pos);
 
         Gtk::Entry *entry;
     };
 
-    struct DateController {
-
+    struct DateController : public sigc::trackable {
+        // todo usare lo stesso metodo della EntryController
     };
 }
 

@@ -10,31 +10,19 @@
 #include "../model/Authentication.hpp"
 #include "../utils/Date.hpp"
 
-mm::AddPatientDialog::AddPatientDialog() {
+mm::AddPatientDialog::AddPatientDialog() :
+        first_name("addFirstName"),
+        last_name("addLastName"),
+        fiscal_code("addFiscalCode"),
+        street("addStreetAddress"),
+        civic("addCivic"),
+        zip_code("addZipCode"),
+        city("addCity"),
+        country("addCountry"),
+        birth_city("addBirthCity"),
+        birth_country("addBirthCountry") {
     is_active = true;
     auto refBuilder = RefBuilder::get_instance();
-
-    Gtk::Entry *entry;
-    refBuilder.get_widget("addFirstName", entry);
-    first_name = EntryController(entry);
-    refBuilder.get_widget("addLastName", entry);
-    last_name = EntryController(entry);
-    refBuilder.get_widget("addFiscalCode", entry);
-    fiscal_code = EntryController(entry);
-    refBuilder.get_widget("addBirthCity", entry);
-    birth_city = EntryController(entry);
-    refBuilder.get_widget("addBirthCountry", entry);
-    birth_country = EntryController(entry);
-    refBuilder.get_widget("addStreetAddress", entry);
-    street = EntryController(entry);
-    refBuilder.get_widget("addCivic", entry);
-    civic = EntryController(entry);
-    refBuilder.get_widget("addZipCode", entry);
-    zip_code = EntryController(entry);
-    refBuilder.get_widget("addCity", entry);
-    city = EntryController(entry);
-    refBuilder.get_widget("addCountry", entry);
-    country = EntryController(entry);
 
     refBuilder.get_widget("addBirthDateDay", add_birth_day);
     refBuilder.get_widget("addBirthDateMonth", add_birth_month);

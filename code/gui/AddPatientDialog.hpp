@@ -20,7 +20,7 @@ namespace mm {
 
         bool isActive() override;
 
-        virtual ~AddPatientDialog();
+        ~AddPatientDialog() override;
 
         void reset() override;
 

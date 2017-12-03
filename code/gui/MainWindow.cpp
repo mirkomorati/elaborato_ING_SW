@@ -98,12 +98,16 @@ void mm::MainWindow::updatePrescriptionTreeView() {
     try {
         DBMaster::get_instance().extract_from_db(patient, patientId.c_str());
     } catch (record_not_found_error &e) {
-        throw std::runtime_error("cannot get the Patient from the db...");
+        prescriptionListStore->clear();
+        return;
     }
 
     prescriptions = patient.get_prescriptions();
 
     prescriptionListStore->clear();
+
+    if (prescriptions.empty()) return;
+
     auto row = *prescriptionListStore->append();
 
     for (size_t i = 0; i < prescriptions.size(); i++) {
@@ -144,7 +148,8 @@ void mm::MainWindow::updateDrugTreeView() {
     try {
         DBMaster::get_instance().extract_from_db(prescription, prescriptionId.c_str());
     } catch (record_not_found_error &e) {
-        throw std::runtime_error("cannot get the prescription from the db...");
+        drugListStore->clear();
+        return;
     }
 
     drugs = prescription.get_drugs();
