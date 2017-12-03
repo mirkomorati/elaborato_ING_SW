@@ -14,6 +14,7 @@ endif (${CMAKE_BUILD_TYPE} MATCHES Debug)
 
 find_package(PkgConfig REQUIRED)
 find_package(SQLite3 REQUIRED)
+find_package(FMT REQUIRED)
 
 pkg_check_modules(GTKMM REQUIRED gtkmm-3.0)
 
@@ -56,5 +57,6 @@ endif (APPLE)
 
 target_link_libraries(med-h ${GTKMM_LDFLAGS})
 target_link_libraries(med-h ${SQLITE3_LIBRARIES})
+target_link_libraries(med-h fmt)
 
 
