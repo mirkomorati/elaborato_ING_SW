@@ -3,6 +3,7 @@
 //
 
 #include <gtkmm/button.h>
+#include <fmt/format.h>
 #include "MainWindow.hpp"
 #include "../RefBuilder.hpp"
 #include "AddPatientDialog.hpp"
@@ -16,17 +17,20 @@ bool mm::MainWindow::init() {
     Gtk::TreeView *drugTreeView;
     Gtk::ToolButton *add_patient_button;
     Gtk::ToolButton *add_prescription_button;
+    Gtk::ToolButton *remove_patient_button;
 
     RefBuilder::get_instance().get_widget("prescriptionTreeView", prescriptionTreeView);
     RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
     RefBuilder::get_instance().get_widget("drugTreeView", drugTreeView);
     RefBuilder::get_instance().get_widget("addPatient", add_patient_button);
     RefBuilder::get_instance().get_widget("addPrescription", add_prescription_button);
+    RefBuilder::get_instance().get_widget("removePatient", remove_patient_button);
 
     add_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPatientClicked));
     add_prescription_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPrescriptionClicked));
     patientTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPatient));
     prescriptionTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPrescription));
+    remove_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onRemovePatientClicked));
 
 
     // setting the tree view
@@ -278,4 +282,49 @@ void mm::MainWindow::updatePatientDetailsView() {
     birth_date->set_label(patient.get_birth_date());
     birth_place->set_label(patient.get_birth_place());
     address->set_label(patient.get_address());
+}
+
+void mm::MainWindow::onRemovePatientClicked() {
+    Gtk::Window *mainWindow;
+    Gtk::TreeView *patientTreeView;
+    model::Patient patient;
+
+    RefBuilder::get_instance().get_widget("mainWindow", mainWindow);
+    RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
+
+    auto sel = patientTreeView->get_selection()->get_selected();
+
+    if (not sel) {
+        // todo msgbox info
+        return;
+    }
+
+    Glib::ustring patientId = static_cast<Glib::ustring>((*sel)[model::Patient::patientTreeModel.fiscal_code]);
+
+    try {
+        DBMaster::get_instance().extract_from_db(patient, patientId.c_str());
+    } catch (record_not_found_error &e) {
+        throw std::runtime_error("cannot get the Patient from the db...");
+    }
+
+    Gtk::MessageDialog confirm(*mainWindow,
+                               "Conferma di voler eliminare il paziente?",
+                               false, Gtk::MESSAGE_QUESTION, Gtk::BUTTONS_OK_CANCEL);
+
+    confirm.set_secondary_text(
+            fmt::format("Conferma di voler rimuovere il paziente:\n{} {} cod. fiscale: {} dal database?",
+                        patient.get_first_name(), patient.get_last_name(),
+                        patient.get_fiscal_code()));
+
+    auto result = confirm.run();
+
+    if (result == Gtk::RESPONSE_OK) {
+        try {
+            DBMaster::get_instance().remove_from_db(patient);
+        } catch (...) {
+            // TODO send msg box error
+        }
+
+        updatePatientTreeView();
+    }
 }

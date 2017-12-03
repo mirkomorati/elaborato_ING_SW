@@ -42,6 +42,8 @@ namespace mm {
 
         void onSelectedPrescription(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *);
 
+        void onRemovePatientClicked();
+
         //-------------------graphics updates-------------------//
 
         void updatePatientTreeView();
