@@ -83,7 +83,6 @@ void mm::MedH::update() {
             RefBuilder::get_instance().get_widget("mainStack", stack);
             stack->set_visible_child("loginGrid");
             window.reset(new LoginWindow);
-            window->init();
             window->attach(this);*/
             break;
         }

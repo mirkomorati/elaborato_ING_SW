@@ -33,6 +33,12 @@ namespace mm {
         void update() override;
 
     private:
+        //-------------------init functions-------------------//
+
+        void initHandlers();
+
+        void initTreeViews();
+
         //-------------------signal handlers-------------------//
         void onAddPatientClicked();
 
