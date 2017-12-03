@@ -28,13 +28,9 @@ namespace mm {
 
         void dispose() override;
 
-        void birthDateChanged();
-
         void okHandler();
 
         void cancelHandler();
-
-        void entryTextChanged(const Glib::ustring &text, int *pos, Gtk::Entry *entry);
 
         bool is_active;
 
@@ -51,9 +47,8 @@ namespace mm {
         EntryController country;
         EntryController birth_city;
         EntryController birth_country;
-        Gtk::ComboBoxText *add_birth_day;
-        Gtk::ComboBoxText *add_birth_month;
-        Gtk::ComboBoxText *add_birth_year;
+        EntryController riskFactors;
+        DateController birthDate;
     };
 }
 
