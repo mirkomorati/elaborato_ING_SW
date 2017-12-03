@@ -50,6 +50,8 @@ namespace mm {
 
         void updateDrugTreeView();
 
+        void updatePatientDetailsView();
+
     };
 }
 

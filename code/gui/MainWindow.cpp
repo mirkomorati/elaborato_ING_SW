@@ -146,6 +146,8 @@ void mm::MainWindow::updatePatientTreeView() {
         if (i < patients.size() - 1)
             row = *(patientListStore->append()++);
     }
+    updatePrescriptionTreeView();
+    updatePatientDetailsView();
 }
 
 void mm::MainWindow::updatePrescriptionTreeView() {
@@ -153,14 +155,18 @@ void mm::MainWindow::updatePrescriptionTreeView() {
     RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
     auto sel = patientTreeView->get_selection()->get_selected();
 
-    if (not sel) return;
+    if (not sel) {
+        prescriptionListStore->clear();
+        updateDrugTreeView();
+        return;
+    }
 
     Glib::ustring patientId = static_cast<Glib::ustring>((*sel)[model::Patient::patientTreeModel.fiscal_code]);
     model::Patient patient;
     std::vector<model::Prescription> prescriptions;
 
     try {
-        DBMaster::get_instance().extract_from_db(patient, static_cast<std::string>(patientId));
+        DBMaster::get_instance().extract_from_db(patient, patientId.c_str());
     } catch (record_not_found_error &e) {
         throw std::runtime_error("cannot get the Patient from the db...");
     }
@@ -183,11 +189,12 @@ void mm::MainWindow::updatePrescriptionTreeView() {
         if (i < prescriptions.size() - 1)
             row = *(prescriptionListStore->append()++);
     }
-
+    updateDrugTreeView();
 }
 
 void mm::MainWindow::onSelectedPatient(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *) {
     updatePrescriptionTreeView();
+    updatePatientDetailsView();
 }
 
 void mm::MainWindow::updateDrugTreeView() {
@@ -195,14 +202,17 @@ void mm::MainWindow::updateDrugTreeView() {
     RefBuilder::get_instance().get_widget("prescriptionTreeView", prescriptionTreeView);
     auto sel = prescriptionTreeView->get_selection()->get_selected();
 
-    if (not sel) return;
+    if (not sel) {
+        drugListStore->clear();
+        return;
+    }
 
     Glib::ustring prescriptionId = static_cast<Glib::ustring>((*sel)[model::Prescription::prescriptionTreeModel.prescription_id]);
     model::Prescription prescription;
     std::vector<model::Drug> drugs;
 
     try {
-        DBMaster::get_instance().extract_from_db(prescription, static_cast<std::string>(prescriptionId));
+        DBMaster::get_instance().extract_from_db(prescription, prescriptionId.c_str());
     } catch (record_not_found_error &e) {
         throw std::runtime_error("cannot get the prescription from the db...");
     }
@@ -224,9 +234,48 @@ void mm::MainWindow::updateDrugTreeView() {
             row = *(drugListStore->append()++);
     }
 
-
 }
 
 void mm::MainWindow::onSelectedPrescription(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *) {
     updateDrugTreeView();
+}
+
+void mm::MainWindow::updatePatientDetailsView() {
+    auto &refBuilder = RefBuilder::get_instance();
+    Gtk::TreeView *patientTreeView;
+    Gtk::Label *first_name;
+    Gtk::Label *last_name;
+    Gtk::Label *fiscal_code;
+    Gtk::Label *birth_date;
+    Gtk::Label *birth_place;
+    Gtk::Label *address;
+
+    refBuilder.get_widget("detailFirstName", first_name);
+    refBuilder.get_widget("detailLastName", last_name);
+    refBuilder.get_widget("detailFiscalCode", fiscal_code);
+    refBuilder.get_widget("detailBirthDate", birth_date);
+    refBuilder.get_widget("detailBirthPlace", birth_place);
+    refBuilder.get_widget("detailAddress", address);
+    refBuilder.get_widget("patientTreeView", patientTreeView);
+
+
+    auto sel = patientTreeView->get_selection()->get_selected();
+
+    if (not sel) return;
+
+    Glib::ustring patientId = static_cast<Glib::ustring>((*sel)[model::Patient::patientTreeModel.fiscal_code]);
+    model::Patient patient;
+
+    try {
+        DBMaster::get_instance().extract_from_db(patient, patientId.c_str());
+    } catch (record_not_found_error &e) {
+        throw std::runtime_error("cannot get the Patient from the db...");
+    }
+
+    first_name->set_label(patient.get_first_name());
+    last_name->set_label(patient.get_last_name());
+    fiscal_code->set_label(patient.get_fiscal_code());
+    birth_date->set_label(patient.get_birth_date());
+    birth_place->set_label(patient.get_birth_place());
+    address->set_label(patient.get_address());
 }
