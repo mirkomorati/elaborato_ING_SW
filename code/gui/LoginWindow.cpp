@@ -5,7 +5,7 @@
 #include <gtkmm/entry.h>
 #include <spdlog/spdlog.h>
 #include "LoginWindow.hpp"
-#include "../RefBuilder.hpp"
+#include "RefBuilder.hpp"
 #include "../model/Authentication.hpp"
 
 bool mm::LoginWindow::init() {

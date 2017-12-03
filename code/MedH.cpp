@@ -5,7 +5,7 @@
 #include "MedH.hpp"
 #include "Configuration.hpp"
 #include "DBMaster.hpp"
-#include "RefBuilder.hpp"
+#include "gui/RefBuilder.hpp"
 #include "gui/LoginWindow.hpp"
 #include "gui/MainWindow.hpp"
 #include "model/Authentication.hpp"

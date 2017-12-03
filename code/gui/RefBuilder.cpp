@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include "RefBuilder.hpp"
-#include "Configuration.hpp"
+#include "../Configuration.hpp"
 
 #if !defined(GLADE_FILE_NAME) || !defined(GLADE_CSS_FILE)
 #error "Glade files path not defined! Use -DGLADE_FILE_NAME=file_path and -DGLADE_CSS_FILE=file_path to define them!"

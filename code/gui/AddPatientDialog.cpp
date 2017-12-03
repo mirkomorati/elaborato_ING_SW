@@ -4,7 +4,7 @@
 
 #include <spdlog/spdlog.h>
 #include "AddPatientDialog.hpp"
-#include "../RefBuilder.hpp"
+#include "RefBuilder.hpp"
 #include "../model/Patient.hpp"
 #include "../DBMaster.hpp"
 #include "../model/Authentication.hpp"

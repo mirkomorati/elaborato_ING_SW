@@ -6,7 +6,7 @@
 #include <fmt/format.h>
 #include <spdlog/spdlog.h>
 #include "MainWindow.hpp"
-#include "../RefBuilder.hpp"
+#include "RefBuilder.hpp"
 #include "AddPatientDialog.hpp"
 #include "../model/Doctor.hpp"
 #include "../DBMaster.hpp"

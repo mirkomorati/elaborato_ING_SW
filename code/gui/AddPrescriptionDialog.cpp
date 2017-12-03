@@ -4,7 +4,7 @@
 
 #include <gtkmm/button.h>
 #include "AddPrescriptionDialog.hpp"
-#include "../RefBuilder.hpp"
+#include "RefBuilder.hpp"
 
 mm::AddPrescriptionDialog::AddPrescriptionDialog() {
     is_active = true;
