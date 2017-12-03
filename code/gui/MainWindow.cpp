@@ -13,6 +13,106 @@
 #include "../model/Authentication.hpp"
 #include "AddPrescriptionDialog.hpp"
 
+void mm::MainWindow::initHandlers() {
+    auto refBuilder = RefBuilder::get_instance();
+
+    Gtk::TreeView *patientTreeView;
+    Gtk::TreeView *prescriptionTreeView;
+    Gtk::TreeView *drugTreeView;
+    Gtk::ToolButton *add_patient_button;
+    Gtk::ToolButton *add_prescription_button;
+    Gtk::ToolButton *remove_patient_button;
+    Gtk::MenuItem *logoutMenuItem;
+
+    refBuilder.get_widget("prescriptionTreeView", prescriptionTreeView);
+    refBuilder.get_widget("patientTreeView", patientTreeView);
+    refBuilder.get_widget("drugTreeView", drugTreeView);
+    refBuilder.get_widget("addPatient", add_patient_button);
+    refBuilder.get_widget("addPrescription", add_prescription_button);
+    refBuilder.get_widget("removePatient", remove_patient_button);
+    refBuilder.get_widget("logoutMenuItem", logoutMenuItem);
+
+    add_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPatientClicked));
+    add_prescription_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPrescriptionClicked));
+    patientTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPatient));
+    prescriptionTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPrescription));
+    remove_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onRemovePatientClicked));
+    logoutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::MainWindow::onLogout));
+}
+
+void mm::MainWindow::initTreeViews() {
+    Gtk::TreeView *patientTreeView;
+    Gtk::TreeView *prescriptionTreeView;
+    Gtk::TreeView *drugTreeView;
+
+    RefBuilder::get_instance().get_widget("prescriptionTreeView", prescriptionTreeView);
+    RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
+    RefBuilder::get_instance().get_widget("drugTreeView", drugTreeView);
+
+    patientTreeView->append_column("Nome", model::Patient::patientTreeModel.first_name);
+    patientTreeView->append_column("Cognome", model::Patient::patientTreeModel.last_name);
+    patientTreeView->append_column("Cod. Fiscale", model::Patient::patientTreeModel.fiscal_code);
+    patientTreeView->set_model(patientListStore);
+
+    for (int i = 0; i <= 2; i++) {
+        patientTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
+    }
+
+    prescriptionTreeView->append_column("Paziente", model::Prescription::prescriptionTreeModel.patient_id);
+    prescriptionTreeView->append_column("ID", model::Prescription::prescriptionTreeModel.prescription_id);
+    prescriptionTreeView->append_column("Data Emissione", model::Prescription::prescriptionTreeModel.issue_date);
+    prescriptionTreeView->append_column("Data Scadenza", model::Prescription::prescriptionTreeModel.expire_date);
+    prescriptionTreeView->append_column("Farmaci", model::Prescription::prescriptionTreeModel.drug_ids);
+    prescriptionTreeView->append_column("Interazioni",
+                                        model::Prescription::prescriptionTreeModel.negative_interactions);
+    prescriptionTreeView->append_column("Usata", model::Prescription::prescriptionTreeModel.used);
+
+    for (int i = 0; i < 7; i++) {
+        prescriptionTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
+        prescriptionTreeView->get_column(i)->set_min_width(100);
+        prescriptionTreeView->get_column(i)->set_resizable(true);
+        prescriptionTreeView->get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
+        prescriptionTreeView->get_column_cell_renderer(i)->set_property("ellipsize",
+                                                                        Pango::EllipsizeMode::ELLIPSIZE_END);
+    }
+
+    prescriptionTreeView->set_model(prescriptionListStore);
+
+
+    drugTreeView->remove_all_columns();
+
+    drugTreeView->append_column("Nome", model::Drug::drugTreeModel.name);
+    drugTreeView->append_column("Forma Farmaceutica", model::Drug::drugTreeModel.pharmaceutical_form);
+    drugTreeView->append_column("Classificazione ATC", model::Drug::drugTreeModel.ATC_classification);
+    drugTreeView->append_column("Controindicazioni", model::Drug::drugTreeModel.contraindications);
+    drugTreeView->append_column("Principi Attivi", model::Drug::drugTreeModel.active_principles);
+    drugTreeView->append_column("Prezzo", model::Drug::drugTreeModel.price);
+
+    for (int i = 0; i < 6; i++) {
+        drugTreeView->get_column(i)->set_min_width(100);
+        drugTreeView->get_column(i)->set_resizable(true);
+        drugTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
+        drugTreeView->get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
+        drugTreeView->get_column_cell_renderer(i)->set_property("ellipsize", Pango::EllipsizeMode::ELLIPSIZE_END);
+    }
+
+    drugTreeView->set_model(drugListStore);
+    // updating the view for the first time
+
+    updatePatientTreeView();
+}
+
+bool mm::MainWindow::init() {
+    Gtk::MenuBar *menuBar;
+    RefBuilder::get_instance().get_widget("menuBar", menuBar);
+    menuBar->set_visible(true);
+
+    initHandlers();
+    initTreeViews();
+
+    return true;
+}
+
 mm::WindowName mm::MainWindow::getName() const {
     return MAIN;
 }
@@ -265,93 +365,7 @@ void mm::MainWindow::onRemovePatientClicked() {
     }
 }
 
-void mm::MainWindow::initHandlers() {
-    Gtk::TreeView *patientTreeView;
-    Gtk::TreeView *prescriptionTreeView;
-    Gtk::TreeView *drugTreeView;
-    Gtk::ToolButton *add_patient_button;
-    Gtk::ToolButton *add_prescription_button;
-    Gtk::ToolButton *remove_patient_button;
-
-    RefBuilder::get_instance().get_widget("prescriptionTreeView", prescriptionTreeView);
-    RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
-    RefBuilder::get_instance().get_widget("drugTreeView", drugTreeView);
-    RefBuilder::get_instance().get_widget("addPatient", add_patient_button);
-    RefBuilder::get_instance().get_widget("addPrescription", add_prescription_button);
-    RefBuilder::get_instance().get_widget("removePatient", remove_patient_button);
-
-    add_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPatientClicked));
-    add_prescription_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPrescriptionClicked));
-    patientTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPatient));
-    prescriptionTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPrescription));
-    remove_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onRemovePatientClicked));
-}
-
-void mm::MainWindow::initTreeViews() {
-    Gtk::TreeView *patientTreeView;
-    Gtk::TreeView *prescriptionTreeView;
-    Gtk::TreeView *drugTreeView;
-
-    RefBuilder::get_instance().get_widget("prescriptionTreeView", prescriptionTreeView);
-    RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
-    RefBuilder::get_instance().get_widget("drugTreeView", drugTreeView);
-
-    patientTreeView->append_column("Nome", model::Patient::patientTreeModel.first_name);
-    patientTreeView->append_column("Cognome", model::Patient::patientTreeModel.last_name);
-    patientTreeView->append_column("Cod. Fiscale", model::Patient::patientTreeModel.fiscal_code);
-    patientTreeView->set_model(patientListStore);
-
-    for (int i = 0; i <= 2; i++) {
-        patientTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
-    }
-
-    prescriptionTreeView->append_column("Paziente", model::Prescription::prescriptionTreeModel.patient_id);
-    prescriptionTreeView->append_column("ID", model::Prescription::prescriptionTreeModel.prescription_id);
-    prescriptionTreeView->append_column("Data Emissione", model::Prescription::prescriptionTreeModel.issue_date);
-    prescriptionTreeView->append_column("Data Scadenza", model::Prescription::prescriptionTreeModel.expire_date);
-    prescriptionTreeView->append_column("Farmaci", model::Prescription::prescriptionTreeModel.drug_ids);
-    prescriptionTreeView->append_column("Interazioni",
-                                        model::Prescription::prescriptionTreeModel.negative_interactions);
-    prescriptionTreeView->append_column("Usata", model::Prescription::prescriptionTreeModel.used);
-
-    for (int i = 0; i < 7; i++) {
-        prescriptionTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
-        prescriptionTreeView->get_column(i)->set_min_width(100);
-        prescriptionTreeView->get_column(i)->set_resizable(true);
-        prescriptionTreeView->get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
-        prescriptionTreeView->get_column_cell_renderer(i)->set_property("ellipsize",
-                                                                        Pango::EllipsizeMode::ELLIPSIZE_END);
-    }
-
-    prescriptionTreeView->set_model(prescriptionListStore);
-
-
-    drugTreeView->remove_all_columns();
-
-    drugTreeView->append_column("Nome", model::Drug::drugTreeModel.name);
-    drugTreeView->append_column("Forma Farmaceutica", model::Drug::drugTreeModel.pharmaceutical_form);
-    drugTreeView->append_column("Classificazione ATC", model::Drug::drugTreeModel.ATC_classification);
-    drugTreeView->append_column("Controindicazioni", model::Drug::drugTreeModel.contraindications);
-    drugTreeView->append_column("Principi Attivi", model::Drug::drugTreeModel.active_principles);
-    drugTreeView->append_column("Prezzo", model::Drug::drugTreeModel.price);
-
-    for (int i = 0; i < 6; i++) {
-        drugTreeView->get_column(i)->set_min_width(100);
-        drugTreeView->get_column(i)->set_resizable(true);
-        drugTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
-        drugTreeView->get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
-        drugTreeView->get_column_cell_renderer(i)->set_property("ellipsize", Pango::EllipsizeMode::ELLIPSIZE_END);
-    }
-
-    drugTreeView->set_model(drugListStore);
-    // updating the view for the first time
-
-    updatePatientTreeView();
-}
-
-bool mm::MainWindow::init() {
-    initHandlers();
-    initTreeViews();
-
-    return true;
+void mm::MainWindow::onLogout() {
+    next = LOGIN;
+    notify();
 }

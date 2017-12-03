@@ -83,13 +83,14 @@ void mm::MedH::update() {
 
     switch (window->getNextWindow()) {
         case LOGIN: {
-            /*// session destroyed
+            // session destroyed
             model::authentication::Login::get_instance().logout();
             Gtk::Stack *stack;
             RefBuilder::get_instance().get_widget("mainStack", stack);
             stack->set_visible_child("loginGrid");
             window.reset(new LoginWindow);
-            window->attach(this);*/
+            window->init();
+            window->attach(this);
             break;
         }
         case MAIN: {

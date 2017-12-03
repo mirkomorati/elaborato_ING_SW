@@ -11,10 +11,14 @@
 bool mm::LoginWindow::init() {
     Gtk::Button *button;
     Gtk::Window *window;
+    Gtk::MenuBar *menuBar;
+
+    RefBuilder::get_instance().get_widget("menuBar", menuBar);
     RefBuilder::get_instance().get_widget("loginButton", button);
     RefBuilder::get_instance().get_widget("mainWindow", window);
     window->signal_key_release_event().connect(sigc::mem_fun(this, &mm::LoginWindow::onKeyPressed));
     button->signal_clicked().connect(sigc::mem_fun(this, &mm::LoginWindow::onLoginButtonClicked));
+    menuBar->set_visible(false);
     return true;
 }
 
@@ -43,12 +47,18 @@ void mm::LoginWindow::onLoginButtonClicked() {
     if (model::authentication::check_login(name->get_text(), password->get_text())) {
         log->info("log in with user: {}", static_cast<std::string>(name->get_text()));
         next = MAIN;
+
+        name->set_text("");
+        password->set_text("");
+        name->grab_focus();
+
         notify();
     } else {
         log->info("failed authentication");
         Gtk::Label *error;
         refBuilder.get_widget("loginError", error);
         error->set_visible(true);
+        password->set_text("");
     }
 }
 

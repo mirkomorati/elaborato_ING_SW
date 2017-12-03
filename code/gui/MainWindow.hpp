@@ -50,6 +50,8 @@ namespace mm {
 
         void onRemovePatientClicked();
 
+        void onLogout();
+
         //-------------------graphics updates-------------------//
 
         void updatePatientTreeView();
