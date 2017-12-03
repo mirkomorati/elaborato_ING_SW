@@ -11,8 +11,6 @@
 #include "model/Authentication.hpp"
 #include <spdlog/spdlog.h>
 
-#define DEFAULT_CONFIG_FILE "../../../../tmp/config.json"
-
 int mm::MedH::run() {
     Gtk::Window *mainWindow;
     RefBuilder::get_instance().get_widget("mainWindow", mainWindow);
@@ -25,14 +23,23 @@ bool mm::MedH::init() {
     auto console = spdlog::stdout_color_mt("out");
     auto error = spdlog::stderr_color_mt("err");
     error->set_level(spdlog::level::trace); // print all messages.
+
+#if defined(DEBUG) && !defined(CONFIG_FILE)
+#error "Config file path not provvided compile using -DCONFIG_FILE=config_file_path"
+#endif
 #ifdef DEBUG
-    Configuration::set_config_file_name(DEFAULT_CONFIG_FILE);
-#else
+    Configuration::set_config_file_name(CONFIG_FILE);
+#elif defined(CONFIG_FILE)
     if(argc < 2){
-        console->info("No configuration file provvided, using the default {}", DEFAULT_CONFIG_FILE);
-        Configuration::set_config_file_name(DEFAULT_CONFIG_FILE);
+        console->info("No configuration file provvided, using the default {}", CONFIG_FILE);
+        Configuration::set_config_file_name(CONFIG_FILE);
     } else {
         Configuration::set_config_file_name(argv[1]);
+    }
+#else
+    if(argc < 2){
+        console->error("No configuration file provvided! use: {} file_path", argv[0]);
+        return false;
     }
 #endif
 
@@ -50,7 +57,6 @@ bool mm::MedH::init() {
             error->info("cannot get the debug flag in configuration... default mode applied: No debug");
         }
 
-        console->debug("glade file: {}", config.get<std::string>("glade_file"));
         console->debug("database file: {}", config.get<std::string>("db_name"));
 
         DBMaster::set_db_file_name(config.get<string>("db_name"));
