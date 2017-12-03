@@ -90,6 +90,8 @@ namespace mm {
             string address;
             int doctor_id;
             vector<string> risk_factors;
+
+            bool fiscalCodeIsValid();
         };
     }
 }

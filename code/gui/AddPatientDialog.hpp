@@ -9,6 +9,7 @@
 #include <gtkmm/button.h>
 #include <gtkmm/comboboxtext.h>
 #include "Dialog.hpp"
+#include "Widgets.hpp"
 
 namespace mm {
     class AddPatientDialog : public Dialog {
@@ -40,16 +41,16 @@ namespace mm {
         Gtk::Button *ok_button;
         Gtk::Button *cancel_button;
 
-        Gtk::Entry *first_name;
-        Gtk::Entry *last_name;
-        Gtk::Entry *fiscal_code;
-        Gtk::Entry *street;
-        Gtk::Entry *civic;
-        Gtk::Entry *zip_code;
-        Gtk::Entry *city;
-        Gtk::Entry *country;
-        Gtk::Entry *birth_city;
-        Gtk::Entry *birth_country;
+        EntryController first_name;
+        EntryController last_name;
+        EntryController fiscal_code;
+        EntryController street;
+        EntryController civic;
+        EntryController zip_code;
+        EntryController city;
+        EntryController country;
+        EntryController birth_city;
+        EntryController birth_country;
         Gtk::ComboBoxText *add_birth_day;
         Gtk::ComboBoxText *add_birth_month;
         Gtk::ComboBoxText *add_birth_year;

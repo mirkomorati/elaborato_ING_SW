@@ -9,6 +9,7 @@
 #include "../model/Doctor.hpp"
 #include "../DBMaster.hpp"
 #include "../model/Authentication.hpp"
+#include "AddPrescriptionDialog.hpp"
 
 bool mm::MainWindow::init() {
     Gtk::TreeView *patientTreeView;
@@ -108,7 +109,10 @@ void mm::MainWindow::update() {
 }
 
 void mm::MainWindow::onAddPrescriptionClicked() {
-    // todo
+    std::unique_ptr<Dialog> dialog(new AddPrescriptionDialog);
+    dialog->show();
+    dialog->attach(this);
+    dialogList.push_back(std::move(dialog));
 }
 
 void mm::MainWindow::onAddPatientClicked() {

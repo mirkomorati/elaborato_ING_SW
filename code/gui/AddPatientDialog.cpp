@@ -14,16 +14,28 @@ mm::AddPatientDialog::AddPatientDialog() {
     is_active = true;
     auto refBuilder = RefBuilder::get_instance();
 
-    refBuilder.get_widget("addFirstName", first_name);
-    refBuilder.get_widget("addLastName", last_name);
-    refBuilder.get_widget("addFiscalCode", fiscal_code);
-    refBuilder.get_widget("addBirthCity", birth_city);
-    refBuilder.get_widget("addBirthCountry", birth_country);
-    refBuilder.get_widget("addStreetAddress", street);
-    refBuilder.get_widget("addCivic", civic);
-    refBuilder.get_widget("addZipCode", zip_code);
-    refBuilder.get_widget("addCity", city);
-    refBuilder.get_widget("addCountry", country);
+    Gtk::Entry *entry;
+    refBuilder.get_widget("addFirstName", entry);
+    first_name = EntryController(entry);
+    refBuilder.get_widget("addLastName", entry);
+    last_name = EntryController(entry);
+    refBuilder.get_widget("addFiscalCode", entry);
+    fiscal_code = EntryController(entry);
+    refBuilder.get_widget("addBirthCity", entry);
+    birth_city = EntryController(entry);
+    refBuilder.get_widget("addBirthCountry", entry);
+    birth_country = EntryController(entry);
+    refBuilder.get_widget("addStreetAddress", entry);
+    street = EntryController(entry);
+    refBuilder.get_widget("addCivic", entry);
+    civic = EntryController(entry);
+    refBuilder.get_widget("addZipCode", entry);
+    zip_code = EntryController(entry);
+    refBuilder.get_widget("addCity", entry);
+    city = EntryController(entry);
+    refBuilder.get_widget("addCountry", entry);
+    country = EntryController(entry);
+
     refBuilder.get_widget("addBirthDateDay", add_birth_day);
     refBuilder.get_widget("addBirthDateMonth", add_birth_month);
     refBuilder.get_widget("addBirthDateYear", add_birth_year);
@@ -32,24 +44,6 @@ mm::AddPatientDialog::AddPatientDialog() {
     refBuilder.get_widget("addPatientCancel", cancel_button);
 
     reset();
-
-    first_name->signal_insert_text().connect(
-            sigc::bind(sigc::mem_fun(this, &mm::AddPatientDialog::entryTextChanged), first_name));
-    last_name->signal_insert_text().connect(
-            sigc::bind(sigc::mem_fun(this, &mm::AddPatientDialog::entryTextChanged), last_name));
-    birth_city->signal_insert_text().connect(
-            sigc::bind(sigc::mem_fun(this, &mm::AddPatientDialog::entryTextChanged), birth_city));
-    birth_country->signal_insert_text().connect(
-            sigc::bind(sigc::mem_fun(this, &mm::AddPatientDialog::entryTextChanged), birth_country));
-    street->signal_insert_text().connect(
-            sigc::bind(sigc::mem_fun(this, &mm::AddPatientDialog::entryTextChanged), street));
-    civic->signal_insert_text().connect(
-            sigc::bind(sigc::mem_fun(this, &mm::AddPatientDialog::entryTextChanged), civic));
-    zip_code->signal_insert_text().connect(
-            sigc::bind(sigc::mem_fun(this, &mm::AddPatientDialog::entryTextChanged), zip_code));
-    city->signal_insert_text().connect(sigc::bind(sigc::mem_fun(this, &mm::AddPatientDialog::entryTextChanged), city));
-    country->signal_insert_text().connect(
-            sigc::bind(sigc::mem_fun(this, &mm::AddPatientDialog::entryTextChanged), country));
 
     add_birth_day->signal_changed().connect(sigc::mem_fun(this, &mm::AddPatientDialog::birthDateChanged));
     add_birth_month->signal_changed().connect(sigc::mem_fun(this, &mm::AddPatientDialog::birthDateChanged));
@@ -106,36 +100,33 @@ void mm::AddPatientDialog::entryTextChanged(const Glib::ustring &text, int *pos,
 }
 
 void mm::AddPatientDialog::okHandler() {
-    auto log = spdlog::get("out");
-
     mm::model::Patient patient;
     stringstream address;
     stringstream birth_address;
     stringstream birth_date;
     auto refBuilder = RefBuilder::get_instance();
 
-    patient.set_first_name(first_name->get_text());
-    patient.set_last_name(last_name->get_text());
-    patient.set_fiscal_code(fiscal_code->get_text());
+    patient.set_first_name(first_name.entry->get_text());
+    patient.set_last_name(last_name.entry->get_text());
+    patient.set_fiscal_code(fiscal_code.entry->get_text());
     birth_date << add_birth_day->get_active_text().c_str() << "/"
                << add_birth_month->get_active_text().c_str() << "/"
                << add_birth_year->get_active_text().c_str();
     patient.set_birth_date(birth_date.str());
 
-    address << street->get_text() << " "
-            << civic->get_text() << ", "
-            << zip_code->get_text() << ", "
-            << city->get_text() << ", "
-            << country->get_text();
+    address << street.entry->get_text() << " "
+            << civic.entry->get_text() << ", "
+            << zip_code.entry->get_text() << ", "
+            << city.entry->get_text() << ", "
+            << country.entry->get_text();
 
-    birth_address << birth_city->get_text() << ", "
-                  << birth_country->get_text();
+    birth_address << birth_city.entry->get_text() << ", "
+                  << birth_country.entry->get_text();
 
     patient.set_address(address.str());
     patient.set_doctor_id(mm::model::authentication::Login::get_instance().regional_id);
     patient.set_birth_place(birth_address.str());
 
-    log->info("[AddPatientDialog] Validating patient");
     if (patient.is_valid()) {
         DBMaster::get_instance().add_to_db(patient);
         dispose();
@@ -147,8 +138,6 @@ void mm::AddPatientDialog::okHandler() {
 }
 
 void mm::AddPatientDialog::cancelHandler() {
-    auto log = spdlog::get("out");
-    log->info("[AddPatientDialog] Cancel dialog");
     dispose();
 }
 
@@ -161,10 +150,7 @@ void mm::AddPatientDialog::dispose() {
 }
 
 void mm::AddPatientDialog::reset() {
-    auto log = spdlog::get("out");
     auto refBuilder = RefBuilder::get_instance();
-
-    log->info("[AddPatientDialog] Resetting");
 
     for (int i = 1; i <= 31; i++)
         add_birth_day->append(Glib::ustring::format(i));
@@ -178,16 +164,16 @@ void mm::AddPatientDialog::reset() {
             Glib::ustring::format(util::Date::get_current_month())));
     add_birth_year->set_active_text(Glib::ustring::format(util::Date::get_current_year()));
 
-    first_name->set_text("");
-    last_name->set_text("");
-    fiscal_code->set_text("");
-    street->set_text("");
-    civic->set_text("");
-    zip_code->set_text("");
-    city->set_text("");
-    country->set_text("");
-    birth_city->set_text("");
-    birth_country->set_text("");
+    first_name.entry->set_text("");
+    last_name.entry->set_text("");
+    fiscal_code.entry->set_text("");
+    street.entry->set_text("");
+    civic.entry->set_text("");
+    zip_code.entry->set_text("");
+    city.entry->set_text("");
+    country.entry->set_text("");
+    birth_city.entry->set_text("");
+    birth_country.entry->set_text("");
 }
 
 mm::AddPatientDialog::~AddPatientDialog() {
