@@ -4,6 +4,7 @@
 
 #include <gtkmm/button.h>
 #include <fmt/format.h>
+#include <spdlog/spdlog.h>
 #include "MainWindow.hpp"
 #include "../RefBuilder.hpp"
 #include "AddPatientDialog.hpp"
@@ -295,7 +296,8 @@ void mm::MainWindow::onRemovePatientClicked() {
     auto sel = patientTreeView->get_selection()->get_selected();
 
     if (not sel) {
-        // todo msgbox info
+        Gtk::MessageDialog info(*mainWindow, "Nessun paziente selezionato", false, Gtk::MESSAGE_INFO, Gtk::BUTTONS_OK);
+        info.run();
         return;
     }
 
@@ -322,7 +324,11 @@ void mm::MainWindow::onRemovePatientClicked() {
         try {
             DBMaster::get_instance().remove_from_db(patient);
         } catch (...) {
-            // TODO send msg box error
+            spdlog::get("err")->error("cannot delete patient");
+            Gtk::MessageDialog info(*mainWindow, "Impossibile eliminare il pazient", false, Gtk::MESSAGE_INFO,
+                                    Gtk::BUTTONS_OK);
+            info.run();
+            return;
         }
 
         updatePatientTreeView();
