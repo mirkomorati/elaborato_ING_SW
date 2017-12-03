@@ -33,6 +33,12 @@ namespace mm {
         void update() override;
 
     private:
+        //-------------------init functions-------------------//
+
+        void initHandlers();
+
+        void initTreeViews();
+
         //-------------------signal handlers-------------------//
         void onAddPatientClicked();
 
@@ -42,6 +48,8 @@ namespace mm {
 
         void onSelectedPrescription(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *);
 
+        void onRemovePatientClicked();
+
         //-------------------graphics updates-------------------//
 
         void updatePatientTreeView();
@@ -49,6 +57,8 @@ namespace mm {
         void updatePrescriptionTreeView();
 
         void updateDrugTreeView();
+
+        void updatePatientDetailsView();
 
     };
 }

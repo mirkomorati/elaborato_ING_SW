@@ -4,7 +4,7 @@
 
 #include <spdlog/spdlog.h>
 #include "AddPatientDialog.hpp"
-#include "../RefBuilder.hpp"
+#include "RefBuilder.hpp"
 #include "../model/Patient.hpp"
 #include "../DBMaster.hpp"
 #include "../model/Authentication.hpp"
@@ -74,12 +74,13 @@ void mm::AddPatientDialog::birthDateChanged() {
         month = std::stoi(add_birth_month->get_active_text().c_str());
         year = std::stoi(add_birth_year->get_active_text().c_str());
     } catch (...) {
-        throw std::logic_error("invalid integer from a comboBox, that's no good!!!");
+        // todo in init phase there is no month available set the default value
+        day = 1;
+        month = 1;
+        year = 2000;
     }
 
     date = util::Date(day, month, year);
-
-    //log->info("[AddPatientDialog] Validating date: {}", date.get_text());
 
     if (!date.is_valid()) {
         if ((date.day >= 29 && date.day <= 31) && date.month == 2) {

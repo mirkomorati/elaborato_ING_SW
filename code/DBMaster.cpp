@@ -5,6 +5,7 @@
 #include "DBMaster.hpp"
 #include <sstream>
 #include <iostream>
+#include <fmt/format.h>
 
 std::string mm::DBMaster::db_file_name;
 mm::DBMaster *mm::DBMaster::instance = nullptr;
@@ -29,15 +30,13 @@ mm::DBMaster::DBMaster() noexcept(false) {
     }
 
     if (sqlite3_open(DBMaster::db_file_name.c_str(), &db)) {
-        std::stringstream ss;
-        ss << "Error cannot open database from file: " << DBMaster::db_file_name;
-        throw std::runtime_error(ss.str());
+        throw std::runtime_error(fmt::format("Error cannot open database from file: {}", DBMaster::db_file_name));
     }
 }
 
 mm::DBMaster::~DBMaster() {
     sqlite3_close(db);
-    if (instance) delete instance;
+    delete instance;
 }
 
 mm::DBMaster &mm::DBMaster::get_instance() {
@@ -87,11 +86,9 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
                 sqlite3_finalize(stmt); // previous stmt
 
                 if (sqlite3_prepare(db, ss.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
-                    std::stringstream msg;
-                    msg << "cannot update row with query: \"" << ss.str() << "\""
-                        << std::endl
-                        << "sqlite error: " << sqlite3_errmsg(db);
-                    throw std::runtime_error(msg.str());
+                    throw std::runtime_error(
+                            fmt::format("cannot update row with query: \"{}\"\nsqlite error: {}", ss.str(),
+                                        sqlite3_errmsg(db)));
                 }
             } else {
                 // la entry non esiste opera un insert.
@@ -116,11 +113,9 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
                 sqlite3_finalize(stmt); // previous stmt
 
                 if (sqlite3_prepare(db, ss.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
-                    std::stringstream msg;
-                    msg << "cannot insert row with query: \"" << ss.str() << "\""
-                        << std::endl
-                        << "sqlite error: " << sqlite3_errmsg(db);
-                    throw std::runtime_error(msg.str());
+                    throw std::runtime_error(
+                            fmt::format("cannot update row with query: \"{}\"\nsqlite error: {}", ss.str(),
+                                        sqlite3_errmsg(db)));
                 }
             }
         } else {
@@ -128,20 +123,14 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
             throw std::runtime_error("cannot execute stmt");
         }
     } else {
-        std::stringstream msg;
-        msg << "cannot prepare stmt"
-            << std::endl
-            << "sqlite error: " << sqlite3_errmsg(db);
-        throw std::runtime_error(msg.str());
+        throw std::runtime_error(fmt::format("cannot prepare stmt\nsqlite error: {}", sqlite3_errmsg(db)));
     }
 
     if ((sqlite3_step(stmt)) != SQLITE_DONE) {
         sqlite3_finalize(stmt);
         std::stringstream msg;
-        msg << "cannot execute insert stmt: \"" << ss.str() << "\""
-            << std::endl
-            << "sqlite error: " << sqlite3_errmsg(db);
-        throw std::runtime_error(msg.str());
+        throw std::runtime_error(
+                fmt::format("cannot execute insert stmt: \"{}\"\nsqlite error: {}", ss.str(), sqlite3_errmsg(db)));
     }
     sqlite3_finalize(stmt);
 }
@@ -165,26 +154,20 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, initializer_list<Seri
     }
 
     if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
-        std::stringstream msg;
-        msg << "cannot select rows with query: \"" << query.str() << "\""
-            << std::endl
-            << "sqlite error: " << sqlite3_errmsg(db);
-        throw std::runtime_error(msg.str());
+        throw std::runtime_error(
+                fmt::format("cannot select row with query: \"{}\"\nsqlite error: {}", query.str(), sqlite3_errmsg(db)));
     }
 
     int rc = sqlite3_step(stmt);
     if (rc == SQLITE_ERROR) {
         sqlite3_finalize(stmt);
-        std::stringstream msg;
-        msg << "cannot execute insert stmt: \"" << query.str() << "\""
-            << std::endl
-            << "sqlite error: " << sqlite3_errmsg(db);
-        throw std::runtime_error(msg.str());
+        throw std::runtime_error(fmt::format("cannot execute insert statement: \"{}\"\nsqlite error: {}", query.str(),
+                                             sqlite3_errmsg(db)));
     } else if (rc == SQLITE_DONE) {
         sqlite3_finalize(stmt);
         std::stringstream msg;
         msg << "there are no rows that correspond to the query: " << query.str();
-        throw record_not_found_error(msg.str());
+        throw record_not_found_error(fmt::format("there are no rows that correspond to the query: {}", query.str()));
     }
 
     col_num = sqlite3_column_count(stmt);
@@ -215,14 +198,12 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, initializer_list<Seri
                 break;
             }
             default: {
-                std::stringstream msg;
-                msg << "data type not recognized: " << type << " name: "
-                    << sqlite3_column_name(stmt, i) << " decltype: "
-                    << sqlite3_column_decltype(stmt, i)
-                    << " data: " << sqlite3_column_int(stmt, i)
-                    << " col: " << i;
                 sqlite3_finalize(stmt);
-                throw std::runtime_error(msg.str());
+                throw std::runtime_error(
+                        fmt::format("data type not recognized: {}, name: {}, decltype: {}, data: {}, col: {}",
+                                    type, sqlite3_column_name(stmt, i), sqlite3_column_decltype(stmt, i),
+                                    sqlite3_column_int(stmt, i), i)
+                );
             }
         }
     }
@@ -259,30 +240,28 @@ mm::DBMaster::get_table(string name, unsigned int limit, unsigned int offset) {
 
     st = sqlite3_step(stmt);
     while (st == SQLITE_ROW) {
-        to_return.push_back(vector<mm::Serialized>());
+        to_return.emplace_back(vector<mm::Serialized>());
         for (int i = 0; i < col_num; ++i) {
             int type = sqlite3_column_type(stmt, i);
 
             switch (type) {
                 case SQLITE_INTEGER:
-                    to_return[row].push_back(sqlite3_column_int(stmt, i));
+                    to_return[row].emplace_back(sqlite3_column_int(stmt, i));
                     break;
                 case SQLITE_TEXT:
-                    to_return[row].push_back(
+                    to_return[row].emplace_back(
                             string((const char *) sqlite3_column_text(stmt, i)));
                     break;
                 case SQLITE_FLOAT:
-                    to_return[row].push_back(sqlite3_column_double(stmt, i));
+                    to_return[row].emplace_back(sqlite3_column_double(stmt, i));
                     break;
                 default: {
-                    std::stringstream msg;
-                    msg << "data type not recognized: " << type << " name: "
-                        << sqlite3_column_name(stmt, i) << " decltype: "
-                        << sqlite3_column_decltype(stmt, i)
-                        << " data: " << sqlite3_column_int(stmt, i)
-                        << " col: " << i;
                     sqlite3_finalize(stmt);
-                    throw std::runtime_error(msg.str());
+                    throw std::runtime_error(
+                            fmt::format("data type not recognized: {}, name: {}, decltype: {}, data: {}, col: {}",
+                                        type, sqlite3_column_name(stmt, i), sqlite3_column_decltype(stmt, i),
+                                        sqlite3_column_int(stmt, i), i)
+                    );
                 }
             }
         }
@@ -291,9 +270,7 @@ mm::DBMaster::get_table(string name, unsigned int limit, unsigned int offset) {
     }
 
     if (st == SQLITE_ERROR) {
-        stringstream ss;
-        ss << "error stepping on database " << sqlite3_errmsg(db);
-        throw runtime_error(ss.str());
+        throw runtime_error(fmt::format("error stepping on database {}", sqlite3_errmsg(db)));
     }
 
     sqlite3_finalize(stmt);
@@ -322,11 +299,8 @@ mm::DBMaster::get_rows(string table_name, string id_name, mm::Serialized id) {
     }
 
     if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
-        std::stringstream msg;
-        msg << "cannot select rows with query: \"" << query.str() << "\""
-            << std::endl
-            << "sqlite error: " << sqlite3_errmsg(db);
-        throw std::runtime_error(msg.str());
+        throw std::runtime_error(fmt::format("cannot select rows with query: \"{}\"\nsqlite error{}",
+                                             query.str(), sqlite3_errmsg(db)));
     }
 
     int col_num = sqlite3_column_count(stmt);
@@ -358,14 +332,12 @@ mm::DBMaster::get_rows(string table_name, string id_name, mm::Serialized id) {
                     break;
                 }
                 default: {
-                    std::stringstream msg;
-                    msg << "data type not recognized: " << type << " name: "
-                        << sqlite3_column_name(stmt, i) << " decltype: "
-                        << sqlite3_column_decltype(stmt, i)
-                        << " data: " << sqlite3_column_int(stmt, i)
-                        << " col: " << i;
                     sqlite3_finalize(stmt);
-                    throw std::runtime_error(msg.str());
+                    throw std::runtime_error(
+                            fmt::format("data type not recognized: {}, name: {}, decltype: {}, data: {}, col: {}",
+                                        type, sqlite3_column_name(stmt, i), sqlite3_column_decltype(stmt, i),
+                                        sqlite3_column_int(stmt, i), i)
+                    );
                 }
             }
         }
@@ -395,21 +367,15 @@ void mm::DBMaster::remove_from_db(const mm::ISerializable &obj) {
     }
 
     if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
-        std::stringstream msg;
-        msg << "cannot select rows with query: \"" << query.str() << "\""
-            << std::endl
-            << "sqlite error: " << sqlite3_errmsg(db);
-        throw std::runtime_error(msg.str());
+        throw std::runtime_error(fmt::format("cannot delete row with query: \"{}\"\nsqlite error{}",
+                                             query.str(), sqlite3_errmsg(db)));
     }
 
     int rc = sqlite3_step(stmt);
     if (rc == SQLITE_ERROR) {
         sqlite3_finalize(stmt);
-        std::stringstream msg;
-        msg << "cannot execute stmt: \"" << query.str() << "\""
-            << std::endl
-            << "sqlite error: " << sqlite3_errmsg(db);
-        throw std::runtime_error(msg.str());
+        throw std::runtime_error(fmt::format("cannot execute stmt: \"{}\"\nsqlite error{}",
+                                             query.str(), sqlite3_errmsg(db)));
     }
 
     sqlite3_finalize(stmt);

@@ -10,7 +10,7 @@ background-image: -gtk-gradient (linear,
 */
 
 #loginGrid {
-    background-image: -gtk-gradient (linear, left top, left bottom,
+    background-image: -gtk-gradient(linear, left top, left bottom,
     color-stop(0.0, #4CA1AF), color-stop(1.00, #C4E0E5));
 }
 

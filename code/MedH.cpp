@@ -5,7 +5,7 @@
 #include "MedH.hpp"
 #include "Configuration.hpp"
 #include "DBMaster.hpp"
-#include "RefBuilder.hpp"
+#include "gui/RefBuilder.hpp"
 #include "gui/LoginWindow.hpp"
 #include "gui/MainWindow.hpp"
 #include "model/Authentication.hpp"
@@ -83,7 +83,6 @@ void mm::MedH::update() {
             RefBuilder::get_instance().get_widget("mainStack", stack);
             stack->set_visible_child("loginGrid");
             window.reset(new LoginWindow);
-            window->init();
             window->attach(this);*/
             break;
         }
