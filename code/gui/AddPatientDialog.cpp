@@ -8,7 +8,6 @@
 #include "../model/Patient.hpp"
 #include "../DBMaster.hpp"
 #include "../model/Authentication.hpp"
-#include "../utils/Date.hpp"
 
 mm::AddPatientDialog::AddPatientDialog()
         : is_active(true), first_name("addFirstName"), last_name("addLastName"), fiscal_code("addFiscalCode"),

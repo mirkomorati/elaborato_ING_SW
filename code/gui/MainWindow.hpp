@@ -13,6 +13,13 @@
 
 namespace mm {
     class MainWindow : public Window, public IObserver {
+
+        enum DetailStack {
+            PRESCRIPTION,
+            DRUG,
+            NONE
+        };
+
         WindowName next;
         std::list<std::unique_ptr<Dialog>> dialogList;
 
@@ -65,6 +72,7 @@ namespace mm {
 
         void updatePatientDetailsView();
 
+        void updateDetailStack(DetailStack page);
     };
 }
 

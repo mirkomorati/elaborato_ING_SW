@@ -4,8 +4,6 @@
 
 #include "AboutDialog.hpp"
 #include "RefBuilder.hpp"
-//#include <gtkmm/gtkmm.hpp>
-#include <gtk/gtk.h>
 
 mm::AboutDialog::AboutDialog() : active(true) {}
 

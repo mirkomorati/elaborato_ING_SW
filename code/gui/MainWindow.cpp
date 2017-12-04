@@ -276,6 +276,7 @@ void mm::MainWindow::updateDrugTreeView() {
 }
 
 void mm::MainWindow::onSelectedPrescription(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *) {
+    updateDetailStack(PRESCRIPTION);
     updateDrugTreeView();
 }
 
@@ -379,4 +380,21 @@ void mm::MainWindow::onAboutClicked() {
     dialog->show();
     dialog->attach(this);
     dialogList.push_back(std::move(dialog));
+}
+
+void mm::MainWindow::updateDetailStack(mm::MainWindow::DetailStack page) {
+    Gtk::Stack *detail_stack;
+    RefBuilder::get_instance().get_widget("detailStack", detail_stack);
+    // todo sistemare stack pane
+    const Glib::ustring &current = detail_stack->get_visible_child_name();
+
+    if (page != NONE)
+        detail_stack->set_visible(true);
+
+    if (page == PRESCRIPTION && current != "prescriptionDetail")
+        detail_stack->set_visible_child("prescriptionDetail");
+    else if (page == DRUG && current != "drugDetail")
+        detail_stack->set_visible_child("drugDetail");
+    else
+        detail_stack->set_visible(false);
 }
