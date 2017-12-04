@@ -37,10 +37,12 @@ set(CONF_FILE ${CMAKE_SOURCE_DIR}/tmp/config.json)
 if (APPLE)
     # icon files to copy in the bundle
     set(OSX_ICON_FILES ${CMAKE_SOURCE_DIR}/glade/med-h.icns)
-    file(GLOB_RECURSE OSX_ICON_SET "glade/icons.iconset/*.png")
+    file(GLOB_RECURSE OSX_ICON_SET ${CMAKE_SOURCE_DIR}/glade/icons.iconset/*.png)
+    file(GLOB_RECURSE ICONS ${CMAKE_SOURCE_DIR}/glade/graphics/*.png)
 
     # set where in the bundle to put the icns files
     set_source_files_properties(${OSX_ICON_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
+    set_source_files_properties(${ICONS} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/glade)
     set_source_files_properties(${OSX_ICON_SET} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/icon.iconset)
     set_source_files_properties(${CONF_FILE} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
 
@@ -51,7 +53,7 @@ if (APPLE)
     add_definitions(-DGLADE_FILE_NAME="../Resources/glade/mainWindow.glade"
             -DGLADE_CSS_FILE="../Resources/glade/style.css" -DCONFIG_FILE="../Resources/config.json")
 
-    add_executable(med-h MACOSX_BUNDLE ${MAIN} ${SRC} ${HDR} ${OSX_ICON_FILES} ${OSX_ICON_SET} ${GLADE_FILES} ${CONF_FILE})
+    add_executable(med-h MACOSX_BUNDLE ${MAIN} ${SRC} ${HDR} ${OSX_ICON_FILES} ${OSX_ICON_SET} ${GLADE_FILES} ${CONF_FILE} ${ICONS})
 
     # configure CMake to use a custom Info.plist
     set_target_properties(med-h PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/tmp/med-h-Info.plist)

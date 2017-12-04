@@ -32,12 +32,15 @@
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="stock">gtk-missing-image</property>
+    <property name="pixbuf">calendar.png</property>
   </object>
   <object class="GtkImage" id="image2">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
+    <property name="resource">calendar.png</property>
   </object>
+  <object class="GtkTextBuffer" id="negativeInteractionsBuffer"/>
+  <object class="GtkListStore" id="patientList"/>
   <object class="GtkApplicationWindow" id="mainWindow">
     <property name="name">mainWindow</property>
     <property name="width_request">1024</property>
@@ -381,10 +384,8 @@
               </packing>
             </child>
             <child>
-              <placeholder/>
-            </child>
-            <child>
               <object class="GtkNotebook" id="mainNotebook">
+                <property name="name">mainNotebook</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="enable_popup">True</property>
@@ -679,72 +680,64 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="orientation">vertical</property>
-                        <property name="spacing">5</property>
                         <child>
                           <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkGrid">
+                              <object class="GtkToolbar">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <child>
-                                  <object class="GtkButton" id="selectDateButton">
-                                    <property name="label" translatable="yes">Seleziona Data</property>
+                                  <object class="GtkToolButton" id="addPrescription">
                                     <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="stock_id">gtk-add</property>
                                   </object>
                                   <packing>
-                                    <property name="left_attach">1</property>
-                                    <property name="top_attach">0</property>
+                                    <property name="expand">False</property>
+                                    <property name="homogeneous">True</property>
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkToolbar">
+                                  <object class="GtkToolButton" id="removePrescription">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <child>
-                                      <object class="GtkToolButton" id="addPrescription">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="use_underline">True</property>
-                                        <property name="stock_id">gtk-add</property>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">False</property>
-                                        <property name="homogeneous">True</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkToolButton" id="removePrescription">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="use_underline">True</property>
-                                        <property name="stock_id">gtk-remove</property>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">False</property>
-                                        <property name="homogeneous">True</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkToolButton" id="editPrescription">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="use_underline">True</property>
-                                        <property name="stock_id">gtk-edit</property>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">False</property>
-                                        <property name="homogeneous">True</property>
-                                      </packing>
-                                    </child>
+                                    <property name="use_underline">True</property>
+                                    <property name="stock_id">gtk-remove</property>
                                   </object>
                                   <packing>
-                                    <property name="left_attach">0</property>
-                                    <property name="top_attach">0</property>
+                                    <property name="expand">False</property>
+                                    <property name="homogeneous">True</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkToolButton" id="editPrescription">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="stock_id">gtk-edit</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="homogeneous">True</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkToolButton" id="selectPrescriptionsDate">
+                                    <property name="width_request">16</property>
+                                    <property name="height_request">16</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes">toolbutton</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="icon_widget">image1</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="homogeneous">True</property>
                                   </packing>
                                 </child>
                               </object>
@@ -793,65 +786,55 @@
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkGrid">
+                              <object class="GtkToolbar">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <child>
-                                  <object class="GtkButton" id="selectDateButton1">
-                                    <property name="label" translatable="yes">Seleziona Data</property>
+                                  <object class="GtkToolButton" id="addDrug">
                                     <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="stock_id">gtk-add</property>
                                   </object>
                                   <packing>
-                                    <property name="left_attach">1</property>
-                                    <property name="top_attach">0</property>
+                                    <property name="expand">False</property>
+                                    <property name="homogeneous">True</property>
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkToolbar">
+                                  <object class="GtkToolButton" id="removeDrug">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <child>
-                                      <object class="GtkToolButton" id="addDrug">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="use_underline">True</property>
-                                        <property name="stock_id">gtk-add</property>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">False</property>
-                                        <property name="homogeneous">True</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkToolButton" id="removeDrug">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="use_underline">True</property>
-                                        <property name="stock_id">gtk-remove</property>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">False</property>
-                                        <property name="homogeneous">True</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkToolButton" id="editDrug">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="use_underline">True</property>
-                                        <property name="stock_id">gtk-edit</property>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">False</property>
-                                        <property name="homogeneous">True</property>
-                                      </packing>
-                                    </child>
+                                    <property name="use_underline">True</property>
+                                    <property name="stock_id">gtk-remove</property>
                                   </object>
                                   <packing>
-                                    <property name="left_attach">0</property>
-                                    <property name="top_attach">0</property>
+                                    <property name="expand">False</property>
+                                    <property name="homogeneous">True</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkToolButton" id="editDrug">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="stock_id">gtk-edit</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="homogeneous">True</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkToolButton" id="selectDrugsDate">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="stock_id">gtk-execute</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="homogeneous">True</property>
                                   </packing>
                                 </child>
                               </object>
@@ -914,7 +897,40 @@
                   </packing>
                 </child>
                 <child>
-                  <placeholder/>
+                  <object class="GtkGrid">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="position">1</property>
+                  </packing>
                 </child>
                 <child type="tab">
                   <object class="GtkLabel">
@@ -928,7 +944,40 @@
                   </packing>
                 </child>
                 <child>
-                  <placeholder/>
+                  <object class="GtkGrid">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="position">2</property>
+                  </packing>
                 </child>
                 <child type="tab">
                   <object class="GtkLabel">
@@ -943,9 +992,9 @@
                 </child>
               </object>
               <packing>
-                <property name="name">page0</property>
-                <property name="title" translatable="yes">page0</property>
-                <property name="position">2</property>
+                <property name="name">mainNotebook</property>
+                <property name="title" translatable="yes">mainNotebook</property>
+                <property name="position">1</property>
               </packing>
             </child>
           </object>
@@ -1477,7 +1526,6 @@ Morati Mirko</property>
       </object>
     </child>
   </object>
-  <object class="GtkTextBuffer" id="negativeInteractionsBuffer"/>
   <object class="GtkDialog" id="addPrescriptionDialog">
     <property name="can_focus">False</property>
     <property name="modal">True</property>
@@ -1797,7 +1845,6 @@ Morati Mirko</property>
       </object>
     </child>
   </object>
-  <object class="GtkListStore" id="patientList"/>
   <object class="GtkDialog" id="selectDateByDialog">
     <property name="can_focus">False</property>
     <property name="modal">True</property>

@@ -5,7 +5,7 @@
 #ifndef ELABORATO_ING_SW_OS_HPP
 #define ELABORATO_ING_SW_OS_HPP
 
-namespace mm {
+/*namespace mm {
     bool openWithDefaultBrowser(std::string link) {
         if (not system(nullptr)) return false;
         int i;
@@ -19,6 +19,6 @@ namespace mm {
         if (i != 0) return false;
         return true;
     }
-}
+}*/
 
 #endif //ELABORATO_ING_SW_OS_HPP

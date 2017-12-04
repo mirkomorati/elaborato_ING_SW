@@ -96,7 +96,7 @@ void mm::MedH::update() {
         case MAIN: {
             Gtk::Stack *stack;
             RefBuilder::get_instance().get_widget("mainStack", stack);
-            stack->set_visible_child("patientPaned");
+            stack->set_visible_child("mainNotebook");
             window.reset(new MainWindow);
             window->init();
             window->attach(this);
