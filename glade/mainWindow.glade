@@ -1019,7 +1019,7 @@
                                 </child>
                               </object>
                               <packing>
-                                <property name="name">page0</property>
+                                <property name="name">prescriptionDetail</property>
                                 <property name="title" translatable="yes">page0</property>
                               </packing>
                             </child>
@@ -1030,7 +1030,7 @@
                                 <property name="shadow_type">in</property>
                               </object>
                               <packing>
-                                <property name="name">page1</property>
+                                <property name="name">drugDetail</property>
                                 <property name="title" translatable="yes">page1</property>
                                 <property name="position">1</property>
                               </packing>

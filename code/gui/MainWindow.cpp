@@ -39,6 +39,7 @@ void mm::MainWindow::initHandlers() {
     add_prescription_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPrescriptionClicked));
     patientTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPatient));
     prescriptionTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPrescription));
+    drugTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedDrug));
     remove_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onRemovePatientClicked));
     logoutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::MainWindow::onLogout));
     aboutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::MainWindow::onAboutClicked));
@@ -385,16 +386,22 @@ void mm::MainWindow::onAboutClicked() {
 void mm::MainWindow::updateDetailStack(mm::MainWindow::DetailStack page) {
     Gtk::Stack *detail_stack;
     RefBuilder::get_instance().get_widget("detailStack", detail_stack);
-    // todo sistemare stack pane
+    // todo sistemare stack pane. Se premo su due prescrizioni diverse non deve chiudersi
     const Glib::ustring &current = detail_stack->get_visible_child_name();
 
-    if (page != NONE)
-        detail_stack->set_visible(true);
+    if (page == NONE) {
+        detail_stack->set_visible(false);
+        return;
+    }
 
     if (page == PRESCRIPTION && current != "prescriptionDetail")
         detail_stack->set_visible_child("prescriptionDetail");
     else if (page == DRUG && current != "drugDetail")
         detail_stack->set_visible_child("drugDetail");
     else
-        detail_stack->set_visible(false);
+        detail_stack->set_visible(!detail_stack->get_visible());
+}
+
+void mm::MainWindow::onSelectedDrug(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *) {
+    updateDetailStack(DRUG);
 }

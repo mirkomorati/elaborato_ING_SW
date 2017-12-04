@@ -55,6 +55,8 @@ namespace mm {
 
         void onSelectedPrescription(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *);
 
+        void onSelectedDrug(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *);
+
         void onRemovePatientClicked();
 
         void onLogout();
@@ -73,6 +75,7 @@ namespace mm {
         void updatePatientDetailsView();
 
         void updateDetailStack(DetailStack page);
+
     };
 }
 
