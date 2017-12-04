@@ -11,11 +11,11 @@
 #include "../utils/Date.hpp"
 
 mm::AddPatientDialog::AddPatientDialog()
-        : first_name("addFirstName"), last_name("addLastName"), fiscal_code("addFiscalCode"),
+        : is_active(true), first_name("addFirstName"), last_name("addLastName"), fiscal_code("addFiscalCode"),
           street("addStreetAddress"), civic("addCivic"), zip_code("addZipCode"), city("addCity"), country("addCountry"),
           birth_city("addBirthCity"), birth_country("addBirthCountry"), riskFactors("addRiskFactors"),
           birthDate("addBirthDateDay", "addBirthDateMonth", "addBirthDateYear") {
-    is_active = true;
+
     auto refBuilder = RefBuilder::get_instance();
 
     refBuilder.get_widget("addPatientOk", ok_button);

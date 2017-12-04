@@ -12,6 +12,7 @@
 #include "../DBMaster.hpp"
 #include "../model/Authentication.hpp"
 #include "AddPrescriptionDialog.hpp"
+#include "AboutDialog.hpp"
 
 void mm::MainWindow::initHandlers() {
     auto refBuilder = RefBuilder::get_instance();
@@ -23,6 +24,7 @@ void mm::MainWindow::initHandlers() {
     Gtk::ToolButton *add_prescription_button;
     Gtk::ToolButton *remove_patient_button;
     Gtk::MenuItem *logoutMenuItem;
+    Gtk::ImageMenuItem *aboutMenuItem;
 
     refBuilder.get_widget("prescriptionTreeView", prescriptionTreeView);
     refBuilder.get_widget("patientTreeView", patientTreeView);
@@ -31,6 +33,7 @@ void mm::MainWindow::initHandlers() {
     refBuilder.get_widget("addPrescription", add_prescription_button);
     refBuilder.get_widget("removePatient", remove_patient_button);
     refBuilder.get_widget("logoutMenuItem", logoutMenuItem);
+    refBuilder.get_widget("aboutMenuItem", aboutMenuItem);
 
     add_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPatientClicked));
     add_prescription_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onAddPrescriptionClicked));
@@ -38,6 +41,7 @@ void mm::MainWindow::initHandlers() {
     prescriptionTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::MainWindow::onSelectedPrescription));
     remove_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::MainWindow::onRemovePatientClicked));
     logoutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::MainWindow::onLogout));
+    aboutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::MainWindow::onAboutClicked));
 }
 
 void mm::MainWindow::initTreeViews() {
@@ -368,4 +372,11 @@ void mm::MainWindow::onRemovePatientClicked() {
 void mm::MainWindow::onLogout() {
     next = LOGIN;
     notify();
+}
+
+void mm::MainWindow::onAboutClicked() {
+    std::unique_ptr<Dialog> dialog(new AboutDialog);
+    dialog->show();
+    dialog->attach(this);
+    dialogList.push_back(std::move(dialog));
 }
