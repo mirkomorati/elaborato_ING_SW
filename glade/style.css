@@ -15,5 +15,7 @@ background-image: -gtk-gradient (linear,
 }
 
 label.loginTitle {
+    font-size: 50px;
+    font-weight: bold;
     color: #ffffff;
 }
