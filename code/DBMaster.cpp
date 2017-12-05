@@ -212,90 +212,26 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, initializer_list<Seri
     obj.unserialize(serialized_map);
 }
 
-vector<vector<mm::Serialized>>
-mm::DBMaster::get_table(string name, unsigned int limit, unsigned int offset) {
-    stringstream query;
-    sqlite3_stmt *stmt;
-    int col_num, row;
-    int st; // return ostream sqlite_step
-    vector<vector<mm::Serialized>> to_return;
-
-    if (limit == 0) {
-        query << "select * from " << name;
-    } else {
-        query << "select * from " << name << " limit " << limit << " offset "
-              << offset;
-    }
-
-    if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
-        std::stringstream msg;
-        msg << "cannot select rows with query: \"" << query.str() << "\""
-            << std::endl
-            << "sqlite error: " << sqlite3_errmsg(db);
-        throw std::runtime_error(msg.str());
-    }
-
-    col_num = sqlite3_column_count(stmt);
-    row = 0;
-
-    st = sqlite3_step(stmt);
-    while (st == SQLITE_ROW) {
-        to_return.emplace_back(vector<mm::Serialized>());
-        for (int i = 0; i < col_num; ++i) {
-            int type = sqlite3_column_type(stmt, i);
-
-            switch (type) {
-                case SQLITE_INTEGER:
-                    to_return[row].emplace_back(sqlite3_column_int(stmt, i));
-                    break;
-                case SQLITE_TEXT:
-                    to_return[row].emplace_back(
-                            string((const char *) sqlite3_column_text(stmt, i)));
-                    break;
-                case SQLITE_FLOAT:
-                    to_return[row].emplace_back(sqlite3_column_double(stmt, i));
-                    break;
-                default: {
-                    sqlite3_finalize(stmt);
-                    throw std::runtime_error(
-                            fmt::format("data type not recognized: {}, name: {}, decltype: {}, data: {}, col: {}",
-                                        type, sqlite3_column_name(stmt, i), sqlite3_column_decltype(stmt, i),
-                                        sqlite3_column_int(stmt, i), i)
-                    );
-                }
-            }
-        }
-        st = sqlite3_step(stmt);
-        row++;
-    }
-
-    if (st == SQLITE_ERROR) {
-        throw runtime_error(fmt::format("error stepping on database {}", sqlite3_errmsg(db)));
-    }
-
-    sqlite3_finalize(stmt);
-
-    return to_return;
-}
-
 vector<map<string, mm::Serialized>>
 mm::DBMaster::get_rows(string table_name, string id_name, mm::Serialized id) {
     stringstream query;
     sqlite3_stmt *stmt;
     vector<map<string, mm::Serialized>> to_return;
 
-    query << "select * from " << table_name << " where " << id_name << "='";
-
-    switch (id.get_type()) {
-        case INTEGER:
-            query << id.get_int() << "'";
-            break;
-        case REAL:
-            query << id.get_real() << "'";
-            break;
-        case TEXT:
-            query << id.get_str() << "'";
-            break;
+    query << "select * from " << table_name;
+    if (not(id.get_type() == TEXT && id.get_str().empty() && id_name.empty())) {
+        query << " where " << id_name << "='";
+        switch (id.get_type()) {
+            case INTEGER:
+                query << id.get_int() << "'";
+                break;
+            case REAL:
+                query << id.get_real() << "'";
+                break;
+            case TEXT:
+                query << id.get_str() << "'";
+                break;
+        }
     }
 
     if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {

@@ -8,6 +8,7 @@
 
 #include <gtkmm/entry.h>
 #include <gtkmm/comboboxtext.h>
+#include <fmt/format.h>
 #include "../utils/Date.hpp"
 
 namespace mm {

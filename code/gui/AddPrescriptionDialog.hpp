@@ -8,6 +8,7 @@
 #include <gtkmm/entry.h>
 #include <gtkmm/comboboxtext.h>
 #include "Dialog.hpp"
+#include "Widgets.hpp"
 
 namespace mm {
     class AddPrescriptionDialog : public Dialog {
@@ -32,14 +33,15 @@ namespace mm {
         Gtk::Button *ok_button;
         Gtk::Button *cancel_button;
 
-        Gtk::Entry *addPatientId;
-        Gtk::Entry *addPrescriptionId;
-        Gtk::ComboBoxText *add_issue_day;
-        Gtk::ComboBoxText *add_issue_month;
-        Gtk::ComboBoxText *add_issue_year;
-        Gtk::ComboBoxText *add_expire_day;
-        Gtk::ComboBoxText *add_expire_month;
-        Gtk::ComboBoxText *add_expire_year;
+        EntryController addPatientId;
+        EntryController addPrescriptionId;
+        Gtk::ComboBoxText *addDrugId1;
+        Gtk::ComboBoxText *addDrugId2;
+        Gtk::ComboBoxText *addDrugId3;
+        Gtk::ComboBoxText *addDrugId4;
+        Gtk::ComboBoxText *addDrugId5;
+        DateController issueDate;
+        DateController expireDate;
     };
 }
 

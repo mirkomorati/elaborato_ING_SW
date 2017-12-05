@@ -2090,7 +2090,7 @@ Morati Mirko</property>
             </child>
             <child>
               <object class="GtkComboBoxText" id="addDrugId3">
-                <property name="visible">True</property>
+              <property name="visible">True</property>
                 <property name="can_focus">False</property>
               </object>
               <packing>
@@ -2100,7 +2100,7 @@ Morati Mirko</property>
             </child>
             <child>
               <object class="GtkComboBoxText" id="addDrugId4">
-                <property name="visible">True</property>
+              <property name="visible">True</property>
                 <property name="can_focus">False</property>
               </object>
               <packing>
@@ -2110,7 +2110,7 @@ Morati Mirko</property>
             </child>
             <child>
               <object class="GtkComboBoxText" id="addDrugId5">
-                <property name="visible">True</property>
+              <property name="visible">True</property>
                 <property name="can_focus">False</property>
               </object>
               <packing>
