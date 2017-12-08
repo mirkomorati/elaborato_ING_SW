@@ -20,3 +20,11 @@ label.loginTitle {
     color: #ffffff;
 }
 
+row.activatable:nth-child(even) {
+    background-color: #e8e8e8;
+}
+
+row.activatable:nth-child(odd) {
+    background-color: #cccccc;
+}
+
