@@ -57,7 +57,7 @@ namespace mm {
 
             const vector<Drug> get_drugs() const;
 
-            string get_negative_interactions();
+            string get_negative_interactions() const;
 
             bool is_used() const;
 
