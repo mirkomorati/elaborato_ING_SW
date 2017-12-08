@@ -30,6 +30,9 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
     issueDate.first.set_use_markup(true);
     expirationDate.first.set_use_markup(true);
 
+    prescriptionID.first.set_width_chars(5);
+    prescriptionID.second.set_width_chars(5);
+
     prescriptionID.second.set_label(std::to_string(prescription.get_prescription_id()));
     issueDate.second.set_label(prescription.get_issue_date());
     expirationDate.second.set_label(prescription.get_expire_date());
@@ -51,7 +54,7 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
     detailsGrid.attach(interactionsLabel, 0, 0, 1, 1);
     detailsGrid.attach(interactionsScrolled, 0, 1, 2, 1);
     detailsGrid.attach(used, 1, 2, 1, 1);
-    used.set_active(false);
+    used.set_active(false);// non va
     interactionsTextView.set_buffer(interactionsBuffer);
     interactionsBuffer->set_text(prescription.get_negative_interactions());
 
