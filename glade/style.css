@@ -32,3 +32,6 @@ row.activatable:nth-child(odd) {
     background-color: #cccccc;
 }
 
+row.activatable:hover {
+    background-color: #507DBC;
+}
