@@ -10,6 +10,10 @@
 #include <gtkmm/checkbutton.h>
 #include <gtkmm/treeview.h>
 #include <gtkmm/liststore.h>
+#include <gtkmm/box.h>
+#include <gtkmm/frame.h>
+#include <gtkmm/grid.h>
+#include <gtkmm/textview.h>
 #include "../../model/Prescription.hpp"
 
 namespace mm::view {

@@ -153,8 +153,8 @@ void mm::MainWindow::updatePrescriptionView() {
     auto prescriptions = patient.get_prescriptions();
     for (auto &prescription : prescriptions) {
         std::unique_ptr<mm::view::PrescriptionExpander> tmp(new mm::view::PrescriptionExpander(prescription));
-        prescriptionsExp.push_back(tmp);
         prescriptionBox->pack_start(*tmp);
+        prescriptionsExp.push_back(std::move(tmp));
     }
 }
 
