@@ -7,6 +7,7 @@
 
 #include "Window.hpp"
 #include "Dialog.hpp"
+#include "view/CustomWidgets.hpp"
 #include <list>
 #include <gtkmm/liststore.h>
 #include <gtkmm/treeviewcolumn.h>
@@ -22,11 +23,10 @@ namespace mm {
 
         WindowName next;
         std::list<std::unique_ptr<Dialog>> dialogList;
+        std::vector<std::unique_ptr<view::PrescriptionExpander>> prescriptionsExp;
 
         //-------------------List stores-------------------//
         Glib::RefPtr<Gtk::ListStore> patientListStore;
-        Glib::RefPtr<Gtk::ListStore> prescriptionListStore;
-        Glib::RefPtr<Gtk::ListStore> drugListStore;
 
     public:
         MainWindow();
@@ -44,7 +44,7 @@ namespace mm {
 
         void initHandlers();
 
-        void initTreeViews();
+        void initTreeView();
 
         //-------------------signal handlers-------------------//
         void onAddPatientClicked();
@@ -52,10 +52,6 @@ namespace mm {
         void onAddPrescriptionClicked();
 
         void onSelectedPatient(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *);
-
-        void onSelectedPrescription(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *);
-
-        void onSelectedDrug(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *);
 
         void onRemovePatientClicked();
 
@@ -68,9 +64,7 @@ namespace mm {
 
         void updatePatientTreeView();
 
-        void updatePrescriptionTreeView();
-
-        void updateDrugTreeView();
+        void updatePrescriptionView();
 
         void updatePatientDetailsView();
 
