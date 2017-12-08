@@ -11,9 +11,9 @@
 #include "CustomWidgets.hpp"
 
 mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescription &prescription) :
-        prescriptionID({"<b>ID:</b>", ""}),
-        issueDate({"<b>Data di Emissione:</b>"}, {""}),
-        expirationDate({"<b>Data di Scadenza:</b>", ""}),
+        prescriptionID("<b>ID:</b>", ""),
+        issueDate("<b>Data di Emissione:</b>", ""),
+        expirationDate("<b>Data di Scadenza:</b>", ""),
         gotoButton("Vai"),
         labelBox(Gtk::ORIENTATION_HORIZONTAL, 5 /* spacing */),
         contentBox(Gtk::ORIENTATION_HORIZONTAL, 5 /* spacing */),
