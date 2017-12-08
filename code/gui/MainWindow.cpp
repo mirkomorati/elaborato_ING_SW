@@ -141,6 +141,10 @@ void mm::MainWindow::updatePrescriptionView() {
     auto sel = patientTreeView->get_selection()->get_selected();
     if (not sel) return;
 
+    for (auto it : prescriptionBox->get_children()) {
+        prescriptionBox->remove(*it);
+    }
+
     Glib::ustring patientId = static_cast<Glib::ustring>((*sel)[model::Patient::patientTreeModel.fiscal_code]);
     model::Patient patient;
 

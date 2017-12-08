@@ -18,6 +18,7 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
         labelBox(Gtk::ORIENTATION_HORIZONTAL, 5 /* spacing */),
         contentBox(Gtk::ORIENTATION_HORIZONTAL, 5 /* spacing */),
         interactionsLabel("Possibili Interazioni"),
+        interactionsBuffer(Gtk::TextBuffer::create()),
         used("Usata"),
         drugListStore(Gtk::ListStore::create(model::Drug::drugTreeModel)),
         id(prescription.get_prescription_id()) {
@@ -42,6 +43,7 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
     labelBox.pack_end(gotoButton, false, false);
 
     set_label_widget(labelBox);
+    add(contentBox);
 
     //-------------------content-------------------//
     interactionsScrolled.add(interactionsTextView);
@@ -94,6 +96,8 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
         if (i < drugs.size() - 1)
             row = *(drugListStore->append()++);
     }
+
+    show_all();
 }
 
 int mm::view::PrescriptionExpander::getID() const {
