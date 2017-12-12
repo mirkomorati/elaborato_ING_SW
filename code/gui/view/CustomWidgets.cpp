@@ -81,6 +81,8 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
     // updating the view for the first time
     drugTreeView.set_model(drugListStore);
 
+    drugTreeView.set_grid_lines(Gtk::TreeViewGridLines::TREE_VIEW_GRID_LINES_BOTH);
+
     auto drugs = prescription.get_drugs();
 
     drugListStore->clear();

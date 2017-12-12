@@ -10,14 +10,18 @@ background-image: -gtk-gradient (linear,
 */
 
 #loginGrid {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-    color-stop(0.0, #4CA1AF), color-stop(1.00, #C4E0E5));
+    background-image: image(url("bg_medh.png"), green);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    /*background-image: -gtk-gradient(linear, left top, left bottom,
+    color-stop(0.0, #4CA1AF), color-stop(1.00, #C4E0E5));*/
 }
 
 label.loginTitle {
-    font-size: 50px;
+    font-size: 60px;
+    font-style: italic;
     font-weight: bold;
-    color: #ffffff;
+    color: #5f5f5f;
 }
 
 row.activatable:nth-child(even) {
@@ -28,3 +32,6 @@ row.activatable:nth-child(odd) {
     background-color: #cccccc;
 }
 
+row.activatable:hover {
+    background-color: #507DBC;
+}
