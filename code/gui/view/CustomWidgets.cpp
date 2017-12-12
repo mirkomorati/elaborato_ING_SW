@@ -16,7 +16,6 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
         expirationDate("<b>Data di Scadenza:</b>", ""),
         gotoButton("Vai"),
         labelBox(Gtk::ORIENTATION_HORIZONTAL, 5 /* spacing */),
-        contentBox(Gtk::ORIENTATION_HORIZONTAL, 5 /* spacing */),
         interactionsLabel("Possibili Interazioni"),
         interactionsBuffer(Gtk::TextBuffer::create()),
         used("Usata"),
@@ -46,7 +45,7 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
     labelBox.pack_end(gotoButton, false, false);
 
     set_label_widget(labelBox);
-    add(contentBox);
+    add(contentPaned);
 
     //-------------------content-------------------//
     interactionsScrolled.add(interactionsTextView);
@@ -54,19 +53,18 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
     detailsGrid.attach(interactionsLabel, 0, 0, 1, 1);
     detailsGrid.attach(interactionsScrolled, 0, 1, 2, 1);
     detailsGrid.attach(used, 1, 2, 1, 1);
-    used.set_active(false);// non va
     interactionsTextView.set_buffer(interactionsBuffer);
     interactionsBuffer->set_text(prescription.get_negative_interactions());
 
-    contentBox.pack_start(detailsFrame, true, true);
-
-    contentBox.pack_start(drugTreeView, true, true);
+    contentPaned.pack1(detailsFrame, true, true);
+    contentPaned.pack2(drugTreeView, true, true);
 
     drugTreeView.remove_all_columns();
+    drugTreeView.set_grid_lines(Gtk::TREE_VIEW_GRID_LINES_BOTH);
 
     drugTreeView.append_column("Nome", model::Drug::drugTreeModel.name);
     drugTreeView.append_column("Forma Farmaceutica", model::Drug::drugTreeModel.pharmaceutical_form);
-    drugTreeView.append_column("Classificazione ATC", model::Drug::drugTreeModel.ATC_classification);
+    drugTreeView.append_column("ATC", model::Drug::drugTreeModel.ATC_classification);
     drugTreeView.append_column("Controindicazioni", model::Drug::drugTreeModel.contraindications);
     drugTreeView.append_column("Principi Attivi", model::Drug::drugTreeModel.active_principles);
     drugTreeView.append_column("Prezzo", model::Drug::drugTreeModel.price);
@@ -79,7 +77,7 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
         drugTreeView.get_column_cell_renderer(i)->set_property("ellipsize", Pango::EllipsizeMode::ELLIPSIZE_END);
     }
 
-    drugTreeView.set_model(drugListStore);
+
     // updating the view for the first time
     drugTreeView.set_model(drugListStore);
 

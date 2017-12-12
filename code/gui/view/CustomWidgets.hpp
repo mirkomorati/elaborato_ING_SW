@@ -14,6 +14,7 @@
 #include <gtkmm/frame.h>
 #include <gtkmm/grid.h>
 #include <gtkmm/textview.h>
+#include <gtkmm/hvpaned.h>
 #include "../../model/Prescription.hpp"
 
 namespace mm::view {
@@ -26,7 +27,7 @@ namespace mm::view {
         Gtk::Box labelBox;
 
         // content objects
-        Gtk::Box contentBox;
+        Gtk::HPaned contentPaned;
         Gtk::Frame detailsFrame;
         Gtk::Grid detailsGrid;
         Gtk::Label interactionsLabel;
