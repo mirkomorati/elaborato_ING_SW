@@ -249,7 +249,7 @@ void mm::MainWindow::onRemovePatientClicked() {
             DBMaster::get_instance().remove_from_db(patient);
         } catch (...) {
             spdlog::get("err")->error("cannot delete patient");
-            Gtk::MessageDialog info(*mainWindow, "Impossibile eliminare il pazient", false, Gtk::MESSAGE_INFO,
+            Gtk::MessageDialog info(*mainWindow, "Impossibile eliminare il paziente", false, Gtk::MESSAGE_INFO,
                                     Gtk::BUTTONS_OK);
             info.run();
             return;
