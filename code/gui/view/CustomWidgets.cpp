@@ -53,6 +53,10 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
     detailsGrid.attach(interactionsLabel, 0, 0, 1, 1);
     detailsGrid.attach(interactionsScrolled, 0, 1, 2, 1);
     detailsGrid.attach(used, 1, 2, 1, 1);
+
+    used.set_sensitive(false);
+    if (prescription.is_used()) used.set_active(true);
+
     interactionsTextView.set_buffer(interactionsBuffer);
     interactionsBuffer->set_text(prescription.get_negative_interactions());
 
