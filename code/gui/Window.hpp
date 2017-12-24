@@ -14,7 +14,10 @@ namespace mm {
 
     enum WindowName {
         LOGIN = 0,
-        MAIN
+        MAIN,
+        PATIENT,
+        PRESCRIPTION,
+        DRUG
     };
 
     class Window : public ISubject, public sigc::trackable {

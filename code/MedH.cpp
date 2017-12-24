@@ -7,7 +7,7 @@
 #include "DBMaster.hpp"
 #include "gui/RefBuilder.hpp"
 #include "gui/LoginWindow.hpp"
-#include "gui/MainWindow.hpp"
+#include "gui/PatientWindow.hpp"
 #include "model/Authentication.hpp"
 #include <spdlog/spdlog.h>
 
@@ -97,7 +97,7 @@ void mm::MedH::update() {
             Gtk::Stack *stack;
             RefBuilder::get_instance().get_widget("mainStack", stack);
             stack->set_visible_child("mainNotebook");
-            window.reset(new MainWindow);
+            window.reset(new PatientWindow);
             window->init();
             window->attach(this);
             break;
