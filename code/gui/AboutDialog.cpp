@@ -6,7 +6,10 @@
 #include "RefBuilder.hpp"
 
 mm::AboutDialog::AboutDialog() : active(true) {
+    Gtk::AboutDialog *dialog;
+    RefBuilder::get_instance().get_widget("aboutDialog", dialog);
 
+    dialog->signal_response().connect(sigc::mem_fun(this, &mm::AboutDialog::onResponse));
 }
 
 void mm::AboutDialog::show() {
@@ -31,10 +34,15 @@ void mm::AboutDialog::reset() {
 
 }
 
-void mm::AboutDialog::onLinkClicked() {
-    Gtk::Window *mainWindow;
-    //Gtk
-    GError *error;
-    RefBuilder::get_instance().get_widget("mainWindow", mainWindow);
-    //gtk_show_uri_on_window(mainWindow,,GDK_CURRENT_TIME_STAMP, &error);
+void mm::AboutDialog::onResponse(int id) {
+    switch (id) {
+        case Gtk::ResponseType::RESPONSE_CLOSE:
+        case Gtk::ResponseType::RESPONSE_CANCEL:
+        case Gtk::ResponseType::RESPONSE_DELETE_EVENT:
+            dispose();
+            break;
+
+        default:
+            throw std::logic_error("unexpected response");
+    }
 }

@@ -13,8 +13,6 @@ namespace mm {
 
         void dispose() override;
 
-        void onLinkClicked();
-
     public:
         AboutDialog();
 
@@ -23,6 +21,8 @@ namespace mm {
         bool isActive() override;
 
         void reset() override;
+
+        void onResponse(int id);
     };
 }
 
