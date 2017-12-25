@@ -5,7 +5,7 @@
 #ifndef ELABORATO_ING_SW_MAIN_WINDOW_HPP
 #define ELABORATO_ING_SW_MAIN_WINDOW_HPP
 
-#include <glib/gtypes.h>
+#include <glib.h>
 #include <gtkmm/widget.h>
 #include "Window.hpp"
 #include "Dialog.hpp"

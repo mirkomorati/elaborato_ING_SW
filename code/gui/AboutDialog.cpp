@@ -5,7 +5,9 @@
 #include "AboutDialog.hpp"
 #include "RefBuilder.hpp"
 
-mm::AboutDialog::AboutDialog() : active(true) {}
+mm::AboutDialog::AboutDialog() : active(true) {
+
+}
 
 void mm::AboutDialog::show() {
     Gtk::AboutDialog *dialog;

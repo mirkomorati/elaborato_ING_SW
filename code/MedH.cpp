@@ -7,8 +7,8 @@
 #include "DBMaster.hpp"
 #include "gui/RefBuilder.hpp"
 #include "gui/LoginWindow.hpp"
-#include "gui/PatientWindow.hpp"
 #include "model/Authentication.hpp"
+#include "gui/MainWindow.hpp"
 #include <spdlog/spdlog.h>
 
 int mm::MedH::run() {
@@ -89,18 +89,17 @@ void mm::MedH::update() {
             RefBuilder::get_instance().get_widget("mainStack", stack);
             stack->set_visible_child("loginGrid");
             window.reset(new LoginWindow);
-            window->init();
-            window->attach(this);
             break;
         }
         case MAIN: {
             Gtk::Stack *stack;
             RefBuilder::get_instance().get_widget("mainStack", stack);
             stack->set_visible_child("mainNotebook");
-            window.reset(new PatientWindow);
-            window->init();
-            window->attach(this);
+            window.reset(new MainWindow);
             break;
         }
     }
+
+    window->init();
+    window->attach(this);
 }

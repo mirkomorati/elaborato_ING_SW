@@ -40,8 +40,6 @@ void mm::PatientWindow::initHandlers() {
             sigc::mem_fun(this, &mm::PatientWindow::onAddPrescriptionClicked));
     patientTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::PatientWindow::onSelectedPatient));
     remove_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onRemovePatientClicked));
-    logoutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::PatientWindow::onLogout));
-    aboutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::PatientWindow::onAboutClicked));
 }
 
 void mm::PatientWindow::initTreeView() {
@@ -62,9 +60,6 @@ void mm::PatientWindow::initTreeView() {
 }
 
 bool mm::PatientWindow::init() {
-    Gtk::MenuBar *menuBar;
-    RefBuilder::get_instance().get_widget("menuBar", menuBar);
-    menuBar->set_visible(true);
 
     initHandlers();
     initTreeView();
@@ -260,34 +255,11 @@ void mm::PatientWindow::onRemovePatientClicked() {
     }
 }
 
-void mm::PatientWindow::onLogout() {
-    next = LOGIN;
-    notify();
+mm::PatientWindow::~PatientWindow() {
+    Gtk::TreeView *patientTreeView;
+
+    RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
+
+    patientTreeView->remove_all_columns();
 }
 
-void mm::PatientWindow::onAboutClicked() {
-    std::unique_ptr<Dialog> dialog(new AboutDialog);
-    dialog->show();
-    dialog->attach(this);
-    dialogList.push_back(std::move(dialog));
-}
-
-void mm::PatientWindow::updateDetailStack(mm::PatientWindow::DetailStack page) {
-    // todo delete
-    Gtk::Stack *detail_stack;
-    RefBuilder::get_instance().get_widget("detailStack", detail_stack);
-    // todo sistemare stack pane. Se premo su due prescrizioni diverse non deve chiudersi
-    const Glib::ustring &current = detail_stack->get_visible_child_name();
-
-    if (page == NONE) {
-        detail_stack->set_visible(false);
-        return;
-    }
-
-    if (page == PRESCRIPTION && current != "prescriptionDetail")
-        detail_stack->set_visible_child("prescriptionDetail");
-    else if (page == DRUG && current != "drugDetail")
-        detail_stack->set_visible_child("drugDetail");
-    else
-        detail_stack->set_visible(!detail_stack->get_visible());
-}

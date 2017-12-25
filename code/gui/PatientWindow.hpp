@@ -2,8 +2,8 @@
 // Created by Noè Murr on 29/11/2017.
 //
 
-#ifndef ELABORATO_ING_SW_MAIN_WINDOW_HPP
-#define ELABORATO_ING_SW_MAIN_WINDOW_HPP
+#ifndef ELABORATO_ING_SW_PATIENT_WINDOW_HPP
+#define ELABORATO_ING_SW_PATIENT_WINDOW_HPP
 
 #include "Window.hpp"
 #include "Dialog.hpp"
@@ -14,12 +14,6 @@
 
 namespace mm {
     class PatientWindow : public Window, public IObserver {
-
-        enum DetailStack {
-            PRESCRIPTION,
-            DRUG,
-            NONE
-        };
 
         WindowName next;
         std::list<std::unique_ptr<Dialog>> dialogList;
@@ -39,6 +33,8 @@ namespace mm {
 
         void update() override;
 
+        virtual ~PatientWindow();
+
     private:
         //-------------------init functions-------------------//
 
@@ -55,10 +51,6 @@ namespace mm {
 
         void onRemovePatientClicked();
 
-        void onLogout();
-
-        void onAboutClicked();
-
 
         //-------------------graphics updates-------------------//
 
@@ -68,9 +60,7 @@ namespace mm {
 
         void updatePatientDetailsView();
 
-        void updateDetailStack(DetailStack page);
-
     };
 }
 
-#endif //ELABORATO_ING_SW_MAIN_WINDOW_HPP
+#endif //ELABORATO_ING_SW_PATIENT_WINDOW_HPP

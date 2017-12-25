@@ -5,6 +5,7 @@
 #include "MainWindow.hpp"
 #include "RefBuilder.hpp"
 #include "AboutDialog.hpp"
+#include "PatientWindow.hpp"
 
 bool mm::MainWindow::init() {
     Gtk::MenuBar *menuBar;
@@ -12,6 +13,8 @@ bool mm::MainWindow::init() {
     menuBar->set_visible(true);
 
     initHandlers();
+
+    onPageSwitch(nullptr, 0);
 
     return true;
 }
@@ -28,11 +31,14 @@ void mm::MainWindow::initHandlers() {
     auto refBuilder = RefBuilder::get_instance();
     Gtk::MenuItem *logoutMenuItem;
     Gtk::ImageMenuItem *aboutMenuItem;
+    Gtk::Notebook *notebook;
 
     refBuilder.get_widget("logoutMenuItem", logoutMenuItem);
     refBuilder.get_widget("aboutMenuItem", aboutMenuItem);
+    refBuilder.get_widget("mainNotebook", notebook);
     logoutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::MainWindow::onLogout));
     aboutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::MainWindow::onAboutClicked));
+    notebook->signal_switch_page().connect(sigc::mem_fun(this, &mm::MainWindow::onPageSwitch));
 }
 
 void mm::MainWindow::onLogout() {
@@ -53,16 +59,18 @@ void mm::MainWindow::update() {
 }
 
 void mm::MainWindow::onPageSwitch(Gtk::Widget *page, guint page_number) {
-    (void **) page; // for unused warning
-
     switch (page_number) {
         case 0: {
+            activeTabWindow.reset(new PatientWindow);
+            activeTabWindow->init();
             break;
         }
         case 1: {
+            // create PrescriptionWindow controller
             break;
         }
         case 2: {
+            // create DrugWindow controller
             break;
         }
         default:
