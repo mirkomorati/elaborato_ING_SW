@@ -16,7 +16,10 @@
 
 mm::PatientWindow::PatientWindow() :
         next(MAIN),
-        patientListStore(Gtk::ListStore::create(model::Patient::patientTreeModel)) {}
+        patientListStore(Gtk::ListStore::create(model::Patient::patientTreeModel)),
+        filterOn(false),
+        filterStartDate(util::Date::get_current_date()),
+        filterEndDate(util::Date::get_current_date()) {}
 
 void mm::PatientWindow::initHandlers() {
     auto refBuilder = RefBuilder::get_instance();
@@ -29,6 +32,9 @@ void mm::PatientWindow::initHandlers() {
     Gtk::ImageMenuItem *aboutMenuItem;
     Gtk::Switch *filterSwitch;
     Gtk::RadioButton *year, *quarter, *month, *custom;
+    Gtk::ComboBoxText *yearCombo;
+    Gtk::ComboBoxText *quarterYearCombo, *quarterMonthCombo;
+    Gtk::ComboBoxText *monthYearCombo, *monthMonthCombo;
 
     refBuilder.get_widget("patientTreeView", patientTreeView);
     refBuilder.get_widget("addPatient", add_patient_button);
@@ -41,16 +47,32 @@ void mm::PatientWindow::initHandlers() {
     refBuilder.get_widget("quarterFilterRadioButton", quarter);
     refBuilder.get_widget("monthFilterRadioButton", month);
     refBuilder.get_widget("customFilterRadioButton", custom);
+    refBuilder.get_widget("yearFilterComboBox", yearCombo);
+    refBuilder.get_widget("quarterFilterYearComboBox", quarterYearCombo);
+    refBuilder.get_widget("quarterFilterMonthComboBox", quarterMonthCombo);
+    refBuilder.get_widget("monthFilterYearComboBox", monthYearCombo);
+    refBuilder.get_widget("monthFilterMonthComboBox", monthMonthCombo);
 
     add_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onAddPatientClicked));
     add_prescription_button->signal_clicked().connect(
             sigc::mem_fun(this, &mm::PatientWindow::onAddPrescriptionClicked));
     patientTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::PatientWindow::onSelectedPatient));
     remove_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onRemovePatientClicked));
+
+    //-------------------Filter signals-------------------//
     filterSwitch->property_active().signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onSwitchActivate));
-    year->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterRadioButtonClicked));
-    quarter->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterRadioButtonClicked));
-    month->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterRadioButtonClicked));
+
+    year->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterYearChanged));
+    yearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterYearChanged));
+
+    quarter->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterQuarterChanged));
+    quarterYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterQuarterChanged));
+    quarterMonthCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterQuarterChanged));
+
+    month->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterMonthChanged));
+    monthYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterMonthChanged));
+    monthMonthCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterMonthChanged));
+
     custom->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterRadioButtonClicked));
 }
 
@@ -164,7 +186,20 @@ void mm::PatientWindow::updatePrescriptionView() {
     }
 
     auto prescriptions = patient.get_prescriptions();
-    int i;
+
+    if (filterOn) {
+        auto it = prescriptions.begin();
+        while (it != prescriptions.end()) {
+            util::Date date(it->get_issue_date());
+            if (date < filterStartDate or date >= filterEndDate) {
+                prescriptions.erase(it);
+                it = prescriptions.begin();
+            } else
+                ++it;
+        }
+    }
+
+    int i = 0;
     for (auto &prescription : prescriptions) {
         std::unique_ptr<mm::view::PrescriptionExpander> tmp(new mm::view::PrescriptionExpander(prescription));
         prescriptionList->append(*tmp);
@@ -284,42 +319,47 @@ void mm::PatientWindow::onSwitchActivate() {
 
     filterGrid->set_sensitive(filterSwitch->get_active());
     filterOn = filterSwitch->get_active();
-    onFilterRadioButtonClicked();
+    onFilterYearChanged();
 }
 
 void mm::PatientWindow::onFilterRadioButtonClicked() {
-    auto refBuilder = RefBuilder::get_instance();
-    Gtk::RadioButton *year, *quarter, *month, *custom;
-    Gtk::ComboBoxText *yearCombo;
-    Gtk::Grid *quarterFilterGrid, *monthFilterGrid;
+    if (filterOn) {
+        auto refBuilder = RefBuilder::get_instance();
+        Gtk::RadioButton *year, *quarter, *month, *custom;
+        Gtk::ComboBoxText *yearCombo;
+        Gtk::Grid *quarterFilterGrid, *monthFilterGrid;
 
-    refBuilder.get_widget("yearFilterRadioButton", year);
-    refBuilder.get_widget("quarterFilterRadioButton", quarter);
-    refBuilder.get_widget("monthFilterRadioButton", month);
-    refBuilder.get_widget("customFilterRadioButton", custom);
-    refBuilder.get_widget("yearFilterComboBox", yearCombo);
-    refBuilder.get_widget("quarterFilterGrid", quarterFilterGrid);
-    refBuilder.get_widget("monthFilterGrid", monthFilterGrid);
-    //refBuilder.get_widget("yearFilterComboBox", yearCombo); todo custom
+        refBuilder.get_widget("yearFilterRadioButton", year);
+        refBuilder.get_widget("quarterFilterRadioButton", quarter);
+        refBuilder.get_widget("monthFilterRadioButton", month);
+        refBuilder.get_widget("customFilterRadioButton", custom);
+        refBuilder.get_widget("yearFilterComboBox", yearCombo);
+        refBuilder.get_widget("quarterFilterGrid", quarterFilterGrid);
+        refBuilder.get_widget("monthFilterGrid", monthFilterGrid);
+        //refBuilder.get_widget("yearFilterComboBox", yearCombo); todo custom
 
 
-    yearCombo->set_visible(year->get_active());
-    quarterFilterGrid->set_visible(quarter->get_active());
-    monthFilterGrid->set_visible(month->get_active());
+        yearCombo->set_visible(year->get_active());
+        quarterFilterGrid->set_visible(quarter->get_active());
+        monthFilterGrid->set_visible(month->get_active());
 
-    if (year->get_active()) {
-        int endYear = std::stoi(yearCombo->get_active_text()) + 1;
-        filterStartDate.set_from_str(fmt::format("01/01/{}", yearCombo->get_active_text()));
-        filterEndDate.set_from_str(fmt::format("01/01/{}", endYear));
-    } else if (quarter->get_active()) {
-        // todo
+        if (year->get_active()) {
+            filterStartDate.set_from_str(fmt::format("01/01/{}", yearCombo->get_active_text().c_str()));
+            filterEndDate.set_from_str(fmt::format("31/12/{}", yearCombo->get_active_text().c_str()));
 
-    } else if (month->get_active()) {
-        // todo
+            spdlog::get("out")->info("Filter on. start date: {}. end date: {}.",
+                                     filterStartDate.get_as_text(), filterEndDate.get_as_text());
+        } else if (quarter->get_active()) {
+            // todo
 
-    } else if (custom->get_active()) {
-        // todo
+        } else if (month->get_active()) {
+            // todo
+
+        } else if (custom->get_active()) {
+            // todo
+        }
     }
+    updatePrescriptionView();
 }
 
 void mm::PatientWindow::initFilters() {
@@ -350,5 +390,87 @@ void mm::PatientWindow::initFilters() {
 
     quarterMonthCombo->set_active_text(Glib::ustring::format(util::Date::get_current_month()));
     monthMonthCombo->set_active_text(Glib::ustring::format(util::Date::get_current_month()));
+}
+
+void mm::PatientWindow::onFilterYearChanged() {
+    if (filterOn) {
+        auto refBuilder = RefBuilder::get_instance();
+        Gtk::RadioButton *year;
+        Gtk::ComboBoxText *yearCombo;
+
+        refBuilder.get_widget("yearFilterRadioButton", year);
+        refBuilder.get_widget("yearFilterComboBox", yearCombo);
+
+        yearCombo->set_visible(year->get_active());
+
+        if (year->get_active()) {
+            filterStartDate.set_from_str(fmt::format("01/01/{}", yearCombo->get_active_text().c_str()));
+            filterEndDate = filterStartDate;
+            filterEndDate.add_years(1);
+
+            spdlog::get("out")->info("Filter on. start date: {}. end date: {}.",
+                                     filterStartDate.get_as_text(), filterEndDate.get_as_text());
+        }
+    }
+
+    updatePrescriptionView();
+}
+
+void mm::PatientWindow::onFilterQuarterChanged() {
+    if (filterOn) {
+        auto refBuilder = RefBuilder::get_instance();
+        Gtk::RadioButton *quarter;
+        Gtk::ComboBoxText *yearCombo, *monthCombo;
+        Gtk::Grid *quarterFilterGrid;
+
+        refBuilder.get_widget("quarterFilterRadioButton", quarter);
+        refBuilder.get_widget("quarterFilterYearComboBox", yearCombo);
+        refBuilder.get_widget("quarterFilterMonthComboBox", monthCombo);
+        refBuilder.get_widget("quarterFilterGrid", quarterFilterGrid);
+
+        quarterFilterGrid->set_visible(quarter->get_active());
+
+        if (quarter->get_active()) {
+            filterStartDate.set_from_str(fmt::format("01/{}/{}",
+                                                     monthCombo->get_active_text().c_str(),
+                                                     yearCombo->get_active_text().c_str()));
+            filterEndDate = filterStartDate;
+            filterEndDate.add_months(3);
+
+            spdlog::get("out")->info("Filter on. start date: {}. end date: {}.",
+                                     filterStartDate.get_as_text(), filterEndDate.get_as_text());
+        }
+    }
+
+    updatePrescriptionView();
+}
+
+void mm::PatientWindow::onFilterMonthChanged() {
+    if (filterOn) {
+        auto refBuilder = RefBuilder::get_instance();
+        Gtk::RadioButton *month;
+        Gtk::ComboBoxText *yearCombo, *monthCombo;
+        Gtk::Grid *filterGrid;
+
+        refBuilder.get_widget("monthFilterRadioButton", month);
+        refBuilder.get_widget("monthFilterYearComboBox", yearCombo);
+        refBuilder.get_widget("monthFilterMonthComboBox", monthCombo);
+        refBuilder.get_widget("monthFilterGrid", filterGrid);
+
+        filterGrid->set_visible(month->get_active());
+
+        if (month->get_active()) {
+            filterStartDate.set_from_str(fmt::format("01/{}/{}",
+                                                     monthCombo->get_active_text().c_str(),
+                                                     yearCombo->get_active_text().c_str()));
+            filterEndDate = filterStartDate;
+            filterEndDate.add_months(1);
+
+            spdlog::get("out")->info("Filter on. start date: {}. end date: {}.",
+                                     filterStartDate.get_as_text(), filterEndDate.get_as_text());
+        }
+    }
+
+    updatePrescriptionView();
 }
 

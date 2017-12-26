@@ -16,6 +16,8 @@ namespace mm {
 
             Date();
 
+            Date(const std::string &str);
+
             void set_from_str(std::string str);
 
             const std::string get_as_text();
@@ -43,6 +45,10 @@ namespace mm {
                 return os;
             }
 
+            void add_months(unsigned int months);
+
+            void add_years(unsigned int years);
+
             int day;
             int month;
             int year;
@@ -54,6 +60,10 @@ namespace mm {
             static int get_current_year();
 
             static Date get_current_date();
+
+            static inline bool is_leap_year(int year) {
+                return (year % 4 == 0 and year % 100 != 0) or year % 400 == 0;
+            };
         };
     }
 }

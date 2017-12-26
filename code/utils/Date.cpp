@@ -139,3 +139,31 @@ mm::util::Date mm::util::Date::operator+(int days) {
 mm::util::Date mm::util::Date::get_current_date() {
     return {util::Date::get_current_day(), util::Date::get_current_month(), util::Date::get_current_year()};
 }
+
+mm::util::Date::Date(const std::string &str) {
+    set_from_str(str);
+}
+
+void mm::util::Date::add_months(unsigned int months) {
+    int days_per_month[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+    if (is_leap_year(year)) days_per_month[2] = 28;
+
+    while (months > 0) {
+        if (++month > 12) {
+            if (is_leap_year(++year)) days_per_month[2] = 28;
+            else days_per_month[2] = 29;
+            month = 1;
+        } else {
+            if (day > days_per_month[month]) {
+                day -= days_per_month[month];
+                ++month;
+            }
+        }
+        --months;
+    }
+}
+
+void mm::util::Date::add_years(unsigned int years) {
+    add_months(years * 12);
+}

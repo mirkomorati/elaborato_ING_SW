@@ -63,6 +63,14 @@ namespace mm {
 
         void onFilterRadioButtonClicked();
 
+        void onFilterYearChanged();
+
+        void onFilterQuarterChanged();
+
+        void onFilterMonthChanged();
+
+        void onFilterCustomChanged();
+
         //-------------------graphics updates-------------------//
 
         void updatePatientTreeView();
