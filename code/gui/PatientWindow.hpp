@@ -33,7 +33,7 @@ namespace mm {
 
         void update() override;
 
-        virtual ~PatientWindow();
+        ~PatientWindow() override;
 
     private:
         //-------------------init functions-------------------//

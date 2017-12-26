@@ -66,11 +66,11 @@ void mm::MainWindow::onPageSwitch(Gtk::Widget *page, guint page_number) {
             break;
         }
         case 1: {
-            // create PrescriptionWindow controller
+            // todo create PrescriptionWindow controller
             break;
         }
         case 2: {
-            // create DrugWindow controller
+            // todo create DrugWindow controller
             break;
         }
         default:
