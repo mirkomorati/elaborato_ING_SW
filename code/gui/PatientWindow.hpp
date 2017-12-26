@@ -51,6 +51,7 @@ namespace mm {
 
         void onRemovePatientClicked();
 
+        void onSwitchActivate();
 
         //-------------------graphics updates-------------------//
 

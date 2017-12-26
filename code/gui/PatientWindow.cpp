@@ -27,6 +27,7 @@ void mm::PatientWindow::initHandlers() {
     Gtk::ToolButton *remove_patient_button;
     Gtk::MenuItem *logoutMenuItem;
     Gtk::ImageMenuItem *aboutMenuItem;
+    Gtk::Switch *filterSwitch;
 
     refBuilder.get_widget("patientTreeView", patientTreeView);
     refBuilder.get_widget("addPatient", add_patient_button);
@@ -34,12 +35,14 @@ void mm::PatientWindow::initHandlers() {
     refBuilder.get_widget("removePatient", remove_patient_button);
     refBuilder.get_widget("logoutMenuItem", logoutMenuItem);
     refBuilder.get_widget("aboutMenuItem", aboutMenuItem);
+    refBuilder.get_widget("filterSwitch", filterSwitch);
 
     add_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onAddPatientClicked));
     add_prescription_button->signal_clicked().connect(
             sigc::mem_fun(this, &mm::PatientWindow::onAddPrescriptionClicked));
     patientTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::PatientWindow::onSelectedPatient));
     remove_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onRemovePatientClicked));
+    filterSwitch->property_active().signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onSwitchActivate));
 }
 
 void mm::PatientWindow::initTreeView() {
@@ -261,5 +264,17 @@ mm::PatientWindow::~PatientWindow() {
     RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
 
     patientTreeView->remove_all_columns();
+}
+
+void mm::PatientWindow::onSwitchActivate() {
+    Gtk::Grid *filterGrid;
+    Gtk::Switch *filterSwitch;
+    RefBuilder::get_instance().get_widget("filterGrid", filterGrid);
+    RefBuilder::get_instance().get_widget("filterSwitch", filterSwitch);
+
+    if (filterSwitch->activate())
+        filterGrid->set_sensitive(true);
+    else
+        filterGrid->set_sensitive(false);
 }
 
