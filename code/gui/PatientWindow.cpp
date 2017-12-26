@@ -30,6 +30,7 @@ void mm::PatientWindow::initHandlers() {
     Gtk::ToolButton *add_patient_button;
     Gtk::ToolButton *add_prescription_button;
     Gtk::ToolButton *remove_patient_button;
+    Gtk::ToolButton *remove_prescription_button;
     Gtk::MenuItem *logoutMenuItem;
     Gtk::ImageMenuItem *aboutMenuItem;
     Gtk::Switch *filterSwitch;
@@ -44,6 +45,7 @@ void mm::PatientWindow::initHandlers() {
     refBuilder.get_widget("addPatient", add_patient_button);
     refBuilder.get_widget("addPrescription", add_prescription_button);
     refBuilder.get_widget("removePatient", remove_patient_button);
+    refBuilder.get_widget("removePrescription", remove_prescription_button);
     refBuilder.get_widget("logoutMenuItem", logoutMenuItem);
     refBuilder.get_widget("aboutMenuItem", aboutMenuItem);
     refBuilder.get_widget("filterSwitch", filterSwitch);
@@ -69,6 +71,8 @@ void mm::PatientWindow::initHandlers() {
             sigc::mem_fun(this, &mm::PatientWindow::onAddPrescriptionClicked));
     patientTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::PatientWindow::onSelectedPatient));
     remove_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onRemovePatientClicked));
+    remove_prescription_button->signal_clicked().connect(
+            sigc::mem_fun(this, &mm::PatientWindow::onRemovePrescriptionClicked));
 
     //-------------------Filter signals-------------------//
     filterSwitch->property_active().signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onSwitchActivate));
@@ -270,7 +274,7 @@ void mm::PatientWindow::updatePatientDetailsView() {
     address->set_label(patient.get_address());
 }
 
-void mm::PatientWindow::onRemovePatientClicked() {
+void mm::PatientWindow::onRemovePatientClicked() { // todo non va ancora una sega
     Gtk::Window *mainWindow;
     Gtk::TreeView *patientTreeView;
     model::Patient patient;
@@ -319,6 +323,7 @@ void mm::PatientWindow::onRemovePatientClicked() {
         updatePatientTreeView();
     }
 }
+
 
 mm::PatientWindow::~PatientWindow() {
     Gtk::TreeView *patientTreeView;
@@ -478,5 +483,61 @@ void mm::PatientWindow::onFilterCustomChanged() {
     }
 
     updatePrescriptionView();
+}
+
+void mm::PatientWindow::onRemovePrescriptionClicked() {
+    Gtk::Window *mainWindow;
+    Gtk::ListBox *listBox;
+    model::Prescription prescription;
+
+    RefBuilder::get_instance().get_widget("mainWindow", mainWindow);
+    RefBuilder::get_instance().get_widget("prescriptionList", listBox);
+
+    auto sel = listBox->get_selected_row();
+
+    if (not sel) {
+        Gtk::MessageDialog info(*mainWindow, "Nessuna prescrizione selezionata", false, Gtk::MESSAGE_INFO,
+                                Gtk::BUTTONS_OK);
+        info.run();
+        return;
+    }
+
+    view::PrescriptionExpander *pExpander;
+
+    if (not(pExpander = dynamic_cast<view::PrescriptionExpander *>(sel->get_header()))) {
+        throw logic_error("header of Prescription list box is not a prescriptionExpander obj");
+    }
+
+    Glib::ustring prescriptionID = static_cast<Glib::ustring>(std::to_string(pExpander->getID()));
+
+    try {
+        DBMaster::get_instance().extract_from_db(prescription, prescriptionID.c_str());
+    } catch (record_not_found_error &e) {
+        throw std::runtime_error("cannot get the prescription from the db...");
+    }
+
+    Gtk::MessageDialog confirm(*mainWindow,
+                               "Confermi di voler eliminare la prescrizione?",
+                               false, Gtk::MESSAGE_QUESTION, Gtk::BUTTONS_OK_CANCEL);
+
+    confirm.set_secondary_text(
+            fmt::format("Confermi di voler rimuovere la prescrizione con id: {} dal database?",
+                        prescription.get_prescription_id()));
+
+    auto result = confirm.run();
+
+    if (result == Gtk::RESPONSE_OK) {
+        try {
+            DBMaster::get_instance().remove_from_db(prescription);
+        } catch (...) {
+            spdlog::get("err")->error("cannot delete prescription");
+            Gtk::MessageDialog info(*mainWindow, "Impossibile eliminare la prescrizione", false, Gtk::MESSAGE_INFO,
+                                    Gtk::BUTTONS_OK);
+            info.run();
+            return;
+        }
+
+        updatePatientTreeView();
+    }
 }
 

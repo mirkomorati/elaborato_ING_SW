@@ -72,6 +72,7 @@ bool mm::MedH::init() {
 }
 
 mm::MedH::MedH(int argc, char **argv) : window(new LoginWindow) {
+    if (not init()) throw std::runtime_error("cannot initialize the app");
     this->app = Gtk::Application::create(argc, argv, "it.mm.org");
     if (not window->init()) throw std::runtime_error("cannot init the window");
     window->attach(this);
@@ -97,6 +98,9 @@ void mm::MedH::update() {
             stack->set_visible_child("mainNotebook");
             window.reset(new MainWindow);
             break;
+        }
+        default: {
+            throw std::logic_error("unknown page on MedH::update switch");
         }
     }
 

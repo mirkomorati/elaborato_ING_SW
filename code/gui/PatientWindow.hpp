@@ -62,6 +62,8 @@ namespace mm {
 
         void onRemovePatientClicked();
 
+        void onRemovePrescriptionClicked();
+
         void onSwitchActivate();
 
         void onFilterYearChanged();

@@ -10,14 +10,13 @@
 #include "gui/Window.hpp"
 
 namespace mm {
-    // todo cambiare tutto, no static
     class MedH : IObserver {
         std::unique_ptr<Window> window;
 
+        bool init();
+
     public:
         MedH(int argc, char **argv);
-
-        static bool init();
 
         Glib::RefPtr<Gtk::Application> app;
 
