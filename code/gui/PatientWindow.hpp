@@ -8,6 +8,7 @@
 #include "Window.hpp"
 #include "Dialog.hpp"
 #include "view/CustomWidgets.hpp"
+#include "../utils/Date.hpp"
 #include <list>
 #include <gtkmm/liststore.h>
 #include <gtkmm/treeviewcolumn.h>
@@ -21,6 +22,11 @@ namespace mm {
 
         //-------------------List stores-------------------//
         Glib::RefPtr<Gtk::ListStore> patientListStore;
+
+        //-------------------Filter utilities-------------------//
+        bool filterOn;
+        util::Date filterStartDate;
+        util::Date filterEndDate;
 
     public:
         PatientWindow();
@@ -42,6 +48,8 @@ namespace mm {
 
         void initTreeView();
 
+        void initFilters();
+
         //-------------------signal handlers-------------------//
         void onAddPatientClicked();
 
@@ -52,6 +60,8 @@ namespace mm {
         void onRemovePatientClicked();
 
         void onSwitchActivate();
+
+        void onFilterRadioButtonClicked();
 
         //-------------------graphics updates-------------------//
 

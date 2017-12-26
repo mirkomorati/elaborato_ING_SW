@@ -18,7 +18,7 @@ namespace mm {
 
             void set_from_str(std::string str);
 
-            const std::string get_text();
+            const std::string get_as_text();
 
             bool is_valid();
 
