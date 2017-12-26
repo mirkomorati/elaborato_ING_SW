@@ -61,15 +61,13 @@ namespace mm {
 
         void onSwitchActivate();
 
-        void onFilterRadioButtonClicked();
-
         void onFilterYearChanged();
 
         void onFilterQuarterChanged();
 
         void onFilterMonthChanged();
 
-        void onFilterCustomChanged();
+        void onFilterCustomChanged(); // todo
 
         //-------------------graphics updates-------------------//
 
