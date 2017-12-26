@@ -9,6 +9,7 @@
 #include "Dialog.hpp"
 #include "view/CustomWidgets.hpp"
 #include "../utils/Date.hpp"
+#include "Widgets.hpp"
 #include <list>
 #include <gtkmm/liststore.h>
 #include <gtkmm/treeviewcolumn.h>
@@ -27,6 +28,8 @@ namespace mm {
         bool filterOn;
         util::Date filterStartDate;
         util::Date filterEndDate;
+        DateController customFilterFromDateController;
+        DateController customFilterToDateController;
 
     public:
         PatientWindow();
@@ -67,7 +70,7 @@ namespace mm {
 
         void onFilterMonthChanged();
 
-        void onFilterCustomChanged(); // todo
+        void onFilterCustomChanged();
 
         //-------------------graphics updates-------------------//
 

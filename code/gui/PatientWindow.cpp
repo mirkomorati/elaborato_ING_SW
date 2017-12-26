@@ -19,7 +19,9 @@ mm::PatientWindow::PatientWindow() :
         patientListStore(Gtk::ListStore::create(model::Patient::patientTreeModel)),
         filterOn(false),
         filterStartDate(util::Date::get_current_date()),
-        filterEndDate(util::Date::get_current_date()) {}
+        filterEndDate(util::Date::get_current_date()),
+        customFilterFromDateController("customFilterFromDay", "customFilterFromMonth", "customFilterFromYear"),
+        customFilterToDateController("customFilterToDay", "customFilterToMonth", "customFilterToYear") {}
 
 void mm::PatientWindow::initHandlers() {
     auto refBuilder = RefBuilder::get_instance();
@@ -35,6 +37,8 @@ void mm::PatientWindow::initHandlers() {
     Gtk::ComboBoxText *yearCombo;
     Gtk::ComboBoxText *quarterYearCombo, *quarterMonthCombo;
     Gtk::ComboBoxText *monthYearCombo, *monthMonthCombo;
+    Gtk::ComboBoxText *customFromDayCombo, *customFromMonthCombo, *customFromYearCombo;
+    Gtk::ComboBoxText *customToDayCombo, *customToMonthCombo, *customToYearCombo;
 
     refBuilder.get_widget("patientTreeView", patientTreeView);
     refBuilder.get_widget("addPatient", add_patient_button);
@@ -52,6 +56,13 @@ void mm::PatientWindow::initHandlers() {
     refBuilder.get_widget("quarterFilterMonthComboBox", quarterMonthCombo);
     refBuilder.get_widget("monthFilterYearComboBox", monthYearCombo);
     refBuilder.get_widget("monthFilterMonthComboBox", monthMonthCombo);
+    refBuilder.get_widget("customFilterFromDay", customFromDayCombo);
+    refBuilder.get_widget("customFilterFromMonth", customFromMonthCombo);
+    refBuilder.get_widget("customFilterFromYear", customFromYearCombo);
+    refBuilder.get_widget("customFilterToDay", customToDayCombo);
+    refBuilder.get_widget("customFilterToMonth", customToMonthCombo);
+    refBuilder.get_widget("customFilterToYear", customToYearCombo);
+
 
     add_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onAddPatientClicked));
     add_prescription_button->signal_clicked().connect(
@@ -72,6 +83,14 @@ void mm::PatientWindow::initHandlers() {
     month->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterMonthChanged));
     monthYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterMonthChanged));
     monthMonthCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterMonthChanged));
+
+    custom->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterCustomChanged));
+    customFromDayCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterCustomChanged));
+    customFromMonthCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterCustomChanged));
+    customFromYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterCustomChanged));
+    customToDayCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterCustomChanged));
+    customToMonthCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterCustomChanged));
+    customToYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterCustomChanged));
 }
 
 void mm::PatientWindow::initTreeView() {
@@ -429,6 +448,29 @@ void mm::PatientWindow::onFilterMonthChanged() {
                                                      yearCombo->get_active_text().c_str()));
             filterEndDate = filterStartDate;
             filterEndDate.add_months(1);
+
+            spdlog::get("out")->info("Filter on. start date: {}. end date: {}.",
+                                     filterStartDate.get_as_text(), filterEndDate.get_as_text());
+        }
+    }
+
+    updatePrescriptionView();
+}
+
+void mm::PatientWindow::onFilterCustomChanged() {
+    if (filterOn) {
+        auto refBuilder = RefBuilder::get_instance();
+        Gtk::Grid *filterGrid;
+        Gtk::RadioButton *custom;
+
+        refBuilder.get_widget("customFilterRadioButton", custom);
+        refBuilder.get_widget("customFilterGrid", filterGrid);
+
+        filterGrid->set_visible(custom->get_active());
+
+        if (custom->get_active()) {
+            filterStartDate = customFilterFromDateController.getDate();
+            filterEndDate = customFilterToDateController.getDate();
 
             spdlog::get("out")->info("Filter on. start date: {}. end date: {}.",
                                      filterStartDate.get_as_text(), filterEndDate.get_as_text());
