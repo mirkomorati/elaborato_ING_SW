@@ -272,9 +272,6 @@ void mm::PatientWindow::onSwitchActivate() {
     RefBuilder::get_instance().get_widget("filterGrid", filterGrid);
     RefBuilder::get_instance().get_widget("filterSwitch", filterSwitch);
 
-    if (filterSwitch->activate())
-        filterGrid->set_sensitive(true);
-    else
-        filterGrid->set_sensitive(false);
+    filterGrid->set_sensitive(filterSwitch->get_active());
 }
 
