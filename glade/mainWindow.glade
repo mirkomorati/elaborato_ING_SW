@@ -801,6 +801,8 @@
                                           <object class="GtkGrid">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
+                                            <property name="halign">center</property>
+                                            <property name="hexpand">True</property>
                                             <property name="column_spacing">5</property>
                                             <child>
                                               <object class="GtkSwitch" id="filterSwitch">
@@ -859,6 +861,7 @@
                                             </child>
                                             <child>
                                               <object class="GtkComboBoxText" id="yearFilterComboBox">
+                                                <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                               </object>
                                               <packing>
@@ -897,12 +900,15 @@
                                             <child>
                                               <object class="GtkGrid" id="monthFilterGrid">
                                                 <property name="can_focus">False</property>
+                                                <property name="halign">center</property>
+                                                <property name="hexpand">True</property>
                                                 <property name="row_homogeneous">True</property>
                                                 <property name="column_homogeneous">True</property>
                                                 <child>
                                                   <object class="GtkLabel">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
+                                                    <property name="halign">center</property>
                                                     <property name="label" translatable="yes">/</property>
                                                   </object>
                                                   <packing>
@@ -911,22 +917,26 @@
                                                   </packing>
                                                 </child>
                                                 <child>
-                                                  <object class="GtkComboBoxText">
+                                                  <object class="GtkComboBoxText" id="monthFilterYearComboBox">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
+                                                    <property name="halign">center</property>
+                                                    <property name="hexpand">True</property>
                                                   </object>
                                                   <packing>
-                                                    <property name="left_attach">0</property>
+                                                    <property name="left_attach">2</property>
                                                     <property name="top_attach">0</property>
                                                   </packing>
                                                 </child>
                                                 <child>
-                                                  <object class="GtkComboBoxText">
+                                                  <object class="GtkComboBoxText" id="monthFilterMonthComboBox">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
+                                                    <property name="halign">center</property>
+                                                    <property name="hexpand">True</property>
                                                   </object>
                                                   <packing>
-                                                    <property name="left_attach">2</property>
+                                                    <property name="left_attach">0</property>
                                                     <property name="top_attach">0</property>
                                                   </packing>
                                                 </child>
@@ -953,14 +963,16 @@
                                             <child>
                                               <object class="GtkGrid" id="quarterFilterGrid">
                                                 <property name="can_focus">False</property>
+                                                <property name="halign">center</property>
+                                                <property name="hexpand">False</property>
                                                 <property name="row_homogeneous">True</property>
                                                 <property name="column_homogeneous">True</property>
                                                 <child>
                                                   <object class="GtkLabel">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
-                                                    <property name="margin_left">5</property>
-                                                    <property name="margin_right">5</property>
+                                                    <property name="halign">center</property>
+                                                    <property name="hexpand">False</property>
                                                     <property name="label" translatable="yes">/</property>
                                                   </object>
                                                   <packing>
@@ -969,9 +981,11 @@
                                                   </packing>
                                                 </child>
                                                 <child>
-                                                  <object class="GtkComboBoxText">
+                                                  <object class="GtkComboBoxText" id="quarterFilterMonthComboBox">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
+                                                    <property name="halign">center</property>
+                                                    <property name="hexpand">False</property>
                                                   </object>
                                                   <packing>
                                                     <property name="left_attach">0</property>
@@ -979,9 +993,11 @@
                                                   </packing>
                                                 </child>
                                                 <child>
-                                                  <object class="GtkComboBoxText">
+                                                  <object class="GtkComboBoxText" id="quarterFilterYearComboBox">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
+                                                    <property name="halign">center</property>
+                                                    <property name="hexpand">True</property>
                                                   </object>
                                                   <packing>
                                                     <property name="left_attach">2</property>

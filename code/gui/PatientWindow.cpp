@@ -28,6 +28,7 @@ void mm::PatientWindow::initHandlers() {
     Gtk::MenuItem *logoutMenuItem;
     Gtk::ImageMenuItem *aboutMenuItem;
     Gtk::Switch *filterSwitch;
+    Gtk::RadioButton *year, *quarter, *month, *custom;
 
     refBuilder.get_widget("patientTreeView", patientTreeView);
     refBuilder.get_widget("addPatient", add_patient_button);
@@ -36,6 +37,10 @@ void mm::PatientWindow::initHandlers() {
     refBuilder.get_widget("logoutMenuItem", logoutMenuItem);
     refBuilder.get_widget("aboutMenuItem", aboutMenuItem);
     refBuilder.get_widget("filterSwitch", filterSwitch);
+    refBuilder.get_widget("yearFilterRadioButton", year);
+    refBuilder.get_widget("quarterFilterRadioButton", quarter);
+    refBuilder.get_widget("monthFilterRadioButton", month);
+    refBuilder.get_widget("customFilterRadioButton", custom);
 
     add_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onAddPatientClicked));
     add_prescription_button->signal_clicked().connect(
@@ -43,6 +48,10 @@ void mm::PatientWindow::initHandlers() {
     patientTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::PatientWindow::onSelectedPatient));
     remove_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onRemovePatientClicked));
     filterSwitch->property_active().signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onSwitchActivate));
+    year->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterRadioButtonClicked));
+    quarter->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterRadioButtonClicked));
+    month->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterRadioButtonClicked));
+    custom->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterRadioButtonClicked));
 }
 
 void mm::PatientWindow::initTreeView() {
@@ -66,6 +75,7 @@ bool mm::PatientWindow::init() {
 
     initHandlers();
     initTreeView();
+    initFilters();
 
     return true;
 }
@@ -273,5 +283,72 @@ void mm::PatientWindow::onSwitchActivate() {
     RefBuilder::get_instance().get_widget("filterSwitch", filterSwitch);
 
     filterGrid->set_sensitive(filterSwitch->get_active());
+    filterOn = filterSwitch->get_active();
+    onFilterRadioButtonClicked();
+}
+
+void mm::PatientWindow::onFilterRadioButtonClicked() {
+    auto refBuilder = RefBuilder::get_instance();
+    Gtk::RadioButton *year, *quarter, *month, *custom;
+    Gtk::ComboBoxText *yearCombo;
+    Gtk::Grid *quarterFilterGrid, *monthFilterGrid;
+
+    refBuilder.get_widget("yearFilterRadioButton", year);
+    refBuilder.get_widget("quarterFilterRadioButton", quarter);
+    refBuilder.get_widget("monthFilterRadioButton", month);
+    refBuilder.get_widget("customFilterRadioButton", custom);
+    refBuilder.get_widget("yearFilterComboBox", yearCombo);
+    refBuilder.get_widget("quarterFilterGrid", quarterFilterGrid);
+    refBuilder.get_widget("monthFilterGrid", monthFilterGrid);
+    //refBuilder.get_widget("yearFilterComboBox", yearCombo); todo custom
+
+
+    yearCombo->set_visible(year->get_active());
+    quarterFilterGrid->set_visible(quarter->get_active());
+    monthFilterGrid->set_visible(month->get_active());
+
+    if (year->get_active()) {
+        int endYear = std::stoi(yearCombo->get_active_text()) + 1;
+        filterStartDate.set_from_str(fmt::format("01/01/{}", yearCombo->get_active_text()));
+        filterEndDate.set_from_str(fmt::format("01/01/{}", endYear));
+    } else if (quarter->get_active()) {
+        // todo
+
+    } else if (month->get_active()) {
+        // todo
+
+    } else if (custom->get_active()) {
+        // todo
+    }
+}
+
+void mm::PatientWindow::initFilters() {
+    auto refBuilder = RefBuilder::get_instance();
+    Gtk::ComboBoxText *yearCombo;
+    Gtk::ComboBoxText *quarterMonthCombo, *quarterYearCombo;
+    Gtk::ComboBoxText *monthMonthCombo, *monthYearCombo;
+
+    refBuilder.get_widget("yearFilterComboBox", yearCombo);
+    refBuilder.get_widget("quarterFilterMonthComboBox", quarterMonthCombo);
+    refBuilder.get_widget("quarterFilterYearComboBox", quarterYearCombo);
+    refBuilder.get_widget("monthFilterMonthComboBox", monthMonthCombo);
+    refBuilder.get_widget("monthFilterYearComboBox", monthYearCombo);
+
+    for (int i = util::Date::get_current_year(); i >= 1920; i--) {
+        yearCombo->append(Glib::ustring::format(i));
+        quarterYearCombo->append(Glib::ustring::format(i));
+        monthYearCombo->append(Glib::ustring::format(i));
+    }
+    for (int i = 1; i <= 12; i++) {
+        quarterMonthCombo->append(Glib::ustring((i < 10 ? "0" : "")).append(Glib::ustring::format(i)));
+        monthMonthCombo->append(Glib::ustring((i < 10 ? "0" : "")).append(Glib::ustring::format(i)));
+    }
+
+    yearCombo->set_active_text(Glib::ustring::format(util::Date::get_current_year()));
+    quarterYearCombo->set_active_text(Glib::ustring::format(util::Date::get_current_year()));
+    monthYearCombo->set_active_text(Glib::ustring::format(util::Date::get_current_year()));
+
+    quarterMonthCombo->set_active_text(Glib::ustring::format(util::Date::get_current_month()));
+    monthMonthCombo->set_active_text(Glib::ustring::format(util::Date::get_current_month()));
 }
 
