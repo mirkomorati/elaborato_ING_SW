@@ -8,10 +8,7 @@ mm::Configuration *mm::Configuration::instance = nullptr;
 std::string mm::Configuration::config_file_name;
 
 mm::Configuration::Configuration() noexcept(false) {
-    if (Configuration::config_file_name.empty())
-        throw std::invalid_argument(
-                "Set the path ostream the configuration file first. with a call to "
-                        "mm::Configuration::set_db_file_name()");
+    assert(not config_file_name.empty());
 
     std::ifstream config_file(Configuration::config_file_name);
 
@@ -36,10 +33,12 @@ void
 mm::Configuration::set_config_file_name(const std::string &config_file_name) {
     Configuration::config_file_name = config_file_name;
 
-    if (instance != nullptr) {
-        delete instance;
-        instance = nullptr;
-    }
+    delete instance;
+    instance = nullptr;
+}
+
+mm::Configuration::~Configuration() {
+    delete instance;
 }
 
 mm::key_not_found_error::key_not_found_error(const std::string &str)

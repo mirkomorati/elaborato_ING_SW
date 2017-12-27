@@ -24,10 +24,7 @@ void mm::DBMaster::set_db_file_name(const std::string &db_file_name) {
 }
 
 mm::DBMaster::DBMaster() noexcept(false) {
-    if (DBMaster::db_file_name.empty()) {
-        throw std::invalid_argument("Set the database file before call "
-                                            "get_instance with static call to DBMaster::set_db_file_name");
-    }
+    assert(not DBMaster::db_file_name.empty());
 
     if (sqlite3_open(DBMaster::db_file_name.c_str(), &db)) {
         throw std::runtime_error(fmt::format("Error cannot open database from file: {}", DBMaster::db_file_name));
@@ -62,7 +59,7 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
             ss << ");";
     }
 
-    if (sqlite3_prepare(db, ss.str().c_str(), -1, &stmt, 0) == SQLITE_OK) {
+    if (sqlite3_prepare(db, ss.str().c_str(), -1, &stmt, nullptr) == SQLITE_OK) {
         if ((sqlite3_step(stmt)) == SQLITE_ROW) {
             auto serialized_map = obj.serialize();
             if (sqlite3_column_int(stmt, 0) >= 1) {
@@ -85,7 +82,7 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
 
                 sqlite3_finalize(stmt); // previous stmt
 
-                if (sqlite3_prepare(db, ss.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
+                if (sqlite3_prepare(db, ss.str().c_str(), -1, &stmt, nullptr) == SQLITE_ERROR) {
                     throw std::runtime_error(
                             fmt::format("cannot update row with query: \"{}\"\nsqlite error: {}", ss.str(),
                                         sqlite3_errmsg(db)));
@@ -112,7 +109,7 @@ void mm::DBMaster::add_to_db(const mm::ISerializable &obj) {
 
                 sqlite3_finalize(stmt); // previous stmt
 
-                if (sqlite3_prepare(db, ss.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
+                if (sqlite3_prepare(db, ss.str().c_str(), -1, &stmt, nullptr) == SQLITE_ERROR) {
                     throw std::runtime_error(
                             fmt::format("cannot update row with query: \"{}\"\nsqlite error: {}", ss.str(),
                                         sqlite3_errmsg(db)));
@@ -153,7 +150,7 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, initializer_list<Seri
             query << " and ";
     }
 
-    if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
+    if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, nullptr) == SQLITE_ERROR) {
         throw std::runtime_error(
                 fmt::format("cannot select row with query: \"{}\"\nsqlite error: {}", query.str(), sqlite3_errmsg(db)));
     }
@@ -234,7 +231,7 @@ mm::DBMaster::get_rows(string table_name, string id_name, mm::Serialized id) {
         }
     }
 
-    if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
+    if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, nullptr) == SQLITE_ERROR) {
         throw std::runtime_error(fmt::format("cannot select rows with query: \"{}\"\nsqlite error{}",
                                              query.str(), sqlite3_errmsg(db)));
     }
@@ -302,7 +299,7 @@ void mm::DBMaster::remove_from_db(const mm::ISerializable &obj) {
             query << " and ";
     }
 
-    if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, 0) == SQLITE_ERROR) {
+    if (sqlite3_prepare(db, query.str().c_str(), -1, &stmt, nullptr) == SQLITE_ERROR) {
         throw std::runtime_error(fmt::format("cannot delete row with query: \"{}\"\nsqlite error{}",
                                              query.str(), sqlite3_errmsg(db)));
     }

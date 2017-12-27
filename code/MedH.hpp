@@ -25,6 +25,7 @@ namespace mm {
         std::unique_ptr<Window> window;
         std::string appID;
 
+        /// metodo che inizializza l'oggetto
         bool init();
 
     public:
@@ -37,6 +38,7 @@ namespace mm {
 
 
     private:
+        /// metodo usato dal design pattern Observer
         void update() override;
     };
 }
