@@ -30,7 +30,7 @@ namespace mm {
      * @brief Singleton che mantiene le configurazioni dell'intera applicazione
      *
      * I parametri di configurazione dell'applicazione devono essere salvati in un file in formato json.
-     * La classe si occupa sia di leggere e fornire un interfaccia semplice per ottenere un parametro dal file
+     * La classe si occupa sia di leggere che di fornire un'interfaccia semplice per ottenere un parametro dal file
      *
      */
     class Configuration {
@@ -52,42 +52,42 @@ namespace mm {
         const Configuration &operator=(const Configuration &old) = delete;
 
         /**
-         * @brief Ritorna una reference ad un istanza di tipo Configuration.
+         * @brief Ritorna una reference ad un'istanza di tipo \c Configuration.
          *
-         * Questa funzione non deve mai essere chiamate se prima non è stato chiamato (almeno una volta) il metodo
-         * set_config_file_name.
+         * Questa funzione non deve mai essere chiamata se prima non è stato chiamato (almeno una volta) il metodo
+         * Configuration::set_config_file_name().
          *
-         * N.B. essendo il distruttore privato non è possibile cancellare l'oggetto al di fuori di questa classe
+         * N.B. Essendo il distruttore privato non è possibile cancellare l'oggetto al di fuori di questa classe
          *
-         * @return instanza di Configuration
+         * @return Istanza di Configuration
          */
         static Configuration &get_instance() noexcept(false);
 
         /**
-         * @brief ritorna una stringa contente il path dove viene cercato cercato il file .json
+         * @brief Ritorna una stringa contente il path dove viene cercato cercato il file json
          *
-         * @return il path del file di configurazione
+         * @return Il path del file di configurazione
          */
         static const std::string &get_config_file_name();
 
         /**
-         * @brief Serve per impostare il path dove trovare il file di config
+         * @brief Serve per impostare il path dove trovare il file di configurazione
          *
-         * N.B. questa funzione __deve__ sempre essere chiamata prima di una qualsiasi chiamata a get_instance
+         * N.B. Questa funzione __deve__ sempre essere chiamata prima di una qualsiasi chiamata a Configuration::get_instance
          *
-         * @param[in] config_file_name una stringa contenente il path dove trovare il file
+         * @param[in] config_file_name Una stringa contenente il path dove trovare il file
          */
         static void set_config_file_name(const std::string &config_file_name);
 
         /**
-         * @brief Cerca nel file json la chiave key, se questa non viene trovata lancia l'apposita eccezione
-         *        altrimenti ritorna l'oggetto corrispondente a key nel file
+         * @brief Cerca nel file json la chiave \c key, se questa non viene trovata lancia l'apposita eccezione
+         *        altrimenti ritorna l'oggetto corrispondente a \c key nel file
          *
-         * N.B. T deve essere corrispondente al tipo di dato nel json altrimenti sarà lanciata un eccezione.
+         * N.B. \c T deve essere corrispondente al tipo di dato nel json, altrimenti sarà lanciata un eccezione.
          *
          * @tparam T Tipo del dato di configurazione
-         * @param key chiave da cercare nel file
-         * @return un oggetto di tipo T contenente i dati presenti nel file json alla chiave key
+         * @param key Chiave da cercare nel file
+         * @return Oggetto di tipo \c T contenente i dati presenti nel file json alla chiave \c key
          */
         template<typename T>
         T get(const std::string &key) const noexcept(false) {
