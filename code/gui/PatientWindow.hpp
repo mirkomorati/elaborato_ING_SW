@@ -82,6 +82,7 @@ namespace mm {
 
         void updatePatientDetailsView();
 
+        void onFilterSemesterChanged();
     };
 }
 

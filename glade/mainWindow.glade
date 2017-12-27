@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.2 -->
+<!-- Generated with glade 3.20.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <!-- interface-css-provider-path style.css -->
@@ -879,7 +879,7 @@
                                               </object>
                                               <packing>
                                                 <property name="left_attach">0</property>
-                                                <property name="top_attach">2</property>
+                                                <property name="top_attach">4</property>
                                               </packing>
                                             </child>
                                             <child>
@@ -893,7 +893,7 @@
                                               </object>
                                               <packing>
                                                 <property name="left_attach">0</property>
-                                                <property name="top_attach">6</property>
+                                                <property name="top_attach">8</property>
                                               </packing>
                                             </child>
                                             <child>
@@ -942,7 +942,7 @@
                                               </object>
                                               <packing>
                                                 <property name="left_attach">0</property>
-                                                <property name="top_attach">5</property>
+                                                <property name="top_attach">7</property>
                                               </packing>
                                             </child>
                                             <child>
@@ -956,7 +956,7 @@
                                               </object>
                                               <packing>
                                                 <property name="left_attach">0</property>
-                                                <property name="top_attach">4</property>
+                                                <property name="top_attach">6</property>
                                               </packing>
                                             </child>
                                             <child>
@@ -1006,7 +1006,7 @@
                                               </object>
                                               <packing>
                                                 <property name="left_attach">0</property>
-                                                <property name="top_attach">3</property>
+                                                <property name="top_attach">5</property>
                                               </packing>
                                             </child>
                                             <child>
@@ -1165,7 +1165,71 @@
                                               </object>
                                               <packing>
                                                 <property name="left_attach">0</property>
-                                                <property name="top_attach">7</property>
+                                                <property name="top_attach">9</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <object class="GtkRadioButton" id="semesterFilterRadioButton">
+                                                <property name="label" translatable="yes">Semestre</property>
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">True</property>
+                                                <property name="receives_default">False</property>
+                                                <property name="draw_indicator">True</property>
+                                                <property name="group">yearFilterRadioButton</property>
+                                              </object>
+                                              <packing>
+                                                <property name="left_attach">0</property>
+                                                <property name="top_attach">2</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <object class="GtkGrid" id="semesterFilterGrid">
+                                                <property name="can_focus">False</property>
+                                                <property name="halign">center</property>
+                                                <property name="hexpand">False</property>
+                                                <property name="row_homogeneous">True</property>
+                                                <property name="column_homogeneous">True</property>
+                                                <child>
+                                                  <object class="GtkLabel">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">False</property>
+                                                    <property name="halign">center</property>
+                                                    <property name="hexpand">False</property>
+                                                    <property name="label" translatable="yes">/</property>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">1</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkComboBoxText" id="semesterFilterMonthComboBox">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">False</property>
+                                                    <property name="halign">center</property>
+                                                    <property name="hexpand">False</property>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">0</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkComboBoxText" id="semesterFilterYearComboBox">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">False</property>
+                                                    <property name="halign">center</property>
+                                                    <property name="hexpand">True</property>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">2</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                              </object>
+                                              <packing>
+                                                <property name="left_attach">0</property>
+                                                <property name="top_attach">3</property>
                                               </packing>
                                             </child>
                                           </object>
@@ -1371,9 +1435,6 @@ Morati Mirko</property>
           <placeholder/>
         </child>
       </object>
-    </child>
-    <child>
-      <placeholder/>
     </child>
   </object>
   <object class="GtkDialog" id="addPatientDialog">
@@ -1851,9 +1912,6 @@ Morati Mirko</property>
         </child>
       </object>
     </child>
-    <child>
-      <placeholder/>
-    </child>
   </object>
   <object class="GtkDialog" id="addPrescriptionDialog">
     <property name="can_focus">False</property>
@@ -2173,9 +2231,6 @@ Morati Mirko</property>
         </child>
       </object>
     </child>
-    <child>
-      <placeholder/>
-    </child>
   </object>
   <object class="GtkDialog" id="selectDateByDialog">
     <property name="can_focus">False</property>
@@ -2323,9 +2378,6 @@ Morati Mirko</property>
         </child>
       </object>
     </child>
-    <child>
-      <placeholder/>
-    </child>
   </object>
   <object class="GtkDialog" id="selectDateDialog">
     <property name="can_focus">False</property>
@@ -2388,9 +2440,6 @@ Morati Mirko</property>
           </packing>
         </child>
       </object>
-    </child>
-    <child>
-      <placeholder/>
     </child>
   </object>
 </interface>

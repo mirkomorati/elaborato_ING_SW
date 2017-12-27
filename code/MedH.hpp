@@ -18,7 +18,7 @@ namespace mm {
      * sarà necessario semplicemente creare un oggetto di MedH e richiamarne il metodo
      * run.
      *
-     * N.B. È possibile avviare più istanze dell'applicazione purchè gli id nel config
+     * N.B. È possibile avviare più istanze dell'applicazione purché gli id nel config
      * file siano diversi.
      */
     class MedH : IObserver {

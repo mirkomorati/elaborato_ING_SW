@@ -34,8 +34,9 @@ void mm::PatientWindow::initHandlers() {
     Gtk::MenuItem *logoutMenuItem;
     Gtk::ImageMenuItem *aboutMenuItem;
     Gtk::Switch *filterSwitch;
-    Gtk::RadioButton *year, *quarter, *month, *custom;
+    Gtk::RadioButton *year, *semester, *quarter, *month, *custom;
     Gtk::ComboBoxText *yearCombo;
+    Gtk::ComboBoxText *semesterYearCombo, *semesterMonthCombo;
     Gtk::ComboBoxText *quarterYearCombo, *quarterMonthCombo;
     Gtk::ComboBoxText *monthYearCombo, *monthMonthCombo;
     Gtk::ComboBoxText *customFromDayCombo, *customFromMonthCombo, *customFromYearCombo;
@@ -50,10 +51,13 @@ void mm::PatientWindow::initHandlers() {
     refBuilder.get_widget("aboutMenuItem", aboutMenuItem);
     refBuilder.get_widget("filterSwitch", filterSwitch);
     refBuilder.get_widget("yearFilterRadioButton", year);
+    refBuilder.get_widget("semesterFilterRadioButton", semester);
     refBuilder.get_widget("quarterFilterRadioButton", quarter);
     refBuilder.get_widget("monthFilterRadioButton", month);
     refBuilder.get_widget("customFilterRadioButton", custom);
     refBuilder.get_widget("yearFilterComboBox", yearCombo);
+    refBuilder.get_widget("semesterFilterYearComboBox", semesterYearCombo);
+    refBuilder.get_widget("semesterFilterMonthComboBox", semesterMonthCombo);
     refBuilder.get_widget("quarterFilterYearComboBox", quarterYearCombo);
     refBuilder.get_widget("quarterFilterMonthComboBox", quarterMonthCombo);
     refBuilder.get_widget("monthFilterYearComboBox", monthYearCombo);
@@ -79,6 +83,10 @@ void mm::PatientWindow::initHandlers() {
 
     year->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterYearChanged));
     yearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterYearChanged));
+
+    semester->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterSemesterChanged));
+    semesterYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterSemesterChanged));
+    semesterMonthCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterSemesterChanged));
 
     quarter->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterQuarterChanged));
     quarterYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterQuarterChanged));
@@ -274,7 +282,7 @@ void mm::PatientWindow::updatePatientDetailsView() {
     address->set_label(patient.get_address());
 }
 
-void mm::PatientWindow::onRemovePatientClicked() { // todo non va ancora una sega
+void mm::PatientWindow::onRemovePatientClicked() {
     Gtk::Window *mainWindow;
     Gtk::TreeView *patientTreeView;
     model::Patient patient;
@@ -324,7 +332,6 @@ void mm::PatientWindow::onRemovePatientClicked() { // todo non va ancora una seg
     }
 }
 
-
 mm::PatientWindow::~PatientWindow() {
     Gtk::TreeView *patientTreeView;
     Gtk::ListBox *prescriptionList;
@@ -353,10 +360,13 @@ void mm::PatientWindow::onSwitchActivate() {
 void mm::PatientWindow::initFilters() {
     auto refBuilder = RefBuilder::get_instance();
     Gtk::ComboBoxText *yearCombo;
+    Gtk::ComboBoxText *semesterMonthCombo, *semesterYearCombo;
     Gtk::ComboBoxText *quarterMonthCombo, *quarterYearCombo;
     Gtk::ComboBoxText *monthMonthCombo, *monthYearCombo;
 
     refBuilder.get_widget("yearFilterComboBox", yearCombo);
+    refBuilder.get_widget("semesterFilterMonthComboBox", semesterMonthCombo);
+    refBuilder.get_widget("semesterFilterYearComboBox", semesterYearCombo);
     refBuilder.get_widget("quarterFilterMonthComboBox", quarterMonthCombo);
     refBuilder.get_widget("quarterFilterYearComboBox", quarterYearCombo);
     refBuilder.get_widget("monthFilterMonthComboBox", monthMonthCombo);
@@ -364,18 +374,22 @@ void mm::PatientWindow::initFilters() {
 
     for (int i = util::Date::get_current_year(); i >= 1920; i--) {
         yearCombo->append(Glib::ustring::format(i));
+        semesterYearCombo->append(Glib::ustring::format(i));
         quarterYearCombo->append(Glib::ustring::format(i));
         monthYearCombo->append(Glib::ustring::format(i));
     }
     for (int i = 1; i <= 12; i++) {
+        semesterMonthCombo->append(Glib::ustring((i < 10 ? "0" : "")).append(Glib::ustring::format(i)));
         quarterMonthCombo->append(Glib::ustring((i < 10 ? "0" : "")).append(Glib::ustring::format(i)));
         monthMonthCombo->append(Glib::ustring((i < 10 ? "0" : "")).append(Glib::ustring::format(i)));
     }
 
     yearCombo->set_active_text(Glib::ustring::format(util::Date::get_current_year()));
+    semesterYearCombo->set_active_text(Glib::ustring::format(util::Date::get_current_year()));
     quarterYearCombo->set_active_text(Glib::ustring::format(util::Date::get_current_year()));
     monthYearCombo->set_active_text(Glib::ustring::format(util::Date::get_current_year()));
 
+    semesterMonthCombo->set_active_text(Glib::ustring::format("01"));
     quarterMonthCombo->set_active_text(Glib::ustring::format("01"));
     monthMonthCombo->set_active_text(Glib::ustring::format("01"));
 }
@@ -395,6 +409,35 @@ void mm::PatientWindow::onFilterYearChanged() {
             filterStartDate.set_from_str(fmt::format("01/01/{}", yearCombo->get_active_text().c_str()));
             filterEndDate = filterStartDate;
             filterEndDate.add_years(1);
+
+            spdlog::get("out")->info("Filter on. start date: {}. end date: {}.",
+                                     filterStartDate.get_as_text(), filterEndDate.get_as_text());
+        }
+    }
+
+    updatePrescriptionView();
+}
+
+void mm::PatientWindow::onFilterSemesterChanged() {
+    if (filterOn) {
+        auto refBuilder = RefBuilder::get_instance();
+        Gtk::RadioButton *semester;
+        Gtk::ComboBoxText *yearCombo, *monthCombo;
+        Gtk::Grid *semesterFilterGrid;
+
+        refBuilder.get_widget("semesterFilterRadioButton", semester);
+        refBuilder.get_widget("semesterFilterYearComboBox", yearCombo);
+        refBuilder.get_widget("semesterFilterMonthComboBox", monthCombo);
+        refBuilder.get_widget("semesterFilterGrid", semesterFilterGrid);
+
+        semesterFilterGrid->set_visible(semester->get_active());
+
+        if (semester->get_active()) {
+            filterStartDate.set_from_str(fmt::format("01/{}/{}",
+                                                     monthCombo->get_active_text().c_str(),
+                                                     yearCombo->get_active_text().c_str()));
+            filterEndDate = filterStartDate;
+            filterEndDate.add_months(6);
 
             spdlog::get("out")->info("Filter on. start date: {}. end date: {}.",
                                      filterStartDate.get_as_text(), filterEndDate.get_as_text());
