@@ -10,8 +10,20 @@
 #include "gui/Window.hpp"
 
 namespace mm {
+    /**
+     * @class MedH MedH.hpp "MedH.hpp"
+     * @brief Classe che rappresenta il programma in se.
+     *
+     * Per utilizzare tutte le funzionalità del programma MedH compresa l'interfaccia
+     * sarà necessario semplicemente creare un oggetto di MedH e richiamarne il metodo
+     * run.
+     *
+     * N.B. È possibile avviare più istanze dell'applicazione purchè gli id nel config
+     * file siano diversi.
+     */
     class MedH : IObserver {
         std::unique_ptr<Window> window;
+        std::string appID;
 
         bool init();
 
