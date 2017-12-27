@@ -1,4 +1,5 @@
 {
+  "app_id": "it.mm.org",
   "db_name": "../../../../database/db.sqlite3",
   "log_prefix": "../tmp/log/",
   "debug": true

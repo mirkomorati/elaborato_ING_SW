@@ -59,6 +59,8 @@ bool mm::MedH::init() {
 
         console->debug("database file: {}", config.get<std::string>("db_name"));
 
+        appID = config.get<std::string>("app_id");
+
         DBMaster::set_db_file_name(config.get<string>("db_name"));
 
     } catch (invalid_argument &e) {
@@ -73,7 +75,7 @@ bool mm::MedH::init() {
 
 mm::MedH::MedH(int argc, char **argv) : window(new LoginWindow) {
     if (not init()) throw std::runtime_error("cannot initialize the app");
-    this->app = Gtk::Application::create(argc, argv, "it.mm.org");
+    this->app = Gtk::Application::create(argc, argv, appID);
     if (not window->init()) throw std::runtime_error("cannot init the window");
     window->attach(this);
 }
