@@ -503,8 +503,8 @@ void mm::PatientWindow::onRemovePrescriptionClicked() {
     }
 
     view::PrescriptionExpander *pExpander;
+    if (not(pExpander = dynamic_cast<view::PrescriptionExpander *>(sel->get_child()))) {
 
-    if (not(pExpander = dynamic_cast<view::PrescriptionExpander *>(sel->get_header()))) {
         throw logic_error("header of Prescription list box is not a prescriptionExpander obj");
     }
 
@@ -537,7 +537,7 @@ void mm::PatientWindow::onRemovePrescriptionClicked() {
             return;
         }
 
-        updatePatientTreeView();
+        updatePrescriptionView();
     }
 }
 
