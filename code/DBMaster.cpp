@@ -158,7 +158,7 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, initializer_list<Seri
     int rc = sqlite3_step(stmt);
     if (rc == SQLITE_ERROR) {
         sqlite3_finalize(stmt);
-        throw std::runtime_error(fmt::format("cannot execute insert statement: \"{}\"\nsqlite error: {}", query.str(),
+        throw std::runtime_error(fmt::format("cannot execute select statement: \"{}\"\nsqlite error: {}", query.str(),
                                              sqlite3_errmsg(db)));
     } else if (rc == SQLITE_DONE) {
         sqlite3_finalize(stmt);
