@@ -36,6 +36,8 @@ namespace mm {
 
             static TreeModel prescriptionTreeModel;
 
+            static unsigned int generateID();
+
         public:
             map<string, Serialized> serialize() const override;
 

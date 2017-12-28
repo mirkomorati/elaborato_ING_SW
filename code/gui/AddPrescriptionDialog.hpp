@@ -7,6 +7,7 @@
 
 #include <gtkmm/entry.h>
 #include <gtkmm/comboboxtext.h>
+#include <array>
 #include "Dialog.hpp"
 #include "Widgets.hpp"
 
@@ -33,13 +34,7 @@ namespace mm {
         Gtk::Button *ok_button;
         Gtk::Button *cancel_button;
 
-        EntryController addPatientId;
-        EntryController addPrescriptionId;
-        Gtk::ComboBoxText *addDrugId1;
-        Gtk::ComboBoxText *addDrugId2;
-        Gtk::ComboBoxText *addDrugId3;
-        Gtk::ComboBoxText *addDrugId4;
-        Gtk::ComboBoxText *addDrugId5;
+        std::array<Gtk::ComboBoxText *, 5> drugCombos;
         DateController issueDate;
         DateController expireDate;
     };

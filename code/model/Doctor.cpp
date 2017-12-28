@@ -123,21 +123,6 @@ const string &mm::model::Doctor::get_birth_place() const {
     return birth_place;
 }
 
-void mm::model::Doctor::remove_patient(const mm::model::Patient &patient) {
-    std::vector<model::Patient>::iterator it;
-    if ((it = std::find(patients.begin(), patients.end(), patient)) == patients.end()) {
-        throw std::runtime_error("Unknown patient");
-    }
-
-    try {
-        DBMaster::get_instance().remove_from_db(patient);
-    } catch (std::runtime_error &e) {
-        cerr << "cannot remove patient. DataBase error:" << e.what();
-    }
-
-    patients.erase(it);
-}
-
 mm::model::Patient mm::model::Doctor::get_patient_from_fiscal_code(std::string fiscal_code) {
     for (auto &p : patients) {
         if (p.get_fiscal_code() == fiscal_code)

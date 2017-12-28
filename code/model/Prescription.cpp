@@ -6,6 +6,7 @@
 
 #include <map>
 #include <sstream>
+#include <iostream>
 #include "Prescription.hpp"
 #include "../DBMaster.hpp"
 
@@ -136,6 +137,19 @@ const vector<mm::model::Drug> mm::model::Prescription::get_drugs() const {
         }
     }
     return toReturn;
+}
+
+unsigned int mm::model::Prescription::generateID() {
+    srand(static_cast<unsigned int>(time(nullptr)));
+    Prescription tmp;
+    vector<map<string, Serialized>> prescriptions;
+    int ID;
+
+    do {
+        ID = (rand() % 99999) + 1;
+    } while (DBMaster::get_instance().exists(tmp.get_table_name(), tmp.get_primary_key()[0], ID));
+
+    return static_cast<unsigned int>(ID);
 }
 
 mm::model::Prescription::TreeModel::TreeModel() noexcept {

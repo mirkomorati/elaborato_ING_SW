@@ -158,7 +158,7 @@ void mm::DBMaster::extract_from_db(mm::ISerializable &obj, initializer_list<Seri
     int rc = sqlite3_step(stmt);
     if (rc == SQLITE_ERROR) {
         sqlite3_finalize(stmt);
-        throw std::runtime_error(fmt::format("cannot execute insert statement: \"{}\"\nsqlite error: {}", query.str(),
+        throw std::runtime_error(fmt::format("cannot execute select statement: \"{}\"\nsqlite error: {}", query.str(),
                                              sqlite3_errmsg(db)));
     } else if (rc == SQLITE_DONE) {
         sqlite3_finalize(stmt);
@@ -312,6 +312,33 @@ void mm::DBMaster::remove_from_db(const mm::ISerializable &obj) {
     }
 
     sqlite3_finalize(stmt);
+
+}
+
+bool mm::DBMaster::exists(string table_name, string id_name, mm::Serialized id) {
+    string query;
+    sqlite3_stmt *stmt;
+
+    switch (id.get_type()) {
+        case INTEGER:
+            query = fmt::format("select count(1) from {} where {} = {}", table_name, id_name, to_string(id.get_int()));
+            break;
+        case REAL:
+            query = fmt::format("select count(1) from {} where {} = {}", table_name, id_name, to_string(id.get_real()));
+            break;
+        case TEXT:
+            query = fmt::format("select count(1) from {} where {} = {}", table_name, id_name, id.get_str());
+            break;
+    }
+
+    if (sqlite3_prepare(db, query.c_str(), -1, &stmt, nullptr) != SQLITE_OK)
+        throw std::runtime_error(fmt::format("cannot prepare statement with query {}", query));
+
+    auto rc = sqlite3_step(stmt);
+
+    if (rc == SQLITE_ERROR) throw std::runtime_error(fmt::format("cannot exec query {}", query));
+
+    return rc == SQLITE_ROW and sqlite3_column_int(stmt, 0) >= 1;
 
 }
 

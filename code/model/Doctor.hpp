@@ -46,8 +46,6 @@ namespace mm {
 
             model::Patient get_patient_from_fiscal_code(std::string fiscal_code);
 
-            void remove_patient(const Patient &patient);
-
             const string &get_first_name() const;
 
             const string &get_last_name() const;
