@@ -116,6 +116,16 @@ namespace mm {
          */
         vector<map<string, Serialized>> get_rows(string table_name, string id_name = "", Serialized id = "");
 
+        /**
+         * @brief controlla se nella tabella esiste già un elemento.
+         *
+         * @param table_name    nome della tabella
+         * @param id_name       nome della colonna presa come id
+         * @param id            valore dell'id
+         * @return
+         */
+        bool exists(string table_name, string id_name, Serialized id);
+
     };
 
     /**

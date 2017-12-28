@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.0 -->
+<!-- Generated with glade 3.20.2 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <!-- interface-css-provider-path style.css -->
@@ -1436,6 +1436,9 @@ Morati Mirko</property>
         </child>
       </object>
     </child>
+    <child>
+      <placeholder/>
+    </child>
   </object>
   <object class="GtkDialog" id="addPatientDialog">
     <property name="can_focus">False</property>
@@ -1912,6 +1915,9 @@ Morati Mirko</property>
         </child>
       </object>
     </child>
+    <child>
+      <placeholder/>
+    </child>
   </object>
   <object class="GtkDialog" id="addPrescriptionDialog">
     <property name="can_focus">False</property>
@@ -2024,7 +2030,9 @@ Morati Mirko</property>
             <child>
               <object class="GtkEntry" id="addPatientId">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can_focus">False</property>
+                <property name="editable">False</property>
+                <property name="caps_lock_warning">False</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -2034,7 +2042,9 @@ Morati Mirko</property>
             <child>
               <object class="GtkEntry" id="addPrescriptionId">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can_focus">False</property>
+                <property name="editable">False</property>
+                <property name="caps_lock_warning">False</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -2231,6 +2241,9 @@ Morati Mirko</property>
         </child>
       </object>
     </child>
+    <child>
+      <placeholder/>
+    </child>
   </object>
   <object class="GtkDialog" id="selectDateByDialog">
     <property name="can_focus">False</property>
@@ -2378,6 +2391,9 @@ Morati Mirko</property>
         </child>
       </object>
     </child>
+    <child>
+      <placeholder/>
+    </child>
   </object>
   <object class="GtkDialog" id="selectDateDialog">
     <property name="can_focus">False</property>
@@ -2440,6 +2456,9 @@ Morati Mirko</property>
           </packing>
         </child>
       </object>
+    </child>
+    <child>
+      <placeholder/>
     </child>
   </object>
 </interface>
