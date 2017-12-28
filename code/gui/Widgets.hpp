@@ -46,6 +46,8 @@ namespace mm {
         Gtk::ComboBoxText *day;
         Gtk::ComboBoxText *month;
         Gtk::ComboBoxText *year;
+
+        void init();
     };
 }
 

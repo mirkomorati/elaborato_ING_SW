@@ -25,6 +25,8 @@ mm::DateController::DateController(const std::string &dayId, const std::string &
     refBuilder.get_widget(monthId, month);
     refBuilder.get_widget(yearId, year);
 
+    // Devo fare l'init solo la prima volta, altrimenti vado a raddoppiare/ecc gli elementi
+    if (day->get_active_text() == "") init();
     reset(); // NB. quando si effettua un set da sw viene lanciato un signal changed... se si sposta
     // il reset dopo aver definito i gestori dei segnali crasha tutto.
 
@@ -34,13 +36,6 @@ mm::DateController::DateController(const std::string &dayId, const std::string &
 }
 
 void mm::DateController::reset() {
-    for (int i = 1; i <= 31; i++)
-        day->append(Glib::ustring::format(i));
-    for (int i = 1; i <= 12; i++)
-        month->append(Glib::ustring((i < 10 ? "0" : "")).append(Glib::ustring::format(i)));
-    for (int i = util::Date::get_current_year(); i >= 1920; i--)
-        year->append(Glib::ustring::format(i));
-
     day->set_active_text(Glib::ustring::format(util::Date::get_current_day()));
     month->set_active_text(Glib::ustring(util::Date::get_current_month() < 10 ? "0" : "").append(
             Glib::ustring::format(util::Date::get_current_month())));
@@ -75,4 +70,13 @@ mm::util::Date mm::DateController::getDate() {
     }
 
     return {tmpDay, tmpMonth, tmpYear};
+}
+
+void mm::DateController::init() {
+    for (int i = 1; i <= 31; i++)
+        day->append(Glib::ustring::format(i));
+    for (int i = 1; i <= 12; i++)
+        month->append(Glib::ustring((i < 10 ? "0" : "")).append(Glib::ustring::format(i)));
+    for (int i = util::Date::get_current_year(); i >= 1920; i--)
+        year->append(Glib::ustring::format(i));
 }

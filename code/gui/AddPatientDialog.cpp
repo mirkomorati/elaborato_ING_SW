@@ -83,7 +83,6 @@ void mm::AddPatientDialog::dispose() {
 }
 
 void mm::AddPatientDialog::reset() {
-
     birthDate.reset();
     first_name.reset();
     last_name.reset();
@@ -97,6 +96,4 @@ void mm::AddPatientDialog::reset() {
     birth_country.reset();
 }
 
-mm::AddPatientDialog::~AddPatientDialog() {
-    reset();
-}
+mm::AddPatientDialog::~AddPatientDialog() {}
