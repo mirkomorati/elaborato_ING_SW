@@ -23,7 +23,6 @@ mm::AddPrescriptionDialog::AddPrescriptionDialog() : is_active(true),
     refBuilder.get_widget("addDrugIdAdd", drugAdd);
 
     reset();
-
     drugAdd->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::drugAddHandler));
     ok_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::okHandler));
     cancel_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::cancelHandler));
@@ -123,18 +122,44 @@ void mm::AddPrescriptionDialog::init() {
 
 void mm::AddPrescriptionDialog::drugAddHandler() {
     Gtk::Label *addDrugError;
+    Gtk::Label *addDrugOverError;
     RefBuilder::get_instance().get_widget("addDrugAddError", addDrugError);
+    RefBuilder::get_instance().get_widget("addDrugOverError", addDrugOverError);
 
     if (drugComboBox->get_active_text().empty()) {
         addDrugError->set_visible(true);
+        return;
     } else if (addDrugError->get_visible()) {
         addDrugError->set_visible(false);
+    }
+    if (drugEntries.size() == 5) {
+        addDrugOverError->set_visible(true);
+        return;
+    } else if (addDrugOverError->get_visible()) {
+        addDrugOverError->set_visible(false);
     }
 
     std::unique_ptr<mm::view::DrugEntry> tmp(new mm::view::DrugEntry(drugComboBox->get_active_text()));
     drugListBox->append(*tmp);
+    tmp->signal_removed().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::drugRemoveHandler));
     drugEntries.push_back(std::move(tmp));
     drugListBox->show_all();
-    // todo anche questo continua a crescere e non penso sia una buona cosa
-    std::cout << drugEntries.size() << std::endl;
+}
+
+void mm::AddPrescriptionDialog::drugRemoveHandler(mm::view::DrugEntry *removed) {
+    Gtk::Label *addDrugOverError;
+    RefBuilder::get_instance().get_widget("addDrugOverError", addDrugOverError);
+    if (addDrugOverError->get_visible) addDrugOverError->set_visible(false);
+
+    drugListBox->remove(*removed);
+    drugEntries.erase(
+            std::remove_if( // Selectively remove elements in the second vector...
+                    drugEntries.begin(),
+                    drugEntries.end(),
+                    [&](std::unique_ptr<mm::view::DrugEntry> const &p) {   // This predicate checks whether the element is contained
+                        // in the second vector of pointers to be removed...
+                        return removed == p.get();
+                    }),
+            drugEntries.end()
+    );
 }

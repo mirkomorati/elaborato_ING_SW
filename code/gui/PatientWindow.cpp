@@ -197,6 +197,7 @@ void mm::PatientWindow::updatePrescriptionView() {
     Gtk::TreeView *patientTreeView;
     RefBuilder::get_instance().get_widget("prescriptionList", prescriptionList);
     RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
+    prescriptionsExp.clear();
 
     auto sel = patientTreeView->get_selection()->get_selected();
     if (not sel) return;
@@ -235,8 +236,6 @@ void mm::PatientWindow::updatePrescriptionView() {
         prescriptionsExp.push_back(std::move(tmp));
         ++i;
     }
-    // todo continua a crescere, non penso sia una buona cosa
-    std::cout << prescriptionsExp.size() << std::endl;
 }
 
 void mm::PatientWindow::onSelectedPatient(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *) {

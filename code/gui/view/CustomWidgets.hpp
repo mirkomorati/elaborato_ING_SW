@@ -58,6 +58,11 @@ namespace mm::view {
 
         DrugEntry(const Glib::ustring &drug);
 
+        sigc::signal<void, mm::view::DrugEntry *> signal_removed();
+
+    protected:
+        sigc::signal<void, mm::view::DrugEntry *> remove;
+
     private:
         Gtk::Entry entry;
         Gtk::Button button;

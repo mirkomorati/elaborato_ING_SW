@@ -46,7 +46,7 @@ namespace mm {
         DateController issueDate;
         DateController expireDate;
 
-        void drugRemoveHandler();
+        void drugRemoveHandler(mm::view::DrugEntry *removed);
 
         void init();
     };

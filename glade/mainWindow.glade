@@ -2230,7 +2230,18 @@ Morati Mirko</property>
               </packing>
             </child>
             <child>
-              <placeholder/>
+              <object class="GtkLabel" id="addDrugOverError">
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Limite di 5 farmaci raggiunto</property>
+                <attributes>
+                  <attribute name="font-desc" value="&lt;Enter Value&gt; 10"/>
+                  <attribute name="foreground" value="#efef29292929"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">7</property>
+              </packing>
             </child>
             <child>
               <placeholder/>

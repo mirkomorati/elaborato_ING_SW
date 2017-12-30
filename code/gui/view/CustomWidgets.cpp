@@ -133,6 +133,9 @@ mm::view::DrugEntry::DrugEntry(const Glib::ustring &drug) {
 
 void mm::view::DrugEntry::drugRemoveHandler() {
     // todo direi che non è una cosa furbissima ..?
-    auto list = get_parent();
-    list->remove(*this);
+    remove.emit(this);
+}
+
+sigc::signal<void, mm::view::DrugEntry *> mm::view::DrugEntry::signal_removed() {
+    return remove;
 }
