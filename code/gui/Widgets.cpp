@@ -6,7 +6,6 @@
 #include <spdlog/spdlog.h>
 #include "Widgets.hpp"
 #include "RefBuilder.hpp"
-#include "../utils/Date.hpp"
 
 void mm::EntryController::entryTextChanged(const Glib::ustring &, int *) {
     if (entry == nullptr) return;
@@ -26,7 +25,7 @@ mm::DateController::DateController(const std::string &dayId, const std::string &
     refBuilder.get_widget(yearId, year);
 
     // Devo fare l'init solo la prima volta, altrimenti vado a raddoppiare/ecc gli elementi
-    if (day->get_active_text() == "") init();
+    if (day->get_active_text().empty()) init();
     reset(); // NB. quando si effettua un set da sw viene lanciato un signal changed... se si sposta
     // il reset dopo aver definito i gestori dei segnali crasha tutto.
 

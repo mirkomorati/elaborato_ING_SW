@@ -15,6 +15,7 @@
 #include <gtkmm/grid.h>
 #include <gtkmm/textview.h>
 #include <gtkmm/hvpaned.h>
+#include <gtkmm/listboxrow.h>
 #include "../../model/Prescription.hpp"
 
 namespace mm::view {
@@ -48,6 +49,21 @@ namespace mm::view {
         PrescriptionExpander &operator=(PrescriptionExpander &) = delete;
 
         int getID() const;
+    };
+
+
+    class DrugEntry : public Gtk::ListBoxRow {
+    public:
+        DrugEntry() = delete;
+
+        DrugEntry(const Glib::ustring &drug);
+
+    private:
+        Gtk::Entry entry;
+        Gtk::Button button;
+        Gtk::Grid grid;
+
+        void drugRemoveHandler();
     };
 }
 

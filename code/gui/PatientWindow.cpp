@@ -235,6 +235,8 @@ void mm::PatientWindow::updatePrescriptionView() {
         prescriptionsExp.push_back(std::move(tmp));
         ++i;
     }
+    // todo continua a crescere, non penso sia una buona cosa
+    std::cout << prescriptionsExp.size() << std::endl;
 }
 
 void mm::PatientWindow::onSelectedPatient(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *) {

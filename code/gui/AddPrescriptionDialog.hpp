@@ -8,8 +8,11 @@
 #include <gtkmm/entry.h>
 #include <gtkmm/comboboxtext.h>
 #include <array>
+#include <gtkmm/grid.h>
+#include <gtkmm/listbox.h>
 #include "Dialog.hpp"
 #include "Widgets.hpp"
+#include "view/CustomWidgets.hpp"
 
 namespace mm {
     class AddPrescriptionDialog : public Dialog {
@@ -31,12 +34,21 @@ namespace mm {
 
         void cancelHandler();
 
+        void drugAddHandler();
+
         Gtk::Button *ok_button;
         Gtk::Button *cancel_button;
 
-        std::array<Gtk::ComboBoxText *, 5> drugCombos;
+        Gtk::Button *drugAdd;
+        Gtk::ComboBoxText *drugComboBox;
+        Gtk::ListBox *drugListBox;
+        std::vector<std::unique_ptr<mm::view::DrugEntry>> drugEntries;
         DateController issueDate;
         DateController expireDate;
+
+        void drugRemoveHandler();
+
+        void init();
     };
 }
 

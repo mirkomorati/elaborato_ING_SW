@@ -6,9 +6,7 @@
 #include "AddPrescriptionDialog.hpp"
 #include "RefBuilder.hpp"
 #include "../DBMaster.hpp"
-#include "../model/Drug.hpp"
 #include "../model/Patient.hpp"
-#include "view/CustomWidgets.hpp"
 
 mm::AddPrescriptionDialog::AddPrescriptionDialog() : is_active(true),
                                                      issueDate("addIssueDateDay", "addIssueDateMonth",
@@ -20,14 +18,13 @@ mm::AddPrescriptionDialog::AddPrescriptionDialog() : is_active(true),
     refBuilder.get_widget("addPrescriptionOk", ok_button);
     refBuilder.get_widget("addPrescriptionCancel", cancel_button);
 
-    refBuilder.get_widget("addDrugId1", drugCombos[0]);
-    refBuilder.get_widget("addDrugId2", drugCombos[1]);
-    refBuilder.get_widget("addDrugId3", drugCombos[2]);
-    refBuilder.get_widget("addDrugId4", drugCombos[3]);
-    refBuilder.get_widget("addDrugId5", drugCombos[4]);
+    refBuilder.get_widget("addDrugIdComboBox", drugComboBox);
+    refBuilder.get_widget("addDrugIdsListBox", drugListBox);
+    refBuilder.get_widget("addDrugIdAdd", drugAdd);
 
     reset();
 
+    drugAdd->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::drugAddHandler));
     ok_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::okHandler));
     cancel_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::cancelHandler));
 }
@@ -82,8 +79,6 @@ void mm::AddPrescriptionDialog::reset() {
     Gtk::Window *mainWindow;
     Gtk::TreeView *patientTreeView;
     model::Prescription tmpPrescription;
-    model::Drug tmpDrug;
-    vector<map<string, Serialized>> drugs;
     vector<map<string, Serialized>> prescriptions;
 
     refBuilder.get_widget("mainWindow", mainWindow);
@@ -99,8 +94,18 @@ void mm::AddPrescriptionDialog::reset() {
         return;
     }
 
+    if (drugComboBox->get_active_text().empty()) init();
+
     patientID->set_text(static_cast<Glib::ustring>((*patientSel)[model::Patient::patientTreeModel.fiscal_code]));
     prescriptionID->set_text(Glib::ustring(to_string(model::Prescription::generateID())));
+
+    issueDate.reset();
+    expireDate.reset();
+}
+
+void mm::AddPrescriptionDialog::init() {
+    model::Drug tmpDrug;
+    vector<map<string, Serialized>> drugs;
 
     try {
         drugs = DBMaster::get_instance().get_rows(tmpDrug.get_table_name());
@@ -109,15 +114,27 @@ void mm::AddPrescriptionDialog::reset() {
         throw std::logic_error("cannot find drug table");
     }
 
-    for (auto &combo : drugCombos) combo->remove_all();
-
     for (auto &drug : drugs) {
         const Glib::ustring &item = Glib::ustring().format(
                 drug["name"].get_str(), " - ", drug["pharmaceutical_form"].get_str());
-        for (auto &combo : drugCombos)
-            combo->append(item);
+        drugComboBox->append(item);
+    }
+}
+
+void mm::AddPrescriptionDialog::drugAddHandler() {
+    Gtk::Label *addDrugError;
+    RefBuilder::get_instance().get_widget("addDrugAddError", addDrugError);
+
+    if (drugComboBox->get_active_text().empty()) {
+        addDrugError->set_visible(true);
+    } else if (addDrugError->get_visible()) {
+        addDrugError->set_visible(false);
     }
 
-    issueDate.reset();
-    expireDate.reset();
+    std::unique_ptr<mm::view::DrugEntry> tmp(new mm::view::DrugEntry(drugComboBox->get_active_text()));
+    drugListBox->append(*tmp);
+    drugEntries.push_back(std::move(tmp));
+    drugListBox->show_all();
+    // todo anche questo continua a crescere e non penso sia una buona cosa
+    std::cout << drugEntries.size() << std::endl;
 }

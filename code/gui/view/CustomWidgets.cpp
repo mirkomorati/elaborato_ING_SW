@@ -8,6 +8,9 @@
 #include <gtkmm/grid.h>
 #include <gtkmm/frame.h>
 #include <gtkmm/textview.h>
+#include <iostream>
+#include <gtkmm/stock.h>
+#include <gtkmm/listbox.h>
 #include "CustomWidgets.hpp"
 
 mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescription &prescription) :
@@ -109,4 +112,27 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
 
 int mm::view::PrescriptionExpander::getID() const {
     return id;
+}
+
+
+mm::view::DrugEntry::DrugEntry(const Glib::ustring &drug) {
+    entry.set_text(drug);
+    entry.set_editable(false);
+    entry.set_hexpand(true);
+    button.set_image_from_icon_name("list-remove", Gtk::BuiltinIconSize::ICON_SIZE_BUTTON);
+    button.signal_clicked().connect(sigc::mem_fun(this, &mm::view::DrugEntry::drugRemoveHandler));
+
+    grid.attach(entry, 0, 0, 1, 1);
+    grid.attach(button, 1, 0, 1, 1);
+
+    add(grid);
+    set_halign(Gtk::Align::ALIGN_FILL);
+    set_hexpand(true);
+    show_all();
+}
+
+void mm::view::DrugEntry::drugRemoveHandler() {
+    // todo direi che non è una cosa furbissima ..?
+    auto list = get_parent();
+    list->remove(*this);
 }
