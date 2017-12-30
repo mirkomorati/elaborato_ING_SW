@@ -149,17 +149,13 @@ void mm::AddPrescriptionDialog::drugAddHandler() {
 void mm::AddPrescriptionDialog::drugRemoveHandler(mm::view::DrugEntry *removed) {
     Gtk::Label *addDrugOverError;
     RefBuilder::get_instance().get_widget("addDrugOverError", addDrugOverError);
-    if (addDrugOverError->get_visible) addDrugOverError->set_visible(false);
+    if (addDrugOverError->is_visible()) addDrugOverError->set_visible(false);
 
     drugListBox->remove(*removed);
     drugEntries.erase(
-            std::remove_if( // Selectively remove elements in the second vector...
-                    drugEntries.begin(),
-                    drugEntries.end(),
-                    [&](std::unique_ptr<mm::view::DrugEntry> const &p) {   // This predicate checks whether the element is contained
-                        // in the second vector of pointers to be removed...
+            std::remove_if(drugEntries.begin(), drugEntries.end(),
+                           [&](std::unique_ptr<mm::view::DrugEntry> const &p) {
                         return removed == p.get();
                     }),
-            drugEntries.end()
-    );
+            drugEntries.end());
 }
