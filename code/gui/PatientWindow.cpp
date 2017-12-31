@@ -616,7 +616,6 @@ void mm::PatientWindow::sortByPrescriptionHandler() {
     RefBuilder::get_instance().get_widget("sortByDatePrescription", button);
     prescriptionList->unset_sort_func();
 
-    // non so perché il set_icon_name non funziona come dovrebbe
     if (button->get_stock_id() == "gtk-sort-descending") {
         button->set_stock_id(Gtk::StockID("gtk-sort-ascending"));
         prescriptionList->set_sort_func(sigc::bind(sigc::mem_fun(this, &mm::PatientWindow::sortPrescriptionList),
