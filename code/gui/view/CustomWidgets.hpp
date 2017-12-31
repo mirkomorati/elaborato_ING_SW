@@ -17,6 +17,7 @@
 #include <gtkmm/hvpaned.h>
 #include <gtkmm/listboxrow.h>
 #include "../../model/Prescription.hpp"
+#include "../../utils/Date.hpp"
 
 namespace mm::view {
     class PrescriptionExpander : public Gtk::Expander {
@@ -47,6 +48,12 @@ namespace mm::view {
         PrescriptionExpander() = delete;
 
         PrescriptionExpander &operator=(PrescriptionExpander &) = delete;
+
+        bool operator<(const PrescriptionExpander &r) const {
+            return mm::util::Date(this->issueDate.second.get_text()) < mm::util::Date(r.issueDate.second.get_text());
+        }
+
+        inline bool operator>(const PrescriptionExpander &rhs) const { return rhs < *this; }
 
         int getID() const;
     };

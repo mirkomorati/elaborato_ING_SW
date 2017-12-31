@@ -41,6 +41,8 @@ void mm::PatientWindow::initHandlers() {
     Gtk::ComboBoxText *monthYearCombo, *monthMonthCombo;
     Gtk::ComboBoxText *customFromDayCombo, *customFromMonthCombo, *customFromYearCombo;
     Gtk::ComboBoxText *customToDayCombo, *customToMonthCombo, *customToYearCombo;
+    Gtk::ListBox *prescriptionList;
+    Gtk::ToolButton *sortByDatePrescription;
 
     refBuilder.get_widget("patientTreeView", patientTreeView);
     refBuilder.get_widget("addPatient", add_patient_button);
@@ -68,8 +70,13 @@ void mm::PatientWindow::initHandlers() {
     refBuilder.get_widget("customFilterToDay", customToDayCombo);
     refBuilder.get_widget("customFilterToMonth", customToMonthCombo);
     refBuilder.get_widget("customFilterToYear", customToYearCombo);
+    refBuilder.get_widget("prescriptionList", prescriptionList);
+    refBuilder.get_widget("sortByDatePrescription", sortByDatePrescription);
 
-
+    sortByDatePrescription->signal_clicked().connect(
+            sigc::mem_fun(this, &mm::PatientWindow::sortByPrescriptionHandler));
+    prescriptionList->set_sort_func(
+            sigc::bind(sigc::mem_fun(this, &mm::PatientWindow::sortPrescriptionList), Gtk::SortType::SORT_ASCENDING));
     add_patient_button->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onAddPatientClicked));
     add_prescription_button->signal_clicked().connect(
             sigc::mem_fun(this, &mm::PatientWindow::onAddPrescriptionClicked));
@@ -237,6 +244,21 @@ void mm::PatientWindow::updatePrescriptionView() {
         prescriptionList->append(*tmp);
         prescriptionsExp.push_back(std::move(tmp));
         ++i;
+    }
+    //prescriptionList->get_row_at_index(0)->changed();
+}
+
+int mm::PatientWindow::sortPrescriptionList(Gtk::ListBoxRow *row1, Gtk::ListBoxRow *row2, Gtk::SortType sortType) {
+    auto r1 = dynamic_cast<mm::view::PrescriptionExpander *>(row1->get_child());
+    auto r2 = dynamic_cast<mm::view::PrescriptionExpander *>(row2->get_child());
+    if (sortType == Gtk::SortType::SORT_ASCENDING) {
+        if (*r1 < *r2) return 1;
+        else if (*r1 > *r2) return -1;
+        return 0;
+    } else {
+        if (*r1 > *r2) return 1;
+        else if (*r1 < *r2) return -1;
+        return 0;
     }
 }
 
@@ -587,3 +609,21 @@ void mm::PatientWindow::onRemovePrescriptionClicked() {
     }
 }
 
+void mm::PatientWindow::sortByPrescriptionHandler() {
+    Gtk::ListBox *prescriptionList;
+    Gtk::ToolButton *button;
+    RefBuilder::get_instance().get_widget("prescriptionList", prescriptionList);
+    RefBuilder::get_instance().get_widget("sortByDatePrescription", button);
+    prescriptionList->unset_sort_func();
+
+    // non so perché il set_icon_name non funziona come dovrebbe
+    if (button->get_icon_name() == "view-sort-ascending") {
+        button->set_icon_name("view-sort-descending");
+        prescriptionList->set_sort_func(sigc::bind(sigc::mem_fun(this, &mm::PatientWindow::sortPrescriptionList),
+                                                   Gtk::SortType::SORT_DESCENDING));
+    } else {
+        button->set_icon_name("view-sort-ascending");
+        prescriptionList->set_sort_func(sigc::bind(sigc::mem_fun(this, &mm::PatientWindow::sortPrescriptionList),
+                                                   Gtk::SortType::SORT_ASCENDING));
+    }
+}

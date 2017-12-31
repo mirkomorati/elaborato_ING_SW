@@ -74,6 +74,8 @@ namespace mm {
 
         void onFilterCustomChanged();
 
+        int sortPrescriptionList(Gtk::ListBoxRow *row1, Gtk::ListBoxRow *row2, Gtk::SortType sortType);
+
         //-------------------graphics updates-------------------//
 
         void updatePatientTreeView();
@@ -83,6 +85,8 @@ namespace mm {
         void updatePatientDetailsView();
 
         void onFilterSemesterChanged();
+
+        void sortByPrescriptionHandler();
     };
 }
 
