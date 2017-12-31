@@ -117,6 +117,8 @@ void mm::PatientWindow::initTreeView() {
 
     for (int i = 0; i <= 2; i++) {
         patientTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
+        patientTreeView->get_column(i)->set_sort_column(i);
+        patientTreeView->get_column(i)->set_sort_order(Gtk::SortType::SORT_ASCENDING);
     }
 
     updatePatientTreeView();
