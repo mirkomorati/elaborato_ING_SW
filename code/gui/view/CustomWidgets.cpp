@@ -132,7 +132,6 @@ mm::view::DrugEntry::DrugEntry(const Glib::ustring &drug) {
 }
 
 void mm::view::DrugEntry::drugRemoveHandler() {
-    // todo direi che non è una cosa furbissima ..?
     remove.emit(this);
 }
 

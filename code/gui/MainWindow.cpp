@@ -3,6 +3,7 @@
 //
 
 #include "MainWindow.hpp"
+#include "PrescriptionWindow.hpp"
 #include "RefBuilder.hpp"
 #include "AboutDialog.hpp"
 #include "PatientWindow.hpp"
@@ -67,6 +68,8 @@ void mm::MainWindow::onPageSwitch(Gtk::Widget *page, guint page_number) {
         }
         case 1: {
             // todo create PrescriptionWindow controller
+            activeTabWindow.reset(new PrescriptionWindow);
+            activeTabWindow->init();
             break;
         }
         case 2: {
