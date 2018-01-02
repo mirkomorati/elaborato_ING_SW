@@ -55,6 +55,11 @@ void mm::PrescriptionWindow::initTreeView() {
 
     for (int i = 0; i < 7; i++) {
         prescriptionTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
+        prescriptionTreeView->get_column(i)->set_min_width(100);
+        prescriptionTreeView->get_column(i)->set_resizable(true);
+        prescriptionTreeView->get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
+        prescriptionTreeView->get_column_cell_renderer(i)->set_property("ellipsize",
+                                                                        Pango::EllipsizeMode::ELLIPSIZE_END);
     }
 
     updatePrescriptionTreeView();
