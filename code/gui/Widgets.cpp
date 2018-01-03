@@ -51,7 +51,7 @@ void mm::DateController::onDateChanged() {
             year->set_active_text(Glib::ustring::format(date.year));
         } else {
             day->set_active_text(Glib::ustring("30"));
-            month->set_active_text(Glib::ustring::format(date.month));
+            month->set_active_text(Glib::ustring::format((date.month < 10 ? "0" : ""), date.month));
             year->set_active_text(Glib::ustring::format(date.year));
         }
     }

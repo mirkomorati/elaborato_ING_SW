@@ -32,11 +32,19 @@ row.activatable:nth-child(odd) {
     background-color: #cccccc;
 }
 
-row.activatable:hover {
+row.activatable:not(selected):hover {
     background-color: #507DBC;
 }
+
+/*
 
 treeview.view header button {
     color: white;
     background-color: #5f5f5f;
+}
+
+*/
+
+* {
+    color: #3f3f3f;
 }
