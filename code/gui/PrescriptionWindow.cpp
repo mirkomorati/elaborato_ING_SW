@@ -34,6 +34,8 @@ void mm::PrescriptionWindow::initTreeView() {
 
     RefBuilder::get_instance().get_widget("prescriptionTreeView", prescriptionTreeView);
 
+    prescriptionTreeView->remove_all_columns();
+
     prescriptionTreeView->append_column("Paziente", model::Prescription::prescriptionTreeModel.patient_id);
     prescriptionTreeView->append_column("ID", model::Prescription::prescriptionTreeModel.prescription_id);
     prescriptionTreeView->append_column("Data di Emissione", model::Prescription::prescriptionTreeModel.issue_date);
@@ -69,6 +71,7 @@ void mm::PrescriptionWindow::updatePrescriptionTreeView() {
     model::Prescription prescription;
     std::vector<model::Prescription> prescriptions;
     std::vector<std::map<string, Serialized>> rows;
+
     try {
         rows = DBMaster::get_instance().get_rows(prescription.get_table_name());
     } catch (record_not_found_error &e) {
