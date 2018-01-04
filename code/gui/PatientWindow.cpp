@@ -208,12 +208,12 @@ void mm::PatientWindow::updatePrescriptionView() {
     RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
     prescriptionsExp.clear();
 
-    auto sel = patientTreeView->get_selection()->get_selected();
-    if (not sel) return;
-
     for (auto it : prescriptionList->get_children()) {
         prescriptionList->remove(*it);
     }
+
+    auto sel = patientTreeView->get_selection()->get_selected();
+    if (not sel) return;
 
     Glib::ustring patientId = static_cast<Glib::ustring>((*sel)[model::Patient::patientTreeModel.fiscal_code]);
     model::Patient patient;
@@ -238,14 +238,12 @@ void mm::PatientWindow::updatePrescriptionView() {
         }
     }
 
-    int i = 0;
+    prescriptionsExp.clear();
     for (auto &prescription : prescriptions) {
         std::unique_ptr<mm::view::PrescriptionExpander> tmp(new mm::view::PrescriptionExpander(prescription));
         prescriptionList->append(*tmp);
         prescriptionsExp.push_back(std::move(tmp));
-        ++i;
     }
-    //prescriptionList->get_row_at_index(0)->changed();
 }
 
 int mm::PatientWindow::sortPrescriptionList(Gtk::ListBoxRow *row1, Gtk::ListBoxRow *row2, Gtk::SortType sortType) {
