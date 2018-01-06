@@ -43,6 +43,7 @@ void mm::PatientWindow::initHandlers() {
     Gtk::ComboBoxText *customToDayCombo, *customToMonthCombo, *customToYearCombo;
     Gtk::ListBox *prescriptionList;
     Gtk::ToolButton *sortByDatePrescription;
+    Gtk::EventBox *openFilterEventBox, *closedFilterEventBox;
 
     refBuilder.get_widget("patientTreeView", patientTreeView);
     refBuilder.get_widget("addPatient", add_patient_button);
@@ -72,6 +73,8 @@ void mm::PatientWindow::initHandlers() {
     refBuilder.get_widget("customFilterToYear", customToYearCombo);
     refBuilder.get_widget("prescriptionList", prescriptionList);
     refBuilder.get_widget("sortByDatePrescription", sortByDatePrescription);
+    refBuilder.get_widget("openFilterEventBox", openFilterEventBox);
+    refBuilder.get_widget("closedFilterEventBox", closedFilterEventBox);
 
     sortByDatePrescription->signal_clicked().connect(
             sigc::mem_fun(this, &mm::PatientWindow::sortByPrescriptionHandler));
@@ -86,6 +89,12 @@ void mm::PatientWindow::initHandlers() {
             sigc::mem_fun(this, &mm::PatientWindow::onRemovePrescriptionClicked));
 
     //-------------------Filter signals-------------------//
+    openFilterEventBox->set_events(Gdk::BUTTON_PRESS_MASK);
+    closedFilterEventBox->set_events(Gdk::BUTTON_PRESS_MASK);
+
+    openFilterEventBox->signal_button_press_event().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterClose));
+    closedFilterEventBox->signal_button_press_event().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterOpened));
+
     filterSwitch->property_active().signal_changed().connect(sigc::mem_fun(this, &mm::PatientWindow::onSwitchActivate));
 
     year->signal_clicked().connect(sigc::mem_fun(this, &mm::PatientWindow::onFilterYearChanged));
@@ -623,4 +632,32 @@ void mm::PatientWindow::sortByPrescriptionHandler() {
         prescriptionList->set_sort_func(sigc::bind(sigc::mem_fun(this, &mm::PatientWindow::sortPrescriptionList),
                                                    Gtk::SortType::SORT_ASCENDING));
     }
+}
+
+bool mm::PatientWindow::onFilterClose(GdkEventButton *buttonEvent) {
+    if (buttonEvent->button != 1) return false;
+    Gtk::Frame *filterFrame;
+    Gtk::Grid *closedFilterGrid;
+
+    RefBuilder::get_instance().get_widget("openFilters", filterFrame);
+    RefBuilder::get_instance().get_widget("closedFilters", closedFilterGrid);
+
+    filterFrame->set_visible(false);
+    closedFilterGrid->set_visible(true);
+
+    return true;
+}
+
+bool mm::PatientWindow::onFilterOpened(GdkEventButton *buttonEvent) {
+    if (buttonEvent->button != 1) return false;
+    Gtk::Frame *filterFrame;
+    Gtk::Grid *closedFilterGrid;
+
+    RefBuilder::get_instance().get_widget("openFilters", filterFrame);
+    RefBuilder::get_instance().get_widget("closedFilters", closedFilterGrid);
+
+    filterFrame->set_visible(true);
+    closedFilterGrid->set_visible(false);
+
+    return true;
 }

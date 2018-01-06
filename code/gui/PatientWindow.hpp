@@ -76,6 +76,10 @@ namespace mm {
 
         int sortPrescriptionList(Gtk::ListBoxRow *row1, Gtk::ListBoxRow *row2, Gtk::SortType sortType);
 
+        bool onFilterClose(GdkEventButton *buttonEvent);
+
+        bool onFilterOpened(GdkEventButton *buttonEvent);
+
         //-------------------graphics updates-------------------//
 
         void updatePatientTreeView();
