@@ -33,8 +33,9 @@ namespace mm {
             void get_patients_from_db();
 
         public:
-            vector<model::Prescription> get_prescriptions(Patient patient,
-                                                          util::Date start, util::Date end);
+            vector<model::Prescription> get_prescriptions(Patient patient = Patient(),
+                                                          util::Date start = util::Date::get_current_date(),
+                                                          util::Date end = util::Date::get_current_date());
 
             vector<model::Prescription> get_prescriptions(model::Drug drug);
 

@@ -59,7 +59,7 @@ namespace mm {
 
             string get_risk_factors() const;
 
-            vector<Prescription> get_prescriptions();
+            vector<Prescription> get_prescriptions() const;
 
             void set_first_name(const string &first_name);
 

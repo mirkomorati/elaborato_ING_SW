@@ -8,6 +8,8 @@
 #include "RefBuilder.hpp"
 #include "../DBMaster.hpp"
 #include "../utils/Date.hpp"
+#include "../model/Authentication.hpp"
+#include "../model/Doctor.hpp"
 
 mm::PrescriptionWindow::PrescriptionWindow() :
         next(MAIN),
@@ -70,17 +72,13 @@ void mm::PrescriptionWindow::initTreeView() {
 void mm::PrescriptionWindow::updatePrescriptionTreeView() {
     model::Prescription prescription;
     std::vector<model::Prescription> prescriptions;
-    std::vector<std::map<string, Serialized>> rows;
 
     try {
-        rows = DBMaster::get_instance().get_rows(prescription.get_table_name());
+        model::Doctor tmp;
+        DBMaster::get_instance().extract_from_db(tmp, model::authentication::Login::get_instance().regional_id);
+        prescriptions = tmp.get_prescriptions();
     } catch (record_not_found_error &e) {
         throw std::runtime_error("cannot get prescriptions from db...");
-    }
-    for (const auto &row : rows) {
-        model::Prescription tmp;
-        tmp.unserialize(row);
-        prescriptions.push_back(tmp);
     }
 
     prescriptionListStore->clear();

@@ -85,7 +85,7 @@ const string &mm::model::Patient::get_fiscal_code() const {
     return fiscal_code;
 }
 
-vector<mm::model::Prescription> mm::model::Patient::get_prescriptions() {
+vector<mm::model::Prescription> mm::model::Patient::get_prescriptions() const {
     vector<Prescription> prescriptions;
     auto rows = DBMaster::get_instance().get_rows("prescriptions", "patient_id",
                                                   fiscal_code);

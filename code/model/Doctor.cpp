@@ -45,17 +45,31 @@ vector<string> mm::model::Doctor::get_primary_key() const {
 vector<mm::model::Prescription>
 mm::model::Doctor::get_prescriptions(mm::model::Patient patient, mm::util::Date start,
                                      mm::util::Date end) {
+    vector<Prescription> to_ret;
 
-    if (std::find(patients.begin(), patients.end(), patient) == patients.end()) {
-        throw std::invalid_argument("the patients does not belong to the doctor");
+    if (patient.is_valid()) {
+        if (std::find(patients.begin(), patients.end(), patient) == patients.end()) {
+            throw std::invalid_argument("the patients does not belong to the doctor");
+        }
+
+        for (auto &pr : patient.get_prescriptions()) {
+            to_ret.push_back(pr);
+        }
+    } else {
+        for (const auto &p : patients) {
+            to_ret.reserve(to_ret.size() + p.get_prescriptions().size());
+            for (const auto &pr : p.get_prescriptions()) {
+                to_ret.push_back(pr);
+            }
+        }
     }
 
-    vector<Prescription> to_ret;
-    for (auto &pr : patient.get_prescriptions()) {
-        mm::util::Date tmp_date;
-        tmp_date.set_from_str(pr.get_issue_date());
-        if (tmp_date >= start and tmp_date <= end) {
-            to_ret.push_back(pr);
+    if (end > start) {
+        for (auto it = to_ret.begin(); it != to_ret.end(); ++it) {
+            mm::util::Date tmp_date;
+            tmp_date.set_from_str(it->get_issue_date());
+            if (tmp_date < start and tmp_date > end)
+                to_ret.erase(it);
         }
     }
 
