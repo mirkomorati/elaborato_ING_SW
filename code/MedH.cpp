@@ -17,7 +17,7 @@ int mm::MedH::run() {
     return app->run(*mainWindow);
 }
 
-bool mm::MedH::init() {
+bool mm::MedH::init(int argc, char **argv) {
     Glib::init();
 
     auto console = spdlog::stdout_color_mt("out");
@@ -74,7 +74,7 @@ bool mm::MedH::init() {
 }
 
 mm::MedH::MedH(int argc, char **argv) : window(new LoginWindow) {
-    if (not init()) throw std::runtime_error("cannot initialize the app");
+    if (not init(argc, argv)) throw std::runtime_error("cannot initialize the app");
     this->app = Gtk::Application::create(argc, argv, appID);
     if (not window->init()) throw std::runtime_error("cannot init the window");
     window->attach(this);

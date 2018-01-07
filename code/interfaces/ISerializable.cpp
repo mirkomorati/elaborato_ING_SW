@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <cstring>
 #include "ISerializable.hpp"
 
 bool mm::Serialized::isType(mm::StoredTypes type) const noexcept {

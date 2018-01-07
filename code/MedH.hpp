@@ -26,7 +26,7 @@ namespace mm {
         std::string appID;
 
         /// metodo che inizializza l'oggetto
-        bool init();
+        bool init(int argc, char **argv);
 
     public:
         MedH(int argc, char **argv);

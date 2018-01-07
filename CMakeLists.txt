@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 project(elaborato_ING_SW)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
 set(CMAKE_CXX_FLAGS -Wextra)
 
@@ -15,6 +15,13 @@ endif (${CMAKE_BUILD_TYPE} MATCHES Debug)
 find_package(PkgConfig REQUIRED)
 find_package(SQLite3 REQUIRED)
 find_package(FMT REQUIRED)
+
+if (UNIX AND NOT APPLE)
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+    find_path(SPDLOG_INCLUDE_DIRS spdlog)
+    include_directories(${SPDLOG_INCLUDE_DIRS}/spdlog)
+    message("-- ${SPDLOG_INCLUDE_DIRS}")
+endif ()
 
 pkg_check_modules(GTKMM REQUIRED gtkmm-3.0)
 
@@ -60,8 +67,14 @@ if (APPLE)
 
 endif (APPLE)
 
+if (UNIX AND NOT APPLE)
+    add_definitions(-DGLADE_FILE_NAME="glade/mainWindow.glade"
+            -DGLADE_CSS_FILE="glade/style.css" -DCONFIG_FILE="tmp/config.json")
+
+    add_executable(med-h ${MAIN} ${SRC} ${HDR} ${GLADE_FILES} ${CONF_FILE})
+endif ()
+
 target_link_libraries(med-h ${GTKMM_LDFLAGS})
 target_link_libraries(med-h ${SQLITE3_LIBRARIES})
 target_link_libraries(med-h fmt)
-
 

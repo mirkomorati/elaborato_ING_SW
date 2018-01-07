@@ -5,6 +5,7 @@
 
 
 #include <iostream>
+#include <algorithm>
 #include "Doctor.hpp"
 #include "../DBMaster.hpp"
 

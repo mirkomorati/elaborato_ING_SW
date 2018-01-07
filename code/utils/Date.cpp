@@ -6,6 +6,7 @@
 
 #include "Date.hpp"
 #include "stringUtils.hpp"
+#include <ctime>
 
 /**
  * Date implementation

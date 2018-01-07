@@ -2,7 +2,6 @@
 // Created by Noè Murr on 19/09/2017.
 //
 
-#include <Carbon/Carbon.h>
 #include "IObserver.hpp"
 #include "ISubject.hpp"
 
