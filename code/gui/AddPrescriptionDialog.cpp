@@ -14,6 +14,7 @@ mm::AddPrescriptionDialog::AddPrescriptionDialog() : is_active(true),
                                                      expireDate("addExpireDateDay", "addExpireDateMonth",
                                                                 "addExpireDateYear") {
     auto refBuilder = RefBuilder::get_instance();
+    Gtk::Dialog *dialog;
 
     refBuilder.get_widget("addPrescriptionOk", ok_button);
     refBuilder.get_widget("addPrescriptionCancel", cancel_button);
@@ -21,11 +22,13 @@ mm::AddPrescriptionDialog::AddPrescriptionDialog() : is_active(true),
     refBuilder.get_widget("addDrugIdComboBox", drugComboBox);
     refBuilder.get_widget("addDrugIdsListBox", drugListBox);
     refBuilder.get_widget("addDrugIdAdd", drugAdd);
+    refBuilder.get_widget("addPrescriptionDialog", dialog);
 
     reset();
     drugAdd->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::drugAddHandler));
     ok_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::okHandler));
     cancel_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::cancelHandler));
+    dialog->signal_delete_event().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::onDelete));
 }
 
 void mm::AddPrescriptionDialog::show() {
@@ -42,7 +45,7 @@ void mm::AddPrescriptionDialog::show() {
 void mm::AddPrescriptionDialog::dispose() {
     Gtk::Dialog *dialog;
     RefBuilder::get_instance().get_widget("addPrescriptionDialog", dialog);
-    dialog->close();
+    dialog->hide();
     is_active = false;
     notify();
 }
@@ -140,7 +143,8 @@ void mm::AddPrescriptionDialog::drugAddHandler() {
     }
 
     std::unique_ptr<mm::view::DrugEntry> tmp(new mm::view::DrugEntry(drugComboBox->get_active_text()));
-    drugListBox->append(*tmp);
+    drugListBox->append(*tmp);  /* possibile che il contenuto dello unique pointer causi cazzi amari.
+                                   nel distruttore è necessario eliminare il contenuto di drugListBox. penso. */
     tmp->signal_removed().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::drugRemoveHandler));
     drugEntries.push_back(std::move(tmp));
     drugListBox->show_all();
@@ -152,10 +156,15 @@ void mm::AddPrescriptionDialog::drugRemoveHandler(mm::view::DrugEntry *removed) 
     if (addDrugOverError->is_visible()) addDrugOverError->set_visible(false);
 
     drugListBox->remove(*removed);
-    drugEntries.erase(
-            std::remove_if(drugEntries.begin(), drugEntries.end(),
-                           [&](std::unique_ptr<mm::view::DrugEntry> const &p) {
-                        return removed == p.get();
-                    }),
-            drugEntries.end());
+    drugEntries.erase(std::remove_if(drugEntries.begin(), drugEntries.end(),
+                                     [&](std::unique_ptr<mm::view::DrugEntry> const &p) {
+                                         return removed == p.get();
+                                     }),
+                      drugEntries.end());
+}
+
+mm::AddPrescriptionDialog::~AddPrescriptionDialog() {
+    for (auto &de : drugEntries) {
+        drugListBox->remove(*de);
+    }
 }

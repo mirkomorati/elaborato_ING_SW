@@ -27,6 +27,8 @@ namespace mm {
 
         void reset() override;
 
+        ~AddPrescriptionDialog() override;
+
     private:
         bool is_active;
 

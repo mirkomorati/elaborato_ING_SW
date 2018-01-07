@@ -10,6 +10,7 @@ mm::AboutDialog::AboutDialog() : active(true) {
     RefBuilder::get_instance().get_widget("aboutDialog", dialog);
 
     dialog->signal_response().connect(sigc::mem_fun(this, &mm::AboutDialog::onResponse));
+    dialog->signal_delete_event().connect(sigc::mem_fun(this, &mm::AboutDialog::onDelete));
 }
 
 void mm::AboutDialog::show() {
@@ -21,7 +22,7 @@ void mm::AboutDialog::show() {
 void mm::AboutDialog::dispose() {
     Gtk::Dialog *dialog;
     RefBuilder::get_instance().get_widget("aboutDialog", dialog);
-    dialog->close();
+    dialog->hide();
     active = false;
     notify();
 }

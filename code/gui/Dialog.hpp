@@ -6,10 +6,16 @@
 #define ELABORATO_ING_SW_DIALOG_HPP
 
 #include <sigc++/trackable.h>
+#include <gtkmm/dialog.h>
 #include "../interfaces/ISubject.hpp"
 
 namespace mm {
     class Dialog : public ISubject, public sigc::trackable {
+    protected:
+        bool onDelete(GdkEventAny *any_event) {
+            dispose();
+            return true;
+        }
     public:
         virtual void show() = 0; // it shows the dialog
         virtual void dispose() = 0; // close the dialog

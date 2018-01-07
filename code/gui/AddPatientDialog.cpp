@@ -16,14 +16,17 @@ mm::AddPatientDialog::AddPatientDialog()
           birthDate("addBirthDateDay", "addBirthDateMonth", "addBirthDateYear") {
 
     auto refBuilder = RefBuilder::get_instance();
+    Gtk::Dialog *dialog;
 
     refBuilder.get_widget("addPatientOk", ok_button);
     refBuilder.get_widget("addPatientCancel", cancel_button);
+    refBuilder.get_widget("addPatientDialog", cancel_button);
 
     reset();
 
     ok_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPatientDialog::okHandler));
     cancel_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPatientDialog::cancelHandler));
+    dialog->signal_delete_event().connect(sigc::mem_fun(this, &mm::AddPatientDialog::onDelete));
 }
 
 void mm::AddPatientDialog::show() {
@@ -77,7 +80,7 @@ void mm::AddPatientDialog::cancelHandler() {
 void mm::AddPatientDialog::dispose() {
     Gtk::Dialog *dialog;
     RefBuilder::get_instance().get_widget("addPatientDialog", dialog);
-    dialog->close();
+    dialog->hide();
     is_active = false;
     notify();
 }
