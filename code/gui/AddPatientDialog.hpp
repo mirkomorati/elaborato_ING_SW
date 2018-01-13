@@ -20,7 +20,7 @@ namespace mm {
 
         bool isActive() override;
 
-        ~AddPatientDialog() override;
+        ~AddPatientDialog() override = default;
 
         void reset() override;
 
@@ -28,9 +28,16 @@ namespace mm {
 
         void dispose() override;
 
+        void dispose(bool notify);
+
         void okHandler();
 
         void cancelHandler();
+
+    protected:
+        bool onDelete(GdkEventAny *any_event) override;
+
+    private:
 
         bool is_active;
 

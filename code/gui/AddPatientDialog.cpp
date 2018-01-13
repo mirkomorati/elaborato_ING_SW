@@ -74,15 +74,11 @@ void mm::AddPatientDialog::okHandler() {
 }
 
 void mm::AddPatientDialog::cancelHandler() {
-    dispose();
+    dispose(false);
 }
 
 void mm::AddPatientDialog::dispose() {
-    Gtk::Dialog *dialog;
-    RefBuilder::get_instance().get_widget("addPatientDialog", dialog);
-    dialog->hide();
-    is_active = false;
-    notify();
+    dispose(true);
 }
 
 void mm::AddPatientDialog::reset() {
@@ -99,4 +95,15 @@ void mm::AddPatientDialog::reset() {
     birth_country.reset();
 }
 
-mm::AddPatientDialog::~AddPatientDialog() {}
+void mm::AddPatientDialog::dispose(bool notify) {
+    Gtk::Dialog *dialog;
+    RefBuilder::get_instance().get_widget("addPatientDialog", dialog);
+    dialog->hide();
+    is_active = false;
+    if (notify) this->notify();
+}
+
+bool mm::AddPatientDialog::onDelete(GdkEventAny *any_event) {
+    dispose(false);
+    return true;
+}

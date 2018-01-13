@@ -12,7 +12,7 @@
 namespace mm {
     class Dialog : public ISubject, public sigc::trackable {
     protected:
-        bool onDelete(GdkEventAny *any_event) {
+        virtual bool onDelete(GdkEventAny *any_event) {
             dispose();
             return true;
         }
