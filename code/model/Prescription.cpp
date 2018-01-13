@@ -152,6 +152,35 @@ unsigned int mm::model::Prescription::generateID() {
     return static_cast<unsigned int>(ID);
 }
 
+void mm::model::Prescription::set_patient_id(const string &patient_id) {
+    Prescription::patient_id = patient_id;
+}
+
+void mm::model::Prescription::set_prescription_id(int prescription_id) {
+    Prescription::prescription_id = prescription_id;
+}
+
+void mm::model::Prescription::set_issue_date(const string &issue_date) {
+    Prescription::issue_date = issue_date;
+}
+
+void mm::model::Prescription::set_expire_date(const string &expire_date) {
+    Prescription::expire_date = expire_date;
+}
+
+void mm::model::Prescription::set_negative_interactions(const map <string, string> &negative_interactions) {
+    Prescription::negative_interactions = negative_interactions;
+}
+
+void mm::model::Prescription::set_used(bool used) {
+    Prescription::used = used;
+}
+
+void mm::model::Prescription::add_drug(mm::model::Drug &drug) {
+    pair<string, string> drug_id(drug.get_name(), drug.get_pharmaceutical_form());
+    drug_ids.push_back(drug_id);
+}
+
 mm::model::Prescription::TreeModel::TreeModel() noexcept {
     add(patient_id);
     add(issue_date);

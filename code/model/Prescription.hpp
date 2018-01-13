@@ -63,6 +63,20 @@ namespace mm {
 
             bool is_used() const;
 
+            void set_patient_id(const string &patient_id);
+
+            void set_prescription_id(int prescription_id);
+
+            void set_issue_date(const string &issue_date);
+
+            void set_expire_date(const string &expire_date);
+
+            void set_negative_interactions(const map<string, string> &negative_interactions);
+
+            void set_used(bool used);
+
+            void add_drug(Drug &drug);
+
         private:
             string patient_id;
             int prescription_id;

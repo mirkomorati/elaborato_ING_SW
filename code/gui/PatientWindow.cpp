@@ -14,6 +14,10 @@
 #include "AddPrescriptionDialog.hpp"
 #include "AboutDialog.hpp"
 
+#define UPDATE_PATIENTS 1
+#define UPDATE_PRESCRIPTIONS 2
+#define UPDATE_DETAILS 3
+
 mm::PatientWindow::PatientWindow() :
         next(MAIN),
         patientListStore(Gtk::ListStore::create(model::Patient::patientTreeModel)),
@@ -158,10 +162,24 @@ mm::WindowName mm::PatientWindow::getNextWindow() const {
 }
 
 void mm::PatientWindow::update() {
+    update(UPDATE_PATIENTS);
+}
+
+void mm::PatientWindow::update(unsigned int what) {
     for (auto it = dialogList.begin(); it != dialogList.end(); ++it)
         if (not(*it)->isActive()) dialogList.erase(it);
 
-    updatePatientTreeView();
+    switch (what) {
+        case UPDATE_DETAILS:
+            updatePatientDetailsView();
+            break;
+        case UPDATE_PRESCRIPTIONS:
+            updatePrescriptionView();
+            break;
+        default:
+            updatePatientTreeView();
+            break;
+    }
 }
 
 void mm::PatientWindow::onAddPrescriptionClicked() {

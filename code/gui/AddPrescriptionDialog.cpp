@@ -8,6 +8,8 @@
 #include "../DBMaster.hpp"
 #include "../model/Patient.hpp"
 
+#define UPDATE_PRESCRIPTIONS 2
+
 mm::AddPrescriptionDialog::AddPrescriptionDialog() : is_active(true),
                                                      issueDate("addIssueDateDay", "addIssueDateMonth",
                                                                "addIssueDateYear"),
@@ -47,7 +49,7 @@ void mm::AddPrescriptionDialog::dispose() {
     RefBuilder::get_instance().get_widget("addPrescriptionDialog", dialog);
     dialog->hide();
     is_active = false;
-    notify();
+    notify(UPDATE_PRESCRIPTIONS);
 }
 
 bool mm::AddPrescriptionDialog::isActive() {
@@ -57,15 +59,21 @@ bool mm::AddPrescriptionDialog::isActive() {
 void mm::AddPrescriptionDialog::okHandler() {
     // todo gestire ok, validazione prescrizioni
     Gtk::Entry *prescriptionID;
+    Gtk::Entry *patientID;
+    Gtk::Entry *negativeInteractions;
     RefBuilder::get_instance().get_widget("addPrescriptionId", prescriptionID);
+    RefBuilder::get_instance().get_widget("addPatientId", patientID);
+    RefBuilder::get_instance().get_widget("addNegativeInteractions", negativeInteractions);
     model::Prescription tmp;
 
-    if (DBMaster::get_instance().exists(tmp.get_table_name(), tmp.get_primary_key()[0],
-                                        stoi(prescriptionID->get_text().c_str()))) {
-        cout << "esiste\n";
-    } else {
-        cout << "non esiste\n";
-    }
+    tmp.set_patient_id(patientID->get_text());
+    tmp.set_prescription_id(std::stoi(prescriptionID->get_text()));
+    tmp.set_issue_date(issueDate.getDateAsString());
+    tmp.set_expire_date(expireDate.getDateAsString());
+    //tmp.set_negative_interactions(negativeInteractions->get_text()); todo
+    tmp.set_used(false);
+
+    // todo da finire.
 
     dispose();
 }

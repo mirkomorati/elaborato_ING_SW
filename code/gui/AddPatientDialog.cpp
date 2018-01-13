@@ -20,7 +20,7 @@ mm::AddPatientDialog::AddPatientDialog()
 
     refBuilder.get_widget("addPatientOk", ok_button);
     refBuilder.get_widget("addPatientCancel", cancel_button);
-    refBuilder.get_widget("addPatientDialog", cancel_button);
+    refBuilder.get_widget("addPatientDialog", dialog);
 
     reset();
 
