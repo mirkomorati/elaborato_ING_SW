@@ -76,7 +76,7 @@ bool mm::MedH::init() {
 mm::MedH::MedH(int argc, char **argv) : window(new LoginWindow) {
     if (not init()) throw std::runtime_error("cannot initialize the app");
     this->app = Gtk::Application::create(argc, argv, appID);
-    if (not window->init()) throw std::runtime_error("cannot init the window");
+    if (not window->init()) throw std::runtime_error("cannot initDrugComboBox the window");
     window->attach(this);
 }
 

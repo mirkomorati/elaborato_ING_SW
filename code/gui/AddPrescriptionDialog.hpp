@@ -43,6 +43,7 @@ namespace mm {
 
         Gtk::Button *drugAdd;
         Gtk::ComboBoxText *drugComboBox;
+        Gtk::ComboBoxText *monthComboBox;
         Gtk::ListBox *drugListBox;
         std::vector<std::unique_ptr<mm::view::DrugEntry>> drugEntries;
         DateController issueDate;
@@ -50,8 +51,13 @@ namespace mm {
 
         void drugRemoveHandler(mm::view::DrugEntry *removed);
 
-        void init();
+        void initDrugComboBox();
+
+        void initMonthComboBox();
+
+        void monthValidityChanged();
     };
+
 }
 
 #endif //ELABORATO_ING_SW_ADDPRESCRIPTIONDIALOG_HPP
