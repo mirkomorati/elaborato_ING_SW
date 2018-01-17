@@ -205,10 +205,19 @@ void mm::AddPrescriptionDialog::drugRemoveHandler(mm::view::DrugEntry *removed) 
     interactionComboBox1->remove_all();
     interactionComboBox2->remove_all();
 
-    // todo sistemare quando vengono aggiunti due dello stesso tipo e rimosso uno solo
-    for (const auto &entry : drugEntries) {
-        interactionComboBox1->append(entry->get_drugName());
-        interactionComboBox2->append(entry->get_drugName());
+    for (int i = 0; i < drugEntries.size(); ++i) {
+        bool present = false;
+        for (int j = 0; j < drugEntries.size(); ++j) {
+            if (i != j and drugEntries[i]->get_drugName() == drugEntries[j]->get_drugName()) {
+                present = true;
+                break;
+            }
+        }
+
+        if (!present) {
+            interactionComboBox1->append(drugEntries[i]->get_drugName());
+            interactionComboBox2->append(drugEntries[i]->get_drugName());
+        }
     }
 }
 

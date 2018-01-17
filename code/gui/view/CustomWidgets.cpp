@@ -139,8 +139,9 @@ sigc::signal<void, mm::view::DrugEntry *> mm::view::DrugEntry::signal_removed() 
     return remove;
 }
 
-const Glib::ustring &mm::view::DrugEntry::get_drugName() const {
-    return mm::util::str::split(drug, '-', true)[0];
+const string mm::view::DrugEntry::get_drugName() const {
+    string str = mm::util::str::split(drug.c_str(), '-', true)[0];
+    return str;
 }
 
 mm::view::InteractionEntry::InteractionEntry(const Glib::ustring &drug1, const Glib::ustring &drug2) {

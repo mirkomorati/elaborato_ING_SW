@@ -67,7 +67,7 @@ namespace mm::view {
 
         sigc::signal<void, mm::view::DrugEntry *> signal_removed();
 
-        const Glib::ustring &get_drugName() const;
+        const string get_drugName() const;
 
     protected:
         sigc::signal<void, mm::view::DrugEntry *> remove;
