@@ -67,6 +67,8 @@ namespace mm::view {
 
         sigc::signal<void, mm::view::DrugEntry *> signal_removed();
 
+        const Glib::ustring &get_drugName() const;
+
     protected:
         sigc::signal<void, mm::view::DrugEntry *> remove;
 
@@ -74,8 +76,28 @@ namespace mm::view {
         Gtk::Entry entry;
         Gtk::Button button;
         Gtk::Grid grid;
+        Glib::ustring drug;
 
-        void drugRemoveHandler();
+        void removeHandler();
+    };
+
+    class InteractionEntry : public Gtk::ListBoxRow {
+    public:
+        InteractionEntry() = delete;
+
+        InteractionEntry(const Glib::ustring &drug1, const Glib::ustring &drug2);
+
+        sigc::signal<void, mm::view::InteractionEntry *> signal_removed();
+
+    protected:
+        sigc::signal<void, mm::view::InteractionEntry *> remove;
+
+    private:
+        Gtk::Entry entry;
+        Gtk::Button button;
+        Gtk::Grid grid;
+
+        void removeHandler();
     };
 }
 

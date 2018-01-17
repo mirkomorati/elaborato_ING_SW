@@ -11,8 +11,9 @@
 #include <iostream>
 #include <gtkmm/stock.h>
 #include <gtkmm/listbox.h>
-#include <spdlog/spdlog.h>
+#include <fmt/format.h>
 #include "CustomWidgets.hpp"
+#include "../../utils/stringUtils.hpp"
 
 mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescription &prescription) :
         prescriptionID("<b>ID:</b>", ""),
@@ -27,7 +28,6 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
         id(prescription.get_prescription_id()) {
 
     //-------------------Label-------------------//
-    auto start = std::chrono::system_clock::now();
     labelBox.set_homogeneous();
 
     prescriptionID.first.set_use_markup(true);
@@ -107,10 +107,6 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
             row = *(drugListStore->append()++);
     }
 
-    auto end = std::chrono::system_clock::now();
-    std::chrono::duration<double> duration = end - start;
-    spdlog::get("out")->debug("expander constructor time: {}", duration.count());
-
     show_all();
 }
 
@@ -119,12 +115,12 @@ int mm::view::PrescriptionExpander::getID() const {
 }
 
 
-mm::view::DrugEntry::DrugEntry(const Glib::ustring &drug) {
-    entry.set_text(drug);
+mm::view::DrugEntry::DrugEntry(const Glib::ustring &drug) : drug(drug) {
+    entry.set_text(drug.c_str());
     entry.set_editable(false);
     entry.set_hexpand(true);
     button.set_image_from_icon_name("list-remove", Gtk::BuiltinIconSize::ICON_SIZE_BUTTON);
-    button.signal_clicked().connect(sigc::mem_fun(this, &mm::view::DrugEntry::drugRemoveHandler));
+    button.signal_clicked().connect(sigc::mem_fun(this, &mm::view::DrugEntry::removeHandler));
 
     grid.attach(entry, 0, 0, 1, 1);
     grid.attach(button, 1, 0, 1, 1);
@@ -135,10 +131,38 @@ mm::view::DrugEntry::DrugEntry(const Glib::ustring &drug) {
     show_all();
 }
 
-void mm::view::DrugEntry::drugRemoveHandler() {
+void mm::view::DrugEntry::removeHandler() {
     remove.emit(this);
 }
 
 sigc::signal<void, mm::view::DrugEntry *> mm::view::DrugEntry::signal_removed() {
+    return remove;
+}
+
+const Glib::ustring &mm::view::DrugEntry::get_drugName() const {
+    return mm::util::str::split(drug, '-', true)[0];
+}
+
+mm::view::InteractionEntry::InteractionEntry(const Glib::ustring &drug1, const Glib::ustring &drug2) {
+    entry.set_text(fmt::format("{} <-> {}", drug1.c_str(), drug2.c_str()));
+    entry.set_editable(false);
+    entry.set_hexpand(true);
+    button.set_image_from_icon_name("list-remove", Gtk::BuiltinIconSize::ICON_SIZE_BUTTON);
+    button.signal_clicked().connect(sigc::mem_fun(this, &mm::view::InteractionEntry::removeHandler));
+
+    grid.attach(entry, 0, 0, 1, 1);
+    grid.attach(button, 1, 0, 1, 1);
+
+    add(grid);
+    set_halign(Gtk::Align::ALIGN_FILL);
+    set_hexpand(true);
+    show_all();
+}
+
+void mm::view::InteractionEntry::removeHandler() {
+    remove.emit(this);
+}
+
+sigc::signal<void, mm::view::InteractionEntry *> mm::view::InteractionEntry::signal_removed() {
     return remove;
 }
