@@ -6,6 +6,7 @@
 
 #include <sstream>
 #include <regex>
+#include <spdlog/spdlog.h>
 #include "Patient.hpp"
 #include "../DBMaster.hpp"
 

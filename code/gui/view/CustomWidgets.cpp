@@ -11,6 +11,7 @@
 #include <iostream>
 #include <gtkmm/stock.h>
 #include <gtkmm/listbox.h>
+#include <spdlog/spdlog.h>
 #include "CustomWidgets.hpp"
 
 mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescription &prescription) :
@@ -26,6 +27,7 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
         id(prescription.get_prescription_id()) {
 
     //-------------------Label-------------------//
+    auto start = std::chrono::system_clock::now();
     labelBox.set_homogeneous();
 
     prescriptionID.first.set_use_markup(true);
@@ -104,6 +106,10 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
         if (i < drugs.size() - 1)
             row = *(drugListStore->append()++);
     }
+
+    auto end = std::chrono::system_clock::now();
+    std::chrono::duration<double> duration = end - start;
+    spdlog::get("out")->debug("expander constructor time: {}", duration.count());
 
     show_all();
 }

@@ -166,6 +166,7 @@ void mm::PatientWindow::update() {
 }
 
 void mm::PatientWindow::update(unsigned int what) {
+    auto start = std::chrono::system_clock::now();
     for (auto it = dialogList.begin(); it != dialogList.end(); ++it)
         if (not(*it)->isActive()) dialogList.erase(it);
 
@@ -180,6 +181,10 @@ void mm::PatientWindow::update(unsigned int what) {
             updatePatientTreeView();
             break;
     }
+    auto end = std::chrono::system_clock::now();
+
+    std::chrono::duration<double> duration = end - start;
+    spdlog::get("out")->debug("update time: {}", duration.count());
 }
 
 void mm::PatientWindow::onAddPrescriptionClicked() {
@@ -265,6 +270,7 @@ void mm::PatientWindow::updatePrescriptionView() {
         }
     }
 
+    //auto start = std::chrono::system_clock::now();
     prescriptionsExp.clear();
     for (auto &prescription : prescriptions) {
         std::unique_ptr<mm::view::PrescriptionExpander> tmp(new mm::view::PrescriptionExpander(prescription));

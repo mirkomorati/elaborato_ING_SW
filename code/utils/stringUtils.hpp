@@ -29,7 +29,7 @@ namespace mm {
                 using namespace std;
                 vector<string> elems;
                 split(s, delim, back_inserter(elems), skipEmpty);
-                return std::move(elems);
+                return elems;
             }
         }
     }
