@@ -186,6 +186,10 @@ void mm::model::Prescription::add_drug(const string &drugName, const string &dru
     drug_ids.push_back(drug_id);
 }
 
+bool mm::model::Prescription::is_valid() {
+    return !patient_id.empty() and !issue_date.empty() and !expire_date.empty() and drug_ids.size() != 0;
+}
+
 mm::model::Prescription::TreeModel::TreeModel() noexcept {
     add(patient_id);
     add(issue_date);

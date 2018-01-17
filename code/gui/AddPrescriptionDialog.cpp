@@ -75,16 +75,15 @@ void mm::AddPrescriptionDialog::okHandler() {
     refBuilder.get_widget("addPatientId", patientID);
     refBuilder.get_widget("addIssueDate", issueDate);
     refBuilder.get_widget("addPrescriptionExpireDate", expireDate);
-    model::Prescription tmp;
+    model::Prescription prescription;
 
-    tmp.set_patient_id(patientID->get_text());
-    tmp.set_prescription_id(std::stoi(prescriptionID->get_text()));
-    tmp.set_issue_date(issueDate->get_text());
-    tmp.set_expire_date(expireDate->get_text());
+    prescription.set_patient_id(patientID->get_text());
+    prescription.set_prescription_id(std::stoi(prescriptionID->get_text()));
+    prescription.set_issue_date(issueDate->get_text());
+    prescription.set_expire_date(expireDate->get_text());
 
     for (const auto &entry : drugEntries) {
-        tmp.add_drug(entry->get_drugName(), entry->get_drugForm());
-        std::cout << entry->get_drugForm() << std::endl;
+        prescription.add_drug(entry->get_drugName(), entry->get_drugForm());
     }
 
     map<string, string> interactions;
@@ -92,13 +91,20 @@ void mm::AddPrescriptionDialog::okHandler() {
         interactions[entry->get_drug1()] = entry->get_drug2();
     }
 
-    tmp.set_negative_interactions(interactions);
+    prescription.set_negative_interactions(interactions);
 
-    tmp.set_used(false);
+    prescription.set_used(false);
 
     // todo da finire.
 
-    dispose();
+    if (prescription.is_valid()) {
+        DBMaster::get_instance().add_to_db(prescription);
+        dispose();
+    } else {
+        Gtk::Label *error;
+        refBuilder.get_widget("addPrescriptionInvalidError", error);
+        error->set_visible(true);
+    }
 }
 
 void mm::AddPrescriptionDialog::cancelHandler() {
