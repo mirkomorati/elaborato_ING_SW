@@ -181,6 +181,11 @@ void mm::model::Prescription::add_drug(mm::model::Drug &drug) {
     drug_ids.push_back(drug_id);
 }
 
+void mm::model::Prescription::add_drug(const string &drugName, const string &drugForm) {
+    pair<string, string> drug_id(drugName, drugForm);
+    drug_ids.push_back(drug_id);
+}
+
 mm::model::Prescription::TreeModel::TreeModel() noexcept {
     add(patient_id);
     add(issue_date);

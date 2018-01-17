@@ -67,15 +67,33 @@ void mm::AddPrescriptionDialog::okHandler() {
     Gtk::Entry *prescriptionID;
     Gtk::Entry *patientID;
     Gtk::Entry *negativeInteractions;
-    RefBuilder::get_instance().get_widget("addPrescriptionId", prescriptionID);
-    RefBuilder::get_instance().get_widget("addPatientId", patientID);
-    RefBuilder::get_instance().get_widget("addNegativeInteractions", negativeInteractions);
+    Gtk::Label *issueDate;
+    Gtk::Label *expireDate;
+
+    RefBuilder &refBuilder = RefBuilder::get_instance();
+    refBuilder.get_widget("addPrescriptionId", prescriptionID);
+    refBuilder.get_widget("addPatientId", patientID);
+    refBuilder.get_widget("addIssueDate", issueDate);
+    refBuilder.get_widget("addPrescriptionExpireDate", expireDate);
     model::Prescription tmp;
 
     tmp.set_patient_id(patientID->get_text());
     tmp.set_prescription_id(std::stoi(prescriptionID->get_text()));
+    tmp.set_issue_date(issueDate->get_text());
+    tmp.set_expire_date(expireDate->get_text());
 
-    //tmp.set_negative_interactions(negativeInteractions->get_text()); todo
+    for (const auto &entry : drugEntries) {
+        tmp.add_drug(entry->get_drugName(), entry->get_drugForm());
+        std::cout << entry->get_drugForm() << std::endl;
+    }
+
+    map<string, string> interactions;
+    for (const auto &entry : interactionEntries) {
+        interactions[entry->get_drug1()] = entry->get_drug2();
+    }
+
+    tmp.set_negative_interactions(interactions);
+
     tmp.set_used(false);
 
     // todo da finire.
@@ -259,7 +277,17 @@ void mm::AddPrescriptionDialog::interactionAddHandler() {
 
     const Glib::ustring &drug1 = interactionComboBox1->get_active_text();
     const Glib::ustring &drug2 = interactionComboBox2->get_active_text();
-    if (drug1.empty() or drug2.empty() or drug1 == drug2) {
+
+    bool present = false;
+
+    for (const auto &entry : interactionEntries) {
+        if ((entry->get_drug1() == drug1.c_str() and entry->get_drug2() == drug2.c_str())
+            or (entry->get_drug1() == drug2.c_str() and entry->get_drug2() == drug1.c_str())) {
+            present = true;
+            break;
+        }
+    }
+    if (drug1.empty() or drug2.empty() or drug1 == drug2 or present or interactionEntries.size() >= 5) {
         addInteractionError->set_visible(true);
         return;
     } else if (addInteractionError->get_visible()) {

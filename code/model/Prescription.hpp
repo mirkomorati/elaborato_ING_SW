@@ -77,6 +77,8 @@ namespace mm {
 
             void add_drug(Drug &drug);
 
+            void add_drug(const string &drugName, const string &drugForm);
+
         private:
             string patient_id;
             int prescription_id;

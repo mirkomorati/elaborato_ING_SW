@@ -144,7 +144,13 @@ const string mm::view::DrugEntry::get_drugName() const {
     return str;
 }
 
-mm::view::InteractionEntry::InteractionEntry(const Glib::ustring &drug1, const Glib::ustring &drug2) {
+const string mm::view::DrugEntry::get_drugForm() const {
+    string str = mm::util::str::split(drug.c_str(), '-', true)[1];
+    return str;
+}
+
+mm::view::InteractionEntry::InteractionEntry(const Glib::ustring &drug1, const Glib::ustring &drug2) : drug1(
+        drug1.c_str()), drug2(drug2.c_str()) {
     entry.set_text(fmt::format("{} <-> {}", drug1.c_str(), drug2.c_str()));
     entry.set_editable(false);
     entry.set_hexpand(true);
@@ -166,4 +172,12 @@ void mm::view::InteractionEntry::removeHandler() {
 
 sigc::signal<void, mm::view::InteractionEntry *> mm::view::InteractionEntry::signal_removed() {
     return remove;
+}
+
+const string &mm::view::InteractionEntry::get_drug1() const {
+    return drug1;
+}
+
+const string &mm::view::InteractionEntry::get_drug2() const {
+    return drug2;
 }

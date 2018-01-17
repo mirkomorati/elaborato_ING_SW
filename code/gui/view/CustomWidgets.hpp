@@ -69,6 +69,8 @@ namespace mm::view {
 
         const string get_drugName() const;
 
+        const string get_drugForm() const;
+
     protected:
         sigc::signal<void, mm::view::DrugEntry *> remove;
 
@@ -89,6 +91,10 @@ namespace mm::view {
 
         sigc::signal<void, mm::view::InteractionEntry *> signal_removed();
 
+        const string &get_drug1() const;
+
+        const string &get_drug2() const;
+
     protected:
         sigc::signal<void, mm::view::InteractionEntry *> remove;
 
@@ -96,6 +102,8 @@ namespace mm::view {
         Gtk::Entry entry;
         Gtk::Button button;
         Gtk::Grid grid;
+        string drug1;
+        string drug2;
 
         void removeHandler();
     };
