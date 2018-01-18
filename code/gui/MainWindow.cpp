@@ -7,6 +7,7 @@
 #include "RefBuilder.hpp"
 #include "AboutDialog.hpp"
 #include "PatientWindow.hpp"
+#include "DrugWindow.hpp"
 
 bool mm::MainWindow::init() {
     Gtk::MenuBar *menuBar;
@@ -74,6 +75,8 @@ void mm::MainWindow::onPageSwitch(Gtk::Widget *page, guint page_number) {
         }
         case 2: {
             // todo create DrugWindow controller
+            activeTabWindow.reset(new DrugWindow);
+            activeTabWindow->init();
             break;
         }
         default:

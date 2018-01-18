@@ -10,6 +10,7 @@
 #include <gtkmm/comboboxtext.h>
 #include "Dialog.hpp"
 #include "Widgets.hpp"
+#include "../utils/stringUtils.hpp"
 
 namespace mm {
     class AddPatientDialog : public Dialog {

@@ -58,6 +58,10 @@ namespace mm::view {
         int getID() const;
     };
 
+    class PatientExpander : public Gtk::Expander {
+    public:
+        PatientExpander();
+    };
 
     class DrugEntry : public Gtk::ListBoxRow {
     public:

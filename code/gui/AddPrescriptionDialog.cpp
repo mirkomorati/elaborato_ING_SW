@@ -95,8 +95,6 @@ void mm::AddPrescriptionDialog::okHandler() {
 
     prescription.set_used(false);
 
-    // todo da finire.
-
     if (prescription.is_valid()) {
         DBMaster::get_instance().add_to_db(prescription);
         dispose();
@@ -190,9 +188,6 @@ void mm::AddPrescriptionDialog::drugAddHandler() {
         addDrugOverError->set_visible(false);
     }
 
-    /*
-    std::unique_ptr<mm::view::DrugEntry> tmp(new mm::view::DrugEntry(drugComboBox->get_active_text()));
-    */
     std::unique_ptr<mm::view::DrugEntry> tmp(new mm::view::DrugEntry(activeDrug));
     drugListBox->append(*tmp);
     tmp->signal_removed().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::drugRemoveHandler));
