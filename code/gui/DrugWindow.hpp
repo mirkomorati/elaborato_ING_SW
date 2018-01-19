@@ -39,6 +39,10 @@ namespace mm {
         Glib::RefPtr<Gtk::ListStore> drugListStore;
 
         std::vector<std::unique_ptr<view::PatientExpander>> patientExp;
+
+        bool onFilterClose(GdkEventButton *buttonEvent);
+
+        bool onFilterOpened(GdkEventButton *buttonEvent);
     };
 }
 

@@ -28,7 +28,16 @@ void mm::DrugWindow::update() {
 }
 
 void mm::DrugWindow::initHandler() {
+    Gtk::EventBox *openFilterEventBox, *closedFilterEventBox;
+    auto refBuilder = RefBuilder::get_instance();
+    refBuilder.get_widget("drugOpenFilterEventBox", openFilterEventBox);
+    refBuilder.get_widget("drugCloseFilterEventBox", closedFilterEventBox);
 
+    openFilterEventBox->set_events(Gdk::BUTTON_PRESS_MASK);
+    closedFilterEventBox->set_events(Gdk::BUTTON_PRESS_MASK);
+
+    openFilterEventBox->signal_button_press_event().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterClose));
+    closedFilterEventBox->signal_button_press_event().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterOpened));
 }
 
 void mm::DrugWindow::initTreeView() {
@@ -93,4 +102,32 @@ void mm::DrugWindow::initQuantityFilter() {
     semesterMonthCombo->set_active_text(Glib::ustring::format("01"));
     quarterMonthCombo->set_active_text(Glib::ustring::format("01"));
     monthMonthCombo->set_active_text(Glib::ustring::format("01"));
+}
+
+bool mm::DrugWindow::onFilterClose(GdkEventButton *buttonEvent) {
+    if (buttonEvent->button != 1) return false;
+    Gtk::Frame *filterFrame;
+    Gtk::Grid *closedFilterGrid;
+
+    RefBuilder::get_instance().get_widget("drugOpenFilters", filterFrame);
+    RefBuilder::get_instance().get_widget("drugClosedFilters", closedFilterGrid);
+
+    filterFrame->set_visible(false);
+    closedFilterGrid->set_visible(true);
+
+    return true;
+}
+
+bool mm::DrugWindow::onFilterOpened(GdkEventButton *buttonEvent) {
+    if (buttonEvent->button != 1) return false;
+    Gtk::Frame *filterFrame;
+    Gtk::Grid *closedFilterGrid;
+
+    RefBuilder::get_instance().get_widget("drugOpenFilters", filterFrame);
+    RefBuilder::get_instance().get_widget("drugClosedFilters", closedFilterGrid);
+
+    filterFrame->set_visible(true);
+    closedFilterGrid->set_visible(false);
+
+    return true;
 }
