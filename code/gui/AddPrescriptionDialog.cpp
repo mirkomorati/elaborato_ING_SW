@@ -225,19 +225,18 @@ void mm::AddPrescriptionDialog::drugRemoveHandler(mm::view::DrugEntry *removed) 
     interactionComboBox2->remove_all();
 
     for (int i = 0; i < drugEntries.size(); ++i) {
-        bool present = false;
-        for (int j = 0; j < drugEntries.size(); ++j) {
-            if (i != j and drugEntries[i]->get_drugName() == drugEntries[j]->get_drugName()) {
-                present = true;
-                break;
-            }
-        }
+        interactionComboBox1->append(drugEntries[i]->get_drugName());
+        interactionComboBox2->append(drugEntries[i]->get_drugName());
 
-        if (!present) {
-            interactionComboBox1->append(drugEntries[i]->get_drugName());
-            interactionComboBox2->append(drugEntries[i]->get_drugName());
-        }
+        interactionEntries.erase(std::remove_if(interactionEntries.begin(), interactionEntries.end(),
+                                                [&](std::unique_ptr<mm::view::InteractionEntry> const &p) {
+                                                    return drugEntries[i]->get_drugName() != p.get()->get_drug1() ||
+                                                           drugEntries[i]->get_drugName() != p.get()->get_drug2();
+                                                }),
+                                 interactionEntries.end());
     }
+
+
 }
 
 mm::AddPrescriptionDialog::~AddPrescriptionDialog() {
