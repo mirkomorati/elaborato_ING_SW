@@ -30,13 +30,16 @@ void mm::DrugWindow::update() {
 
 void mm::DrugWindow::initHandler() {
     Gtk::EventBox *openFilterEventBox, *closedFilterEventBox;
+    Gtk::TreeView *drugTreeView;
     auto refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("drugOpenFilterEventBox", openFilterEventBox);
     refBuilder.get_widget("drugCloseFilterEventBox", closedFilterEventBox);
+    refBuilder.get_widget("drugTreeView", drugTreeView);
 
     openFilterEventBox->set_events(Gdk::BUTTON_PRESS_MASK);
     closedFilterEventBox->set_events(Gdk::BUTTON_PRESS_MASK);
 
+    drugTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::DrugWindow::onSelectedDrug));
     openFilterEventBox->signal_button_press_event().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterClose));
     closedFilterEventBox->signal_button_press_event().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterOpened));
 }
@@ -52,9 +55,13 @@ void mm::DrugWindow::initTreeView() {
     drugTreeView->set_model(drugListStore);
 
     for (int i = 0; i <= 2; i++) {
+        drugTreeView->get_column(i)->set_min_width(100);
+        drugTreeView->get_column(i)->set_resizable(true);
         drugTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
         drugTreeView->get_column(i)->set_sort_column(i);
         drugTreeView->get_column(i)->set_sort_order(Gtk::SortType::SORT_ASCENDING);
+        drugTreeView->get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
+        drugTreeView->get_column_cell_renderer(i)->set_property("ellipsize", Pango::EllipsizeMode::ELLIPSIZE_END);
     }
 
     updateDrugTreeView();
@@ -63,17 +70,82 @@ void mm::DrugWindow::initTreeView() {
 void mm::DrugWindow::updateDrugTreeView() {
     model::Drug drug;
     std::vector<model::Drug> drugs;
-
+    std::vector<std::map<std::string, mm::Serialized>> rows;
     try {
-        DBMaster::get_instance().get_rows(drug.get_table_name());
+        rows = DBMaster::get_instance().get_rows(drug.get_table_name());
     } catch (record_not_found_error &e) {
-        throw std::runtime_error("cannot get the doctor from the db...");
+        throw std::runtime_error("cannot get the drugs from the db...");
+    }
+
+    for (auto &row : rows) {
+        model::Drug tmp;
+        tmp.unserialize(row);
+        drugs.push_back(tmp);
     }
 
     drugListStore->clear();
 
     auto row = *drugListStore->append();
 
+    for (size_t i = 0; i < drugs.size(); i++) {
+        row[model::Drug::drugTreeModel.name] = drugs[i].get_name();
+        row[model::Drug::drugTreeModel.pharmaceutical_form] = drugs[i].get_pharmaceutical_form();
+        row[model::Drug::drugTreeModel.active_principles] = drugs[i].get_active_principles_as_string();
+
+        if (i < drugs.size() - 1)
+            row = *(drugListStore->append()++);
+    }
+}
+
+void mm::DrugWindow::onSelectedDrug(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *) {
+    updatePatientView();
+    updateDrugDetailsView();
+}
+
+void mm::DrugWindow::updatePatientView() {
+
+}
+
+void mm::DrugWindow::updateDrugDetailsView() {
+    auto &refBuilder = RefBuilder::get_instance();
+    Gtk::TreeView *drugTreeView;
+    Gtk::Label *name;
+    Gtk::Label *pharmaceutical_form;
+    Gtk::Label *ATC_classification;
+    Gtk::Label *contraindications;
+    Gtk::Label *active_principles;
+    Gtk::Label *price;
+
+    refBuilder.get_widget("drugDetailName", name);
+    refBuilder.get_widget("drugDetailPharmaceuticalForm", pharmaceutical_form);
+    refBuilder.get_widget("drugDetailATCClassification", ATC_classification);
+    refBuilder.get_widget("drugDetailContraindications", contraindications);
+    refBuilder.get_widget("drugDetailActivePrinciples", active_principles);
+    refBuilder.get_widget("drugDetailPrice", price);
+    refBuilder.get_widget("drugTreeView", drugTreeView);
+
+
+    auto sel = drugTreeView->get_selection()->get_selected();
+
+    if (not sel) return;
+
+    Glib::ustring nameID = static_cast<Glib::ustring>((*sel)[model::Drug::drugTreeModel.name]);
+    Glib::ustring pharmaceuticalFormID = static_cast<Glib::ustring>((*sel)[model::Drug::drugTreeModel.pharmaceutical_form]);
+
+    model::Drug drug;
+
+    try {
+        DBMaster::get_instance().extract_from_db(drug, {nameID.c_str(), pharmaceuticalFormID.c_str()});
+    } catch (record_not_found_error &e) {
+        throw std::runtime_error("cannot get the Patient from the db...");
+    }
+
+    name->set_label(drug.get_name());
+    pharmaceutical_form->set_label(drug.get_pharmaceutical_form());
+    ATC_classification->set_label(drug.get_ATC_classification());
+    contraindications->set_label(drug.get_contraindications_as_string());
+    active_principles->set_label(drug.get_active_principles_as_string());
+    price->set_label(Glib::ustring::format(drug.get_price()));
 }
 
 void mm::DrugWindow::initDrugFilter() {

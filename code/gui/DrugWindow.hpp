@@ -28,6 +28,12 @@ namespace mm {
 
         void updateDrugTreeView();
 
+        void updateDrugDetailsView();
+
+        void updatePatientView();
+
+        void onSelectedDrug(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *);
+
         void initDrugFilter();
 
         void initQuantityFilter();
