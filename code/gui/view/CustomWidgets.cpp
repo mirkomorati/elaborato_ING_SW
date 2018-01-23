@@ -201,7 +201,8 @@ mm::view::PatientExpander::PatientExpander(const mm::model::Patient &patient, co
         labelBox(false, 10),
         name("<b>Nome:</b>", ""),
         lastName("<b>Cognome:</b>", ""),
-        fiscalCode("<b>Codice Fiscale</b>", "") {
+        fiscalCode("<b>Codice Fiscale</b>", ""),
+        prescriptionListStore(Gtk::ListStore::create(model::Prescription::prescriptionTreeModel)) {
 
 
     name.first.set_use_markup(true);
@@ -223,7 +224,6 @@ mm::view::PatientExpander::PatientExpander(const mm::model::Patient &patient, co
 
     // content
     prescriptionFrame.set_label("Prescrizioni");
-    prescriptionFrame.add(prescriptionTreeView);
 
     add(prescriptionFrame);
 
@@ -259,6 +259,8 @@ mm::view::PatientExpander::PatientExpander(const mm::model::Patient &patient, co
         }
     }
 
+    prescriptionTreeView.set_model(prescriptionListStore);
+
     prescriptionListStore->clear();
     auto row = *prescriptionListStore->append();
 
@@ -272,6 +274,8 @@ mm::view::PatientExpander::PatientExpander(const mm::model::Patient &patient, co
         if (i < filteredPrescriptions.size() - 1)
             row = *(prescriptionListStore->append()++);
     }
+
+    prescriptionFrame.add(prescriptionTreeView);
 
     show_all();
 }

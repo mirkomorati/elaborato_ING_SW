@@ -5,6 +5,8 @@
 #include "DrugWindow.hpp"
 #include "RefBuilder.hpp"
 #include "../DBMaster.hpp"
+#include "../model/Doctor.hpp"
+#include "../model/Authentication.hpp"
 
 bool mm::DrugWindow::init() {
     initHandler();
@@ -103,6 +105,54 @@ void mm::DrugWindow::onSelectedDrug(const Gtk::TreeModel::Path &, Gtk::TreeViewC
 }
 
 void mm::DrugWindow::updatePatientView() {
+    Gtk::ListBox *patientList;
+    Gtk::TreeView *drugTreeView;
+    RefBuilder::get_instance().get_widget("patientListBox", patientList);
+    RefBuilder::get_instance().get_widget("drugTreeView", drugTreeView);
+
+    patientExp.clear();
+
+    for (auto it : patientList->get_children())
+        patientList->remove(*it);
+
+    auto sel = drugTreeView->get_selection()->get_selected();
+    if (not sel) return;
+
+    Glib::ustring nameID = static_cast<Glib::ustring>((*sel)[model::Drug::drugTreeModel.name]);
+    Glib::ustring pharmaceuticalFormID = static_cast<Glib::ustring>((*sel)[model::Drug::drugTreeModel.pharmaceutical_form]);
+
+    model::Drug drug;
+    model::Doctor doctor;
+
+    try {
+        DBMaster::get_instance().extract_from_db(drug, {nameID.c_str(), pharmaceuticalFormID.c_str()});
+    } catch (record_not_found_error &e) {
+        throw std::runtime_error("cannot get the drug from the db...");
+    }
+
+    try {
+        DBMaster::get_instance().extract_from_db(doctor, mm::model::authentication::Login::get_instance().regional_id);
+    } catch (record_not_found_error &e) {
+        throw std::runtime_error("cannot get the doctor from the db...");
+    }
+
+    for (const auto &patient : doctor.get_patients()) {
+        bool flag = false;
+        for (const auto &p : patient.get_prescriptions()) {
+            const auto &drugs = p.get_drugs();
+            if (std::find(drugs.begin(), drugs.end(), drug) != drugs.end()) {
+                flag = true;
+                break;
+            }
+        }
+
+        if (flag) {
+            std::unique_ptr<view::PatientExpander> exp(new view::PatientExpander(patient, drug));
+            patientList->append(*exp);
+            patientExp.push_back(std::move(exp));
+        }
+    }
+
 
 }
 
