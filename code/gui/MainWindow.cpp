@@ -16,7 +16,7 @@ bool mm::MainWindow::init() {
 
     initHandlers();
 
-    onPageSwitch(nullptr, 0);
+    for (const auto &tab : tabWindows) tab->init();
 
     return true;
 }
@@ -40,7 +40,6 @@ void mm::MainWindow::initHandlers() {
     refBuilder.get_widget("mainNotebook", notebook);
     logoutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::MainWindow::onLogout));
     aboutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::MainWindow::onAboutClicked));
-    notebook->signal_switch_page().connect(sigc::mem_fun(this, &mm::MainWindow::onPageSwitch));
 }
 
 void mm::MainWindow::onLogout() {
@@ -60,27 +59,5 @@ void mm::MainWindow::update() {
         if (not(*it)->isActive()) dialogList.erase(it);
 }
 
-void mm::MainWindow::onPageSwitch(Gtk::Widget *page, guint page_number) {
-    switch (page_number) {
-        case 0: {
-            activeTabWindow.reset(new PatientWindow);
-            activeTabWindow->init();
-            break;
-        }
-        case 1: {
-            // todo create PrescriptionWindow controller
-            activeTabWindow.reset(new PrescriptionWindow);
-            activeTabWindow->init();
-            break;
-        }
-        case 2: {
-            // todo create DrugWindow controller
-            activeTabWindow.reset(new DrugWindow);
-            activeTabWindow->init();
-            break;
-        }
-        default:
-            throw std::logic_error("switch on unknown page");
-    }
-}
+mm::MainWindow::MainWindow() : tabWindows({std::make_unique<PatientWindow>(), std::make_unique<DrugWindow>()}) {}
 

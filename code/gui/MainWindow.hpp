@@ -7,6 +7,7 @@
 
 #include <glib.h>
 #include <gtkmm/widget.h>
+#include <array>
 #include "Window.hpp"
 #include "Dialog.hpp"
 
@@ -16,7 +17,7 @@ namespace mm {
         WindowName next;
         std::list<std::unique_ptr<Dialog>> dialogList;
 
-        std::unique_ptr<Window> activeTabWindow;
+        std::array<std::unique_ptr<Window>, 2> tabWindows;
 
     public:
         bool init() override;
@@ -27,6 +28,8 @@ namespace mm {
 
         void update() override;
 
+        MainWindow();
+
     private:
         //-------------------init functions-------------------//
 
@@ -36,9 +39,6 @@ namespace mm {
         void onLogout();
 
         void onAboutClicked();
-
-        void onPageSwitch(Gtk::Widget *page, guint page_number);
-
     };
 }
 
