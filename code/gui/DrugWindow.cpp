@@ -4,6 +4,7 @@
 
 #include "DrugWindow.hpp"
 #include "RefBuilder.hpp"
+#include "../DBMaster.hpp"
 
 bool mm::DrugWindow::init() {
     initHandler();
@@ -41,6 +42,37 @@ void mm::DrugWindow::initHandler() {
 }
 
 void mm::DrugWindow::initTreeView() {
+    Gtk::TreeView *drugTreeView;
+
+    RefBuilder::get_instance().get_widget("drugTreeView", drugTreeView);
+
+    drugTreeView->append_column("Nome", model::Drug::drugTreeModel.name);
+    drugTreeView->append_column("Forma Farmaceutica", model::Drug::drugTreeModel.pharmaceutical_form);
+    drugTreeView->append_column("Principi Attivi", model::Drug::drugTreeModel.active_principles);
+    drugTreeView->set_model(drugListStore);
+
+    for (int i = 0; i <= 2; i++) {
+        drugTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
+        drugTreeView->get_column(i)->set_sort_column(i);
+        drugTreeView->get_column(i)->set_sort_order(Gtk::SortType::SORT_ASCENDING);
+    }
+
+    updateDrugTreeView();
+}
+
+void mm::DrugWindow::updateDrugTreeView() {
+    model::Drug drug;
+    std::vector<model::Drug> drugs;
+
+    try {
+        DBMaster::get_instance().get_rows(drug.get_table_name());
+    } catch (record_not_found_error &e) {
+        throw std::runtime_error("cannot get the doctor from the db...");
+    }
+
+    drugListStore->clear();
+
+    auto row = *drugListStore->append();
 
 }
 
@@ -131,3 +163,4 @@ bool mm::DrugWindow::onFilterOpened(GdkEventButton *buttonEvent) {
 
     return true;
 }
+

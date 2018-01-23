@@ -26,6 +26,8 @@ namespace mm {
 
         void initTreeView();
 
+        void updateDrugTreeView();
+
         void initDrugFilter();
 
         void initQuantityFilter();
