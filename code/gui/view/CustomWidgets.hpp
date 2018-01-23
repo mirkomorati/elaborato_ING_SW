@@ -55,6 +55,9 @@ namespace mm::view {
     };
 
     class PatientExpander : public Gtk::Expander {
+        // label widgets
+
+
     public:
         PatientExpander();
     };

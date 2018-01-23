@@ -57,9 +57,11 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
     //-------------------content-------------------//
     detailsFrame.add(interactionLabel);
     detailsFrame.set_label("Possibili interazioni");
+    detailsFrame.set_vexpand(true);
+    detailsFrame.set_valign(Gtk::Align::ALIGN_START);
 
     contentBox.pack_start(drugFrame, true, true);
-    contentBox.pack_start(detailsFrame, true, true);
+    contentBox.pack_start(detailsFrame, false, false);
     contentBox.set_hexpand(true);
     contentBox.set_halign(Gtk::Align::ALIGN_START);
 
@@ -84,7 +86,11 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
             interactionStringStream << '\n';
     }
 
-    interactionLabel.set_text(interactionStringStream.str());
+    interactionLabel.set_text(interactionStringStream.str().empty() ? "Nessuna" : interactionStringStream.str());
+    interactionLabel.set_margin_top(5);
+    interactionLabel.set_margin_left(5);
+    interactionLabel.set_margin_right(5);
+    interactionLabel.set_margin_bottom(5);
 
     for (int i = 0; i < 6; i++) {
         drugTreeView.get_column(i)->set_min_width(100);
