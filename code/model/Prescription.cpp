@@ -113,7 +113,7 @@ string mm::model::Prescription::get_drug_ids_as_string() {
 string mm::model::Prescription::get_negative_interactions() const {
     ostringstream ss;
     for (auto row : negative_interactions) {
-        ss << row.first << ": " << row.second << "; ";
+        ss << row.first << " <-> " << row.second << "; ";
     }
     string ret = ss.str();
     ret = ret.substr(0, ret.length() - 2);

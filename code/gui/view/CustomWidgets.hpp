@@ -25,18 +25,14 @@ namespace mm::view {
         std::pair<Gtk::Label, Gtk::Label> expirationDate;
         std::pair<Gtk::Label, Gtk::Label> prescriptionID;
         std::pair<Gtk::Label, Gtk::Label> issueDate;
-        Gtk::Button gotoButton;
-        Gtk::Box labelBox;
+        Gtk::HBox labelBox;
+        Gtk::CheckButton used;
 
         // content objects
-        Gtk::HPaned contentPaned;
+        Gtk::HBox contentBox;
         Gtk::Frame detailsFrame;
-        Gtk::Grid detailsGrid;
-        Gtk::Label interactionsLabel;
-        Gtk::TextView interactionsTextView;
-        Glib::RefPtr<Gtk::TextBuffer> interactionsBuffer;
-        Gtk::ScrolledWindow interactionsScrolled;
-        Gtk::CheckButton used;
+        Gtk::Label interactionLabel;
+        Gtk::Frame drugFrame;
         Gtk::TreeView drugTreeView;
         Glib::RefPtr<Gtk::ListStore> drugListStore;
 
