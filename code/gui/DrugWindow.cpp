@@ -2,12 +2,13 @@
 // Created by Noè Murr on 18/01/2018.
 //
 
+#include <spdlog/spdlog.h>
 #include "DrugWindow.hpp"
 #include "RefBuilder.hpp"
 #include "../DBMaster.hpp"
 
 bool mm::DrugWindow::init() {
-    initHandler();
+    initHandlers();
     initTreeView();
     initDrugFilter();
     initQuantityFilter();
@@ -22,23 +23,59 @@ mm::WindowName mm::DrugWindow::getNextWindow() const {
     return next;
 }
 
-mm::DrugWindow::DrugWindow() : next(MAIN), drugListStore(Gtk::ListStore::create(model::Drug::drugTreeModel)) {}
+mm::DrugWindow::DrugWindow() : next(MAIN),
+                               drugListStore(Gtk::ListStore::create(model::Drug::drugTreeModel)),
+                               filterStartDate(util::Date::get_current_date()),
+                               filterEndDate(util::Date::get_current_date()),
+                               filterDrugOn(false), filterQuantityOn(false) {}
 
 void mm::DrugWindow::update() {
 
 }
 
-void mm::DrugWindow::initHandler() {
+void mm::DrugWindow::initHandlers() {
     Gtk::EventBox *openFilterEventBox, *closedFilterEventBox;
+    Gtk::Switch *filterSwitch;
     Gtk::TreeView *drugTreeView;
+    Gtk::RadioButton *year, *month;
+    Gtk::ComboBoxText *yearCombo;
+    Gtk::ComboBoxText *monthYearCombo, *monthMonthCombo;
+    Gtk::ComboBoxText *qYearCombo;
+    Gtk::ComboBoxText *qSemesterYearCombo, *qSemesterMonthCombo;
+    Gtk::ComboBoxText *qQuarterYearCombo, *qQuarterMonthCombo;
+    Gtk::ComboBoxText *qMonthYearCombo, *qMonthMonthCombo;
+
+
     auto refBuilder = RefBuilder::get_instance();
+
     refBuilder.get_widget("drugOpenFilterEventBox", openFilterEventBox);
     refBuilder.get_widget("drugCloseFilterEventBox", closedFilterEventBox);
+    refBuilder.get_widget("drugFilterSwitch", filterSwitch);
     refBuilder.get_widget("drugTreeView", drugTreeView);
+    refBuilder.get_widget("drugYearFilterRadioButton", year);
+    refBuilder.get_widget("drugMonthFilterRadioButton", month);
+    refBuilder.get_widget("drugYearFilterComboBox", yearCombo);
+    refBuilder.get_widget("drugMonthFilterYearComboBox", monthYearCombo);
+    refBuilder.get_widget("drugMonthFilterMonthComboBox", monthMonthCombo);
+    refBuilder.get_widget("drugMonthFilterYearComboBox", qYearCombo);
+    refBuilder.get_widget("drugMonthFilterYearComboBox", qSemesterYearCombo);
+    refBuilder.get_widget("drugMonthFilterMonthComboBox", qSemesterMonthCombo);
+    refBuilder.get_widget("drugMonthFilterYearComboBox", qQuarterYearCombo);
+    refBuilder.get_widget("drugMonthFilterMonthComboBox", qQuarterMonthCombo);
+    refBuilder.get_widget("drugMonthFilterYearComboBox", qMonthYearCombo);
+    refBuilder.get_widget("drugMonthFilterMonthComboBox", qMonthMonthCombo);
 
     openFilterEventBox->set_events(Gdk::BUTTON_PRESS_MASK);
     closedFilterEventBox->set_events(Gdk::BUTTON_PRESS_MASK);
 
+    year->signal_clicked().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterYearChanged));
+    yearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterYearChanged));
+
+    month->signal_clicked().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterMonthChanged));
+    monthYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterMonthChanged));
+    monthMonthCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterMonthChanged));
+
+    filterSwitch->property_active().signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onSwitchActivate));
     drugTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::DrugWindow::onSelectedDrug));
     openFilterEventBox->signal_button_press_event().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterClose));
     closedFilterEventBox->signal_button_press_event().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterOpened));
@@ -236,3 +273,66 @@ bool mm::DrugWindow::onFilterOpened(GdkEventButton *buttonEvent) {
     return true;
 }
 
+void mm::DrugWindow::onSwitchActivate() {
+    Gtk::Grid *filterGrid;
+    Gtk::Switch *filterSwitch;
+    RefBuilder::get_instance().get_widget("drugFilterGrid", filterGrid);
+    RefBuilder::get_instance().get_widget("drugFilterSwitch", filterSwitch);
+
+    filterGrid->set_sensitive(filterSwitch->get_active());
+    filterDrugOn = filterSwitch->get_active();
+    onFilterYearChanged();
+}
+
+void mm::DrugWindow::onFilterYearChanged() {
+    if (filterDrugOn) {
+        auto refBuilder = RefBuilder::get_instance();
+        Gtk::RadioButton *year;
+        Gtk::ComboBoxText *yearCombo;
+
+        refBuilder.get_widget("drugYearFilterRadioButton", year);
+        refBuilder.get_widget("drugYearFilterComboBox", yearCombo);
+
+        yearCombo->set_visible(year->get_active());
+
+        if (year->get_active()) {
+            filterStartDate.set_from_str(fmt::format("01/01/{}", yearCombo->get_active_text().c_str()));
+            filterEndDate = filterStartDate;
+            filterEndDate.add_years(1);
+
+            spdlog::get("out")->info("Drug filter on. start date: {}. end date: {}.",
+                                     filterStartDate.get_as_text(), filterEndDate.get_as_text());
+        }
+    }
+
+    updatePatientView();
+}
+
+void mm::DrugWindow::onFilterMonthChanged() {
+    if (filterDrugOn) {
+        auto refBuilder = RefBuilder::get_instance();
+        Gtk::RadioButton *month;
+        Gtk::ComboBoxText *yearCombo, *monthCombo;
+        Gtk::Grid *filterGrid;
+
+        refBuilder.get_widget("drugMonthFilterRadioButton", month);
+        refBuilder.get_widget("drugMonthFilterYearComboBox", yearCombo);
+        refBuilder.get_widget("drugMonthFilterMonthComboBox", monthCombo);
+        refBuilder.get_widget("drugMonthFilterGrid", filterGrid);
+
+        filterGrid->set_visible(month->get_active());
+
+        if (month->get_active()) {
+            filterStartDate.set_from_str(fmt::format("01/{}/{}",
+                                                     monthCombo->get_active_text().c_str(),
+                                                     yearCombo->get_active_text().c_str()));
+            filterEndDate = filterStartDate;
+            filterEndDate.add_months(1);
+
+            spdlog::get("out")->info("Filter on. start date: {}. end date: {}.",
+                                     filterStartDate.get_as_text(), filterEndDate.get_as_text());
+        }
+    }
+
+    updatePatientView();
+}

@@ -22,7 +22,7 @@ namespace mm {
 
         void update() override;
 
-        void initHandler();
+        void initHandlers();
 
         void initTreeView();
 
@@ -42,7 +42,10 @@ namespace mm {
         mm::WindowName next;
 
         bool filterDrugOn;
-        bool fiterQuantityOn;
+        bool filterQuantityOn;
+
+        util::Date filterStartDate;
+        util::Date filterEndDate;
 
         Glib::RefPtr<Gtk::ListStore> drugListStore;
 
@@ -51,6 +54,12 @@ namespace mm {
         bool onFilterClose(GdkEventButton *buttonEvent);
 
         bool onFilterOpened(GdkEventButton *buttonEvent);
+
+        void onSwitchActivate();
+
+        void onFilterYearChanged();
+
+        void onFilterMonthChanged();
     };
 }
 
