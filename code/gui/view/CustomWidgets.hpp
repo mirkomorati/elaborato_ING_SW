@@ -18,6 +18,7 @@
 #include <gtkmm/listboxrow.h>
 #include "../../model/Prescription.hpp"
 #include "../../utils/Date.hpp"
+#include "../../model/Patient.hpp"
 
 namespace mm::view {
     class PrescriptionExpander : public Gtk::Expander {
@@ -56,10 +57,20 @@ namespace mm::view {
 
     class PatientExpander : public Gtk::Expander {
         // label widgets
+        Gtk::HBox labelBox;
+        std::pair<Gtk::Label, Gtk::Label> name;
+        std::pair<Gtk::Label, Gtk::Label> lastName;
+        std::pair<Gtk::Label, Gtk::Label> fiscalCode;
 
+        // content widgets
+        Gtk::Frame prescriptionFrame;
+        Gtk::TreeView prescriptionTreeView;
+        Glib::RefPtr<Gtk::ListStore> prescriptionListStore;
 
     public:
-        PatientExpander();
+        PatientExpander(const mm::model::Patient &patient, const mm::model::Drug &drug,
+                        const mm::util::Date &start = mm::util::Date::get_current_date(),
+                        const mm::util::Date &end = mm::util::Date::get_current_date());
     };
 
     class DrugEntry : public Gtk::ListBoxRow {

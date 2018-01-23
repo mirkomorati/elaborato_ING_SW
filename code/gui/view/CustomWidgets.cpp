@@ -195,3 +195,83 @@ const string &mm::view::InteractionEntry::get_drug1() const {
 const string &mm::view::InteractionEntry::get_drug2() const {
     return drug2;
 }
+
+mm::view::PatientExpander::PatientExpander(const mm::model::Patient &patient, const mm::model::Drug &drug,
+                                           const mm::util::Date &start, const mm::util::Date &end) :
+        labelBox(false, 10),
+        name("<b>Nome:</b>", ""),
+        lastName("<b>Cognome:</b>", ""),
+        fiscalCode("<b>Codice Fiscale</b>", "") {
+
+
+    name.first.set_use_markup(true);
+    lastName.first.set_use_markup(true);
+    fiscalCode.first.set_use_markup(true);
+
+    labelBox.pack_start(name.first, true, true);
+    labelBox.pack_start(name.second, true, true);
+    labelBox.pack_start(lastName.first, true, true);
+    labelBox.pack_start(lastName.second, true, true);
+    labelBox.pack_start(fiscalCode.first, true, true);
+    labelBox.pack_start(fiscalCode.second, true, true);
+
+    name.second.set_text(patient.get_first_name());
+    lastName.second.set_text(patient.get_last_name());
+    fiscalCode.second.set_text(patient.get_fiscal_code());
+
+    set_label_widget(labelBox);
+
+    // content
+    prescriptionFrame.set_label("Prescrizioni");
+    prescriptionFrame.add(prescriptionTreeView);
+
+    add(prescriptionFrame);
+
+    // prescription treeView setting
+    prescriptionTreeView.append_column("ID prescrizione",
+                                       mm::model::Prescription::prescriptionTreeModel.prescription_id);
+    prescriptionTreeView.append_column("Data di emissione", mm::model::Prescription::prescriptionTreeModel.issue_date);
+    prescriptionTreeView.append_column("Data di scadenza", mm::model::Prescription::prescriptionTreeModel.expire_date);
+    prescriptionTreeView.append_column("Usata", mm::model::Prescription::prescriptionTreeModel.used);
+
+    for (int i = 0; i < 4; i++) {
+        prescriptionTreeView.get_column(i)->set_min_width(100);
+        prescriptionTreeView.get_column(i)->set_resizable(true);
+        prescriptionTreeView.get_column_cell_renderer(i)->property_xalign().set_value(0);
+        prescriptionTreeView.get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
+        prescriptionTreeView.get_column_cell_renderer(i)->set_property("ellipsize",
+                                                                       Pango::EllipsizeMode::ELLIPSIZE_END);
+    }
+
+    std::vector<mm::model::Prescription> filteredPrescriptions;
+
+    for (auto &p : patient.get_prescriptions()) {
+        auto drugs = p.get_drugs();
+        if (std::find(drugs.begin(), drugs.end(), drug) != drugs.end()) {
+            if (end > start) {
+                util::Date issue;
+                issue.set_from_str(p.get_issue_date());
+                if (issue > end and issue < start) filteredPrescriptions.emplace_back(p);
+
+            } else {
+                filteredPrescriptions.emplace_back(p);
+            }
+        }
+    }
+
+    prescriptionListStore->clear();
+    auto row = *prescriptionListStore->append();
+
+    for (size_t i = 0; i < filteredPrescriptions.size(); i++) {
+        row[model::Prescription::prescriptionTreeModel.prescription_id] = std::to_string(
+                filteredPrescriptions[i].get_prescription_id());
+        row[model::Prescription::prescriptionTreeModel.issue_date] = filteredPrescriptions[i].get_issue_date();
+        row[model::Prescription::prescriptionTreeModel.expire_date] = filteredPrescriptions[i].get_expire_date();
+        row[model::Prescription::prescriptionTreeModel.used] = filteredPrescriptions[i].is_used() ? "Si" : "No";
+
+        if (i < filteredPrescriptions.size() - 1)
+            row = *(prescriptionListStore->append()++);
+    }
+
+    show_all();
+}
