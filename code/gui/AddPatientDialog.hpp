@@ -35,11 +35,6 @@ namespace mm {
 
         void cancelHandler();
 
-    protected:
-        bool onDelete(GdkEventAny *any_event) override;
-
-    private:
-
         bool is_active;
 
         Gtk::Button *ok_button;

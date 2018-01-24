@@ -2,6 +2,7 @@
 // Created by Noè Murr on 23/12/2017.
 //
 
+#include <spdlog/spdlog.h>
 #include "MainWindow.hpp"
 #include "PrescriptionWindow.hpp"
 #include "RefBuilder.hpp"
@@ -52,12 +53,15 @@ void mm::MainWindow::onAboutClicked() {
     dialog->show();
     dialog->attach(this);
     dialogList.push_back(std::move(dialog));
+    spdlog::get("out")->debug("MainWindow::dialogList size after push_back: {}", dialogList.size());
 }
 
 void mm::MainWindow::update() {
     for (auto it = dialogList.begin(); it != dialogList.end(); ++it)
         if (not(*it)->isActive()) dialogList.erase(it);
+    spdlog::get("out")->debug("MainWindow::dialogList size after erase: {}", dialogList.size());
 }
 
-mm::MainWindow::MainWindow() : tabWindows({std::make_unique<PatientWindow>(), std::make_unique<DrugWindow>()}) {}
+mm::MainWindow::MainWindow() : next(MAIN),
+                               tabWindows({std::make_unique<PatientWindow>(), std::make_unique<DrugWindow>()}) {}
 

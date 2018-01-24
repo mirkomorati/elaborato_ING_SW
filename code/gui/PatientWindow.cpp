@@ -14,6 +14,7 @@
 #include "AddPrescriptionDialog.hpp"
 #include "AboutDialog.hpp"
 
+#define UPDATE_NOTHING 0
 #define UPDATE_PATIENTS 1
 #define UPDATE_PRESCRIPTIONS 2
 #define UPDATE_DETAILS 3
@@ -169,8 +170,11 @@ void mm::PatientWindow::update(unsigned int what) {
     auto start = std::chrono::system_clock::now();
     for (auto it = dialogList.begin(); it != dialogList.end(); ++it)
         if (not(*it)->isActive()) dialogList.erase(it);
+    spdlog::get("out")->debug("PatientWindow::dialogList size after erase: {}", dialogList.size());
 
     switch (what) {
+        case UPDATE_NOTHING:
+            break;
         case UPDATE_DETAILS:
             updatePatientDetailsView();
             break;
@@ -189,9 +193,11 @@ void mm::PatientWindow::update(unsigned int what) {
 
 void mm::PatientWindow::onAddPrescriptionClicked() {
     std::unique_ptr<Dialog> dialog(new AddPrescriptionDialog);
-    dialog->show();
     dialog->attach(this);
+    dialog->show();
     dialogList.push_back(std::move(dialog));
+    spdlog::get("out")->debug("PatientWindow::dialogList size after push_back: {}", dialogList.size());
+    update(UPDATE_NOTHING);
 }
 
 void mm::PatientWindow::onAddPatientClicked() {
@@ -199,6 +205,7 @@ void mm::PatientWindow::onAddPatientClicked() {
     dialog->show();
     dialog->attach(this);
     dialogList.push_back(std::move(dialog));
+    spdlog::get("out")->debug("PatientWindow::dialogList size after push_back: {}", dialogList.size());
 }
 
 void mm::PatientWindow::updatePatientTreeView() {
@@ -238,7 +245,8 @@ void mm::PatientWindow::updatePrescriptionView() {
     Gtk::TreeView *patientTreeView;
     RefBuilder::get_instance().get_widget("prescriptionList", prescriptionList);
     RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
-    prescriptionsExp.clear();
+
+    spdlog::get("out")->debug("PatientWindow::prescriptionsExp size before clear: {}", prescriptionsExp.size());
 
     for (auto it : prescriptionList->get_children()) {
         prescriptionList->remove(*it);
@@ -272,11 +280,14 @@ void mm::PatientWindow::updatePrescriptionView() {
 
     //auto start = std::chrono::system_clock::now();
     prescriptionsExp.clear();
+    spdlog::get("out")->debug("PatientWindow::prescriptionsExp size after clear: {}", prescriptionsExp.size());
+
     for (auto &prescription : prescriptions) {
         std::unique_ptr<mm::view::PrescriptionExpander> tmp(new mm::view::PrescriptionExpander(prescription));
         prescriptionList->append(*tmp);
         prescriptionsExp.push_back(std::move(tmp));
     }
+    spdlog::get("out")->debug("PatientWindow::prescriptionsExp size after push_back: {}", prescriptionsExp.size());
 }
 
 int mm::PatientWindow::sortPrescriptionList(Gtk::ListBoxRow *row1, Gtk::ListBoxRow *row2, Gtk::SortType sortType) {

@@ -109,3 +109,19 @@ void mm::MedH::update() {
     window->init();
     window->attach(this);
 }
+
+mm::MedH::~MedH() {
+    Gtk::Window *mainWindow;
+    Gtk::Dialog *aboutDialog;
+    Gtk::Dialog *addPatientDialog;
+    Gtk::Dialog *addPrescriptionDialog;
+    RefBuilder::get_instance().get_widget("mainWindow", mainWindow);
+    RefBuilder::get_instance().get_widget("aboutDialog", aboutDialog);
+    RefBuilder::get_instance().get_widget("addPatientDialog", addPatientDialog);
+    RefBuilder::get_instance().get_widget("addPrescriptionDialog", addPrescriptionDialog);
+
+    delete mainWindow;
+    delete aboutDialog;
+    delete addPatientDialog;
+    delete addPrescriptionDialog;
+}

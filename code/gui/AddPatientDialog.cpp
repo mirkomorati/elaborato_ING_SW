@@ -9,6 +9,8 @@
 #include "../DBMaster.hpp"
 #include "../model/Authentication.hpp"
 
+#define UPDATE_NOTHING 0
+
 mm::AddPatientDialog::AddPatientDialog()
         : is_active(true), first_name("addFirstName"), last_name("addLastName"), fiscal_code("addFiscalCode"),
           street("addStreetAddress"), civic("addCivic"), zip_code("addZipCode"), city("addCity"), country("addCountry"),
@@ -65,7 +67,7 @@ void mm::AddPatientDialog::okHandler() {
 
     if (patient.is_valid()) {
         DBMaster::get_instance().add_to_db(patient);
-        dispose();
+        dispose(true);
     } else {
         Gtk::Label *error;
         refBuilder.get_widget("addPatientError", error);
@@ -74,11 +76,22 @@ void mm::AddPatientDialog::okHandler() {
 }
 
 void mm::AddPatientDialog::cancelHandler() {
-    dispose(false);
+    dispose();
 }
 
 void mm::AddPatientDialog::dispose() {
-    dispose(true);
+    dispose(false);
+}
+
+void mm::AddPatientDialog::dispose(bool update) {
+    Gtk::Dialog *dialog;
+    RefBuilder::get_instance().get_widget("addPatientDialog", dialog);
+    dialog->hide();
+    is_active = false;
+    if (update)
+        this->notify();
+    else
+        this->notify(UPDATE_NOTHING);
 }
 
 void mm::AddPatientDialog::reset() {
@@ -93,17 +106,4 @@ void mm::AddPatientDialog::reset() {
     country.reset();
     birth_city.reset();
     birth_country.reset();
-}
-
-void mm::AddPatientDialog::dispose(bool notify) {
-    Gtk::Dialog *dialog;
-    RefBuilder::get_instance().get_widget("addPatientDialog", dialog);
-    dialog->hide();
-    is_active = false;
-    if (notify) this->notify();
-}
-
-bool mm::AddPatientDialog::onDelete(GdkEventAny *any_event) {
-    dispose(false);
-    return true;
 }

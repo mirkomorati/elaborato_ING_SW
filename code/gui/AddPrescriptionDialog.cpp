@@ -10,6 +10,7 @@
 #include "../utils/Date.hpp"
 #include "../utils/stringUtils.hpp"
 
+#define UPDATE_NOTHING 0
 #define UPDATE_PRESCRIPTIONS 2
 
 mm::AddPrescriptionDialog::AddPrescriptionDialog() : is_active(true) {
@@ -40,10 +41,8 @@ mm::AddPrescriptionDialog::AddPrescriptionDialog() : is_active(true) {
 }
 
 void mm::AddPrescriptionDialog::show() {
-    if (not isActive()) {
-        notify();
+    if (not is_active)
         return;
-    }
     Gtk::Dialog *dialog;
     auto &refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("addPrescriptionDialog", dialog);
@@ -63,7 +62,6 @@ bool mm::AddPrescriptionDialog::isActive() {
 }
 
 void mm::AddPrescriptionDialog::okHandler() {
-    // todo gestire ok, validazione prescrizioni
     Gtk::Entry *prescriptionID;
     Gtk::Entry *patientID;
     Gtk::Entry *negativeInteractions;
