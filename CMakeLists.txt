@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 project(elaborato_ING_SW)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_CXX_FLAGS -Wextra)
 
@@ -72,7 +72,7 @@ if (UNIX AND NOT APPLE)
             -DGLADE_CSS_FILE="glade/style.css" -DCONFIG_FILE="tmp/config.json")
 
     add_executable(med-h ${MAIN} ${SRC} ${HDR} ${GLADE_FILES} ${CONF_FILE})
-endif ()
+endif (UNIX AND NOT APPLE)
 
 target_link_libraries(med-h ${GTKMM_LDFLAGS})
 target_link_libraries(med-h ${SQLITE3_LIBRARIES})

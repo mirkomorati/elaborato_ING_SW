@@ -27,6 +27,8 @@ namespace mm {
 
         void reset() override;
 
+        ~AddPrescriptionDialog() override;
+
     private:
         bool is_active;
 
@@ -40,16 +42,31 @@ namespace mm {
         Gtk::Button *cancel_button;
 
         Gtk::Button *drugAdd;
+        Gtk::Button *interactionAdd;
+
         Gtk::ComboBoxText *drugComboBox;
+        Gtk::ComboBoxText *monthComboBox;
+        Gtk::ComboBoxText *interactionComboBox1;
+        Gtk::ComboBoxText *interactionComboBox2;
+
+        Gtk::ListBox *interactionListBox;
         Gtk::ListBox *drugListBox;
         std::vector<std::unique_ptr<mm::view::DrugEntry>> drugEntries;
-        DateController issueDate;
-        DateController expireDate;
+        std::vector<std::unique_ptr<mm::view::InteractionEntry>> interactionEntries;
 
         void drugRemoveHandler(mm::view::DrugEntry *removed);
 
-        void init();
+        void interactionRemoveHandler(mm::view::InteractionEntry *removed);
+
+        void initDrugComboBox();
+
+        void initMonthComboBox();
+
+        void monthValidityChanged();
+
+        void interactionAddHandler();
     };
+
 }
 
 #endif //ELABORATO_ING_SW_ADDPRESCRIPTIONDIALOG_HPP

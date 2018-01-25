@@ -31,6 +31,8 @@ namespace mm {
 
         void notify() const;
 
+        void notify(unsigned int what) const;
+
         virtual ~ISubject();
 
     };

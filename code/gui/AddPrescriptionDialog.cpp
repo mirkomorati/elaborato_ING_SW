@@ -7,32 +7,42 @@
 #include "RefBuilder.hpp"
 #include "../DBMaster.hpp"
 #include "../model/Patient.hpp"
+#include "../utils/Date.hpp"
+#include "../utils/stringUtils.hpp"
 
-mm::AddPrescriptionDialog::AddPrescriptionDialog() : is_active(true),
-                                                     issueDate("addIssueDateDay", "addIssueDateMonth",
-                                                               "addIssueDateYear"),
-                                                     expireDate("addExpireDateDay", "addExpireDateMonth",
-                                                                "addExpireDateYear") {
+#define UPDATE_NOTHING 0
+#define UPDATE_PRESCRIPTIONS 2
+
+mm::AddPrescriptionDialog::AddPrescriptionDialog() : is_active(true) {
     auto refBuilder = RefBuilder::get_instance();
+    Gtk::Dialog *dialog;
 
     refBuilder.get_widget("addPrescriptionOk", ok_button);
     refBuilder.get_widget("addPrescriptionCancel", cancel_button);
 
     refBuilder.get_widget("addDrugIdComboBox", drugComboBox);
     refBuilder.get_widget("addDrugIdsListBox", drugListBox);
+    refBuilder.get_widget("addInteractionDrug1", interactionComboBox1);
+    refBuilder.get_widget("addInteractionDrug2", interactionComboBox2);
+    refBuilder.get_widget("addInteractionListBox", interactionListBox);
     refBuilder.get_widget("addDrugIdAdd", drugAdd);
+    refBuilder.get_widget("addInteractionButton", interactionAdd);
+    refBuilder.get_widget("addPrescriptionValidityMonth", monthComboBox);
+    refBuilder.get_widget("addPrescriptionDialog", dialog);
 
     reset();
+
+    monthComboBox->signal_changed().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::monthValidityChanged));
     drugAdd->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::drugAddHandler));
+    interactionAdd->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::interactionAddHandler));
     ok_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::okHandler));
     cancel_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::cancelHandler));
+    dialog->signal_delete_event().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::onDelete));
 }
 
 void mm::AddPrescriptionDialog::show() {
-    if (not isActive()) {
-        notify();
+    if (not is_active)
         return;
-    }
     Gtk::Dialog *dialog;
     auto &refBuilder = RefBuilder::get_instance();
     refBuilder.get_widget("addPrescriptionDialog", dialog);
@@ -42,9 +52,9 @@ void mm::AddPrescriptionDialog::show() {
 void mm::AddPrescriptionDialog::dispose() {
     Gtk::Dialog *dialog;
     RefBuilder::get_instance().get_widget("addPrescriptionDialog", dialog);
-    dialog->close();
+    dialog->hide();
     is_active = false;
-    notify();
+    notify(UPDATE_PRESCRIPTIONS);
 }
 
 bool mm::AddPrescriptionDialog::isActive() {
@@ -52,19 +62,45 @@ bool mm::AddPrescriptionDialog::isActive() {
 }
 
 void mm::AddPrescriptionDialog::okHandler() {
-    // todo gestire ok, validazione prescrizioni
     Gtk::Entry *prescriptionID;
-    RefBuilder::get_instance().get_widget("addPrescriptionId", prescriptionID);
-    model::Prescription tmp;
+    Gtk::Entry *patientID;
+    Gtk::Entry *negativeInteractions;
+    Gtk::Label *issueDate;
+    Gtk::Label *expireDate;
 
-    if (DBMaster::get_instance().exists(tmp.get_table_name(), tmp.get_primary_key()[0],
-                                        stoi(prescriptionID->get_text().c_str()))) {
-        cout << "esiste\n";
-    } else {
-        cout << "non esiste\n";
+    RefBuilder &refBuilder = RefBuilder::get_instance();
+    refBuilder.get_widget("addPrescriptionId", prescriptionID);
+    refBuilder.get_widget("addPatientId", patientID);
+    refBuilder.get_widget("addIssueDate", issueDate);
+    refBuilder.get_widget("addPrescriptionExpireDate", expireDate);
+    model::Prescription prescription;
+
+    prescription.set_patient_id(patientID->get_text());
+    prescription.set_prescription_id(std::stoi(prescriptionID->get_text()));
+    prescription.set_issue_date(issueDate->get_text());
+    prescription.set_expire_date(expireDate->get_text());
+
+    for (const auto &entry : drugEntries) {
+        prescription.add_drug(entry->get_drugName(), entry->get_drugForm());
     }
 
-    dispose();
+    map<string, string> interactions;
+    for (const auto &entry : interactionEntries) {
+        interactions[entry->get_drug1()] = entry->get_drug2();
+    }
+
+    prescription.set_negative_interactions(interactions);
+
+    prescription.set_used(false);
+
+    if (prescription.is_valid()) {
+        DBMaster::get_instance().add_to_db(prescription);
+        dispose();
+    } else {
+        Gtk::Label *error;
+        refBuilder.get_widget("addPrescriptionInvalidError", error);
+        error->set_visible(true);
+    }
 }
 
 void mm::AddPrescriptionDialog::cancelHandler() {
@@ -79,11 +115,18 @@ void mm::AddPrescriptionDialog::reset() {
     Gtk::TreeView *patientTreeView;
     model::Prescription tmpPrescription;
     vector<map<string, Serialized>> prescriptions;
+    Gtk::Label *monthLabel;
+    Gtk::Label *issueDate;
 
     refBuilder.get_widget("mainWindow", mainWindow);
     refBuilder.get_widget("patientTreeView", patientTreeView);
     refBuilder.get_widget("addPatientId", patientID);
     refBuilder.get_widget("addPrescriptionId", prescriptionID);
+    refBuilder.get_widget("addPrescriptionMonthLabel", monthLabel);
+    refBuilder.get_widget("addIssueDate", issueDate);
+
+    issueDate->set_text(mm::util::Date::get_current_date().get_as_text());
+
     Gtk::TreeModel::iterator patientSel;
 
     if (not patientTreeView->get_selection() or not(patientSel = patientTreeView->get_selection()->get_selected())) {
@@ -93,16 +136,17 @@ void mm::AddPrescriptionDialog::reset() {
         return;
     }
 
-    if (drugComboBox->get_active_text().empty()) init();
+    if (drugComboBox->get_active_text().empty()) initDrugComboBox();
+    if (monthComboBox->get_active_text().empty()) initMonthComboBox();
+
+    monthComboBox->set_active_text("1");
+    monthLabel->set_text("Mese");
 
     patientID->set_text(static_cast<Glib::ustring>((*patientSel)[model::Patient::patientTreeModel.fiscal_code]));
     prescriptionID->set_text(Glib::ustring(to_string(model::Prescription::generateID())));
-
-    issueDate.reset();
-    expireDate.reset();
 }
 
-void mm::AddPrescriptionDialog::init() {
+void mm::AddPrescriptionDialog::initDrugComboBox() {
     model::Drug tmpDrug;
     vector<map<string, Serialized>> drugs;
 
@@ -118,6 +162,7 @@ void mm::AddPrescriptionDialog::init() {
                 drug["name"].get_str(), " - ", drug["pharmaceutical_form"].get_str());
         drugComboBox->append(item);
     }
+
 }
 
 void mm::AddPrescriptionDialog::drugAddHandler() {
@@ -126,12 +171,14 @@ void mm::AddPrescriptionDialog::drugAddHandler() {
     RefBuilder::get_instance().get_widget("addDrugAddError", addDrugError);
     RefBuilder::get_instance().get_widget("addDrugOverError", addDrugOverError);
 
-    if (drugComboBox->get_active_text().empty()) {
+    const Glib::ustring &activeDrug = drugComboBox->get_active_text();
+    if (activeDrug.empty()) {
         addDrugError->set_visible(true);
         return;
     } else if (addDrugError->get_visible()) {
         addDrugError->set_visible(false);
     }
+
     if (drugEntries.size() == 5) {
         addDrugOverError->set_visible(true);
         return;
@@ -139,9 +186,23 @@ void mm::AddPrescriptionDialog::drugAddHandler() {
         addDrugOverError->set_visible(false);
     }
 
-    std::unique_ptr<mm::view::DrugEntry> tmp(new mm::view::DrugEntry(drugComboBox->get_active_text()));
+    std::unique_ptr<mm::view::DrugEntry> tmp(new mm::view::DrugEntry(activeDrug));
     drugListBox->append(*tmp);
     tmp->signal_removed().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::drugRemoveHandler));
+
+    bool present = false;
+    for (const auto &entry : drugEntries) {
+        if (entry->get_drugName() == tmp->get_drugName()) {
+            present = true;
+            break;
+        }
+    }
+
+    if (!present) {
+        interactionComboBox1->append(tmp->get_drugName());
+        interactionComboBox2->append(tmp->get_drugName());
+    }
+
     drugEntries.push_back(std::move(tmp));
     drugListBox->show_all();
 }
@@ -152,10 +213,101 @@ void mm::AddPrescriptionDialog::drugRemoveHandler(mm::view::DrugEntry *removed) 
     if (addDrugOverError->is_visible()) addDrugOverError->set_visible(false);
 
     drugListBox->remove(*removed);
-    drugEntries.erase(
-            std::remove_if(drugEntries.begin(), drugEntries.end(),
-                           [&](std::unique_ptr<mm::view::DrugEntry> const &p) {
-                        return removed == p.get();
-                    }),
-            drugEntries.end());
+    drugEntries.erase(std::remove_if(drugEntries.begin(), drugEntries.end(),
+                                     [&](std::unique_ptr<mm::view::DrugEntry> const &p) {
+                                         return removed == p.get();
+                                     }),
+                      drugEntries.end());
+
+    interactionComboBox1->remove_all();
+    interactionComboBox2->remove_all();
+
+    for (int i = 0; i < drugEntries.size(); ++i) {
+        interactionComboBox1->append(drugEntries[i]->get_drugName());
+        interactionComboBox2->append(drugEntries[i]->get_drugName());
+
+        interactionEntries.erase(std::remove_if(interactionEntries.begin(), interactionEntries.end(),
+                                                [&](std::unique_ptr<mm::view::InteractionEntry> const &p) {
+                                                    return drugEntries[i]->get_drugName() != p.get()->get_drug1() ||
+                                                           drugEntries[i]->get_drugName() != p.get()->get_drug2();
+                                                }),
+                                 interactionEntries.end());
+    }
+
+
+}
+
+mm::AddPrescriptionDialog::~AddPrescriptionDialog() {
+    for (auto &de : drugEntries) {
+        drugListBox->remove(*de);
+    }
+}
+
+void mm::AddPrescriptionDialog::initMonthComboBox() {
+    for (int i = 1; i <= 12; i++) monthComboBox->append(Glib::ustring::format(i));
+    monthComboBox->set_active_text("1");
+    monthValidityChanged();
+}
+
+void mm::AddPrescriptionDialog::monthValidityChanged() {
+    Gtk::Label *monthLabel;
+    Gtk::Label *issueDate;
+    Gtk::Label *expireDate;
+    RefBuilder::get_instance().get_widget("addPrescriptionMonthLabel", monthLabel);
+    RefBuilder::get_instance().get_widget("addPrescriptionExpireDate", expireDate);
+    RefBuilder::get_instance().get_widget("addIssueDate", issueDate);
+
+    if (monthComboBox->get_active_text() != "1") {
+        monthLabel->set_text("Mesi");
+    } else {
+        monthLabel->set_text("Mese");
+    }
+
+    mm::util::Date date;
+    date.set_from_str(issueDate->get_text());
+    date.add_months((unsigned int) std::stoi(monthComboBox->get_active_text()));
+    expireDate->set_text(date.get_as_text());
+}
+
+void mm::AddPrescriptionDialog::interactionAddHandler() {
+    Gtk::Label *addInteractionError;
+    RefBuilder::get_instance().get_widget("addInteractionError", addInteractionError);
+
+    const Glib::ustring &drug1 = interactionComboBox1->get_active_text();
+    const Glib::ustring &drug2 = interactionComboBox2->get_active_text();
+
+    bool present = false;
+
+    for (const auto &entry : interactionEntries) {
+        if ((entry->get_drug1() == drug1.c_str() and entry->get_drug2() == drug2.c_str())
+            or (entry->get_drug1() == drug2.c_str() and entry->get_drug2() == drug1.c_str())) {
+            present = true;
+            break;
+        }
+    }
+    if (drug1.empty() or drug2.empty() or drug1 == drug2 or present or interactionEntries.size() >= 5) {
+        addInteractionError->set_visible(true);
+        return;
+    } else if (addInteractionError->get_visible()) {
+        addInteractionError->set_visible(false);
+    }
+
+    std::unique_ptr<mm::view::InteractionEntry> tmp(new mm::view::InteractionEntry(drug1, drug2));
+    interactionListBox->append(*tmp);
+    tmp->signal_removed().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::interactionRemoveHandler));
+    interactionEntries.push_back(std::move(tmp));
+    interactionListBox->show_all();
+}
+
+void mm::AddPrescriptionDialog::interactionRemoveHandler(mm::view::InteractionEntry *removed) {
+    Gtk::Label *addInteractionError;
+    RefBuilder::get_instance().get_widget("addInteractionError", addInteractionError);
+    if (addInteractionError->is_visible()) addInteractionError->set_visible(false);
+
+    interactionListBox->remove(*removed);
+    interactionEntries.erase(std::remove_if(interactionEntries.begin(), interactionEntries.end(),
+                                            [&](std::unique_ptr<mm::view::InteractionEntry> const &p) {
+                                                return removed == p.get();
+                                            }),
+                             interactionEntries.end());
 }

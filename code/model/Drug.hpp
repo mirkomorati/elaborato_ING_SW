@@ -11,14 +11,37 @@
 #include <vector>
 #include <map>
 #include <gtkmm/treemodelcolumn.h>
+#include <gtkmm/treemodel.h>
 #include "../interfaces/ISerializable.hpp"
 
 using namespace std;
 namespace mm {
     namespace model {
+        struct DrugTreeModel : public Gtk::TreeModel::ColumnRecord {
+
+            Gtk::TreeModelColumn<Glib::ustring> name;
+            Gtk::TreeModelColumn<Glib::ustring> pharmaceutical_form;
+            Gtk::TreeModelColumn<Glib::ustring> ATC_classification;
+            Gtk::TreeModelColumn<Glib::ustring> contraindications;
+            Gtk::TreeModelColumn<Glib::ustring> active_principles;
+            Gtk::TreeModelColumn<Glib::ustring> price;
+
+            static const DrugTreeModel &instance();
+
+        private:
+            DrugTreeModel() noexcept {
+                add(name);
+                add(pharmaceutical_form);
+                add(ATC_classification);
+                add(contraindications);
+                add(active_principles);
+                add(price);
+            };
+        };
+
         class Drug : public ISerializable {
         public:
-            struct TreeModel : Gtk::TreeModelColumnRecord {
+            struct TreeModel : public Gtk::TreeModel::ColumnRecord {
                 TreeModel() noexcept;
 
                 Gtk::TreeModelColumn<Glib::ustring> name;

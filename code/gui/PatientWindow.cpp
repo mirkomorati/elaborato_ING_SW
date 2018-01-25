@@ -14,6 +14,11 @@
 #include "AddPrescriptionDialog.hpp"
 #include "AboutDialog.hpp"
 
+#define UPDATE_NOTHING 0
+#define UPDATE_PATIENTS 1
+#define UPDATE_PRESCRIPTIONS 2
+#define UPDATE_DETAILS 3
+
 mm::PatientWindow::PatientWindow() :
         next(MAIN),
         patientListStore(Gtk::ListStore::create(model::Patient::patientTreeModel)),
@@ -129,6 +134,7 @@ void mm::PatientWindow::initTreeView() {
     patientTreeView->append_column("Nome", model::Patient::patientTreeModel.first_name);
     patientTreeView->append_column("Cognome", model::Patient::patientTreeModel.last_name);
     patientTreeView->append_column("Cod. Fiscale", model::Patient::patientTreeModel.fiscal_code);
+
     patientTreeView->set_model(patientListStore);
 
     for (int i = 0; i <= 2; i++) {
@@ -136,6 +142,7 @@ void mm::PatientWindow::initTreeView() {
         patientTreeView->get_column(i)->set_sort_column(i);
         patientTreeView->get_column(i)->set_sort_order(Gtk::SortType::SORT_ASCENDING);
     }
+
 
     updatePatientTreeView();
 }
@@ -158,17 +165,46 @@ mm::WindowName mm::PatientWindow::getNextWindow() const {
 }
 
 void mm::PatientWindow::update() {
-    for (auto it = dialogList.begin(); it != dialogList.end(); ++it)
-        if (not(*it)->isActive()) dialogList.erase(it);
+    update(UPDATE_PATIENTS);
+}
 
-    updatePatientTreeView();
+void mm::PatientWindow::update(unsigned int what) {
+    auto start = std::chrono::system_clock::now();
+    auto it = dialogList.begin();
+    while (it != dialogList.end()) {
+        if (not(*it)->isActive())
+            it = dialogList.erase(it);
+        else
+            ++it;
+    }
+    spdlog::get("out")->debug("PatientWindow::dialogList size after erase: {}", dialogList.size());
+
+    switch (what) {
+        case UPDATE_NOTHING:
+            break;
+        case UPDATE_DETAILS:
+            updatePatientDetailsView();
+            break;
+        case UPDATE_PRESCRIPTIONS:
+            updatePrescriptionView();
+            break;
+        default:
+            updatePatientTreeView();
+            break;
+    }
+    auto end = std::chrono::system_clock::now();
+
+    std::chrono::duration<double> duration = end - start;
+    spdlog::get("out")->debug("update time: {}", duration.count());
 }
 
 void mm::PatientWindow::onAddPrescriptionClicked() {
     std::unique_ptr<Dialog> dialog(new AddPrescriptionDialog);
-    dialog->show();
     dialog->attach(this);
+    dialog->show();
     dialogList.push_back(std::move(dialog));
+    spdlog::get("out")->debug("PatientWindow::dialogList size after push_back: {}", dialogList.size());
+    update(UPDATE_NOTHING);
 }
 
 void mm::PatientWindow::onAddPatientClicked() {
@@ -176,6 +212,7 @@ void mm::PatientWindow::onAddPatientClicked() {
     dialog->show();
     dialog->attach(this);
     dialogList.push_back(std::move(dialog));
+    spdlog::get("out")->debug("PatientWindow::dialogList size after push_back: {}", dialogList.size());
 }
 
 void mm::PatientWindow::updatePatientTreeView() {
@@ -215,11 +252,21 @@ void mm::PatientWindow::updatePrescriptionView() {
     Gtk::TreeView *patientTreeView;
     RefBuilder::get_instance().get_widget("prescriptionList", prescriptionList);
     RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
-    prescriptionsExp.clear();
+
+    spdlog::get("out")->debug("PatientWindow::prescriptionsExp size before clear: {}", prescriptionsExp.size());
+
+    spdlog::get("out")->debug("PatientWindow::prescriptionList size before remove children: {}",
+                              prescriptionList->get_children().size());
 
     for (auto it : prescriptionList->get_children()) {
-        prescriptionList->remove(*it);
+        std::cout << it->get_name() << std::endl;
+        Gtk::ListBoxRow *l = dynamic_cast<Gtk::ListBoxRow *>(it);
+        std::cout << l->get_child()->get_name() << std::endl;
+        delete it;
     }
+
+    spdlog::get("out")->debug("PatientWindow::prescriptionList size after remove children: {}",
+                              prescriptionList->get_children().size());
 
     auto sel = patientTreeView->get_selection()->get_selected();
     if (not sel) return;
@@ -247,12 +294,25 @@ void mm::PatientWindow::updatePrescriptionView() {
         }
     }
 
+    //auto start = std::chrono::system_clock::now();
     prescriptionsExp.clear();
+    spdlog::get("out")->debug("PatientWindow::prescriptionsExp size after clear: {}", prescriptionsExp.size());
+
+
     for (auto &prescription : prescriptions) {
-        std::unique_ptr<mm::view::PrescriptionExpander> tmp(new mm::view::PrescriptionExpander(prescription));
-        prescriptionList->append(*tmp);
-        prescriptionsExp.push_back(std::move(tmp));
+        mm::view::PrescriptionExpander *tmp = new mm::view::PrescriptionExpander(prescription);
+        delete tmp;
+        //prescriptionList->add(*tmp);
+        //prescriptionList->append(*tmp);
+        //std::cout << tmp << std::endl;
+
+        //std::unique_ptr<mm::view::PrescriptionExpander> tmp(new mm::view::PrescriptionExpander(prescription));
+        //prescriptionList->append(*tmp);
+        //prescriptionsExp.push_back(std::move(tmp));
+
     }
+
+    spdlog::get("out")->debug("PatientWindow::prescriptionsExp size after push_back: {}", prescriptionsExp.size());
 }
 
 int mm::PatientWindow::sortPrescriptionList(Gtk::ListBoxRow *row1, Gtk::ListBoxRow *row2, Gtk::SortType sortType) {

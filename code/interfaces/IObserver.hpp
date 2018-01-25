@@ -13,6 +13,9 @@ namespace mm {
     public:
         virtual void update() = 0;
 
+        virtual void update(unsigned int what) {
+            update();
+        }
     };
 
 }

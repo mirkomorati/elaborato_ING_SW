@@ -26,6 +26,13 @@ mm::ISubject::~ISubject() {
     observer_set.clear();
 }
 
+void mm::ISubject::notify(unsigned int what) const {
+    std::set<IObserver *> observer_copy_set = observer_set;
+    for (auto obs : observer_copy_set) {
+        obs->update(what);
+    }
+}
+
 mm::observer_not_found_error::observer_not_found_error(const std::string &error) : runtime_error(error) {}
 
 mm::observer_not_found_error::observer_not_found_error(const char *error) : runtime_error(error) {}

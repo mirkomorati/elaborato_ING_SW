@@ -36,6 +36,7 @@ namespace mm {
         /// lancia il main loop del programma.
         int run();
 
+        virtual ~MedH();
 
     private:
         /// metodo usato dal design pattern Observer

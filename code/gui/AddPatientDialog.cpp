@@ -9,6 +9,8 @@
 #include "../DBMaster.hpp"
 #include "../model/Authentication.hpp"
 
+#define UPDATE_NOTHING 0
+
 mm::AddPatientDialog::AddPatientDialog()
         : is_active(true), first_name("addFirstName"), last_name("addLastName"), fiscal_code("addFiscalCode"),
           street("addStreetAddress"), civic("addCivic"), zip_code("addZipCode"), city("addCity"), country("addCountry"),
@@ -16,14 +18,17 @@ mm::AddPatientDialog::AddPatientDialog()
           birthDate("addBirthDateDay", "addBirthDateMonth", "addBirthDateYear") {
 
     auto refBuilder = RefBuilder::get_instance();
+    Gtk::Dialog *dialog;
 
     refBuilder.get_widget("addPatientOk", ok_button);
     refBuilder.get_widget("addPatientCancel", cancel_button);
+    refBuilder.get_widget("addPatientDialog", dialog);
 
     reset();
 
     ok_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPatientDialog::okHandler));
     cancel_button->signal_clicked().connect(sigc::mem_fun(this, &mm::AddPatientDialog::cancelHandler));
+    dialog->signal_delete_event().connect(sigc::mem_fun(this, &mm::AddPatientDialog::onDelete));
 }
 
 void mm::AddPatientDialog::show() {
@@ -62,7 +67,7 @@ void mm::AddPatientDialog::okHandler() {
 
     if (patient.is_valid()) {
         DBMaster::get_instance().add_to_db(patient);
-        dispose();
+        dispose(true);
     } else {
         Gtk::Label *error;
         refBuilder.get_widget("addPatientError", error);
@@ -75,11 +80,18 @@ void mm::AddPatientDialog::cancelHandler() {
 }
 
 void mm::AddPatientDialog::dispose() {
+    dispose(false);
+}
+
+void mm::AddPatientDialog::dispose(bool update) {
     Gtk::Dialog *dialog;
     RefBuilder::get_instance().get_widget("addPatientDialog", dialog);
-    dialog->close();
+    dialog->hide();
     is_active = false;
-    notify();
+    if (update)
+        this->notify();
+    else
+        this->notify(UPDATE_NOTHING);
 }
 
 void mm::AddPatientDialog::reset() {
@@ -95,5 +107,3 @@ void mm::AddPatientDialog::reset() {
     birth_city.reset();
     birth_country.reset();
 }
-
-mm::AddPatientDialog::~AddPatientDialog() {}

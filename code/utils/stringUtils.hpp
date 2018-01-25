@@ -2,9 +2,8 @@
 // Created by Noè Murr on 06/09/2017.
 //
 
-#ifndef NAVTOOLS_STRINGUTILS_HPP
-#define NAVTOOLS_STRINGUTILS_HPP
-
+#ifndef STRINGUTILS_ELABORATO_HPP
+#define STRINGUTILS_ELABORATO_HPP
 
 #include <string>
 #include <sstream>
@@ -25,15 +24,15 @@ namespace mm {
                 }
             }
 
-            std::vector<std::string> split(const std::string &s, char delim, bool skipEmpty = false) {
+            inline std::vector<std::string> split(const std::string &s, char delim, bool skipEmpty = false) {
                 using namespace std;
                 vector<string> elems;
                 split(s, delim, back_inserter(elems), skipEmpty);
-                return std::move(elems);
+                return elems;
             }
         }
     }
 }
 
 
-#endif //NAVTOOLS_STRINGUTILS_HPP
+#endif //STRINGUTILS_ELABORATO_HPP

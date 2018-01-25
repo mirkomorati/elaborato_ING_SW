@@ -136,3 +136,8 @@ mm::model::Drug::TreeModel::TreeModel() noexcept {
     add(active_principles);
     add(price);
 }
+
+const mm::model::DrugTreeModel &mm::model::DrugTreeModel::instance() {
+    static model::DrugTreeModel column_record;
+    return column_record;
+}

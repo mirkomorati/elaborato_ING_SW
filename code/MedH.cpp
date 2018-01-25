@@ -76,7 +76,7 @@ bool mm::MedH::init(int argc, char **argv) {
 mm::MedH::MedH(int argc, char **argv) : window(new LoginWindow) {
     if (not init(argc, argv)) throw std::runtime_error("cannot initialize the app");
     this->app = Gtk::Application::create(argc, argv, appID);
-    if (not window->init()) throw std::runtime_error("cannot init the window");
+    if (not window->init()) throw std::runtime_error("cannot initDrugComboBox the window");
     window->attach(this);
 }
 
@@ -108,4 +108,20 @@ void mm::MedH::update() {
 
     window->init();
     window->attach(this);
+}
+
+mm::MedH::~MedH() {
+    Gtk::Window *mainWindow;
+    Gtk::Dialog *aboutDialog;
+    Gtk::Dialog *addPatientDialog;
+    Gtk::Dialog *addPrescriptionDialog;
+    RefBuilder::get_instance().get_widget("mainWindow", mainWindow);
+    RefBuilder::get_instance().get_widget("aboutDialog", aboutDialog);
+    RefBuilder::get_instance().get_widget("addPatientDialog", addPatientDialog);
+    RefBuilder::get_instance().get_widget("addPrescriptionDialog", addPrescriptionDialog);
+
+    delete mainWindow;
+    delete aboutDialog;
+    delete addPatientDialog;
+    delete addPrescriptionDialog;
 }

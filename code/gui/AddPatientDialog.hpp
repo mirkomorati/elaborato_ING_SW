@@ -10,6 +10,7 @@
 #include <gtkmm/comboboxtext.h>
 #include "Dialog.hpp"
 #include "Widgets.hpp"
+#include "../utils/stringUtils.hpp"
 
 namespace mm {
     class AddPatientDialog : public Dialog {
@@ -20,13 +21,15 @@ namespace mm {
 
         bool isActive() override;
 
-        ~AddPatientDialog() override;
+        ~AddPatientDialog() override = default;
 
         void reset() override;
 
     private:
 
         void dispose() override;
+
+        void dispose(bool notify);
 
         void okHandler();
 

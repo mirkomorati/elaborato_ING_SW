@@ -113,7 +113,7 @@ string mm::model::Prescription::get_drug_ids_as_string() {
 string mm::model::Prescription::get_negative_interactions() const {
     ostringstream ss;
     for (auto row : negative_interactions) {
-        ss << row.first << ": " << row.second << "; ";
+        ss << row.first << " <-> " << row.second << "; ";
     }
     string ret = ss.str();
     ret = ret.substr(0, ret.length() - 2);
@@ -150,6 +150,44 @@ unsigned int mm::model::Prescription::generateID() {
     } while (DBMaster::get_instance().exists(tmp.get_table_name(), tmp.get_primary_key()[0], ID));
 
     return static_cast<unsigned int>(ID);
+}
+
+void mm::model::Prescription::set_patient_id(const string &patient_id) {
+    Prescription::patient_id = patient_id;
+}
+
+void mm::model::Prescription::set_prescription_id(int prescription_id) {
+    Prescription::prescription_id = prescription_id;
+}
+
+void mm::model::Prescription::set_issue_date(const string &issue_date) {
+    Prescription::issue_date = issue_date;
+}
+
+void mm::model::Prescription::set_expire_date(const string &expire_date) {
+    Prescription::expire_date = expire_date;
+}
+
+void mm::model::Prescription::set_negative_interactions(const map <string, string> &negative_interactions) {
+    Prescription::negative_interactions = negative_interactions;
+}
+
+void mm::model::Prescription::set_used(bool used) {
+    Prescription::used = used;
+}
+
+void mm::model::Prescription::add_drug(mm::model::Drug &drug) {
+    pair<string, string> drug_id(drug.get_name(), drug.get_pharmaceutical_form());
+    drug_ids.push_back(drug_id);
+}
+
+void mm::model::Prescription::add_drug(const string &drugName, const string &drugForm) {
+    pair<string, string> drug_id(drugName, drugForm);
+    drug_ids.push_back(drug_id);
+}
+
+bool mm::model::Prescription::is_valid() {
+    return !patient_id.empty() and !issue_date.empty() and !expire_date.empty() and drug_ids.size() != 0;
 }
 
 mm::model::Prescription::TreeModel::TreeModel() noexcept {

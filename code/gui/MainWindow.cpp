@@ -2,11 +2,13 @@
 // Created by Noè Murr on 23/12/2017.
 //
 
+#include <spdlog/spdlog.h>
 #include "MainWindow.hpp"
 #include "PrescriptionWindow.hpp"
 #include "RefBuilder.hpp"
 #include "AboutDialog.hpp"
 #include "PatientWindow.hpp"
+#include "DrugWindow.hpp"
 
 bool mm::MainWindow::init() {
     Gtk::MenuBar *menuBar;
@@ -15,7 +17,7 @@ bool mm::MainWindow::init() {
 
     initHandlers();
 
-    onPageSwitch(nullptr, 0);
+    for (const auto &tab : tabWindows) tab->init();
 
     return true;
 }
@@ -39,7 +41,6 @@ void mm::MainWindow::initHandlers() {
     refBuilder.get_widget("mainNotebook", notebook);
     logoutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::MainWindow::onLogout));
     aboutMenuItem->signal_activate().connect(sigc::mem_fun(this, &mm::MainWindow::onAboutClicked));
-    notebook->signal_switch_page().connect(sigc::mem_fun(this, &mm::MainWindow::onPageSwitch));
 }
 
 void mm::MainWindow::onLogout() {
@@ -52,32 +53,20 @@ void mm::MainWindow::onAboutClicked() {
     dialog->show();
     dialog->attach(this);
     dialogList.push_back(std::move(dialog));
+    spdlog::get("out")->debug("MainWindow::dialogList size after push_back: {}", dialogList.size());
 }
 
 void mm::MainWindow::update() {
-    for (auto it = dialogList.begin(); it != dialogList.end(); ++it)
-        if (not(*it)->isActive()) dialogList.erase(it);
+    auto it = dialogList.begin();
+    while (it != dialogList.end()) {
+        if (not(*it)->isActive())
+            it = dialogList.erase(it);
+        else
+            ++it;
+    }
+    spdlog::get("out")->debug("MainWindow::dialogList size after erase: {}", dialogList.size());
 }
 
-void mm::MainWindow::onPageSwitch(Gtk::Widget *page, guint page_number) {
-    switch (page_number) {
-        case 0: {
-            activeTabWindow.reset(new PatientWindow);
-            activeTabWindow->init();
-            break;
-        }
-        case 1: {
-            // todo create PrescriptionWindow controller
-            activeTabWindow.reset(new PrescriptionWindow);
-            activeTabWindow->init();
-            break;
-        }
-        case 2: {
-            // todo create DrugWindow controller
-            break;
-        }
-        default:
-            throw std::logic_error("switch on unknown page");
-    }
-}
+mm::MainWindow::MainWindow() : next(MAIN),
+                               tabWindows({std::make_unique<PatientWindow>(), std::make_unique<DrugWindow>()}) {}
 

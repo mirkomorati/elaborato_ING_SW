@@ -27,6 +27,11 @@ namespace mm {
             refBuilder->get_widget(name, widget);
         }
 
+        template<typename T>
+        void get_widget_derived(const Glib::ustring &name, T &widget) {
+            refBuilder->get_widget_derived(name, widget);
+        }
+
     private:
         RefBuilder();
 

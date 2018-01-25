@@ -42,6 +42,8 @@ namespace mm {
 
         void update() override;
 
+        void update(unsigned int what) override;
+
         ~PatientWindow() override;
 
     private:
