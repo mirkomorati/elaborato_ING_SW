@@ -17,24 +17,25 @@
 #include "../../utils/stringUtils.hpp"
 
 mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescription &prescription) :
-        drugListStore(Gtk::ListStore::create(model::DrugTreeModel::instance())),
+        drugColumns(),
+        drugListStore(Gtk::ListStore::create(drugColumns)),
         id(prescription.get_prescription_id()) {
 
-    expirationDate = {Gtk::manage(new Gtk::Label("<b>Data di Scadenza:</b>")), Gtk::manage(new Gtk::Label(""))};
-    prescriptionID = {Gtk::manage(new Gtk::Label("<b>ID:</b>")), Gtk::manage(new Gtk::Label(""))};
-    issueDate = {Gtk::manage(new Gtk::Label("<b>Data di Emissione:</b>")), Gtk::manage(new Gtk::Label(""))};
+    expirationDate = {Gtk::Label("<b>Data di Scadenza:</b>"), Gtk::Label("")};
+    prescriptionID = {Gtk::Label("<b>ID:</b>"), Gtk::Label("")};
+    issueDate = {Gtk::Label("<b>Data di Emissione:</b>"), Gtk::Label("")};
 
-    labelBox = Gtk::manage(new Gtk::HBox(false, 5));
-    used = Gtk::manage(new Gtk::CheckButton("Usata"));
+    labelBox = Gtk::HBox(false, 5);
+    used = Gtk::CheckButton("Usata");
 
     // content objects
-    contentBox = Gtk::manage(new Gtk::HBox(false, 5));
-    detailsFrame = Gtk::manage(new Gtk::Frame());
-    interactionLabel = Gtk::manage(new Gtk::Label());
-    drugFrame = Gtk::manage(new Gtk::Frame());
-    drugTreeView = Gtk::manage(new Gtk::TreeView());
 
+    contentBox = Gtk::HBox(false, 5);
+    detailsFrame = Gtk::Frame();
+    interactionLabel = Gtk::Label();
+    drugFrame = Gtk::Frame();
 
+    drugTreeView.set_model(drugListStore);
     /*
     expirationDate = {new Gtk::Label("<b>Data di Scadenza:</b>"), new Gtk::Label("")};
     prescriptionID = {new Gtk::Label("<b>ID:</b>"), new Gtk::Label("")};
@@ -52,82 +53,45 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
 */
 
     //-------------------Label-------------------//
-    prescriptionID.first->set_use_markup(true);
-    issueDate.first->set_use_markup(true);
-    expirationDate.first->set_use_markup(true);
+    prescriptionID.first.set_use_markup(true);
+    issueDate.first.set_use_markup(true);
+    expirationDate.first.set_use_markup(true);
 
-    prescriptionID.first->set_width_chars(5);
-    prescriptionID.second->set_width_chars(5);
+    prescriptionID.first.set_width_chars(5);
+    prescriptionID.second.set_width_chars(5);
 
-    prescriptionID.second->set_label(std::to_string(prescription.get_prescription_id()));
-    issueDate.second->set_label(prescription.get_issue_date());
-    expirationDate.second->set_label(prescription.get_expire_date());
+    prescriptionID.second.set_label(std::to_string(prescription.get_prescription_id()));
+    issueDate.second.set_label(prescription.get_issue_date());
+    expirationDate.second.set_label(prescription.get_expire_date());
 
-    labelBox->pack_start(*prescriptionID.first, true, true);
-    labelBox->pack_start(*prescriptionID.second, true, true);
-    labelBox->pack_start(*issueDate.first, true, true);
-    labelBox->pack_start(*issueDate.second, true, true);
-    labelBox->pack_start(*expirationDate.first, true, true);
-    labelBox->pack_start(*expirationDate.second, true, true);
-    labelBox->pack_start(*used, true, true);
-    used->set_sensitive(false);
-    if (prescription.is_used()) used->set_active(true);
+    labelBox.pack_start(prescriptionID.first, true, true);
+    labelBox.pack_start(prescriptionID.second, true, true);
+    labelBox.pack_start(issueDate.first, true, true);
+    labelBox.pack_start(issueDate.second, true, true);
+    labelBox.pack_start(expirationDate.first, true, true);
+    labelBox.pack_start(expirationDate.second, true, true);
+    labelBox.pack_start(used, true, true);
+    used.set_sensitive(false);
+    if (prescription.is_used()) used.set_active(true);
 
+    labelBox.set_margin_top(5);
+    labelBox.set_margin_bottom(5);
 
-    labelBox->set_margin_top(5);
-    labelBox->set_margin_bottom(5);
+    set_label_widget(labelBox);
 
-    set_label_widget(*labelBox);
-    add(*Gtk::manage(contentBox));
+    drugFrame.set_label("Farmaci");
+    drugFrame.add(drugTreeView);
 
+    drugTreeView.set_hexpand(false);
+    drugTreeView.set_grid_lines(Gtk::TREE_VIEW_GRID_LINES_BOTH);
 
-    //-------------------content-------------------//
-    detailsFrame->add(*interactionLabel);
-    detailsFrame->set_label("Possibili interazioni");
-    detailsFrame->set_vexpand(true);
-    detailsFrame->set_valign(Gtk::Align::ALIGN_START);
+    drugTreeView.append_column("Nome", drugColumns.name);
+    drugTreeView.append_column("Forma Farmaceutica", drugColumns.pharmaceutical_form);
+    drugTreeView.append_column("ATC", drugColumns.ATC_classification);
+    drugTreeView.append_column("Controindicazioni", drugColumns.contraindications);
+    drugTreeView.append_column("Principi Attivi", drugColumns.active_principles);
+    drugTreeView.append_column("Prezzo", drugColumns.price);
 
-    contentBox->pack_start(*drugFrame, true, true);
-    contentBox->pack_start(*detailsFrame, false, false);
-    contentBox->set_hexpand(true);
-    contentBox->set_halign(Gtk::Align::ALIGN_START);
-
-    drugFrame->set_label("Farmaci");
-    drugFrame->add(*drugTreeView);
-
-    drugTreeView->set_hexpand(false);
-    drugTreeView->set_grid_lines(Gtk::TREE_VIEW_GRID_LINES_BOTH);
-
-    drugTreeView->set_model(drugListStore);
-
-
-    {
-        Gtk::TreeView::Column column = Gtk::TreeView::Column("Nome");
-        //drugTreeView->append_column(*Gtk::manage(column));
-
-        drugTreeView->insert_column(column, -1);
-        //drugTreeView->signal_remove().connect(sigc::mem_fun(this, &mm::view::PrescriptionExpander::onTreeViewRemoved));
-        //drugTreeView->remove_column(column);
-        //col.push_back(column);
-    }
-
-    //drugTreeView->remove_all_columns();
-
-    /*
-    {
-        Gtk::TreeViewColumn *const column = new Gtk::TreeViewColumn("Nome");
-
-        drugTreeView->append_column(*Gtk::manage(column));
-    }
-    */
-    //delete column;
-    /*
-    drugTreeView->append_column("Forma Farmaceutica", model::DrugTreeModel::instance().pharmaceutical_form);
-    drugTreeView->append_column("ATC", model::DrugTreeModel::instance().ATC_classification);
-    drugTreeView->append_column("Controindicazioni", model::DrugTreeModel::instance().contraindications);
-    drugTreeView->append_column("Principi Attivi", model::DrugTreeModel::instance().active_principles);
-    drugTreeView->append_column("Prezzo", model::DrugTreeModel::instance().price);
-*/
     std::stringstream interactionStringStream;
     auto negativeInteractionsVector = util::str::split(prescription.get_negative_interactions(), ';');
     for (auto it = negativeInteractionsVector.begin(); it != negativeInteractionsVector.end();) {
@@ -136,23 +100,19 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
             interactionStringStream << '\n';
     }
 
-    interactionLabel->set_text(interactionStringStream.str().empty() ? "Nessuna" : interactionStringStream.str());
-    interactionLabel->set_margin_top(5);
-    interactionLabel->set_margin_left(5);
-    interactionLabel->set_margin_right(5);
-    interactionLabel->set_margin_bottom(5);
+    interactionLabel.set_text(interactionStringStream.str().empty() ? "Nessuna" : interactionStringStream.str());
+    interactionLabel.set_margin_top(5);
+    interactionLabel.set_margin_left(5);
+    interactionLabel.set_margin_right(5);
+    interactionLabel.set_margin_bottom(5);
 
-    for (int i = 0; i < 0; i++) {
-        drugTreeView->get_column(i)->set_min_width(100);
-        drugTreeView->get_column(i)->set_resizable(true);
-        drugTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
-        drugTreeView->get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
-        drugTreeView->get_column_cell_renderer(i)->set_property("ellipsize", Pango::EllipsizeMode::ELLIPSIZE_END);
+    for (int i = 0; i < 6; i++) {
+        drugTreeView.get_column(i)->set_min_width(100);
+        drugTreeView.get_column(i)->set_resizable(true);
+        drugTreeView.get_column_cell_renderer(i)->property_xalign().set_value(0);
+        drugTreeView.get_column_cell_renderer(i)->set_property("ellipsize-set", (gboolean) 1);
+        drugTreeView.get_column_cell_renderer(i)->set_property("ellipsize", Pango::EllipsizeMode::ELLIPSIZE_END);
     }
-
-/*
-    // updating the view for the first time
-    drugTreeView->set_model(drugListStore);
 
     auto drugs = prescription.get_drugs();
 
@@ -170,15 +130,23 @@ mm::view::PrescriptionExpander::PrescriptionExpander(const mm::model::Prescripti
         if (i < drugs.size() - 1)
             row = *(drugListStore->append()++);
     }
-*/
-    issueDateText = issueDate.second->get_text();
+
+    issueDateText = issueDate.second.get_text();
+
+    //-------------------content-------------------//
+    detailsFrame.add(interactionLabel);
+    detailsFrame.set_label("Possibili interazioni");
+    detailsFrame.set_vexpand(true);
+    detailsFrame.set_valign(Gtk::Align::ALIGN_START);
+
+    contentBox.pack_start(drugFrame, true, true);
+    contentBox.pack_start(detailsFrame, false, false);
+    contentBox.set_hexpand(true);
+    contentBox.set_halign(Gtk::Align::ALIGN_START);
+
+    add(contentBox);
 
     show_all();
-}
-
-void mm::view::PrescriptionExpander::onTreeViewRemoved(Widget *widget) {
-    auto w = dynamic_cast<Gtk::TreeView *>(widget);
-    std::cout << "removed " << (w != nullptr ? w->get_columns().size() : -1) << std::endl;
 }
 
 /*
@@ -297,7 +265,7 @@ int mm::view::PrescriptionExpander::getID() const {
 }
 
 mm::view::PrescriptionExpander::~PrescriptionExpander() {
-    //spdlog::get("out")->debug("PrescriptionExpander::~PrescriptionExpander called destructor");
+    spdlog::get("out")->debug("PrescriptionExpander::~PrescriptionExpander called destructor");
     /*
     delete expirationDate.first;
     delete expirationDate.second;
@@ -315,11 +283,6 @@ mm::view::PrescriptionExpander::~PrescriptionExpander() {
     delete drugFrame;
     delete drugTreeView;
     */
-    auto it = col.begin();
-    while (it != col.end()) {
-        //delete *it;
-        it = col.erase(it);
-    }
 }
 
 Glib::ustring mm::view::PrescriptionExpander::get_name() const {

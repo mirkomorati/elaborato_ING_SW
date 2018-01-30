@@ -38,6 +38,13 @@ file(GLOB_RECURSE SRC "code/*.cpp")
 file(GLOB_RECURSE HDR "code/*.hpp")
 
 set(MAIN code/main.cpp)
+
+
+#file(GLOB_RECURSE SRC "code2/*.cpp")
+#file(GLOB_RECURSE HDR "code2/*.hpp")
+
+#set(MAIN code2/main.cpp)
+
 set(GLADE_FILES ${CMAKE_SOURCE_DIR}/glade/mainWindow.glade ${CMAKE_SOURCE_DIR}/glade/style.css ${CMAKE_SOURCE_DIR}/glade/logoverona.png)
 set(CONF_FILE ${CMAKE_SOURCE_DIR}/tmp/config.json)
 

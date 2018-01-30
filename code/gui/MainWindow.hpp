@@ -30,10 +30,14 @@ namespace mm {
 
         MainWindow();
 
+        virtual ~MainWindow();
+
     private:
         //-------------------init functions-------------------//
 
         void initHandlers();
+
+    private:
 
         //-------------------signal handlers-------------------//
         void onLogout();

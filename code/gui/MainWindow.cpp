@@ -70,3 +70,8 @@ void mm::MainWindow::update() {
 mm::MainWindow::MainWindow() : next(MAIN),
                                tabWindows({std::make_unique<PatientWindow>(), std::make_unique<DrugWindow>()}) {}
 
+mm::MainWindow::~MainWindow() {
+    dialogList.clear();
+    spdlog::get("out")->debug("MainWindow::~MainWindow called destructor");
+}
+

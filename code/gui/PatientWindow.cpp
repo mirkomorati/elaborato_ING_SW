@@ -36,7 +36,6 @@ void mm::PatientWindow::initHandlers() {
     Gtk::ToolButton *add_prescription_button;
     Gtk::ToolButton *remove_patient_button;
     Gtk::ToolButton *remove_prescription_button;
-    Gtk::MenuItem *logoutMenuItem;
     Gtk::ImageMenuItem *aboutMenuItem;
     Gtk::Switch *filterSwitch;
     Gtk::RadioButton *year, *semester, *quarter, *month, *custom;
@@ -55,7 +54,6 @@ void mm::PatientWindow::initHandlers() {
     refBuilder.get_widget("addPrescription", add_prescription_button);
     refBuilder.get_widget("removePatient", remove_patient_button);
     refBuilder.get_widget("removePrescription", remove_prescription_button);
-    refBuilder.get_widget("logoutMenuItem", logoutMenuItem);
     refBuilder.get_widget("aboutMenuItem", aboutMenuItem);
     refBuilder.get_widget("filterSwitch", filterSwitch);
     refBuilder.get_widget("yearFilterRadioButton", year);
@@ -130,12 +128,12 @@ void mm::PatientWindow::initTreeView() {
     Gtk::TreeView *patientTreeView;
 
     RefBuilder::get_instance().get_widget("patientTreeView", patientTreeView);
-
+    patientTreeView->set_model(patientListStore);
+    patientTreeView->remove_all_columns();
     patientTreeView->append_column("Nome", model::Patient::patientTreeModel.first_name);
     patientTreeView->append_column("Cognome", model::Patient::patientTreeModel.last_name);
     patientTreeView->append_column("Cod. Fiscale", model::Patient::patientTreeModel.fiscal_code);
 
-    patientTreeView->set_model(patientListStore);
 
     for (int i = 0; i <= 2; i++) {
         patientTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
@@ -299,10 +297,9 @@ void mm::PatientWindow::updatePrescriptionView() {
     spdlog::get("out")->debug("PatientWindow::prescriptionsExp size after clear: {}", prescriptionsExp.size());
 
 
-    for (auto &prescription : prescriptions) {
-        mm::view::PrescriptionExpander *tmp = new mm::view::PrescriptionExpander(prescription);
-        delete tmp;
-        //prescriptionList->add(*tmp);
+    for (const auto &prescription : prescriptions) {
+        auto tmp = new mm::view::PrescriptionExpander(prescription);
+        prescriptionList->add(*Gtk::manage(tmp));
         //prescriptionList->append(*tmp);
         //std::cout << tmp << std::endl;
 

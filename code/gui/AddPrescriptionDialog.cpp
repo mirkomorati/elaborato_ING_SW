@@ -187,7 +187,7 @@ void mm::AddPrescriptionDialog::drugAddHandler() {
     }
 
     std::unique_ptr<mm::view::DrugEntry> tmp(new mm::view::DrugEntry(activeDrug));
-    drugListBox->append(*tmp);
+    drugListBox->append(*Gtk::manage(tmp.get()));
     tmp->signal_removed().connect(sigc::mem_fun(this, &mm::AddPrescriptionDialog::drugRemoveHandler));
 
     bool present = false;
@@ -204,7 +204,7 @@ void mm::AddPrescriptionDialog::drugAddHandler() {
     }
 
     drugEntries.push_back(std::move(tmp));
-    drugListBox->show_all();
+    drugListBox->show_all_children(true);
 }
 
 void mm::AddPrescriptionDialog::drugRemoveHandler(mm::view::DrugEntry *removed) {
@@ -222,7 +222,7 @@ void mm::AddPrescriptionDialog::drugRemoveHandler(mm::view::DrugEntry *removed) 
     interactionComboBox1->remove_all();
     interactionComboBox2->remove_all();
 
-    for (int i = 0; i < drugEntries.size(); ++i) {
+    for (size_t i = 0; i < drugEntries.size(); ++i) {
         interactionComboBox1->append(drugEntries[i]->get_drugName());
         interactionComboBox2->append(drugEntries[i]->get_drugName());
 

@@ -12,6 +12,7 @@
 #include <map>
 #include <gtkmm/treemodelcolumn.h>
 #include <gtkmm/treemodel.h>
+#include <iostream>
 #include "../interfaces/ISerializable.hpp"
 
 using namespace std;
@@ -26,10 +27,7 @@ namespace mm {
             Gtk::TreeModelColumn<Glib::ustring> active_principles;
             Gtk::TreeModelColumn<Glib::ustring> price;
 
-            static const DrugTreeModel &instance();
-
-        private:
-            DrugTreeModel() noexcept {
+            DrugTreeModel() {
                 add(name);
                 add(pharmaceutical_form);
                 add(ATC_classification);

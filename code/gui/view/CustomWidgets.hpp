@@ -21,6 +21,7 @@
 #include "../../model/Patient.hpp"
 
 namespace mm::view {
+
     class PrescriptionExpander : public Gtk::Expander {
         /*
             // label objects
@@ -40,31 +41,38 @@ namespace mm::view {
 
             const int id;
         */
+        /*
+        struct TreeModel : public Gtk::TreeModel::ColumnRecord {
 
+            Gtk::TreeModelColumn<Glib::ustring> name;
+
+            TreeModel() {
+                add(name);
+            };
+        };
+         */
+
+        model::DrugTreeModel drugColumns;
         Glib::RefPtr<Gtk::ListStore> drugListStore;
+        Gtk::TreeView drugTreeView;
         const int id;
         Glib::ustring issueDateText;
 
-        std::pair<Gtk::Label *, Gtk::Label *> expirationDate;
-        std::pair<Gtk::Label *, Gtk::Label *> prescriptionID;
-        std::pair<Gtk::Label *, Gtk::Label *> issueDate;
+        std::pair<Gtk::Label, Gtk::Label> expirationDate;
+        std::pair<Gtk::Label, Gtk::Label> prescriptionID;
+        std::pair<Gtk::Label, Gtk::Label> issueDate;
 
-        Gtk::HBox *labelBox;
-        Gtk::CheckButton *used;
+        Gtk::HBox labelBox;
+        Gtk::HBox contentBox;
+        Gtk::CheckButton used;
 
         // content objects
-        Gtk::HBox *contentBox;
-        Gtk::Frame *detailsFrame;
-        Gtk::Label *interactionLabel;
-        Gtk::Frame *drugFrame;
-        Gtk::TreeView *drugTreeView;
-
-        std::vector<Gtk::TreeView::Column *> col;
-
-        void onTreeViewRemoved(Widget *);
+        Gtk::Frame detailsFrame;
+        Gtk::Label interactionLabel;
+        Gtk::Frame drugFrame;
 
     public:
-        PrescriptionExpander(const mm::model::Prescription &prescription);
+        explicit PrescriptionExpander(const mm::model::Prescription &prescription);
 
         PrescriptionExpander() = delete;
 
@@ -72,11 +80,11 @@ namespace mm::view {
 
         PrescriptionExpander &operator=(PrescriptionExpander &) = delete;
 
-        /*
+/*
         bool operator<(const PrescriptionExpander &r) const {
             return mm::util::Date(this->issueDate.second.get_text()) < mm::util::Date(r.issueDate.second.get_text());
         }
-         */
+*/
         bool operator<(const PrescriptionExpander &r) const {
             return mm::util::Date(issueDateText) < mm::util::Date(r.issueDateText);
         }
