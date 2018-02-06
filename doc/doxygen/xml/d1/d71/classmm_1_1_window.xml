@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d1/d71/classmm_1_1_window" kind="class" language="C++" prot="public" abstract="yes">
+        <compoundname>mm::Window</compoundname>
+        <basecompoundref refid="d1/dd2/classmm_1_1_i_subject" prot="public" virt="non-virtual">mm::ISubject
+        </basecompoundref>
+        <basecompoundref prot="public" virt="non-virtual">trackable</basecompoundref>
+        <derivedcompoundref refid="d3/d0c/classmm_1_1_login_window" prot="public" virt="non-virtual">mm::LoginWindow
+        </derivedcompoundref>
+        <derivedcompoundref refid="d7/dfd/classmm_1_1_main_window" prot="public" virt="non-virtual">mm::MainWindow
+        </derivedcompoundref>
+        <derivedcompoundref refid="da/d81/classmm_1_1_patient_window" prot="public" virt="non-virtual">
+            mm::PatientWindow
+        </derivedcompoundref>
+        <includes refid="de/d0b/_window_8hpp" local="no">Window.hpp</includes>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+                <type>bool</type>
+                <definition>virtual bool mm::Window::initDrugComboBox</definition>
+                <argsstring>()=0</argsstring>
+                <name>initDrugComboBox</name>
+                <reimplementedby refid="d3/d0c/classmm_1_1_login_window_1a4040d7c1f85fc76e1f60ef13f92bef1c">
+                    initDrugComboBox
+                </reimplementedby>
+                <reimplementedby refid="d7/dfd/classmm_1_1_main_window_1a1094273a8ac991a50e4612efa8174fdd">
+                    initDrugComboBox
+                </reimplementedby>
+                <reimplementedby refid="da/d81/classmm_1_1_patient_window_1a0ad27245769b095559858eeecdbb7089">
+                    initDrugComboBox
+                </reimplementedby>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Window.hpp" line="25" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="d1/d71/classmm_1_1_window_1a942c9125bf42156a9f7b7f561e412fed" prot="public"
+                       static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>virtual WindowName mm::Window::getName</definition>
+                <argsstring>() const =0</argsstring>
+                <name>getName</name>
+                <reimplementedby refid="d3/d0c/classmm_1_1_login_window_1aa0597e725bfb2df984f526112080aaf7">getName
+                </reimplementedby>
+                <reimplementedby refid="d7/dfd/classmm_1_1_main_window_1a8cfdfeb6ad47afff06fa6b1b7fdc0c88">getName
+                </reimplementedby>
+                <reimplementedby refid="da/d81/classmm_1_1_patient_window_1ab951ab5bf21df2b9450496c6faca5268">getName
+                </reimplementedby>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Window.hpp" line="26" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="d1/d71/classmm_1_1_window_1a0cd7b4b0feb9505c44503547a161fcd8" prot="public"
+                       static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>virtual WindowName mm::Window::getNextWindow</definition>
+                <argsstring>() const =0</argsstring>
+                <name>getNextWindow</name>
+                <reimplementedby refid="d3/d0c/classmm_1_1_login_window_1a399eb7e1a310016ff83b7aa6a9d69722">
+                    getNextWindow
+                </reimplementedby>
+                <reimplementedby refid="d7/dfd/classmm_1_1_main_window_1aa1511ad7bed8d47cd35415d0a3a1161e">
+                    getNextWindow
+                </reimplementedby>
+                <reimplementedby refid="da/d81/classmm_1_1_patient_window_1ae22b9bce4c7ccdbcc45feb080088a558">
+                    getNextWindow
+                </reimplementedby>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Window.hpp" line="28" column="1"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="173">
+                <label>mm::MainWindow</label>
+                <link refid="d7/dfd/classmm_1_1_main_window"/>
+                <childnode refid="169" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="174">
+                <label>mm::PatientWindow</label>
+                <link refid="da/d81/classmm_1_1_patient_window"/>
+                <childnode refid="169" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="171">
+                <label>trackable</label>
+            </node>
+            <node id="170">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="172">
+                <label>mm::LoginWindow</label>
+                <link refid="d3/d0c/classmm_1_1_login_window"/>
+                <childnode refid="169" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="169">
+                <label>mm::Window</label>
+                <link refid="d1/d71/classmm_1_1_window"/>
+                <childnode refid="170" relation="public-inheritance">
+                </childnode>
+                <childnode refid="171" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="177">
+                <label>trackable</label>
+            </node>
+            <node id="176">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="175">
+                <label>mm::Window</label>
+                <link refid="d1/d71/classmm_1_1_window"/>
+                <childnode refid="176" relation="public-inheritance">
+                </childnode>
+                <childnode refid="177" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/Window.hpp" line="23" column="1" bodyfile="code/gui/Window.hpp" bodystart="23"
+                  bodyend="31"/>
+        <listofallmembers>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Window</scope>
+                <name>attach</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Window</scope>
+                <name>detach</name>
+            </member>
+            <member refid="d1/d71/classmm_1_1_window_1a942c9125bf42156a9f7b7f561e412fed" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::Window</scope>
+                <name>getName</name>
+            </member>
+            <member refid="d1/d71/classmm_1_1_window_1a0cd7b4b0feb9505c44503547a161fcd8" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::Window</scope>
+                <name>getNextWindow</name>
+            </member>
+            <member refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::Window</scope>
+                <name>initDrugComboBox</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Window</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" prot="public"
+                    virt="virtual">
+                <scope>mm::Window</scope>
+                <name>~ISubject</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

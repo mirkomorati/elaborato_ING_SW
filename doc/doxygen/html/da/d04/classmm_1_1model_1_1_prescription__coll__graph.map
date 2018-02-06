@@ -1,0 +1,4 @@
+<map id="mm::model::Prescription" name="mm::model::Prescription">
+<area shape="rect" id="node2" href="$dc/df3/classmm_1_1_i_serializable.html" title="Funziona come un interfaccia, qualunque classe che erediti da questa potrà essere letta o scritta nel..." alt="" coords="11,161,151,275"/>
+<area shape="rect" id="node3" href="$d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model.html" title="{mm::model::Prescription\l::TreeModel\n|+ patient_id\l+ issue_date\l+ expire_date\l+ drug_ids\l+ prescription_id\l+ negative_interactions\l+ used\l+ bill_id\l|+ TreeModel()\l}" alt="" coords="176,128,341,308"/>
+</map>

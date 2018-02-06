@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d0/d04/namespacemm" kind="namespace" language="C++">
+        <compoundname>mm</compoundname>
+        <innerclass refid="d7/d05/classmm_1_1_about_dialog" prot="public">mm::AboutDialog</innerclass>
+        <innerclass refid="d7/d32/classmm_1_1_add_patient_dialog" prot="public">mm::AddPatientDialog</innerclass>
+        <innerclass refid="db/d16/classmm_1_1_add_prescription_dialog" prot="public">mm::AddPrescriptionDialog
+        </innerclass>
+        <innerclass refid="dc/d00/classmm_1_1_configuration" prot="public">mm::Configuration</innerclass>
+        <innerclass refid="d0/d52/structmm_1_1_date_controller" prot="public">mm::DateController</innerclass>
+        <innerclass refid="da/d0d/classmm_1_1_d_b_master" prot="public">mm::DBMaster</innerclass>
+        <innerclass refid="df/d35/classmm_1_1_dialog" prot="public">mm::Dialog</innerclass>
+        <innerclass refid="d0/d9e/structmm_1_1_entry_controller" prot="public">mm::EntryController</innerclass>
+        <innerclass refid="d7/d9e/classmm_1_1_i_observer" prot="public">mm::IObserver</innerclass>
+        <innerclass refid="dc/df3/classmm_1_1_i_serializable" prot="public">mm::ISerializable</innerclass>
+        <innerclass refid="d1/dd2/classmm_1_1_i_subject" prot="public">mm::ISubject</innerclass>
+        <innerclass refid="d3/d00/classmm_1_1key__not__found__error" prot="public">mm::key_not_found_error</innerclass>
+        <innerclass refid="d3/d0c/classmm_1_1_login_window" prot="public">mm::LoginWindow</innerclass>
+        <innerclass refid="d7/dfd/classmm_1_1_main_window" prot="public">mm::MainWindow</innerclass>
+        <innerclass refid="df/d1a/classmm_1_1_med_h" prot="public">mm::MedH</innerclass>
+        <innerclass refid="da/df7/classmm_1_1observer__not__found__error" prot="public">mm::observer_not_found_error
+        </innerclass>
+        <innerclass refid="da/d81/classmm_1_1_patient_window" prot="public">mm::PatientWindow</innerclass>
+        <innerclass refid="dc/d8a/classmm_1_1record__not__found__error" prot="public">mm::record_not_found_error
+        </innerclass>
+        <innerclass refid="dd/d47/classmm_1_1_ref_builder" prot="public">mm::RefBuilder</innerclass>
+        <innerclass refid="d3/d4d/structmm_1_1_serialized" prot="public">mm::Serialized</innerclass>
+        <innerclass refid="de/dac/unionmm_1_1_serialized_union" prot="public">mm::SerializedUnion</innerclass>
+        <innerclass refid="d1/d71/classmm_1_1_window" prot="public">mm::Window</innerclass>
+        <innernamespace refid="dd/d7f/namespacemm_1_1model">mm::model</innernamespace>
+        <innernamespace refid="d1/d50/namespacemm_1_1util">mm::util</innernamespace>
+        <innernamespace refid="d7/d7c/namespacemm_1_1view">mm::view</innernamespace>
+        <sectiondef kind="enum">
+            <memberdef kind="enum" id="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" prot="public" static="no">
+                <name>WindowName</name>
+                <enumvalue id="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca625866ddfe14a6b663c4b95ee85c96f3"
+                           prot="public">
+                    <name>LOGIN</name>
+                    <initializer>= 0</initializer>
+                    <briefdescription>
+                    </briefdescription>
+                    <detaileddescription>
+                    </detaileddescription>
+                </enumvalue>
+                <enumvalue id="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93cafd935ea5cffd64386f1549c51642164e"
+                           prot="public">
+                    <name>MAIN</name>
+                    <briefdescription>
+                    </briefdescription>
+                    <detaileddescription>
+                    </detaileddescription>
+                </enumvalue>
+                <enumvalue id="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93cadde39aa33fd198a60d8046fbdf5e631f"
+                           prot="public">
+                    <name>PATIENT</name>
+                    <briefdescription>
+                    </briefdescription>
+                    <detaileddescription>
+                    </detaileddescription>
+                </enumvalue>
+                <enumvalue id="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca59fb5a42d012d17664b7e9e30b54928b"
+                           prot="public">
+                    <name>PRESCRIPTION</name>
+                    <briefdescription>
+                    </briefdescription>
+                    <detaileddescription>
+                    </detaileddescription>
+                </enumvalue>
+                <enumvalue id="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca72cf6d0691540154498bec70aa8556f6"
+                           prot="public">
+                    <name>DRUG</name>
+                    <briefdescription>
+                    </briefdescription>
+                    <detaileddescription>
+                    </detaileddescription>
+                </enumvalue>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Classe astratta utilizzata come base per tutti gli altri controllori delle finestre.</para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Window.hpp" line="15" column="1" bodyfile="code/gui/Window.hpp" bodystart="15"
+                          bodyend="21"/>
+            </memberdef>
+            <memberdef kind="enum" id="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601c" prot="public" static="no">
+                <name>StoredTypes</name>
+                <enumvalue id="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a"
+                           prot="public">
+                    <name>INTEGER</name>
+                    <briefdescription>
+                    </briefdescription>
+                    <detaileddescription>
+                    </detaileddescription>
+                </enumvalue>
+                <enumvalue id="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331"
+                           prot="public">
+                    <name>REAL</name>
+                    <briefdescription>
+                    </briefdescription>
+                    <detaileddescription>
+                    </detaileddescription>
+                </enumvalue>
+                <enumvalue id="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5"
+                           prot="public">
+                    <name>TEXT</name>
+                    <briefdescription>
+                    </briefdescription>
+                    <detaileddescription>
+                    </detaileddescription>
+                </enumvalue>
+                <briefdescription>
+                    <para>Enumerazione dei tipi che utilizati di SQLite3.</para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>È un enumerazione che contiene i tipi di dato che vengono utilizzati nel database. La
+                        mappatura è la seguente:
+                        <orderedlist>
+                            <listitem>
+                                <para>INTEGER<ndash/>&gt; int;
+                                </para>
+                            </listitem>
+                            <listitem>
+                                <para>REAL<ndash/>&gt; double;
+                                </para>
+                            </listitem>
+                            <listitem>
+                                <para>TEXT<ndash/>&gt; char * (c string);
+                                </para>
+                            </listitem>
+                        </orderedlist>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="24" column="1"
+                          bodyfile="code/interfaces/ISerializable.hpp" bodystart="24" bodyend="28"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="func">
+            <memberdef kind="function" id="d0/d04/namespacemm_1a7ab9a5d20c82db4778995f35e6aa6abb" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>std::ostream &amp;</type>
+                <definition>std::ostream &amp; mm::operator&lt;&lt;</definition>
+                <argsstring>(std::ostream &amp;os, const Serialized &amp;data)</argsstring>
+                <name>operator&lt;&lt;</name>
+                <param>
+                    <type>std::ostream &amp;</type>
+                    <declname>os</declname>
+                </param>
+                <param>
+                    <type>const <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref> &amp;
+                    </type>
+                    <declname>data</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="90" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="18" bodyend="28"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+            <para>Project Elaborato_ING_SW
+                <simplesect kind="author">
+                    <para>Noè Murr, Mirko Morati</para>
+                </simplesect>
+            </para>
+        </detaileddescription>
+        <location file="code/Configuration.hpp" line="14" column="1"/>
+    </compounddef>
+</doxygen>

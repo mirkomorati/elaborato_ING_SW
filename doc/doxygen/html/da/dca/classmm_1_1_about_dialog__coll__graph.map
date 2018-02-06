@@ -1,0 +1,4 @@
+<map id="mm::AboutDialog" name="mm::AboutDialog">
+<area shape="rect" id="node2" href="$df/d35/classmm_1_1_dialog.html" title="{mm::Dialog\n||+ show()\l+ dispose()\l+ isActive()\l+ reset()\l}" alt="" coords="65,167,154,280"/>
+<area shape="rect" id="node3" href="$d1/dd2/classmm_1_1_i_subject.html" title="{mm::ISubject\n||+ attach()\l+ detach()\l+ notify()\l+ ~ISubject()\l}" alt="" coords="5,5,104,119"/>
+</map>

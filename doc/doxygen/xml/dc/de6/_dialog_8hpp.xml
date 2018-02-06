@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="dc/de6/_dialog_8hpp" kind="file" language="C++">
+        <compoundname>Dialog.hpp</compoundname>
+        <includes local="no">sigc++/trackable.h</includes>
+        <includes refid="d1/d25/_i_subject_8hpp" local="yes">../interfaces/ISubject.hpp</includes>
+        <includedby refid="d7/ded/_about_dialog_8hpp" local="yes">code/gui/AboutDialog.hpp</includedby>
+        <includedby refid="d2/dac/_add_patient_dialog_8hpp" local="yes">code/gui/AddPatientDialog.hpp</includedby>
+        <includedby refid="d0/d1e/_add_prescription_dialog_8hpp" local="yes">code/gui/AddPrescriptionDialog.hpp
+        </includedby>
+        <includedby refid="db/d41/_main_window_8hpp" local="yes">code/gui/MainWindow.hpp</includedby>
+        <includedby refid="dd/de0/_patient_window_8hpp" local="yes">code/gui/PatientWindow.hpp</includedby>
+        <incdepgraph>
+            <node id="169">
+                <label>IObserver.hpp</label>
+                <link refid="d5/d40/_i_observer_8hpp"/>
+                <childnode refid="170" relation="include">
+                </childnode>
+                <childnode refid="171" relation="include">
+                </childnode>
+            </node>
+            <node id="166">
+                <label>sigc++/trackable.h</label>
+            </node>
+            <node id="170">
+                <label>mutex</label>
+            </node>
+            <node id="165">
+                <label>code/gui/Dialog.hpp</label>
+                <link refid="dc/de6/_dialog_8hpp"/>
+                <childnode refid="166" relation="include">
+                </childnode>
+                <childnode refid="167" relation="include">
+                </childnode>
+            </node>
+            <node id="171">
+                <label>thread</label>
+            </node>
+            <node id="167">
+                <label>../interfaces/ISubject.hpp</label>
+                <link refid="d1/d25/_i_subject_8hpp"/>
+                <childnode refid="168" relation="include">
+                </childnode>
+                <childnode refid="169" relation="include">
+                </childnode>
+            </node>
+            <node id="168">
+                <label>set</label>
+            </node>
+        </incdepgraph>
+        <invincdepgraph>
+            <node id="183">
+                <label>code/gui/PatientWindow.hpp</label>
+                <link refid="dd/de0/_patient_window_8hpp"/>
+                <childnode refid="175" relation="include">
+                </childnode>
+                <childnode refid="176" relation="include">
+                </childnode>
+            </node>
+            <node id="182">
+                <label>code/MedH.cpp</label>
+                <link refid="d7/daf/_med_h_8cpp"/>
+            </node>
+            <node id="174">
+                <label>code/gui/AboutDialog.cpp</label>
+                <link refid="d1/d21/_about_dialog_8cpp"/>
+            </node>
+            <node id="177">
+                <label>code/gui/AddPatientDialog.hpp</label>
+                <link refid="d2/dac/_add_patient_dialog_8hpp"/>
+                <childnode refid="178" relation="include">
+                </childnode>
+                <childnode refid="176" relation="include">
+                </childnode>
+            </node>
+            <node id="179">
+                <label>code/gui/AddPrescriptionDialog.hpp</label>
+                <link refid="d0/d1e/_add_prescription_dialog_8hpp"/>
+                <childnode refid="180" relation="include">
+                </childnode>
+                <childnode refid="176" relation="include">
+                </childnode>
+            </node>
+            <node id="173">
+                <label>code/gui/AboutDialog.hpp</label>
+                <link refid="d7/ded/_about_dialog_8hpp"/>
+                <childnode refid="174" relation="include">
+                </childnode>
+                <childnode refid="175" relation="include">
+                </childnode>
+                <childnode refid="176" relation="include">
+                </childnode>
+            </node>
+            <node id="178">
+                <label>code/gui/AddPatientDialog.cpp</label>
+                <link refid="db/db5/_add_patient_dialog_8cpp"/>
+            </node>
+            <node id="180">
+                <label>code/gui/AddPrescriptionDialog.cpp</label>
+                <link refid="df/de8/_add_prescription_dialog_8cpp"/>
+            </node>
+            <node id="181">
+                <label>code/gui/MainWindow.hpp</label>
+                <link refid="db/d41/_main_window_8hpp"/>
+                <childnode refid="175" relation="include">
+                </childnode>
+                <childnode refid="182" relation="include">
+                </childnode>
+            </node>
+            <node id="176">
+                <label>code/gui/PatientWindow.cpp</label>
+                <link refid="d8/d35/_patient_window_8cpp"/>
+            </node>
+            <node id="172">
+                <label>code/gui/Dialog.hpp</label>
+                <link refid="dc/de6/_dialog_8hpp"/>
+                <childnode refid="173" relation="include">
+                </childnode>
+                <childnode refid="177" relation="include">
+                </childnode>
+                <childnode refid="179" relation="include">
+                </childnode>
+                <childnode refid="181" relation="include">
+                </childnode>
+                <childnode refid="183" relation="include">
+                </childnode>
+            </node>
+            <node id="175">
+                <label>code/gui/MainWindow.cpp</label>
+                <link refid="d5/da5/_main_window_8cpp"/>
+            </node>
+        </invincdepgraph>
+        <innerclass refid="df/d35/classmm_1_1_dialog" prot="public">mm::Dialog</innerclass>
+        <innernamespace refid="d0/d04/namespacemm">mm</innernamespace>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Noè<sp/>Murr<sp/>on<sp/>30/11/2017.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#ifndef<sp/>ELABORATO_ING_SW_DIALOG_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#define<sp/>ELABORATO_ING_SW_DIALOG_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;sigc++/trackable.h&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../interfaces/ISubject.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm" kindref="compound">mm</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="12" refid="df/d35/classmm_1_1_dialog" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">class
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="df/d35/classmm_1_1_dialog" kindref="compound">Dialog</ref>
+                    <sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d1/dd2/classmm_1_1_i_subject" kindref="compound">ISubject</ref>,
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal"><sp/>sigc::trackable<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">virtual</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d35/classmm_1_1_dialog_1afda4b0dc7c0ac027c4b8fdb95713700f" kindref="member">
+                        show</ref>()<sp/>=<sp/>0;
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>it<sp/>shows<sp/>the<sp/>dialog
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">virtual</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d35/classmm_1_1_dialog_1a3f2e361836af48ee3808f4dd6e4f8e48" kindref="member">
+                        dispose</ref>()<sp/>=<sp/>0;
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>close<sp/>the<sp/>dialog
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">virtual</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d35/classmm_1_1_dialog_1a22abaf4e90b6fdca5c20039f6b9e15ac" kindref="member">
+                        isActive</ref>()<sp/>=<sp/>0;
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>it<sp/>return<sp/>false<sp/>if<sp/>the<sp/>dialog<sp/>may<sp/>be
+                    <sp/>
+                    destructed
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">virtual</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d35/classmm_1_1_dialog_1abe6e5ac072c12c06971f60491f079d80" kindref="member">
+                        reset</ref>()<sp/>=<sp/>0;
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>reset<sp/>dialog<sp/>content
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_DIALOG_HPP
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/gui/Dialog.hpp"/>
+    </compounddef>
+</doxygen>

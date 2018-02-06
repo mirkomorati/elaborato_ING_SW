@@ -1,0 +1,555 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="da/d0d/classmm_1_1_d_b_master" kind="class" language="C++" prot="public">
+        <compoundname>mm::DBMaster</compoundname>
+        <includes refid="d7/d0f/_d_b_master_8hpp" local="no">DBMaster.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="da/d0d/classmm_1_1_d_b_master_1a80f3c2198870e9c0586601bd482232b9"
+                       prot="private" static="no" mutable="no">
+                <type>sqlite3 *</type>
+                <definition>sqlite3* mm::DBMaster::db</definition>
+                <argsstring></argsstring>
+                <name>db</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="27" column="1" bodyfile="code/DBMaster.hpp" bodystart="27"
+                          bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-static-attrib">
+            <memberdef kind="variable" id="da/d0d/classmm_1_1_d_b_master_1aa7370086a6e5a10fefd028b08f07947d"
+                       prot="private" static="yes" mutable="no">
+                <type>string</type>
+                <definition>std::string mm::DBMaster::db_file_name</definition>
+                <argsstring></argsstring>
+                <name>db_file_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="28" column="1" bodyfile="code/DBMaster.hpp" bodystart="28"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="da/d0d/classmm_1_1_d_b_master_1a10c45be15107e144768a62dd38407f40"
+                       prot="private" static="yes" mutable="no">
+                <type>
+                    <ref refid="da/d0d/classmm_1_1_d_b_master" kindref="compound">DBMaster</ref>
+                    *
+                </type>
+                <definition>mm::DBMaster * mm::DBMaster::instance</definition>
+                <argsstring></argsstring>
+                <name>instance</name>
+                <initializer>= nullptr</initializer>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="29" column="1" bodyfile="code/DBMaster.hpp" bodystart="29"
+                          bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a6c831c2decb7f59db00c7409fe2293a3"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::DBMaster::DBMaster</definition>
+                <argsstring>() noexcept(false)</argsstring>
+                <name>DBMaster</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="32" column="1" bodyfile="code/DBMaster.cpp" bodystart="26"
+                          bodyend="32"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a5bb82e10f43d32c2572c6f1e2cfa2f6c"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::DBMaster::~DBMaster</definition>
+                <argsstring>()</argsstring>
+                <name>~DBMaster</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="34" column="1" bodyfile="code/DBMaster.cpp" bodystart="34"
+                          bodyend="37"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a7571cbb3fe77a491d57595ec9bc86abf"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::DBMaster::DBMaster</definition>
+                <argsstring>(const DBMaster &amp;old)=delete</argsstring>
+                <name>DBMaster</name>
+                <param>
+                    <type>const <ref refid="da/d0d/classmm_1_1_d_b_master" kindref="compound">DBMaster</ref> &amp;
+                    </type>
+                    <declname>old</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="38" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1af556b0856b79cb8bff3da0565badeac0"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>const <ref refid="da/d0d/classmm_1_1_d_b_master" kindref="compound">DBMaster</ref> &amp;
+                </type>
+                <definition>const DBMaster&amp; mm::DBMaster::operator=</definition>
+                <argsstring>(const DBMaster &amp;old)=delete</argsstring>
+                <name>operator=</name>
+                <param>
+                    <type>const <ref refid="da/d0d/classmm_1_1_d_b_master" kindref="compound">DBMaster</ref> &amp;
+                    </type>
+                    <declname>old</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="40" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a187988c8741d0a2c5806919b8d672af0"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DBMaster::add_to_db</definition>
+                <argsstring>(const ISerializable &amp;obj)</argsstring>
+                <name>add_to_db</name>
+                <param>
+                    <type>const <ref refid="dc/df3/classmm_1_1_i_serializable" kindref="compound">ISerializable</ref> &amp;
+                    </type>
+                    <declname>obj</declname>
+                </param>
+                <briefdescription>
+                    <para>aggiunge un oggetto serializzabile ad database</para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Questo metodo può eseguire o un UPDATE o un INSERT a seconda che l&apos;oggetto sia già
+                        presente o meno nel db. Può lanciare eccezioni del tipo std::runtime error in caso di errore
+                    </para>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername direction="in">obj</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>un oggetto serializzabile (che estende la classe <ref
+                                            refid="dc/df3/classmm_1_1_i_serializable" kindref="compound">
+                                        ISerializable</ref>)
+                                    </para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="70" column="1" bodyfile="code/DBMaster.cpp" bodystart="45"
+                          bodyend="133"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a4d5d51bf4b3437294a52fcd3747520d3"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DBMaster::remove_from_db</definition>
+                <argsstring>(const ISerializable &amp;obj)</argsstring>
+                <name>remove_from_db</name>
+                <param>
+                    <type>const <ref refid="dc/df3/classmm_1_1_i_serializable" kindref="compound">ISerializable</ref> &amp;
+                    </type>
+                    <declname>obj</declname>
+                </param>
+                <briefdescription>
+                    <para>rimuove un oggetto serializzabile dal database</para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Può lanciare eccezioni di tipo std::runtime_error in caso di errore di comunicazione col
+                        database
+                    </para>
+                    <para>N.B. sia che l&apos;operazione vada a buon fine o meno l&apos;oggetto non viene modificato
+                    </para>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername direction="in">obj</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>un oggetto serializzabile (che estende la classe <ref
+                                            refid="dc/df3/classmm_1_1_i_serializable" kindref="compound">
+                                        ISerializable</ref>)
+                                    </para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="81" column="1" bodyfile="code/DBMaster.cpp" bodystart="287"
+                          bodyend="316"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a9e8092b67a249a273668ad042a4084e2"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DBMaster::extract_from_db</definition>
+                <argsstring>(ISerializable &amp;obj, initializer_list&lt; Serialized &gt; ids)</argsstring>
+                <name>extract_from_db</name>
+                <param>
+                    <type>
+                        <ref refid="dc/df3/classmm_1_1_i_serializable" kindref="compound">ISerializable</ref> &amp;
+                    </type>
+                    <declname>obj</declname>
+                </param>
+                <param>
+                    <type>initializer_list&lt; <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">
+                        Serialized
+                    </ref> &gt;
+                    </type>
+                    <declname>ids</declname>
+                </param>
+                <briefdescription>
+                    <para>estrae un oggetto serializzabile dal database</para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Può lanciare eccezioni di tipo std::runtime_error in caso di errore di comunicazione col
+                        database oppure può lanciare eccezioni del tipo record_no_found_error nel caso in cui l&apos;oggetto
+                        con gli id specificati non sia presente nel db
+                    </para>
+                    <para>N.B. l&apos;oggetto passato in obj viene modificato e qualsiasi dato in esso contenuto viene
+                        sovrascritto
+                    </para>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername direction="out">obj</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>un oggetto serializzabile (che estende la classe <ref
+                                            refid="dc/df3/classmm_1_1_i_serializable" kindref="compound">
+                                        ISerializable</ref>) in cui salvare i dati del db
+                                    </para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername direction="in">ids</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>lista di oggetti di tipo <ref refid="d3/d4d/structmm_1_1_serialized"
+                                                                        kindref="compound">Serialized
+                                    </ref> che servono da primary key nel database
+                                    </para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="95" column="1" bodyfile="code/DBMaster.cpp" bodystart="135"
+                          bodyend="210"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a68c25d223994752e8b4d6156a23651f2"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DBMaster::extract_from_db</definition>
+                <argsstring>(ISerializable &amp;obj, const Serialized &amp;id)</argsstring>
+                <name>extract_from_db</name>
+                <param>
+                    <type>
+                        <ref refid="dc/df3/classmm_1_1_i_serializable" kindref="compound">ISerializable</ref> &amp;
+                    </type>
+                    <declname>obj</declname>
+                </param>
+                <param>
+                    <type>const <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref> &amp;
+                    </type>
+                    <declname>id</declname>
+                </param>
+                <briefdescription>
+                    <para>shortcut per la versione che accetta un initializer_list per poterla chiamare con un solo id
+                        in modo semplice
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="101" column="1" bodyfile="code/DBMaster.cpp" bodystart="283"
+                          bodyend="285"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1aef9d7063da9d7b4e0fb0a20a6d06368f"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>vector&lt; map&lt; string, <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">
+                    Serialized
+                </ref> &gt; &gt;
+                </type>
+                <definition>vector&lt; map&lt; string, mm::Serialized &gt; &gt; mm::DBMaster::get_rows</definition>
+                <argsstring>(string table_name, string id_name=&quot;&quot;, Serialized id=&quot;&quot;)</argsstring>
+                <name>get_rows</name>
+                <param>
+                    <type>string</type>
+                    <declname>table_name</declname>
+                </param>
+                <param>
+                    <type>string</type>
+                    <declname>id_name</declname>
+                    <defval>&quot;&quot;</defval>
+                </param>
+                <param>
+                    <type>
+                        <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref>
+                    </type>
+                    <declname>id</declname>
+                    <defval>&quot;&quot;</defval>
+                </param>
+                <briefdescription>
+                    <para>estrae un insieme di righe da una tabella</para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Se non vengono passati i parametri id_name e id il metodo ritorna tutte le righe della tabella
+                        altrimenti ritorna solo le righe che hanno quell&apos;id e quell&apos;id_name
+                    </para>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername direction="in">table_name</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>Parametro obbligatorio che contiene il nome della tabella dal quale estrarre
+                                        le righe
+                                    </para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername direction="in">id_name</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>Parametro opzionale che contiene il nome della colonna presa come id</para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername direction="in">id</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>Parametro opzionale che contiene il valore che deve essere contenuto nella
+                                        colonna id_name
+                                    </para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                        <simplesect kind="return">
+                            <para>Un vettore di mappe di stringe e serialized ogni mappa rappresenta una riga dove una
+                                colonna è identificata dalla stringa ed il contenuto dall&apos;oggetto serialized
+                            </para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="117" column="1" bodyfile="code/DBMaster.cpp" bodystart="213"
+                          bodyend="281"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-static-func">
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a65586b91e19e610db40ef1d6e81cfd4a"
+                       prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>const string &amp;</type>
+                <definition>const std::string &amp; mm::DBMaster::get_db_file_name</definition>
+                <argsstring>()</argsstring>
+                <name>get_db_file_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="42" column="1" bodyfile="code/DBMaster.cpp" bodystart="13"
+                          bodyend="15"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a3346d25779e18ed7ad70eed0d89347e9"
+                       prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DBMaster::set_db_file_name</definition>
+                <argsstring>(const string &amp;db_file_name)</argsstring>
+                <name>set_db_file_name</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>db_file_name</declname>
+                </param>
+                <briefdescription>
+                    <para>imposta il path nel quale trovare il database</para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Questa funzione deve sempre essere chiamata prima di una qualsiasi chiamata a get_instance
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername direction="in">db_file_name</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="50" column="1" bodyfile="code/DBMaster.cpp" bodystart="17"
+                          bodyend="24"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a1f3b04e515b1999d3900353c0054f498"
+                       prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>
+                    <ref refid="da/d0d/classmm_1_1_d_b_master" kindref="compound">DBMaster</ref> &amp;
+                </type>
+                <definition>mm::DBMaster &amp; mm::DBMaster::get_instance</definition>
+                <argsstring>() noexcept(false)</argsstring>
+                <name>get_instance</name>
+                <briefdescription>
+                    <para>restituisce una reference (non costante) all&apos;oggetto db</para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Siccome il distruttore è privato non è possibile che quella reference venga distrutta al di
+                        fuori della classe
+                    </para>
+                    <para>
+                        <simplesect kind="return">
+                            <para>reference ad un oggetto
+                                <ref refid="da/d0d/classmm_1_1_d_b_master" kindref="compound">
+                                    DBMaster
+                                </ref>
+                            </para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="60" column="1" bodyfile="code/DBMaster.cpp" bodystart="39"
+                          bodyend="43"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+            <para>Singleton che rappresenta il database, contiene tutte le funzioni necessarie per scrivere un oggetto
+                di tipo derivato da <ref refid="dc/df3/classmm_1_1_i_serializable" kindref="compound">ISerializable
+                </ref> e per leggerlo. Nasconde le chiamate alle API C di sqlite3.
+            </para>
+        </briefdescription>
+        <detaileddescription>
+            <para>È un singleton di tipo lazy. Prima di chiamare get_instance è sempre necessario informare la classe
+                del path del database chiamando set_db_name
+            </para>
+        </detaileddescription>
+        <collaborationgraph>
+            <node id="36">
+                <label>mm::DBMaster</label>
+                <link refid="da/d0d/classmm_1_1_d_b_master"/>
+            </node>
+        </collaborationgraph>
+        <location file="code/DBMaster.hpp" line="25" column="1" bodyfile="code/DBMaster.hpp" bodystart="25"
+                  bodyend="119"/>
+        <listofallmembers>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a187988c8741d0a2c5806919b8d672af0" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>add_to_db</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a80f3c2198870e9c0586601bd482232b9" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>db</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1aa7370086a6e5a10fefd028b08f07947d" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>db_file_name</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a6c831c2decb7f59db00c7409fe2293a3" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>DBMaster</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a7571cbb3fe77a491d57595ec9bc86abf" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>DBMaster</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a9e8092b67a249a273668ad042a4084e2" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>extract_from_db</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a68c25d223994752e8b4d6156a23651f2" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>extract_from_db</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a65586b91e19e610db40ef1d6e81cfd4a" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>get_db_file_name</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a1f3b04e515b1999d3900353c0054f498" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>get_instance</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1aef9d7063da9d7b4e0fb0a20a6d06368f" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>get_rows</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a10c45be15107e144768a62dd38407f40" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>instance</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1af556b0856b79cb8bff3da0565badeac0" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>operator=</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a4d5d51bf4b3437294a52fcd3747520d3" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>remove_from_db</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a3346d25779e18ed7ad70eed0d89347e9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>set_db_file_name</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a5bb82e10f43d32c2572c6f1e2cfa2f6c" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>~DBMaster</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

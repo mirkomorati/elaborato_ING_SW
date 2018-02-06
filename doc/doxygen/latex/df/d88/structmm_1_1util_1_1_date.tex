@@ -1,0 +1,248 @@
+\hypertarget{structmm_1_1util_1_1_date}{}\section{Riferimenti per la struct mm\+:\+:util\+:\+:Date}
+\label{structmm_1_1util_1_1_date}\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+
+
+{\ttfamily \#include $<$Date.\+hpp$>$}
+
+
+
+Diagramma di collaborazione per mm\+:\+:util\+:\+:Date\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{d4/d70/structmm_1_1util_1_1_date__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structmm_1_1util_1_1_date_afe2513fbf246f7f3e61e7d1a06d0e6d0}{Date} (int \hyperlink{structmm_1_1util_1_1_date_a6a697c80be4f09cdb4ee400721314d87}{day}, int \hyperlink{structmm_1_1util_1_1_date_a018f3e7261b88c9a47aae5b08120b331}{month}, int \hyperlink{structmm_1_1util_1_1_date_a318909ff98468f29c7912fa9cffea079}{year})
+\item 
+\hyperlink{structmm_1_1util_1_1_date_a9aaf2c2d5171e081541831c4a756232e}{Date} ()
+\item 
+\hyperlink{structmm_1_1util_1_1_date_a9065cbdea26e95cfbb6537a5ba06f45d}{Date} (const std\+::string \&str)
+\item 
+void \hyperlink{structmm_1_1util_1_1_date_a9140b9c53f02f7385af15684c81c5ed0}{set\+\_\+from\+\_\+str} (std\+::string str)
+\item 
+const std\+::string \hyperlink{structmm_1_1util_1_1_date_aa32e7e2771581a860a49a59cdbcec8f8}{get\+\_\+as\+\_\+text} ()
+\item 
+bool \hyperlink{structmm_1_1util_1_1_date_ae4b2c74f7e6ebfed3daaafc999af31ba}{is\+\_\+valid} ()
+\item 
+bool \hyperlink{structmm_1_1util_1_1_date_a55071cbbf31cd8956cd4a7d5116e0d95}{operator==} (const \hyperlink{structmm_1_1util_1_1_date}{Date} \&rhs) const
+\item 
+bool \hyperlink{structmm_1_1util_1_1_date_a9f2556bcc1150f5542d59b2f9078ee1b}{operator!=} (const \hyperlink{structmm_1_1util_1_1_date}{Date} \&rhs) const
+\item 
+bool \hyperlink{structmm_1_1util_1_1_date_acb395628bc3074f0f5f782e39f7ecbbf}{operator$<$} (const \hyperlink{structmm_1_1util_1_1_date}{Date} \&rhs) const
+\item 
+bool \hyperlink{structmm_1_1util_1_1_date_a5b070fd2cd4a72cf74849abd9244b6d3}{operator$>$} (const \hyperlink{structmm_1_1util_1_1_date}{Date} \&rhs) const
+\item 
+bool \hyperlink{structmm_1_1util_1_1_date_aec9077b20de935d88cc03e4c454915a3}{operator$<$=} (const \hyperlink{structmm_1_1util_1_1_date}{Date} \&rhs) const
+\item 
+bool \hyperlink{structmm_1_1util_1_1_date_ab0dc9872f7646c748d492afcff696a0d}{operator$>$=} (const \hyperlink{structmm_1_1util_1_1_date}{Date} \&rhs) const
+\item 
+void \hyperlink{structmm_1_1util_1_1_date_a9aecce8821f2448c0d2d36a5fbf455b1}{operator+=} (int days)
+\item 
+\hyperlink{structmm_1_1util_1_1_date}{Date} \hyperlink{structmm_1_1util_1_1_date_a36a932c021e6e5e9ebed44752b78fd7c}{operator+} (int days)
+\item 
+void \hyperlink{structmm_1_1util_1_1_date_ae875de5d40ab9dfa1f1e22cb8a847b60}{add\+\_\+months} (unsigned int months)
+\item 
+void \hyperlink{structmm_1_1util_1_1_date_a5ca08a73148a58f47847a30040eee70b}{add\+\_\+years} (unsigned int years)
+\end{DoxyCompactItemize}
+\subsection*{Membri pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{structmm_1_1util_1_1_date_ad5ed2bc80bbaa949aa13707a73064345}{get\+\_\+current\+\_\+day} ()
+\item 
+static int \hyperlink{structmm_1_1util_1_1_date_ab3da347f3603aa3a7fe057a5a0d012d2}{get\+\_\+current\+\_\+month} ()
+\item 
+static int \hyperlink{structmm_1_1util_1_1_date_afec17843da4296a2341290107901eaa5}{get\+\_\+current\+\_\+year} ()
+\item 
+static \hyperlink{structmm_1_1util_1_1_date}{Date} \hyperlink{structmm_1_1util_1_1_date_af0758fad7ef32fd535db3295136466eb}{get\+\_\+current\+\_\+date} ()
+\item 
+static bool \hyperlink{structmm_1_1util_1_1_date_a89c7d3f4d8af79878a28815ffbe2e536}{is\+\_\+leap\+\_\+year} (int \hyperlink{structmm_1_1util_1_1_date_a318909ff98468f29c7912fa9cffea079}{year})
+\end{DoxyCompactItemize}
+\subsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structmm_1_1util_1_1_date_a6a697c80be4f09cdb4ee400721314d87}{day}
+\item 
+int \hyperlink{structmm_1_1util_1_1_date_a018f3e7261b88c9a47aae5b08120b331}{month}
+\item 
+int \hyperlink{structmm_1_1util_1_1_date_a318909ff98468f29c7912fa9cffea079}{year}
+\end{DoxyCompactItemize}
+\subsection*{Friend}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{structmm_1_1util_1_1_date_a1862604492a841a6b98e1a3061d95b96}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{structmm_1_1util_1_1_date}{Date} \&date)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione dei costruttori e dei distruttori}
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_afe2513fbf246f7f3e61e7d1a06d0e6d0}\label{structmm_1_1util_1_1_date_afe2513fbf246f7f3e61e7d1a06d0e6d0}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!Date@{Date}}
+\index{Date@{Date}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily mm\+::util\+::\+Date\+::\+Date (\begin{DoxyParamCaption}\item[{int}]{day,  }\item[{int}]{month,  }\item[{int}]{year }\end{DoxyParamCaption})}
+
+Project Elaborato\+\_\+\+I\+N\+G\+\_\+\+SW \begin{DoxyAuthor}{Autore}
+Noè Murr, Mirko Morati \hyperlink{structmm_1_1util_1_1_date}{Date} implementation 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a9aaf2c2d5171e081541831c4a756232e}\label{structmm_1_1util_1_1_date_a9aaf2c2d5171e081541831c4a756232e}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!Date@{Date}}
+\index{Date@{Date}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily mm\+::util\+::\+Date\+::\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a9065cbdea26e95cfbb6537a5ba06f45d}\label{structmm_1_1util_1_1_date_a9065cbdea26e95cfbb6537a5ba06f45d}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!Date@{Date}}
+\index{Date@{Date}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily mm\+::util\+::\+Date\+::\+Date (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+\subsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_ae875de5d40ab9dfa1f1e22cb8a847b60}\label{structmm_1_1util_1_1_date_ae875de5d40ab9dfa1f1e22cb8a847b60}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!add\+\_\+months@{add\+\_\+months}}
+\index{add\+\_\+months@{add\+\_\+months}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{add\+\_\+months()}{add\_months()}}
+{\footnotesize\ttfamily void mm\+::util\+::\+Date\+::add\+\_\+months (\begin{DoxyParamCaption}\item[{unsigned int}]{months }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a5ca08a73148a58f47847a30040eee70b}\label{structmm_1_1util_1_1_date_a5ca08a73148a58f47847a30040eee70b}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!add\+\_\+years@{add\+\_\+years}}
+\index{add\+\_\+years@{add\+\_\+years}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{add\+\_\+years()}{add\_years()}}
+{\footnotesize\ttfamily void mm\+::util\+::\+Date\+::add\+\_\+years (\begin{DoxyParamCaption}\item[{unsigned int}]{years }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_aa32e7e2771581a860a49a59cdbcec8f8}\label{structmm_1_1util_1_1_date_aa32e7e2771581a860a49a59cdbcec8f8}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!get\+\_\+as\+\_\+text@{get\+\_\+as\+\_\+text}}
+\index{get\+\_\+as\+\_\+text@{get\+\_\+as\+\_\+text}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{get\+\_\+as\+\_\+text()}{get\_as\_text()}}
+{\footnotesize\ttfamily const std\+::string mm\+::util\+::\+Date\+::get\+\_\+as\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_af0758fad7ef32fd535db3295136466eb}\label{structmm_1_1util_1_1_date_af0758fad7ef32fd535db3295136466eb}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!get\+\_\+current\+\_\+date@{get\+\_\+current\+\_\+date}}
+\index{get\+\_\+current\+\_\+date@{get\+\_\+current\+\_\+date}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{get\+\_\+current\+\_\+date()}{get\_current\_date()}}
+{\footnotesize\ttfamily \hyperlink{structmm_1_1util_1_1_date}{mm\+::util\+::\+Date} mm\+::util\+::\+Date\+::get\+\_\+current\+\_\+date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_ad5ed2bc80bbaa949aa13707a73064345}\label{structmm_1_1util_1_1_date_ad5ed2bc80bbaa949aa13707a73064345}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!get\+\_\+current\+\_\+day@{get\+\_\+current\+\_\+day}}
+\index{get\+\_\+current\+\_\+day@{get\+\_\+current\+\_\+day}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{get\+\_\+current\+\_\+day()}{get\_current\_day()}}
+{\footnotesize\ttfamily int mm\+::util\+::\+Date\+::get\+\_\+current\+\_\+day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_ab3da347f3603aa3a7fe057a5a0d012d2}\label{structmm_1_1util_1_1_date_ab3da347f3603aa3a7fe057a5a0d012d2}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!get\+\_\+current\+\_\+month@{get\+\_\+current\+\_\+month}}
+\index{get\+\_\+current\+\_\+month@{get\+\_\+current\+\_\+month}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{get\+\_\+current\+\_\+month()}{get\_current\_month()}}
+{\footnotesize\ttfamily int mm\+::util\+::\+Date\+::get\+\_\+current\+\_\+month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_afec17843da4296a2341290107901eaa5}\label{structmm_1_1util_1_1_date_afec17843da4296a2341290107901eaa5}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!get\+\_\+current\+\_\+year@{get\+\_\+current\+\_\+year}}
+\index{get\+\_\+current\+\_\+year@{get\+\_\+current\+\_\+year}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{get\+\_\+current\+\_\+year()}{get\_current\_year()}}
+{\footnotesize\ttfamily int mm\+::util\+::\+Date\+::get\+\_\+current\+\_\+year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a89c7d3f4d8af79878a28815ffbe2e536}\label{structmm_1_1util_1_1_date_a89c7d3f4d8af79878a28815ffbe2e536}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!is\+\_\+leap\+\_\+year@{is\+\_\+leap\+\_\+year}}
+\index{is\+\_\+leap\+\_\+year@{is\+\_\+leap\+\_\+year}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{is\+\_\+leap\+\_\+year()}{is\_leap\_year()}}
+{\footnotesize\ttfamily static bool mm\+::util\+::\+Date\+::is\+\_\+leap\+\_\+year (\begin{DoxyParamCaption}\item[{int}]{year }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_ae4b2c74f7e6ebfed3daaafc999af31ba}\label{structmm_1_1util_1_1_date_ae4b2c74f7e6ebfed3daaafc999af31ba}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!is\+\_\+valid@{is\+\_\+valid}}
+\index{is\+\_\+valid@{is\+\_\+valid}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{is\+\_\+valid()}{is\_valid()}}
+{\footnotesize\ttfamily bool mm\+::util\+::\+Date\+::is\+\_\+valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a9f2556bcc1150f5542d59b2f9078ee1b}\label{structmm_1_1util_1_1_date_a9f2556bcc1150f5542d59b2f9078ee1b}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool mm\+::util\+::\+Date\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{structmm_1_1util_1_1_date}{Date} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a36a932c021e6e5e9ebed44752b78fd7c}\label{structmm_1_1util_1_1_date_a36a932c021e6e5e9ebed44752b78fd7c}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!operator+@{operator+}}
+\index{operator+@{operator+}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \hyperlink{structmm_1_1util_1_1_date}{mm\+::util\+::\+Date} mm\+::util\+::\+Date\+::operator+ (\begin{DoxyParamCaption}\item[{int}]{days }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a9aecce8821f2448c0d2d36a5fbf455b1}\label{structmm_1_1util_1_1_date_a9aecce8821f2448c0d2d36a5fbf455b1}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily void mm\+::util\+::\+Date\+::operator+= (\begin{DoxyParamCaption}\item[{int}]{days }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_acb395628bc3074f0f5f782e39f7ecbbf}\label{structmm_1_1util_1_1_date_acb395628bc3074f0f5f782e39f7ecbbf}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool mm\+::util\+::\+Date\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{structmm_1_1util_1_1_date}{Date} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_aec9077b20de935d88cc03e4c454915a3}\label{structmm_1_1util_1_1_date_aec9077b20de935d88cc03e4c454915a3}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool mm\+::util\+::\+Date\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \hyperlink{structmm_1_1util_1_1_date}{Date} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a55071cbbf31cd8956cd4a7d5116e0d95}\label{structmm_1_1util_1_1_date_a55071cbbf31cd8956cd4a7d5116e0d95}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!operator==@{operator==}}
+\index{operator==@{operator==}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool mm\+::util\+::\+Date\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{structmm_1_1util_1_1_date}{Date} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a5b070fd2cd4a72cf74849abd9244b6d3}\label{structmm_1_1util_1_1_date_a5b070fd2cd4a72cf74849abd9244b6d3}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool mm\+::util\+::\+Date\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{structmm_1_1util_1_1_date}{Date} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_ab0dc9872f7646c748d492afcff696a0d}\label{structmm_1_1util_1_1_date_ab0dc9872f7646c748d492afcff696a0d}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool mm\+::util\+::\+Date\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \hyperlink{structmm_1_1util_1_1_date}{Date} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a9140b9c53f02f7385af15684c81c5ed0}\label{structmm_1_1util_1_1_date_a9140b9c53f02f7385af15684c81c5ed0}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!set\+\_\+from\+\_\+str@{set\+\_\+from\+\_\+str}}
+\index{set\+\_\+from\+\_\+str@{set\+\_\+from\+\_\+str}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{set\+\_\+from\+\_\+str()}{set\_from\_str()}}
+{\footnotesize\ttfamily void mm\+::util\+::\+Date\+::set\+\_\+from\+\_\+str (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})}
+
+
+
+\subsection{Documentazione dei friend e delle funzioni collegate}
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a1862604492a841a6b98e1a3061d95b96}\label{structmm_1_1util_1_1_date_a1862604492a841a6b98e1a3061d95b96}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{structmm_1_1util_1_1_date}{Date} \&}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a6a697c80be4f09cdb4ee400721314d87}\label{structmm_1_1util_1_1_date_a6a697c80be4f09cdb4ee400721314d87}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!day@{day}}
+\index{day@{day}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{day}{day}}
+{\footnotesize\ttfamily int mm\+::util\+::\+Date\+::day}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a018f3e7261b88c9a47aae5b08120b331}\label{structmm_1_1util_1_1_date_a018f3e7261b88c9a47aae5b08120b331}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!month@{month}}
+\index{month@{month}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{month}{month}}
+{\footnotesize\ttfamily int mm\+::util\+::\+Date\+::month}
+
+\mbox{\Hypertarget{structmm_1_1util_1_1_date_a318909ff98468f29c7912fa9cffea079}\label{structmm_1_1util_1_1_date_a318909ff98468f29c7912fa9cffea079}} 
+\index{mm\+::util\+::\+Date@{mm\+::util\+::\+Date}!year@{year}}
+\index{year@{year}!mm\+::util\+::\+Date@{mm\+::util\+::\+Date}}
+\subsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily int mm\+::util\+::\+Date\+::year}
+
+
+
+La documentazione per questa struct è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
+\item 
+code/utils/\hyperlink{_date_8hpp}{Date.\+hpp}\item 
+code/utils/\hyperlink{_date_8cpp}{Date.\+cpp}\end{DoxyCompactItemize}

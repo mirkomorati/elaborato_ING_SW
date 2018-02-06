@@ -1,0 +1,33 @@
+\hypertarget{_d_b_master_8hpp}{}\section{Riferimenti per il file code/\+D\+B\+Master.hpp}
+\label{_d_b_master_8hpp}\index{code/\+D\+B\+Master.\+hpp@{code/\+D\+B\+Master.\+hpp}}
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}interfaces/\+I\+Serializable.\+hpp\char`\"{}}\newline
+Grafo delle dipendenze di inclusione per D\+B\+Master.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dde/_d_b_master_8hpp__incl}
+\end{center}
+\end{figure}
+Questo grafo mostra quali altri file includono direttamente o indirettamente questo file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/de6/_d_b_master_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Composti}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmm_1_1_d_b_master}{mm\+::\+D\+B\+Master}
+\begin{DoxyCompactList}\small\item\em Singleton che rappresenta il database, contiene tutte le funzioni necessarie per scrivere un oggetto di tipo derivato da \hyperlink{classmm_1_1_i_serializable}{I\+Serializable} e per leggerlo. Nasconde le chiamate alle A\+PI C di sqlite3. \end{DoxyCompactList}\item 
+class \hyperlink{classmm_1_1record__not__found__error}{mm\+::record\+\_\+not\+\_\+found\+\_\+error}
+\begin{DoxyCompactList}\small\item\em eccezione che indica che un oggetto non è presente nel database \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespace}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacemm}{mm}
+\end{DoxyCompactItemize}

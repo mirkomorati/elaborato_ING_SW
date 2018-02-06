@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="da/de0/namespacemm_1_1util_1_1str" kind="namespace" language="C++">
+        <compoundname>mm::util::str</compoundname>
+        <sectiondef kind="func">
+            <memberdef kind="function" id="da/de0/namespacemm_1_1util_1_1str_1a0d736c6931c50f009683998b5b4cdcaa"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <templateparamlist>
+                    <param>
+                        <type>typename Out</type>
+                    </param>
+                </templateparamlist>
+                <type>void</type>
+                <definition>void mm::util::str::split</definition>
+                <argsstring>(const std::string &amp;s, char delim, Out result, bool skipEmpty=false)</argsstring>
+                <name>split</name>
+                <param>
+                    <type>const std::string &amp;</type>
+                    <declname>s</declname>
+                </param>
+                <param>
+                    <type>char</type>
+                    <declname>delim</declname>
+                </param>
+                <param>
+                    <type>Out</type>
+                    <declname>result</declname>
+                </param>
+                <param>
+                    <type>bool</type>
+                    <declname>skipEmpty</declname>
+                    <defval>false</defval>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/stringUtils.hpp" line="18" column="1" bodyfile="code/utils/stringUtils.hpp"
+                          bodystart="18" bodyend="26"/>
+            </memberdef>
+            <memberdef kind="function" id="da/de0/namespacemm_1_1util_1_1str_1a8e83f696879551bdc931a85f037a4671"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>std::vector&lt; std::string &gt;</type>
+                <definition>std::vector&lt;std::string&gt; mm::util::str::split</definition>
+                <argsstring>(const std::string &amp;s, char delim, bool skipEmpty=false)</argsstring>
+                <name>split</name>
+                <param>
+                    <type>const std::string &amp;</type>
+                    <declname>s</declname>
+                </param>
+                <param>
+                    <type>char</type>
+                    <declname>delim</declname>
+                </param>
+                <param>
+                    <type>bool</type>
+                    <declname>skipEmpty</declname>
+                    <defval>false</defval>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/stringUtils.hpp" line="28" column="1" bodyfile="code/utils/stringUtils.hpp"
+                          bodystart="28" bodyend="33"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="code/utils/stringUtils.hpp" line="16" column="1"/>
+    </compounddef>
+</doxygen>

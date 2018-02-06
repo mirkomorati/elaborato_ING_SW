@@ -1,0 +1,28 @@
+var classmm_1_1model_1_1_patient =
+    [
+        ["TreeModel", "d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model.html", "d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model"],
+        ["Patient", "d6/d4a/classmm_1_1model_1_1_patient.html#ad15758bdb4995cf5f0b2830eef2b4b43", null],
+        ["~Patient", "d6/d4a/classmm_1_1model_1_1_patient.html#ad9b2919b2efa8f1e7f6d405757d73ccb", null],
+        ["get_address", "d6/d4a/classmm_1_1model_1_1_patient.html#a0db04bf2c2ae5b9eb6417f4b6e74a84a", null],
+        ["get_birth_date", "d6/d4a/classmm_1_1model_1_1_patient.html#ac54b024c619d6f31c72766a01bc5d0ee", null],
+        ["get_birth_place", "d6/d4a/classmm_1_1model_1_1_patient.html#a4e4770a79fef23b54026e013586e61fa", null],
+        ["get_first_name", "d6/d4a/classmm_1_1model_1_1_patient.html#a3661b2666d368492511ed3bad79c0389", null],
+        ["get_fiscal_code", "d6/d4a/classmm_1_1model_1_1_patient.html#a29590c6ce9d2b19dbdff3330ee5e4523", null],
+        ["get_last_name", "d6/d4a/classmm_1_1model_1_1_patient.html#a88c0051957b5a6f172cdc35432505923", null],
+        ["get_prescriptions", "d6/d4a/classmm_1_1model_1_1_patient.html#a2a33032170e0cadf905dd263a3364b65", null],
+        ["get_primary_key", "d6/d4a/classmm_1_1model_1_1_patient.html#ae85640f3cb3d34bb57e1129ef46a0cbf", null],
+        ["get_risk_factors", "d6/d4a/classmm_1_1model_1_1_patient.html#a7ab70bc4aafc95f687c29d02ac398e06", null],
+        ["get_table_name", "d6/d4a/classmm_1_1model_1_1_patient.html#abe79da3e4fabd80e039ae4880dfa76cb", null],
+        ["is_valid", "d6/d4a/classmm_1_1model_1_1_patient.html#a5f9da3f880ef1adc4bc5443ea407f48f", null],
+        ["operator!=", "d6/d4a/classmm_1_1model_1_1_patient.html#a96fe68d415c82b084ca75e87aefe8314", null],
+        ["operator==", "d6/d4a/classmm_1_1model_1_1_patient.html#a69367747ebc66b1b4e2fdf961811d83d", null],
+        ["serialize", "d6/d4a/classmm_1_1model_1_1_patient.html#ae3ac219cd109e8c53daaf9b2758c3a0e", null],
+        ["set_address", "d6/d4a/classmm_1_1model_1_1_patient.html#a4e19f86233b55b4dec59f947f1dfe32a", null],
+        ["set_birth_date", "d6/d4a/classmm_1_1model_1_1_patient.html#ad73008977024e6ca48e5c687eb27b996", null],
+        ["set_birth_place", "d6/d4a/classmm_1_1model_1_1_patient.html#a6dc732f738425cc729764fdf16d667f0", null],
+        ["set_doctor_id", "d6/d4a/classmm_1_1model_1_1_patient.html#a9dda6ce10296ab196cd5681b8e9a1091", null],
+        ["set_first_name", "d6/d4a/classmm_1_1model_1_1_patient.html#a8b8dd8c6de5963a717cf192ca10c605e", null],
+        ["set_fiscal_code", "d6/d4a/classmm_1_1model_1_1_patient.html#a45485e586eb4a908ed4c7a51059fc131", null],
+        ["set_last_name", "d6/d4a/classmm_1_1model_1_1_patient.html#a4883fc926a6693a2a6fd2b50ab2ded0e", null],
+        ["unserialize", "d6/d4a/classmm_1_1model_1_1_patient.html#a7e1d8cbfc2cdd653281dce87497c6065", null]
+    ];

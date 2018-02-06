@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d2/ddf/_configuration_8cpp" kind="file" language="C++">
+        <compoundname>Configuration.cpp</compoundname>
+        <includes refid="d1/d32/_configuration_8hpp" local="yes">Configuration.hpp</includes>
+        <incdepgraph>
+            <node id="1">
+                <label>Configuration.hpp</label>
+                <link refid="d1/d32/_configuration_8hpp"/>
+                <childnode refid="2" relation="include">
+                </childnode>
+                <childnode refid="3" relation="include">
+                </childnode>
+                <childnode refid="4" relation="include">
+                </childnode>
+            </node>
+            <node id="2">
+                <label>string</label>
+            </node>
+            <node id="0">
+                <label>code/Configuration.cpp</label>
+                <link refid="d2/ddf/_configuration_8cpp"/>
+                <childnode refid="1" relation="include">
+                </childnode>
+            </node>
+            <node id="3">
+                <label>json.hpp</label>
+            </node>
+            <node id="4">
+                <label>fstream</label>
+            </node>
+        </incdepgraph>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Noè<sp/>Murr<sp/>on<sp/>03/06/2017.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d32/_configuration_8hpp"
+                                                                        kindref="compound">Configuration.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal">
+                    <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">mm::Configuration</ref>
+                    <sp/>*mm::Configuration::instance<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">nullptr</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal">std::string<sp/>mm::Configuration::config_file_name;
+                </highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal">mm::Configuration::Configuration()<sp/>noexcept(false)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>assert(not<sp/>config_file_name.empty());
+                </highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>std::ifstream<sp/>config_file(Configuration::config_file_name);
+                </highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(config_file.fail())
+                </highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal"><sp/>std::runtime_error(
+                </highlight>
+                <highlight class="stringliteral">&quot;Cannot<sp/>open<sp/>the<sp/>configuration<sp/>file&quot;
+                </highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>reading<sp/>json
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>config_file<sp/>&gt;&gt;<sp/>config;
+                </highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">
+                    <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">mm::Configuration</ref>
+                    <sp/>&amp;<ref refid="dc/d00/classmm_1_1_configuration_1a5cfc5ea56062f53ef9fbd274f6dbe79e"
+                                   kindref="member">mm::Configuration::get_instance</ref>()<sp/>noexcept(false)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(instance<sp/>==
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">nullptr</highlight>
+                <highlight class="normal">)<sp/>instance<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">new</highlight>
+                <highlight class="normal"><sp/>Configuration();
+                </highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>*instance;
+                </highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;<ref
+                        refid="dc/d00/classmm_1_1_configuration_1a631c8525beb91fb55d72eb6b58d2d68f" kindref="member">
+                    mm::Configuration::get_config_file_name</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>Configuration::config_file_name;
+                </highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal"><ref
+                        refid="dc/d00/classmm_1_1_configuration_1ad526b28d1a7f8c6f854352b840d2d7b4" kindref="member">
+                    mm::Configuration::set_config_file_name</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;config_file_name)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Configuration::config_file_name<sp/>=<sp/>config_file_name;
+                </highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">delete</highlight>
+                <highlight class="normal"><sp/>instance;
+                </highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>instance<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">nullptr</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal">mm::Configuration::~Configuration()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">delete</highlight>
+                <highlight class="normal"><sp/>instance;
+                </highlight>
+            </codeline>
+            <codeline lineno="42">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="43">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal"><ref
+                        refid="d3/d00/classmm_1_1key__not__found__error_1a2dbffa57a8ad2c3d80151f0d7b75814b"
+                        kindref="member">mm::key_not_found_error::key_not_found_error</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;str)
+                </highlight>
+            </codeline>
+            <codeline lineno="45">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>:<sp/>runtime_error(str)<sp/>{}
+                </highlight>
+            </codeline>
+            <codeline lineno="46">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="47">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal"><sp/>*mm::key_not_found_error::what()<sp/>const<sp/>noexcept<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="48">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>std::runtime_error::what();
+                </highlight>
+            </codeline>
+            <codeline lineno="49">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="50">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="51">
+                <highlight class="normal"><ref
+                        refid="d3/d00/classmm_1_1key__not__found__error_1a2dbffa57a8ad2c3d80151f0d7b75814b"
+                        kindref="member">mm::key_not_found_error::key_not_found_error</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal"><sp/>*what)
+                </highlight>
+            </codeline>
+            <codeline lineno="52">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>:<sp/>runtime_error(what)<sp/>{}
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/Configuration.cpp"/>
+    </compounddef>
+</doxygen>

@@ -1,0 +1,255 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+% NLS support packages
+\usepackage[italian]{babel}
+
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generato da Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generato da Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{alph}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large MedH \\[1ex]\large 0.\+1.\+0 }\\
+\vspace*{1cm}
+{\large Generato da Doxygen 1.8.13}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{Indice dei namespace}
+\input{namespaces}
+\chapter{Indice della gerarchia}
+\input{hierarchy}
+\chapter{Indice dei tipi composti}
+\input{annotated}
+\chapter{Indice dei file}
+\input{files}
+\chapter{Documentazione dei namespace}
+\input{d0/d04/namespacemm}
+\input{dd/d7f/namespacemm_1_1model}
+\input{d6/d54/namespacemm_1_1model_1_1authentication}
+\input{d1/d50/namespacemm_1_1util}
+\input{da/de0/namespacemm_1_1util_1_1str}
+\input{d7/d7c/namespacemm_1_1view}
+\chapter{Documentazione delle classi}
+\input{d7/d05/classmm_1_1_about_dialog}
+\input{d7/d32/classmm_1_1_add_patient_dialog}
+\input{db/d16/classmm_1_1_add_prescription_dialog}
+\input{dc/d00/classmm_1_1_configuration}
+\input{df/d88/structmm_1_1util_1_1_date}
+\input{d5/da8/structmm_1_1util_1_1_date_by}
+\input{d0/d52/structmm_1_1_date_controller}
+\input{da/d0d/classmm_1_1_d_b_master}
+\input{df/d35/classmm_1_1_dialog}
+\input{d6/d2e/classmm_1_1model_1_1_doctor}
+\input{db/d9b/classmm_1_1model_1_1_drug}
+\input{d0/d9e/structmm_1_1_entry_controller}
+\input{d7/d9e/classmm_1_1_i_observer}
+\input{dc/df3/classmm_1_1_i_serializable}
+\input{d1/dd2/classmm_1_1_i_subject}
+\input{d3/d00/classmm_1_1key__not__found__error}
+\input{de/d0e/structmm_1_1model_1_1authentication_1_1_login}
+\input{d3/d0c/classmm_1_1_login_window}
+\input{d7/dfd/classmm_1_1_main_window}
+\input{df/d1a/classmm_1_1_med_h}
+\input{da/df7/classmm_1_1observer__not__found__error}
+\input{d6/d4a/classmm_1_1model_1_1_patient}
+\input{da/d81/classmm_1_1_patient_window}
+\input{db/d61/classmm_1_1model_1_1_prescription}
+\input{dc/ddf/classmm_1_1view_1_1_prescription_expander}
+\input{dc/d8a/classmm_1_1record__not__found__error}
+\input{dd/d47/classmm_1_1_ref_builder}
+\input{d3/d4d/structmm_1_1_serialized}
+\input{de/dac/unionmm_1_1_serialized_union}
+\input{d4/d0c/struct_time}
+\input{d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model}
+\input{d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model}
+\input{d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model}
+\input{d1/d71/classmm_1_1_window}
+\chapter{Documentazione dei file}
+\input{d2/ddf/_configuration_8cpp}
+\input{d1/d32/_configuration_8hpp}
+\input{d7/d71/_d_b_master_8cpp}
+\input{d7/d0f/_d_b_master_8hpp}
+\input{d1/d21/_about_dialog_8cpp}
+\input{d7/ded/_about_dialog_8hpp}
+\input{db/db5/_add_patient_dialog_8cpp}
+\input{d2/dac/_add_patient_dialog_8hpp}
+\input{df/de8/_add_prescription_dialog_8cpp}
+\input{d0/d1e/_add_prescription_dialog_8hpp}
+\input{dc/de6/_dialog_8hpp}
+\input{d9/d07/_login_window_8cpp}
+\input{db/d18/_login_window_8hpp}
+\input{d5/da5/_main_window_8cpp}
+\input{db/d41/_main_window_8hpp}
+\input{d8/d35/_patient_window_8cpp}
+\input{dd/de0/_patient_window_8hpp}
+\input{d9/d0c/_ref_builder_8cpp}
+\input{dc/db8/_ref_builder_8hpp}
+\input{d1/dea/_custom_widgets_8cpp}
+\input{d5/d46/_custom_widgets_8hpp}
+\input{d7/d49/_widgets_8cpp}
+\input{dc/d55/_widgets_8hpp}
+\input{de/d0b/_window_8hpp}
+\input{d5/d40/_i_observer_8hpp}
+\input{d8/d8a/_i_serializable_8cpp}
+\input{d3/d1b/_i_serializable_8hpp}
+\input{de/dd9/_i_subject_8cpp}
+\input{d1/d25/_i_subject_8hpp}
+\input{df/d0a/main_8cpp}
+\input{d7/daf/_med_h_8cpp}
+\input{db/d45/_med_h_8hpp}
+\input{d6/d6e/_authentication_8cpp}
+\input{dc/d00/_authentication_8hpp}
+\input{d3/da6/_doctor_8cpp}
+\input{dd/dc5/_doctor_8hpp}
+\input{d1/d9e/_drug_8cpp}
+\input{dd/df9/_drug_8hpp}
+\input{d0/d77/_patient_8cpp}
+\input{d0/da9/_patient_8hpp}
+\input{d5/db1/_prescription_8cpp}
+\input{de/d01/_prescription_8hpp}
+\input{dc/d1f/_date_8cpp}
+\input{d8/d63/_date_8hpp}
+\input{d3/d69/_date_by_8cpp}
+\input{d9/da3/_date_by_8hpp}
+\input{d4/dc3/os_8hpp}
+\input{d2/dce/string_utils_8hpp}
+\input{db/d84/_time_8cpp}
+\input{d8/d3a/_time_8hpp}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{Indice}
+\printindex
+
+\end{document}

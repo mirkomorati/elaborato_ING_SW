@@ -1,0 +1,7 @@
+var searchData =
+    [
+        ['unserialize', ['unserialize', ['../dc/df3/classmm_1_1_i_serializable.html#a8e5329b3b23cd0dff0ea8f5f63bab996', 1, 'mm::ISerializable::unserialize()'], ['../de/d0e/structmm_1_1model_1_1authentication_1_1_login.html#ac2429ce08624b0c425feced836b77d62', 1, 'mm::model::authentication::Login::unserialize()'], ['../d6/d2e/classmm_1_1model_1_1_doctor.html#a20bedf6695024e1930d033995a2ec5bf', 1, 'mm::model::Doctor::unserialize()'], ['../db/d9b/classmm_1_1model_1_1_drug.html#adc9cd19eb2d0c3c271c01c41cf10d600', 1, 'mm::model::Drug::unserialize()'], ['../d6/d4a/classmm_1_1model_1_1_patient.html#a7e1d8cbfc2cdd653281dce87497c6065', 1, 'mm::model::Patient::unserialize()'], ['../db/d61/classmm_1_1model_1_1_prescription.html#a6c38e4ee2fca09b18d61aaa214316b9e', 1, 'mm::model::Prescription::unserialize()']]],
+        ['update', ['update', ['../d7/dfd/classmm_1_1_main_window.html#ac0fc4875dc774c1b7b1ca59d174a7fc1', 1, 'mm::MainWindow::update()'], ['../da/d81/classmm_1_1_patient_window.html#a461de186f72a8902a9f95a622dc1c02b', 1, 'mm::PatientWindow::update()'], ['../d7/d9e/classmm_1_1_i_observer.html#a6422af04f8e9f3ba9d6d412a3bcdd03e', 1, 'mm::IObserver::update()']]],
+        ['used', ['used', ['../d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model.html#abaa5eab3650e690c64385bd364526250', 1, 'mm::model::Prescription::TreeModel']]],
+        ['user_5fname', ['user_name', ['../de/d0e/structmm_1_1model_1_1authentication_1_1_login.html#aeb7a295a6770bf778d747903045fe288', 1, 'mm::model::authentication::Login']]]
+    ];

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="da/df7/classmm_1_1observer__not__found__error" kind="class" language="C++" prot="public">
+        <compoundname>mm::observer_not_found_error</compoundname>
+        <basecompoundref prot="public" virt="non-virtual">runtime_error</basecompoundref>
+        <includes refid="d1/d25/_i_subject_8hpp" local="no">ISubject.hpp</includes>
+        <sectiondef kind="public-func">
+            <memberdef kind="function"
+                       id="da/df7/classmm_1_1observer__not__found__error_1a967227c100638d8d978f8ee3dd6c70b4"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::observer_not_found_error::observer_not_found_error</definition>
+                <argsstring>(const std::string &amp;error)</argsstring>
+                <name>observer_not_found_error</name>
+                <param>
+                    <type>const std::string &amp;</type>
+                    <declname>error</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISubject.hpp" line="16" column="1"
+                          bodyfile="code/interfaces/ISubject.cpp" bodystart="30" bodyend="30"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="da/df7/classmm_1_1observer__not__found__error_1a7bf8977aad52f25ac981ec9b7c961ba0"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::observer_not_found_error::observer_not_found_error</definition>
+                <argsstring>(const char *error)</argsstring>
+                <name>observer_not_found_error</name>
+                <param>
+                    <type>const char *</type>
+                    <declname>error</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISubject.hpp" line="18" column="1"
+                          bodyfile="code/interfaces/ISubject.cpp" bodystart="32" bodyend="32"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="da/df7/classmm_1_1observer__not__found__error_1a60ab7d1412fcd906c7976e686f9b936b"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::observer_not_found_error::observer_not_found_error</definition>
+                <argsstring>(const std::runtime_error &amp;error)</argsstring>
+                <name>observer_not_found_error</name>
+                <param>
+                    <type>const std::runtime_error &amp;</type>
+                    <declname>error</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISubject.hpp" line="20" column="1"
+                          bodyfile="code/interfaces/ISubject.cpp" bodystart="34" bodyend="34"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="115">
+                <label>mm::observer_not_found_error</label>
+                <link refid="da/df7/classmm_1_1observer__not__found__error"/>
+                <childnode refid="116" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="116">
+                <label>std::runtime_error</label>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="117">
+                <label>mm::observer_not_found_error</label>
+                <link refid="da/df7/classmm_1_1observer__not__found__error"/>
+                <childnode refid="118" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="118">
+                <label>std::runtime_error</label>
+            </node>
+        </collaborationgraph>
+        <location file="code/interfaces/ISubject.hpp" line="13" column="1" bodyfile="code/interfaces/ISubject.hpp"
+                  bodystart="13" bodyend="22"/>
+        <listofallmembers>
+            <member refid="da/df7/classmm_1_1observer__not__found__error_1a967227c100638d8d978f8ee3dd6c70b4"
+                    prot="public" virt="non-virtual">
+                <scope>mm::observer_not_found_error</scope>
+                <name>observer_not_found_error</name>
+            </member>
+            <member refid="da/df7/classmm_1_1observer__not__found__error_1a7bf8977aad52f25ac981ec9b7c961ba0"
+                    prot="public" virt="non-virtual">
+                <scope>mm::observer_not_found_error</scope>
+                <name>observer_not_found_error</name>
+            </member>
+            <member refid="da/df7/classmm_1_1observer__not__found__error_1a60ab7d1412fcd906c7976e686f9b936b"
+                    prot="public" virt="non-virtual">
+                <scope>mm::observer_not_found_error</scope>
+                <name>observer_not_found_error</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

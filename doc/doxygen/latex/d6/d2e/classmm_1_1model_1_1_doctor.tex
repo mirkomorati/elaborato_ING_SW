@@ -1,0 +1,195 @@
+\hypertarget{classmm_1_1model_1_1_doctor}{}\section{Riferimenti per la classe mm\+:\+:model\+:\+:Doctor}
+\label{classmm_1_1model_1_1_doctor}\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+
+
+{\ttfamily \#include $<$Doctor.\+hpp$>$}
+
+
+
+Diagramma delle classi per mm\+:\+:model\+:\+:Doctor\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{dd/d55/classmm_1_1model_1_1_doctor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagramma di collaborazione per mm\+:\+:model\+:\+:Doctor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{da/d19/classmm_1_1model_1_1_doctor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{classmm_1_1model_1_1_prescription}{model\+::\+Prescription} $>$ \hyperlink{classmm_1_1model_1_1_doctor_a16be876e8591688f3b34ca86441253a2}{get\+\_\+prescriptions} (\hyperlink{classmm_1_1model_1_1_patient}{Patient} patient, \hyperlink{structmm_1_1util_1_1_date}{util\+::\+Date} start, \hyperlink{structmm_1_1util_1_1_date}{util\+::\+Date} end)
+\item 
+vector$<$ \hyperlink{classmm_1_1model_1_1_prescription}{model\+::\+Prescription} $>$ \hyperlink{classmm_1_1model_1_1_doctor_a76bf6b545709c7a784e4320b11f587bf}{get\+\_\+prescriptions} (\hyperlink{classmm_1_1model_1_1_drug}{model\+::\+Drug} drug)
+\item 
+vector$<$ \hyperlink{classmm_1_1model_1_1_drug}{model\+::\+Drug} $>$ \hyperlink{classmm_1_1model_1_1_doctor_ace64e6e74d0e39244c349fe5570ff974}{get\+\_\+drugs} (\hyperlink{structmm_1_1util_1_1_date}{util\+::\+Date} start, \hyperlink{structmm_1_1util_1_1_date}{util\+::\+Date} end)
+\item 
+vector$<$ \hyperlink{classmm_1_1model_1_1_patient}{model\+::\+Patient} $>$ \& \hyperlink{classmm_1_1model_1_1_doctor_a8b761c1dfbe10348eb99c0397e811e0a}{get\+\_\+patients} ()
+\item 
+vector$<$ \hyperlink{classmm_1_1model_1_1_patient}{model\+::\+Patient} $>$ \hyperlink{classmm_1_1model_1_1_doctor_a989fbde1a8784d8139d8add9066ab9b1}{get\+\_\+patients} (\hyperlink{classmm_1_1model_1_1_drug}{model\+::\+Drug} drug)
+\item 
+\hyperlink{classmm_1_1model_1_1_patient}{model\+::\+Patient} \hyperlink{classmm_1_1model_1_1_doctor_a89aa97cb00bfa2352c2a4f276554e738}{get\+\_\+patient\+\_\+from\+\_\+fiscal\+\_\+code} (std\+::string fiscal\+\_\+code)
+\item 
+void \hyperlink{classmm_1_1model_1_1_doctor_a1fe35e39d290992a5f6f4a73d4fa8d50}{remove\+\_\+patient} (const \hyperlink{classmm_1_1model_1_1_patient}{Patient} \&patient)
+\item 
+const string \& \hyperlink{classmm_1_1model_1_1_doctor_ac33c8e6a13054d0c7aea1cf6aec4368f}{get\+\_\+first\+\_\+name} () const
+\item 
+const string \& \hyperlink{classmm_1_1model_1_1_doctor_a86a186641c22223ecb9951112befa3e9}{get\+\_\+last\+\_\+name} () const
+\item 
+const string \& \hyperlink{classmm_1_1model_1_1_doctor_afa648dfa2f37c1de94a742bd58682899}{get\+\_\+birth\+\_\+date} () const
+\item 
+const string \& \hyperlink{classmm_1_1model_1_1_doctor_a14283e664d8689ad296e46969c129cad}{get\+\_\+birth\+\_\+place} () const
+\item 
+map$<$ string, \hyperlink{structmm_1_1_serialized}{mm\+::\+Serialized} $>$ \hyperlink{classmm_1_1model_1_1_doctor_a2171a9cb9c8a24ad0c0331edae957910}{serialize} () const override
+\item 
+void \hyperlink{classmm_1_1model_1_1_doctor_a20bedf6695024e1930d033995a2ec5bf}{unserialize} (map$<$ string, \hyperlink{structmm_1_1_serialized}{mm\+::\+Serialized} $>$ map) override
+\item 
+string \hyperlink{classmm_1_1model_1_1_doctor_af4c37e48f9e5ff26f2295678f10afaa3}{get\+\_\+table\+\_\+name} () const override
+\item 
+vector$<$ string $>$ \hyperlink{classmm_1_1model_1_1_doctor_a935989cbe2274076c2b409126d4faccd}{get\+\_\+primary\+\_\+key} () const override
+\item 
+const string \& \hyperlink{classmm_1_1model_1_1_doctor_ad49c6f0fdc31a96edaeada72ba88ceec}{get\+\_\+fiscal\+\_\+code} () const
+\item 
+const int \& \hyperlink{classmm_1_1model_1_1_doctor_a26810a7e1e0682d2dbb7c92ac3a8247b}{get\+\_\+regional\+\_\+id} () const
+\item 
+const string \& \hyperlink{classmm_1_1model_1_1_doctor_ab5b807b5ce91d9f20603f091e62fe17a}{get\+\_\+specialization} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_afa648dfa2f37c1de94a742bd58682899}\label{classmm_1_1model_1_1_doctor_afa648dfa2f37c1de94a742bd58682899}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+birth\+\_\+date@{get\+\_\+birth\+\_\+date}}
+\index{get\+\_\+birth\+\_\+date@{get\+\_\+birth\+\_\+date}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+birth\+\_\+date()}{get\_birth\_date()}}
+{\footnotesize\ttfamily const string \& mm\+::model\+::\+Doctor\+::get\+\_\+birth\+\_\+date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a14283e664d8689ad296e46969c129cad}\label{classmm_1_1model_1_1_doctor_a14283e664d8689ad296e46969c129cad}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+birth\+\_\+place@{get\+\_\+birth\+\_\+place}}
+\index{get\+\_\+birth\+\_\+place@{get\+\_\+birth\+\_\+place}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+birth\+\_\+place()}{get\_birth\_place()}}
+{\footnotesize\ttfamily const string \& mm\+::model\+::\+Doctor\+::get\+\_\+birth\+\_\+place (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_ace64e6e74d0e39244c349fe5570ff974}\label{classmm_1_1model_1_1_doctor_ace64e6e74d0e39244c349fe5570ff974}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+drugs@{get\+\_\+drugs}}
+\index{get\+\_\+drugs@{get\+\_\+drugs}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+drugs()}{get\_drugs()}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{classmm_1_1model_1_1_drug}{mm\+::model\+::\+Drug} $>$ mm\+::model\+::\+Doctor\+::get\+\_\+drugs (\begin{DoxyParamCaption}\item[{\hyperlink{structmm_1_1util_1_1_date}{util\+::\+Date}}]{start,  }\item[{\hyperlink{structmm_1_1util_1_1_date}{util\+::\+Date}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_ac33c8e6a13054d0c7aea1cf6aec4368f}\label{classmm_1_1model_1_1_doctor_ac33c8e6a13054d0c7aea1cf6aec4368f}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+first\+\_\+name@{get\+\_\+first\+\_\+name}}
+\index{get\+\_\+first\+\_\+name@{get\+\_\+first\+\_\+name}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+first\+\_\+name()}{get\_first\_name()}}
+{\footnotesize\ttfamily const string \& mm\+::model\+::\+Doctor\+::get\+\_\+first\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_ad49c6f0fdc31a96edaeada72ba88ceec}\label{classmm_1_1model_1_1_doctor_ad49c6f0fdc31a96edaeada72ba88ceec}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+fiscal\+\_\+code@{get\+\_\+fiscal\+\_\+code}}
+\index{get\+\_\+fiscal\+\_\+code@{get\+\_\+fiscal\+\_\+code}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+fiscal\+\_\+code()}{get\_fiscal\_code()}}
+{\footnotesize\ttfamily const string \& mm\+::model\+::\+Doctor\+::get\+\_\+fiscal\+\_\+code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a86a186641c22223ecb9951112befa3e9}\label{classmm_1_1model_1_1_doctor_a86a186641c22223ecb9951112befa3e9}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+last\+\_\+name@{get\+\_\+last\+\_\+name}}
+\index{get\+\_\+last\+\_\+name@{get\+\_\+last\+\_\+name}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+last\+\_\+name()}{get\_last\_name()}}
+{\footnotesize\ttfamily const string \& mm\+::model\+::\+Doctor\+::get\+\_\+last\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a89aa97cb00bfa2352c2a4f276554e738}\label{classmm_1_1model_1_1_doctor_a89aa97cb00bfa2352c2a4f276554e738}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+patient\+\_\+from\+\_\+fiscal\+\_\+code@{get\+\_\+patient\+\_\+from\+\_\+fiscal\+\_\+code}}
+\index{get\+\_\+patient\+\_\+from\+\_\+fiscal\+\_\+code@{get\+\_\+patient\+\_\+from\+\_\+fiscal\+\_\+code}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+patient\+\_\+from\+\_\+fiscal\+\_\+code()}{get\_patient\_from\_fiscal\_code()}}
+{\footnotesize\ttfamily \hyperlink{classmm_1_1model_1_1_patient}{mm\+::model\+::\+Patient} mm\+::model\+::\+Doctor\+::get\+\_\+patient\+\_\+from\+\_\+fiscal\+\_\+code (\begin{DoxyParamCaption}\item[{std\+::string}]{fiscal\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a8b761c1dfbe10348eb99c0397e811e0a}\label{classmm_1_1model_1_1_doctor_a8b761c1dfbe10348eb99c0397e811e0a}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+patients@{get\+\_\+patients}}
+\index{get\+\_\+patients@{get\+\_\+patients}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+patients()}{get\_patients()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{classmm_1_1model_1_1_patient}{mm\+::model\+::\+Patient} $>$ \& mm\+::model\+::\+Doctor\+::get\+\_\+patients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a989fbde1a8784d8139d8add9066ab9b1}\label{classmm_1_1model_1_1_doctor_a989fbde1a8784d8139d8add9066ab9b1}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+patients@{get\+\_\+patients}}
+\index{get\+\_\+patients@{get\+\_\+patients}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+patients()}{get\_patients()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{classmm_1_1model_1_1_patient}{mm\+::model\+::\+Patient} $>$ mm\+::model\+::\+Doctor\+::get\+\_\+patients (\begin{DoxyParamCaption}\item[{\hyperlink{classmm_1_1model_1_1_drug}{model\+::\+Drug}}]{drug }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a16be876e8591688f3b34ca86441253a2}\label{classmm_1_1model_1_1_doctor_a16be876e8591688f3b34ca86441253a2}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+prescriptions@{get\+\_\+prescriptions}}
+\index{get\+\_\+prescriptions@{get\+\_\+prescriptions}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+prescriptions()}{get\_prescriptions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{classmm_1_1model_1_1_prescription}{mm\+::model\+::\+Prescription} $>$ mm\+::model\+::\+Doctor\+::get\+\_\+prescriptions (\begin{DoxyParamCaption}\item[{\hyperlink{classmm_1_1model_1_1_patient}{Patient}}]{patient,  }\item[{\hyperlink{structmm_1_1util_1_1_date}{util\+::\+Date}}]{start,  }\item[{\hyperlink{structmm_1_1util_1_1_date}{util\+::\+Date}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a76bf6b545709c7a784e4320b11f587bf}\label{classmm_1_1model_1_1_doctor_a76bf6b545709c7a784e4320b11f587bf}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+prescriptions@{get\+\_\+prescriptions}}
+\index{get\+\_\+prescriptions@{get\+\_\+prescriptions}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+prescriptions()}{get\_prescriptions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{classmm_1_1model_1_1_prescription}{mm\+::model\+::\+Prescription} $>$ mm\+::model\+::\+Doctor\+::get\+\_\+prescriptions (\begin{DoxyParamCaption}\item[{\hyperlink{classmm_1_1model_1_1_drug}{model\+::\+Drug}}]{drug }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a935989cbe2274076c2b409126d4faccd}\label{classmm_1_1model_1_1_doctor_a935989cbe2274076c2b409126d4faccd}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+primary\+\_\+key@{get\+\_\+primary\+\_\+key}}
+\index{get\+\_\+primary\+\_\+key@{get\+\_\+primary\+\_\+key}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+primary\+\_\+key()}{get\_primary\_key()}}
+{\footnotesize\ttfamily vector$<$ string $>$ mm\+::model\+::\+Doctor\+::get\+\_\+primary\+\_\+key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \hyperlink{classmm_1_1_i_serializable_a69c0c514e11e386b6cb1fbd03f14da17}{mm\+::\+I\+Serializable}.
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a26810a7e1e0682d2dbb7c92ac3a8247b}\label{classmm_1_1model_1_1_doctor_a26810a7e1e0682d2dbb7c92ac3a8247b}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+regional\+\_\+id@{get\+\_\+regional\+\_\+id}}
+\index{get\+\_\+regional\+\_\+id@{get\+\_\+regional\+\_\+id}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+regional\+\_\+id()}{get\_regional\_id()}}
+{\footnotesize\ttfamily const int \& mm\+::model\+::\+Doctor\+::get\+\_\+regional\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_ab5b807b5ce91d9f20603f091e62fe17a}\label{classmm_1_1model_1_1_doctor_ab5b807b5ce91d9f20603f091e62fe17a}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+specialization@{get\+\_\+specialization}}
+\index{get\+\_\+specialization@{get\+\_\+specialization}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+specialization()}{get\_specialization()}}
+{\footnotesize\ttfamily const string \& mm\+::model\+::\+Doctor\+::get\+\_\+specialization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_af4c37e48f9e5ff26f2295678f10afaa3}\label{classmm_1_1model_1_1_doctor_af4c37e48f9e5ff26f2295678f10afaa3}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!get\+\_\+table\+\_\+name@{get\+\_\+table\+\_\+name}}
+\index{get\+\_\+table\+\_\+name@{get\+\_\+table\+\_\+name}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{get\+\_\+table\+\_\+name()}{get\_table\_name()}}
+{\footnotesize\ttfamily string mm\+::model\+::\+Doctor\+::get\+\_\+table\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \hyperlink{classmm_1_1_i_serializable_a9717e6da47fcbac3ffa2e68152464e0a}{mm\+::\+I\+Serializable}.
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a1fe35e39d290992a5f6f4a73d4fa8d50}\label{classmm_1_1model_1_1_doctor_a1fe35e39d290992a5f6f4a73d4fa8d50}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!remove\+\_\+patient@{remove\+\_\+patient}}
+\index{remove\+\_\+patient@{remove\+\_\+patient}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{remove\+\_\+patient()}{remove\_patient()}}
+{\footnotesize\ttfamily void mm\+::model\+::\+Doctor\+::remove\+\_\+patient (\begin{DoxyParamCaption}\item[{const \hyperlink{classmm_1_1model_1_1_patient}{Patient} \&}]{patient }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a2171a9cb9c8a24ad0c0331edae957910}\label{classmm_1_1model_1_1_doctor_a2171a9cb9c8a24ad0c0331edae957910}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!serialize@{serialize}}
+\index{serialize@{serialize}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily map$<$ string, \hyperlink{structmm_1_1_serialized}{mm\+::\+Serialized} $>$ mm\+::model\+::\+Doctor\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Project Elaborato\+\_\+\+I\+N\+G\+\_\+\+SW \begin{DoxyAuthor}{Autore}
+Noè Murr, Mirko Morati 
+\end{DoxyAuthor}
+
+
+Implementa \hyperlink{classmm_1_1_i_serializable_a20a59e2324c8dbf6fefe4d11ae89d0fb}{mm\+::\+I\+Serializable}.
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_doctor_a20bedf6695024e1930d033995a2ec5bf}\label{classmm_1_1model_1_1_doctor_a20bedf6695024e1930d033995a2ec5bf}} 
+\index{mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}!unserialize@{unserialize}}
+\index{unserialize@{unserialize}!mm\+::model\+::\+Doctor@{mm\+::model\+::\+Doctor}}
+\subsubsection{\texorpdfstring{unserialize()}{unserialize()}}
+{\footnotesize\ttfamily void mm\+::model\+::\+Doctor\+::unserialize (\begin{DoxyParamCaption}\item[{map$<$ string, \hyperlink{structmm_1_1_serialized}{mm\+::\+Serialized} $>$}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+La documentazione per questa classe è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
+\item 
+code/model/\hyperlink{_doctor_8hpp}{Doctor.\+hpp}\item 
+code/model/\hyperlink{_doctor_8cpp}{Doctor.\+cpp}\end{DoxyCompactItemize}

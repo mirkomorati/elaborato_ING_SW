@@ -1,0 +1,12 @@
+<map id="code/gui/AddPrescriptionDialog.cpp" name="code/gui/AddPrescriptionDialog.cpp">
+<area shape="rect" id="node3" href="$d0/d1e/_add_prescription_dialog_8hpp.html" title="AddPrescriptionDialog.hpp" alt="" coords="429,92,608,117"/>
+<area shape="rect" id="node17" href="$dc/db8/_ref_builder_8hpp.html" title="RefBuilder.hpp" alt="" coords="656,92,765,117"/>
+<area shape="rect" id="node19" href="$d7/d0f/_d_b_master_8hpp.html" title="../DBMaster.hpp" alt="" coords="920,92,1037,117"/>
+<area shape="rect" id="node26" href="$dd/df9/_drug_8hpp.html" title="../model/Drug.hpp" alt="" coords="1257,92,1385,117"/>
+<area shape="rect" id="node6" href="$dc/de6/_dialog_8hpp.html" title="Dialog.hpp" alt="" coords="532,165,617,191"/>
+<area shape="rect" id="node13" href="$dc/d55/_widgets_8hpp.html" title="Widgets.hpp" alt="" coords="324,165,419,191"/>
+<area shape="rect" id="node8" href="$d1/d25/_i_subject_8hpp.html" title="../interfaces/ISubject.hpp" alt="" coords="570,239,738,264"/>
+<area shape="rect" id="node10" href="$d5/d40/_i_observer_8hpp.html" title="IObserver.hpp" alt="" coords="554,312,659,337"/>
+<area shape="rect" id="node15" href="$d8/d63/_date_8hpp.html" title="../utils/Date.hpp" alt="" coords="188,239,302,264"/>
+<area shape="rect" id="node24" href="$d3/d1b/_i_serializable_8hpp.html" title="interfaces/ISerializable.hpp" alt="" coords="1053,165,1234,191"/>
+</map>

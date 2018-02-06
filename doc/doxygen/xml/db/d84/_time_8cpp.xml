@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="db/d84/_time_8cpp" kind="file" language="C++">
+        <compoundname>Time.cpp</compoundname>
+        <includes refid="d8/d3a/_time_8hpp" local="yes">Time.hpp</includes>
+        <incdepgraph>
+            <node id="824">
+                <label>code/utils/Time.cpp</label>
+                <link refid="db/d84/_time_8cpp"/>
+                <childnode refid="825" relation="include">
+                </childnode>
+            </node>
+            <node id="825">
+                <label>Time.hpp</label>
+                <link refid="d8/d3a/_time_8hpp"/>
+            </node>
+        </incdepgraph>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1"></codeline>
+            <codeline lineno="7">
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="d8/d3a/_time_8hpp" kindref="compound">
+                    Time.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d4/d0c/struct_time_1ab9a42b7809f059a61d89123fb6cd0cf5" kindref="member">
+                        Time::get_time</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d4/d0c/struct_time_1a76fe3565c8497fe80720123aa0b988fb" kindref="member">
+                        Time::set_time</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">}</highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/utils/Time.cpp"/>
+    </compounddef>
+</doxygen>

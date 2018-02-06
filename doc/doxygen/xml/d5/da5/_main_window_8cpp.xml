@@ -1,0 +1,995 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d5/da5/_main_window_8cpp" kind="file" language="C++">
+        <compoundname>MainWindow.cpp</compoundname>
+        <includes refid="db/d41/_main_window_8hpp" local="yes">MainWindow.hpp</includes>
+        <includes refid="dc/db8/_ref_builder_8hpp" local="yes">RefBuilder.hpp</includes>
+        <includes refid="d7/ded/_about_dialog_8hpp" local="yes">AboutDialog.hpp</includes>
+        <includes refid="dd/de0/_patient_window_8hpp" local="yes">PatientWindow.hpp</includes>
+        <incdepgraph>
+            <node id="256">
+                <label>list</label>
+            </node>
+            <node id="231">
+                <label>PatientWindow.hpp</label>
+                <link refid="dd/de0/_patient_window_8hpp"/>
+                <childnode refid="220" relation="include">
+                </childnode>
+                <childnode refid="226" relation="include">
+                </childnode>
+                <childnode refid="232" relation="include">
+                </childnode>
+                <childnode refid="250" relation="include">
+                </childnode>
+                <childnode refid="252" relation="include">
+                </childnode>
+                <childnode refid="256" relation="include">
+                </childnode>
+                <childnode refid="237" relation="include">
+                </childnode>
+                <childnode refid="257" relation="include">
+                </childnode>
+            </node>
+            <node id="223">
+                <label>IObserver.hpp</label>
+                <link refid="d5/d40/_i_observer_8hpp"/>
+                <childnode refid="224" relation="include">
+                </childnode>
+                <childnode refid="225" relation="include">
+                </childnode>
+            </node>
+            <node id="253">
+                <label>gtkmm/entry.h</label>
+            </node>
+            <node id="236">
+                <label>gtkmm/treeview.h</label>
+            </node>
+            <node id="255">
+                <label>fmt/format.h</label>
+            </node>
+            <node id="220">
+                <label>Window.hpp</label>
+                <link refid="de/d0b/_window_8hpp"/>
+                <childnode refid="221" relation="include">
+                </childnode>
+            </node>
+            <node id="243">
+                <label>../../model/Prescription.hpp</label>
+                <link refid="de/d01/_prescription_8hpp"/>
+                <childnode refid="244" relation="include">
+                </childnode>
+                <childnode refid="245" relation="include">
+                </childnode>
+                <childnode refid="246" relation="include">
+                </childnode>
+                <childnode refid="247" relation="include">
+                </childnode>
+                <childnode refid="248" relation="include">
+                </childnode>
+                <childnode refid="249" relation="include">
+                </childnode>
+            </node>
+            <node id="240">
+                <label>gtkmm/grid.h</label>
+            </node>
+            <node id="248">
+                <label>../interfaces/ISerializable.hpp</label>
+                <link refid="d3/d1b/_i_serializable_8hpp"/>
+                <childnode refid="245" relation="include">
+                </childnode>
+                <childnode refid="246" relation="include">
+                </childnode>
+            </node>
+            <node id="219">
+                <label>gtkmm/widget.h</label>
+            </node>
+            <node id="245">
+                <label>string</label>
+            </node>
+            <node id="232">
+                <label>view/CustomWidgets.hpp</label>
+                <link refid="d5/d46/_custom_widgets_8hpp"/>
+                <childnode refid="233" relation="include">
+                </childnode>
+                <childnode refid="234" relation="include">
+                </childnode>
+                <childnode refid="235" relation="include">
+                </childnode>
+                <childnode refid="236" relation="include">
+                </childnode>
+                <childnode refid="237" relation="include">
+                </childnode>
+                <childnode refid="238" relation="include">
+                </childnode>
+                <childnode refid="239" relation="include">
+                </childnode>
+                <childnode refid="240" relation="include">
+                </childnode>
+                <childnode refid="241" relation="include">
+                </childnode>
+                <childnode refid="242" relation="include">
+                </childnode>
+                <childnode refid="243" relation="include">
+                </childnode>
+            </node>
+            <node id="246">
+                <label>map</label>
+            </node>
+            <node id="238">
+                <label>gtkmm/box.h</label>
+            </node>
+            <node id="247">
+                <label>gtkmm/treemodelcolumn.h</label>
+            </node>
+            <node id="230">
+                <label>AboutDialog.hpp</label>
+                <link refid="d7/ded/_about_dialog_8hpp"/>
+                <childnode refid="226" relation="include">
+                </childnode>
+            </node>
+            <node id="242">
+                <label>gtkmm/hvpaned.h</label>
+            </node>
+            <node id="229">
+                <label>gtkmm-3.0/gtkmm.h</label>
+            </node>
+            <node id="257">
+                <label>gtkmm/treeviewcolumn.h</label>
+            </node>
+            <node id="244">
+                <label>vector</label>
+            </node>
+            <node id="217">
+                <label>MainWindow.hpp</label>
+                <link refid="db/d41/_main_window_8hpp"/>
+                <childnode refid="218" relation="include">
+                </childnode>
+                <childnode refid="219" relation="include">
+                </childnode>
+                <childnode refid="220" relation="include">
+                </childnode>
+                <childnode refid="226" relation="include">
+                </childnode>
+            </node>
+            <node id="235">
+                <label>gtkmm/checkbutton.h</label>
+            </node>
+            <node id="239">
+                <label>gtkmm/frame.h</label>
+            </node>
+            <node id="218">
+                <label>glib.h</label>
+            </node>
+            <node id="228">
+                <label>RefBuilder.hpp</label>
+                <link refid="dc/db8/_ref_builder_8hpp"/>
+                <childnode refid="229" relation="include">
+                </childnode>
+            </node>
+            <node id="234">
+                <label>gtkmm/scrolledwindow.h</label>
+            </node>
+            <node id="250">
+                <label>../utils/Date.hpp</label>
+                <link refid="d8/d63/_date_8hpp"/>
+                <childnode refid="251" relation="include">
+                </childnode>
+            </node>
+            <node id="251">
+                <label>iostream</label>
+            </node>
+            <node id="252">
+                <label>Widgets.hpp</label>
+                <link refid="dc/d55/_widgets_8hpp"/>
+                <childnode refid="253" relation="include">
+                </childnode>
+                <childnode refid="254" relation="include">
+                </childnode>
+                <childnode refid="255" relation="include">
+                </childnode>
+                <childnode refid="250" relation="include">
+                </childnode>
+            </node>
+            <node id="227">
+                <label>sigc++/trackable.h</label>
+            </node>
+            <node id="224">
+                <label>mutex</label>
+            </node>
+            <node id="233">
+                <label>gtkmm/expander.h</label>
+            </node>
+            <node id="226">
+                <label>Dialog.hpp</label>
+                <link refid="dc/de6/_dialog_8hpp"/>
+                <childnode refid="227" relation="include">
+                </childnode>
+                <childnode refid="221" relation="include">
+                </childnode>
+            </node>
+            <node id="225">
+                <label>thread</label>
+            </node>
+            <node id="249">
+                <label>Drug.hpp</label>
+                <link refid="dd/df9/_drug_8hpp"/>
+                <childnode refid="245" relation="include">
+                </childnode>
+                <childnode refid="244" relation="include">
+                </childnode>
+                <childnode refid="246" relation="include">
+                </childnode>
+                <childnode refid="247" relation="include">
+                </childnode>
+                <childnode refid="248" relation="include">
+                </childnode>
+            </node>
+            <node id="216">
+                <label>code/gui/MainWindow.cpp</label>
+                <link refid="d5/da5/_main_window_8cpp"/>
+                <childnode refid="217" relation="include">
+                </childnode>
+                <childnode refid="228" relation="include">
+                </childnode>
+                <childnode refid="230" relation="include">
+                </childnode>
+                <childnode refid="231" relation="include">
+                </childnode>
+            </node>
+            <node id="221">
+                <label>../interfaces/ISubject.hpp</label>
+                <link refid="d1/d25/_i_subject_8hpp"/>
+                <childnode refid="222" relation="include">
+                </childnode>
+                <childnode refid="223" relation="include">
+                </childnode>
+            </node>
+            <node id="222">
+                <label>set</label>
+            </node>
+            <node id="241">
+                <label>gtkmm/textview.h</label>
+            </node>
+            <node id="237">
+                <label>gtkmm/liststore.h</label>
+            </node>
+            <node id="254">
+                <label>gtkmm/comboboxtext.h</label>
+            </node>
+        </incdepgraph>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Noè<sp/>Murr<sp/>on<sp/>23/12/2017.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="db/d41/_main_window_8hpp"
+                                                                        kindref="compound">MainWindow.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/db8/_ref_builder_8hpp"
+                                                                        kindref="compound">RefBuilder.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/ded/_about_dialog_8hpp"
+                                                                        kindref="compound">AboutDialog.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="dd/de0/_patient_window_8hpp"
+                                                                        kindref="compound">PatientWindow.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d7/dfd/classmm_1_1_main_window_1a1094273a8ac991a50e4612efa8174fdd" kindref="member">
+                        mm::MainWindow::initDrugComboBox</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::MenuBar<sp/>*menuBar;
+                </highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="dd/d47/classmm_1_1_ref_builder_1a1c46de2b1ff68aebfc85692a99827753" kindref="member">
+                        RefBuilder::get_instance</ref>().<ref
+                        refid="dd/d47/classmm_1_1_ref_builder_1a67812973516cbeddf488360424685153" kindref="member">
+                    get_widget</ref>(
+                </highlight>
+                <highlight class="stringliteral">&quot;menuBar&quot;</highlight>
+                <highlight class="normal">,<sp/>menuBar);
+                </highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>menuBar-&gt;set_visible(
+                </highlight>
+                <highlight class="keyword">true</highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>initHandlers();
+                </highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>onPageSwitch(
+                </highlight>
+                <highlight class="keyword">nullptr</highlight>
+                <highlight class="normal">,<sp/>0);
+                </highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">true</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">mm::WindowName
+                    </ref>
+                    <sp/>
+                    <ref refid="d7/dfd/classmm_1_1_main_window_1a8cfdfeb6ad47afff06fa6b1b7fdc0c88" kindref="member">
+                        mm::MainWindow::getName</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93cafd935ea5cffd64386f1549c51642164e"
+                         kindref="member">MAIN</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">mm::WindowName
+                    </ref>
+                    <sp/>
+                    <ref refid="d7/dfd/classmm_1_1_main_window_1aa1511ad7bed8d47cd35415d0a3a1161e" kindref="member">
+                        mm::MainWindow::getNextWindow</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>next;
+                </highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>mm::MainWindow::initHandlers()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>refBuilder<sp/>=
+                    <sp/>
+                    <ref refid="dd/d47/classmm_1_1_ref_builder_1a1c46de2b1ff68aebfc85692a99827753" kindref="member">
+                        RefBuilder::get_instance</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::MenuItem<sp/>*logoutMenuItem;
+                </highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::ImageMenuItem<sp/>*aboutMenuItem;
+                </highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::Notebook<sp/>*notebook;
+                </highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>refBuilder.get_widget(
+                </highlight>
+                <highlight class="stringliteral">&quot;logoutMenuItem&quot;</highlight>
+                <highlight class="normal">,<sp/>logoutMenuItem);
+                </highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>refBuilder.get_widget(
+                </highlight>
+                <highlight class="stringliteral">&quot;aboutMenuItem&quot;</highlight>
+                <highlight class="normal">,<sp/>aboutMenuItem);
+                </highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>refBuilder.get_widget(
+                </highlight>
+                <highlight class="stringliteral">&quot;mainNotebook&quot;</highlight>
+                <highlight class="normal">,<sp/>notebook);
+                </highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>logoutMenuItem-&gt;signal_activate().connect(sigc::mem_fun(
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">,<sp/>&amp;mm::MainWindow::onLogout));
+                </highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>aboutMenuItem-&gt;signal_activate().connect(sigc::mem_fun(
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">,<sp/>&amp;mm::MainWindow::onAboutClicked));
+                </highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>notebook-&gt;signal_switch_page().connect(sigc::mem_fun(
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">,<sp/>&amp;mm::MainWindow::onPageSwitch));
+                </highlight>
+            </codeline>
+            <codeline lineno="42">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="43">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>mm::MainWindow::onLogout()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="45">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>next<sp/>=
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca625866ddfe14a6b663c4b95ee85c96f3"
+                         kindref="member">LOGIN</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="46">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" kindref="member">
+                        notify</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="47">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="48">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="49">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>mm::MainWindow::onAboutClicked()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="50">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>std::unique_ptr&lt;Dialog&gt;<sp/>dialog(
+                </highlight>
+                <highlight class="keyword">new</highlight>
+                <highlight class="normal"><sp/>AboutDialog);
+                </highlight>
+            </codeline>
+            <codeline lineno="51">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>dialog-&gt;show();
+                </highlight>
+            </codeline>
+            <codeline lineno="52">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>dialog-&gt;attach(
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="53">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>dialogList.push_back(std::move(dialog));
+                </highlight>
+            </codeline>
+            <codeline lineno="54">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="55">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="56">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d7/dfd/classmm_1_1_main_window_1ac0fc4875dc774c1b7b1ca59d174a7fc1" kindref="member">
+                        mm::MainWindow::update</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="57">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>it<sp/>=<sp/>dialogList.begin();<sp/>it<sp/>!=<sp/>dialogList.end();
+                    <sp/>
+                    ++it)
+                </highlight>
+            </codeline>
+            <codeline lineno="58">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(not(*it)-&gt;isActive())<sp/>dialogList.erase(it);
+                </highlight>
+            </codeline>
+            <codeline lineno="59">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="60">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="61">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>mm::MainWindow::onPageSwitch(Gtk::Widget<sp/>*page,<sp/>guint
+                    <sp/>
+                    page_number)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="62">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">switch</highlight>
+                <highlight class="normal"><sp/>(page_number)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="63">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal"><sp/>0:<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="64">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>activeTabWindow.reset(
+                </highlight>
+                <highlight class="keyword">new</highlight>
+                <highlight class="normal"><sp/>PatientWindow);
+                </highlight>
+            </codeline>
+            <codeline lineno="65">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>activeTabWindow-&gt;initDrugComboBox();
+                </highlight>
+            </codeline>
+            <codeline lineno="66">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">break</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="67">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="68">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal"><sp/>1:<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="69">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>todo<sp/>create<sp/>PrescriptionWindow<sp/>controller
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="70">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">break</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="71">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="72">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal"><sp/>2:<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="73">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>todo<sp/>create<sp/>DrugWindow<sp/>controller
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="74">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">break</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="75">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="76">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">default</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="77">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal"><sp/>std::logic_error(
+                </highlight>
+                <highlight class="stringliteral">&quot;switch<sp/>on<sp/>unknown<sp/>page&quot;
+                </highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="78">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="79">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="80">
+                <highlight class="normal"></highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/gui/MainWindow.cpp"/>
+    </compounddef>
+</doxygen>

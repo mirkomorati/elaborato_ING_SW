@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model" kind="struct" language="C++" prot="public">
+        <compoundname>mm::model::Patient::TreeModel</compoundname>
+        <basecompoundref prot="public" virt="non-virtual">TreeModelColumnRecord</basecompoundref>
+        <includes refid="d0/da9/_patient_8hpp" local="no">Patient.hpp</includes>
+        <sectiondef kind="public-attrib">
+            <memberdef kind="variable"
+                       id="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1adf28688b198a38740eaff550b3c2c1fb"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::Patient::TreeModel::first_name
+                </definition>
+                <argsstring></argsstring>
+                <name>first_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="24" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="24" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a0ed75cd3b4f8d2378abe0de229e4c052"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::Patient::TreeModel::last_name
+                </definition>
+                <argsstring></argsstring>
+                <name>last_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="25" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="25" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1aa2fecd995942eb8662bda71300bb6ae9"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::Patient::TreeModel::fiscal_code
+                </definition>
+                <argsstring></argsstring>
+                <name>fiscal_code</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="26" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="26" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1ac1420b4e9a91af21da1bb6be8dd73c9b"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::Patient::TreeModel::birth_date
+                </definition>
+                <argsstring></argsstring>
+                <name>birth_date</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="27" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="27" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a9c168aebc887200f36b69740e73b3067"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::Patient::TreeModel::birth_place
+                </definition>
+                <argsstring></argsstring>
+                <name>birth_place</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="28" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="28" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a32f489915cba3373fa445c35d7137192"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::Patient::TreeModel::address
+                </definition>
+                <argsstring></argsstring>
+                <name>address</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="29" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="29" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a3acdb3bd280b1f59d8d94f5d2806db21"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::Patient::TreeModel::risk_factors
+                </definition>
+                <argsstring></argsstring>
+                <name>risk_factors</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="30" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="30" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function"
+                       id="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a53ebc678daee18b03328be60d1c69bf4"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::model::Patient::TreeModel::TreeModel</definition>
+                <argsstring>() noexcept</argsstring>
+                <name>TreeModel</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="22" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="154" bodyend="162"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="161">
+                <label>mm::model::Patient::TreeModel</label>
+                <link refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model"/>
+                <childnode refid="162" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="162">
+                <label>Gtk::TreeModelColumnRecord</label>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="163">
+                <label>mm::model::Patient::TreeModel</label>
+                <link refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model"/>
+                <childnode refid="164" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="164">
+                <label>Gtk::TreeModelColumnRecord</label>
+            </node>
+        </collaborationgraph>
+        <location file="code/model/Patient.hpp" line="21" column="1" bodyfile="code/model/Patient.hpp" bodystart="21"
+                  bodyend="31"/>
+        <listofallmembers>
+            <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a32f489915cba3373fa445c35d7137192"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::Patient::TreeModel</scope>
+                <name>address</name>
+            </member>
+            <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1ac1420b4e9a91af21da1bb6be8dd73c9b"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::Patient::TreeModel</scope>
+                <name>birth_date</name>
+            </member>
+            <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a9c168aebc887200f36b69740e73b3067"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::Patient::TreeModel</scope>
+                <name>birth_place</name>
+            </member>
+            <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1adf28688b198a38740eaff550b3c2c1fb"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::Patient::TreeModel</scope>
+                <name>first_name</name>
+            </member>
+            <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1aa2fecd995942eb8662bda71300bb6ae9"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::Patient::TreeModel</scope>
+                <name>fiscal_code</name>
+            </member>
+            <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a0ed75cd3b4f8d2378abe0de229e4c052"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::Patient::TreeModel</scope>
+                <name>last_name</name>
+            </member>
+            <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a3acdb3bd280b1f59d8d94f5d2806db21"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::Patient::TreeModel</scope>
+                <name>risk_factors</name>
+            </member>
+            <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a53ebc678daee18b03328be60d1c69bf4"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::Patient::TreeModel</scope>
+                <name>TreeModel</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

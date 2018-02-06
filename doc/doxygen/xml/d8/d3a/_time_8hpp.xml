@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d8/d3a/_time_8hpp" kind="file" language="C++">
+        <compoundname>Time.hpp</compoundname>
+        <includedby refid="dd/dc5/_doctor_8hpp" local="yes">code/model/Doctor.hpp</includedby>
+        <includedby refid="db/d84/_time_8cpp" local="yes">code/utils/Time.cpp</includedby>
+        <invincdepgraph>
+            <node id="829">
+                <label>code/model/Doctor.hpp</label>
+                <link refid="dd/dc5/_doctor_8hpp"/>
+                <childnode refid="830" relation="include">
+                </childnode>
+                <childnode refid="831" relation="include">
+                </childnode>
+            </node>
+            <node id="832">
+                <label>code/utils/Time.cpp</label>
+                <link refid="db/d84/_time_8cpp"/>
+            </node>
+            <node id="828">
+                <label>code/utils/Time.hpp</label>
+                <link refid="d8/d3a/_time_8hpp"/>
+                <childnode refid="829" relation="include">
+                </childnode>
+                <childnode refid="832" relation="include">
+                </childnode>
+            </node>
+            <node id="830">
+                <label>code/gui/PatientWindow.cpp</label>
+                <link refid="d8/d35/_patient_window_8cpp"/>
+            </node>
+            <node id="831">
+                <label>code/model/Doctor.cpp</label>
+                <link refid="d3/da6/_doctor_8cpp"/>
+            </node>
+        </invincdepgraph>
+        <innerclass refid="d4/d0c/struct_time" prot="public">Time</innerclass>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1"></codeline>
+            <codeline lineno="7">
+                <highlight class="preprocessor">#ifndef<sp/>_TIME_H
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#define<sp/>_TIME_H
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10" refid="d4/d0c/struct_time" refkind="compound">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">struct
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d4/d0c/struct_time" kindref="compound">Time</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d4/d0c/struct_time_1ab9a42b7809f059a61d89123fb6cd0cf5" kindref="member">get_time</ref>
+                    ();
+                </highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d4/d0c/struct_time_1a76fe3565c8497fe80720123aa0b988fb" kindref="member">set_time</ref>
+                    ();
+                </highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">private</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>seconds;
+                </highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>minutes;
+                </highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>hours;
+                </highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">};</highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#endif<sp/>//_TIME_H
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/utils/Time.hpp"/>
+    </compounddef>
+</doxygen>

@@ -1,0 +1,1287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d8/d8a/_i_serializable_8cpp" kind="file" language="C++">
+        <compoundname>ISerializable.cpp</compoundname>
+        <includes local="no">iostream</includes>
+        <includes local="no">sstream</includes>
+        <includes refid="d3/d1b/_i_serializable_8hpp" local="yes">ISerializable.hpp</includes>
+        <incdepgraph>
+            <node id="499">
+                <label>ISerializable.hpp</label>
+                <link refid="d3/d1b/_i_serializable_8hpp"/>
+                <childnode refid="500" relation="include">
+                </childnode>
+                <childnode refid="501" relation="include">
+                </childnode>
+            </node>
+            <node id="500">
+                <label>string</label>
+            </node>
+            <node id="501">
+                <label>map</label>
+            </node>
+            <node id="498">
+                <label>sstream</label>
+            </node>
+            <node id="497">
+                <label>iostream</label>
+            </node>
+            <node id="496">
+                <label>code/interfaces/ISerializable.cpp</label>
+                <link refid="d8/d8a/_i_serializable_8cpp"/>
+                <childnode refid="497" relation="include">
+                </childnode>
+                <childnode refid="498" relation="include">
+                </childnode>
+                <childnode refid="499" relation="include">
+                </childnode>
+            </node>
+        </incdepgraph>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1"></codeline>
+            <codeline lineno="6">
+                <highlight class="preprocessor">#include<sp/>&lt;iostream&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;sstream&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/d1b/_i_serializable_8hpp"
+                                                                        kindref="compound">ISerializable.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized_1ac0e23433a34f0d326042907895a03353" kindref="member">
+                        mm::Serialized::isType</ref>(
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601c" kindref="member">
+                        mm::StoredTypes
+                    </ref>
+                    <sp/>type)
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>noexcept<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>type<sp/>==<sp/>this-&gt;type;
+                </highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601c" kindref="member">
+                        mm::StoredTypes
+                    </ref>
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized_1a9a257b31c4426077a3bd460d1e6cbd89" kindref="member">
+                        mm::Serialized::get_type</ref>()<sp/>const<sp/>noexcept<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>type;
+                </highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">std::ostream<sp/>&amp;<ref
+                        refid="d0/d04/namespacemm_1a7ab9a5d20c82db4778995f35e6aa6abb" kindref="member">mm::operator&lt;&lt;</ref>(std::ostream
+                    <sp/>&amp;os,
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">mm::Serialized</ref>
+                    <sp/>&amp;data)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">switch</highlight>
+                <highlight class="normal"><sp/>(data.type)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a"
+                         kindref="member">mm::INTEGER</ref>:
+                </highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>(os<sp/>&lt;&lt;<sp/>data.data.<ref
+                        refid="de/dac/unionmm_1_1_serialized_union_1ab1b4916d7e61e14280d62aecf668d402" kindref="member">
+                    integer</ref>);
+                </highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331"
+                         kindref="member">mm::REAL</ref>:
+                </highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>(os<sp/>&lt;&lt;<sp/>data.data.<ref
+                        refid="de/dac/unionmm_1_1_serialized_union_1a315b1f30581d381d4ce1bb980641a200" kindref="member">
+                    real</ref>);
+                </highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5"
+                         kindref="member">mm::TEXT</ref>:
+                </highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>(os<sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;&apos;&quot;</highlight>
+                <highlight class="normal"><sp/>&lt;&lt;<sp/>data.data.
+                    <ref refid="de/dac/unionmm_1_1_serialized_union_1a8d0497571c8ac717f7f49226477f13bf"
+                         kindref="member">text
+                    </ref>
+                    <sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;&apos;&quot;</highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>os;
+                </highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal"><ref refid="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362"
+                                               kindref="member">mm::Serialized::Serialized</ref>()<sp/>noexcept<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>type<sp/>=
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a"
+                         kindref="member">mm::INTEGER</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>data.integer<sp/>=<sp/>0;
+                </highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal"><ref refid="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362"
+                                               kindref="member">mm::Serialized::Serialized</ref>(std::string<sp/>data)
+                    <sp/>noexcept
+                </highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>:<sp/>type(<ref
+                        refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5"
+                        kindref="member">mm::TEXT</ref>)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;data.text<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">new</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal">[data.length()<sp/>+<sp/>1];
+                </highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>strcpy(this-&gt;data.text,<sp/>data.c_str());
+                </highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal"><ref refid="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362"
+                                               kindref="member">mm::Serialized::Serialized</ref>(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>data)<sp/>noexcept
+                </highlight>
+            </codeline>
+            <codeline lineno="42">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>:<sp/>type(<ref
+                        refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a"
+                        kindref="member">mm::INTEGER</ref>)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="43">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;data.integer<sp/>=<sp/>data;
+                </highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="45">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="46">
+                <highlight class="normal"><ref refid="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362"
+                                               kindref="member">mm::Serialized::Serialized</ref>(
+                </highlight>
+                <highlight class="keywordtype">double</highlight>
+                <highlight class="normal"><sp/>data)<sp/>noexcept
+                </highlight>
+            </codeline>
+            <codeline lineno="47">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>:<sp/>type(<ref
+                        refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331"
+                        kindref="member">mm::REAL</ref>)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="48">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;data.real<sp/>=<sp/>data;
+                </highlight>
+            </codeline>
+            <codeline lineno="49">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="50">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="51">
+                <highlight class="normal"><ref refid="d3/d4d/structmm_1_1_serialized_1af1414a72ff10e038d96f6f33f352b2dc"
+                                               kindref="member">mm::Serialized::~Serialized</ref>()<sp/>noexcept<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="52">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(type<sp/>==
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5"
+                         kindref="member">mm::TEXT
+                    </ref>
+                    <sp/>and<sp/>data.text<sp/>!=
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">nullptr</highlight>
+                <highlight class="normal">)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="53">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">delete</highlight>
+                <highlight class="normal">[]<sp/>data.text;
+                </highlight>
+            </codeline>
+            <codeline lineno="54">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="55">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="56">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="57">
+                <highlight class="normal"><ref refid="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362"
+                                               kindref="member">mm::Serialized::Serialized</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">mm::Serialized</ref>
+                    <sp/>&amp;old)<sp/>noexcept<sp/>:<sp/>type(old.type)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="58">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(type<sp/>==
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5"
+                         kindref="member">mm::TEXT</ref>)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="59">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;data.text<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">new</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal">[strlen(old.data.text)<sp/>+<sp/>1];
+                </highlight>
+            </codeline>
+            <codeline lineno="60">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>strcpy(this-&gt;data.text,<sp/>old.data.<ref
+                        refid="de/dac/unionmm_1_1_serialized_union_1a8d0497571c8ac717f7f49226477f13bf" kindref="member">
+                    text</ref>);
+                </highlight>
+            </codeline>
+            <codeline lineno="61">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">else</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(type<sp/>==
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a"
+                         kindref="member">mm::INTEGER</ref>)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="62">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;data.integer<sp/>=<sp/>old.data.<ref
+                        refid="de/dac/unionmm_1_1_serialized_union_1ab1b4916d7e61e14280d62aecf668d402" kindref="member">
+                    integer</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="63">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">else</highlight>
+                <highlight class="normal"><sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="64">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;data.real<sp/>=<sp/>old.data.<ref
+                        refid="de/dac/unionmm_1_1_serialized_union_1a315b1f30581d381d4ce1bb980641a200" kindref="member">
+                    real</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="65">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="66">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="67">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="68">
+                <highlight class="normal">
+                    <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">mm::Serialized</ref>
+                    <sp/>&amp;<ref refid="d3/d4d/structmm_1_1_serialized_1a7d108150308172857962c61c94f78fbd"
+                                   kindref="member">mm::Serialized::operator=</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">mm::Serialized</ref>
+                    <sp/>&amp;old)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="69">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">switch</highlight>
+                <highlight class="normal"><sp/>(old.type)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="70">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a"
+                         kindref="member">mm::INTEGER</ref>:
+                </highlight>
+            </codeline>
+            <codeline lineno="71">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;type<sp/>=
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a"
+                         kindref="member">mm::INTEGER</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="72">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;data.integer<sp/>=<sp/>old.data.<ref
+                        refid="de/dac/unionmm_1_1_serialized_union_1ab1b4916d7e61e14280d62aecf668d402" kindref="member">
+                    integer</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="73">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">break</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="74">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331"
+                         kindref="member">mm::REAL</ref>:
+                </highlight>
+            </codeline>
+            <codeline lineno="75">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;type<sp/>=
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331"
+                         kindref="member">mm::REAL</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="76">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;data.real<sp/>=<sp/>old.data.<ref
+                        refid="de/dac/unionmm_1_1_serialized_union_1a315b1f30581d381d4ce1bb980641a200" kindref="member">
+                    real</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="77">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">break</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="78">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5"
+                         kindref="member">mm::TEXT</ref>:
+                </highlight>
+            </codeline>
+            <codeline lineno="79">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;type<sp/>=
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5"
+                         kindref="member">mm::TEXT</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="80">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;data.text<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">new</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal">[strlen(old.data.<ref
+                        refid="de/dac/unionmm_1_1_serialized_union_1a8d0497571c8ac717f7f49226477f13bf" kindref="member">
+                    text</ref>)<sp/>+<sp/>1];
+                </highlight>
+            </codeline>
+            <codeline lineno="81">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>strcpy(this-&gt;data.text,<sp/>old.data.<ref
+                        refid="de/dac/unionmm_1_1_serialized_union_1a8d0497571c8ac717f7f49226477f13bf" kindref="member">
+                    text</ref>);
+                </highlight>
+            </codeline>
+            <codeline lineno="82">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">break</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="83">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="84">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>*
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="85">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="86">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="87">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized_1aa3eb7eb50d6b343993c08a4d369af8b2" kindref="member">
+                        mm::Serialized::get_str</ref>()<sp/>const<sp/>noexcept(false)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="88">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(type<sp/>!=
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5"
+                         kindref="member">mm::TEXT</ref>)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="89">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal"><sp/>std::runtime_error(
+                </highlight>
+                <highlight class="stringliteral">&quot;ERROR<sp/>[Serialized<sp/>get_str]<sp/>-<sp/>the<sp/>object
+                    <sp/>
+                    is<sp/>not<sp/>TEXT!&quot;
+                </highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="90">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="91">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="92">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>std::string(data.text);
+                </highlight>
+            </codeline>
+            <codeline lineno="93">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="94">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="95">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized_1a259c2695619d6ba052fd8a3885a341ef" kindref="member">
+                        mm::Serialized::get_int</ref>()<sp/>const<sp/>noexcept(false)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="96">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(type<sp/>!=
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a"
+                         kindref="member">mm::INTEGER</ref>)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="97">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal"><sp/>std::runtime_error(
+                </highlight>
+                <highlight class="stringliteral">&quot;ERROR<sp/>[Serialized<sp/>get_str]<sp/>-<sp/>the<sp/>object
+                    <sp/>
+                    is<sp/>not<sp/>INTEGER!&quot;
+                </highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="98">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="99">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="100">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>data.integer;
+                </highlight>
+            </codeline>
+            <codeline lineno="101">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="102">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="103">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">double</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized_1acd3c339c1766f6dbc0313669e7582361" kindref="member">
+                        mm::Serialized::get_real</ref>()<sp/>const<sp/>noexcept(false)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="104">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(type<sp/>!=
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331"
+                         kindref="member">mm::REAL</ref>)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="105">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal"><sp/>std::runtime_error(
+                </highlight>
+                <highlight class="stringliteral">&quot;ERROR<sp/>[Serialized<sp/>get_str]<sp/>-<sp/>the<sp/>object
+                    <sp/>
+                    is<sp/>not<sp/>REAL!&quot;
+                </highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="106">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="107">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="108">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>data.real;
+                </highlight>
+            </codeline>
+            <codeline lineno="109">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="110">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="111">
+                <highlight class="normal"><ref refid="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362"
+                                               kindref="member">mm::Serialized::Serialized</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal"><sp/>*c_str)<sp/>noexcept
+                </highlight>
+            </codeline>
+            <codeline lineno="112">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>:
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362" kindref="member">
+                        Serialized</ref>(std::string(c_str))<sp/>{}
+                </highlight>
+            </codeline>
+            <codeline lineno="113">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="114">
+                <highlight class="normal">mm::Serialized::operator<sp/>int()<sp/>const<sp/>noexcept(false)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="115">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized_1a259c2695619d6ba052fd8a3885a341ef" kindref="member">
+                        get_int</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="116">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="117">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="118">
+                <highlight class="normal">mm::Serialized::operator<sp/>std::string()<sp/>const<sp/>noexcept(false)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="119">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized_1aa3eb7eb50d6b343993c08a4d369af8b2" kindref="member">
+                        get_str</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="120">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="121">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="122">
+                <highlight class="normal">mm::Serialized::operator<sp/>double()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="123">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized_1acd3c339c1766f6dbc0313669e7582361" kindref="member">
+                        get_real</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="124">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="125">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="126">
+                <highlight class="normal"><ref refid="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362"
+                                               kindref="member">mm::Serialized::Serialized</ref>(
+                </highlight>
+                <highlight class="keywordtype">float</highlight>
+                <highlight class="normal"><sp/>data)<sp/>noexcept
+                </highlight>
+            </codeline>
+            <codeline lineno="127">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>:
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362" kindref="member">
+                        Serialized</ref>(static_cast&lt;double&gt;(data))<sp/>{}
+                </highlight>
+            </codeline>
+            <codeline lineno="128">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="129">
+                <highlight class="normal"></highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/interfaces/ISerializable.cpp"/>
+    </compounddef>
+</doxygen>

@@ -1,0 +1,140 @@
+\hypertarget{classmm_1_1_configuration}{}\section{Riferimenti per la classe mm\+:\+:Configuration}
+\label{classmm_1_1_configuration}\index{mm\+::\+Configuration@{mm\+::\+Configuration}}
+
+
+Singleton che mantiene le configurazioni dell\textquotesingle{}intera applicazione.  
+
+
+
+
+{\ttfamily \#include $<$Configuration.\+hpp$>$}
+
+
+
+Diagramma di collaborazione per mm\+:\+:Configuration\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{dc/d7c/classmm_1_1_configuration__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmm_1_1_configuration_a71e5c0e1ad7d82d6a14895a4e85d83b7}{Configuration} (const \hyperlink{classmm_1_1_configuration}{Configuration} \&old)=delete
+\item 
+const \hyperlink{classmm_1_1_configuration}{Configuration} \& \hyperlink{classmm_1_1_configuration_a3077aebf459758dce4be716a8ddcb090}{operator=} (const \hyperlink{classmm_1_1_configuration}{Configuration} \&old)=delete
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{classmm_1_1_configuration_a30374c407050b9fb3f05dd3c2c01202d}{get} (const std\+::string \&key) const noexcept(false)
+\begin{DoxyCompactList}\small\item\em Cerca nel file json la chiave {\ttfamily key}, se questa non viene trovata lancia l\textquotesingle{}apposita eccezione altrimenti ritorna l\textquotesingle{}oggetto corrispondente a {\ttfamily key} nel file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membri pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classmm_1_1_configuration}{Configuration} \& \hyperlink{classmm_1_1_configuration_a5cfc5ea56062f53ef9fbd274f6dbe79e}{get\+\_\+instance} () noexcept(false)
+\begin{DoxyCompactList}\small\item\em Ritorna una reference ad un\textquotesingle{}istanza di tipo {\ttfamily \hyperlink{classmm_1_1_configuration}{Configuration}}. \end{DoxyCompactList}\item 
+static const std\+::string \& \hyperlink{classmm_1_1_configuration_a631c8525beb91fb55d72eb6b58d2d68f}{get\+\_\+config\+\_\+file\+\_\+name} ()
+\begin{DoxyCompactList}\small\item\em Ritorna una stringa contente il path dove viene cercato cercato il file json. \end{DoxyCompactList}\item 
+static void \hyperlink{classmm_1_1_configuration_ad526b28d1a7f8c6f854352b840d2d7b4}{set\+\_\+config\+\_\+file\+\_\+name} (const std\+::string \&config\+\_\+file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Serve per impostare il path dove trovare il file di configurazione. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Singleton che mantiene le configurazioni dell\textquotesingle{}intera applicazione. 
+
+I parametri di configurazione dell\textquotesingle{}applicazione devono essere salvati in un file in formato json. La classe si occupa sia di leggere che di fornire un\textquotesingle{}interfaccia semplice per ottenere un parametro dal file 
+
+\subsection{Documentazione dei costruttori e dei distruttori}
+\mbox{\Hypertarget{classmm_1_1_configuration_a71e5c0e1ad7d82d6a14895a4e85d83b7}\label{classmm_1_1_configuration_a71e5c0e1ad7d82d6a14895a4e85d83b7}} 
+\index{mm\+::\+Configuration@{mm\+::\+Configuration}!Configuration@{Configuration}}
+\index{Configuration@{Configuration}!mm\+::\+Configuration@{mm\+::\+Configuration}}
+\subsubsection{\texorpdfstring{Configuration()}{Configuration()}}
+{\footnotesize\ttfamily mm\+::\+Configuration\+::\+Configuration (\begin{DoxyParamCaption}\item[{const \hyperlink{classmm_1_1_configuration}{Configuration} \&}]{old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\subsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{classmm_1_1_configuration_a30374c407050b9fb3f05dd3c2c01202d}\label{classmm_1_1_configuration_a30374c407050b9fb3f05dd3c2c01202d}} 
+\index{mm\+::\+Configuration@{mm\+::\+Configuration}!get@{get}}
+\index{get@{get}!mm\+::\+Configuration@{mm\+::\+Configuration}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T mm\+::\+Configuration\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Cerca nel file json la chiave {\ttfamily key}, se questa non viene trovata lancia l\textquotesingle{}apposita eccezione altrimenti ritorna l\textquotesingle{}oggetto corrispondente a {\ttfamily key} nel file. 
+
+N.\+B. {\ttfamily T} deve essere corrispondente al tipo di dato nel json, altrimenti sarà lanciata un eccezione.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo del dato di configurazione \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametri}
+{\em key} & Chiave da cercare nel file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+Oggetto di tipo {\ttfamily T} contenente i dati presenti nel file json alla chiave {\ttfamily key} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmm_1_1_configuration_a631c8525beb91fb55d72eb6b58d2d68f}\label{classmm_1_1_configuration_a631c8525beb91fb55d72eb6b58d2d68f}} 
+\index{mm\+::\+Configuration@{mm\+::\+Configuration}!get\+\_\+config\+\_\+file\+\_\+name@{get\+\_\+config\+\_\+file\+\_\+name}}
+\index{get\+\_\+config\+\_\+file\+\_\+name@{get\+\_\+config\+\_\+file\+\_\+name}!mm\+::\+Configuration@{mm\+::\+Configuration}}
+\subsubsection{\texorpdfstring{get\+\_\+config\+\_\+file\+\_\+name()}{get\_config\_file\_name()}}
+{\footnotesize\ttfamily const std\+::string \& mm\+::\+Configuration\+::get\+\_\+config\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ritorna una stringa contente il path dove viene cercato cercato il file json. 
+
+\begin{DoxyReturn}{Restituisce}
+Il path del file di configurazione 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmm_1_1_configuration_a5cfc5ea56062f53ef9fbd274f6dbe79e}\label{classmm_1_1_configuration_a5cfc5ea56062f53ef9fbd274f6dbe79e}} 
+\index{mm\+::\+Configuration@{mm\+::\+Configuration}!get\+\_\+instance@{get\+\_\+instance}}
+\index{get\+\_\+instance@{get\+\_\+instance}!mm\+::\+Configuration@{mm\+::\+Configuration}}
+\subsubsection{\texorpdfstring{get\+\_\+instance()}{get\_instance()}}
+{\footnotesize\ttfamily \hyperlink{classmm_1_1_configuration}{mm\+::\+Configuration} \& mm\+::\+Configuration\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Ritorna una reference ad un\textquotesingle{}istanza di tipo {\ttfamily \hyperlink{classmm_1_1_configuration}{Configuration}}. 
+
+Questa funzione non deve mai essere chiamata se prima non è stato chiamato (almeno una volta) il metodo \hyperlink{classmm_1_1_configuration_ad526b28d1a7f8c6f854352b840d2d7b4}{Configuration\+::set\+\_\+config\+\_\+file\+\_\+name()}.
+
+N.\+B. Essendo il distruttore privato non è possibile cancellare l\textquotesingle{}oggetto al di fuori di questa classe
+
+\begin{DoxyReturn}{Restituisce}
+Istanza di \hyperlink{classmm_1_1_configuration}{Configuration} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmm_1_1_configuration_a3077aebf459758dce4be716a8ddcb090}\label{classmm_1_1_configuration_a3077aebf459758dce4be716a8ddcb090}} 
+\index{mm\+::\+Configuration@{mm\+::\+Configuration}!operator=@{operator=}}
+\index{operator=@{operator=}!mm\+::\+Configuration@{mm\+::\+Configuration}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \hyperlink{classmm_1_1_configuration}{Configuration}\& mm\+::\+Configuration\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classmm_1_1_configuration}{Configuration} \&}]{old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classmm_1_1_configuration_ad526b28d1a7f8c6f854352b840d2d7b4}\label{classmm_1_1_configuration_ad526b28d1a7f8c6f854352b840d2d7b4}} 
+\index{mm\+::\+Configuration@{mm\+::\+Configuration}!set\+\_\+config\+\_\+file\+\_\+name@{set\+\_\+config\+\_\+file\+\_\+name}}
+\index{set\+\_\+config\+\_\+file\+\_\+name@{set\+\_\+config\+\_\+file\+\_\+name}!mm\+::\+Configuration@{mm\+::\+Configuration}}
+\subsubsection{\texorpdfstring{set\+\_\+config\+\_\+file\+\_\+name()}{set\_config\_file\_name()}}
+{\footnotesize\ttfamily void mm\+::\+Configuration\+::set\+\_\+config\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{config\+\_\+file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Serve per impostare il path dove trovare il file di configurazione. 
+
+N.\+B. Questa funzione {\bfseries deve} sempre essere chiamata prima di una qualsiasi chiamata a \hyperlink{classmm_1_1_configuration_a5cfc5ea56062f53ef9fbd274f6dbe79e}{Configuration\+::get\+\_\+instance}
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\tt in}  & {\em config\+\_\+file\+\_\+name} & Una stringa contenente il path dove trovare il file \\
+\hline
+\end{DoxyParams}
+
+
+La documentazione per questa classe è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
+\item 
+code/\hyperlink{_configuration_8hpp}{Configuration.\+hpp}\item 
+code/\hyperlink{_configuration_8cpp}{Configuration.\+cpp}\end{DoxyCompactItemize}

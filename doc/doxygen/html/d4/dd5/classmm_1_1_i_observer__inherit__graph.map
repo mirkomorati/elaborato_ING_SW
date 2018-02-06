@@ -1,0 +1,5 @@
+<map id="mm::IObserver" name="mm::IObserver">
+<area shape="rect" id="node2" href="$d7/dfd/classmm_1_1_main_window.html" title="{mm::MainWindow\n||+ init()\l+ getName()\l+ getNextWindow()\l+ update()\l}" alt="" coords="5,140,140,253"/>
+<area shape="rect" id="node3" href="$df/d1a/classmm_1_1_med_h.html" title="Classe che rappresenta il programma in se. " alt="" coords="164,153,251,240"/>
+<area shape="rect" id="node4" href="$da/d81/classmm_1_1_patient_window.html" title="{mm::PatientWindow\n||+ PatientWindow()\l+ initDrugComboBox()\l+ getName()\l+ getNextWindow()\l+ update()\l+ ~PatientWindow()\l}" alt="" coords="275,127,415,267"/>
+</map>

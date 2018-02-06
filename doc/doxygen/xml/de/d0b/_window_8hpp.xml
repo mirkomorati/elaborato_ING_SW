@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="de/d0b/_window_8hpp" kind="file" language="C++">
+        <compoundname>Window.hpp</compoundname>
+        <includes refid="d1/d25/_i_subject_8hpp" local="yes">../interfaces/ISubject.hpp</includes>
+        <includedby refid="db/d18/_login_window_8hpp" local="yes">code/gui/LoginWindow.hpp</includedby>
+        <includedby refid="db/d41/_main_window_8hpp" local="yes">code/gui/MainWindow.hpp</includedby>
+        <includedby refid="dd/de0/_patient_window_8hpp" local="yes">code/gui/PatientWindow.hpp</includedby>
+        <includedby refid="db/d45/_med_h_8hpp" local="yes">code/MedH.hpp</includedby>
+        <incdepgraph>
+            <node id="458">
+                <label>IObserver.hpp</label>
+                <link refid="d5/d40/_i_observer_8hpp"/>
+                <childnode refid="459" relation="include">
+                </childnode>
+                <childnode refid="460" relation="include">
+                </childnode>
+            </node>
+            <node id="455">
+                <label>code/gui/Window.hpp</label>
+                <link refid="de/d0b/_window_8hpp"/>
+                <childnode refid="456" relation="include">
+                </childnode>
+            </node>
+            <node id="459">
+                <label>mutex</label>
+            </node>
+            <node id="460">
+                <label>thread</label>
+            </node>
+            <node id="456">
+                <label>../interfaces/ISubject.hpp</label>
+                <link refid="d1/d25/_i_subject_8hpp"/>
+                <childnode refid="457" relation="include">
+                </childnode>
+                <childnode refid="458" relation="include">
+                </childnode>
+            </node>
+            <node id="457">
+                <label>set</label>
+            </node>
+        </incdepgraph>
+        <invincdepgraph>
+            <node id="467">
+                <label>code/gui/PatientWindow.hpp</label>
+                <link refid="dd/de0/_patient_window_8hpp"/>
+                <childnode refid="466" relation="include">
+                </childnode>
+                <childnode refid="468" relation="include">
+                </childnode>
+            </node>
+            <node id="463">
+                <label>code/gui/LoginWindow.cpp</label>
+                <link refid="d9/d07/_login_window_8cpp"/>
+            </node>
+            <node id="464">
+                <label>code/MedH.cpp</label>
+                <link refid="d7/daf/_med_h_8cpp"/>
+            </node>
+            <node id="461">
+                <label>code/gui/Window.hpp</label>
+                <link refid="de/d0b/_window_8hpp"/>
+                <childnode refid="462" relation="include">
+                </childnode>
+                <childnode refid="465" relation="include">
+                </childnode>
+                <childnode refid="467" relation="include">
+                </childnode>
+                <childnode refid="469" relation="include">
+                </childnode>
+            </node>
+            <node id="470">
+                <label>code/main.cpp</label>
+                <link refid="df/d0a/main_8cpp"/>
+            </node>
+            <node id="469">
+                <label>code/MedH.hpp</label>
+                <link refid="db/d45/_med_h_8hpp"/>
+                <childnode refid="470" relation="include">
+                </childnode>
+                <childnode refid="464" relation="include">
+                </childnode>
+            </node>
+            <node id="465">
+                <label>code/gui/MainWindow.hpp</label>
+                <link refid="db/d41/_main_window_8hpp"/>
+                <childnode refid="466" relation="include">
+                </childnode>
+                <childnode refid="464" relation="include">
+                </childnode>
+            </node>
+            <node id="468">
+                <label>code/gui/PatientWindow.cpp</label>
+                <link refid="d8/d35/_patient_window_8cpp"/>
+            </node>
+            <node id="462">
+                <label>code/gui/LoginWindow.hpp</label>
+                <link refid="db/d18/_login_window_8hpp"/>
+                <childnode refid="463" relation="include">
+                </childnode>
+                <childnode refid="464" relation="include">
+                </childnode>
+            </node>
+            <node id="466">
+                <label>code/gui/MainWindow.cpp</label>
+                <link refid="d5/da5/_main_window_8cpp"/>
+            </node>
+        </invincdepgraph>
+        <innerclass refid="d1/d71/classmm_1_1_window" prot="public">mm::Window</innerclass>
+        <innernamespace refid="d0/d04/namespacemm">mm</innernamespace>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Noè<sp/>Murr<sp/>on<sp/>29/11/2017.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#ifndef<sp/>ELABORATO_ING_SW_WINDOW_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#define<sp/>ELABORATO_ING_SW_WINDOW_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../interfaces/ISubject.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm" kindref="compound">mm</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="15" refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">enum</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="16"
+                      refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca625866ddfe14a6b663c4b95ee85c96f3"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca625866ddfe14a6b663c4b95ee85c96f3"
+                         kindref="member">LOGIN
+                    </ref>
+                    <sp/>=<sp/>0,
+                </highlight>
+            </codeline>
+            <codeline lineno="17"
+                      refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93cafd935ea5cffd64386f1549c51642164e"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93cafd935ea5cffd64386f1549c51642164e"
+                         kindref="member">MAIN</ref>,
+                </highlight>
+            </codeline>
+            <codeline lineno="18"
+                      refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93cadde39aa33fd198a60d8046fbdf5e631f"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93cadde39aa33fd198a60d8046fbdf5e631f"
+                         kindref="member">PATIENT</ref>,
+                </highlight>
+            </codeline>
+            <codeline lineno="19"
+                      refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca59fb5a42d012d17664b7e9e30b54928b"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca59fb5a42d012d17664b7e9e30b54928b"
+                         kindref="member">PRESCRIPTION</ref>,
+                </highlight>
+            </codeline>
+            <codeline lineno="20"
+                      refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca72cf6d0691540154498bec70aa8556f6"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca72cf6d0691540154498bec70aa8556f6"
+                         kindref="member">DRUG
+                    </ref>
+                </highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="23" refid="d1/d71/classmm_1_1_window" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">class
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d1/d71/classmm_1_1_window" kindref="compound">Window</ref>
+                    <sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d1/dd2/classmm_1_1_i_subject" kindref="compound">ISubject</ref>,
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal"><sp/>sigc::trackable<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">virtual</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10" kindref="member">
+                        initDrugComboBox</ref>()<sp/>=<sp/>0;
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>imposta<sp/>tutti<sp/>i<sp/>gestori<sp/>delle<sp/>chiamate<sp/>di
+                    <sp/>
+                    tutti<sp/>gli<sp/>eventi<sp/>che<sp/>lo<sp/>riguardano.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">virtual</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                    <sp/>
+                    <ref refid="d1/d71/classmm_1_1_window_1a942c9125bf42156a9f7b7f561e412fed" kindref="member">
+                        getName</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>=<sp/>0;
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>Ritorna<sp/>il<sp/>nome<sp/>della<sp/>classe,<sp/>serve<sp/>per
+                    <sp/>
+                    capire<sp/>che<sp/>controllore<sp/>è<sp/>i
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>nstanziato
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">virtual</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                    <sp/>
+                    <ref refid="d1/d71/classmm_1_1_window_1a0cd7b4b0feb9505c44503547a161fcd8" kindref="member">
+                        getNextWindow</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>=<sp/>0;
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>Deve<sp/>ritornare<sp/>il<sp/>nome<sp/>della<sp/>classe<sp/>che
+                    <sp/>
+                    dovrà<sp/>essere<sp/>come
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>controllore<sp/>successivamente<sp/>e<sp/>questa,<sp/>se<sp/>il
+                    <sp/>
+                    nome<sp/>è<sp/>uguale<sp/>a
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>getName<sp/>allora<sp/>nulla<sp/>deve<sp/>essere<sp/>cambiato.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_WINDOW_HPP
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/gui/Window.hpp"/>
+    </compounddef>
+</doxygen>

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d7/d9e/classmm_1_1_i_observer" kind="class" language="C++" prot="public" abstract="yes">
+        <compoundname>mm::IObserver</compoundname>
+        <derivedcompoundref refid="d7/dfd/classmm_1_1_main_window" prot="public" virt="non-virtual">mm::MainWindow
+        </derivedcompoundref>
+        <derivedcompoundref refid="df/d1a/classmm_1_1_med_h" prot="private" virt="non-virtual">mm::MedH
+        </derivedcompoundref>
+        <derivedcompoundref refid="da/d81/classmm_1_1_patient_window" prot="public" virt="non-virtual">
+            mm::PatientWindow
+        </derivedcompoundref>
+        <includes refid="d5/d40/_i_observer_8hpp" local="no">IObserver.hpp</includes>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d7/d9e/classmm_1_1_i_observer_1a6422af04f8e9f3ba9d6d412a3bcdd03e"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+                <type>void</type>
+                <definition>virtual void mm::IObserver::update</definition>
+                <argsstring>()=0</argsstring>
+                <name>update</name>
+                <reimplementedby refid="d7/dfd/classmm_1_1_main_window_1ac0fc4875dc774c1b7b1ca59d174a7fc1">update
+                </reimplementedby>
+                <reimplementedby refid="df/d1a/classmm_1_1_med_h_1a6c9a80752905319a9321ce49acfda3fd">update
+                </reimplementedby>
+                <reimplementedby refid="da/d81/classmm_1_1_patient_window_1a461de186f72a8902a9f95a622dc1c02b">update
+                </reimplementedby>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/IObserver.hpp" line="14" column="1"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="61">
+                <label>mm::MainWindow</label>
+                <link refid="d7/dfd/classmm_1_1_main_window"/>
+                <childnode refid="60" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="63">
+                <label>mm::PatientWindow</label>
+                <link refid="da/d81/classmm_1_1_patient_window"/>
+                <childnode refid="60" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="60">
+                <label>mm::IObserver</label>
+                <link refid="d7/d9e/classmm_1_1_i_observer"/>
+            </node>
+            <node id="62">
+                <label>mm::MedH</label>
+                <link refid="df/d1a/classmm_1_1_med_h"/>
+                <childnode refid="60" relation="private-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="64">
+                <label>mm::IObserver</label>
+                <link refid="d7/d9e/classmm_1_1_i_observer"/>
+            </node>
+        </collaborationgraph>
+        <location file="code/interfaces/IObserver.hpp" line="12" column="1" bodyfile="code/interfaces/IObserver.hpp"
+                  bodystart="12" bodyend="16"/>
+        <listofallmembers>
+            <member refid="d7/d9e/classmm_1_1_i_observer_1a6422af04f8e9f3ba9d6d412a3bcdd03e" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::IObserver</scope>
+                <name>update</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

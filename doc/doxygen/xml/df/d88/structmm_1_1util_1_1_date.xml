@@ -1,0 +1,621 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="df/d88/structmm_1_1util_1_1_date" kind="struct" language="C++" prot="public">
+        <compoundname>mm::util::Date</compoundname>
+        <includes refid="d8/d63/_date_8hpp" local="no">Date.hpp</includes>
+        <sectiondef kind="public-attrib">
+            <memberdef kind="variable" id="df/d88/structmm_1_1util_1_1_date_1a6a697c80be4f09cdb4ee400721314d87"
+                       prot="public" static="no" mutable="no">
+                <type>int</type>
+                <definition>int mm::util::Date::day</definition>
+                <argsstring></argsstring>
+                <name>day</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="52" column="1" bodyfile="code/utils/Date.hpp" bodystart="52"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="df/d88/structmm_1_1util_1_1_date_1a018f3e7261b88c9a47aae5b08120b331"
+                       prot="public" static="no" mutable="no">
+                <type>int</type>
+                <definition>int mm::util::Date::month</definition>
+                <argsstring></argsstring>
+                <name>month</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="53" column="1" bodyfile="code/utils/Date.hpp" bodystart="53"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="df/d88/structmm_1_1util_1_1_date_1a318909ff98468f29c7912fa9cffea079"
+                       prot="public" static="no" mutable="no">
+                <type>int</type>
+                <definition>int mm::util::Date::year</definition>
+                <argsstring></argsstring>
+                <name>year</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="54" column="1" bodyfile="code/utils/Date.hpp" bodystart="54"
+                          bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1afe2513fbf246f7f3e61e7d1a06d0e6d0"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::util::Date::Date</definition>
+                <argsstring>(int day, int month, int year)</argsstring>
+                <name>Date</name>
+                <param>
+                    <type>int</type>
+                    <declname>day</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>month</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>year</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Project Elaborato_ING_SW
+                        <simplesect kind="author">
+                            <para>Noè Murr, Mirko Morati <ref refid="df/d88/structmm_1_1util_1_1_date"
+                                                              kindref="compound">Date
+                            </ref> implementation
+                            </para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="15" column="1" bodyfile="code/utils/Date.cpp" bodystart="15"
+                          bodyend="16"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a9aaf2c2d5171e081541831c4a756232e"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::util::Date::Date</definition>
+                <argsstring>()</argsstring>
+                <name>Date</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="17" column="1" bodyfile="code/utils/Date.cpp" bodystart="18"
+                          bodyend="19"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a9065cbdea26e95cfbb6537a5ba06f45d"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::util::Date::Date</definition>
+                <argsstring>(const std::string &amp;str)</argsstring>
+                <name>Date</name>
+                <param>
+                    <type>const std::string &amp;</type>
+                    <declname>str</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="19" column="1" bodyfile="code/utils/Date.cpp" bodystart="143"
+                          bodyend="145"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a9140b9c53f02f7385af15684c81c5ed0"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::util::Date::set_from_str</definition>
+                <argsstring>(std::string str)</argsstring>
+                <name>set_from_str</name>
+                <param>
+                    <type>std::string</type>
+                    <declname>str</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="21" column="1" bodyfile="code/utils/Date.cpp" bodystart="21"
+                          bodyend="28"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1aa32e7e2771581a860a49a59cdbcec8f8"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>const std::string</type>
+                <definition>const std::string mm::util::Date::get_as_text</definition>
+                <argsstring>()</argsstring>
+                <name>get_as_text</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="23" column="1" bodyfile="code/utils/Date.cpp" bodystart="72"
+                          bodyend="77"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1ae4b2c74f7e6ebfed3daaafc999af31ba"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::util::Date::is_valid</definition>
+                <argsstring>()</argsstring>
+                <name>is_valid</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="25" column="1" bodyfile="code/utils/Date.cpp" bodystart="79"
+                          bodyend="86"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a55071cbbf31cd8956cd4a7d5116e0d95"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::util::Date::operator==</definition>
+                <argsstring>(const Date &amp;rhs) const</argsstring>
+                <name>operator==</name>
+                <param>
+                    <type>const <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref> &amp;
+                    </type>
+                    <declname>rhs</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="27" column="1" bodyfile="code/utils/Date.cpp" bodystart="30"
+                          bodyend="34"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a9f2556bcc1150f5542d59b2f9078ee1b"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::util::Date::operator!=</definition>
+                <argsstring>(const Date &amp;rhs) const</argsstring>
+                <name>operator!=</name>
+                <param>
+                    <type>const <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref> &amp;
+                    </type>
+                    <declname>rhs</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="29" column="1" bodyfile="code/utils/Date.cpp" bodystart="36"
+                          bodyend="38"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1acb395628bc3074f0f5f782e39f7ecbbf"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::util::Date::operator&lt;</definition>
+                <argsstring>(const Date &amp;rhs) const</argsstring>
+                <name>operator&lt;</name>
+                <param>
+                    <type>const <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref> &amp;
+                    </type>
+                    <declname>rhs</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="31" column="1" bodyfile="code/utils/Date.cpp" bodystart="40"
+                          bodyend="42"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a5b070fd2cd4a72cf74849abd9244b6d3"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::util::Date::operator&gt;</definition>
+                <argsstring>(const Date &amp;rhs) const</argsstring>
+                <name>operator&gt;</name>
+                <param>
+                    <type>const <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref> &amp;
+                    </type>
+                    <declname>rhs</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="33" column="1" bodyfile="code/utils/Date.cpp" bodystart="44"
+                          bodyend="46"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1aec9077b20de935d88cc03e4c454915a3"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::util::Date::operator&lt;=</definition>
+                <argsstring>(const Date &amp;rhs) const</argsstring>
+                <name>operator&lt;=</name>
+                <param>
+                    <type>const <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref> &amp;
+                    </type>
+                    <declname>rhs</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="35" column="1" bodyfile="code/utils/Date.cpp" bodystart="48"
+                          bodyend="58"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1ab0dc9872f7646c748d492afcff696a0d"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::util::Date::operator&gt;=</definition>
+                <argsstring>(const Date &amp;rhs) const</argsstring>
+                <name>operator&gt;=</name>
+                <param>
+                    <type>const <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref> &amp;
+                    </type>
+                    <declname>rhs</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="37" column="1" bodyfile="code/utils/Date.cpp" bodystart="60"
+                          bodyend="70"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a9aecce8821f2448c0d2d36a5fbf455b1"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::util::Date::operator+=</definition>
+                <argsstring>(int days)</argsstring>
+                <name>operator+=</name>
+                <param>
+                    <type>int</type>
+                    <declname>days</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="39" column="1" bodyfile="code/utils/Date.cpp" bodystart="106"
+                          bodyend="120"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a36a932c021e6e5e9ebed44752b78fd7c"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                </type>
+                <definition>mm::util::Date mm::util::Date::operator+</definition>
+                <argsstring>(int days)</argsstring>
+                <name>operator+</name>
+                <param>
+                    <type>int</type>
+                    <declname>days</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="41" column="1" bodyfile="code/utils/Date.cpp" bodystart="122"
+                          bodyend="137"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1ae875de5d40ab9dfa1f1e22cb8a847b60"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::util::Date::add_months</definition>
+                <argsstring>(unsigned int months)</argsstring>
+                <name>add_months</name>
+                <param>
+                    <type>unsigned int</type>
+                    <declname>months</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="48" column="1" bodyfile="code/utils/Date.cpp" bodystart="147"
+                          bodyend="165"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a5ca08a73148a58f47847a30040eee70b"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::util::Date::add_years</definition>
+                <argsstring>(unsigned int years)</argsstring>
+                <name>add_years</name>
+                <param>
+                    <type>unsigned int</type>
+                    <declname>years</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="50" column="1" bodyfile="code/utils/Date.cpp" bodystart="167"
+                          bodyend="169"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="friend">
+            <memberdef kind="friend" id="df/d88/structmm_1_1util_1_1_date_1a1862604492a841a6b98e1a3061d95b96"
+                       prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+                <type>friend std::ostream &amp;</type>
+                <definition>std::ostream&amp; operator&lt;&lt;</definition>
+                <argsstring>(std::ostream &amp;os, const Date &amp;date)</argsstring>
+                <name>operator&lt;&lt;</name>
+                <param>
+                    <type>std::ostream &amp;</type>
+                    <declname>os</declname>
+                </param>
+                <param>
+                    <type>const <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref> &amp;
+                    </type>
+                    <declname>date</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="43" column="1" bodyfile="code/utils/Date.hpp" bodystart="43"
+                          bodyend="46"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-static-func">
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1ad5ed2bc80bbaa949aa13707a73064345"
+                       prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int mm::util::Date::get_current_day</definition>
+                <argsstring>()</argsstring>
+                <name>get_current_day</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="56" column="1" bodyfile="code/utils/Date.cpp" bodystart="94"
+                          bodyend="98"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1ab3da347f3603aa3a7fe057a5a0d012d2"
+                       prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int mm::util::Date::get_current_month</definition>
+                <argsstring>()</argsstring>
+                <name>get_current_month</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="58" column="1" bodyfile="code/utils/Date.cpp" bodystart="100"
+                          bodyend="104"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1afec17843da4296a2341290107901eaa5"
+                       prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int mm::util::Date::get_current_year</definition>
+                <argsstring>()</argsstring>
+                <name>get_current_year</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="60" column="1" bodyfile="code/utils/Date.cpp" bodystart="88"
+                          bodyend="92"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1af0758fad7ef32fd535db3295136466eb"
+                       prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                </type>
+                <definition>mm::util::Date mm::util::Date::get_current_date</definition>
+                <argsstring>()</argsstring>
+                <name>get_current_date</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="62" column="1" bodyfile="code/utils/Date.cpp" bodystart="139"
+                          bodyend="141"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a89c7d3f4d8af79878a28815ffbe2e536"
+                       prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+                <type>bool</type>
+                <definition>static bool mm::util::Date::is_leap_year</definition>
+                <argsstring>(int year)</argsstring>
+                <name>is_leap_year</name>
+                <param>
+                    <type>int</type>
+                    <declname>year</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Date.hpp" line="64" column="1" bodyfile="code/utils/Date.hpp" bodystart="64"
+                          bodyend="66"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <collaborationgraph>
+            <node id="27">
+                <label>mm::util::Date</label>
+                <link refid="df/d88/structmm_1_1util_1_1_date"/>
+            </node>
+        </collaborationgraph>
+        <location file="code/utils/Date.hpp" line="14" column="1" bodyfile="code/utils/Date.hpp" bodystart="14"
+                  bodyend="67"/>
+        <listofallmembers>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1ae875de5d40ab9dfa1f1e22cb8a847b60" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>add_months</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a5ca08a73148a58f47847a30040eee70b" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>add_years</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1afe2513fbf246f7f3e61e7d1a06d0e6d0" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>Date</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a9aaf2c2d5171e081541831c4a756232e" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>Date</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a9065cbdea26e95cfbb6537a5ba06f45d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>Date</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a6a697c80be4f09cdb4ee400721314d87" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>day</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1aa32e7e2771581a860a49a59cdbcec8f8" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>get_as_text</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1af0758fad7ef32fd535db3295136466eb" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>get_current_date</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1ad5ed2bc80bbaa949aa13707a73064345" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>get_current_day</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1ab3da347f3603aa3a7fe057a5a0d012d2" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>get_current_month</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1afec17843da4296a2341290107901eaa5" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>get_current_year</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a89c7d3f4d8af79878a28815ffbe2e536" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>is_leap_year</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1ae4b2c74f7e6ebfed3daaafc999af31ba" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>is_valid</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a018f3e7261b88c9a47aae5b08120b331" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>month</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a9f2556bcc1150f5542d59b2f9078ee1b" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>operator!=</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a36a932c021e6e5e9ebed44752b78fd7c" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>operator+</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a9aecce8821f2448c0d2d36a5fbf455b1" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>operator+=</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1acb395628bc3074f0f5f782e39f7ecbbf" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>operator&lt;</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a1862604492a841a6b98e1a3061d95b96" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>operator&lt;&lt;</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1aec9077b20de935d88cc03e4c454915a3" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>operator&lt;=</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a55071cbbf31cd8956cd4a7d5116e0d95" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>operator==</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a5b070fd2cd4a72cf74849abd9244b6d3" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>operator&gt;</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1ab0dc9872f7646c748d492afcff696a0d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>operator&gt;=</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a9140b9c53f02f7385af15684c81c5ed0" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>set_from_str</name>
+            </member>
+            <member refid="df/d88/structmm_1_1util_1_1_date_1a318909ff98468f29c7912fa9cffea079" prot="public"
+                    virt="non-virtual">
+                <scope>mm::util::Date</scope>
+                <name>year</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

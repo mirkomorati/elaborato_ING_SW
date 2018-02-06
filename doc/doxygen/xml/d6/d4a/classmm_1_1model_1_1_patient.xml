@@ -1,0 +1,810 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d6/d4a/classmm_1_1model_1_1_patient" kind="class" language="C++" prot="public">
+        <compoundname>mm::model::Patient</compoundname>
+        <basecompoundref refid="dc/df3/classmm_1_1_i_serializable" prot="public" virt="non-virtual">mm::ISerializable
+        </basecompoundref>
+        <includes refid="d0/da9/_patient_8hpp" local="no">Patient.hpp</includes>
+        <innerclass refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model" prot="public">
+            mm::model::Patient::TreeModel
+        </innerclass>
+        <sectiondef kind="public-static-attrib">
+            <memberdef kind="variable" id="d6/d4a/classmm_1_1model_1_1_patient_1af2fe625b7bf2e3308df51daaff966281"
+                       prot="public" static="yes" mutable="no">
+                <type>
+                    <ref refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model" kindref="compound">TreeModel</ref>
+                </type>
+                <definition>mm::model::Patient::TreeModel mm::model::Patient::patientTreeModel</definition>
+                <argsstring></argsstring>
+                <name>patientTreeModel</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Project Elaborato_ING_SW
+                        <simplesect kind="author">
+                            <para>Noè Murr, Mirko Morati</para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="33" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="33" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="d6/d4a/classmm_1_1model_1_1_patient_1a2715b7c0a7671f4c285bebfb7dbf282c"
+                       prot="private" static="no" mutable="no">
+                <type>string</type>
+                <definition>string mm::model::Patient::first_name</definition>
+                <argsstring></argsstring>
+                <name>first_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="85" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="85" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d6/d4a/classmm_1_1model_1_1_patient_1a6c924517d4259c0f664f6d1b9fa15bec"
+                       prot="private" static="no" mutable="no">
+                <type>string</type>
+                <definition>string mm::model::Patient::last_name</definition>
+                <argsstring></argsstring>
+                <name>last_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="86" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="86" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d6/d4a/classmm_1_1model_1_1_patient_1a8e6f4a5987251570bc3520e866a89a62"
+                       prot="private" static="no" mutable="no">
+                <type>string</type>
+                <definition>string mm::model::Patient::fiscal_code</definition>
+                <argsstring></argsstring>
+                <name>fiscal_code</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="87" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="87" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d6/d4a/classmm_1_1model_1_1_patient_1a77ec9a7f6dde2ceeeefaa62ac4a20e4c"
+                       prot="private" static="no" mutable="no">
+                <type>string</type>
+                <definition>string mm::model::Patient::birth_date</definition>
+                <argsstring></argsstring>
+                <name>birth_date</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="88" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="88" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d6/d4a/classmm_1_1model_1_1_patient_1a89c5eaf9e8e19a742cc96bf5bd9e9e2b"
+                       prot="private" static="no" mutable="no">
+                <type>string</type>
+                <definition>string mm::model::Patient::birth_place</definition>
+                <argsstring></argsstring>
+                <name>birth_place</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="89" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="89" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d6/d4a/classmm_1_1model_1_1_patient_1ad8f2f24df48e61637a4dd65a53082edd"
+                       prot="private" static="no" mutable="no">
+                <type>string</type>
+                <definition>string mm::model::Patient::address</definition>
+                <argsstring></argsstring>
+                <name>address</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="90" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="90" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d6/d4a/classmm_1_1model_1_1_patient_1a0426a5295204efd3ee0d5fc78f58a757"
+                       prot="private" static="no" mutable="no">
+                <type>int</type>
+                <definition>int mm::model::Patient::doctor_id</definition>
+                <argsstring></argsstring>
+                <name>doctor_id</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="91" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="91" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d6/d4a/classmm_1_1model_1_1_patient_1aadcb26496bd94cea5f9e4bea74bd6c6b"
+                       prot="private" static="no" mutable="no">
+                <type>vector&lt; string &gt;</type>
+                <definition>vector&lt;string&gt; mm::model::Patient::risk_factors</definition>
+                <argsstring></argsstring>
+                <name>risk_factors</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="92" column="1" bodyfile="code/model/Patient.hpp"
+                          bodystart="92" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1ad15758bdb4995cf5f0b2830eef2b4b43"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::model::Patient::Patient</definition>
+                <argsstring>()=default</argsstring>
+                <name>Patient</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="36" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1ad9b2919b2efa8f1e7f6d405757d73ccb"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::model::Patient::~Patient</definition>
+                <argsstring>()=default</argsstring>
+                <name>~Patient</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="38" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1ae3ac219cd109e8c53daaf9b2758c3a0e"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>map&lt; string, <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref> &gt;
+                </type>
+                <definition>map&lt; string, mm::Serialized &gt; mm::model::Patient::serialize</definition>
+                <argsstring>() const override</argsstring>
+                <name>serialize</name>
+                <reimplements refid="dc/df3/classmm_1_1_i_serializable_1a20a59e2324c8dbf6fefe4d11ae89d0fb">serialize
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="40" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="14" bodyend="31"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a7e1d8cbfc2cdd653281dce87497c6065"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Patient::unserialize</definition>
+                <argsstring>(map&lt; string, Serialized &gt; map) override</argsstring>
+                <name>unserialize</name>
+                <param>
+                    <type>map&lt; string, <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized
+                    </ref> &gt;
+                    </type>
+                    <declname>map</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="42" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="33" bodyend="46"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1abe79da3e4fabd80e039ae4880dfa76cb"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>string</type>
+                <definition>string mm::model::Patient::get_table_name</definition>
+                <argsstring>() const override</argsstring>
+                <name>get_table_name</name>
+                <reimplements refid="dc/df3/classmm_1_1_i_serializable_1a9717e6da47fcbac3ffa2e68152464e0a">
+                    get_table_name
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="44" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="48" bodyend="50"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1ae85640f3cb3d34bb57e1129ef46a0cbf"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>vector&lt; string &gt;</type>
+                <definition>vector&lt; string &gt; mm::model::Patient::get_primary_key</definition>
+                <argsstring>() const override</argsstring>
+                <name>get_primary_key</name>
+                <reimplements refid="dc/df3/classmm_1_1_i_serializable_1a69c0c514e11e386b6cb1fbd03f14da17">
+                    get_primary_key
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="46" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="52" bodyend="54"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a3661b2666d368492511ed3bad79c0389"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string &amp;</type>
+                <definition>const string &amp; mm::model::Patient::get_first_name</definition>
+                <argsstring>() const</argsstring>
+                <name>get_first_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="48" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="56" bodyend="58"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a88c0051957b5a6f172cdc35432505923"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string &amp;</type>
+                <definition>const string &amp; mm::model::Patient::get_last_name</definition>
+                <argsstring>() const</argsstring>
+                <name>get_last_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="50" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="60" bodyend="62"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1ac54b024c619d6f31c72766a01bc5d0ee"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string &amp;</type>
+                <definition>const string &amp; mm::model::Patient::get_birth_date</definition>
+                <argsstring>() const</argsstring>
+                <name>get_birth_date</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="52" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="64" bodyend="66"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a4e4770a79fef23b54026e013586e61fa"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string &amp;</type>
+                <definition>const string &amp; mm::model::Patient::get_birth_place</definition>
+                <argsstring>() const</argsstring>
+                <name>get_birth_place</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="54" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="68" bodyend="70"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a0db04bf2c2ae5b9eb6417f4b6e74a84a"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string &amp;</type>
+                <definition>const string &amp; mm::model::Patient::get_address</definition>
+                <argsstring>() const</argsstring>
+                <name>get_address</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="56" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="72" bodyend="74"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a29590c6ce9d2b19dbdff3330ee5e4523"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string &amp;</type>
+                <definition>const string &amp; mm::model::Patient::get_fiscal_code</definition>
+                <argsstring>() const</argsstring>
+                <name>get_fiscal_code</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="58" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="84" bodyend="86"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a7ab70bc4aafc95f687c29d02ac398e06"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>string</type>
+                <definition>string mm::model::Patient::get_risk_factors</definition>
+                <argsstring>() const</argsstring>
+                <name>get_risk_factors</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="60" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="76" bodyend="82"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a2a33032170e0cadf905dd263a3364b65"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>vector&lt; <ref refid="db/d61/classmm_1_1model_1_1_prescription" kindref="compound">Prescription
+                </ref> &gt;
+                </type>
+                <definition>vector&lt; mm::model::Prescription &gt; mm::model::Patient::get_prescriptions</definition>
+                <argsstring>()</argsstring>
+                <name>get_prescriptions</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="62" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="88" bodyend="100"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a8b8dd8c6de5963a717cf192ca10c605e"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Patient::set_first_name</definition>
+                <argsstring>(const string &amp;first_name)</argsstring>
+                <name>set_first_name</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>first_name</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="64" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="102" bodyend="104"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a4883fc926a6693a2a6fd2b50ab2ded0e"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Patient::set_last_name</definition>
+                <argsstring>(const string &amp;last_name)</argsstring>
+                <name>set_last_name</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>last_name</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="66" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="106" bodyend="108"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a45485e586eb4a908ed4c7a51059fc131"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Patient::set_fiscal_code</definition>
+                <argsstring>(const string &amp;fiscal_code)</argsstring>
+                <name>set_fiscal_code</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>fiscal_code</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="68" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="110" bodyend="112"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1ad73008977024e6ca48e5c687eb27b996"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Patient::set_birth_date</definition>
+                <argsstring>(const string &amp;birth_date)</argsstring>
+                <name>set_birth_date</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>birth_date</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="70" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="114" bodyend="116"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a6dc732f738425cc729764fdf16d667f0"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Patient::set_birth_place</definition>
+                <argsstring>(const string &amp;birth_place)</argsstring>
+                <name>set_birth_place</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>birth_place</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="72" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="118" bodyend="120"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a4e19f86233b55b4dec59f947f1dfe32a"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Patient::set_address</definition>
+                <argsstring>(const string &amp;address)</argsstring>
+                <name>set_address</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>address</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="74" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="122" bodyend="124"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a9dda6ce10296ab196cd5681b8e9a1091"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Patient::set_doctor_id</definition>
+                <argsstring>(int doctor_id)</argsstring>
+                <name>set_doctor_id</name>
+                <param>
+                    <type>int</type>
+                    <declname>doctor_id</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="76" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="126" bodyend="128"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a5f9da3f880ef1adc4bc5443ea407f48f"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::model::Patient::is_valid</definition>
+                <argsstring>()</argsstring>
+                <name>is_valid</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="78" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="138" bodyend="146"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a69367747ebc66b1b4e2fdf961811d83d"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::model::Patient::operator==</definition>
+                <argsstring>(const Patient &amp;rhs) const</argsstring>
+                <name>operator==</name>
+                <param>
+                    <type>const <ref refid="d6/d4a/classmm_1_1model_1_1_patient" kindref="compound">Patient</ref> &amp;
+                    </type>
+                    <declname>rhs</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="80" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="130" bodyend="132"/>
+            </memberdef>
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a96fe68d415c82b084ca75e87aefe8314"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::model::Patient::operator!=</definition>
+                <argsstring>(const Patient &amp;rhs) const</argsstring>
+                <name>operator!=</name>
+                <param>
+                    <type>const <ref refid="d6/d4a/classmm_1_1model_1_1_patient" kindref="compound">Patient</ref> &amp;
+                    </type>
+                    <declname>rhs</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="82" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="134" bodyend="136"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="d6/d4a/classmm_1_1model_1_1_patient_1a03b2c5d72ded745093bbc847b190197d"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::model::Patient::fiscalCodeIsValid</definition>
+                <argsstring>()</argsstring>
+                <name>fiscalCodeIsValid</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Patient.hpp" line="94" column="1" bodyfile="code/model/Patient.cpp"
+                          bodystart="148" bodyend="152"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="120">
+                <label>mm::ISerializable</label>
+                <link refid="dc/df3/classmm_1_1_i_serializable"/>
+            </node>
+            <node id="119">
+                <label>mm::model::Patient</label>
+                <link refid="d6/d4a/classmm_1_1model_1_1_patient"/>
+                <childnode refid="120" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="122">
+                <label>mm::ISerializable</label>
+                <link refid="dc/df3/classmm_1_1_i_serializable"/>
+            </node>
+            <node id="123">
+                <label>mm::model::Patient::TreeModel</label>
+                <link refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model"/>
+                <childnode refid="124" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="121">
+                <label>mm::model::Patient</label>
+                <link refid="d6/d4a/classmm_1_1model_1_1_patient"/>
+                <childnode refid="122" relation="public-inheritance">
+                </childnode>
+                <childnode refid="123" relation="usage">
+                    <edgelabel>+patientTreeModel</edgelabel>
+                </childnode>
+            </node>
+            <node id="124">
+                <label>Gtk::TreeModelColumnRecord</label>
+            </node>
+        </collaborationgraph>
+        <location file="code/model/Patient.hpp" line="19" column="1" bodyfile="code/model/Patient.hpp" bodystart="19"
+                  bodyend="95"/>
+        <listofallmembers>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ad8f2f24df48e61637a4dd65a53082edd" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>address</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a77ec9a7f6dde2ceeeefaa62ac4a20e4c" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>birth_date</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a89c5eaf9e8e19a742cc96bf5bd9e9e2b" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>birth_place</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a0426a5295204efd3ee0d5fc78f58a757" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>doctor_id</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a2715b7c0a7671f4c285bebfb7dbf282c" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>first_name</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a8e6f4a5987251570bc3520e866a89a62" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>fiscal_code</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a03b2c5d72ded745093bbc847b190197d" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>fiscalCodeIsValid</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a0db04bf2c2ae5b9eb6417f4b6e74a84a" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>get_address</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ac54b024c619d6f31c72766a01bc5d0ee" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>get_birth_date</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a4e4770a79fef23b54026e013586e61fa" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>get_birth_place</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a3661b2666d368492511ed3bad79c0389" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>get_first_name</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a29590c6ce9d2b19dbdff3330ee5e4523" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>get_fiscal_code</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a88c0051957b5a6f172cdc35432505923" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>get_last_name</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a2a33032170e0cadf905dd263a3364b65" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>get_prescriptions</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ae85640f3cb3d34bb57e1129ef46a0cbf" prot="public"
+                    virt="virtual">
+                <scope>mm::model::Patient</scope>
+                <name>get_primary_key</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a7ab70bc4aafc95f687c29d02ac398e06" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>get_risk_factors</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1abe79da3e4fabd80e039ae4880dfa76cb" prot="public"
+                    virt="virtual">
+                <scope>mm::model::Patient</scope>
+                <name>get_table_name</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a5f9da3f880ef1adc4bc5443ea407f48f" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>is_valid</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a6c924517d4259c0f664f6d1b9fa15bec" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>last_name</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a96fe68d415c82b084ca75e87aefe8314" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>operator!=</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a69367747ebc66b1b4e2fdf961811d83d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>operator==</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ad15758bdb4995cf5f0b2830eef2b4b43" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>Patient</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1af2fe625b7bf2e3308df51daaff966281" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>patientTreeModel</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1aadcb26496bd94cea5f9e4bea74bd6c6b" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>risk_factors</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ae3ac219cd109e8c53daaf9b2758c3a0e" prot="public"
+                    virt="virtual">
+                <scope>mm::model::Patient</scope>
+                <name>serialize</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a4e19f86233b55b4dec59f947f1dfe32a" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>set_address</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ad73008977024e6ca48e5c687eb27b996" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>set_birth_date</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a6dc732f738425cc729764fdf16d667f0" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>set_birth_place</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a9dda6ce10296ab196cd5681b8e9a1091" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>set_doctor_id</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a8b8dd8c6de5963a717cf192ca10c605e" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>set_first_name</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a45485e586eb4a908ed4c7a51059fc131" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>set_fiscal_code</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a4883fc926a6693a2a6fd2b50ab2ded0e" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>set_last_name</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a7e1d8cbfc2cdd653281dce87497c6065" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>unserialize</name>
+            </member>
+            <member refid="dc/df3/classmm_1_1_i_serializable_1a8e5329b3b23cd0dff0ea8f5f63bab996" prot="public"
+                    virt="pure-virtual" ambiguityscope="mm::ISerializable::">
+                <scope>mm::model::Patient</scope>
+                <name>unserialize</name>
+            </member>
+            <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ad9b2919b2efa8f1e7f6d405757d73ccb" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Patient</scope>
+                <name>~Patient</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

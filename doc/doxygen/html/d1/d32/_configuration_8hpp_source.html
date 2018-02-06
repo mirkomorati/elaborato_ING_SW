@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>MedH: File sorgente code/Configuration.hpp</title>
+    <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../jquery.js"></script>
+    <script type="text/javascript" src="../../dynsections.js"></script>
+    <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../resize.js"></script>
+    <script type="text/javascript" src="../../navtreedata.js"></script>
+    <script type="text/javascript" src="../../navtree.js"></script>
+    <script type="text/javascript">
+        $(document).ready(initResizable);
+    </script>
+    <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../search/searchdata.js"></script>
+    <script type="text/javascript" src="../../search/search.js"></script>
+    <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">MedH
+                        &#160;<span id="projectnumber">0.1.0</span>
+                    </div>
+                    <div id="projectbrief">Elaborato per il corso di Ingegneria del Software 2016-2017, Università degli
+                        Studi di Verona
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <!-- Generato da Doxygen 1.8.13 -->
+    <script type="text/javascript">
+        var searchBox = new SearchBox("searchBox", "../../search", false, 'Cerca');
+    </script>
+    <script type="text/javascript" src="../../menudata.js"></script>
+    <script type="text/javascript" src="../../menu.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            initMenu('../../', true, false, 'search.php', 'Cerca');
+            $(document).ready(function () {
+                init_search();
+            });
+        });
+    </script>
+    <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+    <div id="nav-tree">
+        <div id="nav-tree-contents">
+            <div id="nav-sync" class="sync"></div>
+        </div>
+    </div>
+    <div id="splitbar" style="-moz-user-select:none;"
+         class="ui-resizable-handle">
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        initNavTree('d1/d32/_configuration_8hpp_source.html', '../../');
+    });
+</script>
+<div id="doc-content">
+    <!-- window showing the filter options -->
+    <div id="MSearchSelectWindow"
+         onmouseover="return searchBox.OnSearchSelectShow()"
+         onmouseout="return searchBox.OnSearchSelectHide()"
+         onkeydown="return searchBox.OnSearchSelectKey(event)">
+    </div>
+
+    <!-- iframe showing the search results (closed by default) -->
+    <div id="MSearchResultsWindow">
+        <iframe src="javascript:void(0)" frameborder="0"
+                name="MSearchResults" id="MSearchResults">
+        </iframe>
+    </div>
+
+    <div class="header">
+        <div class="headertitle">
+            <div class="title">Configuration.hpp</div>
+        </div>
+    </div><!--header-->
+    <div class="contents">
+        <a href="../../d1/d32/_configuration_8hpp.html">Vai alla documentazione di questo file.</a>
+        <div class="fragment">
+            <div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span
+                    class="comment">//</span></div>
+            <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by Noè Murr on 03/06/2017.</span>
+            </div>
+            <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span
+                    class="comment">//</span></div>
+            <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+            <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef ELABORATO_ING_SW_CONFIGURATION_HPP</span>
+            </div>
+            <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define ELABORATO_ING_SW_CONFIGURATION_HPP</span>
+            </div>
+            <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+            <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span>
+            </div>
+            <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;json.hpp&gt;</span>
+            </div>
+            <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span>
+            </div>
+            <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+            <div class="line"><a name="l00012"></a><span class="lineno"><a class="line"
+                                                                           href="../../d1/d32/_configuration_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">   12</a></span>&#160;<span
+                    class="keyword">using</span> <a class="code"
+                                                    href="../../d1/d32/_configuration_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a>
+                = <a class="code" href="../../d1/d32/_configuration_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>;
+            </div>
+            <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+            <div class="line"><a name="l00014"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d04/namespacemm.html">   14</a></span>&#160;<span
+                    class="keyword">namespace </span><a class="code" href="../../d0/d04/namespacemm.html">mm</a> {
+            </div>
+            <div class="line"><a name="l00018"></a><span class="lineno"><a class="line"
+                                                                           href="../../d3/d00/classmm_1_1key__not__found__error.html">   18</a></span>&#160;
+                <span class="keyword">class </span><a class="code"
+                                                      href="../../d3/d00/classmm_1_1key__not__found__error.html">key_not_found_error</a>
+                : std::runtime_error {
+            </div>
+            <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span
+                    class="keyword">public</span>:
+            </div>
+            <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <a class="code"
+                                                                                              href="../../d3/d00/classmm_1_1key__not__found__error.html#a2dbffa57a8ad2c3d80151f0d7b75814b">key_not_found_error</a>(<span
+                    class="keyword">const</span> std::string &amp;what);
+            </div>
+            <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+            <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <a class="code"
+                                                                                              href="../../d3/d00/classmm_1_1key__not__found__error.html#a2dbffa57a8ad2c3d80151f0d7b75814b">key_not_found_error</a>(<span
+                    class="keyword">const</span> <span class="keywordtype">char</span> *what);
+            </div>
+            <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+            <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; <span
+                    class="keyword">private</span>:
+            </div>
+            <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; <span
+                    class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span>
+                noexcept <span class="keyword">override</span>;
+            </div>
+            <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+            <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; };</div>
+            <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+            <div class="line"><a name="l00036"></a><span class="lineno"><a class="line"
+                                                                           href="../../dc/d00/classmm_1_1_configuration.html">   36</a></span>&#160;
+                <span class="keyword">class </span><a class="code" href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>
+                {
+            </div>
+            <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; <span
+                    class="keyword">private</span>:
+            </div>
+            <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; <span
+                    class="keyword">static</span> std::string config_file_name;
+            </div>
+            <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; <span
+                    class="keyword">static</span> <a class="code" href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>
+                *instance;
+            </div>
+            <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+            <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; <a class="code"
+                                                                                              href="../../d1/d32/_configuration_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a>
+                config;
+            </div>
+            <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+            <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; <span
+                    class="keyword">private</span>:
+            </div>
+            <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <a class="code"
+                                                                                              href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>()
+                noexcept(<span class="keyword">false</span>);
+            </div>
+            <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+            <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; ~<a class="code"
+                                                                                               href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>();
+            </div>
+            <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+            <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; <span
+                    class="keyword">public</span>:
+            </div>
+            <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; <span class="comment">// disallow default constructor and assign operator</span>
+            </div>
+            <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <a class="code"
+                                                                                              href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>(<span
+                    class="keyword">const</span> <a class="code" href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>
+                &amp;old) = <span class="keyword">delete</span>;
+            </div>
+            <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+            <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; <span
+                    class="keyword">const</span> <a class="code" href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>
+                &amp;operator=(<span class="keyword">const</span> <a class="code"
+                                                                     href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>
+                &amp;old) = <span class="keyword">delete</span>;
+            </div>
+            <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+            <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; <span
+                    class="keyword">static</span> <a class="code" href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>
+                &amp;get_instance() noexcept(<span class="keyword">false</span>);
+            </div>
+            <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+            <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; <span
+                    class="keyword">static</span> <span class="keyword">const</span> std::string &amp;get_config_file_name();
+            </div>
+            <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+            <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; <span
+                    class="keyword">static</span> <span class="keywordtype">void</span> set_config_file_name(<span
+                    class="keyword">const</span> std::string &amp;config_file_name);
+            </div>
+            <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+            <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; <span class="keyword">template</span>&lt;<span
+                    class="keyword">typename</span> T&gt;
+            </div>
+            <div class="line"><a name="l00093"></a><span class="lineno"><a class="line"
+                                                                           href="../../dc/d00/classmm_1_1_configuration.html#a30374c407050b9fb3f05dd3c2c01202d">   93</a></span>&#160;
+                T <span class="keyword">get</span>(<span class="keyword">const</span> std::string &amp;key) <span
+                        class="keyword">const</span> noexcept(<span class="keyword">false</span>) {
+            </div>
+            <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; <span
+                    class="keywordflow">if</span> (config.find(key) == config.end()) {
+            </div>
+            <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; std::stringstream ss;</div>
+            <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; ss &lt;&lt; <span
+                    class="stringliteral">&quot;cannot find key: &quot;</span> &lt;&lt; key;
+            </div>
+            <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; <span class="keywordflow">throw</span>
+                <a class="code"
+                   href="../../d3/d00/classmm_1_1key__not__found__error.html#a2dbffa57a8ad2c3d80151f0d7b75814b">key_not_found_error</a>(ss.str());
+            </div>
+            <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; }</div>
+            <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; <span class="keywordflow">return</span>
+                config[key].get&lt;T&gt;();
+            </div>
+            <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; }</div>
+            <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+            <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; };</div>
+            <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+            <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+            <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+            <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif //ELABORATO_ING_SW_CONFIGURATION_HPP</span>
+            </div>
+            <div class="ttc" id="classmm_1_1key__not__found__error_html">
+                <div class="ttname"><a href="../../d3/d00/classmm_1_1key__not__found__error.html">mm::key_not_found_error</a>
+                </div>
+                <div class="ttdoc">Eccezione che indica che non è stata trovata una key nel file json.</div>
+                <div class="ttdef"><b>Definition:</b> Configuration.hpp:18</div>
+            </div>
+            <div class="ttc" id="namespacemm_html">
+                <div class="ttname"><a href="../../d0/d04/namespacemm.html">mm</a></div>
+                <div class="ttdef"><b>Definition:</b> Configuration.hpp:14</div>
+            </div>
+            <div class="ttc" id="_configuration_8hpp_html_ab701e3ac61a85b337ec5c1abaad6742d">
+                <div class="ttname"><a href="../../d1/d32/_configuration_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a>
+                </div>
+                <div class="ttdeci">nlohmann::json json</div>
+                <div class="ttdef"><b>Definition:</b> Configuration.hpp:12</div>
+            </div>
+            <div class="ttc" id="classmm_1_1_configuration_html">
+                <div class="ttname"><a href="../../dc/d00/classmm_1_1_configuration.html">mm::Configuration</a></div>
+                <div class="ttdoc">Singleton che mantiene le configurazioni dell&amp;#39;intera applicazione.</div>
+                <div class="ttdef"><b>Definition:</b> Configuration.hpp:36</div>
+            </div>
+            <div class="ttc" id="classmm_1_1key__not__found__error_html_a2dbffa57a8ad2c3d80151f0d7b75814b">
+                <div class="ttname"><a
+                        href="../../d3/d00/classmm_1_1key__not__found__error.html#a2dbffa57a8ad2c3d80151f0d7b75814b">mm::key_not_found_error::key_not_found_error</a>
+                </div>
+                <div class="ttdeci">key_not_found_error(const std::string &amp;what)</div>
+                <div class="ttdef"><b>Definition:</b> Configuration.cpp:44</div>
+            </div>
+        </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+        <li class="navelem"><a class="el" href="../../dir_050edd66366d13764f98250ef6db77f6.html">code</a></li>
+        <li class="navelem"><a class="el" href="../../d1/d32/_configuration_8hpp.html">Configuration.hpp</a></li>
+        <li class="footer">Generato da
+            <a href="http://www.doxygen.org/index.html">
+                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13
+        </li>
+    </ul>
+</div>
+</body>
+</html>

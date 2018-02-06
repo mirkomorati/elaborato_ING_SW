@@ -1,0 +1,6 @@
+<map id="mm::Dialog" name="mm::Dialog">
+<area shape="rect" id="node4" href="$d7/d05/classmm_1_1_about_dialog.html" title="{mm::AboutDialog\n||+ AboutDialog()\l+ show()\l+ isActive()\l+ reset()\l+ onResponse()\l}" alt="" coords="5,328,129,455"/>
+<area shape="rect" id="node5" href="$d7/d32/classmm_1_1_add_patient_dialog.html" title="{mm::AddPatientDialog\n||+ AddPatientDialog()\l+ show()\l+ isActive()\l+ ~AddPatientDialog()\l+ reset()\l}" alt="" coords="153,328,307,455"/>
+<area shape="rect" id="node6" href="$db/d16/classmm_1_1_add_prescription_dialog.html" title="{mm::AddPrescriptionDialog\n||+ AddPrescriptionDialog()\l+ show()\l+ dispose()\l+ isActive()\l+ reset()\l}" alt="" coords="330,328,513,455"/>
+<area shape="rect" id="node2" href="$d1/dd2/classmm_1_1_i_subject.html" title="{mm::ISubject\n||+ attach()\l+ detach()\l+ notify()\l+ ~ISubject()\l}" alt="" coords="126,5,225,119"/>
+</map>
