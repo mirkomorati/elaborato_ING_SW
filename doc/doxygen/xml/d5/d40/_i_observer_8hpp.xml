@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d5/d40/_i_observer_8hpp" kind="file" language="C++">
+        <compoundname>IObserver.hpp</compoundname>
+        <includes local="no">mutex</includes>
+        <includes local="no">thread</includes>
+        <includedby refid="d1/d25/_i_subject_8hpp" local="yes">code/interfaces/ISubject.hpp</includedby>
+        <includedby refid="de/dd9/_i_subject_8cpp" local="yes">code/interfaces/ISubject.cpp</includedby>
+        <includedby refid="db/d45/_med_h_8hpp" local="yes">code/MedH.hpp</includedby>
+        <incdepgraph>
+            <node id="471">
+                <label>code/interfaces/IObserver.hpp</label>
+                <link refid="d5/d40/_i_observer_8hpp"/>
+                <childnode refid="472" relation="include">
+                </childnode>
+                <childnode refid="473" relation="include">
+                </childnode>
+            </node>
+            <node id="472">
+                <label>mutex</label>
+            </node>
+            <node id="473">
+                <label>thread</label>
+            </node>
+        </incdepgraph>
+        <invincdepgraph>
+            <node id="487">
+                <label>code/gui/PatientWindow.hpp</label>
+                <link refid="dd/de0/_patient_window_8hpp"/>
+                <childnode refid="479" relation="include">
+                </childnode>
+                <childnode refid="480" relation="include">
+                </childnode>
+            </node>
+            <node id="474">
+                <label>code/interfaces/IObserver.hpp</label>
+                <link refid="d5/d40/_i_observer_8hpp"/>
+                <childnode refid="475" relation="include">
+                </childnode>
+                <childnode refid="495" relation="include">
+                </childnode>
+                <childnode refid="493" relation="include">
+                </childnode>
+            </node>
+            <node id="489">
+                <label>code/gui/LoginWindow.cpp</label>
+                <link refid="d9/d07/_login_window_8cpp"/>
+            </node>
+            <node id="486">
+                <label>code/MedH.cpp</label>
+                <link refid="d7/daf/_med_h_8cpp"/>
+            </node>
+            <node id="491">
+                <label>code/gui/Window.hpp</label>
+                <link refid="de/d0b/_window_8hpp"/>
+                <childnode refid="492" relation="include">
+                </childnode>
+                <childnode refid="485" relation="include">
+                </childnode>
+                <childnode refid="487" relation="include">
+                </childnode>
+                <childnode refid="493" relation="include">
+                </childnode>
+            </node>
+            <node id="478">
+                <label>code/gui/AboutDialog.cpp</label>
+                <link refid="d1/d21/_about_dialog_8cpp"/>
+            </node>
+            <node id="494">
+                <label>code/main.cpp</label>
+                <link refid="df/d0a/main_8cpp"/>
+            </node>
+            <node id="481">
+                <label>code/gui/AddPatientDialog.hpp</label>
+                <link refid="d2/dac/_add_patient_dialog_8hpp"/>
+                <childnode refid="482" relation="include">
+                </childnode>
+                <childnode refid="480" relation="include">
+                </childnode>
+            </node>
+            <node id="483">
+                <label>code/gui/AddPrescriptionDialog.hpp</label>
+                <link refid="d0/d1e/_add_prescription_dialog_8hpp"/>
+                <childnode refid="484" relation="include">
+                </childnode>
+                <childnode refid="480" relation="include">
+                </childnode>
+            </node>
+            <node id="493">
+                <label>code/MedH.hpp</label>
+                <link refid="db/d45/_med_h_8hpp"/>
+                <childnode refid="494" relation="include">
+                </childnode>
+                <childnode refid="486" relation="include">
+                </childnode>
+            </node>
+            <node id="477">
+                <label>code/gui/AboutDialog.hpp</label>
+                <link refid="d7/ded/_about_dialog_8hpp"/>
+                <childnode refid="478" relation="include">
+                </childnode>
+                <childnode refid="479" relation="include">
+                </childnode>
+                <childnode refid="480" relation="include">
+                </childnode>
+            </node>
+            <node id="482">
+                <label>code/gui/AddPatientDialog.cpp</label>
+                <link refid="db/db5/_add_patient_dialog_8cpp"/>
+            </node>
+            <node id="495">
+                <label>code/interfaces/ISubject.cpp</label>
+                <link refid="de/dd9/_i_subject_8cpp"/>
+            </node>
+            <node id="484">
+                <label>code/gui/AddPrescriptionDialog.cpp</label>
+                <link refid="df/de8/_add_prescription_dialog_8cpp"/>
+            </node>
+            <node id="485">
+                <label>code/gui/MainWindow.hpp</label>
+                <link refid="db/d41/_main_window_8hpp"/>
+                <childnode refid="479" relation="include">
+                </childnode>
+                <childnode refid="486" relation="include">
+                </childnode>
+            </node>
+            <node id="490">
+                <label>code/model/Authentication.cpp</label>
+                <link refid="d6/d6e/_authentication_8cpp"/>
+            </node>
+            <node id="480">
+                <label>code/gui/PatientWindow.cpp</label>
+                <link refid="d8/d35/_patient_window_8cpp"/>
+            </node>
+            <node id="492">
+                <label>code/gui/LoginWindow.hpp</label>
+                <link refid="db/d18/_login_window_8hpp"/>
+                <childnode refid="489" relation="include">
+                </childnode>
+                <childnode refid="486" relation="include">
+                </childnode>
+            </node>
+            <node id="476">
+                <label>code/gui/Dialog.hpp</label>
+                <link refid="dc/de6/_dialog_8hpp"/>
+                <childnode refid="477" relation="include">
+                </childnode>
+                <childnode refid="481" relation="include">
+                </childnode>
+                <childnode refid="483" relation="include">
+                </childnode>
+                <childnode refid="485" relation="include">
+                </childnode>
+                <childnode refid="487" relation="include">
+                </childnode>
+            </node>
+            <node id="479">
+                <label>code/gui/MainWindow.cpp</label>
+                <link refid="d5/da5/_main_window_8cpp"/>
+            </node>
+            <node id="475">
+                <label>code/interfaces/ISubject.hpp</label>
+                <link refid="d1/d25/_i_subject_8hpp"/>
+                <childnode refid="476" relation="include">
+                </childnode>
+                <childnode refid="488" relation="include">
+                </childnode>
+                <childnode refid="491" relation="include">
+                </childnode>
+                <childnode refid="495" relation="include">
+                </childnode>
+            </node>
+            <node id="488">
+                <label>code/model/Authentication.hpp</label>
+                <link refid="dc/d00/_authentication_8hpp"/>
+                <childnode refid="482" relation="include">
+                </childnode>
+                <childnode refid="489" relation="include">
+                </childnode>
+                <childnode refid="480" relation="include">
+                </childnode>
+                <childnode refid="486" relation="include">
+                </childnode>
+                <childnode refid="490" relation="include">
+                </childnode>
+            </node>
+        </invincdepgraph>
+        <innerclass refid="d7/d9e/classmm_1_1_i_observer" prot="public">mm::IObserver</innerclass>
+        <innernamespace refid="d0/d04/namespacemm">mm</innernamespace>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Noè<sp/>Murr<sp/>on<sp/>19/09/2017.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#ifndef<sp/>ELABORATO_ING_SW_IOBSERVER_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#define<sp/>ELABORATO_ING_SW_IOBSERVER_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;mutex&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;thread&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm" kindref="compound">mm</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="12" refid="d7/d9e/classmm_1_1_i_observer" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">class
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d7/d9e/classmm_1_1_i_observer" kindref="compound">IObserver</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">virtual</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d7/d9e/classmm_1_1_i_observer_1a6422af04f8e9f3ba9d6d412a3bcdd03e" kindref="member">
+                        update</ref>()<sp/>=<sp/>0;
+                </highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_IOBSERVER_HPP
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/interfaces/IObserver.hpp"/>
+    </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+<map id="mm::ISubject" name="mm::ISubject">
+<area shape="rect" id="node2" href="$df/d35/classmm_1_1_dialog.html" title="{mm::Dialog\n||+ show()\l+ dispose()\l+ isActive()\l+ reset()\l}" alt="" coords="273,213,362,327"/>
+<area shape="rect" id="node6" href="$de/d0e/structmm_1_1model_1_1authentication_1_1_login.html" title="{mm::model::authentication\l::Login\n|+ is_changed\l+ user_name\l+ password\l+ regional_id\l|+ serialize()\l+ unserialize()\l+ get_table_name()\l+ get_primary_key()\l+ logout()\l+ isLog()\l+ get_instance()\l}" alt="" coords="405,167,583,373"/>
+<area shape="rect" id="node7" href="$d1/d71/classmm_1_1_window.html" title="{mm::Window\n||+ init()\l+ getName()\l+ getNextWindow()\l}" alt="" coords="616,220,751,320"/>
+<area shape="rect" id="node3" href="$d7/d05/classmm_1_1_about_dialog.html" title="{mm::AboutDialog\n||+ AboutDialog()\l+ show()\l+ isActive()\l+ reset()\l+ onResponse()\l}" alt="" coords="5,428,129,555"/>
+<area shape="rect" id="node4" href="$d7/d32/classmm_1_1_add_patient_dialog.html" title="{mm::AddPatientDialog\n||+ AddPatientDialog()\l+ show()\l+ isActive()\l+ ~AddPatientDialog()\l+ reset()\l}" alt="" coords="153,428,307,555"/>
+<area shape="rect" id="node5" href="$db/d16/classmm_1_1_add_prescription_dialog.html" title="{mm::AddPrescriptionDialog\n||+ AddPrescriptionDialog()\l+ show()\l+ dispose()\l+ isActive()\l+ reset()\l}" alt="" coords="330,428,513,555"/>
+<area shape="rect" id="node8" href="$d3/d0c/classmm_1_1_login_window.html" title="{mm::LoginWindow\n||+ LoginWindow()\l+ init()\l+ getName()\l+ getNextWindow()\l}" alt="" coords="537,435,672,548"/>
+<area shape="rect" id="node9" href="$d7/dfd/classmm_1_1_main_window.html" title="{mm::MainWindow\n||+ init()\l+ getName()\l+ getNextWindow()\l+ update()\l}" alt="" coords="696,435,831,548"/>
+<area shape="rect" id="node10" href="$da/d81/classmm_1_1_patient_window.html" title="{mm::PatientWindow\n||+ PatientWindow()\l+ initDrugComboBox()\l+ getName()\l+ getNextWindow()\l+ update()\l+ ~PatientWindow()\l}" alt="" coords="855,421,994,561"/>
+</map>

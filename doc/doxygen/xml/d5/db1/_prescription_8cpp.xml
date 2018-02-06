@@ -1,0 +1,1522 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d5/db1/_prescription_8cpp" kind="file" language="C++">
+        <compoundname>Prescription.cpp</compoundname>
+        <includes local="no">map</includes>
+        <includes local="no">sstream</includes>
+        <includes refid="de/d01/_prescription_8hpp" local="yes">Prescription.hpp</includes>
+        <includes refid="d7/d0f/_d_b_master_8hpp" local="yes">../DBMaster.hpp</includes>
+        <incdepgraph>
+            <node id="746">
+                <label>Prescription.hpp</label>
+                <link refid="de/d01/_prescription_8hpp"/>
+                <childnode refid="747" relation="include">
+                </childnode>
+                <childnode refid="748" relation="include">
+                </childnode>
+                <childnode refid="744" relation="include">
+                </childnode>
+                <childnode refid="749" relation="include">
+                </childnode>
+                <childnode refid="750" relation="include">
+                </childnode>
+                <childnode refid="751" relation="include">
+                </childnode>
+            </node>
+            <node id="750">
+                <label>../interfaces/ISerializable.hpp</label>
+                <link refid="d3/d1b/_i_serializable_8hpp"/>
+                <childnode refid="748" relation="include">
+                </childnode>
+                <childnode refid="744" relation="include">
+                </childnode>
+            </node>
+            <node id="754">
+                <label>stdexcept</label>
+            </node>
+            <node id="748">
+                <label>string</label>
+            </node>
+            <node id="744">
+                <label>map</label>
+            </node>
+            <node id="753">
+                <label>sqlite3.h</label>
+            </node>
+            <node id="749">
+                <label>gtkmm/treemodelcolumn.h</label>
+            </node>
+            <node id="747">
+                <label>vector</label>
+            </node>
+            <node id="745">
+                <label>sstream</label>
+            </node>
+            <node id="752">
+                <label>../DBMaster.hpp</label>
+                <link refid="d7/d0f/_d_b_master_8hpp"/>
+                <childnode refid="753" relation="include">
+                </childnode>
+                <childnode refid="748" relation="include">
+                </childnode>
+                <childnode refid="754" relation="include">
+                </childnode>
+                <childnode refid="747" relation="include">
+                </childnode>
+                <childnode refid="750" relation="include">
+                </childnode>
+            </node>
+            <node id="751">
+                <label>Drug.hpp</label>
+                <link refid="dd/df9/_drug_8hpp"/>
+                <childnode refid="748" relation="include">
+                </childnode>
+                <childnode refid="747" relation="include">
+                </childnode>
+                <childnode refid="744" relation="include">
+                </childnode>
+                <childnode refid="749" relation="include">
+                </childnode>
+                <childnode refid="750" relation="include">
+                </childnode>
+            </node>
+            <node id="743">
+                <label>code/model/Prescription.cpp</label>
+                <link refid="d5/db1/_prescription_8cpp"/>
+                <childnode refid="744" relation="include">
+                </childnode>
+                <childnode refid="745" relation="include">
+                </childnode>
+                <childnode refid="746" relation="include">
+                </childnode>
+                <childnode refid="752" relation="include">
+                </childnode>
+            </node>
+        </incdepgraph>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1"></codeline>
+            <codeline lineno="7">
+                <highlight class="preprocessor">#include<sp/>&lt;map&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;sstream&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d01/_prescription_8hpp"
+                                                                        kindref="compound">Prescription.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../DBMaster.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal">
+                    <ref refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model" kindref="compound">
+                        mm::model::Prescription::TreeModel
+                    </ref>
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                         kindref="member">mm::model::Prescription::prescriptionTreeModel</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal">std::map&lt;std::string,<sp/>mm::Serialized&gt;<sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a592ff88dfa9625a383a7b073a64863b1"
+                         kindref="member">mm::model::Prescription::serialize</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>map&lt;string,<sp/>Serialized&gt;<sp/>serialized_map;
+                </highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;patient_id&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>patient_id;
+                </highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;prescription_id&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>prescription_id;
+                </highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;issue_date&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>issue_date;
+                </highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;expire_date&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>expire_date;
+                </highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>stringstream<sp/>ss;
+                </highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>&amp;it<sp/>:<sp/>drug_ids)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>ss<sp/>&lt;&lt;<sp/>it.first<sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;:&quot;</highlight>
+                <highlight class="normal"><sp/>&lt;&lt;<sp/>it.second<sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;;&quot;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>ss.seekp(-1,<sp/>ss.cur);
+                </highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;drug_ids&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>ss.str();
+                </highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>stringstream<sp/>negative_interaction_list;
+                </highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>row<sp/>:<sp/>negative_interactions)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>negative_interaction_list<sp/>&lt;&lt;<sp/>row.first<sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;:&quot;</highlight>
+                <highlight class="normal"><sp/>&lt;&lt;<sp/>row.second<sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;;&quot;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>negative_interaction_list.seekp(-1,<sp/>negative_interaction_list.cur);
+                </highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;negative_interactions&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>negative_interaction_list.str();
+                </highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;used&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>used<sp/>?
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;si&quot;</highlight>
+                <highlight class="normal"><sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;no&quot;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>serialized_map;
+                </highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a6c38e4ee2fca09b18d61aaa214316b9e"
+                         kindref="member">mm::model::Prescription::unserialize</ref>(std::map&lt;std::string,<sp/>
+                    Serialized&gt;<sp/>map)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">using<sp/>namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal"><ref refid="d8/dcc/namespacestd" kindref="compound">std</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="42">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal"><sp/>delimiter<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="charliteral">&apos;;&apos;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="43">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal"><sp/>drug_ids_delimiter<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="charliteral">&apos;:&apos;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="45">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>patient_id<sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;patient_id&quot;</highlight>
+                <highlight class="normal">].get_str();</highlight>
+            </codeline>
+            <codeline lineno="46">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescription_id<sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;prescription_id&quot;</highlight>
+                <highlight class="normal">].get_int();</highlight>
+            </codeline>
+            <codeline lineno="47">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>issue_date<sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;issue_date&quot;</highlight>
+                <highlight class="normal">].get_str();</highlight>
+            </codeline>
+            <codeline lineno="48">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>expire_date<sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;expire_date&quot;</highlight>
+                <highlight class="normal">].get_str();</highlight>
+            </codeline>
+            <codeline lineno="49">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>istringstream<sp/>drug_list(map[
+                </highlight>
+                <highlight class="stringliteral">&quot;drug_ids&quot;</highlight>
+                <highlight class="normal">].get_str());</highlight>
+            </codeline>
+            <codeline lineno="50">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="51">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>tmp;
+                </highlight>
+            </codeline>
+            <codeline lineno="52">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="53">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">while</highlight>
+                <highlight class="normal"><sp/>(getline(drug_list,<sp/>tmp,<sp/>delimiter))<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="54">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">unsigned</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">long</highlight>
+                <highlight class="normal"><sp/>pos<sp/>=<sp/>tmp.find(drug_ids_delimiter);
+                </highlight>
+            </codeline>
+            <codeline lineno="55">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(pos<sp/>==<sp/>string::npos)<sp/>drug_ids.emplace_back(tmp,
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;&quot;</highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="56">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">else</highlight>
+                <highlight class="normal"><sp/>drug_ids.emplace_back(tmp.substr(0,<sp/>pos),<sp/>tmp.substr(pos<sp/>+
+                    <sp/>1));
+                </highlight>
+            </codeline>
+            <codeline lineno="57">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="58">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="59">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>istringstream<sp/>negative_interaction_list(map[
+                </highlight>
+                <highlight class="stringliteral">&quot;negative_interactions&quot;</highlight>
+                <highlight class="normal">].get_str());</highlight>
+            </codeline>
+            <codeline lineno="60">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">while</highlight>
+                <highlight class="normal"><sp/>(getline(negative_interaction_list,<sp/>tmp,
+                    <sp/>
+                </highlight>
+                <highlight class="charliteral">&apos;;&apos;</highlight>
+                <highlight class="normal">))<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="61">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>todo<sp/>questo<sp/>è<sp/>fatto<sp/>male,<sp/>molto<sp/>male
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="62">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>delimiter2<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;:&quot;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="63">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>vector&lt;string&gt;<sp/>results;
+                </highlight>
+            </codeline>
+            <codeline lineno="64">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">size_t</highlight>
+                <highlight class="normal"><sp/>lastOffset<sp/>=<sp/>0;
+                </highlight>
+            </codeline>
+            <codeline lineno="65">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">while</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keyword">true</highlight>
+                <highlight class="normal">)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="66">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">size_t</highlight>
+                <highlight class="normal"><sp/>offset<sp/>=<sp/>tmp.find_first_of(delimiter2,<sp/>lastOffset);
+                </highlight>
+            </codeline>
+            <codeline lineno="67">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>results.push_back(tmp.substr(lastOffset,<sp/>offset<sp/>-<sp/>lastOffset));
+                </highlight>
+            </codeline>
+            <codeline lineno="68">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(offset<sp/>==<sp/>string::npos)
+                </highlight>
+            </codeline>
+            <codeline lineno="69">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">break</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="70">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">else</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="71">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>lastOffset<sp/>=<sp/>offset<sp/>+<sp/>1;
+                </highlight>
+            </codeline>
+            <codeline lineno="72">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="73">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>negative_interactions[results[0]]<sp/>=<sp/>results[1];
+                </highlight>
+            </codeline>
+            <codeline lineno="74">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="75">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>used<sp/>=<sp/>(map[
+                </highlight>
+                <highlight class="stringliteral">&quot;used&quot;</highlight>
+                <highlight class="normal">].get_str()<sp/>==
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;si&quot;</highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="76">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="77">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="78">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a8de9a927dc92c0e0b15dac6f930889e3"
+                         kindref="member">mm::model::Prescription::get_table_name</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="79">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;prescriptions&quot;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="80">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="81">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="82">
+                <highlight class="normal">vector&lt;string&gt;<sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1af521915f8872df18ae4a50ff2a4f59ff"
+                         kindref="member">mm::model::Prescription::get_primary_key</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="83">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>{
+                </highlight>
+                <highlight class="stringliteral">&quot;prescription_id&quot;</highlight>
+                <highlight class="normal">};</highlight>
+            </codeline>
+            <codeline lineno="84">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="85">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="86">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a90cbaab7bb67d3d135e622e58a8f108d"
+                         kindref="member">mm::model::Prescription::get_patient_id</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="87">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>patient_id;
+                </highlight>
+            </codeline>
+            <codeline lineno="88">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="89">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="90">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a6179b066586ebb5a1dc0d8f6a6c11a45"
+                         kindref="member">mm::model::Prescription::get_prescription_id</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="91">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>prescription_id;
+                </highlight>
+            </codeline>
+            <codeline lineno="92">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="93">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="94">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;<ref
+                        refid="db/d61/classmm_1_1model_1_1_prescription_1acb29f51441390f5c0e5c483d82ba1514"
+                        kindref="member">mm::model::Prescription::get_issue_date</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="95">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>issue_date;
+                </highlight>
+            </codeline>
+            <codeline lineno="96">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="97">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="98">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;<ref
+                        refid="db/d61/classmm_1_1model_1_1_prescription_1a11c574c3fafddc2e278c8aec417d5977"
+                        kindref="member">mm::model::Prescription::get_expire_date</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="99">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>expire_date;
+                </highlight>
+            </codeline>
+            <codeline lineno="100">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="101">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="102">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1abbc707b103a6f8b52b94fec5ec7ebf89"
+                         kindref="member">mm::model::Prescription::get_drug_ids_as_string</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="103">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>ostringstream<sp/>ss;
+                </highlight>
+            </codeline>
+            <codeline lineno="104">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>&amp;it<sp/>:<sp/>drug_ids)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="105">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>ss<sp/>&lt;&lt;<sp/>it.first<sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;:<sp/>&quot;
+                </highlight>
+                <highlight class="normal"><sp/>&lt;&lt;<sp/>it.second<sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;;<sp/>&quot;
+                </highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="106">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="107">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>ret<sp/>=<sp/>ss.str();
+                </highlight>
+            </codeline>
+            <codeline lineno="108">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>ret<sp/>=<sp/>ret.substr(0,<sp/>ret.length()<sp/>-<sp/>2);
+                </highlight>
+            </codeline>
+            <codeline lineno="109">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>ret;
+                </highlight>
+            </codeline>
+            <codeline lineno="110">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="111">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="112">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a1656851efd03bd54f3615d90856e9829"
+                         kindref="member">mm::model::Prescription::get_negative_interactions</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="113">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>ostringstream<sp/>ss;
+                </highlight>
+            </codeline>
+            <codeline lineno="114">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>row<sp/>:<sp/>negative_interactions)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="115">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>ss<sp/>&lt;&lt;<sp/>row.first<sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;:<sp/>&quot;
+                </highlight>
+                <highlight class="normal"><sp/>&lt;&lt;<sp/>row.second<sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;;<sp/>&quot;
+                </highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="116">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="117">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>ret<sp/>=<sp/>ss.str();
+                </highlight>
+            </codeline>
+            <codeline lineno="118">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>ret<sp/>=<sp/>ret.substr(0,<sp/>ret.length()<sp/>-<sp/>2);
+                </highlight>
+            </codeline>
+            <codeline lineno="119">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>ret;
+                </highlight>
+            </codeline>
+            <codeline lineno="120">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="121">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="122">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a23ae0807248a2cd86232b11927c9eea2"
+                         kindref="member">mm::model::Prescription::is_used</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="123">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>used;
+                </highlight>
+            </codeline>
+            <codeline lineno="124">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="125">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="126">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>vector&lt;mm::model::Drug&gt;<sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a0dbc18b00e03ec68f3d224d11bf75823"
+                         kindref="member">mm::model::Prescription::get_drugs</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="127">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>vector&lt;Drug&gt;<sp/>toReturn;
+                </highlight>
+            </codeline>
+            <codeline lineno="128">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="129">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>ids<sp/>:<sp/>drug_ids)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="130">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">try</highlight>
+                <highlight class="normal"><sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="131">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Drug<sp/>tmp;
+                </highlight>
+            </codeline>
+            <codeline lineno="132">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="da/d0d/classmm_1_1_d_b_master_1a1f3b04e515b1999d3900353c0054f498" kindref="member">
+                        DBMaster::get_instance</ref>().<ref
+                        refid="da/d0d/classmm_1_1_d_b_master_1a9e8092b67a249a273668ad042a4084e2" kindref="member">
+                    extract_from_db</ref>(tmp,<sp/>{ids.first,<sp/>ids.second});
+                </highlight>
+            </codeline>
+            <codeline lineno="133">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>toReturn.push_back(std::move(tmp));
+                </highlight>
+            </codeline>
+            <codeline lineno="134">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">catch</highlight>
+                <highlight class="normal"><sp/>(record_not_found_error<sp/>&amp;e)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="135">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal"><sp/>std::runtime_error(
+                </highlight>
+                <highlight class="stringliteral">&quot;cannot<sp/>get<sp/>drug<sp/>of<sp/>a<sp/>prescription&quot;
+                </highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="136">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="137">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="138">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>toReturn;
+                </highlight>
+            </codeline>
+            <codeline lineno="139">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="140">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="141">
+                <highlight class="normal"><ref
+                        refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1a3b6f84fdc2b7a9f83e4c9ec7594a534d"
+                        kindref="member">mm::model::Prescription::TreeModel::TreeModel</ref>()<sp/>noexcept<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="142">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(patient_id);
+                </highlight>
+            </codeline>
+            <codeline lineno="143">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(issue_date);
+                </highlight>
+            </codeline>
+            <codeline lineno="144">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(expire_date);
+                </highlight>
+            </codeline>
+            <codeline lineno="145">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(drug_ids);
+                </highlight>
+            </codeline>
+            <codeline lineno="146">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(prescription_id);
+                </highlight>
+            </codeline>
+            <codeline lineno="147">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(negative_interactions);
+                </highlight>
+            </codeline>
+            <codeline lineno="148">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(used);
+                </highlight>
+            </codeline>
+            <codeline lineno="149">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(bill_id);
+                </highlight>
+            </codeline>
+            <codeline lineno="150">
+                <highlight class="normal">}</highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/model/Prescription.cpp"/>
+    </compounddef>
+</doxygen>

@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>MedH: File sorgente code/utils/Time.hpp</title>
+    <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../jquery.js"></script>
+    <script type="text/javascript" src="../../dynsections.js"></script>
+    <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../resize.js"></script>
+    <script type="text/javascript" src="../../navtreedata.js"></script>
+    <script type="text/javascript" src="../../navtree.js"></script>
+    <script type="text/javascript">
+        $(document).ready(initResizable);
+    </script>
+    <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../search/searchdata.js"></script>
+    <script type="text/javascript" src="../../search/search.js"></script>
+    <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">MedH
+                        &#160;<span id="projectnumber">0.1.0</span>
+                    </div>
+                    <div id="projectbrief">Elaborato per il corso di Ingegneria del Software 2016-2017, Università degli
+                        Studi di Verona
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <!-- Generato da Doxygen 1.8.13 -->
+    <script type="text/javascript">
+        var searchBox = new SearchBox("searchBox", "../../search", false, 'Cerca');
+    </script>
+    <script type="text/javascript" src="../../menudata.js"></script>
+    <script type="text/javascript" src="../../menu.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            initMenu('../../', true, false, 'search.php', 'Cerca');
+            $(document).ready(function () {
+                init_search();
+            });
+        });
+    </script>
+    <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+    <div id="nav-tree">
+        <div id="nav-tree-contents">
+            <div id="nav-sync" class="sync"></div>
+        </div>
+    </div>
+    <div id="splitbar" style="-moz-user-select:none;"
+         class="ui-resizable-handle">
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        initNavTree('d8/d3a/_time_8hpp_source.html', '../../');
+    });
+</script>
+<div id="doc-content">
+    <!-- window showing the filter options -->
+    <div id="MSearchSelectWindow"
+         onmouseover="return searchBox.OnSearchSelectShow()"
+         onmouseout="return searchBox.OnSearchSelectHide()"
+         onkeydown="return searchBox.OnSearchSelectKey(event)">
+    </div>
+
+    <!-- iframe showing the search results (closed by default) -->
+    <div id="MSearchResultsWindow">
+        <iframe src="javascript:void(0)" frameborder="0"
+                name="MSearchResults" id="MSearchResults">
+        </iframe>
+    </div>
+
+    <div class="header">
+        <div class="headertitle">
+            <div class="title">Time.hpp</div>
+        </div>
+    </div><!--header-->
+    <div class="contents">
+        <a href="../../d8/d3a/_time_8hpp.html">Vai alla documentazione di questo file.</a>
+        <div class="fragment">
+            <div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+            <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _TIME_H</span>
+            </div>
+            <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define _TIME_H</span>
+            </div>
+            <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+            <div class="line"><a name="l00010"></a><span class="lineno"><a class="line"
+                                                                           href="../../d4/d0c/struct_time.html">   10</a></span>&#160;<span
+                    class="keyword">struct </span><a class="code" href="../../d4/d0c/struct_time.html">Time</a> {
+            </div>
+            <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; <span class="keywordtype">void</span>
+                <a class="code" href="../../d4/d0c/struct_time.html#ab9a42b7809f059a61d89123fb6cd0cf5">get_time</a>();
+            </div>
+            <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+            <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; <span class="keywordtype">void</span>
+                <a class="code" href="../../d4/d0c/struct_time.html#a76fe3565c8497fe80720123aa0b988fb">set_time</a>();
+            </div>
+            <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+            <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span
+                    class="keyword">private</span>:
+            </div>
+            <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; <span
+                    class="keywordtype">int</span> seconds;
+            </div>
+            <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; <span
+                    class="keywordtype">int</span> minutes;
+            </div>
+            <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span
+                    class="keywordtype">int</span> hours;
+            </div>
+            <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+            <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+            <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif //_TIME_H</span>
+            </div>
+            <div class="ttc" id="struct_time_html">
+                <div class="ttname"><a href="../../d4/d0c/struct_time.html">Time</a></div>
+                <div class="ttdef"><b>Definition:</b> Time.hpp:10</div>
+            </div>
+            <div class="ttc" id="struct_time_html_a76fe3565c8497fe80720123aa0b988fb">
+                <div class="ttname"><a href="../../d4/d0c/struct_time.html#a76fe3565c8497fe80720123aa0b988fb">Time::set_time</a>
+                </div>
+                <div class="ttdeci">void set_time()</div>
+                <div class="ttdef"><b>Definition:</b> Time.cpp:18</div>
+            </div>
+            <div class="ttc" id="struct_time_html_ab9a42b7809f059a61d89123fb6cd0cf5">
+                <div class="ttname"><a href="../../d4/d0c/struct_time.html#ab9a42b7809f059a61d89123fb6cd0cf5">Time::get_time</a>
+                </div>
+                <div class="ttdeci">void get_time()</div>
+                <div class="ttdef"><b>Definition:</b> Time.cpp:14</div>
+            </div>
+        </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+        <li class="navelem"><a class="el" href="../../dir_050edd66366d13764f98250ef6db77f6.html">code</a></li>
+        <li class="navelem"><a class="el" href="../../dir_b52c80b7fda602b2cf8039a593632a4a.html">utils</a></li>
+        <li class="navelem"><a class="el" href="../../d8/d3a/_time_8hpp.html">Time.hpp</a></li>
+        <li class="footer">Generato da
+            <a href="http://www.doxygen.org/index.html">
+                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13
+        </li>
+    </ul>
+</div>
+</body>
+</html>

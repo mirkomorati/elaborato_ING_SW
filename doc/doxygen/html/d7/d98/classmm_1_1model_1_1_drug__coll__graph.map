@@ -1,0 +1,4 @@
+<map id="mm::model::Drug" name="mm::model::Drug">
+<area shape="rect" id="node2" href="$dc/df3/classmm_1_1_i_serializable.html" title="Funziona come un interfaccia, qualunque classe che erediti da questa potrà essere letta o scritta nel..." alt="" coords="5,141,146,255"/>
+<area shape="rect" id="node3" href="$d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model.html" title="{mm::model::Drug::TreeModel\n|+ name\l+ pharmaceutical_form\l+ ATC_classification\l+ contraindications\l+ active_principles\l+ price\l|+ TreeModel()\l}" alt="" coords="169,128,363,268"/>
+</map>

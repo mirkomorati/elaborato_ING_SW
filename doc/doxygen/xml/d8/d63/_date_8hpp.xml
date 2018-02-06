@@ -1,0 +1,1093 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d8/d63/_date_8hpp" kind="file" language="C++">
+        <compoundname>Date.hpp</compoundname>
+        <includes local="no">iostream</includes>
+        <includedby refid="dc/d55/_widgets_8hpp" local="yes">code/gui/Widgets.hpp</includedby>
+        <includedby refid="dd/de0/_patient_window_8hpp" local="yes">code/gui/PatientWindow.hpp</includedby>
+        <includedby refid="dd/dc5/_doctor_8hpp" local="yes">code/model/Doctor.hpp</includedby>
+        <includedby refid="d7/d49/_widgets_8cpp" local="yes">code/gui/Widgets.cpp</includedby>
+        <includedby refid="dc/d1f/_date_8cpp" local="yes">code/utils/Date.cpp</includedby>
+        <includedby refid="d9/da3/_date_by_8hpp" local="yes">code/utils/DateBy.hpp</includedby>
+        <incdepgraph>
+            <node id="784">
+                <label>code/utils/Date.hpp</label>
+                <link refid="d8/d63/_date_8hpp"/>
+                <childnode refid="785" relation="include">
+                </childnode>
+            </node>
+            <node id="785">
+                <label>iostream</label>
+            </node>
+        </incdepgraph>
+        <invincdepgraph>
+            <node id="793">
+                <label>code/gui/PatientWindow.hpp</label>
+                <link refid="dd/de0/_patient_window_8hpp"/>
+                <childnode refid="794" relation="include">
+                </childnode>
+                <childnode refid="790" relation="include">
+                </childnode>
+            </node>
+            <node id="799">
+                <label>code/utils/DateBy.hpp</label>
+                <link refid="d9/da3/_date_by_8hpp"/>
+                <childnode refid="800" relation="include">
+                </childnode>
+            </node>
+            <node id="796">
+                <label>code/model/Doctor.hpp</label>
+                <link refid="dd/dc5/_doctor_8hpp"/>
+                <childnode refid="790" relation="include">
+                </childnode>
+                <childnode refid="797" relation="include">
+                </childnode>
+            </node>
+            <node id="788">
+                <label>code/gui/AddPatientDialog.hpp</label>
+                <link refid="d2/dac/_add_patient_dialog_8hpp"/>
+                <childnode refid="789" relation="include">
+                </childnode>
+                <childnode refid="790" relation="include">
+                </childnode>
+            </node>
+            <node id="791">
+                <label>code/gui/AddPrescriptionDialog.hpp</label>
+                <link refid="d0/d1e/_add_prescription_dialog_8hpp"/>
+                <childnode refid="792" relation="include">
+                </childnode>
+                <childnode refid="790" relation="include">
+                </childnode>
+            </node>
+            <node id="789">
+                <label>code/gui/AddPatientDialog.cpp</label>
+                <link refid="db/db5/_add_patient_dialog_8cpp"/>
+            </node>
+            <node id="795">
+                <label>code/gui/Widgets.cpp</label>
+                <link refid="d7/d49/_widgets_8cpp"/>
+            </node>
+            <node id="792">
+                <label>code/gui/AddPrescriptionDialog.cpp</label>
+                <link refid="df/de8/_add_prescription_dialog_8cpp"/>
+            </node>
+            <node id="786">
+                <label>code/utils/Date.hpp</label>
+                <link refid="d8/d63/_date_8hpp"/>
+                <childnode refid="787" relation="include">
+                </childnode>
+                <childnode refid="793" relation="include">
+                </childnode>
+                <childnode refid="796" relation="include">
+                </childnode>
+                <childnode refid="795" relation="include">
+                </childnode>
+                <childnode refid="798" relation="include">
+                </childnode>
+                <childnode refid="799" relation="include">
+                </childnode>
+            </node>
+            <node id="790">
+                <label>code/gui/PatientWindow.cpp</label>
+                <link refid="d8/d35/_patient_window_8cpp"/>
+            </node>
+            <node id="787">
+                <label>code/gui/Widgets.hpp</label>
+                <link refid="dc/d55/_widgets_8hpp"/>
+                <childnode refid="788" relation="include">
+                </childnode>
+                <childnode refid="791" relation="include">
+                </childnode>
+                <childnode refid="793" relation="include">
+                </childnode>
+                <childnode refid="795" relation="include">
+                </childnode>
+            </node>
+            <node id="794">
+                <label>code/gui/MainWindow.cpp</label>
+                <link refid="d5/da5/_main_window_8cpp"/>
+            </node>
+            <node id="800">
+                <label>code/utils/DateBy.cpp</label>
+                <link refid="d3/d69/_date_by_8cpp"/>
+            </node>
+            <node id="797">
+                <label>code/model/Doctor.cpp</label>
+                <link refid="d3/da6/_doctor_8cpp"/>
+            </node>
+            <node id="798">
+                <label>code/utils/Date.cpp</label>
+                <link refid="dc/d1f/_date_8cpp"/>
+            </node>
+        </invincdepgraph>
+        <innerclass refid="df/d88/structmm_1_1util_1_1_date" prot="public">mm::util::Date</innerclass>
+        <innernamespace refid="d0/d04/namespacemm">mm</innernamespace>
+        <innernamespace refid="d1/d50/namespacemm_1_1util">mm::util</innernamespace>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1"></codeline>
+            <codeline lineno="7">
+                <highlight class="preprocessor">#ifndef<sp/>_DATE_H
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#define<sp/>_DATE_H
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;iostream&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm" kindref="compound">mm</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="13" refid="d1/d50/namespacemm_1_1util" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal">util<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="14" refid="df/d88/structmm_1_1util_1_1_date" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">struct
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a9aaf2c2d5171e081541831c4a756232e" kindref="member">
+                        Date</ref>(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a6a697c80be4f09cdb4ee400721314d87" kindref="member">
+                        day</ref>,
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a018f3e7261b88c9a47aae5b08120b331" kindref="member">
+                        month</ref>,
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a318909ff98468f29c7912fa9cffea079" kindref="member">
+                        year</ref>);
+                </highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a9aaf2c2d5171e081541831c4a756232e" kindref="member">
+                        Date</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a9aaf2c2d5171e081541831c4a756232e" kindref="member">
+                        Date</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;str);
+                </highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a9140b9c53f02f7385af15684c81c5ed0" kindref="member">
+                        set_from_str</ref>(std::string<sp/>str);
+                </highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1aa32e7e2771581a860a49a59cdbcec8f8" kindref="member">
+                        get_as_text</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1ae4b2c74f7e6ebfed3daaafc999af31ba" kindref="member">
+                        is_valid</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a55071cbbf31cd8956cd4a7d5116e0d95" kindref="member">
+                        operator==</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                    <sp/>&amp;rhs)
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a9f2556bcc1150f5542d59b2f9078ee1b" kindref="member">
+                        operator!=</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                    <sp/>&amp;rhs)
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1acb395628bc3074f0f5f782e39f7ecbbf" kindref="member">
+                        operator&lt;</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                    <sp/>&amp;rhs)
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a5b070fd2cd4a72cf74849abd9244b6d3" kindref="member">
+                        operator&gt;</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                    <sp/>&amp;rhs)
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1aec9077b20de935d88cc03e4c454915a3" kindref="member">
+                        operator&lt;=</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                    <sp/>&amp;rhs)
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1ab0dc9872f7646c748d492afcff696a0d" kindref="member">
+                        operator&gt;=</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                    <sp/>&amp;rhs)
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a9aecce8821f2448c0d2d36a5fbf455b1" kindref="member">
+                        operator+=</ref>(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>days);
+                </highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a36a932c021e6e5e9ebed44752b78fd7c" kindref="member">
+                        operator+</ref>(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>days);
+                </highlight>
+            </codeline>
+            <codeline lineno="42">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="43" refid="df/d88/structmm_1_1util_1_1_date_1a1862604492a841a6b98e1a3061d95b96"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">friend</highlight>
+                <highlight class="normal"><sp/>std::ostream<sp/>&amp;<ref
+                        refid="df/d88/structmm_1_1util_1_1_date_1a1862604492a841a6b98e1a3061d95b96" kindref="member">
+                    operator&lt;&lt;</ref>(std::ostream<sp/>&amp;os,
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                    <sp/>&amp;date)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>os<sp/>&lt;&lt;<sp/>date.
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a6a697c80be4f09cdb4ee400721314d87" kindref="member">
+                        day
+                    </ref>
+                    <sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;/&quot;</highlight>
+                <highlight class="normal"><sp/>&lt;&lt;<sp/>(date.
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a018f3e7261b88c9a47aae5b08120b331" kindref="member">
+                        month
+                    </ref>
+                    <sp/>&lt;<sp/>10<sp/>?
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;0&quot;</highlight>
+                <highlight class="normal"><sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;&quot;</highlight>
+                <highlight class="normal">)<sp/>&lt;&lt;<sp/>date.
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a018f3e7261b88c9a47aae5b08120b331" kindref="member">
+                        month
+                    </ref>
+                    <sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;/&quot;</highlight>
+                <highlight class="normal"><sp/>&lt;&lt;<sp/>date.
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a318909ff98468f29c7912fa9cffea079" kindref="member">
+                        year
+                    </ref>
+                    <sp/>&lt;&lt;<sp/>std::endl;
+                </highlight>
+            </codeline>
+            <codeline lineno="45">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>os;
+                </highlight>
+            </codeline>
+            <codeline lineno="46">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="47">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="48">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1ae875de5d40ab9dfa1f1e22cb8a847b60" kindref="member">
+                        add_months</ref>(
+                </highlight>
+                <highlight class="keywordtype">unsigned</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>months);
+                </highlight>
+            </codeline>
+            <codeline lineno="49">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="50">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a5ca08a73148a58f47847a30040eee70b" kindref="member">
+                        add_years</ref>(
+                </highlight>
+                <highlight class="keywordtype">unsigned</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>years);
+                </highlight>
+            </codeline>
+            <codeline lineno="51">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="52" refid="df/d88/structmm_1_1util_1_1_date_1a6a697c80be4f09cdb4ee400721314d87"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a6a697c80be4f09cdb4ee400721314d87" kindref="member">
+                        day</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="53" refid="df/d88/structmm_1_1util_1_1_date_1a018f3e7261b88c9a47aae5b08120b331"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a018f3e7261b88c9a47aae5b08120b331" kindref="member">
+                        month</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="54" refid="df/d88/structmm_1_1util_1_1_date_1a318909ff98468f29c7912fa9cffea079"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a318909ff98468f29c7912fa9cffea079" kindref="member">
+                        year</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="55">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="56">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1ad5ed2bc80bbaa949aa13707a73064345" kindref="member">
+                        get_current_day</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="57">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="58">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1ab3da347f3603aa3a7fe057a5a0d012d2" kindref="member">
+                        get_current_month</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="59">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="60">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1afec17843da4296a2341290107901eaa5" kindref="member">
+                        get_current_year</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="61">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="62">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">Date</ref>
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1af0758fad7ef32fd535db3295136466eb" kindref="member">
+                        get_current_date</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="63">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="64" refid="df/d88/structmm_1_1util_1_1_date_1a89c7d3f4d8af79878a28815ffbe2e536"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">inline</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a89c7d3f4d8af79878a28815ffbe2e536" kindref="member">
+                        is_leap_year</ref>(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>year)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="65">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>(year<sp/>%<sp/>4<sp/>==<sp/>0<sp/>and<sp/>year<sp/>%<sp/>100<sp/>!=<sp/>
+                    0)<sp/>or<sp/>year<sp/>%<sp/>400<sp/>==<sp/>0;
+                </highlight>
+            </codeline>
+            <codeline lineno="66">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="67">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="68">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="69">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="70">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#endif<sp/>//_DATE_H
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/utils/Date.hpp"/>
+    </compounddef>
+</doxygen>

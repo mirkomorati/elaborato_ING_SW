@@ -1,0 +1,12 @@
+<map id="code/gui/PatientWindow.hpp" name="code/gui/PatientWindow.hpp">
+<area shape="rect" id="node2" href="$de/d0b/_window_8hpp.html" title="Window.hpp" alt="" coords="108,79,202,104"/>
+<area shape="rect" id="node8" href="$dc/de6/_dialog_8hpp.html" title="Dialog.hpp" alt="" coords="255,79,340,104"/>
+<area shape="rect" id="node10" href="$d5/d46/_custom_widgets_8hpp.html" title="view/CustomWidgets.hpp" alt="" coords="1198,79,1370,104"/>
+<area shape="rect" id="node28" href="$d8/d63/_date_8hpp.html" title="../utils/Date.hpp" alt="" coords="2079,152,2193,177"/>
+<area shape="rect" id="node30" href="$dc/d55/_widgets_8hpp.html" title="Widgets.hpp" alt="" coords="2089,79,2184,104"/>
+<area shape="rect" id="node3" href="$d1/d25/_i_subject_8hpp.html" title="../interfaces/ISubject.hpp" alt="" coords="40,152,208,177"/>
+<area shape="rect" id="node5" href="$d5/d40/_i_observer_8hpp.html" title="IObserver.hpp" alt="" coords="24,225,129,251"/>
+<area shape="rect" id="node21" href="$de/d01/_prescription_8hpp.html" title="../../model/Prescription.hpp" alt="" coords="1720,152,1900,177"/>
+<area shape="rect" id="node26" href="$d3/d1b/_i_serializable_8hpp.html" title="../interfaces/ISerializable.hpp" alt="" coords="1637,299,1830,324"/>
+<area shape="rect" id="node27" href="$dd/df9/_drug_8hpp.html" title="Drug.hpp" alt="" coords="1771,225,1848,251"/>
+</map>

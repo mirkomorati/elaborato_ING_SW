@@ -1,0 +1,720 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d6/d6e/_authentication_8cpp" kind="file" language="C++">
+        <compoundname>Authentication.cpp</compoundname>
+        <includes refid="dc/d00/_authentication_8hpp" local="yes">Authentication.hpp</includes>
+        <incdepgraph>
+            <node id="625">
+                <label>IObserver.hpp</label>
+                <link refid="d5/d40/_i_observer_8hpp"/>
+                <childnode refid="626" relation="include">
+                </childnode>
+                <childnode refid="627" relation="include">
+                </childnode>
+            </node>
+            <node id="621">
+                <label>interfaces/ISerializable.hpp</label>
+                <link refid="d3/d1b/_i_serializable_8hpp"/>
+                <childnode refid="618" relation="include">
+                </childnode>
+                <childnode refid="622" relation="include">
+                </childnode>
+            </node>
+            <node id="619">
+                <label>stdexcept</label>
+            </node>
+            <node id="618">
+                <label>string</label>
+            </node>
+            <node id="622">
+                <label>map</label>
+            </node>
+            <node id="617">
+                <label>sqlite3.h</label>
+            </node>
+            <node id="628">
+                <label>tuple</label>
+            </node>
+            <node id="620">
+                <label>vector</label>
+            </node>
+            <node id="614">
+                <label>code/model/Authentication.cpp</label>
+                <link refid="d6/d6e/_authentication_8cpp"/>
+                <childnode refid="615" relation="include">
+                </childnode>
+            </node>
+            <node id="616">
+                <label>../DBMaster.hpp</label>
+                <link refid="d7/d0f/_d_b_master_8hpp"/>
+                <childnode refid="617" relation="include">
+                </childnode>
+                <childnode refid="618" relation="include">
+                </childnode>
+                <childnode refid="619" relation="include">
+                </childnode>
+                <childnode refid="620" relation="include">
+                </childnode>
+                <childnode refid="621" relation="include">
+                </childnode>
+            </node>
+            <node id="626">
+                <label>mutex</label>
+            </node>
+            <node id="627">
+                <label>thread</label>
+            </node>
+            <node id="623">
+                <label>../interfaces/ISubject.hpp</label>
+                <link refid="d1/d25/_i_subject_8hpp"/>
+                <childnode refid="624" relation="include">
+                </childnode>
+                <childnode refid="625" relation="include">
+                </childnode>
+            </node>
+            <node id="624">
+                <label>set</label>
+            </node>
+            <node id="615">
+                <label>Authentication.hpp</label>
+                <link refid="dc/d00/_authentication_8hpp"/>
+                <childnode refid="616" relation="include">
+                </childnode>
+                <childnode refid="623" relation="include">
+                </childnode>
+                <childnode refid="620" relation="include">
+                </childnode>
+                <childnode refid="628" relation="include">
+                </childnode>
+            </node>
+        </incdepgraph>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Mirko<sp/>Morati<sp/>on<sp/>04/07/17.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/d00/_authentication_8hpp"
+                                                                        kindref="compound">Authentication.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d54/namespacemm_1_1model_1_1authentication_1aeb56a39665f657663af73f37a6341f11"
+                         kindref="member">mm::model::authentication::check_login</ref>(std::string<sp/>usr,<sp/>
+                    std::string<sp/>psw)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Login<sp/>login;
+                </highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">try</highlight>
+                <highlight class="normal"><sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>DBMaster::get_instance().extract_from_db(login,<sp/>std::move(usr));
+                </highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">catch</highlight>
+                <highlight class="normal"><sp/>(record_not_found_error<sp/>&amp;e)<sp/>{
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>wrong<sp/>username
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">false</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(login.password<sp/>!=<sp/>psw)
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">false</highlight>
+                <highlight class="normal">;
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>wrong<sp/>password
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>login.is_changed<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">true</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>login<sp/>successful
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Login::get_instance()<sp/>=<sp/>login;
+                </highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">true</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">};</highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">map&lt;string,<sp/>mm::Serialized&gt;<sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a69ec1a769ef1659b8ed39d5e23c24333"
+                         kindref="member">mm::model::authentication::Login::serialize</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>std::map&lt;std::string,<sp/>mm::Serialized&gt;<sp/>serialized;
+                </highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized[
+                </highlight>
+                <highlight class="stringliteral">&quot;name&quot;</highlight>
+                <highlight class="normal">]<sp/>=
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aeb7a295a6770bf778d747903045fe288"
+                         kindref="member">user_name</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized[
+                </highlight>
+                <highlight class="stringliteral">&quot;password&quot;</highlight>
+                <highlight class="normal">]<sp/>=
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1adc6b1c53cf3e012f10c8b315a1df364f"
+                         kindref="member">password</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized[
+                </highlight>
+                <highlight class="stringliteral">&quot;regional_id&quot;</highlight>
+                <highlight class="normal">]<sp/>=
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a3b3c96185f5ad0c1e9ea15cd401ce064"
+                         kindref="member">regional_id</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>serialized;
+                </highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1ac2429ce08624b0c425feced836b77d62"
+                         kindref="member">mm::model::authentication::Login::unserialize</ref>(map&lt;string,<sp/>
+                    mm::Serialized&gt;<sp/>map)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aeb7a295a6770bf778d747903045fe288"
+                         kindref="member">user_name
+                    </ref>
+                    <sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;name&quot;</highlight>
+                <highlight class="normal">].get_str();</highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1adc6b1c53cf3e012f10c8b315a1df364f"
+                         kindref="member">password
+                    </ref>
+                    <sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;password&quot;</highlight>
+                <highlight class="normal">].get_str();</highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a3b3c96185f5ad0c1e9ea15cd401ce064"
+                         kindref="member">regional_id
+                    </ref>
+                    <sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;regional_id&quot;</highlight>
+                <highlight class="normal">].get_int();</highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1afc72adef91be3d97ce4751b8a2357613"
+                         kindref="member">mm::model::authentication::Login::get_table_name</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;login&quot;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="42">
+                <highlight class="normal">vector&lt;string&gt;<sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a56f5da26be2d64baa78d0c81d99c8221"
+                         kindref="member">mm::model::authentication::Login::get_primary_key</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="43">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>{
+                </highlight>
+                <highlight class="stringliteral">&quot;name&quot;</highlight>
+                <highlight class="normal">};</highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="45">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="46">
+                <highlight class="normal">
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">
+                        mm::model::authentication::Login
+                    </ref>
+                    <sp/>&amp;<ref
+                        refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a37112a637ed012c96a96c5a2366f4220"
+                        kindref="member">mm::model::authentication::Login::get_instance</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="47">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal"><sp/>Login<sp/>instance;
+                </highlight>
+            </codeline>
+            <codeline lineno="48">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="49">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>instance;
+                </highlight>
+            </codeline>
+            <codeline lineno="50">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="51">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="52">
+                <highlight class="normal">mm::model::authentication::Login::Login()<sp/>:
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aeb7a295a6770bf778d747903045fe288"
+                         kindref="member">user_name</ref>(
+                </highlight>
+                <highlight class="stringliteral">&quot;&quot;</highlight>
+                <highlight class="normal">),
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1adc6b1c53cf3e012f10c8b315a1df364f"
+                         kindref="member">password</ref>(
+                </highlight>
+                <highlight class="stringliteral">&quot;&quot;</highlight>
+                <highlight class="normal">),
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a3b3c96185f5ad0c1e9ea15cd401ce064"
+                         kindref="member">regional_id</ref>(-999),
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aa74e292b2be0f1e2146576108e74db97"
+                         kindref="member">is_changed</ref>(false)<sp/>{}
+                </highlight>
+            </codeline>
+            <codeline lineno="53">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="54">
+                <highlight class="normal">
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">
+                        mm::model::authentication::Login
+                    </ref>
+                    <sp/>&amp;
+                </highlight>
+            </codeline>
+            <codeline lineno="55">
+                <highlight class="normal">mm::model::authentication::Login::operator=(</highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">
+                        mm::model::authentication::Login
+                    </ref>
+                    <sp/>&amp;other)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="56">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;is_changed<sp/>=<sp/>other.<ref
+                        refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aa74e292b2be0f1e2146576108e74db97"
+                        kindref="member">is_changed</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="57">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;password<sp/>=<sp/>other.<ref
+                        refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1adc6b1c53cf3e012f10c8b315a1df364f"
+                        kindref="member">password</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="58">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;user_name<sp/>=<sp/>other.<ref
+                        refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aeb7a295a6770bf778d747903045fe288"
+                        kindref="member">user_name</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="59">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;regional_id<sp/>=<sp/>other.<ref
+                        refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a3b3c96185f5ad0c1e9ea15cd401ce064"
+                        kindref="member">regional_id</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="60">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="61">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>*
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="62">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="63">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="64">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a23843b088a1c1e0a668e9013ca6768ad"
+                         kindref="member">mm::model::authentication::Login::logout</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="65">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>password<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;&quot;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="66">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>user_name<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;&quot;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="67">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>regional_id<sp/>=<sp/>-999;
+                </highlight>
+            </codeline>
+            <codeline lineno="68">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>is_changed<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">true</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="69">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="70">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="71">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aec29ca0fab75c7691c7939970646b39b"
+                         kindref="member">mm::model::authentication::Login::isLog</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="72">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>regional_id<sp/>!=<sp/>-999;
+                </highlight>
+            </codeline>
+            <codeline lineno="73">
+                <highlight class="normal">}</highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/model/Authentication.cpp"/>
+    </compounddef>
+</doxygen>

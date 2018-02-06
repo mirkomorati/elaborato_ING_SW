@@ -1,0 +1,566 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d0/d1e/_add_prescription_dialog_8hpp" kind="file" language="C++">
+        <compoundname>AddPrescriptionDialog.hpp</compoundname>
+        <includes local="no">gtkmm/entry.h</includes>
+        <includes local="no">gtkmm/comboboxtext.h</includes>
+        <includes refid="dc/de6/_dialog_8hpp" local="yes">Dialog.hpp</includes>
+        <includes refid="dc/d55/_widgets_8hpp" local="yes">Widgets.hpp</includes>
+        <includedby refid="df/de8/_add_prescription_dialog_8cpp" local="yes">code/gui/AddPrescriptionDialog.cpp
+        </includedby>
+        <includedby refid="d8/d35/_patient_window_8cpp" local="yes">code/gui/PatientWindow.cpp</includedby>
+        <incdepgraph>
+            <node id="155">
+                <label>IObserver.hpp</label>
+                <link refid="d5/d40/_i_observer_8hpp"/>
+                <childnode refid="156" relation="include">
+                </childnode>
+                <childnode refid="157" relation="include">
+                </childnode>
+            </node>
+            <node id="149">
+                <label>gtkmm/entry.h</label>
+            </node>
+            <node id="159">
+                <label>fmt/format.h</label>
+            </node>
+            <node id="148">
+                <label>code/gui/AddPrescriptionDialog.hpp</label>
+                <link refid="d0/d1e/_add_prescription_dialog_8hpp"/>
+                <childnode refid="149" relation="include">
+                </childnode>
+                <childnode refid="150" relation="include">
+                </childnode>
+                <childnode refid="151" relation="include">
+                </childnode>
+                <childnode refid="158" relation="include">
+                </childnode>
+            </node>
+            <node id="160">
+                <label>../utils/Date.hpp</label>
+                <link refid="d8/d63/_date_8hpp"/>
+                <childnode refid="161" relation="include">
+                </childnode>
+            </node>
+            <node id="161">
+                <label>iostream</label>
+            </node>
+            <node id="158">
+                <label>Widgets.hpp</label>
+                <link refid="dc/d55/_widgets_8hpp"/>
+                <childnode refid="149" relation="include">
+                </childnode>
+                <childnode refid="150" relation="include">
+                </childnode>
+                <childnode refid="159" relation="include">
+                </childnode>
+                <childnode refid="160" relation="include">
+                </childnode>
+            </node>
+            <node id="152">
+                <label>sigc++/trackable.h</label>
+            </node>
+            <node id="156">
+                <label>mutex</label>
+            </node>
+            <node id="151">
+                <label>Dialog.hpp</label>
+                <link refid="dc/de6/_dialog_8hpp"/>
+                <childnode refid="152" relation="include">
+                </childnode>
+                <childnode refid="153" relation="include">
+                </childnode>
+            </node>
+            <node id="157">
+                <label>thread</label>
+            </node>
+            <node id="153">
+                <label>../interfaces/ISubject.hpp</label>
+                <link refid="d1/d25/_i_subject_8hpp"/>
+                <childnode refid="154" relation="include">
+                </childnode>
+                <childnode refid="155" relation="include">
+                </childnode>
+            </node>
+            <node id="154">
+                <label>set</label>
+            </node>
+            <node id="150">
+                <label>gtkmm/comboboxtext.h</label>
+            </node>
+        </incdepgraph>
+        <invincdepgraph>
+            <node id="162">
+                <label>code/gui/AddPrescriptionDialog.hpp</label>
+                <link refid="d0/d1e/_add_prescription_dialog_8hpp"/>
+                <childnode refid="163" relation="include">
+                </childnode>
+                <childnode refid="164" relation="include">
+                </childnode>
+            </node>
+            <node id="163">
+                <label>code/gui/AddPrescriptionDialog.cpp</label>
+                <link refid="df/de8/_add_prescription_dialog_8cpp"/>
+            </node>
+            <node id="164">
+                <label>code/gui/PatientWindow.cpp</label>
+                <link refid="d8/d35/_patient_window_8cpp"/>
+            </node>
+        </invincdepgraph>
+        <innerclass refid="db/d16/classmm_1_1_add_prescription_dialog" prot="public">mm::AddPrescriptionDialog
+        </innerclass>
+        <innernamespace refid="d0/d04/namespacemm">mm</innernamespace>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Mirko<sp/>Morati<sp/>on<sp/>30/11/17.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#ifndef<sp/>ELABORATO_ING_SW_ADDPRESCRIPTIONDIALOG_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#define<sp/>ELABORATO_ING_SW_ADDPRESCRIPTIONDIALOG_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;gtkmm/entry.h&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;gtkmm/comboboxtext.h&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/de6/_dialog_8hpp" kindref="compound">
+                    Dialog.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/d55/_widgets_8hpp" kindref="compound">
+                    Widgets.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm" kindref="compound">mm</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="14" refid="db/d16/classmm_1_1_add_prescription_dialog" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">class
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="db/d16/classmm_1_1_add_prescription_dialog" kindref="compound">AddPrescriptionDialog
+                    </ref>
+                    <sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d35/classmm_1_1_dialog" kindref="compound">Dialog</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="db/d16/classmm_1_1_add_prescription_dialog_1a0956469781e124fbfd283212bf1796ec"
+                         kindref="member">AddPrescriptionDialog</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d16/classmm_1_1_add_prescription_dialog_1aa1c86141b2d45e141684bd99d557b8e4"
+                         kindref="member">show</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">override</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d16/classmm_1_1_add_prescription_dialog_1aacb58c7617be2323d91cd5ab2f28e354"
+                         kindref="member">dispose</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">override</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d16/classmm_1_1_add_prescription_dialog_1a4ff93500e8fd90512dc4575147b2c910"
+                         kindref="member">isActive</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">override</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d16/classmm_1_1_add_prescription_dialog_1a6ace04587432a197436bb04c7b68d60d"
+                         kindref="member">reset</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">override</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">private</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal"><sp/>is_active;
+                </highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>okHandler();
+                </highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>cancelHandler();
+                </highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::Button<sp/>*ok_button;
+                </highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::Button<sp/>*cancel_button;
+                </highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                    <sp/>addPatientId;
+                </highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                    <sp/>addPrescriptionId;
+                </highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::ComboBoxText<sp/>*addDrugId1;
+                </highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::ComboBoxText<sp/>*addDrugId2;
+                </highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::ComboBoxText<sp/>*addDrugId3;
+                </highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::ComboBoxText<sp/>*addDrugId4;
+                </highlight>
+            </codeline>
+            <codeline lineno="42">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::ComboBoxText<sp/>*addDrugId5;
+                </highlight>
+            </codeline>
+            <codeline lineno="43">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller" kindref="compound">DateController</ref>
+                    <sp/>issueDate;
+                </highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller" kindref="compound">DateController</ref>
+                    <sp/>expireDate;
+                </highlight>
+            </codeline>
+            <codeline lineno="45">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="46">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="47">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="48">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_ADDPRESCRIPTIONDIALOG_HPP
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/gui/AddPrescriptionDialog.hpp"/>
+    </compounddef>
+</doxygen>

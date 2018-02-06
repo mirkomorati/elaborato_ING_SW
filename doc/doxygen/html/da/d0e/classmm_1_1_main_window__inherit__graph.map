@@ -1,0 +1,5 @@
+<map id="mm::MainWindow" name="mm::MainWindow">
+<area shape="rect" id="node2" href="$d1/d71/classmm_1_1_window.html" title="{mm::Window\n||+ initDrugComboBox()\l+ getName()\l+ getNextWindow()\l}" alt="" coords="42,167,177,267"/>
+<area shape="rect" id="node3" href="$d1/dd2/classmm_1_1_i_subject.html" title="{mm::ISubject\n||+ attach()\l+ detach()\l+ notify()\l+ ~ISubject()\l}" alt="" coords="5,5,104,119"/>
+<area shape="rect" id="node5" href="$d7/d9e/classmm_1_1_i_observer.html" title="{mm::IObserver\n||+ update()\l}" alt="" coords="201,180,311,253"/>
+</map>

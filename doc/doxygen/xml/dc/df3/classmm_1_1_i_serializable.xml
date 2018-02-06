@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="dc/df3/classmm_1_1_i_serializable" kind="class" language="C++" prot="public" abstract="yes">
+        <compoundname>mm::ISerializable</compoundname>
+        <derivedcompoundref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" prot="public"
+                            virt="non-virtual">mm::model::authentication::Login
+        </derivedcompoundref>
+        <derivedcompoundref refid="d6/d2e/classmm_1_1model_1_1_doctor" prot="public" virt="non-virtual">
+            mm::model::Doctor
+        </derivedcompoundref>
+        <derivedcompoundref refid="db/d9b/classmm_1_1model_1_1_drug" prot="public" virt="non-virtual">mm::model::Drug
+        </derivedcompoundref>
+        <derivedcompoundref refid="d6/d4a/classmm_1_1model_1_1_patient" prot="public" virt="non-virtual">
+            mm::model::Patient
+        </derivedcompoundref>
+        <derivedcompoundref refid="db/d61/classmm_1_1model_1_1_prescription" prot="public" virt="non-virtual">
+            mm::model::Prescription
+        </derivedcompoundref>
+        <includes refid="d3/d1b/_i_serializable_8hpp" local="no">ISerializable.hpp</includes>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="dc/df3/classmm_1_1_i_serializable_1a20a59e2324c8dbf6fefe4d11ae89d0fb"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+                <type>std::map&lt; std::string, <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">
+                    Serialized
+                </ref> &gt;
+                </type>
+                <definition>virtual std::map&lt;std::string, Serialized&gt; mm::ISerializable::serialize</definition>
+                <argsstring>() const =0</argsstring>
+                <name>serialize</name>
+                <reimplementedby
+                        refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a69ec1a769ef1659b8ed39d5e23c24333">
+                    serialize
+                </reimplementedby>
+                <reimplementedby refid="db/d61/classmm_1_1model_1_1_prescription_1a592ff88dfa9625a383a7b073a64863b1">
+                    serialize
+                </reimplementedby>
+                <reimplementedby refid="d6/d4a/classmm_1_1model_1_1_patient_1ae3ac219cd109e8c53daaf9b2758c3a0e">
+                    serialize
+                </reimplementedby>
+                <reimplementedby refid="db/d9b/classmm_1_1model_1_1_drug_1a5d4fa5bf5e4700f833547c5114764c7b">serialize
+                </reimplementedby>
+                <reimplementedby refid="d6/d2e/classmm_1_1model_1_1_doctor_1a2171a9cb9c8a24ad0c0331edae957910">
+                    serialize
+                </reimplementedby>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="100" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="dc/df3/classmm_1_1_i_serializable_1a8e5329b3b23cd0dff0ea8f5f63bab996"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+                <type>void</type>
+                <definition>virtual void mm::ISerializable::unserialize</definition>
+                <argsstring>(std::map&lt; std::string, Serialized &gt;)=0</argsstring>
+                <name>unserialize</name>
+                <param>
+                    <type>std::map&lt; std::string, <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">
+                        Serialized
+                    </ref> &gt;
+                    </type>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="104" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="dc/df3/classmm_1_1_i_serializable_1a9717e6da47fcbac3ffa2e68152464e0a"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+                <type>std::string</type>
+                <definition>virtual std::string mm::ISerializable::get_table_name</definition>
+                <argsstring>() const =0</argsstring>
+                <name>get_table_name</name>
+                <reimplementedby
+                        refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1afc72adef91be3d97ce4751b8a2357613">
+                    get_table_name
+                </reimplementedby>
+                <reimplementedby refid="db/d61/classmm_1_1model_1_1_prescription_1a8de9a927dc92c0e0b15dac6f930889e3">
+                    get_table_name
+                </reimplementedby>
+                <reimplementedby refid="d6/d4a/classmm_1_1model_1_1_patient_1abe79da3e4fabd80e039ae4880dfa76cb">
+                    get_table_name
+                </reimplementedby>
+                <reimplementedby refid="db/d9b/classmm_1_1model_1_1_drug_1a7fa9dbb569b89f397d4b865b778b3751">
+                    get_table_name
+                </reimplementedby>
+                <reimplementedby refid="d6/d2e/classmm_1_1model_1_1_doctor_1af4c37e48f9e5ff26f2295678f10afaa3">
+                    get_table_name
+                </reimplementedby>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="107" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="dc/df3/classmm_1_1_i_serializable_1a69c0c514e11e386b6cb1fbd03f14da17"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+                <type>std::vector&lt; std::string &gt;</type>
+                <definition>virtual std::vector&lt;std::string&gt; mm::ISerializable::get_primary_key</definition>
+                <argsstring>() const =0</argsstring>
+                <name>get_primary_key</name>
+                <reimplementedby
+                        refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a56f5da26be2d64baa78d0c81d99c8221">
+                    get_primary_key
+                </reimplementedby>
+                <reimplementedby refid="db/d61/classmm_1_1model_1_1_prescription_1af521915f8872df18ae4a50ff2a4f59ff">
+                    get_primary_key
+                </reimplementedby>
+                <reimplementedby refid="d6/d4a/classmm_1_1model_1_1_patient_1ae85640f3cb3d34bb57e1129ef46a0cbf">
+                    get_primary_key
+                </reimplementedby>
+                <reimplementedby refid="db/d9b/classmm_1_1model_1_1_drug_1a019770ab95f95f34bbc204c4c3860bfa">
+                    get_primary_key
+                </reimplementedby>
+                <reimplementedby refid="d6/d2e/classmm_1_1model_1_1_doctor_1a935989cbe2274076c2b409126d4faccd">
+                    get_primary_key
+                </reimplementedby>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="110" column="1"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+            <para>Funziona come un interfaccia, qualunque classe che erediti da questa potrà essere letta o scritta nel
+                database dal singleton <ref refid="da/d0d/classmm_1_1_d_b_master" kindref="compound">DBMaster</ref>.
+            </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="68">
+                <label>mm::model::Drug</label>
+                <link refid="db/d9b/classmm_1_1model_1_1_drug"/>
+                <childnode refid="65" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="65">
+                <label>mm::ISerializable</label>
+                <link refid="dc/df3/classmm_1_1_i_serializable"/>
+            </node>
+            <node id="70">
+                <label>mm::model::Prescription</label>
+                <link refid="db/d61/classmm_1_1model_1_1_prescription"/>
+                <childnode refid="65" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="67">
+                <label>mm::model::Doctor</label>
+                <link refid="d6/d2e/classmm_1_1model_1_1_doctor"/>
+                <childnode refid="65" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="69">
+                <label>mm::model::Patient</label>
+                <link refid="d6/d4a/classmm_1_1model_1_1_patient"/>
+                <childnode refid="65" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="66">
+                <label>mm::model::authentication::Login</label>
+                <link refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login"/>
+                <childnode refid="65" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="71">
+                <label>mm::ISerializable</label>
+                <link refid="dc/df3/classmm_1_1_i_serializable"/>
+            </node>
+        </collaborationgraph>
+        <location file="code/interfaces/ISerializable.hpp" line="96" column="1"
+                  bodyfile="code/interfaces/ISerializable.hpp" bodystart="96" bodyend="111"/>
+        <listofallmembers>
+            <member refid="dc/df3/classmm_1_1_i_serializable_1a69c0c514e11e386b6cb1fbd03f14da17" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::ISerializable</scope>
+                <name>get_primary_key</name>
+            </member>
+            <member refid="dc/df3/classmm_1_1_i_serializable_1a9717e6da47fcbac3ffa2e68152464e0a" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::ISerializable</scope>
+                <name>get_table_name</name>
+            </member>
+            <member refid="dc/df3/classmm_1_1_i_serializable_1a20a59e2324c8dbf6fefe4d11ae89d0fb" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::ISerializable</scope>
+                <name>serialize</name>
+            </member>
+            <member refid="dc/df3/classmm_1_1_i_serializable_1a8e5329b3b23cd0dff0ea8f5f63bab996" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::ISerializable</scope>
+                <name>unserialize</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

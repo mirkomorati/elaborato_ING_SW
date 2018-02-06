@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.13">
+    <compounddef id="d4/d0c/struct_time" kind="struct" language="C++" prot="public">
+        <compoundname>Time</compoundname>
+        <includes refid="d8/d3a/_time_8hpp" local="no">Time.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="d4/d0c/struct_time_1a4eda0725cd2272762ceae3336ca07db6" prot="private"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int Time::seconds</definition>
+                <argsstring></argsstring>
+                <name>seconds</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Time.hpp" line="16" column="1" bodyfile="code/utils/Time.hpp" bodystart="16"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d4/d0c/struct_time_1acdca8b13b904057dfec90b68f3092bc4" prot="private"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int Time::minutes</definition>
+                <argsstring></argsstring>
+                <name>minutes</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Time.hpp" line="17" column="1" bodyfile="code/utils/Time.hpp" bodystart="17"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d4/d0c/struct_time_1aa207ff7d820b4c32f22e1474a931b195" prot="private"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int Time::hours</definition>
+                <argsstring></argsstring>
+                <name>hours</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Time.hpp" line="18" column="1" bodyfile="code/utils/Time.hpp" bodystart="18"
+                          bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d4/d0c/struct_time_1ab9a42b7809f059a61d89123fb6cd0cf5" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Time::get_time</definition>
+                <argsstring>()</argsstring>
+                <name>get_time</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Project Elaborato_ING_SW
+                        <simplesect kind="author">
+                            <para>Noè Murr, Mirko Morati <ref refid="d4/d0c/struct_time" kindref="compound">Time</ref> implementation
+                            </para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Time.hpp" line="11" column="1" bodyfile="code/utils/Time.cpp" bodystart="14"
+                          bodyend="16"/>
+            </memberdef>
+            <memberdef kind="function" id="d4/d0c/struct_time_1a76fe3565c8497fe80720123aa0b988fb" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Time::set_time</definition>
+                <argsstring>()</argsstring>
+                <name>set_time</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/Time.hpp" line="13" column="1" bodyfile="code/utils/Time.cpp" bodystart="18"
+                          bodyend="20"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+            <para>Project Elaborato_ING_SW
+                <simplesect kind="author">
+                    <para>Noè Murr, Mirko Morati</para>
+                </simplesect>
+            </para>
+        </detaileddescription>
+        <collaborationgraph>
+            <node id="156">
+                <label>Time</label>
+                <link refid="d4/d0c/struct_time"/>
+            </node>
+        </collaborationgraph>
+        <location file="code/utils/Time.hpp" line="10" column="1" bodyfile="code/utils/Time.hpp" bodystart="10"
+                  bodyend="19"/>
+        <listofallmembers>
+            <member refid="d4/d0c/struct_time_1ab9a42b7809f059a61d89123fb6cd0cf5" prot="public" virt="non-virtual">
+                <scope>Time</scope>
+                <name>get_time</name>
+            </member>
+            <member refid="d4/d0c/struct_time_1aa207ff7d820b4c32f22e1474a931b195" prot="private" virt="non-virtual">
+                <scope>Time</scope>
+                <name>hours</name>
+            </member>
+            <member refid="d4/d0c/struct_time_1acdca8b13b904057dfec90b68f3092bc4" prot="private" virt="non-virtual">
+                <scope>Time</scope>
+                <name>minutes</name>
+            </member>
+            <member refid="d4/d0c/struct_time_1a4eda0725cd2272762ceae3336ca07db6" prot="private" virt="non-virtual">
+                <scope>Time</scope>
+                <name>seconds</name>
+            </member>
+            <member refid="d4/d0c/struct_time_1a76fe3565c8497fe80720123aa0b988fb" prot="public" virt="non-virtual">
+                <scope>Time</scope>
+                <name>set_time</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

@@ -1,0 +1,28 @@
+var namespacemm =
+    [
+        ["model", "dd/d7f/namespacemm_1_1model.html", "dd/d7f/namespacemm_1_1model"],
+        ["util", "d1/d50/namespacemm_1_1util.html", "d1/d50/namespacemm_1_1util"],
+        ["view", "d7/d7c/namespacemm_1_1view.html", "d7/d7c/namespacemm_1_1view"],
+        ["AboutDialog", "d7/d05/classmm_1_1_about_dialog.html", "d7/d05/classmm_1_1_about_dialog"],
+        ["AddPatientDialog", "d7/d32/classmm_1_1_add_patient_dialog.html", "d7/d32/classmm_1_1_add_patient_dialog"],
+        ["AddPrescriptionDialog", "db/d16/classmm_1_1_add_prescription_dialog.html", "db/d16/classmm_1_1_add_prescription_dialog"],
+        ["Configuration", "dc/d00/classmm_1_1_configuration.html", "dc/d00/classmm_1_1_configuration"],
+        ["DateController", "d0/d52/structmm_1_1_date_controller.html", "d0/d52/structmm_1_1_date_controller"],
+        ["DBMaster", "da/d0d/classmm_1_1_d_b_master.html", "da/d0d/classmm_1_1_d_b_master"],
+        ["Dialog", "df/d35/classmm_1_1_dialog.html", "df/d35/classmm_1_1_dialog"],
+        ["EntryController", "d0/d9e/structmm_1_1_entry_controller.html", "d0/d9e/structmm_1_1_entry_controller"],
+        ["IObserver", "d7/d9e/classmm_1_1_i_observer.html", "d7/d9e/classmm_1_1_i_observer"],
+        ["ISerializable", "dc/df3/classmm_1_1_i_serializable.html", "dc/df3/classmm_1_1_i_serializable"],
+        ["ISubject", "d1/dd2/classmm_1_1_i_subject.html", "d1/dd2/classmm_1_1_i_subject"],
+        ["key_not_found_error", "d3/d00/classmm_1_1key__not__found__error.html", "d3/d00/classmm_1_1key__not__found__error"],
+        ["LoginWindow", "d3/d0c/classmm_1_1_login_window.html", "d3/d0c/classmm_1_1_login_window"],
+        ["MainWindow", "d7/dfd/classmm_1_1_main_window.html", "d7/dfd/classmm_1_1_main_window"],
+        ["MedH", "df/d1a/classmm_1_1_med_h.html", "df/d1a/classmm_1_1_med_h"],
+        ["observer_not_found_error", "da/df7/classmm_1_1observer__not__found__error.html", "da/df7/classmm_1_1observer__not__found__error"],
+        ["PatientWindow", "da/d81/classmm_1_1_patient_window.html", "da/d81/classmm_1_1_patient_window"],
+        ["record_not_found_error", "dc/d8a/classmm_1_1record__not__found__error.html", "dc/d8a/classmm_1_1record__not__found__error"],
+        ["RefBuilder", "dd/d47/classmm_1_1_ref_builder.html", "dd/d47/classmm_1_1_ref_builder"],
+        ["Serialized", "d3/d4d/structmm_1_1_serialized.html", "d3/d4d/structmm_1_1_serialized"],
+        ["SerializedUnion", "de/dac/unionmm_1_1_serialized_union.html", "de/dac/unionmm_1_1_serialized_union"],
+        ["Window", "d1/d71/classmm_1_1_window.html", "d1/d71/classmm_1_1_window"]
+    ];
