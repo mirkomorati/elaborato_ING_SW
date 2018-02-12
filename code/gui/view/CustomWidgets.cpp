@@ -412,7 +412,8 @@ mm::view::PatientExpander::PatientExpander(const mm::model::Patient &patient, co
             if (end > start) {
                 util::Date issue;
                 issue.set_from_str(p.get_issue_date());
-                if (issue > end and issue < start) filteredPrescriptions.emplace_back(p);
+                if (issue >= start and issue <= end)
+                    filteredPrescriptions.emplace_back(p);
 
             } else {
                 filteredPrescriptions.emplace_back(p);

@@ -176,6 +176,12 @@ void mm::DrugWindow::updatePatientView() {
     for (const auto &patient : doctor.get_patients()) {
         bool flag = false;
         for (const auto &p : patient.get_prescriptions()) {
+            if (filterDrugOn) {
+                const util::Date &date = util::Date(p.get_issue_date());
+                if (date < filterStartDate or date >= filterEndDate) {
+                    continue;
+                }
+            }
             const auto &drugs = p.get_drugs();
             if (std::find(drugs.begin(), drugs.end(), drug) != drugs.end()) {
                 flag = true;
@@ -184,7 +190,8 @@ void mm::DrugWindow::updatePatientView() {
         }
 
         if (flag) {
-            std::unique_ptr<view::PatientExpander> exp(new view::PatientExpander(patient, drug));
+            std::unique_ptr<view::PatientExpander> exp(
+                    new view::PatientExpander(patient, drug, filterStartDate, filterEndDate));
             patientList->append(*exp);
             patientExp.push_back(std::move(exp));
         }
