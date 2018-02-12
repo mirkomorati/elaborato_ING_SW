@@ -10,10 +10,10 @@
 #include "../model/Authentication.hpp"
 
 bool mm::DrugWindow::init() {
-    initHandlers();
     initTreeView();
     initDrugFilter();
     initQuantityFilter();
+    initHandlers();
     return true;
 }
 
@@ -29,6 +29,8 @@ mm::DrugWindow::DrugWindow() : next(MAIN),
                                drugListStore(Gtk::ListStore::create(model::Drug::drugTreeModel)),
                                filterStartDate(util::Date::get_current_date()),
                                filterEndDate(util::Date::get_current_date()),
+                               quantityStartDate(util::Date::get_current_date()),
+                               quantityEndDate(util::Date::get_current_date()),
                                filterDrugOn(false), filterQuantityOn(false) {}
 
 void mm::DrugWindow::update() {
@@ -39,7 +41,7 @@ void mm::DrugWindow::initHandlers() {
     Gtk::EventBox *openFilterEventBox, *closedFilterEventBox;
     Gtk::Switch *filterSwitch;
     Gtk::TreeView *drugTreeView;
-    Gtk::RadioButton *year, *month;
+    Gtk::RadioButton *year, *month, *qYear, *qSemester, *qQuarter, *qMonth;
     Gtk::ComboBoxText *yearCombo;
     Gtk::ComboBoxText *monthYearCombo, *monthMonthCombo;
     Gtk::ComboBoxText *qYearCombo;
@@ -56,16 +58,20 @@ void mm::DrugWindow::initHandlers() {
     refBuilder.get_widget("drugTreeView", drugTreeView);
     refBuilder.get_widget("drugYearFilterRadioButton", year);
     refBuilder.get_widget("drugMonthFilterRadioButton", month);
+    refBuilder.get_widget("quantityYearRadioButton", qYear);
+    refBuilder.get_widget("quantitySemesterRadioButton", qSemester);
+    refBuilder.get_widget("quantityQuarterRadioButton", qQuarter);
+    refBuilder.get_widget("quantityMonthRadioButton", qMonth);
     refBuilder.get_widget("drugYearFilterComboBox", yearCombo);
     refBuilder.get_widget("drugMonthFilterYearComboBox", monthYearCombo);
     refBuilder.get_widget("drugMonthFilterMonthComboBox", monthMonthCombo);
-    refBuilder.get_widget("drugMonthFilterYearComboBox", qYearCombo);
-    refBuilder.get_widget("drugMonthFilterYearComboBox", qSemesterYearCombo);
-    refBuilder.get_widget("drugMonthFilterMonthComboBox", qSemesterMonthCombo);
-    refBuilder.get_widget("drugMonthFilterYearComboBox", qQuarterYearCombo);
-    refBuilder.get_widget("drugMonthFilterMonthComboBox", qQuarterMonthCombo);
-    refBuilder.get_widget("drugMonthFilterYearComboBox", qMonthYearCombo);
-    refBuilder.get_widget("drugMonthFilterMonthComboBox", qMonthMonthCombo);
+    refBuilder.get_widget("quantityYearFilterComboBox", qYearCombo);
+    refBuilder.get_widget("quantitySemesterFilterYearComboBox", qSemesterYearCombo);
+    refBuilder.get_widget("quantitySemesterFilterMonthComboBox", qSemesterMonthCombo);
+    refBuilder.get_widget("quantityQuarterFilterYearComboBox", qQuarterYearCombo);
+    refBuilder.get_widget("quantityQuarterFilterMonthComboBox", qQuarterMonthCombo);
+    refBuilder.get_widget("quantityMonthFilterYearComboBox", qMonthYearCombo);
+    refBuilder.get_widget("quantityMonthFilterMonthComboBox", qMonthMonthCombo);
 
     openFilterEventBox->set_events(Gdk::BUTTON_PRESS_MASK);
     closedFilterEventBox->set_events(Gdk::BUTTON_PRESS_MASK);
@@ -76,6 +82,22 @@ void mm::DrugWindow::initHandlers() {
     month->signal_clicked().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterMonthChanged));
     monthYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterMonthChanged));
     monthMonthCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onFilterMonthChanged));
+
+    qYear->signal_clicked().connect(sigc::mem_fun(this, &mm::DrugWindow::onQuantityYearChanged));
+    qYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onQuantityYearChanged));
+
+    qSemester->signal_clicked().connect(sigc::mem_fun(this, &mm::DrugWindow::onQuantitySemesterChanged));
+    qSemesterYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onQuantitySemesterChanged));
+    qSemesterMonthCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onQuantitySemesterChanged));
+
+    qQuarter->signal_clicked().connect(sigc::mem_fun(this, &mm::DrugWindow::onQuantityQuarterChanged));
+    qQuarterYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onQuantityQuarterChanged));
+    qQuarterMonthCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onQuantityQuarterChanged));
+
+    qMonth->signal_clicked().connect(sigc::mem_fun(this, &mm::DrugWindow::onQuantityMonthChanged));
+    qMonthYearCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onQuantityMonthChanged));
+    qMonthMonthCombo->signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onQuantityMonthChanged));
+
 
     filterSwitch->property_active().signal_changed().connect(sigc::mem_fun(this, &mm::DrugWindow::onSwitchActivate));
     drugTreeView->signal_row_activated().connect(sigc::mem_fun(this, &mm::DrugWindow::onSelectedDrug));
@@ -139,6 +161,7 @@ void mm::DrugWindow::updateDrugTreeView() {
 void mm::DrugWindow::onSelectedDrug(const Gtk::TreeModel::Path &, Gtk::TreeViewColumn *) {
     updatePatientView();
     updateDrugDetailsView();
+    updateTotalDrug();
 }
 
 void mm::DrugWindow::updatePatientView() {
@@ -392,4 +415,145 @@ void mm::DrugWindow::onFilterMonthChanged() {
     }
 
     updatePatientView();
+}
+
+void mm::DrugWindow::onQuantityYearChanged() {
+    auto refBuilder = RefBuilder::get_instance();
+    Gtk::RadioButton *year;
+    Gtk::ComboBoxText *yearCombo;
+
+    refBuilder.get_widget("quantityYearRadioButton", year);
+    refBuilder.get_widget("quantityYearFilterComboBox", yearCombo);
+
+    if (year->get_active()) {
+        quantityStartDate.set_from_str(fmt::format("01/01/{}", yearCombo->get_active_text().c_str()));
+        quantityEndDate = quantityStartDate;
+        quantityEndDate.add_years(1);
+
+        spdlog::get("out")->info("Drug quantity count. start date: {}. end date: {}.",
+                                 quantityStartDate.get_as_text(), quantityEndDate.get_as_text());
+    }
+
+    updateTotalDrug();
+}
+
+void mm::DrugWindow::onQuantitySemesterChanged() {
+    auto refBuilder = RefBuilder::get_instance();
+    Gtk::RadioButton *semester;
+    Gtk::ComboBoxText *yearCombo;
+    Gtk::ComboBoxText *monthCombo;
+
+    refBuilder.get_widget("quantitySemesterRadioButton", semester);
+    refBuilder.get_widget("quantitySemesterFilterYearComboBox", yearCombo);
+    refBuilder.get_widget("quantitySemesterFilterMonthComboBox", monthCombo);
+
+    if (semester->get_active()) {
+        quantityStartDate.set_from_str(fmt::format("01/{}/{}",
+                                                   monthCombo->get_active_text().c_str(),
+                                                   yearCombo->get_active_text().c_str()));
+        quantityEndDate = quantityStartDate;
+        quantityEndDate.add_months(6);
+
+        spdlog::get("out")->info("Drug quantity count. start date: {}. end date: {}.",
+                                 quantityStartDate.get_as_text(), quantityEndDate.get_as_text());
+    }
+
+    updateTotalDrug();
+}
+
+void mm::DrugWindow::onQuantityQuarterChanged() {
+    auto refBuilder = RefBuilder::get_instance();
+    Gtk::RadioButton *quarter;
+    Gtk::ComboBoxText *yearCombo;
+    Gtk::ComboBoxText *monthCombo;
+
+    refBuilder.get_widget("quantityQuarterRadioButton", quarter);
+    refBuilder.get_widget("quantityQuarterFilterYearComboBox", yearCombo);
+    refBuilder.get_widget("quantityQuarterFilterMonthComboBox", monthCombo);
+
+    if (quarter->get_active()) {
+        quantityStartDate.set_from_str(fmt::format("01/{}/{}",
+                                                   monthCombo->get_active_text().c_str(),
+                                                   yearCombo->get_active_text().c_str()));
+        quantityEndDate = quantityStartDate;
+        quantityEndDate.add_months(3);
+
+        spdlog::get("out")->info("Drug quantity count. start date: {}. end date: {}.",
+                                 quantityStartDate.get_as_text(), quantityEndDate.get_as_text());
+    }
+
+    updateTotalDrug();
+}
+
+void mm::DrugWindow::onQuantityMonthChanged() {
+    auto refBuilder = RefBuilder::get_instance();
+    Gtk::RadioButton *month;
+    Gtk::ComboBoxText *yearCombo;
+    Gtk::ComboBoxText *monthCombo;
+
+    refBuilder.get_widget("quantityMonthRadioButton", month);
+    refBuilder.get_widget("quantityMonthFilterYearComboBox", yearCombo);
+    refBuilder.get_widget("quantityMonthFilterMonthComboBox", monthCombo);
+
+    if (month->get_active()) {
+        quantityStartDate.set_from_str(fmt::format("01/{}/{}",
+                                                   monthCombo->get_active_text().c_str(),
+                                                   yearCombo->get_active_text().c_str()));
+        quantityEndDate = quantityStartDate;
+        quantityEndDate.add_months(1);
+
+        spdlog::get("out")->info("Drug quantity count. start date: {}. end date: {}.",
+                                 quantityStartDate.get_as_text(), quantityEndDate.get_as_text());
+    }
+
+    updateTotalDrug();
+}
+
+void mm::DrugWindow::updateTotalDrug() {
+    auto refBuilder = RefBuilder::get_instance();
+
+    Gtk::Label *quantity;
+    Gtk::TreeView *drugTreeView;
+
+    refBuilder.get_widget("quantityTotalLabel", quantity);
+    RefBuilder::get_instance().get_widget("drugTreeView", drugTreeView);
+
+    auto sel = drugTreeView->get_selection()->get_selected();
+    if (not sel) return;
+
+    Glib::ustring nameID = static_cast<Glib::ustring>((*sel)[model::Drug::drugTreeModel.name]);
+    Glib::ustring pharmaceuticalFormID = static_cast<Glib::ustring>((*sel)[model::Drug::drugTreeModel.pharmaceutical_form]);
+
+    model::Drug drug;
+    model::Doctor doctor;
+
+    try {
+        DBMaster::get_instance().extract_from_db(drug, {nameID.c_str(), pharmaceuticalFormID.c_str()});
+    } catch (record_not_found_error &e) {
+        throw std::runtime_error("cannot get the drug from the db...");
+    }
+
+    try {
+        DBMaster::get_instance().extract_from_db(doctor, mm::model::authentication::Login::get_instance().regional_id);
+    } catch (record_not_found_error &e) {
+        throw std::runtime_error("cannot get the doctor from the db...");
+    }
+
+    int counter = 0;
+
+    for (const auto &patient : doctor.get_patients()) {
+        for (const auto &p : patient.get_prescriptions()) {
+            const util::Date &date = util::Date(p.get_issue_date());
+            if (date < quantityStartDate or date >= quantityEndDate) {
+                continue;
+            }
+            for (const auto &d : p.get_drugs()) {
+                if (d == drug) {
+                    counter++;
+                }
+            }
+        }
+    }
+
+    quantity->set_text(Glib::ustring::format(" ", counter));
 }

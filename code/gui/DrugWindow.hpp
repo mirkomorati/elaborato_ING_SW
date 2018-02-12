@@ -47,6 +47,9 @@ namespace mm {
         util::Date filterStartDate;
         util::Date filterEndDate;
 
+        util::Date quantityStartDate;
+        util::Date quantityEndDate;
+
         Glib::RefPtr<Gtk::ListStore> drugListStore;
 
         std::vector<std::unique_ptr<view::PatientExpander>> patientExp;
@@ -60,6 +63,16 @@ namespace mm {
         void onFilterYearChanged();
 
         void onFilterMonthChanged();
+
+        void onQuantityYearChanged();
+
+        void onQuantitySemesterChanged();
+
+        void onQuantityQuarterChanged();
+
+        void onQuantityMonthChanged();
+
+        void updateTotalDrug();
     };
 }
 
