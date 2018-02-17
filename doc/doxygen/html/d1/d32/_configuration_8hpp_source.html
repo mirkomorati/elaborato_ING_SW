@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-    <meta name="generator" content="Doxygen 1.8.13"/>
+    <meta name="generator" content="Doxygen 1.8.14"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>MedH: File sorgente code/Configuration.hpp</title>
     <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -15,8 +15,9 @@
     <script type="text/javascript" src="../../navtreedata.js"></script>
     <script type="text/javascript" src="../../navtree.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(document).ready(initResizable);
-    </script>
+        /* @license-end */</script>
     <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../../search/searchdata.js"></script>
     <script type="text/javascript" src="../../search/search.js"></script>
@@ -41,20 +42,23 @@
         </table>
     </div>
     <!-- end header part -->
-    <!-- Generato da Doxygen 1.8.13 -->
+    <!-- Generato da Doxygen 1.8.14 -->
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         var searchBox = new SearchBox("searchBox", "../../search", false, 'Cerca');
+        /* @license-end */
     </script>
     <script type="text/javascript" src="../../menudata.js"></script>
     <script type="text/javascript" src="../../menu.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(function () {
             initMenu('../../', true, false, 'search.php', 'Cerca');
             $(document).ready(function () {
                 init_search();
             });
         });
-    </script>
+        /* @license-end */</script>
     <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -68,9 +72,11 @@
     </div>
 </div>
 <script type="text/javascript">
+    /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
     $(document).ready(function () {
         initNavTree('d1/d32/_configuration_8hpp_source.html', '../../');
     });
+    /* @license-end */
 </script>
 <div id="doc-content">
     <!-- window showing the filter options -->
@@ -200,22 +206,27 @@
             <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
             <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; <span
                     class="keyword">const</span> <a class="code" href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>
-                &amp;operator=(<span class="keyword">const</span> <a class="code"
-                                                                     href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>
+                &amp;<a class="code"
+                        href="../../dc/d00/classmm_1_1_configuration.html#a3077aebf459758dce4be716a8ddcb090">operator=</a>(<span
+                        class="keyword">const</span> <a class="code" href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>
                 &amp;old) = <span class="keyword">delete</span>;
             </div>
             <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
             <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; <span
                     class="keyword">static</span> <a class="code" href="../../dc/d00/classmm_1_1_configuration.html">Configuration</a>
-                &amp;get_instance() noexcept(<span class="keyword">false</span>);
+                &amp;<a class="code"
+                        href="../../dc/d00/classmm_1_1_configuration.html#a5cfc5ea56062f53ef9fbd274f6dbe79e">get_instance</a>()
+                noexcept(<span class="keyword">false</span>);
             </div>
             <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
             <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; <span
-                    class="keyword">static</span> <span class="keyword">const</span> std::string &amp;get_config_file_name();
+                    class="keyword">static</span> <span class="keyword">const</span> std::string &amp;<a class="code"
+                                                                                                         href="../../dc/d00/classmm_1_1_configuration.html#a631c8525beb91fb55d72eb6b58d2d68f">get_config_file_name</a>();
             </div>
             <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
             <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; <span
-                    class="keyword">static</span> <span class="keywordtype">void</span> set_config_file_name(<span
+                    class="keyword">static</span> <span class="keywordtype">void</span> <a class="code"
+                                                                                           href="../../dc/d00/classmm_1_1_configuration.html#ad526b28d1a7f8c6f854352b840d2d7b4">set_config_file_name</a>(<span
                     class="keyword">const</span> std::string &amp;config_file_name);
             </div>
             <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
@@ -235,8 +246,7 @@
                     class="stringliteral">&quot;cannot find key: &quot;</span> &lt;&lt; key;
             </div>
             <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; <span class="keywordflow">throw</span>
-                <a class="code"
-                   href="../../d3/d00/classmm_1_1key__not__found__error.html#a2dbffa57a8ad2c3d80151f0d7b75814b">key_not_found_error</a>(ss.str());
+                <a class="code" href="../../d3/d00/classmm_1_1key__not__found__error.html">key_not_found_error</a>(ss.str());
             </div>
             <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; }</div>
             <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; <span class="keywordflow">return</span>
@@ -250,6 +260,12 @@
             <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
             <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif //ELABORATO_ING_SW_CONFIGURATION_HPP</span>
             </div>
+            <div class="ttc" id="classmm_1_1_configuration_html_a3077aebf459758dce4be716a8ddcb090">
+                <div class="ttname"><a
+                        href="../../dc/d00/classmm_1_1_configuration.html#a3077aebf459758dce4be716a8ddcb090">mm::Configuration::operator=</a>
+                </div>
+                <div class="ttdeci">const Configuration &amp; operator=(const Configuration &amp;old)=delete</div>
+            </div>
             <div class="ttc" id="classmm_1_1key__not__found__error_html">
                 <div class="ttname"><a href="../../d3/d00/classmm_1_1key__not__found__error.html">mm::key_not_found_error</a>
                 </div>
@@ -259,6 +275,22 @@
             <div class="ttc" id="namespacemm_html">
                 <div class="ttname"><a href="../../d0/d04/namespacemm.html">mm</a></div>
                 <div class="ttdef"><b>Definition:</b> Configuration.hpp:14</div>
+            </div>
+            <div class="ttc" id="classmm_1_1_configuration_html_a631c8525beb91fb55d72eb6b58d2d68f">
+                <div class="ttname"><a
+                        href="../../dc/d00/classmm_1_1_configuration.html#a631c8525beb91fb55d72eb6b58d2d68f">mm::Configuration::get_config_file_name</a>
+                </div>
+                <div class="ttdeci">static const std::string &amp; get_config_file_name()</div>
+                <div class="ttdoc">Ritorna una stringa contente il path dove viene cercato cercato il file json.</div>
+                <div class="ttdef"><b>Definition:</b> Configuration.cpp:28</div>
+            </div>
+            <div class="ttc" id="classmm_1_1_configuration_html_ad526b28d1a7f8c6f854352b840d2d7b4">
+                <div class="ttname"><a
+                        href="../../dc/d00/classmm_1_1_configuration.html#ad526b28d1a7f8c6f854352b840d2d7b4">mm::Configuration::set_config_file_name</a>
+                </div>
+                <div class="ttdeci">static void set_config_file_name(const std::string &amp;config_file_name)</div>
+                <div class="ttdoc">Serve per impostare il path dove trovare il file di configurazione.</div>
+                <div class="ttdef"><b>Definition:</b> Configuration.cpp:33</div>
             </div>
             <div class="ttc" id="_configuration_8hpp_html_ab701e3ac61a85b337ec5c1abaad6742d">
                 <div class="ttname"><a href="../../d1/d32/_configuration_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a>
@@ -278,6 +310,14 @@
                 <div class="ttdeci">key_not_found_error(const std::string &amp;what)</div>
                 <div class="ttdef"><b>Definition:</b> Configuration.cpp:44</div>
             </div>
+            <div class="ttc" id="classmm_1_1_configuration_html_a5cfc5ea56062f53ef9fbd274f6dbe79e">
+                <div class="ttname"><a
+                        href="../../dc/d00/classmm_1_1_configuration.html#a5cfc5ea56062f53ef9fbd274f6dbe79e">mm::Configuration::get_instance</a>
+                </div>
+                <div class="ttdeci">static Configuration &amp; get_instance() noexcept(false)</div>
+                <div class="ttdoc">Ritorna una reference ad un&amp;#39;istanza di tipo Configuration.</div>
+                <div class="ttdef"><b>Definition:</b> Configuration.cpp:22</div>
+            </div>
         </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
@@ -287,7 +327,7 @@
         <li class="navelem"><a class="el" href="../../d1/d32/_configuration_8hpp.html">Configuration.hpp</a></li>
         <li class="footer">Generato da
             <a href="http://www.doxygen.org/index.html">
-                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13
+                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.14
         </li>
     </ul>
 </div>

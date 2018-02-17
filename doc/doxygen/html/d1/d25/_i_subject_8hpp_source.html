@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-    <meta name="generator" content="Doxygen 1.8.13"/>
+    <meta name="generator" content="Doxygen 1.8.14"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>MedH: File sorgente code/interfaces/ISubject.hpp</title>
     <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -15,8 +15,9 @@
     <script type="text/javascript" src="../../navtreedata.js"></script>
     <script type="text/javascript" src="../../navtree.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(document).ready(initResizable);
-    </script>
+        /* @license-end */</script>
     <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../../search/searchdata.js"></script>
     <script type="text/javascript" src="../../search/search.js"></script>
@@ -41,20 +42,23 @@
         </table>
     </div>
     <!-- end header part -->
-    <!-- Generato da Doxygen 1.8.13 -->
+    <!-- Generato da Doxygen 1.8.14 -->
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         var searchBox = new SearchBox("searchBox", "../../search", false, 'Cerca');
+        /* @license-end */
     </script>
     <script type="text/javascript" src="../../menudata.js"></script>
     <script type="text/javascript" src="../../menu.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(function () {
             initMenu('../../', true, false, 'search.php', 'Cerca');
             $(document).ready(function () {
                 init_search();
             });
         });
-    </script>
+        /* @license-end */</script>
     <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -68,9 +72,11 @@
     </div>
 </div>
 <script type="text/javascript">
+    /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
     $(document).ready(function () {
         initNavTree('d1/d25/_i_subject_8hpp_source.html', '../../');
     });
+    /* @license-end */
 </script>
 <div id="doc-content">
     <!-- window showing the filter options -->
@@ -156,26 +162,40 @@
                     class="keyword">public</span>:
             </div>
             <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <span class="keywordtype">void</span>
-                attach(<a class="code" href="../../d7/d9e/classmm_1_1_i_observer.html">IObserver</a> *obj) noexcept;
+                <a class="code"
+                   href="../../d1/dd2/classmm_1_1_i_subject.html#a76069d8db0c9c3d543154b0c2ce23bc9">attach</a>(<a
+                        class="code" href="../../d7/d9e/classmm_1_1_i_observer.html">IObserver</a> *obj) noexcept;
             </div>
             <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
             <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; <span class="keywordtype">void</span>
-                detach(<a class="code" href="../../d7/d9e/classmm_1_1_i_observer.html">IObserver</a> *obj)
-                noexcept(<span class="keyword">false</span>);
+                <a class="code"
+                   href="../../d1/dd2/classmm_1_1_i_subject.html#a64be1c0b2ad7ee4631a5270dedb7aa88">detach</a>(<a
+                        class="code" href="../../d7/d9e/classmm_1_1_i_observer.html">IObserver</a> *obj) noexcept(<span
+                        class="keyword">false</span>);
             </div>
             <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
             <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="keywordtype">void</span>
-                notify() <span class="keyword">const</span>;
+                <a class="code"
+                   href="../../d1/dd2/classmm_1_1_i_subject.html#ad693fe5eb99bc20bc6d70f30bdf1140d">notify</a>() <span
+                        class="keyword">const</span>;
             </div>
             <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-            <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span
-                    class="keyword">virtual</span> ~<a class="code" href="../../d1/dd2/classmm_1_1_i_subject.html">ISubject</a>();
+            <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="keywordtype">void</span>
+                <a class="code"
+                   href="../../d1/dd2/classmm_1_1_i_subject.html#ad693fe5eb99bc20bc6d70f30bdf1140d">notify</a>(<span
+                        class="keywordtype">unsigned</span> <span class="keywordtype">int</span> what) <span
+                        class="keyword">const</span>;
             </div>
             <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-            <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; };</div>
-            <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-            <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-            <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif //ELABORATO_ING_SW_ISUBJECT_HPP</span>
+            <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span
+                    class="keyword">virtual</span> <a class="code"
+                                                      href="../../d1/dd2/classmm_1_1_i_subject.html#a37235a8b8ef83116c7351c56e17f7f57">~ISubject</a>();
+            </div>
+            <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+            <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; };</div>
+            <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+            <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+            <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif //ELABORATO_ING_SW_ISUBJECT_HPP</span>
             </div>
             <div class="ttc" id="_i_observer_8hpp_html">
                 <div class="ttname"><a href="../../d5/d40/_i_observer_8hpp.html">IObserver.hpp</a></div>
@@ -184,12 +204,24 @@
                 <div class="ttname"><a href="../../d1/dd2/classmm_1_1_i_subject.html">mm::ISubject</a></div>
                 <div class="ttdef"><b>Definition:</b> ISubject.hpp:24</div>
             </div>
+            <div class="ttc" id="classmm_1_1_i_subject_html_ad693fe5eb99bc20bc6d70f30bdf1140d">
+                <div class="ttname"><a href="../../d1/dd2/classmm_1_1_i_subject.html#ad693fe5eb99bc20bc6d70f30bdf1140d">mm::ISubject::notify</a>
+                </div>
+                <div class="ttdeci">void notify() const</div>
+                <div class="ttdef"><b>Definition:</b> ISubject.cpp:16</div>
+            </div>
+            <div class="ttc" id="classmm_1_1_i_subject_html_a64be1c0b2ad7ee4631a5270dedb7aa88">
+                <div class="ttname"><a href="../../d1/dd2/classmm_1_1_i_subject.html#a64be1c0b2ad7ee4631a5270dedb7aa88">mm::ISubject::detach</a>
+                </div>
+                <div class="ttdeci">void detach(IObserver *obj) noexcept(false)</div>
+                <div class="ttdef"><b>Definition:</b> ISubject.cpp:12</div>
+            </div>
             <div class="ttc" id="classmm_1_1observer__not__found__error_html_a967227c100638d8d978f8ee3dd6c70b4">
                 <div class="ttname"><a
                         href="../../da/df7/classmm_1_1observer__not__found__error.html#a967227c100638d8d978f8ee3dd6c70b4">mm::observer_not_found_error::observer_not_found_error</a>
                 </div>
                 <div class="ttdeci">observer_not_found_error(const std::string &amp;error)</div>
-                <div class="ttdef"><b>Definition:</b> ISubject.cpp:30</div>
+                <div class="ttdef"><b>Definition:</b> ISubject.cpp:36</div>
             </div>
             <div class="ttc" id="namespacemm_html">
                 <div class="ttname"><a href="../../d0/d04/namespacemm.html">mm</a></div>
@@ -199,10 +231,22 @@
                 <div class="ttname"><a href="../../d7/d9e/classmm_1_1_i_observer.html">mm::IObserver</a></div>
                 <div class="ttdef"><b>Definition:</b> IObserver.hpp:12</div>
             </div>
+            <div class="ttc" id="classmm_1_1_i_subject_html_a76069d8db0c9c3d543154b0c2ce23bc9">
+                <div class="ttname"><a href="../../d1/dd2/classmm_1_1_i_subject.html#a76069d8db0c9c3d543154b0c2ce23bc9">mm::ISubject::attach</a>
+                </div>
+                <div class="ttdeci">void attach(IObserver *obj) noexcept</div>
+                <div class="ttdef"><b>Definition:</b> ISubject.cpp:8</div>
+            </div>
             <div class="ttc" id="classmm_1_1observer__not__found__error_html">
                 <div class="ttname"><a href="../../da/df7/classmm_1_1observer__not__found__error.html">mm::observer_not_found_error</a>
                 </div>
                 <div class="ttdef"><b>Definition:</b> ISubject.hpp:13</div>
+            </div>
+            <div class="ttc" id="classmm_1_1_i_subject_html_a37235a8b8ef83116c7351c56e17f7f57">
+                <div class="ttname"><a href="../../d1/dd2/classmm_1_1_i_subject.html#a37235a8b8ef83116c7351c56e17f7f57">mm::ISubject::~ISubject</a>
+                </div>
+                <div class="ttdeci">virtual ~ISubject()</div>
+                <div class="ttdef"><b>Definition:</b> ISubject.cpp:25</div>
             </div>
         </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -214,7 +258,7 @@
         <li class="navelem"><a class="el" href="../../d1/d25/_i_subject_8hpp.html">ISubject.hpp</a></li>
         <li class="footer">Generato da
             <a href="http://www.doxygen.org/index.html">
-                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13
+                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.14
         </li>
     </ul>
 </div>

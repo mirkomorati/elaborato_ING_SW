@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d7/d32/classmm_1_1_add_patient_dialog" kind="class" language="C++" prot="public">
         <compoundname>mm::AddPatientDialog</compoundname>
         <basecompoundref refid="df/d35/classmm_1_1_dialog" prot="public" virt="non-virtual">mm::Dialog</basecompoundref>
@@ -18,8 +18,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="35" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="35" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="38" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="38" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a5333e97b5c2aa3bfb9a8d202fe97c39b"
                        prot="private" static="no" mutable="no">
@@ -33,8 +33,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="37" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="37" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="40" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="40" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1ac440e8fd9713a4bfb6d56deb3180e9a8"
                        prot="private" static="no" mutable="no">
@@ -48,8 +48,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="38" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="38" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="41" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="41" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a5bfcb366c07d17a7e3cf9a27ede52326"
                        prot="private" static="no" mutable="no">
@@ -65,8 +65,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="40" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="40" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="43" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="43" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a3e9eb9c3a7c843bb7c3628464414d423"
                        prot="private" static="no" mutable="no">
@@ -82,8 +82,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="41" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="41" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="44" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="44" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a979240bd925db658fda7665e2579befc"
                        prot="private" static="no" mutable="no">
@@ -99,8 +99,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="42" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="42" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="45" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="45" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a3f39e70623a58b25700fddb1db3178fd"
                        prot="private" static="no" mutable="no">
@@ -116,8 +116,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="43" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="43" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="46" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="46" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a4fbef1a9ffe0fa2454c67d16bd5bd784"
                        prot="private" static="no" mutable="no">
@@ -133,8 +133,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="44" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="44" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="47" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="47" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a729defb46e48fe2cb2221e40f772df4f"
                        prot="private" static="no" mutable="no">
@@ -150,8 +150,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="45" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="45" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="48" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="48" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a2f677acc1bb7feba6f474578dfa90f43"
                        prot="private" static="no" mutable="no">
@@ -167,8 +167,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="46" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="46" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="49" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="49" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1aeb5717e50bd86e3bfaad542d4de9ddd3"
                        prot="private" static="no" mutable="no">
@@ -184,8 +184,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="47" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="47" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="50" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="50" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a19f976cfa28a7734ad19d43501fc854f"
                        prot="private" static="no" mutable="no">
@@ -201,8 +201,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="48" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="48" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="51" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="51" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a82301d8894ba881b0b2f427a8ff68b2e"
                        prot="private" static="no" mutable="no">
@@ -218,8 +218,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="49" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="49" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="52" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="52" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a2319e761427f547c09f7ec1a7ccfdff2"
                        prot="private" static="no" mutable="no">
@@ -235,8 +235,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="50" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="50" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="53" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="53" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1aa20d9625f61a4a8fc6608a1a796b1e42"
                        prot="private" static="no" mutable="no">
@@ -252,8 +252,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="51" column="1"
-                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="51" bodyend="-1"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="54" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="54" bodyend="-1"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="public-func">
@@ -269,8 +269,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="17" column="1"
-                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="12" bodyend="27"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="18" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="14" bodyend="32"/>
             </memberdef>
             <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a0247912794984eb19c43842ab9037708"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -285,8 +285,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="19" column="1"
-                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="29" bodyend="34"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="20" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="34" bodyend="39"/>
             </memberdef>
             <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a459a8acbec1c8a5a87e00f23402d3b5d"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -302,14 +302,14 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="21" column="1"
-                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="36" bodyend="38"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="22" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="41" bodyend="43"/>
             </memberdef>
-            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1ab78d97d19d77fe6f47fbcd8af6a7b709"
+            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a7c4f7d1dd42d139bffbe54bb478b1f82"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
                 <type></type>
                 <definition>mm::AddPatientDialog::~AddPatientDialog</definition>
-                <argsstring>() override</argsstring>
+                <argsstring>() override=default</argsstring>
                 <name>~AddPatientDialog</name>
                 <briefdescription>
                 </briefdescription>
@@ -317,8 +317,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="23" column="1"
-                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="100" bodyend="102"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="24" column="1"/>
             </memberdef>
             <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a64c8c2ea3b1c69a858f4eaec1854270a"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -333,8 +332,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="25" column="1"
-                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="85" bodyend="98"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="26" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="97" bodyend="109"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="private-func">
@@ -352,8 +351,27 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="29" column="1"
-                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="77" bodyend="83"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="30" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="82" bodyend="84"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1af69efcbeb9c15d2529dd84396a70f3bd"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AddPatientDialog::dispose</definition>
+                <argsstring>(bool notify)</argsstring>
+                <name>dispose</name>
+                <param>
+                    <type>bool</type>
+                    <declname>notify</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="32" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="86" bodyend="95"/>
             </memberdef>
             <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a12f3f4fdd12cf97f161f8879130db857"
                        prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -367,8 +385,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="31" column="1"
-                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="40" bodyend="71"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="34" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="45" bodyend="76"/>
             </memberdef>
             <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a40b7756449bda543baec9695aaef7d05"
                        prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -382,8 +400,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPatientDialog.hpp" line="33" column="1"
-                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="73" bodyend="75"/>
+                <location file="code/gui/AddPatientDialog.hpp" line="36" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="78" bodyend="80"/>
             </memberdef>
         </sectiondef>
         <briefdescription>
@@ -436,8 +454,8 @@
                 </childnode>
             </node>
         </collaborationgraph>
-        <location file="code/gui/AddPatientDialog.hpp" line="15" column="1" bodyfile="code/gui/AddPatientDialog.hpp"
-                  bodystart="15" bodyend="52"/>
+        <location file="code/gui/AddPatientDialog.hpp" line="16" column="1" bodyfile="code/gui/AddPatientDialog.hpp"
+                  bodystart="16" bodyend="55"/>
         <listofallmembers>
             <member refid="d7/d32/classmm_1_1_add_patient_dialog_1ad81abcf242a1c103f76c1fd4c6406b57" prot="public"
                     virt="non-virtual">
@@ -499,6 +517,11 @@
                 <scope>mm::AddPatientDialog</scope>
                 <name>dispose</name>
             </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1af69efcbeb9c15d2529dd84396a70f3bd" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>dispose</name>
+            </member>
             <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a5bfcb366c07d17a7e3cf9a27ede52326" prot="private"
                     virt="non-virtual">
                 <scope>mm::AddPatientDialog</scope>
@@ -529,6 +552,11 @@
                 <scope>mm::AddPatientDialog</scope>
                 <name>notify</name>
             </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>notify</name>
+            </member>
             <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a5333e97b5c2aa3bfb9a8d202fe97c39b" prot="private"
                     virt="non-virtual">
                 <scope>mm::AddPatientDialog</scope>
@@ -538,6 +566,11 @@
                     virt="non-virtual">
                 <scope>mm::AddPatientDialog</scope>
                 <name>okHandler</name>
+            </member>
+            <member refid="df/d35/classmm_1_1_dialog_1a9864219c61623b484d8f8c161808e136" prot="protected"
+                    virt="virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>onDelete</name>
             </member>
             <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a64c8c2ea3b1c69a858f4eaec1854270a" prot="public"
                     virt="virtual">
@@ -564,7 +597,7 @@
                 <scope>mm::AddPatientDialog</scope>
                 <name>zip_code</name>
             </member>
-            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1ab78d97d19d77fe6f47fbcd8af6a7b709" prot="public"
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a7c4f7d1dd42d139bffbe54bb478b1f82" prot="public"
                     virt="non-virtual">
                 <scope>mm::AddPatientDialog</scope>
                 <name>~AddPatientDialog</name>

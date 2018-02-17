@@ -5,5 +5,6 @@ var classmm_1_1_patient_window =
         ["getName", "da/d81/classmm_1_1_patient_window.html#ab951ab5bf21df2b9450496c6faca5268", null],
         ["getNextWindow", "da/d81/classmm_1_1_patient_window.html#ae22b9bce4c7ccdbcc45feb080088a558", null],
         ["init", "da/d81/classmm_1_1_patient_window.html#a0ad27245769b095559858eeecdbb7089", null],
-        ["update", "da/d81/classmm_1_1_patient_window.html#a461de186f72a8902a9f95a622dc1c02b", null]
+        ["update", "da/d81/classmm_1_1_patient_window.html#a461de186f72a8902a9f95a622dc1c02b", null],
+        ["update", "da/d81/classmm_1_1_patient_window.html#a315f5e823a0261db4fb88b4e31333d53", null]
     ];

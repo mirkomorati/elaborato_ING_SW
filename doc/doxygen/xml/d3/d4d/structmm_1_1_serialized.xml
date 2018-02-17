@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d3/d4d/structmm_1_1_serialized" kind="struct" language="C++" prot="public">
         <compoundname>mm::Serialized</compoundname>
         <includes refid="d3/d1b/_i_serializable_8hpp" local="no">ISerializable.hpp</includes>
@@ -19,8 +19,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="52" column="1"
-                          bodyfile="code/interfaces/ISerializable.hpp" bodystart="52" bodyend="-1"/>
+                <location file="code/interfaces/ISerializable.hpp" line="53" column="1"
+                          bodyfile="code/interfaces/ISerializable.hpp" bodystart="53" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d3/d4d/structmm_1_1_serialized_1aceee986b86426f4f851466147e078234"
                        prot="private" static="no" mutable="no">
@@ -37,8 +37,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="53" column="1"
-                          bodyfile="code/interfaces/ISerializable.hpp" bodystart="53" bodyend="-1"/>
+                <location file="code/interfaces/ISerializable.hpp" line="54" column="1"
+                          bodyfile="code/interfaces/ISerializable.hpp" bodystart="54" bodyend="-1"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="friend">
@@ -63,7 +63,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="49" column="1"/>
+                <location file="code/interfaces/ISerializable.hpp" line="50" column="1"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="public-func">
@@ -82,8 +82,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="55" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="14" bodyend="16"/>
+                <location file="code/interfaces/ISerializable.hpp" line="56" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="15" bodyend="17"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1ac0e23433a34f0d326042907895a03353"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -110,8 +110,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="57" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="10" bodyend="12"/>
+                <location file="code/interfaces/ISerializable.hpp" line="58" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="11" bodyend="13"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1aa3eb7eb50d6b343993c08a4d369af8b2"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -125,8 +125,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="59" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="87" bodyend="93"/>
+                <location file="code/interfaces/ISerializable.hpp" line="60" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="88" bodyend="94"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a259c2695619d6ba052fd8a3885a341ef"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -140,8 +140,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="61" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="95" bodyend="101"/>
+                <location file="code/interfaces/ISerializable.hpp" line="62" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="96" bodyend="102"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1acd3c339c1766f6dbc0313669e7582361"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -155,8 +155,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="63" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="103" bodyend="109"/>
+                <location file="code/interfaces/ISerializable.hpp" line="64" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="104" bodyend="110"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a440d7e6daeb9e6c2ca286a2eee1fc24d"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -174,8 +174,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="65" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="35" bodyend="39"/>
+                <location file="code/interfaces/ISerializable.hpp" line="66" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="36" bodyend="40"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a1fcb5290740858b4a800f6b4d48e3c74"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -193,8 +193,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="67" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="111" bodyend="112"/>
+                <location file="code/interfaces/ISerializable.hpp" line="68" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="112" bodyend="113"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a2d29dc6d2cb8eed1a768a378b1d61b8f"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -212,8 +212,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="69" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="41" bodyend="44"/>
+                <location file="code/interfaces/ISerializable.hpp" line="70" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="42" bodyend="45"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1ae11ee0c67ffaed5dfc69bf52f33ebcca"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -231,8 +231,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="71" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="46" bodyend="49"/>
+                <location file="code/interfaces/ISerializable.hpp" line="72" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="47" bodyend="50"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a8e5cff9af77398dfa1f398a83bb9d642"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -250,8 +250,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="73" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="126" bodyend="127"/>
+                <location file="code/interfaces/ISerializable.hpp" line="74" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="127" bodyend="128"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1af64564defb439c3167375d2984c0653d"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -270,8 +270,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="75" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="57" bodyend="66"/>
+                <location file="code/interfaces/ISerializable.hpp" line="76" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="58" bodyend="67"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a7d108150308172857962c61c94f78fbd"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -292,8 +292,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="77" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="68" bodyend="85"/>
+                <location file="code/interfaces/ISerializable.hpp" line="78" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="69" bodyend="86"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a47c193b8439645264f62af1887cbfb2f"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -307,8 +307,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="79" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="114" bodyend="116"/>
+                <location file="code/interfaces/ISerializable.hpp" line="80" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="115" bodyend="117"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a4c753eedf42e36e51e8de52c2ae8917d"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -322,8 +322,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="81" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="118" bodyend="120"/>
+                <location file="code/interfaces/ISerializable.hpp" line="82" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="119" bodyend="121"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a3462f388a68a546a738038e5ce235b21"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -337,8 +337,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="83" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="122" bodyend="124"/>
+                <location file="code/interfaces/ISerializable.hpp" line="84" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="123" bodyend="125"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1af1414a72ff10e038d96f6f33f352b2dc"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -352,8 +352,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="85" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="51" bodyend="55"/>
+                <location file="code/interfaces/ISerializable.hpp" line="86" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="52" bodyend="56"/>
             </memberdef>
             <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -367,8 +367,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="87" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="30" bodyend="33"/>
+                <location file="code/interfaces/ISerializable.hpp" line="88" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="31" bodyend="34"/>
             </memberdef>
         </sectiondef>
         <briefdescription>
@@ -382,13 +382,13 @@
             </para>
         </detaileddescription>
         <collaborationgraph>
-            <node id="152">
+            <node id="192">
                 <label>mm::Serialized</label>
                 <link refid="d3/d4d/structmm_1_1_serialized"/>
             </node>
         </collaborationgraph>
-        <location file="code/interfaces/ISerializable.hpp" line="48" column="1"
-                  bodyfile="code/interfaces/ISerializable.hpp" bodystart="48" bodyend="88"/>
+        <location file="code/interfaces/ISerializable.hpp" line="49" column="1"
+                  bodyfile="code/interfaces/ISerializable.hpp" bodystart="49" bodyend="89"/>
         <listofallmembers>
             <member refid="d3/d4d/structmm_1_1_serialized_1a0b04612e6ed7f3da463a07e6405588e4" prot="private"
                     virt="non-virtual">

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="dir_3aa1edc5113eb71597736b7aa27b7402" kind="dir">
         <compoundname>code/gui</compoundname>
         <innerdir refid="dir_b74f67ff05e200b1f1db8d84c0f76c07">code/gui/view</innerdir>
@@ -11,12 +11,16 @@
         <innerfile refid="df/de8/_add_prescription_dialog_8cpp">AddPrescriptionDialog.cpp</innerfile>
         <innerfile refid="d0/d1e/_add_prescription_dialog_8hpp">AddPrescriptionDialog.hpp</innerfile>
         <innerfile refid="dc/de6/_dialog_8hpp">Dialog.hpp</innerfile>
+        <innerfile refid="d6/d9e/_drug_window_8cpp">DrugWindow.cpp</innerfile>
+        <innerfile refid="dd/d02/_drug_window_8hpp">DrugWindow.hpp</innerfile>
         <innerfile refid="d9/d07/_login_window_8cpp">LoginWindow.cpp</innerfile>
         <innerfile refid="db/d18/_login_window_8hpp">LoginWindow.hpp</innerfile>
         <innerfile refid="d5/da5/_main_window_8cpp">MainWindow.cpp</innerfile>
         <innerfile refid="db/d41/_main_window_8hpp">MainWindow.hpp</innerfile>
         <innerfile refid="d8/d35/_patient_window_8cpp">PatientWindow.cpp</innerfile>
         <innerfile refid="dd/de0/_patient_window_8hpp">PatientWindow.hpp</innerfile>
+        <innerfile refid="d1/d16/_prescription_window_8cpp">PrescriptionWindow.cpp</innerfile>
+        <innerfile refid="d5/db1/_prescription_window_8hpp">PrescriptionWindow.hpp</innerfile>
         <innerfile refid="d9/d0c/_ref_builder_8cpp">RefBuilder.cpp</innerfile>
         <innerfile refid="dc/db8/_ref_builder_8hpp">RefBuilder.hpp</innerfile>
         <innerfile refid="d7/d49/_widgets_8cpp">Widgets.cpp</innerfile>

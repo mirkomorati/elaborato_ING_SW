@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d2/ddf/_configuration_8cpp" kind="file" language="C++">
         <compoundname>Configuration.cpp</compoundname>
         <includes refid="d1/d32/_configuration_8hpp" local="yes">Configuration.hpp</includes>

@@ -11,22 +11,25 @@ Singleton che si occupa di gestire il Gtk\+::\+Builder il quale gestisce la crea
 
 
 
-Diagramma di collaborazione per mm\+:\+:Ref\+Builder\+:\nopagebreak
+Diagramma di collaborazione per mm\+:\+:Ref\+Builder\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=168pt]{d5/ddf/classmm_1_1_ref_builder__coll__graph}
+\includegraphics[width=198pt]{d5/ddf/classmm_1_1_ref_builder__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Membri pubblici}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classmm_1_1_ref_builder_a67812973516cbeddf488360424685153}{get\+\_\+widget} (const Glib\+::ustring \&name, T \&widget)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmm_1_1_ref_builder_a67812973516cbeddf488360424685153}{get\+\_\+widget}} (const Glib\+::ustring \&name, T \&widget)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmm_1_1_ref_builder_a428724036811e6b9ecc6c50c42209a74}{get\+\_\+widget\+\_\+derived}} (const Glib\+::ustring \&name, T \&widget)
 \end{DoxyCompactItemize}
 \subsection*{Membri pubblici statici}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{classmm_1_1_ref_builder}{Ref\+Builder} \& \hyperlink{classmm_1_1_ref_builder_a1c46de2b1ff68aebfc85692a99827753}{get\+\_\+instance} ()
+static \mbox{\hyperlink{classmm_1_1_ref_builder}{Ref\+Builder}} \& \mbox{\hyperlink{classmm_1_1_ref_builder_a1c46de2b1ff68aebfc85692a99827753}{get\+\_\+instance}} ()
 \end{DoxyCompactItemize}
 
 
@@ -38,7 +41,7 @@ Singleton che si occupa di gestire il Gtk\+::\+Builder il quale gestisce la crea
 \index{mm\+::\+Ref\+Builder@{mm\+::\+Ref\+Builder}!get\+\_\+instance@{get\+\_\+instance}}
 \index{get\+\_\+instance@{get\+\_\+instance}!mm\+::\+Ref\+Builder@{mm\+::\+Ref\+Builder}}
 \subsubsection{\texorpdfstring{get\+\_\+instance()}{get\_instance()}}
-{\footnotesize\ttfamily \hyperlink{classmm_1_1_ref_builder}{mm\+::\+Ref\+Builder} \& mm\+::\+Ref\+Builder\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmm_1_1_ref_builder}{mm\+::\+Ref\+Builder}} \& mm\+::\+Ref\+Builder\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classmm_1_1_ref_builder_a67812973516cbeddf488360424685153}\label{classmm_1_1_ref_builder_a67812973516cbeddf488360424685153}} 
 \index{mm\+::\+Ref\+Builder@{mm\+::\+Ref\+Builder}!get\+\_\+widget@{get\+\_\+widget}}
@@ -59,9 +62,16 @@ Ritorna il puntatore all\textquotesingle{}oggetto Gtk con il nome name.
 {\em widget} & puntatore all\textquotesingle{}oggetto. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classmm_1_1_ref_builder_a428724036811e6b9ecc6c50c42209a74}\label{classmm_1_1_ref_builder_a428724036811e6b9ecc6c50c42209a74}} 
+\index{mm\+::\+Ref\+Builder@{mm\+::\+Ref\+Builder}!get\+\_\+widget\+\_\+derived@{get\+\_\+widget\+\_\+derived}}
+\index{get\+\_\+widget\+\_\+derived@{get\+\_\+widget\+\_\+derived}!mm\+::\+Ref\+Builder@{mm\+::\+Ref\+Builder}}
+\subsubsection{\texorpdfstring{get\+\_\+widget\+\_\+derived()}{get\_widget\_derived()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mm\+::\+Ref\+Builder\+::get\+\_\+widget\+\_\+derived (\begin{DoxyParamCaption}\item[{const Glib\+::ustring \&}]{name,  }\item[{T \&}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 La documentazione per questa classe è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
 \item 
-code/gui/\hyperlink{_ref_builder_8hpp}{Ref\+Builder.\+hpp}\item 
-code/gui/\hyperlink{_ref_builder_8cpp}{Ref\+Builder.\+cpp}\end{DoxyCompactItemize}
+code/gui/\mbox{\hyperlink{_ref_builder_8hpp}{Ref\+Builder.\+hpp}}\item 
+code/gui/\mbox{\hyperlink{_ref_builder_8cpp}{Ref\+Builder.\+cpp}}\end{DoxyCompactItemize}

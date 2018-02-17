@@ -6,5 +6,8 @@ var searchData =
         ['dbmaster', ['DBMaster', ['../da/d0d/classmm_1_1_d_b_master.html', 1, 'mm']]],
         ['dialog', ['Dialog', ['../df/d35/classmm_1_1_dialog.html', 1, 'mm']]],
         ['doctor', ['Doctor', ['../d6/d2e/classmm_1_1model_1_1_doctor.html', 1, 'mm::model']]],
-        ['drug', ['Drug', ['../db/d9b/classmm_1_1model_1_1_drug.html', 1, 'mm::model']]]
+        ['drug', ['Drug', ['../db/d9b/classmm_1_1model_1_1_drug.html', 1, 'mm::model']]],
+        ['drugentry', ['DrugEntry', ['../d4/d82/classmm_1_1view_1_1_drug_entry.html', 1, 'mm::view']]],
+        ['drugtreemodel', ['DrugTreeModel', ['../d2/d52/structmm_1_1model_1_1_drug_tree_model.html', 1, 'mm::model']]],
+        ['drugwindow', ['DrugWindow', ['../d7/dcd/classmm_1_1_drug_window.html', 1, 'mm']]]
     ];

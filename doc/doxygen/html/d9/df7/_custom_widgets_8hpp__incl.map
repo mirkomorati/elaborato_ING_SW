@@ -1,5 +1,7 @@
 <map id="code/gui/view/CustomWidgets.hpp" name="code/gui/view/CustomWidgets.hpp">
-<area shape="rect" id="node12" href="$de/d01/_prescription_8hpp.html" title="../../model/Prescription.hpp" alt="" coords="1493,79,1673,104"/>
-<area shape="rect" id="node17" href="$d3/d1b/_i_serializable_8hpp.html" title="../interfaces/ISerializable.hpp" alt="" coords="1553,225,1746,251"/>
-<area shape="rect" id="node18" href="$dd/df9/_drug_8hpp.html" title="Drug.hpp" alt="" coords="1493,152,1569,177"/>
+<area shape="rect" id="node13" href="$de/d01/_prescription_8hpp.html" title="../../model/Prescription.hpp" alt="" coords="1281,152,1461,177"/>
+<area shape="rect" id="node22" href="$d8/d63/_date_8hpp.html" title="../../utils/Date.hpp" alt="" coords="2140,152,2265,177"/>
+<area shape="rect" id="node23" href="$d0/da9/_patient_8hpp.html" title="../../model/Patient.hpp" alt="" coords="1703,79,1854,104"/>
+<area shape="rect" id="node18" href="$d3/d1b/_i_serializable_8hpp.html" title="../interfaces/ISerializable.hpp" alt="" coords="1212,299,1404,324"/>
+<area shape="rect" id="node19" href="$dd/df9/_drug_8hpp.html" title="Drug.hpp" alt="" coords="1535,225,1612,251"/>
 </map>

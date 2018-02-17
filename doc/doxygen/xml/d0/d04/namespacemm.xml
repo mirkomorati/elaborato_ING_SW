@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d0/d04/namespacemm" kind="namespace" language="C++">
         <compoundname>mm</compoundname>
         <innerclass refid="d7/d05/classmm_1_1_about_dialog" prot="public">mm::AboutDialog</innerclass>
@@ -11,6 +11,7 @@
         <innerclass refid="d0/d52/structmm_1_1_date_controller" prot="public">mm::DateController</innerclass>
         <innerclass refid="da/d0d/classmm_1_1_d_b_master" prot="public">mm::DBMaster</innerclass>
         <innerclass refid="df/d35/classmm_1_1_dialog" prot="public">mm::Dialog</innerclass>
+        <innerclass refid="d7/dcd/classmm_1_1_drug_window" prot="public">mm::DrugWindow</innerclass>
         <innerclass refid="d0/d9e/structmm_1_1_entry_controller" prot="public">mm::EntryController</innerclass>
         <innerclass refid="d7/d9e/classmm_1_1_i_observer" prot="public">mm::IObserver</innerclass>
         <innerclass refid="dc/df3/classmm_1_1_i_serializable" prot="public">mm::ISerializable</innerclass>
@@ -22,6 +23,7 @@
         <innerclass refid="da/df7/classmm_1_1observer__not__found__error" prot="public">mm::observer_not_found_error
         </innerclass>
         <innerclass refid="da/d81/classmm_1_1_patient_window" prot="public">mm::PatientWindow</innerclass>
+        <innerclass refid="da/d8f/classmm_1_1_prescription_window" prot="public">mm::PrescriptionWindow</innerclass>
         <innerclass refid="dc/d8a/classmm_1_1record__not__found__error" prot="public">mm::record_not_found_error
         </innerclass>
         <innerclass refid="dd/d47/classmm_1_1_ref_builder" prot="public">mm::RefBuilder</innerclass>
@@ -32,7 +34,9 @@
         <innernamespace refid="d1/d50/namespacemm_1_1util">mm::util</innernamespace>
         <innernamespace refid="d7/d7c/namespacemm_1_1view">mm::view</innernamespace>
         <sectiondef kind="enum">
-            <memberdef kind="enum" id="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" prot="public" static="no">
+            <memberdef kind="enum" id="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" prot="public" static="no"
+                       strong="no">
+                <type></type>
                 <name>WindowName</name>
                 <enumvalue id="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca625866ddfe14a6b663c4b95ee85c96f3"
                            prot="public">
@@ -85,7 +89,9 @@
                 <location file="code/gui/Window.hpp" line="15" column="1" bodyfile="code/gui/Window.hpp" bodystart="15"
                           bodyend="21"/>
             </memberdef>
-            <memberdef kind="enum" id="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601c" prot="public" static="no">
+            <memberdef kind="enum" id="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601c" prot="public" static="no"
+                       strong="no">
+                <type></type>
                 <name>StoredTypes</name>
                 <enumvalue id="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a"
                            prot="public">
@@ -135,8 +141,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="24" column="1"
-                          bodyfile="code/interfaces/ISerializable.hpp" bodystart="24" bodyend="28"/>
+                <location file="code/interfaces/ISerializable.hpp" line="25" column="1"
+                          bodyfile="code/interfaces/ISerializable.hpp" bodystart="25" bodyend="29"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="func">
@@ -161,8 +167,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/interfaces/ISerializable.hpp" line="90" column="1"
-                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="18" bodyend="28"/>
+                <location file="code/interfaces/ISerializable.hpp" line="91" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="19" bodyend="29"/>
             </memberdef>
         </sectiondef>
         <briefdescription>

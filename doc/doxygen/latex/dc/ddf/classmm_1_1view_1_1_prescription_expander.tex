@@ -6,7 +6,8 @@
 
 
 
-Diagramma delle classi per mm\+:\+:view\+:\+:Prescription\+Expander\nopagebreak
+Diagramma delle classi per mm\+:\+:view\+:\+:Prescription\+Expander
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Diagramma delle classi per mm\+:\+:view\+:\+:Prescription\+Expander\nopagebreak
 \end{figure}
 
 
-Diagramma di collaborazione per mm\+:\+:view\+:\+:Prescription\+Expander\+:\nopagebreak
+Diagramma di collaborazione per mm\+:\+:view\+:\+:Prescription\+Expander\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,13 +27,21 @@ Diagramma di collaborazione per mm\+:\+:view\+:\+:Prescription\+Expander\+:\nopa
 \subsection*{Membri pubblici}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classmm_1_1view_1_1_prescription_expander_a12b5e974972ebdd42478c59c08e3f219}{Prescription\+Expander} (const \hyperlink{classmm_1_1model_1_1_prescription}{mm\+::model\+::\+Prescription} \&prescription)
+\mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander_a12b5e974972ebdd42478c59c08e3f219}{Prescription\+Expander}} (const \mbox{\hyperlink{classmm_1_1model_1_1_prescription}{mm\+::model\+::\+Prescription}} \&prescription)
 \item 
-\hyperlink{classmm_1_1view_1_1_prescription_expander_ac39b2410139956ef3f707caf1b23dc26}{Prescription\+Expander} ()=delete
+\mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander_ac39b2410139956ef3f707caf1b23dc26}{Prescription\+Expander}} ()=delete
 \item 
-\hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander} \& \hyperlink{classmm_1_1view_1_1_prescription_expander_a21d6e2894f4c17fc279510f4fadd8eff}{operator=} (\hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander} \&)=delete
+virtual \mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander_a8011da18b2ee9bf91ca672813c6c4e27}{$\sim$\+Prescription\+Expander}} ()
 \item 
-int \hyperlink{classmm_1_1view_1_1_prescription_expander_a63f5113e028e8d9e7eb09981dc28e602}{get\+ID} () const
+\mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander}} \& \mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander_a21d6e2894f4c17fc279510f4fadd8eff}{operator=}} (\mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander}} \&)=delete
+\item 
+bool \mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander_a761cc50a6326cc40496a9346a872e734}{operator$<$}} (const \mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander}} \&r) const
+\item 
+Glib\+::ustring \mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander_aff3761ec2d61ceeb5871e21a39a35bdb}{get\+\_\+name}} () const
+\item 
+bool \mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander_a3604c2f026067d71ff619036a9615694}{operator$>$}} (const \mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander}} \&rhs) const
+\item 
+int \mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander_a63f5113e028e8d9e7eb09981dc28e602}{get\+ID}} () const
 \end{DoxyCompactItemize}
 
 
@@ -40,7 +50,7 @@ int \hyperlink{classmm_1_1view_1_1_prescription_expander_a63f5113e028e8d9e7eb099
 \index{mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}!Prescription\+Expander@{Prescription\+Expander}}
 \index{Prescription\+Expander@{Prescription\+Expander}!mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}}
 \subsubsection{\texorpdfstring{Prescription\+Expander()}{PrescriptionExpander()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily mm\+::view\+::\+Prescription\+Expander\+::\+Prescription\+Expander (\begin{DoxyParamCaption}\item[{const \hyperlink{classmm_1_1model_1_1_prescription}{mm\+::model\+::\+Prescription} \&}]{prescription }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily mm\+::view\+::\+Prescription\+Expander\+::\+Prescription\+Expander (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmm_1_1model_1_1_prescription}{mm\+::model\+::\+Prescription}} \&}]{prescription }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 \mbox{\Hypertarget{classmm_1_1view_1_1_prescription_expander_ac39b2410139956ef3f707caf1b23dc26}\label{classmm_1_1view_1_1_prescription_expander_ac39b2410139956ef3f707caf1b23dc26}} 
 \index{mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}!Prescription\+Expander@{Prescription\+Expander}}
@@ -48,24 +58,48 @@ int \hyperlink{classmm_1_1view_1_1_prescription_expander_a63f5113e028e8d9e7eb099
 \subsubsection{\texorpdfstring{Prescription\+Expander()}{PrescriptionExpander()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily mm\+::view\+::\+Prescription\+Expander\+::\+Prescription\+Expander (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
+\mbox{\Hypertarget{classmm_1_1view_1_1_prescription_expander_a8011da18b2ee9bf91ca672813c6c4e27}\label{classmm_1_1view_1_1_prescription_expander_a8011da18b2ee9bf91ca672813c6c4e27}} 
+\index{mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}!````~Prescription\+Expander@{$\sim$\+Prescription\+Expander}}
+\index{````~Prescription\+Expander@{$\sim$\+Prescription\+Expander}!mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}}
+\subsubsection{\texorpdfstring{$\sim$\+Prescription\+Expander()}{~PrescriptionExpander()}}
+{\footnotesize\ttfamily mm\+::view\+::\+Prescription\+Expander\+::$\sim$\+Prescription\+Expander (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 \subsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{classmm_1_1view_1_1_prescription_expander_aff3761ec2d61ceeb5871e21a39a35bdb}\label{classmm_1_1view_1_1_prescription_expander_aff3761ec2d61ceeb5871e21a39a35bdb}} 
+\index{mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}}
+\subsubsection{\texorpdfstring{get\+\_\+name()}{get\_name()}}
+{\footnotesize\ttfamily Glib\+::ustring mm\+::view\+::\+Prescription\+Expander\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 \mbox{\Hypertarget{classmm_1_1view_1_1_prescription_expander_a63f5113e028e8d9e7eb09981dc28e602}\label{classmm_1_1view_1_1_prescription_expander_a63f5113e028e8d9e7eb09981dc28e602}} 
 \index{mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}!get\+ID@{get\+ID}}
 \index{get\+ID@{get\+ID}!mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}}
 \subsubsection{\texorpdfstring{get\+I\+D()}{getID()}}
 {\footnotesize\ttfamily int mm\+::view\+::\+Prescription\+Expander\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\mbox{\Hypertarget{classmm_1_1view_1_1_prescription_expander_a761cc50a6326cc40496a9346a872e734}\label{classmm_1_1view_1_1_prescription_expander_a761cc50a6326cc40496a9346a872e734}} 
+\index{mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool mm\+::view\+::\+Prescription\+Expander\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander}} \&}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classmm_1_1view_1_1_prescription_expander_a21d6e2894f4c17fc279510f4fadd8eff}\label{classmm_1_1view_1_1_prescription_expander_a21d6e2894f4c17fc279510f4fadd8eff}} 
 \index{mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}!operator=@{operator=}}
 \index{operator=@{operator=}!mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}}
 \subsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander}\& mm\+::view\+::\+Prescription\+Expander\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander}}\& mm\+::view\+::\+Prescription\+Expander\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classmm_1_1view_1_1_prescription_expander_a3604c2f026067d71ff619036a9615694}\label{classmm_1_1view_1_1_prescription_expander_a3604c2f026067d71ff619036a9615694}} 
+\index{mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!mm\+::view\+::\+Prescription\+Expander@{mm\+::view\+::\+Prescription\+Expander}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool mm\+::view\+::\+Prescription\+Expander\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmm_1_1view_1_1_prescription_expander}{Prescription\+Expander}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 La documentazione per questa classe è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
 \item 
-code/gui/view/\hyperlink{_custom_widgets_8hpp}{Custom\+Widgets.\+hpp}\item 
-code/gui/view/\hyperlink{_custom_widgets_8cpp}{Custom\+Widgets.\+cpp}\end{DoxyCompactItemize}
+code/gui/view/\mbox{\hyperlink{_custom_widgets_8hpp}{Custom\+Widgets.\+hpp}}\item 
+code/gui/view/\mbox{\hyperlink{_custom_widgets_8cpp}{Custom\+Widgets.\+cpp}}\end{DoxyCompactItemize}

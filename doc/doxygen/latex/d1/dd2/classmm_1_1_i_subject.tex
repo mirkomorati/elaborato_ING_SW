@@ -6,7 +6,8 @@
 
 
 
-Diagramma delle classi per mm\+:\+:I\+Subject\nopagebreak
+Diagramma delle classi per mm\+:\+:I\+Subject
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Diagramma delle classi per mm\+:\+:I\+Subject\nopagebreak
 \end{figure}
 
 
-Diagramma di collaborazione per mm\+:\+:I\+Subject\+:\nopagebreak
+Diagramma di collaborazione per mm\+:\+:I\+Subject\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,13 +27,15 @@ Diagramma di collaborazione per mm\+:\+:I\+Subject\+:\nopagebreak
 \subsection*{Membri pubblici}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classmm_1_1_i_subject_a76069d8db0c9c3d543154b0c2ce23bc9}{attach} (\hyperlink{classmm_1_1_i_observer}{I\+Observer} $\ast$obj) noexcept
+void \mbox{\hyperlink{classmm_1_1_i_subject_a76069d8db0c9c3d543154b0c2ce23bc9}{attach}} (\mbox{\hyperlink{classmm_1_1_i_observer}{I\+Observer}} $\ast$obj) noexcept
 \item 
-void \hyperlink{classmm_1_1_i_subject_a64be1c0b2ad7ee4631a5270dedb7aa88}{detach} (\hyperlink{classmm_1_1_i_observer}{I\+Observer} $\ast$obj) noexcept(false)
+void \mbox{\hyperlink{classmm_1_1_i_subject_a64be1c0b2ad7ee4631a5270dedb7aa88}{detach}} (\mbox{\hyperlink{classmm_1_1_i_observer}{I\+Observer}} $\ast$obj) noexcept(false)
 \item 
-void \hyperlink{classmm_1_1_i_subject_ad693fe5eb99bc20bc6d70f30bdf1140d}{notify} () const
+void \mbox{\hyperlink{classmm_1_1_i_subject_ad693fe5eb99bc20bc6d70f30bdf1140d}{notify}} () const
 \item 
-virtual \hyperlink{classmm_1_1_i_subject_a37235a8b8ef83116c7351c56e17f7f57}{$\sim$\+I\+Subject} ()
+void \mbox{\hyperlink{classmm_1_1_i_subject_a6c77bad76084018ccb79106390d97117}{notify}} (unsigned int what) const
+\item 
+virtual \mbox{\hyperlink{classmm_1_1_i_subject_a37235a8b8ef83116c7351c56e17f7f57}{$\sim$\+I\+Subject}} ()
 \end{DoxyCompactItemize}
 
 
@@ -49,23 +53,29 @@ virtual \hyperlink{classmm_1_1_i_subject_a37235a8b8ef83116c7351c56e17f7f57}{$\si
 \index{mm\+::\+I\+Subject@{mm\+::\+I\+Subject}!attach@{attach}}
 \index{attach@{attach}!mm\+::\+I\+Subject@{mm\+::\+I\+Subject}}
 \subsubsection{\texorpdfstring{attach()}{attach()}}
-{\footnotesize\ttfamily void mm\+::\+I\+Subject\+::attach (\begin{DoxyParamCaption}\item[{\hyperlink{classmm_1_1_i_observer}{mm\+::\+I\+Observer} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void mm\+::\+I\+Subject\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmm_1_1_i_observer}{mm\+::\+I\+Observer}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 \mbox{\Hypertarget{classmm_1_1_i_subject_a64be1c0b2ad7ee4631a5270dedb7aa88}\label{classmm_1_1_i_subject_a64be1c0b2ad7ee4631a5270dedb7aa88}} 
 \index{mm\+::\+I\+Subject@{mm\+::\+I\+Subject}!detach@{detach}}
 \index{detach@{detach}!mm\+::\+I\+Subject@{mm\+::\+I\+Subject}}
 \subsubsection{\texorpdfstring{detach()}{detach()}}
-{\footnotesize\ttfamily void mm\+::\+I\+Subject\+::detach (\begin{DoxyParamCaption}\item[{\hyperlink{classmm_1_1_i_observer}{mm\+::\+I\+Observer} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void mm\+::\+I\+Subject\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmm_1_1_i_observer}{mm\+::\+I\+Observer}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 \mbox{\Hypertarget{classmm_1_1_i_subject_ad693fe5eb99bc20bc6d70f30bdf1140d}\label{classmm_1_1_i_subject_ad693fe5eb99bc20bc6d70f30bdf1140d}} 
 \index{mm\+::\+I\+Subject@{mm\+::\+I\+Subject}!notify@{notify}}
 \index{notify@{notify}!mm\+::\+I\+Subject@{mm\+::\+I\+Subject}}
-\subsubsection{\texorpdfstring{notify()}{notify()}}
+\subsubsection{\texorpdfstring{notify()}{notify()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void mm\+::\+I\+Subject\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1_i_subject_a6c77bad76084018ccb79106390d97117}\label{classmm_1_1_i_subject_a6c77bad76084018ccb79106390d97117}} 
+\index{mm\+::\+I\+Subject@{mm\+::\+I\+Subject}!notify@{notify}}
+\index{notify@{notify}!mm\+::\+I\+Subject@{mm\+::\+I\+Subject}}
+\subsubsection{\texorpdfstring{notify()}{notify()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mm\+::\+I\+Subject\+::notify (\begin{DoxyParamCaption}\item[{unsigned int}]{what }\end{DoxyParamCaption}) const}
 
 
 
 La documentazione per questa classe è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
 \item 
-code/interfaces/\hyperlink{_i_subject_8hpp}{I\+Subject.\+hpp}\item 
-code/interfaces/\hyperlink{_i_subject_8cpp}{I\+Subject.\+cpp}\end{DoxyCompactItemize}
+code/interfaces/\mbox{\hyperlink{_i_subject_8hpp}{I\+Subject.\+hpp}}\item 
+code/interfaces/\mbox{\hyperlink{_i_subject_8cpp}{I\+Subject.\+cpp}}\end{DoxyCompactItemize}

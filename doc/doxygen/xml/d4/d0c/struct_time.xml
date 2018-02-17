@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d4/d0c/struct_time" kind="struct" language="C++" prot="public">
         <compoundname>Time</compoundname>
         <includes refid="d8/d3a/_time_8hpp" local="no">Time.hpp</includes>
@@ -99,7 +99,7 @@
             </para>
         </detaileddescription>
         <collaborationgraph>
-            <node id="156">
+            <node id="196">
                 <label>Time</label>
                 <link refid="d4/d0c/struct_time"/>
             </node>

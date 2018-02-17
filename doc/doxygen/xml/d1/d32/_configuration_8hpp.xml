@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d1/d32/_configuration_8hpp" kind="file" language="C++">
         <compoundname>Configuration.hpp</compoundname>
         <includes local="no">string</includes>
@@ -466,7 +466,8 @@
                 <highlight class="normal">
                     <sp/>
                     <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">Configuration</ref>
-                    <sp/>&amp;operator=(
+                    <sp/>&amp;<ref refid="dc/d00/classmm_1_1_configuration_1a3077aebf459758dce4be716a8ddcb090"
+                                   kindref="member">operator=</ref>(
                 </highlight>
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">
@@ -496,7 +497,8 @@
                 <highlight class="normal">
                     <sp/>
                     <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">Configuration</ref>
-                    <sp/>&amp;get_instance()<sp/>noexcept(
+                    <sp/>&amp;<ref refid="dc/d00/classmm_1_1_configuration_1a5cfc5ea56062f53ef9fbd274f6dbe79e"
+                                   kindref="member">get_instance</ref>()<sp/>noexcept(
                 </highlight>
                 <highlight class="keyword">false</highlight>
                 <highlight class="normal">);</highlight>
@@ -520,7 +522,9 @@
                     <sp/>
                 </highlight>
                 <highlight class="keyword">const</highlight>
-                <highlight class="normal"><sp/>std::string<sp/>&amp;get_config_file_name();
+                <highlight class="normal"><sp/>std::string<sp/>&amp;<ref
+                        refid="dc/d00/classmm_1_1_configuration_1a631c8525beb91fb55d72eb6b58d2d68f" kindref="member">
+                    get_config_file_name</ref>();
                 </highlight>
             </codeline>
             <codeline lineno="72">
@@ -542,7 +546,10 @@
                     <sp/>
                 </highlight>
                 <highlight class="keywordtype">void</highlight>
-                <highlight class="normal"><sp/>set_config_file_name(
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="dc/d00/classmm_1_1_configuration_1ad526b28d1a7f8c6f854352b840d2d7b4" kindref="member">
+                        set_config_file_name</ref>(
                 </highlight>
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal"><sp/>std::string<sp/>&amp;config_file_name);
@@ -679,8 +686,8 @@
                 <highlight class="keywordflow">throw</highlight>
                 <highlight class="normal">
                     <sp/>
-                    <ref refid="d3/d00/classmm_1_1key__not__found__error_1a2dbffa57a8ad2c3d80151f0d7b75814b"
-                         kindref="member">key_not_found_error</ref>(ss.str());
+                    <ref refid="d3/d00/classmm_1_1key__not__found__error" kindref="compound">key_not_found_error</ref>
+                    (ss.str());
                 </highlight>
             </codeline>
             <codeline lineno="98">

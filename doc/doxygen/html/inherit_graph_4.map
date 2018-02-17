@@ -1,5 +1,4 @@
 <map id="Grafico della gerarchia delle classi" name="Grafico della gerarchia delle classi">
-<area shape="rect" id="node1" href="$d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model.html" title="mm::model::Drug::TreeModel" alt="" coords="5,44,200,69"/>
-<area shape="rect" id="node2" href="$d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model.html" title="mm::model::Patient\l::TreeModel" alt="" coords="262,5,398,44"/>
-<area shape="rect" id="node3" href="$d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model.html" title="mm::model::Prescription\l::TreeModel" alt="" coords="248,68,413,107"/>
+<area shape="rect" id="node2" href="$d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model.html" title="mm::model::Drug::TreeModel" alt="" coords="164,5,358,31"/>
+<area shape="rect" id="node3" href="$d2/d52/structmm_1_1model_1_1_drug_tree_model.html" title="mm::model::DrugTreeModel" alt="" coords="167,55,354,80"/>
 </map>

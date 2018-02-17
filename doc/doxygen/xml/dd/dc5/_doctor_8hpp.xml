@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="dd/dc5/_doctor_8hpp" kind="file" language="C++">
         <compoundname>Doctor.hpp</compoundname>
         <includes local="no">string</includes>
@@ -10,119 +10,142 @@
         <includes refid="dd/df9/_drug_8hpp" local="yes">Drug.hpp</includes>
         <includes refid="d8/d63/_date_8hpp" local="yes">../utils/Date.hpp</includes>
         <includes refid="d8/d3a/_time_8hpp" local="yes">../utils/Time.hpp</includes>
+        <includedby refid="d6/d9e/_drug_window_8cpp" local="yes">code/gui/DrugWindow.cpp</includedby>
         <includedby refid="d8/d35/_patient_window_8cpp" local="yes">code/gui/PatientWindow.cpp</includedby>
+        <includedby refid="d1/d16/_prescription_window_8cpp" local="yes">code/gui/PrescriptionWindow.cpp</includedby>
         <includedby refid="d3/da6/_doctor_8cpp" local="yes">code/model/Doctor.cpp</includedby>
         <incdepgraph>
-            <node id="670">
+            <node id="916">
                 <label>Prescription.hpp</label>
                 <link refid="de/d01/_prescription_8hpp"/>
-                <childnode refid="669" relation="include">
+                <childnode refid="915" relation="include">
                 </childnode>
-                <childnode refid="668" relation="include">
+                <childnode refid="914" relation="include">
                 </childnode>
-                <childnode refid="671" relation="include">
+                <childnode refid="917" relation="include">
                 </childnode>
-                <childnode refid="672" relation="include">
+                <childnode refid="918" relation="include">
                 </childnode>
-                <childnode refid="673" relation="include">
+                <childnode refid="919" relation="include">
                 </childnode>
-                <childnode refid="674" relation="include">
+                <childnode refid="920" relation="include">
                 </childnode>
             </node>
-            <node id="673">
+            <node id="919">
                 <label>../interfaces/ISerializable.hpp</label>
                 <link refid="d3/d1b/_i_serializable_8hpp"/>
-                <childnode refid="668" relation="include">
+                <childnode refid="914" relation="include">
                 </childnode>
-                <childnode refid="671" relation="include">
+                <childnode refid="917" relation="include">
+                </childnode>
+                <childnode refid="915" relation="include">
                 </childnode>
             </node>
-            <node id="667">
+            <node id="913">
                 <label>code/model/Doctor.hpp</label>
                 <link refid="dd/dc5/_doctor_8hpp"/>
-                <childnode refid="668" relation="include">
+                <childnode refid="914" relation="include">
                 </childnode>
-                <childnode refid="669" relation="include">
+                <childnode refid="915" relation="include">
                 </childnode>
-                <childnode refid="670" relation="include">
+                <childnode refid="916" relation="include">
                 </childnode>
-                <childnode refid="675" relation="include">
+                <childnode refid="923" relation="include">
                 </childnode>
-                <childnode refid="674" relation="include">
+                <childnode refid="920" relation="include">
                 </childnode>
-                <childnode refid="676" relation="include">
+                <childnode refid="924" relation="include">
                 </childnode>
-                <childnode refid="678" relation="include">
+                <childnode refid="925" relation="include">
                 </childnode>
             </node>
-            <node id="668">
+            <node id="914">
                 <label>string</label>
             </node>
-            <node id="671">
+            <node id="917">
                 <label>map</label>
             </node>
-            <node id="672">
+            <node id="918">
                 <label>gtkmm/treemodelcolumn.h</label>
             </node>
-            <node id="669">
+            <node id="921">
+                <label>gtkmm/treemodel.h</label>
+            </node>
+            <node id="915">
                 <label>vector</label>
             </node>
-            <node id="675">
+            <node id="923">
                 <label>Patient.hpp</label>
                 <link refid="d0/da9/_patient_8hpp"/>
-                <childnode refid="669" relation="include">
+                <childnode refid="915" relation="include">
                 </childnode>
-                <childnode refid="668" relation="include">
+                <childnode refid="914" relation="include">
                 </childnode>
-                <childnode refid="672" relation="include">
+                <childnode refid="918" relation="include">
                 </childnode>
-                <childnode refid="673" relation="include">
+                <childnode refid="919" relation="include">
                 </childnode>
-                <childnode refid="670" relation="include">
+                <childnode refid="916" relation="include">
                 </childnode>
             </node>
-            <node id="678">
+            <node id="925">
                 <label>../utils/Time.hpp</label>
                 <link refid="d8/d3a/_time_8hpp"/>
             </node>
-            <node id="676">
+            <node id="924">
                 <label>../utils/Date.hpp</label>
                 <link refid="d8/d63/_date_8hpp"/>
-                <childnode refid="677" relation="include">
+                <childnode refid="922" relation="include">
                 </childnode>
             </node>
-            <node id="677">
+            <node id="922">
                 <label>iostream</label>
             </node>
-            <node id="674">
+            <node id="920">
                 <label>Drug.hpp</label>
                 <link refid="dd/df9/_drug_8hpp"/>
-                <childnode refid="668" relation="include">
+                <childnode refid="914" relation="include">
                 </childnode>
-                <childnode refid="669" relation="include">
+                <childnode refid="915" relation="include">
                 </childnode>
-                <childnode refid="671" relation="include">
+                <childnode refid="917" relation="include">
                 </childnode>
-                <childnode refid="672" relation="include">
+                <childnode refid="918" relation="include">
                 </childnode>
-                <childnode refid="673" relation="include">
+                <childnode refid="921" relation="include">
+                </childnode>
+                <childnode refid="922" relation="include">
+                </childnode>
+                <childnode refid="919" relation="include">
                 </childnode>
             </node>
         </incdepgraph>
         <invincdepgraph>
-            <node id="679">
+            <node id="927">
+                <label>code/gui/DrugWindow.cpp</label>
+                <link refid="d6/d9e/_drug_window_8cpp"/>
+            </node>
+            <node id="926">
                 <label>code/model/Doctor.hpp</label>
                 <link refid="dd/dc5/_doctor_8hpp"/>
-                <childnode refid="680" relation="include">
+                <childnode refid="927" relation="include">
                 </childnode>
-                <childnode refid="681" relation="include">
+                <childnode refid="928" relation="include">
+                </childnode>
+                <childnode refid="929" relation="include">
+                </childnode>
+                <childnode refid="930" relation="include">
                 </childnode>
             </node>
-            <node id="680">
+            <node id="929">
+                <label>code/gui/PrescriptionWindow.cpp</label>
+                <link refid="d1/d16/_prescription_window_8cpp"/>
+            </node>
+            <node id="928">
                 <label>code/gui/PatientWindow.cpp</label>
                 <link refid="d8/d35/_patient_window_8cpp"/>
             </node>
-            <node id="681">
+            <node id="930">
                 <label>code/model/Doctor.cpp</label>
                 <link refid="d3/da6/_doctor_8cpp"/>
             </node>
@@ -469,7 +492,9 @@
                     <sp/>
                     <sp/>vector&lt;model::Prescription&gt;<sp/>get_prescriptions(
                     <ref refid="d6/d4a/classmm_1_1model_1_1_patient" kindref="compound">Patient</ref>
-                    <sp/>patient,
+                    <sp/>patient<sp/>=
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient" kindref="compound">Patient</ref>(),
                 </highlight>
             </codeline>
             <codeline lineno="37">
@@ -533,16 +558,77 @@
                     <sp/>
                     <sp/>
                     <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
-                    <sp/>start,
-                    <sp/>
-                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
-                    <sp/>end);
+                    <sp/>start<sp/>=<sp/>util::Date::get_current_date(),
                 </highlight>
             </codeline>
             <codeline lineno="38">
-                <highlight class="normal"></highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
+                    <sp/>end<sp/>=<sp/>util::Date::get_current_date());
+                </highlight>
             </codeline>
             <codeline lineno="39">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="40">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -560,10 +646,10 @@
                     <sp/>drug);
                 </highlight>
             </codeline>
-            <codeline lineno="40">
+            <codeline lineno="41">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="41">
+            <codeline lineno="42">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -584,10 +670,10 @@
                     <sp/>end);
                 </highlight>
             </codeline>
-            <codeline lineno="42">
+            <codeline lineno="43">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="43">
+            <codeline lineno="44">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -603,10 +689,10 @@
                     <sp/>vector&lt;model::Patient&gt;<sp/>&amp;get_patients();
                 </highlight>
             </codeline>
-            <codeline lineno="44">
+            <codeline lineno="45">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="45">
+            <codeline lineno="46">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -624,10 +710,10 @@
                     <sp/>drug);
                 </highlight>
             </codeline>
-            <codeline lineno="46">
+            <codeline lineno="47">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="47">
+            <codeline lineno="48">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -645,38 +731,10 @@
                     <sp/>get_patient_from_fiscal_code(std::string<sp/>fiscal_code);
                 </highlight>
             </codeline>
-            <codeline lineno="48">
-                <highlight class="normal"></highlight>
-            </codeline>
             <codeline lineno="49">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">void</highlight>
-                <highlight class="normal"><sp/>remove_patient(
-                </highlight>
-                <highlight class="keyword">const</highlight>
-                <highlight class="normal">
-                    <sp/>
-                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient" kindref="compound">Patient</ref>
-                    <sp/>&amp;patient);
-                </highlight>
+                <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="50">
-                <highlight class="normal"></highlight>
-            </codeline>
-            <codeline lineno="51">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -702,10 +760,10 @@
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="52">
+            <codeline lineno="51">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="53">
+            <codeline lineno="52">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -731,10 +789,10 @@
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="54">
+            <codeline lineno="53">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="55">
+            <codeline lineno="54">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -760,10 +818,10 @@
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="56">
+            <codeline lineno="55">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="57">
+            <codeline lineno="56">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -789,17 +847,17 @@
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="58">
+            <codeline lineno="57">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="59">
+            <codeline lineno="58">
                 <highlight class="normal"></highlight>
                 <highlight class="comment">
                     /*----------------------------------------------------------------------------*/
                 </highlight>
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="60">
+            <codeline lineno="59">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -819,10 +877,10 @@
                 </highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="61">
+            <codeline lineno="60">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="62">
+            <codeline lineno="61">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -844,10 +902,10 @@
                 <highlight class="keyword">override</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="63">
+            <codeline lineno="62">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="64">
+            <codeline lineno="63">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -870,10 +928,10 @@
                 </highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="65">
+            <codeline lineno="64">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="66">
+            <codeline lineno="65">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -893,10 +951,10 @@
                 </highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="67">
+            <codeline lineno="66">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="68">
+            <codeline lineno="67">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -922,10 +980,10 @@
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="69">
+            <codeline lineno="68">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="70">
+            <codeline lineno="69">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -951,10 +1009,10 @@
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="71">
+            <codeline lineno="70">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="72">
+            <codeline lineno="71">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -980,7 +1038,7 @@
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="73">
+            <codeline lineno="72">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -992,7 +1050,7 @@
                     <sp/>};
                 </highlight>
             </codeline>
-            <codeline lineno="74">
+            <codeline lineno="73">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1000,13 +1058,13 @@
                     <sp/>}
                 </highlight>
             </codeline>
-            <codeline lineno="75">
+            <codeline lineno="74">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="76">
+            <codeline lineno="75">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="77">
+            <codeline lineno="76">
                 <highlight class="normal"></highlight>
                 <highlight class="preprocessor">#endif<sp/>//_DOCTOR_H
                 </highlight>

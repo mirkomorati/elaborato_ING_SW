@@ -1,0 +1,1381 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d1/d16/_prescription_window_8cpp" kind="file" language="C++">
+        <compoundname>PrescriptionWindow.cpp</compoundname>
+        <includes local="no">iostream</includes>
+        <includes refid="d5/db1/_prescription_window_8hpp" local="yes">PrescriptionWindow.hpp</includes>
+        <includes refid="de/d01/_prescription_8hpp" local="yes">../model/Prescription.hpp</includes>
+        <includes refid="dc/db8/_ref_builder_8hpp" local="yes">RefBuilder.hpp</includes>
+        <includes refid="d7/d0f/_d_b_master_8hpp" local="yes">../DBMaster.hpp</includes>
+        <includes refid="d8/d63/_date_8hpp" local="yes">../utils/Date.hpp</includes>
+        <includes refid="dc/d00/_authentication_8hpp" local="yes">../model/Authentication.hpp</includes>
+        <includes refid="dd/dc5/_doctor_8hpp" local="yes">../model/Doctor.hpp</includes>
+        <incdepgraph>
+            <node id="528">
+                <label>IObserver.hpp</label>
+                <link refid="d5/d40/_i_observer_8hpp"/>
+                <childnode refid="529" relation="include">
+                </childnode>
+                <childnode refid="530" relation="include">
+                </childnode>
+            </node>
+            <node id="525">
+                <label>Window.hpp</label>
+                <link refid="de/d0b/_window_8hpp"/>
+                <childnode refid="526" relation="include">
+                </childnode>
+            </node>
+            <node id="531">
+                <label>../model/Prescription.hpp</label>
+                <link refid="de/d01/_prescription_8hpp"/>
+                <childnode refid="532" relation="include">
+                </childnode>
+                <childnode refid="533" relation="include">
+                </childnode>
+                <childnode refid="534" relation="include">
+                </childnode>
+                <childnode refid="535" relation="include">
+                </childnode>
+                <childnode refid="536" relation="include">
+                </childnode>
+                <childnode refid="537" relation="include">
+                </childnode>
+            </node>
+            <node id="536">
+                <label>../interfaces/ISerializable.hpp</label>
+                <link refid="d3/d1b/_i_serializable_8hpp"/>
+                <childnode refid="533" relation="include">
+                </childnode>
+                <childnode refid="534" relation="include">
+                </childnode>
+                <childnode refid="532" relation="include">
+                </childnode>
+            </node>
+            <node id="547">
+                <label>../model/Doctor.hpp</label>
+                <link refid="dd/dc5/_doctor_8hpp"/>
+                <childnode refid="533" relation="include">
+                </childnode>
+                <childnode refid="532" relation="include">
+                </childnode>
+                <childnode refid="531" relation="include">
+                </childnode>
+                <childnode refid="548" relation="include">
+                </childnode>
+                <childnode refid="537" relation="include">
+                </childnode>
+                <childnode refid="544" relation="include">
+                </childnode>
+                <childnode refid="549" relation="include">
+                </childnode>
+            </node>
+            <node id="543">
+                <label>stdexcept</label>
+            </node>
+            <node id="533">
+                <label>string</label>
+            </node>
+            <node id="534">
+                <label>map</label>
+            </node>
+            <node id="521">
+                <label>code/gui/PrescriptionWindow.cpp</label>
+                <link refid="d1/d16/_prescription_window_8cpp"/>
+                <childnode refid="522" relation="include">
+                </childnode>
+                <childnode refid="523" relation="include">
+                </childnode>
+                <childnode refid="531" relation="include">
+                </childnode>
+                <childnode refid="539" relation="include">
+                </childnode>
+                <childnode refid="541" relation="include">
+                </childnode>
+                <childnode refid="544" relation="include">
+                </childnode>
+                <childnode refid="545" relation="include">
+                </childnode>
+                <childnode refid="547" relation="include">
+                </childnode>
+            </node>
+            <node id="542">
+                <label>sqlite3.h</label>
+            </node>
+            <node id="535">
+                <label>gtkmm/treemodelcolumn.h</label>
+            </node>
+            <node id="538">
+                <label>gtkmm/treemodel.h</label>
+            </node>
+            <node id="546">
+                <label>tuple</label>
+            </node>
+            <node id="523">
+                <label>PrescriptionWindow.hpp</label>
+                <link refid="d5/db1/_prescription_window_8hpp"/>
+                <childnode refid="524" relation="include">
+                </childnode>
+                <childnode refid="525" relation="include">
+                </childnode>
+            </node>
+            <node id="540">
+                <label>gtkmm-3.0/gtkmm.h</label>
+            </node>
+            <node id="532">
+                <label>vector</label>
+            </node>
+            <node id="539">
+                <label>RefBuilder.hpp</label>
+                <link refid="dc/db8/_ref_builder_8hpp"/>
+                <childnode refid="540" relation="include">
+                </childnode>
+            </node>
+            <node id="548">
+                <label>Patient.hpp</label>
+                <link refid="d0/da9/_patient_8hpp"/>
+                <childnode refid="532" relation="include">
+                </childnode>
+                <childnode refid="533" relation="include">
+                </childnode>
+                <childnode refid="535" relation="include">
+                </childnode>
+                <childnode refid="536" relation="include">
+                </childnode>
+                <childnode refid="531" relation="include">
+                </childnode>
+            </node>
+            <node id="549">
+                <label>../utils/Time.hpp</label>
+                <link refid="d8/d3a/_time_8hpp"/>
+            </node>
+            <node id="544">
+                <label>../utils/Date.hpp</label>
+                <link refid="d8/d63/_date_8hpp"/>
+                <childnode refid="522" relation="include">
+                </childnode>
+            </node>
+            <node id="522">
+                <label>iostream</label>
+            </node>
+            <node id="541">
+                <label>../DBMaster.hpp</label>
+                <link refid="d7/d0f/_d_b_master_8hpp"/>
+                <childnode refid="542" relation="include">
+                </childnode>
+                <childnode refid="533" relation="include">
+                </childnode>
+                <childnode refid="543" relation="include">
+                </childnode>
+                <childnode refid="532" relation="include">
+                </childnode>
+                <childnode refid="536" relation="include">
+                </childnode>
+            </node>
+            <node id="529">
+                <label>mutex</label>
+            </node>
+            <node id="530">
+                <label>thread</label>
+            </node>
+            <node id="537">
+                <label>Drug.hpp</label>
+                <link refid="dd/df9/_drug_8hpp"/>
+                <childnode refid="533" relation="include">
+                </childnode>
+                <childnode refid="532" relation="include">
+                </childnode>
+                <childnode refid="534" relation="include">
+                </childnode>
+                <childnode refid="535" relation="include">
+                </childnode>
+                <childnode refid="538" relation="include">
+                </childnode>
+                <childnode refid="522" relation="include">
+                </childnode>
+                <childnode refid="536" relation="include">
+                </childnode>
+            </node>
+            <node id="526">
+                <label>../interfaces/ISubject.hpp</label>
+                <link refid="d1/d25/_i_subject_8hpp"/>
+                <childnode refid="527" relation="include">
+                </childnode>
+                <childnode refid="528" relation="include">
+                </childnode>
+            </node>
+            <node id="527">
+                <label>set</label>
+            </node>
+            <node id="524">
+                <label>gtkmm/liststore.h</label>
+            </node>
+            <node id="545">
+                <label>../model/Authentication.hpp</label>
+                <link refid="dc/d00/_authentication_8hpp"/>
+                <childnode refid="541" relation="include">
+                </childnode>
+                <childnode refid="526" relation="include">
+                </childnode>
+                <childnode refid="532" relation="include">
+                </childnode>
+                <childnode refid="546" relation="include">
+                </childnode>
+            </node>
+        </incdepgraph>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Mirko<sp/>Morati<sp/>on<sp/>31/12/17.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;iostream&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="d5/db1/_prescription_window_8hpp"
+                                                                        kindref="compound">PrescriptionWindow.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../model/Prescription.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/db8/_ref_builder_8hpp"
+                                                                        kindref="compound">RefBuilder.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../DBMaster.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../utils/Date.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../model/Authentication.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../model/Doctor.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal"><ref
+                        refid="da/d8f/classmm_1_1_prescription_window_1ad40a15a976a851f81fad2c7ec9116555"
+                        kindref="member">mm::PrescriptionWindow::PrescriptionWindow</ref>()<sp/>:
+                </highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>next(<ref
+                        refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93cafd935ea5cffd64386f1549c51642164e"
+                        kindref="member">MAIN</ref>),
+                </highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionListStore(Gtk::ListStore::create(model::Prescription::prescriptionTreeModel))<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="da/d8f/classmm_1_1_prescription_window_1a4764fe59cd6aeaa46c7fd8820dd4102b"
+                         kindref="member">mm::PrescriptionWindow::init</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>initTreeView();
+                </highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">true</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">mm::WindowName
+                    </ref>
+                    <sp/>
+                    <ref refid="da/d8f/classmm_1_1_prescription_window_1a0770b1cfa7eef3bfa990d7ddeeb03a39"
+                         kindref="member">mm::PrescriptionWindow::getName</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca59fb5a42d012d17664b7e9e30b54928b"
+                         kindref="member">PRESCRIPTION</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">mm::WindowName
+                    </ref>
+                    <sp/>
+                    <ref refid="da/d8f/classmm_1_1_prescription_window_1aec9558aea3a0fb15e3148ebf4c9e8d40"
+                         kindref="member">mm::PrescriptionWindow::getNextWindow</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>next;
+                </highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>mm::PrescriptionWindow::initTreeView()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeView<sp/>*prescriptionTreeView;
+                </highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="dd/d47/classmm_1_1_ref_builder_1a1c46de2b1ff68aebfc85692a99827753" kindref="member">
+                        RefBuilder::get_instance</ref>().<ref
+                        refid="dd/d47/classmm_1_1_ref_builder_1a67812973516cbeddf488360424685153" kindref="member">
+                    get_widget</ref>(
+                </highlight>
+                <highlight class="stringliteral">&quot;prescriptionTreeView&quot;</highlight>
+                <highlight class="normal">,<sp/>prescriptionTreeView);
+                </highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;remove_all_columns();
+                </highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;append_column(
+                </highlight>
+                <highlight class="stringliteral">&quot;Paziente&quot;</highlight>
+                <highlight class="normal">,
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                         kindref="member">model::Prescription::prescriptionTreeModel</ref>.patient_id);
+                </highlight>
+            </codeline>
+            <codeline lineno="42">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;append_column(
+                </highlight>
+                <highlight class="stringliteral">&quot;ID&quot;</highlight>
+                <highlight class="normal">,
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                         kindref="member">model::Prescription::prescriptionTreeModel</ref>.prescription_id);
+                </highlight>
+            </codeline>
+            <codeline lineno="43">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;append_column(
+                </highlight>
+                <highlight class="stringliteral">&quot;Data<sp/>di<sp/>Emissione&quot;
+                </highlight>
+                <highlight class="normal">,
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                         kindref="member">model::Prescription::prescriptionTreeModel</ref>.issue_date);
+                </highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;append_column(
+                </highlight>
+                <highlight class="stringliteral">&quot;Data<sp/>di<sp/>Scadenza&quot;
+                </highlight>
+                <highlight class="normal">,
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                         kindref="member">model::Prescription::prescriptionTreeModel</ref>.expire_date);
+                </highlight>
+            </codeline>
+            <codeline lineno="45">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;append_column(
+                </highlight>
+                <highlight class="stringliteral">&quot;Farmaci&quot;</highlight>
+                <highlight class="normal">,
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                         kindref="member">model::Prescription::prescriptionTreeModel</ref>.drug_ids);
+                </highlight>
+            </codeline>
+            <codeline lineno="46">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;append_column(
+                </highlight>
+                <highlight class="stringliteral">&quot;Interazioni&quot;</highlight>
+                <highlight class="normal">,</highlight>
+            </codeline>
+            <codeline lineno="47">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                         kindref="member">model::Prescription::prescriptionTreeModel</ref>.negative_interactions);
+                </highlight>
+            </codeline>
+            <codeline lineno="48">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;append_column(
+                </highlight>
+                <highlight class="stringliteral">&quot;Usata&quot;</highlight>
+                <highlight class="normal">,
+                    <sp/>
+                    <ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                         kindref="member">model::Prescription::prescriptionTreeModel</ref>.used);
+                </highlight>
+            </codeline>
+            <codeline lineno="49">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="50">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;set_model(prescriptionListStore);
+                </highlight>
+            </codeline>
+            <codeline lineno="51">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionListStore-&gt;set_sort_func(2,<sp/>sigc::mem_fun(
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">,<sp/>&amp;mm::PrescriptionWindow::onSortCompareByDate));
+                </highlight>
+            </codeline>
+            <codeline lineno="52">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;get_column(2)-&gt;set_sort_column(2);
+                </highlight>
+            </codeline>
+            <codeline lineno="53">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="54">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;get_column(0)-&gt;set_sort_column(0);
+                </highlight>
+            </codeline>
+            <codeline lineno="55">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;get_column(0)-&gt;set_sort_order(Gtk::SortType::SORT_ASCENDING);
+                </highlight>
+            </codeline>
+            <codeline lineno="56">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="57">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;get_column(4)-&gt;set_sort_column(4);
+                </highlight>
+            </codeline>
+            <codeline lineno="58">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;get_column(4)-&gt;set_sort_order(Gtk::SortType::SORT_ASCENDING);
+                </highlight>
+            </codeline>
+            <codeline lineno="59">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="60">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>7;<sp/>i++)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="61">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;get_column_cell_renderer(i)-&gt;property_xalign().set_value(0);
+                </highlight>
+            </codeline>
+            <codeline lineno="62">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;get_column(i)-&gt;set_min_width(100);
+                </highlight>
+            </codeline>
+            <codeline lineno="63">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;get_column(i)-&gt;set_resizable(
+                </highlight>
+                <highlight class="keyword">true</highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="64">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;get_column_cell_renderer(i)-&gt;set_property(
+                </highlight>
+                <highlight class="stringliteral">&quot;ellipsize-set&quot;</highlight>
+                <highlight class="normal">,<sp/>(gboolean)<sp/>1);
+                </highlight>
+            </codeline>
+            <codeline lineno="65">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionTreeView-&gt;get_column_cell_renderer(i)-&gt;set_property(
+                </highlight>
+                <highlight class="stringliteral">&quot;ellipsize&quot;</highlight>
+                <highlight class="normal">,</highlight>
+            </codeline>
+            <codeline lineno="66">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Pango::EllipsizeMode::ELLIPSIZE_END);
+                </highlight>
+            </codeline>
+            <codeline lineno="67">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="68">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="69">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>updatePrescriptionTreeView();
+                </highlight>
+            </codeline>
+            <codeline lineno="70">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="71">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="72">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>mm::PrescriptionWindow::updatePrescriptionTreeView()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="73">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>model::Prescription<sp/>prescription;
+                </highlight>
+            </codeline>
+            <codeline lineno="74">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>std::vector&lt;model::Prescription&gt;<sp/>prescriptions;
+                </highlight>
+            </codeline>
+            <codeline lineno="75">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="76">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">try</highlight>
+                <highlight class="normal"><sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="77">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>model::Doctor<sp/>tmp;
+                </highlight>
+            </codeline>
+            <codeline lineno="78">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="da/d0d/classmm_1_1_d_b_master_1a1f3b04e515b1999d3900353c0054f498" kindref="member">
+                        DBMaster::get_instance</ref>().<ref
+                        refid="da/d0d/classmm_1_1_d_b_master_1a9e8092b67a249a273668ad042a4084e2" kindref="member">
+                    extract_from_db</ref>(tmp,
+                    <sp/>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a37112a637ed012c96a96c5a2366f4220"
+                         kindref="member">model::authentication::Login::get_instance</ref>().regional_id);
+                </highlight>
+            </codeline>
+            <codeline lineno="79">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptions<sp/>=<sp/>tmp.get_prescriptions();
+                </highlight>
+            </codeline>
+            <codeline lineno="80">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">catch</highlight>
+                <highlight class="normal"><sp/>(record_not_found_error<sp/>&amp;e)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="81">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal"><sp/>std::runtime_error(
+                </highlight>
+                <highlight class="stringliteral">&quot;cannot<sp/>get<sp/>prescriptions<sp/>from<sp/>db...&quot;
+                </highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="82">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="83">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="84">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptionListStore-&gt;clear();
+                </highlight>
+            </codeline>
+            <codeline lineno="85">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="86">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>row<sp/>=<sp/>*prescriptionListStore-&gt;append();
+                </highlight>
+            </codeline>
+            <codeline lineno="87">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="88">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keywordtype">size_t</highlight>
+                <highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>prescriptions.size();<sp/>i++)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="89">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>row[<ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                                  kindref="member">model::Prescription::prescriptionTreeModel</ref>.<ref
+                        refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1a814d7cb9f3f9abe35883bab3c56bc328"
+                        kindref="member">patient_id</ref>]<sp/>=<sp/>prescriptions[i].get_patient_id();
+                </highlight>
+            </codeline>
+            <codeline lineno="90">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>row[<ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                                  kindref="member">model::Prescription::prescriptionTreeModel</ref>.<ref
+                        refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1ab9c6e53985f8fba26f6b423ba4e3e12c"
+                        kindref="member">prescription_id</ref>]<sp/>=<sp/>Glib::ustring::format(
+                </highlight>
+            </codeline>
+            <codeline lineno="91">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptions[i].get_prescription_id());
+                </highlight>
+            </codeline>
+            <codeline lineno="92">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>row[<ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                                  kindref="member">model::Prescription::prescriptionTreeModel</ref>.<ref
+                        refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1ab999486fd371dff7158dcf40f6ef003e"
+                        kindref="member">issue_date</ref>]<sp/>=<sp/>prescriptions[i].get_issue_date();
+                </highlight>
+            </codeline>
+            <codeline lineno="93">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>row[<ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                                  kindref="member">model::Prescription::prescriptionTreeModel</ref>.<ref
+                        refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1a51a87cac9a623149e021404730aed780"
+                        kindref="member">expire_date</ref>]<sp/>=<sp/>prescriptions[i].get_expire_date();
+                </highlight>
+            </codeline>
+            <codeline lineno="94">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>row[<ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                                  kindref="member">model::Prescription::prescriptionTreeModel</ref>.<ref
+                        refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1a57ca54db8aa2c95df49cc1c12b1ec48a"
+                        kindref="member">drug_ids</ref>]<sp/>=<sp/>prescriptions[i].get_drug_ids_as_string();
+                </highlight>
+            </codeline>
+            <codeline lineno="95">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>row[<ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                                  kindref="member">model::Prescription::prescriptionTreeModel</ref>.<ref
+                        refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1a12e1a81bee0d65dd04ab6aa7111d486b"
+                        kindref="member">negative_interactions</ref>]<sp/>=<sp/>
+                    prescriptions[i].get_negative_interactions();
+                </highlight>
+            </codeline>
+            <codeline lineno="96">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>row[<ref refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                                  kindref="member">model::Prescription::prescriptionTreeModel</ref>.<ref
+                        refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1abaa5eab3650e690c64385bd364526250"
+                        kindref="member">used</ref>]<sp/>=<sp/>(prescriptions[i].is_used()<sp/>?
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;si&quot;</highlight>
+                <highlight class="normal"><sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;no&quot;</highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="97">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="98">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(i<sp/>&lt;<sp/>prescriptions.size()<sp/>-<sp/>1)
+                </highlight>
+            </codeline>
+            <codeline lineno="99">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>row<sp/>=<sp/>*(prescriptionListStore-&gt;append()++);
+                </highlight>
+            </codeline>
+            <codeline lineno="100">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="101">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="102">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="103">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="da/d8f/classmm_1_1_prescription_window_1a51195815f64b79179e3dafbb89b785e8"
+                         kindref="member">mm::PrescriptionWindow::update</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="104">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>updatePrescriptionTreeView();
+                </highlight>
+            </codeline>
+            <codeline lineno="105">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="106">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="107">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>mm::PrescriptionWindow::onSortCompareByDate(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>Gtk::TreeModel::iterator<sp/>&amp;a,
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>Gtk::TreeModel::iterator<sp/>&amp;b)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="108">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>aa<sp/>=
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">mm::util::Date</ref>(static_cast&lt;Glib::ustring&gt;((*a)[<ref
+                            refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                            kindref="member">model::Prescription::prescriptionTreeModel</ref>.issue_date]));
+                </highlight>
+            </codeline>
+            <codeline lineno="109">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>bb<sp/>=
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">mm::util::Date</ref>(static_cast&lt;Glib::ustring&gt;((*b)[<ref
+                            refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49"
+                            kindref="member">model::Prescription::prescriptionTreeModel</ref>.issue_date]));
+                </highlight>
+            </codeline>
+            <codeline lineno="110">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="111">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(aa<sp/>&lt;<sp/>bb)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="112">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>-1;
+                </highlight>
+            </codeline>
+            <codeline lineno="113">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">else</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(aa<sp/>&gt;<sp/>bb)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="114">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>1;
+                </highlight>
+            </codeline>
+            <codeline lineno="115">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="116">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>0;
+                </highlight>
+            </codeline>
+            <codeline lineno="117">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="118">
+                <highlight class="normal"></highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/gui/PrescriptionWindow.cpp"/>
+    </compounddef>
+</doxygen>

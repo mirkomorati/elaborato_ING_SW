@@ -1,0 +1,17 @@
+<map id="code/gui/DrugWindow.cpp" name="code/gui/DrugWindow.cpp">
+<area shape="rect" id="node3" href="$dd/d02/_drug_window_8hpp.html" title="DrugWindow.hpp" alt="" coords="2180,79,2303,104"/>
+<area shape="rect" id="node33" href="$dc/db8/_ref_builder_8hpp.html" title="RefBuilder.hpp" alt="" coords="2603,79,2712,104"/>
+<area shape="rect" id="node35" href="$d7/d0f/_d_b_master_8hpp.html" title="../DBMaster.hpp" alt="" coords="2376,372,2493,397"/>
+<area shape="rect" id="node38" href="$dd/dc5/_doctor_8hpp.html" title="../model/Doctor.hpp" alt="" coords="2072,152,2209,177"/>
+<area shape="rect" id="node40" href="$dc/d00/_authentication_8hpp.html" title="../model/Authentication.hpp" alt="" coords="2534,299,2717,324"/>
+<area shape="rect" id="node5" href="$de/d0b/_window_8hpp.html" title="Window.hpp" alt="" coords="2428,152,2522,177"/>
+<area shape="rect" id="node11" href="$d5/d46/_custom_widgets_8hpp.html" title="view/CustomWidgets.hpp" alt="" coords="1025,152,1197,177"/>
+<area shape="rect" id="node6" href="$d1/d25/_i_subject_8hpp.html" title="../interfaces/ISubject.hpp" alt="" coords="2541,372,2710,397"/>
+<area shape="rect" id="node8" href="$d5/d40/_i_observer_8hpp.html" title="IObserver.hpp" alt="" coords="2784,445,2889,471"/>
+<area shape="rect" id="node22" href="$de/d01/_prescription_8hpp.html" title="../../model/Prescription.hpp" alt="" coords="1680,299,1859,324"/>
+<area shape="rect" id="node31" href="$d8/d63/_date_8hpp.html" title="../../utils/Date.hpp" alt="" coords="1704,225,1829,251"/>
+<area shape="rect" id="node32" href="$d0/da9/_patient_8hpp.html" title="../../model/Patient.hpp" alt="" coords="1854,225,2005,251"/>
+<area shape="rect" id="node27" href="$d3/d1b/_i_serializable_8hpp.html" title="../interfaces/ISerializable.hpp" alt="" coords="1952,445,2144,471"/>
+<area shape="rect" id="node28" href="$dd/df9/_drug_8hpp.html" title="Drug.hpp" alt="" coords="1731,372,1808,397"/>
+<area shape="rect" id="node39" href="$d8/d3a/_time_8hpp.html" title="../utils/Time.hpp" alt="" coords="2131,225,2246,251"/>
+</map>

@@ -1,113 +1,131 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d0/d77/_patient_8cpp" kind="file" language="C++">
         <compoundname>Patient.cpp</compoundname>
         <includes local="no">sstream</includes>
         <includes local="no">regex</includes>
+        <includes local="no">spdlog/spdlog.h</includes>
         <includes refid="d0/da9/_patient_8hpp" local="yes">Patient.hpp</includes>
         <includes refid="d7/d0f/_d_b_master_8hpp" local="yes">../DBMaster.hpp</includes>
         <incdepgraph>
-            <node id="723">
+            <node id="980">
                 <label>Prescription.hpp</label>
                 <link refid="de/d01/_prescription_8hpp"/>
-                <childnode refid="718" relation="include">
+                <childnode refid="975" relation="include">
                 </childnode>
-                <childnode refid="719" relation="include">
+                <childnode refid="976" relation="include">
                 </childnode>
-                <childnode refid="722" relation="include">
+                <childnode refid="979" relation="include">
                 </childnode>
-                <childnode refid="720" relation="include">
+                <childnode refid="977" relation="include">
                 </childnode>
-                <childnode refid="721" relation="include">
+                <childnode refid="978" relation="include">
                 </childnode>
-                <childnode refid="724" relation="include">
+                <childnode refid="981" relation="include">
                 </childnode>
             </node>
-            <node id="721">
+            <node id="978">
                 <label>../interfaces/ISerializable.hpp</label>
                 <link refid="d3/d1b/_i_serializable_8hpp"/>
-                <childnode refid="719" relation="include">
+                <childnode refid="976" relation="include">
                 </childnode>
-                <childnode refid="722" relation="include">
+                <childnode refid="979" relation="include">
+                </childnode>
+                <childnode refid="975" relation="include">
                 </childnode>
             </node>
-            <node id="727">
+            <node id="986">
                 <label>stdexcept</label>
             </node>
-            <node id="719">
+            <node id="976">
                 <label>string</label>
             </node>
-            <node id="722">
+            <node id="979">
                 <label>map</label>
             </node>
-            <node id="716">
+            <node id="972">
                 <label>regex</label>
             </node>
-            <node id="726">
+            <node id="985">
                 <label>sqlite3.h</label>
             </node>
-            <node id="720">
+            <node id="977">
                 <label>gtkmm/treemodelcolumn.h</label>
             </node>
-            <node id="718">
+            <node id="982">
+                <label>gtkmm/treemodel.h</label>
+            </node>
+            <node id="973">
+                <label>spdlog/spdlog.h</label>
+            </node>
+            <node id="975">
                 <label>vector</label>
             </node>
-            <node id="715">
+            <node id="971">
                 <label>sstream</label>
             </node>
-            <node id="717">
+            <node id="974">
                 <label>Patient.hpp</label>
                 <link refid="d0/da9/_patient_8hpp"/>
-                <childnode refid="718" relation="include">
+                <childnode refid="975" relation="include">
                 </childnode>
-                <childnode refid="719" relation="include">
+                <childnode refid="976" relation="include">
                 </childnode>
-                <childnode refid="720" relation="include">
+                <childnode refid="977" relation="include">
                 </childnode>
-                <childnode refid="721" relation="include">
+                <childnode refid="978" relation="include">
                 </childnode>
-                <childnode refid="723" relation="include">
+                <childnode refid="980" relation="include">
                 </childnode>
             </node>
-            <node id="725">
+            <node id="983">
+                <label>iostream</label>
+            </node>
+            <node id="984">
                 <label>../DBMaster.hpp</label>
                 <link refid="d7/d0f/_d_b_master_8hpp"/>
-                <childnode refid="726" relation="include">
+                <childnode refid="985" relation="include">
                 </childnode>
-                <childnode refid="719" relation="include">
+                <childnode refid="976" relation="include">
                 </childnode>
-                <childnode refid="727" relation="include">
+                <childnode refid="986" relation="include">
                 </childnode>
-                <childnode refid="718" relation="include">
+                <childnode refid="975" relation="include">
                 </childnode>
-                <childnode refid="721" relation="include">
+                <childnode refid="978" relation="include">
                 </childnode>
             </node>
-            <node id="724">
+            <node id="981">
                 <label>Drug.hpp</label>
                 <link refid="dd/df9/_drug_8hpp"/>
-                <childnode refid="719" relation="include">
+                <childnode refid="976" relation="include">
                 </childnode>
-                <childnode refid="718" relation="include">
+                <childnode refid="975" relation="include">
                 </childnode>
-                <childnode refid="722" relation="include">
+                <childnode refid="979" relation="include">
                 </childnode>
-                <childnode refid="720" relation="include">
+                <childnode refid="977" relation="include">
                 </childnode>
-                <childnode refid="721" relation="include">
+                <childnode refid="982" relation="include">
+                </childnode>
+                <childnode refid="983" relation="include">
+                </childnode>
+                <childnode refid="978" relation="include">
                 </childnode>
             </node>
-            <node id="714">
+            <node id="970">
                 <label>code/model/Patient.cpp</label>
                 <link refid="d0/d77/_patient_8cpp"/>
-                <childnode refid="715" relation="include">
+                <childnode refid="971" relation="include">
                 </childnode>
-                <childnode refid="716" relation="include">
+                <childnode refid="972" relation="include">
                 </childnode>
-                <childnode refid="717" relation="include">
+                <childnode refid="973" relation="include">
                 </childnode>
-                <childnode refid="725" relation="include">
+                <childnode refid="974" relation="include">
+                </childnode>
+                <childnode refid="984" relation="include">
                 </childnode>
             </node>
         </incdepgraph>
@@ -130,21 +148,27 @@
             </codeline>
             <codeline lineno="9">
                 <highlight class="normal"></highlight>
-                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/da9/_patient_8hpp" kindref="compound">
-                    Patient.hpp</ref>&quot;
+                <highlight class="preprocessor">#include<sp/>&lt;spdlog/spdlog.h&gt;
                 </highlight>
                 <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="10">
                 <highlight class="normal"></highlight>
-                <highlight class="preprocessor">#include<sp/>&quot;../DBMaster.hpp&quot;
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/da9/_patient_8hpp" kindref="compound">
+                    Patient.hpp</ref>&quot;
                 </highlight>
                 <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="11">
                 <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../DBMaster.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="12">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="13">
                 <highlight class="normal">
                     <ref refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model" kindref="compound">
                         mm::model::Patient::TreeModel
@@ -154,10 +178,10 @@
                          kindref="member">mm::model::Patient::patientTreeModel</ref>;
                 </highlight>
             </codeline>
-            <codeline lineno="13">
+            <codeline lineno="14">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="14">
+            <codeline lineno="15">
                 <highlight class="normal">map&lt;string,<sp/>mm::Serialized&gt;<sp/>
                     <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1ae3ac219cd109e8c53daaf9b2758c3a0e"
                          kindref="member">mm::model::Patient::serialize</ref>()
@@ -167,7 +191,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="15">
+            <codeline lineno="16">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -175,7 +199,7 @@
                     <sp/>map&lt;string,<sp/>Serialized&gt;<sp/>serialized_map;
                 </highlight>
             </codeline>
-            <codeline lineno="16">
+            <codeline lineno="17">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -186,7 +210,7 @@
                 <highlight class="normal">]<sp/>=<sp/>first_name;
                 </highlight>
             </codeline>
-            <codeline lineno="17">
+            <codeline lineno="18">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -197,7 +221,7 @@
                 <highlight class="normal">]<sp/>=<sp/>last_name;
                 </highlight>
             </codeline>
-            <codeline lineno="18">
+            <codeline lineno="19">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -208,7 +232,7 @@
                 <highlight class="normal">]<sp/>=<sp/>fiscal_code;
                 </highlight>
             </codeline>
-            <codeline lineno="19">
+            <codeline lineno="20">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -219,7 +243,7 @@
                 <highlight class="normal">]<sp/>=<sp/>address;
                 </highlight>
             </codeline>
-            <codeline lineno="20">
+            <codeline lineno="21">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -230,7 +254,7 @@
                 <highlight class="normal">]<sp/>=<sp/>birth_date;
                 </highlight>
             </codeline>
-            <codeline lineno="21">
+            <codeline lineno="22">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -241,7 +265,7 @@
                 <highlight class="normal">]<sp/>=<sp/>birth_place;
                 </highlight>
             </codeline>
-            <codeline lineno="22">
+            <codeline lineno="23">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -252,7 +276,7 @@
                 <highlight class="normal">]<sp/>=<sp/>doctor_id;
                 </highlight>
             </codeline>
-            <codeline lineno="23">
+            <codeline lineno="24">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -260,7 +284,7 @@
                     <sp/>stringstream<sp/>risk_list;
                 </highlight>
             </codeline>
-            <codeline lineno="24">
+            <codeline lineno="25">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -274,7 +298,7 @@
                 <highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>risk_factors.size();<sp/>i++)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="25">
+            <codeline lineno="26">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -286,7 +310,7 @@
                     <sp/>risk_list<sp/>&lt;&lt;<sp/>risk_factors[i];
                 </highlight>
             </codeline>
-            <codeline lineno="26">
+            <codeline lineno="27">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -303,7 +327,7 @@
                 <highlight class="stringliteral">&quot;;&quot;</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="27">
+            <codeline lineno="28">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -311,7 +335,7 @@
                     <sp/>}
                 </highlight>
             </codeline>
-            <codeline lineno="28">
+            <codeline lineno="29">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -322,10 +346,10 @@
                 <highlight class="normal">]<sp/>=<sp/>risk_list.str();
                 </highlight>
             </codeline>
-            <codeline lineno="29">
+            <codeline lineno="30">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="30">
+            <codeline lineno="31">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -336,24 +360,23 @@
                 <highlight class="normal"><sp/>serialized_map;
                 </highlight>
             </codeline>
-            <codeline lineno="31">
+            <codeline lineno="32">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="32">
+            <codeline lineno="33">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="33">
+            <codeline lineno="34">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
                     <sp/>
                     <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a7e1d8cbfc2cdd653281dce87497c6065"
-                         kindref="member">mm::model::Patient::unserialize</ref>(map&lt;string,
-                    <sp/>
+                         kindref="member">mm::model::Patient::unserialize</ref>(map&lt;string,<sp/>
                     mm::Serialized&gt;<sp/>map)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="34">
+            <codeline lineno="35">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -363,7 +386,7 @@
                 <highlight class="stringliteral">&quot;first_name&quot;</highlight>
                 <highlight class="normal">].get_str();</highlight>
             </codeline>
-            <codeline lineno="35">
+            <codeline lineno="36">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -373,7 +396,7 @@
                 <highlight class="stringliteral">&quot;last_name&quot;</highlight>
                 <highlight class="normal">].get_str();</highlight>
             </codeline>
-            <codeline lineno="36">
+            <codeline lineno="37">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -383,7 +406,7 @@
                 <highlight class="stringliteral">&quot;fiscal_code&quot;</highlight>
                 <highlight class="normal">].get_str();</highlight>
             </codeline>
-            <codeline lineno="37">
+            <codeline lineno="38">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -393,7 +416,7 @@
                 <highlight class="stringliteral">&quot;address&quot;</highlight>
                 <highlight class="normal">].get_str();</highlight>
             </codeline>
-            <codeline lineno="38">
+            <codeline lineno="39">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -403,7 +426,7 @@
                 <highlight class="stringliteral">&quot;birth_date&quot;</highlight>
                 <highlight class="normal">].get_str();</highlight>
             </codeline>
-            <codeline lineno="39">
+            <codeline lineno="40">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -413,7 +436,7 @@
                 <highlight class="stringliteral">&quot;birth_place&quot;</highlight>
                 <highlight class="normal">].get_str();</highlight>
             </codeline>
-            <codeline lineno="40">
+            <codeline lineno="41">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -423,7 +446,7 @@
                 <highlight class="stringliteral">&quot;doctor_id&quot;</highlight>
                 <highlight class="normal">].get_int();</highlight>
             </codeline>
-            <codeline lineno="41">
+            <codeline lineno="42">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -433,7 +456,7 @@
                 <highlight class="stringliteral">&quot;risk_factors&quot;</highlight>
                 <highlight class="normal">].get_str());</highlight>
             </codeline>
-            <codeline lineno="42">
+            <codeline lineno="43">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -444,7 +467,7 @@
                 <highlight class="normal"><sp/>tmp;
                 </highlight>
             </codeline>
-            <codeline lineno="43">
+            <codeline lineno="44">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -459,7 +482,7 @@
                 <highlight class="normal">))<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="44">
+            <codeline lineno="45">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -471,7 +494,7 @@
                     <sp/>risk_factors.push_back(tmp);
                 </highlight>
             </codeline>
-            <codeline lineno="45">
+            <codeline lineno="46">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -479,13 +502,13 @@
                     <sp/>}
                 </highlight>
             </codeline>
-            <codeline lineno="46">
+            <codeline lineno="47">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="47">
+            <codeline lineno="48">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="48">
+            <codeline lineno="49">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">string</highlight>
                 <highlight class="normal">
@@ -498,7 +521,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="49">
+            <codeline lineno="50">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -512,13 +535,13 @@
                 <highlight class="stringliteral">&quot;patients&quot;</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="50">
+            <codeline lineno="51">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="51">
+            <codeline lineno="52">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="52">
+            <codeline lineno="53">
                 <highlight class="normal">vector&lt;string&gt;<sp/>
                     <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1ae85640f3cb3d34bb57e1129ef46a0cbf"
                          kindref="member">mm::model::Patient::get_primary_key</ref>()
@@ -528,7 +551,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="53">
+            <codeline lineno="54">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -541,13 +564,13 @@
                 <highlight class="stringliteral">&quot;fiscal_code&quot;</highlight>
                 <highlight class="normal">};</highlight>
             </codeline>
-            <codeline lineno="54">
+            <codeline lineno="55">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="55">
+            <codeline lineno="56">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="56">
+            <codeline lineno="57">
                 <highlight class="normal"></highlight>
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">
@@ -563,7 +586,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="57">
+            <codeline lineno="58">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -574,13 +597,13 @@
                 <highlight class="normal"><sp/>first_name;
                 </highlight>
             </codeline>
-            <codeline lineno="58">
+            <codeline lineno="59">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="59">
+            <codeline lineno="60">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="60">
+            <codeline lineno="61">
                 <highlight class="normal"></highlight>
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">
@@ -596,7 +619,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="61">
+            <codeline lineno="62">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -607,13 +630,13 @@
                 <highlight class="normal"><sp/>last_name;
                 </highlight>
             </codeline>
-            <codeline lineno="62">
+            <codeline lineno="63">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="63">
+            <codeline lineno="64">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="64">
+            <codeline lineno="65">
                 <highlight class="normal"></highlight>
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">
@@ -629,7 +652,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="65">
+            <codeline lineno="66">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -640,13 +663,13 @@
                 <highlight class="normal"><sp/>birth_date;
                 </highlight>
             </codeline>
-            <codeline lineno="66">
+            <codeline lineno="67">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="67">
+            <codeline lineno="68">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="68">
+            <codeline lineno="69">
                 <highlight class="normal"></highlight>
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">
@@ -662,7 +685,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="69">
+            <codeline lineno="70">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -673,13 +696,13 @@
                 <highlight class="normal"><sp/>birth_place;
                 </highlight>
             </codeline>
-            <codeline lineno="70">
+            <codeline lineno="71">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="71">
+            <codeline lineno="72">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="72">
+            <codeline lineno="73">
                 <highlight class="normal"></highlight>
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">
@@ -695,7 +718,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="73">
+            <codeline lineno="74">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -706,13 +729,13 @@
                 <highlight class="normal"><sp/>address;
                 </highlight>
             </codeline>
-            <codeline lineno="74">
+            <codeline lineno="75">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="75">
+            <codeline lineno="76">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="76">
+            <codeline lineno="77">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">string</highlight>
                 <highlight class="normal">
@@ -725,7 +748,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="77">
+            <codeline lineno="78">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -733,7 +756,7 @@
                     <sp/>ostringstream<sp/>ss;
                 </highlight>
             </codeline>
-            <codeline lineno="78">
+            <codeline lineno="79">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -741,7 +764,7 @@
                     <sp/>copy(risk_factors.begin(),<sp/>risk_factors.end(),
                 </highlight>
             </codeline>
-            <codeline lineno="79">
+            <codeline lineno="80">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -758,7 +781,7 @@
                 </highlight>
                 <highlight class="normal">));</highlight>
             </codeline>
-            <codeline lineno="80">
+            <codeline lineno="81">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -769,7 +792,7 @@
                 <highlight class="normal"><sp/>ret<sp/>=<sp/>ss.str();
                 </highlight>
             </codeline>
-            <codeline lineno="81">
+            <codeline lineno="82">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -780,13 +803,13 @@
                 <highlight class="normal"><sp/>ret;
                 </highlight>
             </codeline>
-            <codeline lineno="82">
+            <codeline lineno="83">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="83">
+            <codeline lineno="84">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="84">
+            <codeline lineno="85">
                 <highlight class="normal"></highlight>
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">
@@ -802,7 +825,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="85">
+            <codeline lineno="86">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -813,19 +836,23 @@
                 <highlight class="normal"><sp/>fiscal_code;
                 </highlight>
             </codeline>
-            <codeline lineno="86">
+            <codeline lineno="87">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="87">
+            <codeline lineno="88">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="88">
-                <highlight class="normal">vector&lt;mm::model::Prescription&gt;<sp/>
-                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a2a33032170e0cadf905dd263a3364b65"
-                         kindref="member">mm::model::Patient::get_prescriptions</ref>()<sp/>{
-                </highlight>
-            </codeline>
             <codeline lineno="89">
+                <highlight class="normal">vector&lt;mm::model::Prescription&gt;<sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1ac13776eadc56f98bf353dd412f9c2f51"
+                         kindref="member">mm::model::Patient::get_prescriptions</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="90">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -833,7 +860,7 @@
                     <sp/>vector&lt;Prescription&gt;<sp/>prescriptions;
                 </highlight>
             </codeline>
-            <codeline lineno="90">
+            <codeline lineno="91">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -855,7 +882,7 @@
                 <highlight class="stringliteral">&quot;patient_id&quot;</highlight>
                 <highlight class="normal">,</highlight>
             </codeline>
-            <codeline lineno="91">
+            <codeline lineno="92">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -909,7 +936,7 @@
                     <sp/>fiscal_code);
                 </highlight>
             </codeline>
-            <codeline lineno="92">
+            <codeline lineno="93">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -923,7 +950,7 @@
                 <highlight class="normal"><sp/>&amp;row<sp/>:<sp/>rows)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="93">
+            <codeline lineno="94">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -935,7 +962,7 @@
                     <sp/>Prescription<sp/>tmp;
                 </highlight>
             </codeline>
-            <codeline lineno="94">
+            <codeline lineno="95">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -947,7 +974,7 @@
                     <sp/>tmp.unserialize(row);
                 </highlight>
             </codeline>
-            <codeline lineno="95">
+            <codeline lineno="96">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -959,7 +986,7 @@
                     <sp/>prescriptions.push_back(tmp);
                 </highlight>
             </codeline>
-            <codeline lineno="96">
+            <codeline lineno="97">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -967,10 +994,10 @@
                     <sp/>}
                 </highlight>
             </codeline>
-            <codeline lineno="97">
+            <codeline lineno="98">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="98">
+            <codeline lineno="99">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -981,16 +1008,16 @@
                 <highlight class="normal"><sp/>prescriptions;
                 </highlight>
             </codeline>
-            <codeline lineno="99">
-                <highlight class="normal"></highlight>
-            </codeline>
             <codeline lineno="100">
-                <highlight class="normal">}</highlight>
+                <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="101">
-                <highlight class="normal"></highlight>
+                <highlight class="normal">}</highlight>
             </codeline>
             <codeline lineno="102">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="103">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -1006,7 +1033,7 @@
                 <highlight class="normal"><sp/>&amp;first_name)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="103">
+            <codeline lineno="104">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1014,13 +1041,13 @@
                     <sp/>this-&gt;first_name<sp/>=<sp/>first_name;
                 </highlight>
             </codeline>
-            <codeline lineno="104">
+            <codeline lineno="105">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="105">
+            <codeline lineno="106">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="106">
+            <codeline lineno="107">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -1036,7 +1063,7 @@
                 <highlight class="normal"><sp/>&amp;last_name)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="107">
+            <codeline lineno="108">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1044,13 +1071,13 @@
                     <sp/>this-&gt;last_name<sp/>=<sp/>last_name;
                 </highlight>
             </codeline>
-            <codeline lineno="108">
+            <codeline lineno="109">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="109">
+            <codeline lineno="110">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="110">
+            <codeline lineno="111">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -1066,7 +1093,7 @@
                 <highlight class="normal"><sp/>&amp;fiscal_code)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="111">
+            <codeline lineno="112">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1074,13 +1101,13 @@
                     <sp/>this-&gt;fiscal_code<sp/>=<sp/>fiscal_code;
                 </highlight>
             </codeline>
-            <codeline lineno="112">
+            <codeline lineno="113">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="113">
+            <codeline lineno="114">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="114">
+            <codeline lineno="115">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -1096,7 +1123,7 @@
                 <highlight class="normal"><sp/>&amp;birth_date)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="115">
+            <codeline lineno="116">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1104,13 +1131,13 @@
                     <sp/>this-&gt;birth_date<sp/>=<sp/>birth_date;
                 </highlight>
             </codeline>
-            <codeline lineno="116">
+            <codeline lineno="117">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="117">
+            <codeline lineno="118">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="118">
+            <codeline lineno="119">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -1126,7 +1153,7 @@
                 <highlight class="normal"><sp/>&amp;birth_place)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="119">
+            <codeline lineno="120">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1134,13 +1161,13 @@
                     <sp/>this-&gt;birth_place<sp/>=<sp/>birth_place;
                 </highlight>
             </codeline>
-            <codeline lineno="120">
+            <codeline lineno="121">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="121">
+            <codeline lineno="122">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="122">
+            <codeline lineno="123">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -1156,7 +1183,7 @@
                 <highlight class="normal"><sp/>&amp;address)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="123">
+            <codeline lineno="124">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1164,13 +1191,13 @@
                     <sp/>this-&gt;address<sp/>=<sp/>address;
                 </highlight>
             </codeline>
-            <codeline lineno="124">
+            <codeline lineno="125">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="125">
+            <codeline lineno="126">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="126">
+            <codeline lineno="127">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -1182,7 +1209,7 @@
                 <highlight class="normal"><sp/>doctor_id)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="127">
+            <codeline lineno="128">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1190,13 +1217,13 @@
                     <sp/>this-&gt;doctor_id<sp/>=<sp/>doctor_id;
                 </highlight>
             </codeline>
-            <codeline lineno="128">
+            <codeline lineno="129">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="129">
+            <codeline lineno="130">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="130">
+            <codeline lineno="131">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
@@ -1215,7 +1242,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="131">
+            <codeline lineno="132">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1226,13 +1253,13 @@
                 <highlight class="normal"><sp/>fiscal_code<sp/>==<sp/>rhs.fiscal_code;
                 </highlight>
             </codeline>
-            <codeline lineno="132">
+            <codeline lineno="133">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="133">
+            <codeline lineno="134">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="134">
+            <codeline lineno="135">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
@@ -1251,7 +1278,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="135">
+            <codeline lineno="136">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1264,13 +1291,13 @@
                 <highlight class="keyword">this</highlight>
                 <highlight class="normal">);</highlight>
             </codeline>
-            <codeline lineno="136">
+            <codeline lineno="137">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="137">
+            <codeline lineno="138">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="138">
+            <codeline lineno="139">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
@@ -1279,7 +1306,7 @@
                          kindref="member">mm::model::Patient::is_valid</ref>()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="139">
+            <codeline lineno="140">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1290,7 +1317,7 @@
                 <highlight class="normal"><sp/>!first_name.empty()
                 </highlight>
             </codeline>
-            <codeline lineno="140">
+            <codeline lineno="141">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1305,7 +1332,7 @@
                     <sp/>&amp;&amp;<sp/>!last_name.empty()
                 </highlight>
             </codeline>
-            <codeline lineno="141">
+            <codeline lineno="142">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1325,7 +1352,7 @@
                 </highlight>
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="142">
+            <codeline lineno="143">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1340,7 +1367,7 @@
                     <sp/>&amp;&amp;<sp/>!birth_date.empty()
                 </highlight>
             </codeline>
-            <codeline lineno="143">
+            <codeline lineno="144">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1355,7 +1382,7 @@
                     <sp/>&amp;&amp;<sp/>!birth_place.empty()
                 </highlight>
             </codeline>
-            <codeline lineno="144">
+            <codeline lineno="145">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1370,7 +1397,7 @@
                     <sp/>&amp;&amp;<sp/>!address.empty()
                 </highlight>
             </codeline>
-            <codeline lineno="145">
+            <codeline lineno="146">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1385,19 +1412,19 @@
                     <sp/>&amp;&amp;<sp/>doctor_id<sp/>!=<sp/>0;
                 </highlight>
             </codeline>
-            <codeline lineno="146">
+            <codeline lineno="147">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="147">
+            <codeline lineno="148">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="148">
+            <codeline lineno="149">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal"><sp/>mm::model::Patient::fiscalCodeIsValid()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="149">
+            <codeline lineno="150">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1408,7 +1435,7 @@
                 </highlight>
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="150">
+            <codeline lineno="151">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1420,7 +1447,7 @@
                 </highlight>
                 <highlight class="normal">);</highlight>
             </codeline>
-            <codeline lineno="151">
+            <codeline lineno="152">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1432,24 +1459,16 @@
                     <sp/>regex);
                 </highlight>
             </codeline>
-            <codeline lineno="152">
+            <codeline lineno="153">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="153">
+            <codeline lineno="154">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="154">
+            <codeline lineno="155">
                 <highlight class="normal"><ref
                         refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a53ebc678daee18b03328be60d1c69bf4"
                         kindref="member">mm::model::Patient::TreeModel::TreeModel</ref>()<sp/>noexcept<sp/>{
-                </highlight>
-            </codeline>
-            <codeline lineno="155">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>add(first_name);
                 </highlight>
             </codeline>
             <codeline lineno="156">
@@ -1457,7 +1476,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>add(last_name);
+                    <sp/>add(first_name);
                 </highlight>
             </codeline>
             <codeline lineno="157">
@@ -1465,7 +1484,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>add(fiscal_code);
+                    <sp/>add(last_name);
                 </highlight>
             </codeline>
             <codeline lineno="158">
@@ -1473,7 +1492,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>add(birth_date);
+                    <sp/>add(fiscal_code);
                 </highlight>
             </codeline>
             <codeline lineno="159">
@@ -1481,7 +1500,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>add(birth_place);
+                    <sp/>add(birth_date);
                 </highlight>
             </codeline>
             <codeline lineno="160">
@@ -1489,7 +1508,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>add(address);
+                    <sp/>add(birth_place);
                 </highlight>
             </codeline>
             <codeline lineno="161">
@@ -1497,10 +1516,18 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>add(risk_factors);
+                    <sp/>add(address);
                 </highlight>
             </codeline>
             <codeline lineno="162">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(risk_factors);
+                </highlight>
+            </codeline>
+            <codeline lineno="163">
                 <highlight class="normal">}</highlight>
             </codeline>
         </programlisting>

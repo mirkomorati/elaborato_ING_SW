@@ -1,7 +1,9 @@
 <map id="code/model/Authentication.hpp" name="code/model/Authentication.hpp">
 <area shape="rect" id="node2" href="$db/db5/_add_patient_dialog_8cpp.html" title="code/gui/AddPatientDialog.cpp" alt="" coords="5,79,209,104"/>
-<area shape="rect" id="node3" href="$d9/d07/_login_window_8cpp.html" title="code/gui/LoginWindow.cpp" alt="" coords="233,79,413,104"/>
-<area shape="rect" id="node4" href="$d8/d35/_patient_window_8cpp.html" title="code/gui/PatientWindow.cpp" alt="" coords="437,79,626,104"/>
-<area shape="rect" id="node5" href="$d7/daf/_med_h_8cpp.html" title="code/MedH.cpp" alt="" coords="650,79,765,104"/>
-<area shape="rect" id="node6" href="$d6/d6e/_authentication_8cpp.html" title="code/model/Authentication.cpp" alt="" coords="788,79,992,104"/>
+<area shape="rect" id="node3" href="$d6/d9e/_drug_window_8cpp.html" title="code/gui/DrugWindow.cpp" alt="" coords="232,79,409,104"/>
+<area shape="rect" id="node4" href="$d9/d07/_login_window_8cpp.html" title="code/gui/LoginWindow.cpp" alt="" coords="433,79,613,104"/>
+<area shape="rect" id="node5" href="$d8/d35/_patient_window_8cpp.html" title="code/gui/PatientWindow.cpp" alt="" coords="637,79,826,104"/>
+<area shape="rect" id="node6" href="$d1/d16/_prescription_window_8cpp.html" title="code/gui/PrescriptionWindow.cpp" alt="" coords="849,79,1067,104"/>
+<area shape="rect" id="node7" href="$d7/daf/_med_h_8cpp.html" title="code/MedH.cpp" alt="" coords="1091,79,1206,104"/>
+<area shape="rect" id="node8" href="$d6/d6e/_authentication_8cpp.html" title="code/model/Authentication.cpp" alt="" coords="1229,79,1433,104"/>
 </map>

@@ -5,7 +5,7 @@
  -->
 <!-- Title: code/gui/Dialog.hpp Pages: 1 -->
 <!--zoomable 157 -->
-<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="initDrugComboBox(evt)">
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
 <style type="text/css"><![CDATA[
 .edge:hover path { stroke: red; }
 .edge:hover polygon { stroke: red; fill: red; }
@@ -54,45 +54,45 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>code/gui/Dialog.hpp</title>
-    <!-- Node7 -->
+    <!-- Node8 -->
 <g id="node1" class="node">
-<title>Node7</title>
+<title>Node8</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="323.1724,-130.5 323.1724,-148.5 427.5708,-148.5 427.5708,-130.5 323.1724,-130.5"/>
 <text text-anchor="middle" x="375.3716" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/gui/Dialog.hpp</text>
 </g>
-    <!-- Node8 -->
+    <!-- Node9 -->
 <g id="node2" class="node">
-<title>Node8</title>
+<title>Node9</title>
 <g id="a_node2"><a xlink:href="../../d7/ded/_about_dialog_8hpp.html" target="_top" xlink:title="code/gui/AboutDialog.hpp">
 <polygon fill="none" stroke="#000000" points="310.106,-70.5 310.106,-88.5 440.6372,-88.5 440.6372,-70.5 310.106,-70.5"/>
 <text text-anchor="middle" x="375.3716" y="-76.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/gui/AboutDialog.hpp</text>
 </a>
 </g>
 </g>
-    <!-- Node7&#45;&gt;Node8 -->
+    <!-- Node8&#45;&gt;Node9 -->
 <g id="edge1" class="edge">
-<title>Node7&#45;&gt;Node8</title>
+<title>Node8&#45;&gt;Node9</title>
 <path fill="none" stroke="#191970" d="M375.3716,-120.3734C375.3716,-109.7812 375.3716,-97.0976 375.3716,-88.6985"/>
 <polygon fill="#191970" stroke="#191970" points="371.8717,-120.3873 375.3716,-130.3873 378.8717,-120.3873 371.8717,-120.3873"/>
 </g>
-    <!-- Node12 -->
+    <!-- Node13 -->
 <g id="node6" class="node">
-<title>Node12</title>
+<title>Node13</title>
 <g id="a_node6"><a xlink:href="../../d2/dac/_add_patient_dialog_8hpp.html" target="_top" xlink:title="code/gui/AddPatientDialog.hpp">
 <polygon fill="none" stroke="#000000" points="458.7095,-70.5 458.7095,-88.5 612.0337,-88.5 612.0337,-70.5 458.7095,-70.5"/>
 <text text-anchor="middle" x="535.3716" y="-76.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/gui/AddPatientDialog.hpp</text>
 </a>
 </g>
 </g>
-    <!-- Node7&#45;&gt;Node12 -->
+    <!-- Node8&#45;&gt;Node13 -->
 <g id="edge5" class="edge">
-<title>Node7&#45;&gt;Node12</title>
+<title>Node8&#45;&gt;Node13</title>
 <path fill="none" stroke="#191970" d="M409.0977,-126.8527C439.7441,-115.3603 484.1975,-98.6903 511.3666,-88.5019"/>
 <polygon fill="#191970" stroke="#191970" points="407.8065,-123.5988 399.6721,-130.3873 410.2644,-130.1531 407.8065,-123.5988"/>
 </g>
-    <!-- Node14 -->
+    <!-- Node15 -->
 <g id="node8" class="node">
-<title>Node14</title>
+<title>Node15</title>
 <g id="a_node8"><a xlink:href="../../d0/d1e/_add_prescription_dialog_8hpp.html" target="_top" xlink:title="code/gui/AddPrescription\lDialog.hpp">
 <polygon fill="none" stroke="#000000" points="629.7832,-65.5 629.7832,-93.5 756.96,-93.5 756.96,-65.5 629.7832,-65.5"/>
 <text text-anchor="start" x="637.7832" y="-81.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/gui/AddPrescription</text>
@@ -100,117 +100,117 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-    <!-- Node7&#45;&gt;Node14 -->
+    <!-- Node8&#45;&gt;Node15 -->
 <g id="edge8" class="edge">
-<title>Node7&#45;&gt;Node14</title>
+<title>Node8&#45;&gt;Node15</title>
 <path fill="none" stroke="#191970" d="M435.3218,-128.6856C485.1636,-119.6289 557.9371,-106.2531 621.3716,-94 624.1259,-93.468 626.9385,-92.9203 629.7791,-92.3636"/>
 <polygon fill="#191970" stroke="#191970" points="434.5716,-125.2645 425.3575,-130.4942 435.8218,-132.152 434.5716,-125.2645"/>
 </g>
-    <!-- Node16 -->
+    <!-- Node17 -->
 <g id="node10" class="node">
-<title>Node16</title>
+<title>Node17</title>
 <g id="a_node10"><a xlink:href="../../db/d41/_main_window_8hpp.html" target="_top" xlink:title="code/gui/MainWindow.hpp">
 <polygon fill="none" stroke="#000000" points="0,-70.5 0,-88.5 132.7432,-88.5 132.7432,-70.5 0,-70.5"/>
 <text text-anchor="middle" x="66.3716" y="-76.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/gui/MainWindow.hpp</text>
 </a>
 </g>
 </g>
-    <!-- Node7&#45;&gt;Node16 -->
+    <!-- Node8&#45;&gt;Node17 -->
 <g id="edge11" class="edge">
-<title>Node7&#45;&gt;Node16</title>
+<title>Node8&#45;&gt;Node17</title>
 <path fill="none" stroke="#191970" d="M318.8517,-128.5253C259.7007,-117.0396 167.928,-99.2197 112.8397,-88.5229"/>
 <polygon fill="#191970" stroke="#191970" points="318.2928,-131.982 328.7766,-130.4524 319.6271,-125.1104 318.2928,-131.982"/>
 </g>
-    <!-- Node18 -->
+    <!-- Node19 -->
 <g id="node12" class="node">
-<title>Node18</title>
+<title>Node19</title>
 <g id="a_node12"><a xlink:href="../../dd/de0/_patient_window_8hpp.html" target="_top" xlink:title="code/gui/PatientWindow.hpp">
 <polygon fill="none" stroke="#000000" points="150.271,-70.5 150.271,-88.5 292.4722,-88.5 292.4722,-70.5 150.271,-70.5"/>
 <text text-anchor="middle" x="221.3716" y="-76.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/gui/PatientWindow.hpp</text>
 </a>
 </g>
 </g>
-    <!-- Node7&#45;&gt;Node18 -->
+    <!-- Node8&#45;&gt;Node19 -->
 <g id="edge14" class="edge">
-<title>Node7&#45;&gt;Node18</title>
+<title>Node8&#45;&gt;Node19</title>
 <path fill="none" stroke="#191970" d="M342.5264,-126.7032C313.0429,-115.2161 270.5135,-98.6462 244.4764,-88.5019"/>
 <polygon fill="#191970" stroke="#191970" points="341.3939,-130.0182 351.9823,-130.3873 343.9351,-123.4957 341.3939,-130.0182"/>
 </g>
-    <!-- Node9 -->
+    <!-- Node10 -->
 <g id="node3" class="node">
-<title>Node9</title>
+<title>Node10</title>
 <g id="a_node3"><a xlink:href="../../d1/d21/_about_dialog_8cpp.html" target="_top" xlink:title="code/gui/AboutDialog.cpp">
 <polygon fill="none" stroke="#000000" points="291.3867,-5.5 291.3867,-23.5 421.3564,-23.5 421.3564,-5.5 291.3867,-5.5"/>
 <text text-anchor="middle" x="356.3716" y="-11.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/gui/AboutDialog.cpp</text>
 </a>
 </g>
 </g>
-    <!-- Node8&#45;&gt;Node9 -->
+    <!-- Node9&#45;&gt;Node10 -->
 <g id="edge2" class="edge">
-<title>Node8&#45;&gt;Node9</title>
+<title>Node9&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M369.924,-60.8634C366.3878,-48.7661 361.9299,-33.5151 359.1141,-23.8821"/>
 <polygon fill="#191970" stroke="#191970" points="366.5645,-61.8457 372.7297,-70.462 373.2834,-59.8817 366.5645,-61.8457"/>
 </g>
-    <!-- Node10 -->
+    <!-- Node11 -->
 <g id="node4" class="node">
-<title>Node10</title>
+<title>Node11</title>
 <g id="a_node4"><a xlink:href="../../d5/da5/_main_window_8cpp.html" target="_top" xlink:title="code/gui/MainWindow.cpp">
 <polygon fill="none" stroke="#000000" points="141.2808,-5.5 141.2808,-23.5 273.4624,-23.5 273.4624,-5.5 141.2808,-5.5"/>
 <text text-anchor="middle" x="207.3716" y="-11.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/gui/MainWindow.cpp</text>
 </a>
 </g>
 </g>
-    <!-- Node8&#45;&gt;Node10 -->
+    <!-- Node9&#45;&gt;Node11 -->
 <g id="edge3" class="edge">
-<title>Node8&#45;&gt;Node10</title>
+<title>Node9&#45;&gt;Node11</title>
 <path fill="none" stroke="#191970" d="M342.3883,-66.7386C309.5088,-54.0174 259.8432,-34.8015 230.8031,-23.5658"/>
 <polygon fill="#191970" stroke="#191970" points="341.4227,-70.1178 352.0119,-70.462 343.9486,-63.5894 341.4227,-70.1178"/>
 </g>
-    <!-- Node11 -->
+    <!-- Node12 -->
 <g id="node5" class="node">
-<title>Node11</title>
+<title>Node12</title>
 <g id="a_node5"><a xlink:href="../../d8/d35/_patient_window_8cpp.html" target="_top" xlink:title="code/gui/PatientWindow.cpp">
 <polygon fill="none" stroke="#000000" points="439.5518,-5.5 439.5518,-23.5 581.1914,-23.5 581.1914,-5.5 439.5518,-5.5"/>
 <text text-anchor="middle" x="510.3716" y="-11.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/gui/PatientWindow.cpp</text>
 </a>
 </g>
 </g>
-    <!-- Node8&#45;&gt;Node11 -->
+    <!-- Node9&#45;&gt;Node12 -->
 <g id="edge4" class="edge">
-<title>Node8&#45;&gt;Node11</title>
+<title>Node9&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M403.2271,-66.0881C429.5578,-53.4103 468.3551,-34.7302 491.3246,-23.6708"/>
 <polygon fill="#191970" stroke="#191970" points="401.6344,-62.9703 394.1428,-70.462 404.6712,-69.2773 401.6344,-62.9703"/>
 </g>
-    <!-- Node12&#45;&gt;Node11 -->
+    <!-- Node13&#45;&gt;Node12 -->
 <g id="edge7" class="edge">
-<title>Node12&#45;&gt;Node11</title>
+<title>Node13&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M528.2037,-60.8634C523.5509,-48.7661 517.6851,-33.5151 513.9801,-23.8821"/>
 <polygon fill="#191970" stroke="#191970" points="525.0389,-62.385 531.8954,-70.462 531.5723,-59.8721 525.0389,-62.385"/>
 </g>
-    <!-- Node13 -->
+    <!-- Node14 -->
 <g id="node7" class="node">
-<title>Node13</title>
+<title>Node14</title>
 <g id="a_node7"><a xlink:href="../../db/db5/_add_patient_dialog_8cpp.html" target="_top" xlink:title="code/gui/AddPatientDialog.cpp">
 <polygon fill="none" stroke="#000000" points="598.9902,-5.5 598.9902,-23.5 751.7529,-23.5 751.7529,-5.5 598.9902,-5.5"/>
 <text text-anchor="middle" x="675.3716" y="-11.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/gui/AddPatientDialog.cpp</text>
 </a>
 </g>
 </g>
-    <!-- Node12&#45;&gt;Node13 -->
+    <!-- Node13&#45;&gt;Node14 -->
 <g id="edge6" class="edge">
-<title>Node12&#45;&gt;Node13</title>
+<title>Node13&#45;&gt;Node14</title>
 <path fill="none" stroke="#191970" d="M564.2588,-66.0881C591.5647,-53.4103 631.7989,-34.7302 655.6192,-23.6708"/>
 <polygon fill="#191970" stroke="#191970" points="562.4342,-63.0763 554.838,-70.462 565.382,-69.4254 562.4342,-63.0763"/>
 </g>
-    <!-- Node14&#45;&gt;Node11 -->
+    <!-- Node15&#45;&gt;Node12 -->
 <g id="edge10" class="edge">
-<title>Node14&#45;&gt;Node11</title>
+<title>Node15&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M644.1238,-62.0076C609.2319,-49.6143 563.8365,-33.4903 535.9192,-23.5743"/>
 <polygon fill="#191970" stroke="#191970" points="643.0686,-65.347 653.6633,-65.396 645.4116,-58.7507 643.0686,-65.347"/>
 </g>
-    <!-- Node15 -->
+    <!-- Node16 -->
 <g id="node9" class="node">
-<title>Node15</title>
+<title>Node16</title>
 <g id="a_node9"><a xlink:href="../../df/de8/_add_prescription_dialog_8cpp.html" target="_top" xlink:title="code/gui/AddPrescription\lDialog.cpp">
 <polygon fill="none" stroke="#000000" points="769.7832,-.5 769.7832,-28.5 896.96,-28.5 896.96,-.5 769.7832,-.5"/>
 <text text-anchor="start" x="777.7832" y="-16.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/gui/AddPrescription</text>
@@ -218,42 +218,42 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-    <!-- Node14&#45;&gt;Node15 -->
+    <!-- Node15&#45;&gt;Node16 -->
 <g id="edge9" class="edge">
-<title>Node14&#45;&gt;Node15</title>
+<title>Node15&#45;&gt;Node16</title>
 <path fill="none" stroke="#191970" d="M732.9366,-61.1305C755.1816,-50.8025 782.5187,-38.1103 803.053,-28.5765"/>
 <polygon fill="#191970" stroke="#191970" points="731.3457,-58.0103 723.7495,-65.396 734.2935,-64.3593 731.3457,-58.0103"/>
 </g>
-    <!-- Node16&#45;&gt;Node10 -->
+    <!-- Node17&#45;&gt;Node11 -->
 <g id="edge12" class="edge">
-<title>Node16&#45;&gt;Node10</title>
+<title>Node17&#45;&gt;Node11</title>
 <path fill="none" stroke="#191970" d="M95.104,-66.2545C122.6103,-53.5743 163.3824,-34.7787 187.4781,-23.6708"/>
 <polygon fill="#191970" stroke="#191970" points="93.5932,-63.097 85.977,-70.462 96.5238,-69.454 93.5932,-63.097"/>
 </g>
-    <!-- Node17 -->
+    <!-- Node18 -->
 <g id="node11" class="node">
-<title>Node17</title>
+<title>Node18</title>
 <g id="a_node11"><a xlink:href="../../d7/daf/_med_h_8cpp.html" target="_top" xlink:title="code/MedH.cpp">
 <polygon fill="none" stroke="#000000" points="23.3521,-5.5 23.3521,-23.5 109.3911,-23.5 109.3911,-5.5 23.3521,-5.5"/>
 <text text-anchor="middle" x="66.3716" y="-11.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">code/MedH.cpp</text>
 </a>
 </g>
 </g>
-    <!-- Node16&#45;&gt;Node17 -->
+    <!-- Node17&#45;&gt;Node18 -->
 <g id="edge13" class="edge">
-<title>Node16&#45;&gt;Node17</title>
+<title>Node17&#45;&gt;Node18</title>
 <path fill="none" stroke="#191970" d="M66.3716,-60.1265C66.3716,-48.1522 66.3716,-33.3205 66.3716,-23.8821"/>
 <polygon fill="#191970" stroke="#191970" points="62.8717,-60.462 66.3716,-70.462 69.8717,-60.4621 62.8717,-60.462"/>
 </g>
-    <!-- Node18&#45;&gt;Node10 -->
+    <!-- Node19&#45;&gt;Node11 -->
 <g id="edge15" class="edge">
-<title>Node18&#45;&gt;Node10</title>
+<title>Node19&#45;&gt;Node11</title>
 <path fill="none" stroke="#191970" d="M217.2784,-60.4959C214.6857,-48.4586 211.4462,-33.4178 209.3924,-23.8821"/>
 <polygon fill="#191970" stroke="#191970" points="213.8978,-61.4232 219.4249,-70.462 220.7408,-59.9492 213.8978,-61.4232"/>
 </g>
-    <!-- Node18&#45;&gt;Node11 -->
+    <!-- Node19&#45;&gt;Node12 -->
 <g id="edge16" class="edge">
-<title>Node18&#45;&gt;Node11</title>
+<title>Node19&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M271.3123,-68.2677C327.6148,-55.6045 418.0623,-35.2616 470.0639,-23.5658"/>
 <polygon fill="#191970" stroke="#191970" points="270.544,-64.8529 261.5558,-70.462 272.0801,-71.6823 270.544,-64.8529"/>
 </g>

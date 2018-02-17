@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="dc/d55/_widgets_8hpp" kind="file" language="C++">
         <compoundname>Widgets.hpp</compoundname>
         <includes local="no">gtkmm/entry.h</includes>
@@ -13,91 +13,91 @@
         <includedby refid="dd/de0/_patient_window_8hpp" local="yes">code/gui/PatientWindow.hpp</includedby>
         <includedby refid="d7/d49/_widgets_8cpp" local="yes">code/gui/Widgets.cpp</includedby>
         <incdepgraph>
-            <node id="441">
+            <node id="663">
                 <label>gtkmm/entry.h</label>
             </node>
-            <node id="443">
+            <node id="665">
                 <label>fmt/format.h</label>
             </node>
-            <node id="444">
+            <node id="666">
                 <label>../utils/Date.hpp</label>
                 <link refid="d8/d63/_date_8hpp"/>
-                <childnode refid="445" relation="include">
+                <childnode refid="667" relation="include">
                 </childnode>
             </node>
-            <node id="445">
+            <node id="667">
                 <label>iostream</label>
             </node>
-            <node id="440">
+            <node id="662">
                 <label>code/gui/Widgets.hpp</label>
                 <link refid="dc/d55/_widgets_8hpp"/>
-                <childnode refid="441" relation="include">
+                <childnode refid="663" relation="include">
                 </childnode>
-                <childnode refid="442" relation="include">
+                <childnode refid="664" relation="include">
                 </childnode>
-                <childnode refid="443" relation="include">
+                <childnode refid="665" relation="include">
                 </childnode>
-                <childnode refid="444" relation="include">
+                <childnode refid="666" relation="include">
                 </childnode>
             </node>
-            <node id="442">
+            <node id="664">
                 <label>gtkmm/comboboxtext.h</label>
             </node>
         </incdepgraph>
         <invincdepgraph>
-            <node id="452">
+            <node id="674">
                 <label>code/gui/PatientWindow.hpp</label>
                 <link refid="dd/de0/_patient_window_8hpp"/>
-                <childnode refid="453" relation="include">
+                <childnode refid="675" relation="include">
                 </childnode>
-                <childnode refid="449" relation="include">
+                <childnode refid="671" relation="include">
                 </childnode>
             </node>
-            <node id="447">
+            <node id="669">
                 <label>code/gui/AddPatientDialog.hpp</label>
                 <link refid="d2/dac/_add_patient_dialog_8hpp"/>
-                <childnode refid="448" relation="include">
+                <childnode refid="670" relation="include">
                 </childnode>
-                <childnode refid="449" relation="include">
+                <childnode refid="671" relation="include">
                 </childnode>
             </node>
-            <node id="450">
+            <node id="672">
                 <label>code/gui/AddPrescriptionDialog.hpp</label>
                 <link refid="d0/d1e/_add_prescription_dialog_8hpp"/>
-                <childnode refid="451" relation="include">
+                <childnode refid="673" relation="include">
                 </childnode>
-                <childnode refid="449" relation="include">
+                <childnode refid="671" relation="include">
                 </childnode>
             </node>
-            <node id="448">
+            <node id="670">
                 <label>code/gui/AddPatientDialog.cpp</label>
                 <link refid="db/db5/_add_patient_dialog_8cpp"/>
             </node>
-            <node id="454">
+            <node id="676">
                 <label>code/gui/Widgets.cpp</label>
                 <link refid="d7/d49/_widgets_8cpp"/>
             </node>
-            <node id="451">
+            <node id="673">
                 <label>code/gui/AddPrescriptionDialog.cpp</label>
                 <link refid="df/de8/_add_prescription_dialog_8cpp"/>
             </node>
-            <node id="449">
+            <node id="671">
                 <label>code/gui/PatientWindow.cpp</label>
                 <link refid="d8/d35/_patient_window_8cpp"/>
             </node>
-            <node id="446">
+            <node id="668">
                 <label>code/gui/Widgets.hpp</label>
                 <link refid="dc/d55/_widgets_8hpp"/>
-                <childnode refid="447" relation="include">
+                <childnode refid="669" relation="include">
                 </childnode>
-                <childnode refid="450" relation="include">
+                <childnode refid="672" relation="include">
                 </childnode>
-                <childnode refid="452" relation="include">
+                <childnode refid="674" relation="include">
                 </childnode>
-                <childnode refid="454" relation="include">
+                <childnode refid="676" relation="include">
                 </childnode>
             </node>
-            <node id="453">
+            <node id="675">
                 <label>code/gui/MainWindow.cpp</label>
                 <link refid="d5/da5/_main_window_8cpp"/>
             </node>
@@ -402,7 +402,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <ref refid="d0/d52/structmm_1_1_date_controller" kindref="compound">DateController</ref>()<sp/>=
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1a3244d913ab9d7b96e9617f8711e34bd8"
+                         kindref="member">DateController</ref>()<sp/>=
                     <sp/>
                 </highlight>
                 <highlight class="keyword">delete</highlight>
@@ -421,7 +422,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <ref refid="d0/d52/structmm_1_1_date_controller" kindref="compound">DateController</ref>(
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1a3244d913ab9d7b96e9617f8711e34bd8"
+                         kindref="member">DateController</ref>(
                 </highlight>
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal"><sp/>std::string<sp/>&amp;dayId,
@@ -450,7 +452,10 @@
                     <sp/>
                 </highlight>
                 <highlight class="keywordtype">void</highlight>
-                <highlight class="normal"><sp/>onDateChanged();
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1a7474c420c78178ee6ee6a2e66c16803f"
+                         kindref="member">onDateChanged</ref>();
                 </highlight>
             </codeline>
             <codeline lineno="36">
@@ -470,7 +475,7 @@
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
                     <sp/>
-                    <ref refid="d0/d9e/structmm_1_1_entry_controller_1a8eb56a968a567d1641c47d0f08b23f6f"
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1a9e09c31aa55c3389c6919c716bb8b0dc"
                          kindref="member">reset</ref>();
                 </highlight>
             </codeline>
@@ -515,7 +520,13 @@
                 <highlight class="normal"><sp/>fmt::format(
                 </highlight>
                 <highlight class="stringliteral">&quot;{}/{}/{}&quot;</highlight>
-                <highlight class="normal">,<sp/>day-&gt;get_active_text().c_str(),<sp/>month-&gt;get_active_text().c_str(),
+                <highlight class="normal">,
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1a332df89b4a88fe3ace3d6d86934a575d"
+                         kindref="member">day</ref>-&gt;get_active_text().c_str(),
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1a1e7373cef0b00e63343ef9d30a1e80c5"
+                         kindref="member">month</ref>-&gt;get_active_text().c_str(),
                 </highlight>
             </codeline>
             <codeline lineno="41">
@@ -550,7 +561,9 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>year-&gt;get_active_text().c_str());
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1a36179406cda47b8c18d1a84945a5e61c"
+                         kindref="member">year</ref>-&gt;get_active_text().c_str());
                 </highlight>
             </codeline>
             <codeline lineno="42">
@@ -579,7 +592,9 @@
                     <sp/>
                     <sp/>
                     <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
-                    <sp/>getDate();
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1aa3c0122bfcc36e8d8b43c8ca7ca76197"
+                         kindref="member">getDate</ref>();
                 </highlight>
             </codeline>
             <codeline lineno="45">
@@ -631,6 +646,27 @@
                 </highlight>
             </codeline>
             <codeline lineno="49">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="50">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1aa7f999d2d5afec5c6724f92cf2856171"
+                         kindref="member">init</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="51">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -638,16 +674,16 @@
                     <sp/>};
                 </highlight>
             </codeline>
-            <codeline lineno="50">
+            <codeline lineno="52">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="51">
-                <highlight class="normal"></highlight>
-            </codeline>
-            <codeline lineno="52">
-                <highlight class="normal"></highlight>
-            </codeline>
             <codeline lineno="53">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="54">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="55">
                 <highlight class="normal"></highlight>
                 <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_WIDGETS_HPP
                 </highlight>

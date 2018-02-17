@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="dc/de6/_dialog_8hpp" kind="file" language="C++">
         <compoundname>Dialog.hpp</compoundname>
         <includes local="no">sigc++/trackable.h</includes>
+        <includes local="no">gtkmm/dialog.h</includes>
         <includes refid="d1/d25/_i_subject_8hpp" local="yes">../interfaces/ISubject.hpp</includes>
         <includedby refid="d7/ded/_about_dialog_8hpp" local="yes">code/gui/AboutDialog.hpp</includedby>
         <includedby refid="d2/dac/_add_patient_dialog_8hpp" local="yes">code/gui/AddPatientDialog.hpp</includedby>
@@ -12,121 +13,126 @@
         <includedby refid="db/d41/_main_window_8hpp" local="yes">code/gui/MainWindow.hpp</includedby>
         <includedby refid="dd/de0/_patient_window_8hpp" local="yes">code/gui/PatientWindow.hpp</includedby>
         <incdepgraph>
-            <node id="169">
+            <node id="230">
                 <label>IObserver.hpp</label>
                 <link refid="d5/d40/_i_observer_8hpp"/>
-                <childnode refid="170" relation="include">
+                <childnode refid="231" relation="include">
                 </childnode>
-                <childnode refid="171" relation="include">
+                <childnode refid="232" relation="include">
                 </childnode>
             </node>
-            <node id="166">
+            <node id="227">
+                <label>gtkmm/dialog.h</label>
+            </node>
+            <node id="226">
                 <label>sigc++/trackable.h</label>
             </node>
-            <node id="170">
+            <node id="231">
                 <label>mutex</label>
             </node>
-            <node id="165">
+            <node id="225">
                 <label>code/gui/Dialog.hpp</label>
                 <link refid="dc/de6/_dialog_8hpp"/>
-                <childnode refid="166" relation="include">
+                <childnode refid="226" relation="include">
                 </childnode>
-                <childnode refid="167" relation="include">
+                <childnode refid="227" relation="include">
+                </childnode>
+                <childnode refid="228" relation="include">
                 </childnode>
             </node>
-            <node id="171">
+            <node id="232">
                 <label>thread</label>
             </node>
-            <node id="167">
+            <node id="228">
                 <label>../interfaces/ISubject.hpp</label>
                 <link refid="d1/d25/_i_subject_8hpp"/>
-                <childnode refid="168" relation="include">
+                <childnode refid="229" relation="include">
                 </childnode>
-                <childnode refid="169" relation="include">
+                <childnode refid="230" relation="include">
                 </childnode>
             </node>
-            <node id="168">
+            <node id="229">
                 <label>set</label>
             </node>
         </incdepgraph>
         <invincdepgraph>
-            <node id="183">
+            <node id="244">
                 <label>code/gui/PatientWindow.hpp</label>
                 <link refid="dd/de0/_patient_window_8hpp"/>
-                <childnode refid="175" relation="include">
+                <childnode refid="236" relation="include">
                 </childnode>
-                <childnode refid="176" relation="include">
+                <childnode refid="237" relation="include">
                 </childnode>
             </node>
-            <node id="182">
+            <node id="243">
                 <label>code/MedH.cpp</label>
                 <link refid="d7/daf/_med_h_8cpp"/>
             </node>
-            <node id="174">
+            <node id="235">
                 <label>code/gui/AboutDialog.cpp</label>
                 <link refid="d1/d21/_about_dialog_8cpp"/>
             </node>
-            <node id="177">
+            <node id="238">
                 <label>code/gui/AddPatientDialog.hpp</label>
                 <link refid="d2/dac/_add_patient_dialog_8hpp"/>
-                <childnode refid="178" relation="include">
+                <childnode refid="239" relation="include">
                 </childnode>
-                <childnode refid="176" relation="include">
+                <childnode refid="237" relation="include">
                 </childnode>
             </node>
-            <node id="179">
+            <node id="240">
                 <label>code/gui/AddPrescriptionDialog.hpp</label>
                 <link refid="d0/d1e/_add_prescription_dialog_8hpp"/>
-                <childnode refid="180" relation="include">
+                <childnode refid="241" relation="include">
                 </childnode>
-                <childnode refid="176" relation="include">
+                <childnode refid="237" relation="include">
                 </childnode>
             </node>
-            <node id="173">
+            <node id="234">
                 <label>code/gui/AboutDialog.hpp</label>
                 <link refid="d7/ded/_about_dialog_8hpp"/>
-                <childnode refid="174" relation="include">
+                <childnode refid="235" relation="include">
                 </childnode>
-                <childnode refid="175" relation="include">
+                <childnode refid="236" relation="include">
                 </childnode>
-                <childnode refid="176" relation="include">
+                <childnode refid="237" relation="include">
                 </childnode>
             </node>
-            <node id="178">
+            <node id="239">
                 <label>code/gui/AddPatientDialog.cpp</label>
                 <link refid="db/db5/_add_patient_dialog_8cpp"/>
             </node>
-            <node id="180">
+            <node id="241">
                 <label>code/gui/AddPrescriptionDialog.cpp</label>
                 <link refid="df/de8/_add_prescription_dialog_8cpp"/>
             </node>
-            <node id="181">
+            <node id="242">
                 <label>code/gui/MainWindow.hpp</label>
                 <link refid="db/d41/_main_window_8hpp"/>
-                <childnode refid="175" relation="include">
+                <childnode refid="236" relation="include">
                 </childnode>
-                <childnode refid="182" relation="include">
+                <childnode refid="243" relation="include">
                 </childnode>
             </node>
-            <node id="176">
+            <node id="237">
                 <label>code/gui/PatientWindow.cpp</label>
                 <link refid="d8/d35/_patient_window_8cpp"/>
             </node>
-            <node id="172">
+            <node id="233">
                 <label>code/gui/Dialog.hpp</label>
                 <link refid="dc/de6/_dialog_8hpp"/>
-                <childnode refid="173" relation="include">
+                <childnode refid="234" relation="include">
                 </childnode>
-                <childnode refid="177" relation="include">
+                <childnode refid="238" relation="include">
                 </childnode>
-                <childnode refid="179" relation="include">
+                <childnode refid="240" relation="include">
                 </childnode>
-                <childnode refid="181" relation="include">
+                <childnode refid="242" relation="include">
                 </childnode>
-                <childnode refid="183" relation="include">
+                <childnode refid="244" relation="include">
                 </childnode>
             </node>
-            <node id="175">
+            <node id="236">
                 <label>code/gui/MainWindow.cpp</label>
                 <link refid="d5/da5/_main_window_8cpp"/>
             </node>
@@ -179,14 +185,20 @@
             </codeline>
             <codeline lineno="9">
                 <highlight class="normal"></highlight>
-                <highlight class="preprocessor">#include<sp/>&quot;../interfaces/ISubject.hpp&quot;
+                <highlight class="preprocessor">#include<sp/>&lt;gtkmm/dialog.h&gt;
                 </highlight>
                 <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="10">
                 <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../interfaces/ISubject.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="11">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="12">
                 <highlight class="normal"></highlight>
                 <highlight class="keyword">namespace
                     <sp/>
@@ -196,7 +208,7 @@
                     <sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="12" refid="df/d35/classmm_1_1_dialog" refkind="compound">
+            <codeline lineno="13" refid="df/d35/classmm_1_1_dialog" refkind="compound">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -221,7 +233,91 @@
                 <highlight class="normal"><sp/>sigc::trackable<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="13">
+            <codeline lineno="14">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">protected</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="15" refid="df/d35/classmm_1_1_dialog_1a9864219c61623b484d8f8c161808e136" refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">virtual</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d35/classmm_1_1_dialog_1a9864219c61623b484d8f8c161808e136" kindref="member">
+                        onDelete</ref>(GdkEventAny<sp/>*any_event)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="df/d35/classmm_1_1_dialog_1a3f2e361836af48ee3808f4dd6e4f8e48" kindref="member">
+                        dispose</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">true</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="19">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -231,7 +327,7 @@
                 <highlight class="keyword">public</highlight>
                 <highlight class="normal">:</highlight>
             </codeline>
-            <codeline lineno="14">
+            <codeline lineno="20">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -257,7 +353,7 @@
                 </highlight>
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="15">
+            <codeline lineno="21">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -283,7 +379,7 @@
                 </highlight>
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="16">
+            <codeline lineno="22">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -305,13 +401,12 @@
                         isActive</ref>()<sp/>=<sp/>0;
                     <sp/>
                 </highlight>
-                <highlight class="comment">//<sp/>it<sp/>return<sp/>false<sp/>if<sp/>the<sp/>dialog<sp/>may<sp/>be
-                    <sp/>
+                <highlight class="comment">//<sp/>it<sp/>return<sp/>false<sp/>if<sp/>the<sp/>dialog<sp/>may<sp/>be<sp/>
                     destructed
                 </highlight>
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="17">
+            <codeline lineno="23">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -337,7 +432,7 @@
                 </highlight>
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="18">
+            <codeline lineno="24">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -345,16 +440,16 @@
                     <sp/>};
                 </highlight>
             </codeline>
-            <codeline lineno="19">
+            <codeline lineno="25">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="20">
+            <codeline lineno="26">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="21">
+            <codeline lineno="27">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="22">
+            <codeline lineno="28">
                 <highlight class="normal"></highlight>
                 <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_DIALOG_HPP
                 </highlight>

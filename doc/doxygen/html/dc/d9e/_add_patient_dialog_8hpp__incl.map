@@ -1,7 +1,8 @@
 <map id="code/gui/AddPatientDialog.hpp" name="code/gui/AddPatientDialog.hpp">
-<area shape="rect" id="node5" href="$dc/de6/_dialog_8hpp.html" title="Dialog.hpp" alt="" coords="593,79,678,104"/>
-<area shape="rect" id="node12" href="$dc/d55/_widgets_8hpp.html" title="Widgets.hpp" alt="" coords="251,79,347,104"/>
-<area shape="rect" id="node7" href="$d1/d25/_i_subject_8hpp.html" title="../interfaces/ISubject.hpp" alt="" coords="724,152,892,177"/>
-<area shape="rect" id="node9" href="$d5/d40/_i_observer_8hpp.html" title="IObserver.hpp" alt="" coords="708,225,813,251"/>
-<area shape="rect" id="node14" href="$d8/d63/_date_8hpp.html" title="../utils/Date.hpp" alt="" coords="433,152,547,177"/>
+<area shape="rect" id="node5" href="$dc/de6/_dialog_8hpp.html" title="Dialog.hpp" alt="" coords="665,79,750,104"/>
+<area shape="rect" id="node13" href="$dc/d55/_widgets_8hpp.html" title="Widgets.hpp" alt="" coords="307,79,403,104"/>
+<area shape="rect" id="node17" href="$d2/dce/string_utils_8hpp.html" title="../utils/stringUtils.hpp" alt="" coords="1100,79,1245,104"/>
+<area shape="rect" id="node8" href="$d1/d25/_i_subject_8hpp.html" title="../interfaces/ISubject.hpp" alt="" coords="859,152,1027,177"/>
+<area shape="rect" id="node10" href="$d5/d40/_i_observer_8hpp.html" title="IObserver.hpp" alt="" coords="843,225,948,251"/>
+<area shape="rect" id="node15" href="$d8/d63/_date_8hpp.html" title="../utils/Date.hpp" alt="" coords="317,152,431,177"/>
 </map>

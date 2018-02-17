@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="db/d45/_med_h_8hpp" kind="file" language="C++">
         <compoundname>MedH.hpp</compoundname>
         <includes local="no">gtkmm-3.0/gtkmm.h</includes>
@@ -9,66 +9,66 @@
         <includedby refid="df/d0a/main_8cpp" local="yes">code/main.cpp</includedby>
         <includedby refid="d7/daf/_med_h_8cpp" local="yes">code/MedH.cpp</includedby>
         <incdepgraph>
-            <node id="605">
+            <node id="847">
                 <label>interfaces/IObserver.hpp</label>
                 <link refid="d5/d40/_i_observer_8hpp"/>
-                <childnode refid="606" relation="include">
+                <childnode refid="848" relation="include">
                 </childnode>
-                <childnode refid="607" relation="include">
+                <childnode refid="849" relation="include">
                 </childnode>
             </node>
-            <node id="608">
+            <node id="850">
                 <label>gui/Window.hpp</label>
                 <link refid="de/d0b/_window_8hpp"/>
-                <childnode refid="609" relation="include">
+                <childnode refid="851" relation="include">
                 </childnode>
             </node>
-            <node id="603">
+            <node id="845">
                 <label>code/MedH.hpp</label>
                 <link refid="db/d45/_med_h_8hpp"/>
-                <childnode refid="604" relation="include">
+                <childnode refid="846" relation="include">
                 </childnode>
-                <childnode refid="605" relation="include">
+                <childnode refid="847" relation="include">
                 </childnode>
-                <childnode refid="608" relation="include">
+                <childnode refid="850" relation="include">
                 </childnode>
             </node>
-            <node id="604">
+            <node id="846">
                 <label>gtkmm-3.0/gtkmm.h</label>
             </node>
-            <node id="606">
+            <node id="848">
                 <label>mutex</label>
             </node>
-            <node id="607">
+            <node id="849">
                 <label>thread</label>
             </node>
-            <node id="609">
+            <node id="851">
                 <label>../interfaces/ISubject.hpp</label>
                 <link refid="d1/d25/_i_subject_8hpp"/>
-                <childnode refid="610" relation="include">
+                <childnode refid="852" relation="include">
                 </childnode>
-                <childnode refid="605" relation="include">
+                <childnode refid="847" relation="include">
                 </childnode>
             </node>
-            <node id="610">
+            <node id="852">
                 <label>set</label>
             </node>
         </incdepgraph>
         <invincdepgraph>
-            <node id="613">
+            <node id="855">
                 <label>code/MedH.cpp</label>
                 <link refid="d7/daf/_med_h_8cpp"/>
             </node>
-            <node id="612">
+            <node id="854">
                 <label>code/main.cpp</label>
                 <link refid="df/d0a/main_8cpp"/>
             </node>
-            <node id="611">
+            <node id="853">
                 <label>code/MedH.hpp</label>
                 <link refid="db/d45/_med_h_8hpp"/>
-                <childnode refid="612" relation="include">
+                <childnode refid="854" relation="include">
                 </childnode>
-                <childnode refid="613" relation="include">
+                <childnode refid="855" relation="include">
                 </childnode>
             </node>
         </invincdepgraph>
@@ -203,7 +203,14 @@
                     <sp/>
                 </highlight>
                 <highlight class="keywordtype">bool</highlight>
-                <highlight class="normal"><sp/>initDrugComboBox();
+                <highlight class="normal"><sp/>init(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>argc,
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal"><sp/>**argv);
                 </highlight>
             </codeline>
             <codeline lineno="30">
@@ -281,9 +288,27 @@
                 <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="39">
-                <highlight class="normal"></highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">virtual</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d1a/classmm_1_1_med_h_1a6fe53e9376821a1aae7d5a3a32d203c3" kindref="member">
+                        ~MedH</ref>();
+                </highlight>
             </codeline>
             <codeline lineno="40">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="41">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -293,7 +318,7 @@
                 <highlight class="keyword">private</highlight>
                 <highlight class="normal">:</highlight>
             </codeline>
-            <codeline lineno="42">
+            <codeline lineno="43">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -311,7 +336,7 @@
                 <highlight class="keyword">override</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="43">
+            <codeline lineno="44">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -319,16 +344,16 @@
                     <sp/>};
                 </highlight>
             </codeline>
-            <codeline lineno="44">
-                <highlight class="normal">}</highlight>
-            </codeline>
             <codeline lineno="45">
-                <highlight class="normal"></highlight>
+                <highlight class="normal">}</highlight>
             </codeline>
             <codeline lineno="46">
                 <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="47">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="48">
                 <highlight class="normal"></highlight>
                 <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_MEDH_HPP
                 </highlight>

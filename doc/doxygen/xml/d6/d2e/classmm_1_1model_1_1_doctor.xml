@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d6/d2e/classmm_1_1model_1_1_doctor" kind="class" language="C++" prot="public">
         <compoundname>mm::model::Doctor</compoundname>
         <basecompoundref refid="dc/df3/classmm_1_1_i_serializable" prot="public" virt="non-virtual">mm::ISerializable
@@ -144,36 +144,46 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/model/Doctor.hpp" line="33" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="79" bodyend="87"/>
+                          bodystart="94" bodyend="102"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="public-func">
-            <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a16be876e8591688f3b34ca86441253a2"
+            <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a38a5a7d04ea625f39422cb320af18800"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
                 <type>vector&lt; <ref refid="db/d61/classmm_1_1model_1_1_prescription" kindref="compound">
                     model::Prescription
                 </ref> &gt;
                 </type>
                 <definition>vector&lt; mm::model::Prescription &gt; mm::model::Doctor::get_prescriptions</definition>
-                <argsstring>(Patient patient, util::Date start, util::Date end)</argsstring>
+                <argsstring>(Patient patient=Patient(), util::Date start=util::Date::get_current_date(), util::Date
+                    end=util::Date::get_current_date())
+                </argsstring>
                 <name>get_prescriptions</name>
                 <param>
                     <type>
                         <ref refid="d6/d4a/classmm_1_1model_1_1_patient" kindref="compound">Patient</ref>
                     </type>
                     <declname>patient</declname>
+                    <defval><ref refid="d6/d4a/classmm_1_1model_1_1_patient" kindref="compound">Patient</ref>()
+                    </defval>
                 </param>
                 <param>
                     <type>
                         <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
                     </type>
                     <declname>start</declname>
+                    <defval><ref refid="df/d88/structmm_1_1util_1_1_date_1af0758fad7ef32fd535db3295136466eb"
+                                 kindref="member">util::Date::get_current_date</ref>()
+                    </defval>
                 </param>
                 <param>
                     <type>
                         <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
                     </type>
                     <declname>end</declname>
+                    <defval><ref refid="df/d88/structmm_1_1util_1_1_date_1af0758fad7ef32fd535db3295136466eb"
+                                 kindref="member">util::Date::get_current_date</ref>()
+                    </defval>
                 </param>
                 <briefdescription>
                 </briefdescription>
@@ -182,7 +192,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/model/Doctor.hpp" line="36" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="46" bodyend="63"/>
+                          bodystart="47" bodyend="78"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a76bf6b545709c7a784e4320b11f587bf"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -205,8 +215,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="39" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="66" bodyend="72"/>
+                <location file="code/model/Doctor.hpp" line="40" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="81" bodyend="87"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1ace64e6e74d0e39244c349fe5570ff974"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -233,8 +243,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="41" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="75" bodyend="77"/>
+                <location file="code/model/Doctor.hpp" line="42" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="90" bodyend="92"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a8b761c1dfbe10348eb99c0397e811e0a"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -250,8 +260,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="43" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="106" bodyend="108"/>
+                <location file="code/model/Doctor.hpp" line="44" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="121" bodyend="123"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a989fbde1a8784d8139d8add9066ab9b1"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -273,8 +283,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="45" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="90" bodyend="92"/>
+                <location file="code/model/Doctor.hpp" line="46" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="105" bodyend="107"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a89aa97cb00bfa2352c2a4f276554e738"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -294,28 +304,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="47" column="1" bodyfile="code/model/Doctor.cpp"
+                <location file="code/model/Doctor.hpp" line="48" column="1" bodyfile="code/model/Doctor.cpp"
                           bodystart="141" bodyend="148"/>
-            </memberdef>
-            <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a1fe35e39d290992a5f6f4a73d4fa8d50"
-                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void mm::model::Doctor::remove_patient</definition>
-                <argsstring>(const Patient &amp;patient)</argsstring>
-                <name>remove_patient</name>
-                <param>
-                    <type>const <ref refid="d6/d4a/classmm_1_1model_1_1_patient" kindref="compound">Patient</ref> &amp;
-                    </type>
-                    <declname>patient</declname>
-                </param>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="49" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="126" bodyend="139"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1ac33c8e6a13054d0c7aea1cf6aec4368f"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -329,8 +319,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="51" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="110" bodyend="112"/>
+                <location file="code/model/Doctor.hpp" line="50" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="125" bodyend="127"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a86a186641c22223ecb9951112befa3e9"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -344,8 +334,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="53" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="114" bodyend="116"/>
+                <location file="code/model/Doctor.hpp" line="52" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="129" bodyend="131"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1afa648dfa2f37c1de94a742bd58682899"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -359,8 +349,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="55" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="118" bodyend="120"/>
+                <location file="code/model/Doctor.hpp" line="54" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="133" bodyend="135"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a14283e664d8689ad296e46969c129cad"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -374,8 +364,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="57" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="122" bodyend="124"/>
+                <location file="code/model/Doctor.hpp" line="56" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="137" bodyend="139"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a2171a9cb9c8a24ad0c0331edae957910"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
@@ -398,8 +388,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="60" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="12" bodyend="23"/>
+                <location file="code/model/Doctor.hpp" line="59" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="13" bodyend="24"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a20bedf6695024e1930d033995a2ec5bf"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -420,8 +410,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="62" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="25" bodyend="35"/>
+                <location file="code/model/Doctor.hpp" line="61" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="26" bodyend="36"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1af4c37e48f9e5ff26f2295678f10afaa3"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
@@ -438,8 +428,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="64" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="37" bodyend="39"/>
+                <location file="code/model/Doctor.hpp" line="63" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="38" bodyend="40"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a935989cbe2274076c2b409126d4faccd"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
@@ -456,8 +446,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="66" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="41" bodyend="43"/>
+                <location file="code/model/Doctor.hpp" line="65" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="42" bodyend="44"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1ad49c6f0fdc31a96edaeada72ba88ceec"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -471,8 +461,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="68" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="94" bodyend="96"/>
+                <location file="code/model/Doctor.hpp" line="67" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="109" bodyend="111"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1a26810a7e1e0682d2dbb7c92ac3a8247b"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -486,8 +476,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="70" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="98" bodyend="100"/>
+                <location file="code/model/Doctor.hpp" line="69" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="113" bodyend="115"/>
             </memberdef>
             <memberdef kind="function" id="d6/d2e/classmm_1_1model_1_1_doctor_1ab5b807b5ce91d9f20603f091e62fe17a"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -501,8 +491,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Doctor.hpp" line="72" column="1" bodyfile="code/model/Doctor.cpp"
-                          bodystart="102" bodyend="104"/>
+                <location file="code/model/Doctor.hpp" line="71" column="1" bodyfile="code/model/Doctor.cpp"
+                          bodystart="117" bodyend="119"/>
             </memberdef>
         </sectiondef>
         <briefdescription>
@@ -534,7 +524,7 @@
             </node>
         </collaborationgraph>
         <location file="code/model/Doctor.hpp" line="22" column="1" bodyfile="code/model/Doctor.hpp" bodystart="22"
-                  bodyend="73"/>
+                  bodyend="72"/>
         <listofallmembers>
             <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a5aeb22f1e5edf2db5d481b6caa2b5c7b" prot="private"
                     virt="non-virtual">
@@ -606,7 +596,7 @@
                 <scope>mm::model::Doctor</scope>
                 <name>get_patients_from_db</name>
             </member>
-            <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a16be876e8591688f3b34ca86441253a2" prot="public"
+            <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a38a5a7d04ea625f39422cb320af18800" prot="public"
                     virt="non-virtual">
                 <scope>mm::model::Doctor</scope>
                 <name>get_prescriptions</name>
@@ -650,11 +640,6 @@
                     virt="non-virtual">
                 <scope>mm::model::Doctor</scope>
                 <name>regional_id</name>
-            </member>
-            <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a1fe35e39d290992a5f6f4a73d4fa8d50" prot="public"
-                    virt="non-virtual">
-                <scope>mm::model::Doctor</scope>
-                <name>remove_patient</name>
             </member>
             <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a2171a9cb9c8a24ad0c0331edae957910" prot="public"
                     virt="virtual">

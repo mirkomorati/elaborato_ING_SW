@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d7/d05/classmm_1_1_about_dialog" kind="class" language="C++" prot="public">
         <compoundname>mm::AboutDialog</compoundname>
         <basecompoundref refid="df/d35/classmm_1_1_dialog" prot="public" virt="non-virtual">mm::Dialog</basecompoundref>
@@ -38,7 +38,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/gui/AboutDialog.hpp" line="14" column="1" bodyfile="code/gui/AboutDialog.cpp"
-                          bodystart="21" bodyend="27"/>
+                          bodystart="22" bodyend="28"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="public-func">
@@ -55,7 +55,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/gui/AboutDialog.hpp" line="17" column="1" bodyfile="code/gui/AboutDialog.cpp"
-                          bodystart="8" bodyend="13"/>
+                          bodystart="8" bodyend="14"/>
             </memberdef>
             <memberdef kind="function" id="d7/d05/classmm_1_1_about_dialog_1a9e06dc12f6950b74ccf6ccece693f108"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -71,7 +71,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/gui/AboutDialog.hpp" line="19" column="1" bodyfile="code/gui/AboutDialog.cpp"
-                          bodystart="15" bodyend="19"/>
+                          bodystart="16" bodyend="20"/>
             </memberdef>
             <memberdef kind="function" id="d7/d05/classmm_1_1_about_dialog_1adc8aec0378d9d146c78eaf9a204dbf27"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -88,7 +88,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/gui/AboutDialog.hpp" line="21" column="1" bodyfile="code/gui/AboutDialog.cpp"
-                          bodystart="29" bodyend="31"/>
+                          bodystart="30" bodyend="32"/>
             </memberdef>
             <memberdef kind="function" id="d7/d05/classmm_1_1_about_dialog_1a21f5b0a7c9d8e43baab78e073d7ade2b"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -104,7 +104,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/gui/AboutDialog.hpp" line="23" column="1" bodyfile="code/gui/AboutDialog.cpp"
-                          bodystart="33" bodyend="35"/>
+                          bodystart="34" bodyend="36"/>
             </memberdef>
             <memberdef kind="function" id="d7/d05/classmm_1_1_about_dialog_1a9a5feecb03e737d3bdbbf2a97dd7fbc4"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -123,7 +123,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/gui/AboutDialog.hpp" line="25" column="1" bodyfile="code/gui/AboutDialog.cpp"
-                          bodystart="37" bodyend="48"/>
+                          bodystart="38" bodyend="49"/>
             </memberdef>
         </sectiondef>
         <briefdescription>
@@ -213,6 +213,16 @@
                     virt="non-virtual">
                 <scope>mm::AboutDialog</scope>
                 <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>notify</name>
+            </member>
+            <member refid="df/d35/classmm_1_1_dialog_1a9864219c61623b484d8f8c161808e136" prot="protected"
+                    virt="virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>onDelete</name>
             </member>
             <member refid="d7/d05/classmm_1_1_about_dialog_1a9a5feecb03e737d3bdbbf2a97dd7fbc4" prot="public"
                     virt="non-virtual">

@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d5/db1/_prescription_window_8hpp" kind="file" language="C++">
+        <compoundname>PrescriptionWindow.hpp</compoundname>
+        <includes local="no">gtkmm/liststore.h</includes>
+        <includes refid="de/d0b/_window_8hpp" local="yes">Window.hpp</includes>
+        <includedby refid="d5/da5/_main_window_8cpp" local="yes">code/gui/MainWindow.cpp</includedby>
+        <includedby refid="d1/d16/_prescription_window_8cpp" local="yes">code/gui/PrescriptionWindow.cpp</includedby>
+        <incdepgraph>
+            <node id="556">
+                <label>IObserver.hpp</label>
+                <link refid="d5/d40/_i_observer_8hpp"/>
+                <childnode refid="557" relation="include">
+                </childnode>
+                <childnode refid="558" relation="include">
+                </childnode>
+            </node>
+            <node id="553">
+                <label>Window.hpp</label>
+                <link refid="de/d0b/_window_8hpp"/>
+                <childnode refid="554" relation="include">
+                </childnode>
+            </node>
+            <node id="551">
+                <label>code/gui/PrescriptionWindow.hpp</label>
+                <link refid="d5/db1/_prescription_window_8hpp"/>
+                <childnode refid="552" relation="include">
+                </childnode>
+                <childnode refid="553" relation="include">
+                </childnode>
+            </node>
+            <node id="557">
+                <label>mutex</label>
+            </node>
+            <node id="558">
+                <label>thread</label>
+            </node>
+            <node id="554">
+                <label>../interfaces/ISubject.hpp</label>
+                <link refid="d1/d25/_i_subject_8hpp"/>
+                <childnode refid="555" relation="include">
+                </childnode>
+                <childnode refid="556" relation="include">
+                </childnode>
+            </node>
+            <node id="555">
+                <label>set</label>
+            </node>
+            <node id="552">
+                <label>gtkmm/liststore.h</label>
+            </node>
+        </incdepgraph>
+        <invincdepgraph>
+            <node id="561">
+                <label>code/gui/PrescriptionWindow.cpp</label>
+                <link refid="d1/d16/_prescription_window_8cpp"/>
+            </node>
+            <node id="559">
+                <label>code/gui/PrescriptionWindow.hpp</label>
+                <link refid="d5/db1/_prescription_window_8hpp"/>
+                <childnode refid="560" relation="include">
+                </childnode>
+                <childnode refid="561" relation="include">
+                </childnode>
+            </node>
+            <node id="560">
+                <label>code/gui/MainWindow.cpp</label>
+                <link refid="d5/da5/_main_window_8cpp"/>
+            </node>
+        </invincdepgraph>
+        <innerclass refid="da/d8f/classmm_1_1_prescription_window" prot="public">mm::PrescriptionWindow</innerclass>
+        <innernamespace refid="d0/d04/namespacemm">mm</innernamespace>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Mirko<sp/>Morati<sp/>on<sp/>31/12/17.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#ifndef<sp/>ELABORATO_ING_SW_PRESCRIPTIONWINDOW_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#define<sp/>ELABORATO_ING_SW_PRESCRIPTIONWINDOW_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;gtkmm/liststore.h&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d0b/_window_8hpp" kindref="compound">
+                    Window.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm" kindref="compound">mm</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="12" refid="da/d8f/classmm_1_1_prescription_window" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">class
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="da/d8f/classmm_1_1_prescription_window" kindref="compound">PrescriptionWindow</ref>
+                    <sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d1/d71/classmm_1_1_window" kindref="compound">mm::Window</ref>,
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d7/d9e/classmm_1_1_i_observer" kindref="compound">IObserver</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="da/d8f/classmm_1_1_prescription_window_1ad40a15a976a851f81fad2c7ec9116555"
+                         kindref="member">PrescriptionWindow</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="da/d8f/classmm_1_1_prescription_window_1a4764fe59cd6aeaa46c7fd8820dd4102b"
+                         kindref="member">init</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">override</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                    <sp/>
+                    <ref refid="da/d8f/classmm_1_1_prescription_window_1a0770b1cfa7eef3bfa990d7ddeeb03a39"
+                         kindref="member">getName</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const<sp/>override
+                </highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                    <sp/>
+                    <ref refid="da/d8f/classmm_1_1_prescription_window_1aec9558aea3a0fb15e3148ebf4c9e8d40"
+                         kindref="member">getNextWindow</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const<sp/>override
+                </highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="da/d8f/classmm_1_1_prescription_window_1a51195815f64b79179e3dafbb89b785e8"
+                         kindref="member">update</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">override</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">private</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                    <sp/>next;
+                </highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Glib::RefPtr&lt;Gtk::ListStore&gt;<sp/>prescriptionListStore;
+                </highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>initTreeView();
+                </highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>updatePrescriptionTreeView();
+                </highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>onSortCompareByDate(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>Gtk::TreeModel::iterator<sp/>&amp;a,
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>Gtk::TreeModel::iterator<sp/>&amp;b);
+                </highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_PRESCRIPTIONWINDOW_HPP
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/gui/PrescriptionWindow.hpp"/>
+    </compounddef>
+</doxygen>

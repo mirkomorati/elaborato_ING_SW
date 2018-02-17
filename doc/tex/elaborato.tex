@@ -1,0 +1,128 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[italian]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{geometry}[margin=2.3cm]
+\usepackage[normalem]{ulem} % [normalem] prevents the package from changing the default behavior of `\emph` to underline.
+\usepackage{fancyhdr}
+\usepackage{array}
+
+\renewcommand{\baselinestretch}{1.1} 
+
+\newcommand{\hmwkTitle}{Elaborato\ Ingegneria Del Software}
+\newcommand{\hmwkClass}{Architettura degli Elaboratori}
+\newcommand{\hmwkAuthorName}{Mirko Morati,\ Noè Murr}
+
+\pagestyle{fancy}
+\lhead{\nouppercase{\leftmark}}
+\rhead{\nouppercase{\rightmark}}
+\chead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\title{
+	\vspace{2in}
+	\textmd{\textbf{\hmwkClass:\\ \hmwkTitle}}\\
+	\vspace{0.1in}\large{\textit{\hmwkAuthorName}}
+	\vspace{3in}
+}
+
+\newcolumntype{L}{>{\arraybackslash}m{10cm}}
+\newcommand{\safeImage}[1]{%
+\IfFileExists{#1}{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{#1}}{\includegraphics{example-image-a}}
+}
+\newcommand{\usecase}[6]{%
+\begin{tabular}{| >{\bfseries} l | L |}
+	\hline
+	ID&{#1}\\\hline
+	Attori&{#2}\\\hline
+	Precondizioni&{#3}\\\hline
+	Sequenza&{#4}\\\hline
+	Postcondizioni&{#5}\\\hline
+\end{tabular}
+\begin{center}
+	\safeImage{#6}
+\end{center}
+}
+
+\begin{document}
+
+	\clearpage
+%	\maketitle
+\begin{titlepage}
+	\centering
+	\vspace*{\fill}
+	\includegraphics[width=0.15\textwidth]{logo.png}\par\vspace{1cm}
+	{\scshape\LARGE Università degli Studi di Verona \par}
+	\vspace{1cm}
+	{\scshape\Large Ingegneria del Software\par}
+	\vspace{1.5cm}
+	\line(1,0){250} \\
+	{\huge\bfseries Elaborato Med-H\par}
+	\line(1,0){250} \\
+	\vspace{2cm}
+	{\Large\itshape Mirko Morati, Noè Murr\par}
+	\vspace{5cm}
+	\vspace*{\fill}
+	% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduzione}
+Obiettivo dell'elaborato è la progettazione di un prototipo software per la gestione della prescrizione di farmaci da parte dei medici di base di una regione.
+In questa relazione ci proponiamo di raccogliere la documentazione sviluppata e di fornire spiegazioni e dettagli sulle scelte progettuali ed implementative. 
+
+\section{Requisiti Funzionali}
+Di seguito viene riportato il testo dell'elaborato, evidenziando i requisiti funzionali identificati con una linea tratteggiata.
+
+Si vuole progettare un sistema informativo per gestire le prescrizioni di farmaci da parte dei medici di base di una regione. Il medico di base effettua la prescrizione di farmaci su richiesta del paziente (nel caso di farmaci legati a malattie croniche del paziente stesso) o in seguito alla visita. Nel caso di prescrizione su richiesta, il paziente può richiedere la prescrizione alla segreteria del medico che si occuperà di raccogliere le richieste, far preparare le ricette al medico e consegnare le prescrizioni ai pazienti.
+
+I farmaci potranno essere prescritti anche da eventuali medici consorziati con il medico di base di riferimento o in caso di assenza del medico di base, dal medico sostituto designato.
+\dashuline{Ogni prescrizione è caratterizzata dall’indicazione del paziente a cui fa riferimento, dalla data di emissione, dalla data di scadenza, dai farmaci prescritti. Ogni prescrizione è dotata di un codice identificativo univoco}. La prescrizione deve essere presentata in farmacia per poter acquistare i farmaci necessari. Il farmacista utilizza la prescrizione, unitamente alla tessera sanitaria del paziente, per rilasciare lo scontrino parlante. In caso il medico abbia prescritto un farmaco e la farmacia non ne abbia a disposizione, il farmacista provvederà ad ordinare il farmaco per il paziente.
+\dashuline{Per ogni paziente sono memorizzati: il codice sanitario univoco, il cognome, il nome, la data di nascita, il luogo di nascita, l’indirizzo di residenza (via, civico, cap, città, provincia). Per ogni paziente è possibile memorizzare gli eventuali fattori di rischio presenti (anche più d’uno)}.
+
+\dashuline{Per ogni medico di base si registrano il codice fiscale, il codice univoco assegnato a livello regionale, il cognome, il nome, la data e il luogo di nascita. Per i medici di base con specializzazione si registrano anche l’ultima specializzazione ottenuta e la data di conseguimento. Ad ogni medico sono legate tutte le prescrizioni effettuate.}
+
+\dashuline{Il medico può richiedere al sistema di visualizzare la lista dei farmaci prescritti ad un certo paziente in un certo periodo di tempo (mese, trimestre, semestre o anno)}, oppure \dashuline{la lista di farmaci prescritta nel complesso su base mensile o annuale}. Inoltre \dashuline{può verificare se e quando qualche paziente non ha usato la prescrizione emessa o se un paziente ha preferito il farmaco generico}.
+
+\dashuline{In ogni prescrizione possono apparire al più 5 farmaci}. \dashuline{Ogni farmaco è caratterizzato da nome commerciale univoco, dal costo, dalla forma farmaceutica, dalle controindicazioni, e dalla sua classificazione secondo il sistema ATC (Anatomico-Terapeutico-Chimico)}. \dashuline{Per ogni farmaco si tiene traccia dei principi attivi contenuti: per ogni principio attivo di un farmaco sono indicati la quantità contenuta in ogni unità di farmaco (ad esempio, “500 mg per compressa” o “120 mg per ml”). Per ogni principio attivo sono memorizzati un nome univoco, una sua descrizione e l’effetto principale}. \dashuline{Il medico può poi specificare quali prescrizioni contengono farmaci che potrebbero interagire con risultati negativi per il paziente. In tal caso sono specificate le coppie di farmaci della stessa prescrizione che possono interagire}.
+
+\dashuline{Il medico può richiedere al sistema di visualizzare la quantità di un certo farmaco prescritta ai suoi pazienti su base mensile, trimestrale, semestrale o annuale. Può anche visualizzare la lista dei pazienti a cui ha prescritto un certo farmaco e la lista delle eventuali reazione avverse comunicate all'agenzia di riferimento}.
+
+\section{Scelte Progettuali}
+
+\section{UML}
+\subsection{Use Cases}
+% Sequence diagram per i principali use cases insieme alle schede
+\usecase{UC1}{Medico}{}{}{}{}
+\usecase{UC2}{}{}{}{}{Vista_farmaci.png}
+
+\subsection{Activity Diagram}
+\safeImage{Aggiunta_prescrizione.png}
+
+\subsection{Class Diagram}
+
+\subsection{Sequence Diagram}
+
+\section{Conclusioni}
+
+\end{document}

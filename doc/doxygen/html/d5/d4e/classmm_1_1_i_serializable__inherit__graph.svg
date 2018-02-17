@@ -5,7 +5,7 @@
  -->
 <!-- Title: mm::ISerializable Pages: 1 -->
 <!--zoomable 414 -->
-<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="initDrugComboBox(evt)">
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
 <style type="text/css"><![CDATA[
 .edge:hover path { stroke: red; }
 .edge:hover polygon { stroke: red; fill: red; }
@@ -70,7 +70,7 @@ var sectionId = 'dynsection-0';
     <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="../../de/d0e/structmm_1_1model_1_1authentication_1_1_login.html" target="_top" xlink:title="{mm::model::authentication\l::Login\n|+ is_changed\l+ user_name\l+ password\l+ regional_id\l|+ serialize()\l+ unserialize()\l+ get_table_name()\l+ get_primary_key()\l+ logout()\l+ isLog()\l+ get_instance()\l}">
+<g id="a_node2"><a xlink:href="../../de/d0e/structmm_1_1model_1_1authentication_1_1_login.html" target="_top" xlink:title="classe che rappresenta la una sessione di login ">
 <polygon fill="none" stroke="#000000" points="0,-65.5 0,-219.5 133.2803,-219.5 133.2803,-65.5 0,-65.5"/>
 <text text-anchor="start" x="8" y="-207.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">mm::model::authentication</text>
 <text text-anchor="middle" x="66.6401" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::Login</text>
@@ -99,37 +99,36 @@ var sectionId = 'dynsection-0';
     <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="../../d6/d2e/classmm_1_1model_1_1_doctor.html" target="_top" xlink:title="{mm::model::Doctor\n||+ get_prescriptions()\l+ get_prescriptions()\l+ get_drugs()\l+ get_patients()\l+ get_patients()\l+ get_patient_from_fiscal_code()\l+ remove_patient()\l+ get_first_name()\l+ get_last_name()\l+ get_birth_date()\l+ get_birth_place()\l+ serialize()\l+ unserialize()\l+ get_table_name()\l+ get_primary_key()\l+ get_fiscal_code()\l+ get_regional_id()\l+ get_specialization()\l}">
-<polygon fill="none" stroke="#000000" points="151.6812,-30.5 151.6812,-254.5 313.5991,-254.5 313.5991,-30.5 151.6812,-30.5"/>
-<text text-anchor="middle" x="232.6401" y="-242.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">mm::model::Doctor</text>
-<polyline fill="none" stroke="#000000" points="151.6812,-236.5 313.5991,-236.5 "/>
-<text text-anchor="middle" x="232.6401" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="151.6812,-218.5 313.5991,-218.5 "/>
-<text text-anchor="start" x="159.6812" y="-206.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_prescriptions()</text>
-<text text-anchor="start" x="159.6812" y="-196.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_prescriptions()</text>
-<text text-anchor="start" x="159.6812" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_drugs()</text>
-<text text-anchor="start" x="159.6812" y="-176.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_patients()</text>
-<text text-anchor="start" x="159.6812" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_patients()</text>
-<text text-anchor="start" x="159.6812" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_patient_from_fiscal_code()</text>
-<text text-anchor="start" x="159.6812" y="-146.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ remove_patient()</text>
-<text text-anchor="start" x="159.6812" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_first_name()</text>
-<text text-anchor="start" x="159.6812" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_last_name()</text>
-<text text-anchor="start" x="159.6812" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_birth_date()</text>
-<text text-anchor="start" x="159.6812" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_birth_place()</text>
-<text text-anchor="start" x="159.6812" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ serialize()</text>
-<text text-anchor="start" x="159.6812" y="-86.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ unserialize()</text>
-<text text-anchor="start" x="159.6812" y="-76.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_table_name()</text>
-<text text-anchor="start" x="159.6812" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_primary_key()</text>
-<text text-anchor="start" x="159.6812" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_fiscal_code()</text>
-<text text-anchor="start" x="159.6812" y="-46.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_regional_id()</text>
-<text text-anchor="start" x="159.6812" y="-36.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_specialization()</text>
+<g id="a_node3"><a xlink:href="../../d6/d2e/classmm_1_1model_1_1_doctor.html" target="_top" xlink:title="{mm::model::Doctor\n||+ get_prescriptions()\l+ get_prescriptions()\l+ get_drugs()\l+ get_patients()\l+ get_patients()\l+ get_patient_from_fiscal_code()\l+ get_first_name()\l+ get_last_name()\l+ get_birth_date()\l+ get_birth_place()\l+ serialize()\l+ unserialize()\l+ get_table_name()\l+ get_primary_key()\l+ get_fiscal_code()\l+ get_regional_id()\l+ get_specialization()\l}">
+<polygon fill="none" stroke="#000000" points="151.6812,-35.5 151.6812,-249.5 313.5991,-249.5 313.5991,-35.5 151.6812,-35.5"/>
+<text text-anchor="middle" x="232.6401" y="-237.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">mm::model::Doctor</text>
+<polyline fill="none" stroke="#000000" points="151.6812,-231.5 313.5991,-231.5 "/>
+<text text-anchor="middle" x="232.6401" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="151.6812,-213.5 313.5991,-213.5 "/>
+<text text-anchor="start" x="159.6812" y="-201.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_prescriptions()</text>
+<text text-anchor="start" x="159.6812" y="-191.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_prescriptions()</text>
+<text text-anchor="start" x="159.6812" y="-181.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_drugs()</text>
+<text text-anchor="start" x="159.6812" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_patients()</text>
+<text text-anchor="start" x="159.6812" y="-161.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_patients()</text>
+<text text-anchor="start" x="159.6812" y="-151.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_patient_from_fiscal_code()</text>
+<text text-anchor="start" x="159.6812" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_first_name()</text>
+<text text-anchor="start" x="159.6812" y="-131.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_last_name()</text>
+<text text-anchor="start" x="159.6812" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_birth_date()</text>
+<text text-anchor="start" x="159.6812" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_birth_place()</text>
+<text text-anchor="start" x="159.6812" y="-101.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ serialize()</text>
+<text text-anchor="start" x="159.6812" y="-91.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ unserialize()</text>
+<text text-anchor="start" x="159.6812" y="-81.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_table_name()</text>
+<text text-anchor="start" x="159.6812" y="-71.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_primary_key()</text>
+<text text-anchor="start" x="159.6812" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_fiscal_code()</text>
+<text text-anchor="start" x="159.6812" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_regional_id()</text>
+<text text-anchor="start" x="159.6812" y="-41.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_specialization()</text>
 </a>
 </g>
 </g>
     <!-- Node0&#45;&gt;Node2 -->
 <g id="edge2" class="edge">
 <title>Node0&#45;&gt;Node2</title>
-<path fill="none" stroke="#191970" d="M348.9302,-313.9842C339.7539,-304.713 330.629,-294.8349 322.6401,-285 314.8916,-275.461 307.2632,-265.2164 299.9238,-254.7544"/>
+<path fill="none" stroke="#191970" d="M348.9302,-313.9842C339.7539,-304.713 330.629,-294.8349 322.6401,-285 313.6002,-273.8712 304.7236,-261.7819 296.279,-249.5076"/>
 <polygon fill="none" stroke="#191970" points="346.716,-316.7178 356.2798,-321.2769 351.6466,-311.7488 346.716,-316.7178"/>
 </g>
     <!-- Node3 -->
@@ -214,31 +213,41 @@ var sectionId = 'dynsection-0';
     <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="../../db/d61/classmm_1_1model_1_1_prescription.html" target="_top" xlink:title="{mm::model::Prescription\n|+ prescriptionTreeModel\l|+ serialize()\l+ unserialize()\l+ get_table_name()\l+ get_primary_key()\l+ get_patient_id()\l+ get_prescription_id()\l+ get_issue_date()\l+ get_expire_date()\l+ get_drug_ids_as_string()\l+ get_drugs()\l+ get_negative_interactions()\l+ is_used()\l}">
-<polygon fill="none" stroke="#000000" points="619.0161,-60.5 619.0161,-224.5 764.2642,-224.5 764.2642,-60.5 619.0161,-60.5"/>
-<text text-anchor="middle" x="691.6401" y="-212.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">mm::model::Prescription</text>
-<polyline fill="none" stroke="#000000" points="619.0161,-206.5 764.2642,-206.5 "/>
-<text text-anchor="start" x="627.0161" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ prescriptionTreeModel</text>
-<polyline fill="none" stroke="#000000" points="619.0161,-188.5 764.2642,-188.5 "/>
-<text text-anchor="start" x="627.0161" y="-176.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ serialize()</text>
-<text text-anchor="start" x="627.0161" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ unserialize()</text>
-<text text-anchor="start" x="627.0161" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_table_name()</text>
-<text text-anchor="start" x="627.0161" y="-146.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_primary_key()</text>
-<text text-anchor="start" x="627.0161" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_patient_id()</text>
-<text text-anchor="start" x="627.0161" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_prescription_id()</text>
-<text text-anchor="start" x="627.0161" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_issue_date()</text>
-<text text-anchor="start" x="627.0161" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_expire_date()</text>
-<text text-anchor="start" x="627.0161" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_drug_ids_as_string()</text>
-<text text-anchor="start" x="627.0161" y="-86.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_drugs()</text>
-<text text-anchor="start" x="627.0161" y="-76.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_negative_interactions()</text>
-<text text-anchor="start" x="627.0161" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ is_used()</text>
+<g id="a_node6"><a xlink:href="../../db/d61/classmm_1_1model_1_1_prescription.html" target="_top" xlink:title="{mm::model::Prescription\n|+ prescriptionTreeModel\l|+ serialize()\l+ unserialize()\l+ get_table_name()\l+ get_primary_key()\l+ get_patient_id()\l+ get_prescription_id()\l+ get_issue_date()\l+ get_expire_date()\l+ get_drug_ids_as_string()\l+ get_drugs()\l+ get_negative_interactions()\l+ is_used()\l+ set_patient_id()\l+ set_prescription_id()\l+ set_issue_date()\l+ set_expire_date()\l+ set_negative_interactions()\l+ set_used()\l+ add_drug()\l+ add_drug()\l+ is_valid()\l+ generateID()\l}">
+<polygon fill="none" stroke="#000000" points="619.0161,-10.5 619.0161,-274.5 764.2642,-274.5 764.2642,-10.5 619.0161,-10.5"/>
+<text text-anchor="middle" x="691.6401" y="-262.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">mm::model::Prescription</text>
+<polyline fill="none" stroke="#000000" points="619.0161,-256.5 764.2642,-256.5 "/>
+<text text-anchor="start" x="627.0161" y="-244.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ prescriptionTreeModel</text>
+<polyline fill="none" stroke="#000000" points="619.0161,-238.5 764.2642,-238.5 "/>
+<text text-anchor="start" x="627.0161" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ serialize()</text>
+<text text-anchor="start" x="627.0161" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ unserialize()</text>
+<text text-anchor="start" x="627.0161" y="-206.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_table_name()</text>
+<text text-anchor="start" x="627.0161" y="-196.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_primary_key()</text>
+<text text-anchor="start" x="627.0161" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_patient_id()</text>
+<text text-anchor="start" x="627.0161" y="-176.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_prescription_id()</text>
+<text text-anchor="start" x="627.0161" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_issue_date()</text>
+<text text-anchor="start" x="627.0161" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_expire_date()</text>
+<text text-anchor="start" x="627.0161" y="-146.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_drug_ids_as_string()</text>
+<text text-anchor="start" x="627.0161" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_drugs()</text>
+<text text-anchor="start" x="627.0161" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_negative_interactions()</text>
+<text text-anchor="start" x="627.0161" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ is_used()</text>
+<text text-anchor="start" x="627.0161" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_patient_id()</text>
+<text text-anchor="start" x="627.0161" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_prescription_id()</text>
+<text text-anchor="start" x="627.0161" y="-86.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_issue_date()</text>
+<text text-anchor="start" x="627.0161" y="-76.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_expire_date()</text>
+<text text-anchor="start" x="627.0161" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_negative_interactions()</text>
+<text text-anchor="start" x="627.0161" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_used()</text>
+<text text-anchor="start" x="627.0161" y="-46.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ add_drug()</text>
+<text text-anchor="start" x="627.0161" y="-36.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ add_drug()</text>
+<text text-anchor="start" x="627.0161" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ is_valid()</text>
+<text text-anchor="start" x="627.0161" y="-16.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ generateID()</text>
 </a>
 </g>
 </g>
     <!-- Node0&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node0&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M466.2131,-351.6229C510.6035,-340.574 569.3872,-320.3289 610.6401,-285 629.7686,-268.6184 645.3519,-246.5329 657.5552,-224.6449"/>
+<path fill="none" stroke="#191970" d="M466.2131,-351.6229C510.6035,-340.574 569.3872,-320.3289 610.6401,-285 614.4226,-281.7607 618.0665,-278.2984 621.573,-274.6586"/>
 <polygon fill="none" stroke="#191970" points="465.3108,-348.2399 456.4021,-353.9745 466.9425,-355.0471 465.3108,-348.2399"/>
 </g>
 </g>

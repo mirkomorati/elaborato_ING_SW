@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model" kind="struct" language="C++" prot="public">
         <compoundname>mm::model::Drug::TreeModel</compoundname>
-        <basecompoundref prot="public" virt="non-virtual">TreeModelColumnRecord</basecompoundref>
+        <basecompoundref prot="public" virt="non-virtual">ColumnRecord</basecompoundref>
         <includes refid="dd/df9/_drug_8hpp" local="no">Drug.hpp</includes>
         <sectiondef kind="public-attrib">
             <memberdef kind="variable"
@@ -19,7 +19,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="24" column="1" bodyfile="code/model/Drug.hpp" bodystart="24"
+                <location file="code/model/Drug.hpp" line="45" column="1" bodyfile="code/model/Drug.hpp" bodystart="45"
                           bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable"
@@ -36,7 +36,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="25" column="1" bodyfile="code/model/Drug.hpp" bodystart="25"
+                <location file="code/model/Drug.hpp" line="46" column="1" bodyfile="code/model/Drug.hpp" bodystart="46"
                           bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable"
@@ -53,7 +53,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="26" column="1" bodyfile="code/model/Drug.hpp" bodystart="26"
+                <location file="code/model/Drug.hpp" line="47" column="1" bodyfile="code/model/Drug.hpp" bodystart="47"
                           bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable"
@@ -70,7 +70,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="27" column="1" bodyfile="code/model/Drug.hpp" bodystart="27"
+                <location file="code/model/Drug.hpp" line="48" column="1" bodyfile="code/model/Drug.hpp" bodystart="48"
                           bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable"
@@ -87,7 +87,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="28" column="1" bodyfile="code/model/Drug.hpp" bodystart="28"
+                <location file="code/model/Drug.hpp" line="49" column="1" bodyfile="code/model/Drug.hpp" bodystart="49"
                           bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable"
@@ -103,7 +103,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="29" column="1" bodyfile="code/model/Drug.hpp" bodystart="29"
+                <location file="code/model/Drug.hpp" line="50" column="1" bodyfile="code/model/Drug.hpp" bodystart="50"
                           bodyend="-1"/>
             </memberdef>
         </sectiondef>
@@ -121,7 +121,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="22" column="1" bodyfile="code/model/Drug.cpp" bodystart="131"
+                <location file="code/model/Drug.hpp" line="43" column="1" bodyfile="code/model/Drug.cpp" bodystart="131"
                           bodyend="138"/>
             </memberdef>
         </sectiondef>
@@ -130,29 +130,29 @@
         <detaileddescription>
         </detaileddescription>
         <inheritancegraph>
-            <node id="158">
-                <label>TreeModelColumnRecord</label>
+            <node id="206">
+                <label>ColumnRecord</label>
             </node>
-            <node id="157">
+            <node id="205">
                 <label>mm::model::Drug::TreeModel</label>
                 <link refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model"/>
-                <childnode refid="158" relation="public-inheritance">
+                <childnode refid="206" relation="public-inheritance">
                 </childnode>
             </node>
         </inheritancegraph>
         <collaborationgraph>
-            <node id="160">
-                <label>TreeModelColumnRecord</label>
+            <node id="208">
+                <label>ColumnRecord</label>
             </node>
-            <node id="159">
+            <node id="207">
                 <label>mm::model::Drug::TreeModel</label>
                 <link refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model"/>
-                <childnode refid="160" relation="public-inheritance">
+                <childnode refid="208" relation="public-inheritance">
                 </childnode>
             </node>
         </collaborationgraph>
-        <location file="code/model/Drug.hpp" line="21" column="1" bodyfile="code/model/Drug.hpp" bodystart="21"
-                  bodyend="31"/>
+        <location file="code/model/Drug.hpp" line="42" column="1" bodyfile="code/model/Drug.hpp" bodystart="42"
+                  bodyend="52"/>
         <listofallmembers>
             <member refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a0ad53d6e45f9001d07e350ab7866f1da"
                     prot="public" virt="non-virtual">

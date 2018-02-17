@@ -1,65 +1,65 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="db/d18/_login_window_8hpp" kind="file" language="C++">
         <compoundname>LoginWindow.hpp</compoundname>
         <includes refid="de/d0b/_window_8hpp" local="yes">Window.hpp</includes>
         <includedby refid="d9/d07/_login_window_8cpp" local="yes">code/gui/LoginWindow.cpp</includedby>
         <includedby refid="d7/daf/_med_h_8cpp" local="yes">code/MedH.cpp</includedby>
         <incdepgraph>
-            <node id="210">
+            <node id="346">
                 <label>IObserver.hpp</label>
                 <link refid="d5/d40/_i_observer_8hpp"/>
-                <childnode refid="211" relation="include">
+                <childnode refid="347" relation="include">
                 </childnode>
-                <childnode refid="212" relation="include">
+                <childnode refid="348" relation="include">
                 </childnode>
             </node>
-            <node id="207">
+            <node id="343">
                 <label>Window.hpp</label>
                 <link refid="de/d0b/_window_8hpp"/>
-                <childnode refid="208" relation="include">
+                <childnode refid="344" relation="include">
                 </childnode>
             </node>
-            <node id="211">
+            <node id="347">
                 <label>mutex</label>
             </node>
-            <node id="206">
+            <node id="342">
                 <label>code/gui/LoginWindow.hpp</label>
                 <link refid="db/d18/_login_window_8hpp"/>
-                <childnode refid="207" relation="include">
+                <childnode refid="343" relation="include">
                 </childnode>
             </node>
-            <node id="212">
+            <node id="348">
                 <label>thread</label>
             </node>
-            <node id="208">
+            <node id="344">
                 <label>../interfaces/ISubject.hpp</label>
                 <link refid="d1/d25/_i_subject_8hpp"/>
-                <childnode refid="209" relation="include">
+                <childnode refid="345" relation="include">
                 </childnode>
-                <childnode refid="210" relation="include">
+                <childnode refid="346" relation="include">
                 </childnode>
             </node>
-            <node id="209">
+            <node id="345">
                 <label>set</label>
             </node>
         </incdepgraph>
         <invincdepgraph>
-            <node id="214">
+            <node id="350">
                 <label>code/gui/LoginWindow.cpp</label>
                 <link refid="d9/d07/_login_window_8cpp"/>
             </node>
-            <node id="215">
+            <node id="351">
                 <label>code/MedH.cpp</label>
                 <link refid="d7/daf/_med_h_8cpp"/>
             </node>
-            <node id="213">
+            <node id="349">
                 <label>code/gui/LoginWindow.hpp</label>
                 <link refid="db/d18/_login_window_8hpp"/>
-                <childnode refid="214" relation="include">
+                <childnode refid="350" relation="include">
                 </childnode>
-                <childnode refid="215" relation="include">
+                <childnode refid="351" relation="include">
                 </childnode>
             </node>
         </invincdepgraph>
@@ -201,7 +201,7 @@
                 <highlight class="normal">
                     <sp/>
                     <ref refid="d3/d0c/classmm_1_1_login_window_1a4040d7c1f85fc76e1f60ef13f92bef1c" kindref="member">
-                        initDrugComboBox</ref>()
+                        init</ref>()
                     <sp/>
                 </highlight>
                 <highlight class="keyword">override</highlight>

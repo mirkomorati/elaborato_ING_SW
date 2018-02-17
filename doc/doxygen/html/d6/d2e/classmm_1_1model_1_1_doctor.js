@@ -9,13 +9,12 @@ var classmm_1_1model_1_1_doctor =
         ["get_patient_from_fiscal_code", "d6/d2e/classmm_1_1model_1_1_doctor.html#a89aa97cb00bfa2352c2a4f276554e738", null],
         ["get_patients", "d6/d2e/classmm_1_1model_1_1_doctor.html#a8b761c1dfbe10348eb99c0397e811e0a", null],
         ["get_patients", "d6/d2e/classmm_1_1model_1_1_doctor.html#a989fbde1a8784d8139d8add9066ab9b1", null],
-        ["get_prescriptions", "d6/d2e/classmm_1_1model_1_1_doctor.html#a16be876e8591688f3b34ca86441253a2", null],
+        ["get_prescriptions", "d6/d2e/classmm_1_1model_1_1_doctor.html#a38a5a7d04ea625f39422cb320af18800", null],
         ["get_prescriptions", "d6/d2e/classmm_1_1model_1_1_doctor.html#a76bf6b545709c7a784e4320b11f587bf", null],
         ["get_primary_key", "d6/d2e/classmm_1_1model_1_1_doctor.html#a935989cbe2274076c2b409126d4faccd", null],
         ["get_regional_id", "d6/d2e/classmm_1_1model_1_1_doctor.html#a26810a7e1e0682d2dbb7c92ac3a8247b", null],
         ["get_specialization", "d6/d2e/classmm_1_1model_1_1_doctor.html#ab5b807b5ce91d9f20603f091e62fe17a", null],
         ["get_table_name", "d6/d2e/classmm_1_1model_1_1_doctor.html#af4c37e48f9e5ff26f2295678f10afaa3", null],
-        ["remove_patient", "d6/d2e/classmm_1_1model_1_1_doctor.html#a1fe35e39d290992a5f6f4a73d4fa8d50", null],
         ["serialize", "d6/d2e/classmm_1_1model_1_1_doctor.html#a2171a9cb9c8a24ad0c0331edae957910", null],
         ["unserialize", "d6/d2e/classmm_1_1model_1_1_doctor.html#a20bedf6695024e1930d033995a2ec5bf", null]
     ];

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="db/d9b/classmm_1_1model_1_1_drug" kind="class" language="C++" prot="public">
         <compoundname>mm::model::Drug</compoundname>
         <basecompoundref refid="dc/df3/classmm_1_1_i_serializable" prot="public" virt="non-virtual">mm::ISerializable
@@ -28,7 +28,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="33" column="1" bodyfile="code/model/Drug.hpp" bodystart="33"
+                <location file="code/model/Drug.hpp" line="54" column="1" bodyfile="code/model/Drug.hpp" bodystart="54"
                           bodyend="-1"/>
             </memberdef>
         </sectiondef>
@@ -45,7 +45,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="71" column="1" bodyfile="code/model/Drug.hpp" bodystart="71"
+                <location file="code/model/Drug.hpp" line="92" column="1" bodyfile="code/model/Drug.hpp" bodystart="92"
                           bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1a22780b8f1efeacb013b9440557cce200"
@@ -60,7 +60,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="72" column="1" bodyfile="code/model/Drug.hpp" bodystart="72"
+                <location file="code/model/Drug.hpp" line="93" column="1" bodyfile="code/model/Drug.hpp" bodystart="93"
                           bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1a2f237e89aba2d10b6b9379db15aab3d4"
@@ -75,7 +75,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="73" column="1" bodyfile="code/model/Drug.hpp" bodystart="73"
+                <location file="code/model/Drug.hpp" line="94" column="1" bodyfile="code/model/Drug.hpp" bodystart="94"
                           bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1a4e4747f249e626820a5187ddad52b712"
@@ -90,7 +90,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="74" column="1" bodyfile="code/model/Drug.hpp" bodystart="74"
+                <location file="code/model/Drug.hpp" line="95" column="1" bodyfile="code/model/Drug.hpp" bodystart="95"
                           bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1abf4bce995dc92e09a15a0edb4776d87f"
@@ -105,7 +105,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="75" column="1" bodyfile="code/model/Drug.hpp" bodystart="75"
+                <location file="code/model/Drug.hpp" line="96" column="1" bodyfile="code/model/Drug.hpp" bodystart="96"
                           bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1a5e9e0de0f4357e8a12b3a07b1c5addb5"
@@ -120,7 +120,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="76" column="1" bodyfile="code/model/Drug.hpp" bodystart="76"
+                <location file="code/model/Drug.hpp" line="97" column="1" bodyfile="code/model/Drug.hpp" bodystart="97"
                           bodyend="-1"/>
             </memberdef>
         </sectiondef>
@@ -145,7 +145,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="36" column="1" bodyfile="code/model/Drug.cpp" bodystart="72"
+                <location file="code/model/Drug.hpp" line="57" column="1" bodyfile="code/model/Drug.cpp" bodystart="72"
                           bodyend="72"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a60cb5ecb3ed21da2f7f7e8bc94a1019d"
@@ -160,7 +160,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="38" column="1"/>
+                <location file="code/model/Drug.hpp" line="59" column="1"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a5d4fa5bf5e4700f833547c5114764c7b"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
@@ -177,7 +177,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="40" column="1" bodyfile="code/model/Drug.cpp" bodystart="14"
+                <location file="code/model/Drug.hpp" line="61" column="1" bodyfile="code/model/Drug.cpp" bodystart="14"
                           bodyend="38"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1adc9cd19eb2d0c3c271c01c41cf10d600"
@@ -198,7 +198,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="42" column="1" bodyfile="code/model/Drug.cpp" bodystart="40"
+                <location file="code/model/Drug.hpp" line="63" column="1" bodyfile="code/model/Drug.cpp" bodystart="40"
                           bodyend="62"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a7fa9dbb569b89f397d4b865b778b3751"
@@ -216,7 +216,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="44" column="1" bodyfile="code/model/Drug.cpp" bodystart="64"
+                <location file="code/model/Drug.hpp" line="65" column="1" bodyfile="code/model/Drug.cpp" bodystart="64"
                           bodyend="66"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a019770ab95f95f34bbc204c4c3860bfa"
@@ -234,7 +234,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="46" column="1" bodyfile="code/model/Drug.cpp" bodystart="68"
+                <location file="code/model/Drug.hpp" line="67" column="1" bodyfile="code/model/Drug.cpp" bodystart="68"
                           bodyend="70"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1ac01bfb91a074b57a3ba3b5b6f567e726"
@@ -249,7 +249,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="48" column="1" bodyfile="code/model/Drug.cpp" bodystart="74"
+                <location file="code/model/Drug.hpp" line="69" column="1" bodyfile="code/model/Drug.cpp" bodystart="74"
                           bodyend="76"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a0add6ee0680f5028d0e820033ebada20"
@@ -264,7 +264,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="50" column="1" bodyfile="code/model/Drug.cpp" bodystart="78"
+                <location file="code/model/Drug.hpp" line="71" column="1" bodyfile="code/model/Drug.cpp" bodystart="78"
                           bodyend="80"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a2435614b64f13687d25b04f7d9335c9a"
@@ -279,7 +279,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="52" column="1" bodyfile="code/model/Drug.cpp" bodystart="82"
+                <location file="code/model/Drug.hpp" line="73" column="1" bodyfile="code/model/Drug.cpp" bodystart="82"
                           bodyend="84"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a9116e111f2a546dbc35fd5e08863f37a"
@@ -294,7 +294,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="54" column="1" bodyfile="code/model/Drug.cpp" bodystart="86"
+                <location file="code/model/Drug.hpp" line="75" column="1" bodyfile="code/model/Drug.cpp" bodystart="86"
                           bodyend="88"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a71f9f7d210a2fd7fbad86e61affd9105"
@@ -309,7 +309,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="56" column="1" bodyfile="code/model/Drug.cpp" bodystart="98"
+                <location file="code/model/Drug.hpp" line="77" column="1" bodyfile="code/model/Drug.cpp" bodystart="98"
                           bodyend="105"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a64a1e99b4702d83b9c94379d14b4873b"
@@ -324,7 +324,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="58" column="1" bodyfile="code/model/Drug.cpp" bodystart="90"
+                <location file="code/model/Drug.hpp" line="79" column="1" bodyfile="code/model/Drug.cpp" bodystart="90"
                           bodyend="92"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a809666171510a2511573fa65d4dcd7cb"
@@ -341,7 +341,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="60" column="1" bodyfile="code/model/Drug.cpp" bodystart="94"
+                <location file="code/model/Drug.hpp" line="81" column="1" bodyfile="code/model/Drug.cpp" bodystart="94"
                           bodyend="96"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1aaa9a406540607aed5845bb6af20b1231"
@@ -356,7 +356,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="62" column="1" bodyfile="code/model/Drug.cpp" bodystart="107"
+                <location file="code/model/Drug.hpp" line="83" column="1" bodyfile="code/model/Drug.cpp" bodystart="107"
                           bodyend="115"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1ab5bfd8748a32b0cb366c4bf29633f00a"
@@ -371,7 +371,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="64" column="1" bodyfile="code/model/Drug.cpp" bodystart="117"
+                <location file="code/model/Drug.hpp" line="85" column="1" bodyfile="code/model/Drug.cpp" bodystart="117"
                           bodyend="121"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a15151e60eef91b544c63d8ff55db7bab"
@@ -391,7 +391,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="66" column="1" bodyfile="code/model/Drug.cpp" bodystart="127"
+                <location file="code/model/Drug.hpp" line="87" column="1" bodyfile="code/model/Drug.cpp" bodystart="127"
                           bodyend="129"/>
             </memberdef>
             <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a51d9c5692835cab9d206580ccf8d0e1e"
@@ -411,7 +411,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Drug.hpp" line="68" column="1" bodyfile="code/model/Drug.cpp" bodystart="123"
+                <location file="code/model/Drug.hpp" line="89" column="1" bodyfile="code/model/Drug.cpp" bodystart="123"
                           bodyend="125"/>
             </memberdef>
         </sectiondef>
@@ -446,7 +446,7 @@
                 <link refid="dc/df3/classmm_1_1_i_serializable"/>
             </node>
             <node id="55">
-                <label>TreeModelColumnRecord</label>
+                <label>ColumnRecord</label>
             </node>
             <node id="54">
                 <label>mm::model::Drug::TreeModel</label>
@@ -455,8 +455,8 @@
                 </childnode>
             </node>
         </collaborationgraph>
-        <location file="code/model/Drug.hpp" line="19" column="1" bodyfile="code/model/Drug.hpp" bodystart="19"
-                  bodyend="77"/>
+        <location file="code/model/Drug.hpp" line="40" column="1" bodyfile="code/model/Drug.hpp" bodystart="40"
+                  bodyend="98"/>
         <listofallmembers>
             <member refid="db/d9b/classmm_1_1model_1_1_drug_1a5e9e0de0f4357e8a12b3a07b1c5addb5" prot="private"
                     virt="non-virtual">

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="db/d16/classmm_1_1_add_prescription_dialog" kind="class" language="C++" prot="public">
         <compoundname>mm::AddPrescriptionDialog</compoundname>
         <basecompoundref refid="df/d35/classmm_1_1_dialog" prot="public" virt="non-virtual">mm::Dialog</basecompoundref>
@@ -19,8 +19,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="27" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="27" bodyend="-1"/>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="33" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="33" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable"
                        id="db/d16/classmm_1_1_add_prescription_dialog_1aefadb51fa6241de2187dccae5c2ce507" prot="private"
@@ -35,8 +35,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="33" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="33" bodyend="-1"/>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="41" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="41" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable"
                        id="db/d16/classmm_1_1_add_prescription_dialog_1a4d43416b15c6b89afc244d24ad7d3a11" prot="private"
@@ -51,152 +51,16 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="34" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="34" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable"
-                       id="db/d16/classmm_1_1_add_prescription_dialog_1a2e59ddfa8a07659e9ee765d39db8b32e" prot="private"
-                       static="no" mutable="no">
-                <type>
-                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
-                </type>
-                <definition>EntryController mm::AddPrescriptionDialog::addPatientId</definition>
-                <argsstring></argsstring>
-                <name>addPatientId</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="36" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="36" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable"
-                       id="db/d16/classmm_1_1_add_prescription_dialog_1a768c2e877493b6652bdb9e3402bf0f5f" prot="private"
-                       static="no" mutable="no">
-                <type>
-                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
-                </type>
-                <definition>EntryController mm::AddPrescriptionDialog::addPrescriptionId</definition>
-                <argsstring></argsstring>
-                <name>addPrescriptionId</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="37" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="37" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable"
-                       id="db/d16/classmm_1_1_add_prescription_dialog_1a830272d9300c3032772eb29a945a07e4" prot="private"
-                       static="no" mutable="no">
-                <type>Gtk::ComboBoxText *</type>
-                <definition>Gtk::ComboBoxText* mm::AddPrescriptionDialog::addDrugId1</definition>
-                <argsstring></argsstring>
-                <name>addDrugId1</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="38" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="38" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable"
-                       id="db/d16/classmm_1_1_add_prescription_dialog_1a248ad15b66397a6df318b0d8e13e7817" prot="private"
-                       static="no" mutable="no">
-                <type>Gtk::ComboBoxText *</type>
-                <definition>Gtk::ComboBoxText* mm::AddPrescriptionDialog::addDrugId2</definition>
-                <argsstring></argsstring>
-                <name>addDrugId2</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="39" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="39" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable"
-                       id="db/d16/classmm_1_1_add_prescription_dialog_1a22dbe5bc550384e6e4281aaa9a3b69b9" prot="private"
-                       static="no" mutable="no">
-                <type>Gtk::ComboBoxText *</type>
-                <definition>Gtk::ComboBoxText* mm::AddPrescriptionDialog::addDrugId3</definition>
-                <argsstring></argsstring>
-                <name>addDrugId3</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="40" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="40" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable"
-                       id="db/d16/classmm_1_1_add_prescription_dialog_1aef47812672fda51b72718ebfd9a19d03" prot="private"
-                       static="no" mutable="no">
-                <type>Gtk::ComboBoxText *</type>
-                <definition>Gtk::ComboBoxText* mm::AddPrescriptionDialog::addDrugId4</definition>
-                <argsstring></argsstring>
-                <name>addDrugId4</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="41" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="41" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable"
-                       id="db/d16/classmm_1_1_add_prescription_dialog_1a1fc9bcf4eb2e44da01b32b41342057a2" prot="private"
-                       static="no" mutable="no">
-                <type>Gtk::ComboBoxText *</type>
-                <definition>Gtk::ComboBoxText* mm::AddPrescriptionDialog::addDrugId5</definition>
-                <argsstring></argsstring>
-                <name>addDrugId5</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
                 <location file="code/gui/AddPrescriptionDialog.hpp" line="42" column="1"
                           bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="42" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable"
-                       id="db/d16/classmm_1_1_add_prescription_dialog_1ad3ecfd0d22cf64e36ac68c34bf77bd60" prot="private"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1a73c986e3f8f8e787a56794f1f804bf5e" prot="private"
                        static="no" mutable="no">
-                <type>
-                    <ref refid="d0/d52/structmm_1_1_date_controller" kindref="compound">DateController</ref>
-                </type>
-                <definition>DateController mm::AddPrescriptionDialog::issueDate</definition>
+                <type>Gtk::Button *</type>
+                <definition>Gtk::Button* mm::AddPrescriptionDialog::drugAdd</definition>
                 <argsstring></argsstring>
-                <name>issueDate</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="43" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="43" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable"
-                       id="db/d16/classmm_1_1_add_prescription_dialog_1a45d2e3e7cfcf8998650e2e68cf6e4693" prot="private"
-                       static="no" mutable="no">
-                <type>
-                    <ref refid="d0/d52/structmm_1_1_date_controller" kindref="compound">DateController</ref>
-                </type>
-                <definition>DateController mm::AddPrescriptionDialog::expireDate</definition>
-                <argsstring></argsstring>
-                <name>expireDate</name>
+                <name>drugAdd</name>
                 <briefdescription>
                 </briefdescription>
                 <detaileddescription>
@@ -205,6 +69,160 @@
                 </inbodydescription>
                 <location file="code/gui/AddPrescriptionDialog.hpp" line="44" column="1"
                           bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="44" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1a1fabb88b09fe3a717c3095d2e5af1274" prot="private"
+                       static="no" mutable="no">
+                <type>Gtk::Button *</type>
+                <definition>Gtk::Button* mm::AddPrescriptionDialog::interactionAdd</definition>
+                <argsstring></argsstring>
+                <name>interactionAdd</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="45" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="45" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1a1b4bc36aeb66236b8940d4e6ee0b00e3" prot="private"
+                       static="no" mutable="no">
+                <type>Gtk::ComboBoxText *</type>
+                <definition>Gtk::ComboBoxText* mm::AddPrescriptionDialog::drugComboBox</definition>
+                <argsstring></argsstring>
+                <name>drugComboBox</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="47" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="47" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1a71bbab2ffd8040619e9f364b24425568" prot="private"
+                       static="no" mutable="no">
+                <type>Gtk::ComboBoxText *</type>
+                <definition>Gtk::ComboBoxText* mm::AddPrescriptionDialog::monthComboBox</definition>
+                <argsstring></argsstring>
+                <name>monthComboBox</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="48" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="48" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1a4f30b77dc5fa455932dd1bbff1a96dd0" prot="private"
+                       static="no" mutable="no">
+                <type>Gtk::ComboBoxText *</type>
+                <definition>Gtk::ComboBoxText* mm::AddPrescriptionDialog::interactionComboBox1</definition>
+                <argsstring></argsstring>
+                <name>interactionComboBox1</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="49" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="49" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1aadd61704fdc0c42586a2e6ece1121eaf" prot="private"
+                       static="no" mutable="no">
+                <type>Gtk::ComboBoxText *</type>
+                <definition>Gtk::ComboBoxText* mm::AddPrescriptionDialog::interactionComboBox2</definition>
+                <argsstring></argsstring>
+                <name>interactionComboBox2</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="50" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="50" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1afe0a48855f5a6866970197f93070ff6a" prot="private"
+                       static="no" mutable="no">
+                <type>Gtk::ListBox *</type>
+                <definition>Gtk::ListBox* mm::AddPrescriptionDialog::interactionListBox</definition>
+                <argsstring></argsstring>
+                <name>interactionListBox</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="52" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="52" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1a87702eaf839fc63e01e04bc438840d06" prot="private"
+                       static="no" mutable="no">
+                <type>Gtk::ListBox *</type>
+                <definition>Gtk::ListBox* mm::AddPrescriptionDialog::drugListBox</definition>
+                <argsstring></argsstring>
+                <name>drugListBox</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="53" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="53" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1aa4f2da1763d4e1595d1cdb8147042977" prot="private"
+                       static="no" mutable="no">
+                <type>std::vector&lt; std::unique_ptr&lt; <ref refid="d4/d82/classmm_1_1view_1_1_drug_entry"
+                                                               kindref="compound">mm::view::DrugEntry
+                </ref> &gt; &gt;
+                </type>
+                <definition>std::vector&lt;std::unique_ptr&lt;mm::view::DrugEntry&gt; &gt;
+                    mm::AddPrescriptionDialog::drugEntries
+                </definition>
+                <argsstring></argsstring>
+                <name>drugEntries</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="54" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="54" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1a91003433df2fb595a0719ff89d0a779f" prot="private"
+                       static="no" mutable="no">
+                <type>std::vector&lt; std::unique_ptr&lt; <ref refid="d8/ded/classmm_1_1view_1_1_interaction_entry"
+                                                               kindref="compound">mm::view::InteractionEntry
+                </ref> &gt; &gt;
+                </type>
+                <definition>std::vector&lt;std::unique_ptr&lt;mm::view::InteractionEntry&gt; &gt;
+                    mm::AddPrescriptionDialog::interactionEntries
+                </definition>
+                <argsstring></argsstring>
+                <name>interactionEntries</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="55" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="55" bodyend="-1"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="public-func">
@@ -221,8 +239,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="16" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="11" bodyend="32"/>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="20" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="16" bodyend="41"/>
             </memberdef>
             <memberdef kind="function"
                        id="db/d16/classmm_1_1_add_prescription_dialog_1aa1c86141b2d45e141684bd99d557b8e4" prot="public"
@@ -238,8 +256,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="18" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="34" bodyend="39"/>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="22" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="43" bodyend="50"/>
             </memberdef>
             <memberdef kind="function"
                        id="db/d16/classmm_1_1_add_prescription_dialog_1aacb58c7617be2323d91cd5ab2f28e354" prot="public"
@@ -256,8 +274,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="20" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="41" bodyend="47"/>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="24" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="52" bodyend="58"/>
             </memberdef>
             <memberdef kind="function"
                        id="db/d16/classmm_1_1_add_prescription_dialog_1a4ff93500e8fd90512dc4575147b2c910" prot="public"
@@ -274,8 +292,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="22" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="49" bodyend="51"/>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="26" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="60" bodyend="62"/>
             </memberdef>
             <memberdef kind="function"
                        id="db/d16/classmm_1_1_add_prescription_dialog_1a6ace04587432a197436bb04c7b68d60d" prot="public"
@@ -291,8 +309,24 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="24" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="62" bodyend="87"/>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="28" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="110" bodyend="147"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1aef188f7c530ca399b6bd44bbb4472085" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::AddPrescriptionDialog::~AddPrescriptionDialog</definition>
+                <argsstring>() override</argsstring>
+                <name>~AddPrescriptionDialog</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="30" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="240" bodyend="244"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="private-func">
@@ -309,8 +343,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="29" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="53" bodyend="56"/>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="35" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="64" bodyend="104"/>
             </memberdef>
             <memberdef kind="function"
                        id="db/d16/classmm_1_1_add_prescription_dialog_1af8fa2d00cb2466e91d8025a5e107c620" prot="private"
@@ -325,8 +359,136 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/AddPrescriptionDialog.hpp" line="31" column="1"
-                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="58" bodyend="60"/>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="37" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="106" bodyend="108"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1addba1a21d2362c67ec7abee99aa7aecf" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AddPrescriptionDialog::drugAddHandler</definition>
+                <argsstring>()</argsstring>
+                <name>drugAddHandler</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="39" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="168" bodyend="208"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1a3c9c41f2fde98b410e8e4f65b5f500ac" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AddPrescriptionDialog::drugRemoveHandler</definition>
+                <argsstring>(mm::view::DrugEntry *removed)</argsstring>
+                <name>drugRemoveHandler</name>
+                <param>
+                    <type>
+                        <ref refid="d4/d82/classmm_1_1view_1_1_drug_entry" kindref="compound">mm::view::DrugEntry</ref>
+                        *
+                    </type>
+                    <declname>removed</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="57" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="210" bodyend="238"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1a0b32c3d0972bee04ae8f2844e45fa548" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AddPrescriptionDialog::interactionRemoveHandler</definition>
+                <argsstring>(mm::view::InteractionEntry *removed)</argsstring>
+                <name>interactionRemoveHandler</name>
+                <param>
+                    <type>
+                        <ref refid="d8/ded/classmm_1_1view_1_1_interaction_entry" kindref="compound">
+                            mm::view::InteractionEntry
+                        </ref>
+                        *
+                    </type>
+                    <declname>removed</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="59" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="302" bodyend="313"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1ad8caab72c6d5ea2faeb40aad49ae00ee" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AddPrescriptionDialog::initDrugComboBox</definition>
+                <argsstring>()</argsstring>
+                <name>initDrugComboBox</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="61" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="149" bodyend="166"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1a1ee0258ac9001e6d3fc5d5b8a81b9677" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AddPrescriptionDialog::initMonthComboBox</definition>
+                <argsstring>()</argsstring>
+                <name>initMonthComboBox</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="63" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="246" bodyend="250"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1ab3e403207ab943b7b55e6919199ef159" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AddPrescriptionDialog::monthValidityChanged</definition>
+                <argsstring>()</argsstring>
+                <name>monthValidityChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="65" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="252" bodyend="270"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="db/d16/classmm_1_1_add_prescription_dialog_1a7cfcff64af3ed8cf9001e42e6833cc28" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AddPrescriptionDialog::interactionAddHandler</definition>
+                <argsstring>()</argsstring>
+                <name>interactionAddHandler</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPrescriptionDialog.hpp" line="67" column="1"
+                          bodyfile="code/gui/AddPrescriptionDialog.cpp" bodystart="272" bodyend="300"/>
             </memberdef>
         </sectiondef>
         <briefdescription>
@@ -379,48 +541,13 @@
                 </childnode>
             </node>
         </collaborationgraph>
-        <location file="code/gui/AddPrescriptionDialog.hpp" line="14" column="1"
-                  bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="14" bodyend="45"/>
+        <location file="code/gui/AddPrescriptionDialog.hpp" line="18" column="1"
+                  bodyfile="code/gui/AddPrescriptionDialog.hpp" bodystart="18" bodyend="68"/>
         <listofallmembers>
-            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a830272d9300c3032772eb29a945a07e4" prot="private"
-                    virt="non-virtual">
-                <scope>mm::AddPrescriptionDialog</scope>
-                <name>addDrugId1</name>
-            </member>
-            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a248ad15b66397a6df318b0d8e13e7817" prot="private"
-                    virt="non-virtual">
-                <scope>mm::AddPrescriptionDialog</scope>
-                <name>addDrugId2</name>
-            </member>
-            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a22dbe5bc550384e6e4281aaa9a3b69b9" prot="private"
-                    virt="non-virtual">
-                <scope>mm::AddPrescriptionDialog</scope>
-                <name>addDrugId3</name>
-            </member>
-            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1aef47812672fda51b72718ebfd9a19d03" prot="private"
-                    virt="non-virtual">
-                <scope>mm::AddPrescriptionDialog</scope>
-                <name>addDrugId4</name>
-            </member>
-            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a1fc9bcf4eb2e44da01b32b41342057a2" prot="private"
-                    virt="non-virtual">
-                <scope>mm::AddPrescriptionDialog</scope>
-                <name>addDrugId5</name>
-            </member>
-            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a2e59ddfa8a07659e9ee765d39db8b32e" prot="private"
-                    virt="non-virtual">
-                <scope>mm::AddPrescriptionDialog</scope>
-                <name>addPatientId</name>
-            </member>
             <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a0956469781e124fbfd283212bf1796ec" prot="public"
                     virt="non-virtual">
                 <scope>mm::AddPrescriptionDialog</scope>
                 <name>AddPrescriptionDialog</name>
-            </member>
-            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a768c2e877493b6652bdb9e3402bf0f5f" prot="private"
-                    virt="non-virtual">
-                <scope>mm::AddPrescriptionDialog</scope>
-                <name>addPrescriptionId</name>
             </member>
             <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
                     virt="non-virtual">
@@ -447,10 +574,80 @@
                 <scope>mm::AddPrescriptionDialog</scope>
                 <name>dispose</name>
             </member>
-            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a45d2e3e7cfcf8998650e2e68cf6e4693" prot="private"
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a73c986e3f8f8e787a56794f1f804bf5e" prot="private"
                     virt="non-virtual">
                 <scope>mm::AddPrescriptionDialog</scope>
-                <name>expireDate</name>
+                <name>drugAdd</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1addba1a21d2362c67ec7abee99aa7aecf" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>drugAddHandler</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a1b4bc36aeb66236b8940d4e6ee0b00e3" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>drugComboBox</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1aa4f2da1763d4e1595d1cdb8147042977" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>drugEntries</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a87702eaf839fc63e01e04bc438840d06" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>drugListBox</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a3c9c41f2fde98b410e8e4f65b5f500ac" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>drugRemoveHandler</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1ad8caab72c6d5ea2faeb40aad49ae00ee" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>initDrugComboBox</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a1ee0258ac9001e6d3fc5d5b8a81b9677" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>initMonthComboBox</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a1fabb88b09fe3a717c3095d2e5af1274" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>interactionAdd</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a7cfcff64af3ed8cf9001e42e6833cc28" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>interactionAddHandler</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a4f30b77dc5fa455932dd1bbff1a96dd0" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>interactionComboBox1</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1aadd61704fdc0c42586a2e6ece1121eaf" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>interactionComboBox2</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a91003433df2fb595a0719ff89d0a779f" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>interactionEntries</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1afe0a48855f5a6866970197f93070ff6a" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>interactionListBox</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a0b32c3d0972bee04ae8f2844e45fa548" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>interactionRemoveHandler</name>
             </member>
             <member refid="db/d16/classmm_1_1_add_prescription_dialog_1af3b9a51c58e2084d79d7cae5736a37ba" prot="private"
                     virt="non-virtual">
@@ -462,12 +659,22 @@
                 <scope>mm::AddPrescriptionDialog</scope>
                 <name>isActive</name>
             </member>
-            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1ad3ecfd0d22cf64e36ac68c34bf77bd60" prot="private"
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a71bbab2ffd8040619e9f364b24425568" prot="private"
                     virt="non-virtual">
                 <scope>mm::AddPrescriptionDialog</scope>
-                <name>issueDate</name>
+                <name>monthComboBox</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1ab3e403207ab943b7b55e6919199ef159" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>monthValidityChanged</name>
             </member>
             <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
                     virt="non-virtual">
                 <scope>mm::AddPrescriptionDialog</scope>
                 <name>notify</name>
@@ -482,6 +689,11 @@
                 <scope>mm::AddPrescriptionDialog</scope>
                 <name>okHandler</name>
             </member>
+            <member refid="df/d35/classmm_1_1_dialog_1a9864219c61623b484d8f8c161808e136" prot="protected"
+                    virt="virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>onDelete</name>
+            </member>
             <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a6ace04587432a197436bb04c7b68d60d" prot="public"
                     virt="virtual">
                 <scope>mm::AddPrescriptionDialog</scope>
@@ -491,6 +703,11 @@
                     virt="virtual">
                 <scope>mm::AddPrescriptionDialog</scope>
                 <name>show</name>
+            </member>
+            <member refid="db/d16/classmm_1_1_add_prescription_dialog_1aef188f7c530ca399b6bd44bbb4472085" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AddPrescriptionDialog</scope>
+                <name>~AddPrescriptionDialog</name>
             </member>
             <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" prot="public"
                     virt="virtual">

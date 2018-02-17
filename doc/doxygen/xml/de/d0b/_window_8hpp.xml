@@ -1,108 +1,138 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="de/d0b/_window_8hpp" kind="file" language="C++">
         <compoundname>Window.hpp</compoundname>
         <includes refid="d1/d25/_i_subject_8hpp" local="yes">../interfaces/ISubject.hpp</includes>
+        <includedby refid="dd/d02/_drug_window_8hpp" local="yes">code/gui/DrugWindow.hpp</includedby>
         <includedby refid="db/d18/_login_window_8hpp" local="yes">code/gui/LoginWindow.hpp</includedby>
         <includedby refid="db/d41/_main_window_8hpp" local="yes">code/gui/MainWindow.hpp</includedby>
+        <includedby refid="d5/db1/_prescription_window_8hpp" local="yes">code/gui/PrescriptionWindow.hpp</includedby>
         <includedby refid="dd/de0/_patient_window_8hpp" local="yes">code/gui/PatientWindow.hpp</includedby>
         <includedby refid="db/d45/_med_h_8hpp" local="yes">code/MedH.hpp</includedby>
         <incdepgraph>
-            <node id="458">
+            <node id="680">
                 <label>IObserver.hpp</label>
                 <link refid="d5/d40/_i_observer_8hpp"/>
-                <childnode refid="459" relation="include">
+                <childnode refid="681" relation="include">
                 </childnode>
-                <childnode refid="460" relation="include">
+                <childnode refid="682" relation="include">
                 </childnode>
             </node>
-            <node id="455">
+            <node id="677">
                 <label>code/gui/Window.hpp</label>
                 <link refid="de/d0b/_window_8hpp"/>
-                <childnode refid="456" relation="include">
+                <childnode refid="678" relation="include">
                 </childnode>
             </node>
-            <node id="459">
+            <node id="681">
                 <label>mutex</label>
             </node>
-            <node id="460">
+            <node id="682">
                 <label>thread</label>
             </node>
-            <node id="456">
+            <node id="678">
                 <label>../interfaces/ISubject.hpp</label>
                 <link refid="d1/d25/_i_subject_8hpp"/>
-                <childnode refid="457" relation="include">
+                <childnode refid="679" relation="include">
                 </childnode>
-                <childnode refid="458" relation="include">
+                <childnode refid="680" relation="include">
                 </childnode>
             </node>
-            <node id="457">
+            <node id="679">
                 <label>set</label>
             </node>
         </incdepgraph>
         <invincdepgraph>
-            <node id="467">
+            <node id="693">
                 <label>code/gui/PatientWindow.hpp</label>
                 <link refid="dd/de0/_patient_window_8hpp"/>
-                <childnode refid="466" relation="include">
+                <childnode refid="686" relation="include">
                 </childnode>
-                <childnode refid="468" relation="include">
+                <childnode refid="694" relation="include">
                 </childnode>
             </node>
-            <node id="463">
+            <node id="685">
+                <label>code/gui/DrugWindow.cpp</label>
+                <link refid="d6/d9e/_drug_window_8cpp"/>
+            </node>
+            <node id="688">
                 <label>code/gui/LoginWindow.cpp</label>
                 <link refid="d9/d07/_login_window_8cpp"/>
             </node>
-            <node id="464">
+            <node id="689">
                 <label>code/MedH.cpp</label>
                 <link refid="d7/daf/_med_h_8cpp"/>
             </node>
-            <node id="461">
+            <node id="683">
                 <label>code/gui/Window.hpp</label>
                 <link refid="de/d0b/_window_8hpp"/>
-                <childnode refid="462" relation="include">
+                <childnode refid="684" relation="include">
                 </childnode>
-                <childnode refid="465" relation="include">
+                <childnode refid="687" relation="include">
                 </childnode>
-                <childnode refid="467" relation="include">
+                <childnode refid="690" relation="include">
                 </childnode>
-                <childnode refid="469" relation="include">
+                <childnode refid="691" relation="include">
+                </childnode>
+                <childnode refid="693" relation="include">
+                </childnode>
+                <childnode refid="695" relation="include">
                 </childnode>
             </node>
-            <node id="470">
+            <node id="696">
                 <label>code/main.cpp</label>
                 <link refid="df/d0a/main_8cpp"/>
             </node>
-            <node id="469">
+            <node id="684">
+                <label>code/gui/DrugWindow.hpp</label>
+                <link refid="dd/d02/_drug_window_8hpp"/>
+                <childnode refid="685" relation="include">
+                </childnode>
+                <childnode refid="686" relation="include">
+                </childnode>
+            </node>
+            <node id="692">
+                <label>code/gui/PrescriptionWindow.cpp</label>
+                <link refid="d1/d16/_prescription_window_8cpp"/>
+            </node>
+            <node id="695">
                 <label>code/MedH.hpp</label>
                 <link refid="db/d45/_med_h_8hpp"/>
-                <childnode refid="470" relation="include">
+                <childnode refid="696" relation="include">
                 </childnode>
-                <childnode refid="464" relation="include">
+                <childnode refid="689" relation="include">
                 </childnode>
             </node>
-            <node id="465">
+            <node id="691">
+                <label>code/gui/PrescriptionWindow.hpp</label>
+                <link refid="d5/db1/_prescription_window_8hpp"/>
+                <childnode refid="686" relation="include">
+                </childnode>
+                <childnode refid="692" relation="include">
+                </childnode>
+            </node>
+            <node id="690">
                 <label>code/gui/MainWindow.hpp</label>
                 <link refid="db/d41/_main_window_8hpp"/>
-                <childnode refid="466" relation="include">
+                <childnode refid="686" relation="include">
                 </childnode>
-                <childnode refid="464" relation="include">
+                <childnode refid="689" relation="include">
                 </childnode>
             </node>
-            <node id="468">
+            <node id="694">
                 <label>code/gui/PatientWindow.cpp</label>
                 <link refid="d8/d35/_patient_window_8cpp"/>
             </node>
-            <node id="462">
+            <node id="687">
                 <label>code/gui/LoginWindow.hpp</label>
                 <link refid="db/d18/_login_window_8hpp"/>
-                <childnode refid="463" relation="include">
+                <childnode refid="688" relation="include">
                 </childnode>
-                <childnode refid="464" relation="include">
+                <childnode refid="689" relation="include">
                 </childnode>
             </node>
-            <node id="466">
+            <node id="686">
                 <label>code/gui/MainWindow.cpp</label>
                 <link refid="d5/da5/_main_window_8cpp"/>
             </node>
@@ -328,11 +358,10 @@
                 <highlight class="normal">
                     <sp/>
                     <ref refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10" kindref="member">
-                        initDrugComboBox</ref>()<sp/>=<sp/>0;
+                        init</ref>()<sp/>=<sp/>0;
                     <sp/>
                 </highlight>
-                <highlight class="comment">//<sp/>imposta<sp/>tutti<sp/>i<sp/>gestori<sp/>delle<sp/>chiamate<sp/>di
-                    <sp/>
+                <highlight class="comment">//<sp/>imposta<sp/>tutti<sp/>i<sp/>gestori<sp/>delle<sp/>chiamate<sp/>di<sp/>
                     tutti<sp/>gli<sp/>eventi<sp/>che<sp/>lo<sp/>riguardano.
                 </highlight>
                 <highlight class="normal"></highlight>
@@ -361,8 +390,7 @@
                 <highlight class="normal"><sp/>=<sp/>0;
                     <sp/>
                 </highlight>
-                <highlight class="comment">//<sp/>Ritorna<sp/>il<sp/>nome<sp/>della<sp/>classe,<sp/>serve<sp/>per
-                    <sp/>
+                <highlight class="comment">//<sp/>Ritorna<sp/>il<sp/>nome<sp/>della<sp/>classe,<sp/>serve<sp/>per<sp/>
                     capire<sp/>che<sp/>controllore<sp/>è<sp/>i
                 </highlight>
                 <highlight class="normal"></highlight>
@@ -408,8 +436,7 @@
                     <sp/>
                     <sp/>
                 </highlight>
-                <highlight class="comment">//<sp/>Deve<sp/>ritornare<sp/>il<sp/>nome<sp/>della<sp/>classe<sp/>che
-                    <sp/>
+                <highlight class="comment">//<sp/>Deve<sp/>ritornare<sp/>il<sp/>nome<sp/>della<sp/>classe<sp/>che<sp/>
                     dovrà<sp/>essere<sp/>come
                 </highlight>
                 <highlight class="normal"></highlight>
@@ -425,8 +452,7 @@
                     <sp/>
                     <sp/>
                 </highlight>
-                <highlight class="comment">//<sp/>controllore<sp/>successivamente<sp/>e<sp/>questa,<sp/>se<sp/>il
-                    <sp/>
+                <highlight class="comment">//<sp/>controllore<sp/>successivamente<sp/>e<sp/>questa,<sp/>se<sp/>il<sp/>
                     nome<sp/>è<sp/>uguale<sp/>a
                 </highlight>
                 <highlight class="normal"></highlight>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model" kind="struct" language="C++" prot="public">
         <compoundname>mm::model::Patient::TreeModel</compoundname>
         <basecompoundref prot="public" virt="non-virtual">TreeModelColumnRecord</basecompoundref>
@@ -141,7 +141,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/model/Patient.hpp" line="22" column="1" bodyfile="code/model/Patient.cpp"
-                          bodystart="154" bodyend="162"/>
+                          bodystart="155" bodyend="163"/>
             </memberdef>
         </sectiondef>
         <briefdescription>
@@ -149,24 +149,24 @@
         <detaileddescription>
         </detaileddescription>
         <inheritancegraph>
-            <node id="161">
+            <node id="197">
                 <label>mm::model::Patient::TreeModel</label>
                 <link refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model"/>
-                <childnode refid="162" relation="public-inheritance">
+                <childnode refid="198" relation="public-inheritance">
                 </childnode>
             </node>
-            <node id="162">
+            <node id="198">
                 <label>Gtk::TreeModelColumnRecord</label>
             </node>
         </inheritancegraph>
         <collaborationgraph>
-            <node id="163">
+            <node id="199">
                 <label>mm::model::Patient::TreeModel</label>
                 <link refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model"/>
-                <childnode refid="164" relation="public-inheritance">
+                <childnode refid="200" relation="public-inheritance">
                 </childnode>
             </node>
-            <node id="164">
+            <node id="200">
                 <label>Gtk::TreeModelColumnRecord</label>
             </node>
         </collaborationgraph>

@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d4/d82/classmm_1_1view_1_1_drug_entry" kind="class" language="C++" prot="public">
+        <compoundname>mm::view::DrugEntry</compoundname>
+        <basecompoundref prot="public" virt="non-virtual">ListBoxRow</basecompoundref>
+        <includes refid="d5/d46/_custom_widgets_8hpp" local="no">CustomWidgets.hpp</includes>
+        <sectiondef kind="protected-attrib">
+            <memberdef kind="variable" id="d4/d82/classmm_1_1view_1_1_drug_entry_1a34bee6e0f8a4722c4e41b333eac49f60"
+                       prot="protected" static="no" mutable="no">
+                <type>sigc::signal&lt; void, <ref refid="d4/d82/classmm_1_1view_1_1_drug_entry" kindref="compound">
+                    mm::view::DrugEntry
+                </ref> * &gt;
+                </type>
+                <definition>sigc::signal&lt;void, mm::view::DrugEntry *&gt; mm::view::DrugEntry::remove</definition>
+                <argsstring></argsstring>
+                <name>remove</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="130" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="130" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="d4/d82/classmm_1_1view_1_1_drug_entry_1a6d36fd6633e305d4293f5d0980d9cccd"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Entry</type>
+                <definition>Gtk::Entry mm::view::DrugEntry::entry</definition>
+                <argsstring></argsstring>
+                <name>entry</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="133" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="133" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d4/d82/classmm_1_1view_1_1_drug_entry_1aece7d8f9ce78895e6fd27de83ac15a90"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Button</type>
+                <definition>Gtk::Button mm::view::DrugEntry::button</definition>
+                <argsstring></argsstring>
+                <name>button</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="134" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="134" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d4/d82/classmm_1_1view_1_1_drug_entry_1a326093161e2a038e328b03bc7826fc3b"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Grid</type>
+                <definition>Gtk::Grid mm::view::DrugEntry::grid</definition>
+                <argsstring></argsstring>
+                <name>grid</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="135" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="135" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d4/d82/classmm_1_1view_1_1_drug_entry_1ae384b9b748ad21f9f10f5b3a0cb92e03"
+                       prot="private" static="no" mutable="no">
+                <type>Glib::ustring</type>
+                <definition>Glib::ustring mm::view::DrugEntry::drug</definition>
+                <argsstring></argsstring>
+                <name>drug</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="136" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="136" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d4/d82/classmm_1_1view_1_1_drug_entry_1a7ad0e954cd9933565be5a86d6a808249"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::view::DrugEntry::DrugEntry</definition>
+                <argsstring>()=delete</argsstring>
+                <name>DrugEntry</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="119" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="d4/d82/classmm_1_1view_1_1_drug_entry_1ac1fceaa91adf2812b93c1e1388068c27"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::view::DrugEntry::DrugEntry</definition>
+                <argsstring>(const Glib::ustring &amp;drug)</argsstring>
+                <name>DrugEntry</name>
+                <param>
+                    <type>const Glib::ustring &amp;</type>
+                    <declname>drug</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="121" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="293" bodyend="307"/>
+            </memberdef>
+            <memberdef kind="function" id="d4/d82/classmm_1_1view_1_1_drug_entry_1aa7a9f1fd2d7a48a803314fa2c9a86370"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>sigc::signal&lt; void, <ref refid="d4/d82/classmm_1_1view_1_1_drug_entry" kindref="compound">
+                    mm::view::DrugEntry
+                </ref> * &gt;
+                </type>
+                <definition>sigc::signal&lt; void, mm::view::DrugEntry * &gt; mm::view::DrugEntry::signal_removed
+                </definition>
+                <argsstring>()</argsstring>
+                <name>signal_removed</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="123" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="313" bodyend="315"/>
+            </memberdef>
+            <memberdef kind="function" id="d4/d82/classmm_1_1view_1_1_drug_entry_1ada43ec12abdaf70f4c3070b6e7f9806d"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string</type>
+                <definition>const string mm::view::DrugEntry::get_drugName</definition>
+                <argsstring>() const</argsstring>
+                <name>get_drugName</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="125" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="317" bodyend="320"/>
+            </memberdef>
+            <memberdef kind="function" id="d4/d82/classmm_1_1view_1_1_drug_entry_1a9034293f6c4dbe85af9d02751684d845"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string</type>
+                <definition>const string mm::view::DrugEntry::get_drugForm</definition>
+                <argsstring>() const</argsstring>
+                <name>get_drugForm</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="127" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="322" bodyend="325"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="d4/d82/classmm_1_1view_1_1_drug_entry_1a1f669b8aec76bb35218c0273b1600226"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::view::DrugEntry::removeHandler</definition>
+                <argsstring>()</argsstring>
+                <name>removeHandler</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="138" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="309" bodyend="311"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="56">
+                <label>mm::view::DrugEntry</label>
+                <link refid="d4/d82/classmm_1_1view_1_1_drug_entry"/>
+                <childnode refid="57" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="57">
+                <label>Gtk::ListBoxRow</label>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="58">
+                <label>mm::view::DrugEntry</label>
+                <link refid="d4/d82/classmm_1_1view_1_1_drug_entry"/>
+                <childnode refid="59" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="59">
+                <label>Gtk::ListBoxRow</label>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/view/CustomWidgets.hpp" line="117" column="1"
+                  bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="117" bodyend="139"/>
+        <listofallmembers>
+            <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1aece7d8f9ce78895e6fd27de83ac15a90" prot="private"
+                    virt="non-virtual">
+                <scope>mm::view::DrugEntry</scope>
+                <name>button</name>
+            </member>
+            <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1ae384b9b748ad21f9f10f5b3a0cb92e03" prot="private"
+                    virt="non-virtual">
+                <scope>mm::view::DrugEntry</scope>
+                <name>drug</name>
+            </member>
+            <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a7ad0e954cd9933565be5a86d6a808249" prot="public"
+                    virt="non-virtual">
+                <scope>mm::view::DrugEntry</scope>
+                <name>DrugEntry</name>
+            </member>
+            <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1ac1fceaa91adf2812b93c1e1388068c27" prot="public"
+                    virt="non-virtual">
+                <scope>mm::view::DrugEntry</scope>
+                <name>DrugEntry</name>
+            </member>
+            <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a6d36fd6633e305d4293f5d0980d9cccd" prot="private"
+                    virt="non-virtual">
+                <scope>mm::view::DrugEntry</scope>
+                <name>entry</name>
+            </member>
+            <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a9034293f6c4dbe85af9d02751684d845" prot="public"
+                    virt="non-virtual">
+                <scope>mm::view::DrugEntry</scope>
+                <name>get_drugForm</name>
+            </member>
+            <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1ada43ec12abdaf70f4c3070b6e7f9806d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::view::DrugEntry</scope>
+                <name>get_drugName</name>
+            </member>
+            <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a326093161e2a038e328b03bc7826fc3b" prot="private"
+                    virt="non-virtual">
+                <scope>mm::view::DrugEntry</scope>
+                <name>grid</name>
+            </member>
+            <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a34bee6e0f8a4722c4e41b333eac49f60" prot="protected"
+                    virt="non-virtual">
+                <scope>mm::view::DrugEntry</scope>
+                <name>remove</name>
+            </member>
+            <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a1f669b8aec76bb35218c0273b1600226" prot="private"
+                    virt="non-virtual">
+                <scope>mm::view::DrugEntry</scope>
+                <name>removeHandler</name>
+            </member>
+            <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1aa7a9f1fd2d7a48a803314fa2c9a86370" prot="public"
+                    virt="non-virtual">
+                <scope>mm::view::DrugEntry</scope>
+                <name>signal_removed</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

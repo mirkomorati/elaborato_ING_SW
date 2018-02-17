@@ -1,6 +1,6 @@
 var searchData =
     [
-        ['date', ['Date', ['../df/d88/structmm_1_1util_1_1_date.html', 1, 'mm::util::Date'], ['../d5/da8/structmm_1_1util_1_1_date_by.html#a4adb77c6560794be119e39b374498b68', 1, 'mm::util::DateBy::date()'], ['../df/d88/structmm_1_1util_1_1_date.html#afe2513fbf246f7f3e61e7d1a06d0e6d0', 1, 'mm::util::Date::Date(int day, int month, int year)'], ['../df/d88/structmm_1_1util_1_1_date.html#a9aaf2c2d5171e081541831c4a756232e', 1, 'mm::util::Date::Date()'], ['../df/d88/structmm_1_1util_1_1_date.html#a9065cbdea26e95cfbb6537a5ba06f45d', 1, 'mm::util::Date::Date(const std::string &amp;str)']]],
+        ['date', ['Date', ['../df/d88/structmm_1_1util_1_1_date.html', 1, 'mm::util::Date'], ['../df/d88/structmm_1_1util_1_1_date.html#afe2513fbf246f7f3e61e7d1a06d0e6d0', 1, 'mm::util::Date::Date(int day, int month, int year)'], ['../df/d88/structmm_1_1util_1_1_date.html#a9aaf2c2d5171e081541831c4a756232e', 1, 'mm::util::Date::Date()'], ['../df/d88/structmm_1_1util_1_1_date.html#a9065cbdea26e95cfbb6537a5ba06f45d', 1, 'mm::util::Date::Date(const std::string &amp;str)'], ['../d5/da8/structmm_1_1util_1_1_date_by.html#a4adb77c6560794be119e39b374498b68', 1, 'mm::util::DateBy::date()']]],
         ['date_2ecpp', ['Date.cpp', ['../dc/d1f/_date_8cpp.html', 1, '']]],
         ['date_2ehpp', ['Date.hpp', ['../d8/d63/_date_8hpp.html', 1, '']]],
         ['dateby', ['DateBy', ['../d5/da8/structmm_1_1util_1_1_date_by.html', 1, 'mm::util::DateBy'], ['../d5/da8/structmm_1_1util_1_1_date_by.html#a2e30c048476714b88489a1a90a1f976c', 1, 'mm::util::DateBy::DateBy()']]],
@@ -22,5 +22,9 @@ var searchData =
         ['drug_2ecpp', ['Drug.cpp', ['../d1/d9e/_drug_8cpp.html', 1, '']]],
         ['drug_2ehpp', ['Drug.hpp', ['../dd/df9/_drug_8hpp.html', 1, '']]],
         ['drug_5fids', ['drug_ids', ['../d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model.html#a57ca54db8aa2c95df49cc1c12b1ec48a', 1, 'mm::model::Prescription::TreeModel']]],
-        ['drugtreemodel', ['drugTreeModel', ['../db/d9b/classmm_1_1model_1_1_drug.html#a9169612d0fc3b3b25063a1686be30af9', 1, 'mm::model::Drug']]]
+        ['drugentry', ['DrugEntry', ['../d4/d82/classmm_1_1view_1_1_drug_entry.html', 1, 'mm::view::DrugEntry'], ['../d4/d82/classmm_1_1view_1_1_drug_entry.html#a7ad0e954cd9933565be5a86d6a808249', 1, 'mm::view::DrugEntry::DrugEntry()=delete'], ['../d4/d82/classmm_1_1view_1_1_drug_entry.html#ac1fceaa91adf2812b93c1e1388068c27', 1, 'mm::view::DrugEntry::DrugEntry(const Glib::ustring &amp;drug)']]],
+        ['drugtreemodel', ['DrugTreeModel', ['../d2/d52/structmm_1_1model_1_1_drug_tree_model.html', 1, 'mm::model::DrugTreeModel'], ['../d2/d52/structmm_1_1model_1_1_drug_tree_model.html#a4fe945eeb529bbd8d3f19aa7797764d9', 1, 'mm::model::DrugTreeModel::DrugTreeModel()'], ['../db/d9b/classmm_1_1model_1_1_drug.html#a9169612d0fc3b3b25063a1686be30af9', 1, 'mm::model::Drug::drugTreeModel()']]],
+        ['drugwindow', ['DrugWindow', ['../d7/dcd/classmm_1_1_drug_window.html', 1, 'mm::DrugWindow'], ['../d7/dcd/classmm_1_1_drug_window.html#a7324435f0124010f172507467454d1a5', 1, 'mm::DrugWindow::DrugWindow()']]],
+        ['drugwindow_2ecpp', ['DrugWindow.cpp', ['../d6/d9e/_drug_window_8cpp.html', 1, '']]],
+        ['drugwindow_2ehpp', ['DrugWindow.hpp', ['../dd/d02/_drug_window_8hpp.html', 1, '']]]
     ];

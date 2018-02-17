@@ -1,122 +1,165 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d8/d63/_date_8hpp" kind="file" language="C++">
         <compoundname>Date.hpp</compoundname>
         <includes local="no">iostream</includes>
         <includedby refid="dc/d55/_widgets_8hpp" local="yes">code/gui/Widgets.hpp</includedby>
-        <includedby refid="dd/de0/_patient_window_8hpp" local="yes">code/gui/PatientWindow.hpp</includedby>
+        <includedby refid="d5/d46/_custom_widgets_8hpp" local="yes">code/gui/view/CustomWidgets.hpp</includedby>
+        <includedby refid="df/de8/_add_prescription_dialog_8cpp" local="yes">code/gui/AddPrescriptionDialog.cpp
+        </includedby>
         <includedby refid="dd/dc5/_doctor_8hpp" local="yes">code/model/Doctor.hpp</includedby>
-        <includedby refid="d7/d49/_widgets_8cpp" local="yes">code/gui/Widgets.cpp</includedby>
+        <includedby refid="dd/de0/_patient_window_8hpp" local="yes">code/gui/PatientWindow.hpp</includedby>
+        <includedby refid="d1/d16/_prescription_window_8cpp" local="yes">code/gui/PrescriptionWindow.cpp</includedby>
         <includedby refid="dc/d1f/_date_8cpp" local="yes">code/utils/Date.cpp</includedby>
         <includedby refid="d9/da3/_date_by_8hpp" local="yes">code/utils/DateBy.hpp</includedby>
         <incdepgraph>
-            <node id="784">
+            <node id="1064">
                 <label>code/utils/Date.hpp</label>
                 <link refid="d8/d63/_date_8hpp"/>
-                <childnode refid="785" relation="include">
+                <childnode refid="1065" relation="include">
                 </childnode>
             </node>
-            <node id="785">
+            <node id="1065">
                 <label>iostream</label>
             </node>
         </incdepgraph>
         <invincdepgraph>
-            <node id="793">
+            <node id="1073">
                 <label>code/gui/PatientWindow.hpp</label>
                 <link refid="dd/de0/_patient_window_8hpp"/>
-                <childnode refid="794" relation="include">
+                <childnode refid="1074" relation="include">
                 </childnode>
-                <childnode refid="790" relation="include">
+                <childnode refid="1070" relation="include">
                 </childnode>
             </node>
-            <node id="799">
+            <node id="1078">
+                <label>code/gui/DrugWindow.cpp</label>
+                <link refid="d6/d9e/_drug_window_8cpp"/>
+            </node>
+            <node id="1079">
+                <label>code/gui/view/CustomWidgets.cpp</label>
+                <link refid="d1/dea/_custom_widgets_8cpp"/>
+            </node>
+            <node id="1084">
                 <label>code/utils/DateBy.hpp</label>
                 <link refid="d9/da3/_date_by_8hpp"/>
-                <childnode refid="800" relation="include">
+                <childnode refid="1085" relation="include">
                 </childnode>
             </node>
-            <node id="796">
+            <node id="1080">
                 <label>code/model/Doctor.hpp</label>
                 <link refid="dd/dc5/_doctor_8hpp"/>
-                <childnode refid="790" relation="include">
+                <childnode refid="1078" relation="include">
                 </childnode>
-                <childnode refid="797" relation="include">
+                <childnode refid="1070" relation="include">
+                </childnode>
+                <childnode refid="1081" relation="include">
+                </childnode>
+                <childnode refid="1082" relation="include">
                 </childnode>
             </node>
-            <node id="788">
+            <node id="1077">
+                <label>code/gui/DrugWindow.hpp</label>
+                <link refid="dd/d02/_drug_window_8hpp"/>
+                <childnode refid="1078" relation="include">
+                </childnode>
+                <childnode refid="1074" relation="include">
+                </childnode>
+            </node>
+            <node id="1068">
                 <label>code/gui/AddPatientDialog.hpp</label>
                 <link refid="d2/dac/_add_patient_dialog_8hpp"/>
-                <childnode refid="789" relation="include">
+                <childnode refid="1069" relation="include">
                 </childnode>
-                <childnode refid="790" relation="include">
+                <childnode refid="1070" relation="include">
                 </childnode>
             </node>
-            <node id="791">
+            <node id="1076">
+                <label>code/gui/view/CustomWidgets.hpp</label>
+                <link refid="d5/d46/_custom_widgets_8hpp"/>
+                <childnode refid="1071" relation="include">
+                </childnode>
+                <childnode refid="1077" relation="include">
+                </childnode>
+                <childnode refid="1073" relation="include">
+                </childnode>
+                <childnode refid="1079" relation="include">
+                </childnode>
+            </node>
+            <node id="1081">
+                <label>code/gui/PrescriptionWindow.cpp</label>
+                <link refid="d1/d16/_prescription_window_8cpp"/>
+            </node>
+            <node id="1071">
                 <label>code/gui/AddPrescriptionDialog.hpp</label>
                 <link refid="d0/d1e/_add_prescription_dialog_8hpp"/>
-                <childnode refid="792" relation="include">
+                <childnode refid="1072" relation="include">
                 </childnode>
-                <childnode refid="790" relation="include">
+                <childnode refid="1070" relation="include">
                 </childnode>
             </node>
-            <node id="789">
+            <node id="1069">
                 <label>code/gui/AddPatientDialog.cpp</label>
                 <link refid="db/db5/_add_patient_dialog_8cpp"/>
             </node>
-            <node id="795">
+            <node id="1075">
                 <label>code/gui/Widgets.cpp</label>
                 <link refid="d7/d49/_widgets_8cpp"/>
             </node>
-            <node id="792">
+            <node id="1072">
                 <label>code/gui/AddPrescriptionDialog.cpp</label>
                 <link refid="df/de8/_add_prescription_dialog_8cpp"/>
             </node>
-            <node id="786">
+            <node id="1066">
                 <label>code/utils/Date.hpp</label>
                 <link refid="d8/d63/_date_8hpp"/>
-                <childnode refid="787" relation="include">
+                <childnode refid="1067" relation="include">
                 </childnode>
-                <childnode refid="793" relation="include">
+                <childnode refid="1076" relation="include">
                 </childnode>
-                <childnode refid="796" relation="include">
+                <childnode refid="1072" relation="include">
                 </childnode>
-                <childnode refid="795" relation="include">
+                <childnode refid="1080" relation="include">
                 </childnode>
-                <childnode refid="798" relation="include">
+                <childnode refid="1073" relation="include">
                 </childnode>
-                <childnode refid="799" relation="include">
+                <childnode refid="1081" relation="include">
+                </childnode>
+                <childnode refid="1083" relation="include">
+                </childnode>
+                <childnode refid="1084" relation="include">
                 </childnode>
             </node>
-            <node id="790">
+            <node id="1070">
                 <label>code/gui/PatientWindow.cpp</label>
                 <link refid="d8/d35/_patient_window_8cpp"/>
             </node>
-            <node id="787">
+            <node id="1067">
                 <label>code/gui/Widgets.hpp</label>
                 <link refid="dc/d55/_widgets_8hpp"/>
-                <childnode refid="788" relation="include">
+                <childnode refid="1068" relation="include">
                 </childnode>
-                <childnode refid="791" relation="include">
+                <childnode refid="1071" relation="include">
                 </childnode>
-                <childnode refid="793" relation="include">
+                <childnode refid="1073" relation="include">
                 </childnode>
-                <childnode refid="795" relation="include">
+                <childnode refid="1075" relation="include">
                 </childnode>
             </node>
-            <node id="794">
+            <node id="1074">
                 <label>code/gui/MainWindow.cpp</label>
                 <link refid="d5/da5/_main_window_8cpp"/>
             </node>
-            <node id="800">
+            <node id="1085">
                 <label>code/utils/DateBy.cpp</label>
                 <link refid="d3/d69/_date_by_8cpp"/>
             </node>
-            <node id="797">
+            <node id="1082">
                 <label>code/model/Doctor.cpp</label>
                 <link refid="d3/da6/_doctor_8cpp"/>
             </node>
-            <node id="798">
+            <node id="1083">
                 <label>code/utils/Date.cpp</label>
                 <link refid="dc/d1f/_date_8cpp"/>
             </node>
@@ -1016,7 +1059,10 @@
                         is_leap_year</ref>(
                 </highlight>
                 <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>year)<sp/>{
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a318909ff98468f29c7912fa9cffea079" kindref="member">
+                        year</ref>)<sp/>{
                 </highlight>
             </codeline>
             <codeline lineno="65">
@@ -1039,8 +1085,21 @@
                     <sp/>
                 </highlight>
                 <highlight class="keywordflow">return</highlight>
-                <highlight class="normal"><sp/>(year<sp/>%<sp/>4<sp/>==<sp/>0<sp/>and<sp/>year<sp/>%<sp/>100<sp/>!=<sp/>
-                    0)<sp/>or<sp/>year<sp/>%<sp/>400<sp/>==<sp/>0;
+                <highlight class="normal"><sp/>(
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a318909ff98468f29c7912fa9cffea079" kindref="member">
+                        year
+                    </ref>
+                    <sp/>%<sp/>4<sp/>==<sp/>0<sp/>and
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a318909ff98468f29c7912fa9cffea079" kindref="member">
+                        year
+                    </ref>
+                    <sp/>%<sp/>100<sp/>!=<sp/>0)<sp/>or
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1a318909ff98468f29c7912fa9cffea079" kindref="member">
+                        year
+                    </ref>
+                    <sp/>%<sp/>400<sp/>==<sp/>0;
                 </highlight>
             </codeline>
             <codeline lineno="66">

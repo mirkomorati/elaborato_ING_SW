@@ -1,5 +1,5 @@
 <map id="code/model/Patient.hpp" name="code/model/Patient.hpp">
-<area shape="rect" id="node5" href="$d3/d1b/_i_serializable_8hpp.html" title="../interfaces/ISerializable.hpp" alt="" coords="107,225,299,251"/>
-<area shape="rect" id="node7" href="$de/d01/_prescription_8hpp.html" title="Prescription.hpp" alt="" coords="239,79,356,104"/>
-<area shape="rect" id="node8" href="$dd/df9/_drug_8hpp.html" title="Drug.hpp" alt="" coords="298,152,374,177"/>
+<area shape="rect" id="node5" href="$d3/d1b/_i_serializable_8hpp.html" title="../interfaces/ISerializable.hpp" alt="" coords="505,225,697,251"/>
+<area shape="rect" id="node7" href="$de/d01/_prescription_8hpp.html" title="Prescription.hpp" alt="" coords="459,79,577,104"/>
+<area shape="rect" id="node8" href="$dd/df9/_drug_8hpp.html" title="Drug.hpp" alt="" coords="396,152,472,177"/>
 </map>

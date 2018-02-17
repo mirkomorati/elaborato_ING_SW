@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="df/d1a/classmm_1_1_med_h" kind="class" language="C++" prot="public">
         <compoundname>mm::MedH</compoundname>
         <basecompoundref refid="d7/d9e/classmm_1_1_i_observer" prot="private" virt="non-virtual">mm::IObserver
@@ -57,12 +57,20 @@
             </memberdef>
         </sectiondef>
         <sectiondef kind="private-func">
-            <memberdef kind="function" id="df/d1a/classmm_1_1_med_h_1adddf691cd00427122644295e9107767c" prot="private"
+            <memberdef kind="function" id="df/d1a/classmm_1_1_med_h_1a42dd3db886d41a34d43019c7fee1bd03" prot="private"
                        static="no" const="no" explicit="no" inline="no" virt="non-virtual">
                 <type>bool</type>
-                <definition>bool mm::MedH::initDrugComboBox</definition>
-                <argsstring>()</argsstring>
-                <name>initDrugComboBox</name>
+                <definition>bool mm::MedH::init</definition>
+                <argsstring>(int argc, char **argv)</argsstring>
+                <name>init</name>
+                <param>
+                    <type>int</type>
+                    <declname>argc</declname>
+                </param>
+                <param>
+                    <type>char **</type>
+                    <declname>argv</declname>
+                </param>
                 <briefdescription>
                     <para>metodo che inizializza l&apos;oggetto</para>
                 </briefdescription>
@@ -88,7 +96,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/MedH.hpp" line="42" column="1" bodyfile="code/MedH.cpp" bodystart="83"
+                <location file="code/MedH.hpp" line="43" column="1" bodyfile="code/MedH.cpp" bodystart="83"
                           bodyend="111"/>
             </memberdef>
         </sectiondef>
@@ -132,6 +140,21 @@
                 <location file="code/MedH.hpp" line="37" column="1" bodyfile="code/MedH.cpp" bodystart="14"
                           bodyend="18"/>
             </memberdef>
+            <memberdef kind="function" id="df/d1a/classmm_1_1_med_h_1a6fe53e9376821a1aae7d5a3a32d203c3" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type></type>
+                <definition>mm::MedH::~MedH</definition>
+                <argsstring>()</argsstring>
+                <name>~MedH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/MedH.hpp" line="39" column="1" bodyfile="code/MedH.cpp" bodystart="113"
+                          bodyend="127"/>
+            </memberdef>
         </sectiondef>
         <briefdescription>
             <para>Classe che rappresenta il programma in se.</para>
@@ -148,30 +171,30 @@
             </para>
         </detaileddescription>
         <inheritancegraph>
-            <node id="112">
+            <node id="138">
                 <label>mm::IObserver</label>
                 <link refid="d7/d9e/classmm_1_1_i_observer"/>
             </node>
-            <node id="111">
+            <node id="137">
                 <label>mm::MedH</label>
                 <link refid="df/d1a/classmm_1_1_med_h"/>
-                <childnode refid="112" relation="private-inheritance">
+                <childnode refid="138" relation="private-inheritance">
                 </childnode>
             </node>
         </inheritancegraph>
         <collaborationgraph>
-            <node id="114">
+            <node id="140">
                 <label>mm::IObserver</label>
                 <link refid="d7/d9e/classmm_1_1_i_observer"/>
             </node>
-            <node id="113">
+            <node id="139">
                 <label>mm::MedH</label>
                 <link refid="df/d1a/classmm_1_1_med_h"/>
-                <childnode refid="114" relation="private-inheritance">
+                <childnode refid="140" relation="private-inheritance">
                 </childnode>
             </node>
         </collaborationgraph>
-        <location file="code/MedH.hpp" line="24" column="1" bodyfile="code/MedH.hpp" bodystart="24" bodyend="43"/>
+        <location file="code/MedH.hpp" line="24" column="1" bodyfile="code/MedH.hpp" bodystart="24" bodyend="44"/>
         <listofallmembers>
             <member refid="df/d1a/classmm_1_1_med_h_1a6bbf4476e1953d62562d35cb1f9c4218" prot="public"
                     virt="non-virtual">
@@ -183,10 +206,10 @@
                 <scope>mm::MedH</scope>
                 <name>appID</name>
             </member>
-            <member refid="df/d1a/classmm_1_1_med_h_1adddf691cd00427122644295e9107767c" prot="private"
+            <member refid="df/d1a/classmm_1_1_med_h_1a42dd3db886d41a34d43019c7fee1bd03" prot="private"
                     virt="non-virtual">
                 <scope>mm::MedH</scope>
-                <name>initDrugComboBox</name>
+                <name>init</name>
             </member>
             <member refid="df/d1a/classmm_1_1_med_h_1a60861cff31fe5bc04e0002c6dabd5a9b" prot="public"
                     virt="non-virtual">
@@ -202,10 +225,19 @@
                 <scope>mm::MedH</scope>
                 <name>update</name>
             </member>
+            <member refid="d7/d9e/classmm_1_1_i_observer_1add1245a281c47575cc0e42449635a9fd" prot="private"
+                    virt="virtual" ambiguityscope="mm::IObserver::">
+                <scope>mm::MedH</scope>
+                <name>update</name>
+            </member>
             <member refid="df/d1a/classmm_1_1_med_h_1a4c063815ea825e833d9549a43a26f7cc" prot="private"
                     virt="non-virtual">
                 <scope>mm::MedH</scope>
                 <name>window</name>
+            </member>
+            <member refid="df/d1a/classmm_1_1_med_h_1a6fe53e9376821a1aae7d5a3a32d203c3" prot="public" virt="virtual">
+                <scope>mm::MedH</scope>
+                <name>~MedH</name>
             </member>
         </listofallmembers>
     </compounddef>

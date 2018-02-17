@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d3/d0c/classmm_1_1_login_window" kind="class" language="C++" prot="public">
         <compoundname>mm::LoginWindow</compoundname>
         <basecompoundref refid="d1/d71/classmm_1_1_window" prot="public" virt="non-virtual">mm::Window</basecompoundref>
@@ -43,11 +43,10 @@
             <memberdef kind="function" id="d3/d0c/classmm_1_1_login_window_1a4040d7c1f85fc76e1f60ef13f92bef1c"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
                 <type>bool</type>
-                <definition>bool mm::LoginWindow::initDrugComboBox</definition>
+                <definition>bool mm::LoginWindow::init</definition>
                 <argsstring>() override</argsstring>
-                <name>initDrugComboBox</name>
-                <reimplements refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10">initDrugComboBox
-                </reimplements>
+                <name>init</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10">init</reimplements>
                 <briefdescription>
                 </briefdescription>
                 <detaileddescription>
@@ -137,48 +136,48 @@
         <detaileddescription>
         </detaileddescription>
         <inheritancegraph>
-            <node id="96">
+            <node id="122">
                 <label>trackable</label>
             </node>
-            <node id="95">
+            <node id="121">
                 <label>mm::ISubject</label>
                 <link refid="d1/dd2/classmm_1_1_i_subject"/>
             </node>
-            <node id="93">
+            <node id="119">
                 <label>mm::LoginWindow</label>
                 <link refid="d3/d0c/classmm_1_1_login_window"/>
-                <childnode refid="94" relation="public-inheritance">
+                <childnode refid="120" relation="public-inheritance">
                 </childnode>
             </node>
-            <node id="94">
+            <node id="120">
                 <label>mm::Window</label>
                 <link refid="d1/d71/classmm_1_1_window"/>
-                <childnode refid="95" relation="public-inheritance">
+                <childnode refid="121" relation="public-inheritance">
                 </childnode>
-                <childnode refid="96" relation="public-inheritance">
+                <childnode refid="122" relation="public-inheritance">
                 </childnode>
             </node>
         </inheritancegraph>
         <collaborationgraph>
-            <node id="100">
+            <node id="126">
                 <label>trackable</label>
             </node>
-            <node id="99">
+            <node id="125">
                 <label>mm::ISubject</label>
                 <link refid="d1/dd2/classmm_1_1_i_subject"/>
             </node>
-            <node id="97">
+            <node id="123">
                 <label>mm::LoginWindow</label>
                 <link refid="d3/d0c/classmm_1_1_login_window"/>
-                <childnode refid="98" relation="public-inheritance">
+                <childnode refid="124" relation="public-inheritance">
                 </childnode>
             </node>
-            <node id="98">
+            <node id="124">
                 <label>mm::Window</label>
                 <link refid="d1/d71/classmm_1_1_window"/>
-                <childnode refid="99" relation="public-inheritance">
+                <childnode refid="125" relation="public-inheritance">
                 </childnode>
-                <childnode refid="100" relation="public-inheritance">
+                <childnode refid="126" relation="public-inheritance">
                 </childnode>
             </node>
         </collaborationgraph>
@@ -208,7 +207,7 @@
             <member refid="d3/d0c/classmm_1_1_login_window_1a4040d7c1f85fc76e1f60ef13f92bef1c" prot="public"
                     virt="virtual">
                 <scope>mm::LoginWindow</scope>
-                <name>initDrugComboBox</name>
+                <name>init</name>
             </member>
             <member refid="d3/d0c/classmm_1_1_login_window_1ad27cc1365af4fec51bd7afb1a9d49cf5" prot="public"
                     virt="non-virtual">
@@ -221,6 +220,11 @@
                 <name>next</name>
             </member>
             <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
                     virt="non-virtual">
                 <scope>mm::LoginWindow</scope>
                 <name>notify</name>

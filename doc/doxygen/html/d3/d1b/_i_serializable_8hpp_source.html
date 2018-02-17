@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-    <meta name="generator" content="Doxygen 1.8.13"/>
+    <meta name="generator" content="Doxygen 1.8.14"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>MedH: File sorgente code/interfaces/ISerializable.hpp</title>
     <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -14,8 +14,9 @@
     <script type="text/javascript" src="../../navtreedata.js"></script>
     <script type="text/javascript" src="../../navtree.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(document).ready(initResizable);
-    </script>
+        /* @license-end */</script>
     <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../../search/searchdata.js"></script>
     <script type="text/javascript" src="../../search/search.js"></script>
@@ -40,20 +41,23 @@
         </table>
     </div>
     <!-- end header part -->
-    <!-- Generato da Doxygen 1.8.13 -->
+    <!-- Generato da Doxygen 1.8.14 -->
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         var searchBox = new SearchBox("searchBox", "../../search", false, 'Cerca');
+        /* @license-end */
     </script>
     <script type="text/javascript" src="../../menudata.js"></script>
     <script type="text/javascript" src="../../menu.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(function () {
             initMenu('../../', true, false, 'search.php', 'Cerca');
             $(document).ready(function () {
                 init_search();
             });
         });
-    </script>
+        /* @license-end */</script>
     <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -67,9 +71,11 @@
     </div>
 </div>
 <script type="text/javascript">
+    /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
     $(document).ready(function () {
         initNavTree('d3/d1b/_i_serializable_8hpp_source.html', '../../');
     });
+    /* @license-end */
 </script>
 <div id="doc-content">
     <!-- window showing the filter options -->
@@ -104,291 +110,392 @@
             </div>
             <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span>
             </div>
-            <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-            <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a
+            <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span>
+            </div>
+            <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+            <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a
                     class="code" href="../../d0/d04/namespacemm.html">mm</a> {
             </div>
-            <div class="line"><a name="l00024"></a><span class="lineno"><a class="line"
-                                                                           href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601c">   24</a></span>&#160;
+            <div class="line"><a name="l00025"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601c">   25</a></span>&#160;
                 <span class="keyword">enum</span> <a class="code"
                                                      href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601c">StoredTypes</a>
                 {
             </div>
-            <div class="line"><a name="l00025"></a><span class="lineno"><a class="line"
-                                                                           href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a">   25</a></span>&#160;
+            <div class="line"><a name="l00026"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a">   26</a></span>&#160;
                 <a class="code"
                    href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a">INTEGER</a>,
                 <span class="comment">// mapped to an int</span></div>
-            <div class="line"><a name="l00026"></a><span class="lineno"><a class="line"
-                                                                           href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331">   26</a></span>&#160;
+            <div class="line"><a name="l00027"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331">   27</a></span>&#160;
                 <a class="code"
                    href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331">REAL</a>,
                 <span class="comment">// mapped to a double</span></div>
-            <div class="line"><a name="l00027"></a><span class="lineno"><a class="line"
-                                                                           href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5">   27</a></span>&#160;
+            <div class="line"><a name="l00028"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5">   28</a></span>&#160;
                 <a class="code"
                    href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5">TEXT</a>
                 <span class="comment">// mapped to a std::str</span></div>
-            <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; };</div>
-            <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-            <div class="line"><a name="l00034"></a><span class="lineno"><a class="line"
-                                                                           href="../../de/dac/unionmm_1_1_serialized_union.html">   34</a></span>&#160;
+            <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; };</div>
+            <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+            <div class="line"><a name="l00035"></a><span class="lineno"><a class="line"
+                                                                           href="../../de/dac/unionmm_1_1_serialized_union.html">   35</a></span>&#160;
                 <span class="keyword">union </span><a class="code"
                                                       href="../../de/dac/unionmm_1_1_serialized_union.html">SerializedUnion</a>
                 {
             </div>
-            <div class="line"><a name="l00035"></a><span class="lineno"><a class="line"
-                                                                           href="../../de/dac/unionmm_1_1_serialized_union.html#a8d0497571c8ac717f7f49226477f13bf">   35</a></span>&#160;
+            <div class="line"><a name="l00036"></a><span class="lineno"><a class="line"
+                                                                           href="../../de/dac/unionmm_1_1_serialized_union.html#a8d0497571c8ac717f7f49226477f13bf">   36</a></span>&#160;
                 <span class="keywordtype">char</span> *<a class="code"
                                                           href="../../de/dac/unionmm_1_1_serialized_union.html#a8d0497571c8ac717f7f49226477f13bf">text</a>;
             </div>
-            <div class="line"><a name="l00036"></a><span class="lineno"><a class="line"
-                                                                           href="../../de/dac/unionmm_1_1_serialized_union.html#ab1b4916d7e61e14280d62aecf668d402">   36</a></span>&#160;
+            <div class="line"><a name="l00037"></a><span class="lineno"><a class="line"
+                                                                           href="../../de/dac/unionmm_1_1_serialized_union.html#ab1b4916d7e61e14280d62aecf668d402">   37</a></span>&#160;
                 <span class="keywordtype">int</span> <a class="code"
                                                         href="../../de/dac/unionmm_1_1_serialized_union.html#ab1b4916d7e61e14280d62aecf668d402">integer</a>;
             </div>
-            <div class="line"><a name="l00037"></a><span class="lineno"><a class="line"
-                                                                           href="../../de/dac/unionmm_1_1_serialized_union.html#a315b1f30581d381d4ce1bb980641a200">   37</a></span>&#160;
+            <div class="line"><a name="l00038"></a><span class="lineno"><a class="line"
+                                                                           href="../../de/dac/unionmm_1_1_serialized_union.html#a315b1f30581d381d4ce1bb980641a200">   38</a></span>&#160;
                 <span class="keywordtype">double</span> <a class="code"
                                                            href="../../de/dac/unionmm_1_1_serialized_union.html#a315b1f30581d381d4ce1bb980641a200">real</a>;
             </div>
-            <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; };</div>
-            <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-            <div class="line"><a name="l00048"></a><span class="lineno"><a class="line"
-                                                                           href="../../d3/d4d/structmm_1_1_serialized.html">   48</a></span>&#160;
+            <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; };</div>
+            <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+            <div class="line"><a name="l00049"></a><span class="lineno"><a class="line"
+                                                                           href="../../d3/d4d/structmm_1_1_serialized.html">   49</a></span>&#160;
                 <span class="keyword">struct </span><a class="code" href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>
                 {
             </div>
-            <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; <span
+            <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span
                     class="keyword">friend</span> std::ostream &amp;<a class="code"
-                                                                       href="../../d0/d04/namespacemm.html#a7ab9a5d20c82db4778995f35e6aa6abb">operator&lt;&lt;</a>(std::ostream
+                                                                       href="../../d3/d4d/structmm_1_1_serialized.html#a7ac660741c58dec6ffe85a006b9846ae">operator&lt;&lt;</a>(std::ostream
                 &amp;os, <span class="keyword">const</span> <a class="code"
                                                                href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>
                 &amp;data);
             </div>
-            <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-            <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; <span
+            <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+            <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; <span
                     class="keyword">private</span>:
             </div>
-            <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; <a class="code"
+            <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; <a class="code"
                                                                                               href="../../de/dac/unionmm_1_1_serialized_union.html">SerializedUnion</a>
                 data;
             </div>
-            <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; <a class="code"
+            <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; <a class="code"
                                                                                               href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601c">StoredTypes</a>
                 type;
             </div>
-            <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; <span
+            <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; <span
                     class="keyword">public</span>:
             </div>
-            <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; <a class="code"
+            <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; <a class="code"
                                                                                               href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601c">StoredTypes</a>
-                get_type() <span class="keyword">const</span> noexcept;
+                <a class="code" href="../../d3/d4d/structmm_1_1_serialized.html#a9a257b31c4426077a3bd460d1e6cbd89">get_type</a>()
+                <span class="keyword">const</span> noexcept;
             </div>
-            <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-            <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; <span class="keywordtype">bool</span>
-                isType(<a class="code" href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601c">StoredTypes</a>
-                type) <span class="keyword">const</span> noexcept;
+            <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+            <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; <span class="keywordtype">bool</span>
+                <a class="code" href="../../d3/d4d/structmm_1_1_serialized.html#ac0e23433a34f0d326042907895a03353">isType</a>(<a
+                        class="code"
+                        href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601c">StoredTypes</a> type)
+                <span class="keyword">const</span> noexcept;
             </div>
-            <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-            <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; <span
-                    class="keyword">const</span> std::string get_str() <span class="keyword">const</span> noexcept(<span
-                    class="keyword">false</span>);
+            <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+            <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; <span
+                    class="keyword">const</span> std::string <a class="code"
+                                                                href="../../d3/d4d/structmm_1_1_serialized.html#aa3eb7eb50d6b343993c08a4d369af8b2">get_str</a>()
+                <span class="keyword">const</span> noexcept(<span class="keyword">false</span>);
             </div>
-            <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-            <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; <span
-                    class="keywordtype">int</span> get_int() <span class="keyword">const</span> noexcept(<span
-                    class="keyword">false</span>);
+            <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+            <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; <span
+                    class="keywordtype">int</span> <a class="code"
+                                                      href="../../d3/d4d/structmm_1_1_serialized.html#a259c2695619d6ba052fd8a3885a341ef">get_int</a>()
+                <span class="keyword">const</span> noexcept(<span class="keyword">false</span>);
             </div>
-            <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-            <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; <span class="keywordtype">double</span>
-                get_real() <span class="keyword">const</span> noexcept(<span class="keyword">false</span>);
+            <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+            <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; <span class="keywordtype">double</span>
+                <a class="code" href="../../d3/d4d/structmm_1_1_serialized.html#acd3c339c1766f6dbc0313669e7582361">get_real</a>()
+                <span class="keyword">const</span> noexcept(<span class="keyword">false</span>);
             </div>
-            <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-            <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; <a class="code"
-                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>(std::string
+            <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+            <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; <a class="code"
+                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html#a14f147b31fbf90a95379bbd919875362">Serialized</a>(std::string
                 data) noexcept;
             </div>
-            <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-            <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; <a class="code"
-                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>(<span
+            <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+            <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; <a class="code"
+                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html#a14f147b31fbf90a95379bbd919875362">Serialized</a>(<span
                     class="keyword">const</span> <span class="keywordtype">char</span> *c_str) noexcept;
             </div>
-            <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-            <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; <a class="code"
-                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>(<span
+            <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+            <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; <a class="code"
+                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html#a14f147b31fbf90a95379bbd919875362">Serialized</a>(<span
                     class="keywordtype">int</span> data) noexcept;
             </div>
-            <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-            <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; <a class="code"
-                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>(<span
+            <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+            <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; <a class="code"
+                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html#a14f147b31fbf90a95379bbd919875362">Serialized</a>(<span
                     class="keywordtype">double</span> data) noexcept;
             </div>
-            <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-            <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; <a class="code"
-                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>(<span
+            <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+            <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; <a class="code"
+                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html#a14f147b31fbf90a95379bbd919875362">Serialized</a>(<span
                     class="keywordtype">float</span> data) noexcept;
             </div>
-            <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-            <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; <a class="code"
-                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>(<span
+            <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+            <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; <a class="code"
+                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html#a14f147b31fbf90a95379bbd919875362">Serialized</a>(<span
                     class="keyword">const</span> <a class="code" href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>
                 &amp;old) noexcept;
             </div>
-            <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-            <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; <a class="code"
+            <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+            <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; <a class="code"
                                                                                               href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>
-                &amp;operator=(<span class="keyword">const</span> <a class="code"
-                                                                     href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>
+                &amp;<a class="code" href="../../d3/d4d/structmm_1_1_serialized.html#a7d108150308172857962c61c94f78fbd">operator=</a>(<span
+                        class="keyword">const</span> <a class="code" href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>
                 &amp;old);
             </div>
-            <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-            <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; <span class="keyword">operator</span>
+            <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+            <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; <span class="keyword">operator</span>
                 int() <span class="keyword">const</span> noexcept(<span class="keyword">false</span>);
             </div>
-            <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-            <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; <span class="keyword">operator</span>
+            <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+            <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; <span class="keyword">operator</span>
                 std::string() <span class="keyword">const</span> noexcept(<span class="keyword">false</span>);
             </div>
-            <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-            <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; <span class="keyword">operator</span>
+            <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+            <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; <span class="keyword">operator</span>
                 double() <span class="keyword">const</span> noexcept(<span class="keyword">false</span>);
             </div>
-            <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-            <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; ~<a class="code"
-                                                                                               href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>()
+            <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+            <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; <a class="code"
+                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html#af1414a72ff10e038d96f6f33f352b2dc">~Serialized</a>()
                 noexcept;
             </div>
-            <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-            <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; <a class="code"
-                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>()
+            <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+            <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; <a class="code"
+                                                                                              href="../../d3/d4d/structmm_1_1_serialized.html#a14f147b31fbf90a95379bbd919875362">Serialized</a>()
                 noexcept;
             </div>
-            <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; };</div>
-            <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-            <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; std::ostream &amp;<a
+            <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; };</div>
+            <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+            <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; std::ostream &amp;<a
                     class="code"
                     href="../../d0/d04/namespacemm.html#a7ab9a5d20c82db4778995f35e6aa6abb">operator&lt;&lt;</a>(std::ostream
                 &amp;os, <span class="keyword">const</span> <a class="code"
                                                                href="../../d3/d4d/structmm_1_1_serialized.html">Serialized</a>
                 &amp;data);
             </div>
-            <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-            <div class="line"><a name="l00096"></a><span class="lineno"><a class="line"
-                                                                           href="../../dc/df3/classmm_1_1_i_serializable.html">   96</a></span>&#160;
+            <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+            <div class="line"><a name="l00097"></a><span class="lineno"><a class="line"
+                                                                           href="../../dc/df3/classmm_1_1_i_serializable.html">   97</a></span>&#160;
                 <span class="keyword">class </span><a class="code" href="../../dc/df3/classmm_1_1_i_serializable.html">ISerializable</a>
                 {
             </div>
-            <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; <span
+            <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; <span
                     class="keyword">public</span>:
             </div>
-            <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; <span class="comment">// return the data ostream the row that should be inserted in database</span>
+            <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; <span class="comment">// return the data ostream the row that should be inserted in database</span>
             </div>
-            <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; <span
+            <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; <span
                     class="keyword">virtual</span> std::map&lt;std::string, Serialized&gt;
             </div>
-            <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; serialize() <span
-                    class="keyword">const</span> = 0;
+            <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; <a class="code"
+                                                                                              href="../../dc/df3/classmm_1_1_i_serializable.html#a20a59e2324c8dbf6fefe4d11ae89d0fb">serialize</a>()
+                <span class="keyword">const</span> = 0;
             </div>
-            <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-            <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; <span class="comment">// build the object from the row ostream the database where the data are stored</span>
+            <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+            <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; <span class="comment">// build the object from the row ostream the database where the data are stored</span>
             </div>
-            <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; <span
+            <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; <span
                     class="keyword">virtual</span> <span class="keywordtype">void</span></div>
-            <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; unserialize(std::map&lt;std::string,
+            <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; <a class="code"
+                                                                                              href="../../dc/df3/classmm_1_1_i_serializable.html#a8e5329b3b23cd0dff0ea8f5f63bab996">unserialize</a>(std::map&lt;std::string,
                 Serialized&gt;) = 0;
             </div>
-            <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-            <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; <span class="comment">// return the table name where to save the data ostream the class</span>
+            <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+            <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; <span class="comment">// return the table name where to save the data ostream the class</span>
             </div>
-            <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; <span
-                    class="keyword">virtual</span> std::string get_table_name() <span class="keyword">const</span> = 0;
+            <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; <span
+                    class="keyword">virtual</span> std::string <a class="code"
+                                                                  href="../../dc/df3/classmm_1_1_i_serializable.html#a9717e6da47fcbac3ffa2e68152464e0a">get_table_name</a>()
+                <span class="keyword">const</span> = 0;
             </div>
-            <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-            <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; <span class="comment">// return the primary key column name.</span>
+            <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+            <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; <span class="comment">// return the primary key column name.</span>
             </div>
-            <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; <span
-                    class="keyword">virtual</span> std::vector&lt;std::string&gt; get_primary_key() <span
-                    class="keyword">const</span> = 0;
+            <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; <span
+                    class="keyword">virtual</span> std::vector&lt;std::string&gt; <a class="code"
+                                                                                     href="../../dc/df3/classmm_1_1_i_serializable.html#a69c0c514e11e386b6cb1fbd03f14da17">get_primary_key</a>()
+                <span class="keyword">const</span> = 0;
             </div>
-            <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; };</div>
-            <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
-            <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif //_ISERIALIZABLE_H</span>
+            <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; };</div>
+            <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+            <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif //_ISERIALIZABLE_H</span>
+            </div>
+            <div class="ttc" id="structmm_1_1_serialized_html_a9a257b31c4426077a3bd460d1e6cbd89">
+                <div class="ttname"><a
+                        href="../../d3/d4d/structmm_1_1_serialized.html#a9a257b31c4426077a3bd460d1e6cbd89">mm::Serialized::get_type</a>
+                </div>
+                <div class="ttdeci">StoredTypes get_type() const noexcept</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.cpp:15</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_serialized_html_ac0e23433a34f0d326042907895a03353">
+                <div class="ttname"><a
+                        href="../../d3/d4d/structmm_1_1_serialized.html#ac0e23433a34f0d326042907895a03353">mm::Serialized::isType</a>
+                </div>
+                <div class="ttdeci">bool isType(StoredTypes type) const noexcept</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.cpp:11</div>
             </div>
             <div class="ttc" id="unionmm_1_1_serialized_union_html">
                 <div class="ttname"><a href="../../de/dac/unionmm_1_1_serialized_union.html">mm::SerializedUnion</a>
                 </div>
                 <div class="ttdoc">Union che permette di stivare i tre diversi tipi di dati della enum StoredTypes.
                 </div>
-                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:34</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:35</div>
+            </div>
+            <div class="ttc" id="classmm_1_1_i_serializable_html_a9717e6da47fcbac3ffa2e68152464e0a">
+                <div class="ttname"><a
+                        href="../../dc/df3/classmm_1_1_i_serializable.html#a9717e6da47fcbac3ffa2e68152464e0a">mm::ISerializable::get_table_name</a>
+                </div>
+                <div class="ttdeci">virtual std::string get_table_name() const =0</div>
+            </div>
+            <div class="ttc" id="classmm_1_1_i_serializable_html_a8e5329b3b23cd0dff0ea8f5f63bab996">
+                <div class="ttname"><a
+                        href="../../dc/df3/classmm_1_1_i_serializable.html#a8e5329b3b23cd0dff0ea8f5f63bab996">mm::ISerializable::unserialize</a>
+                </div>
+                <div class="ttdeci">virtual void unserialize(std::map&lt; std::string, Serialized &gt;)=0</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_serialized_html_a7d108150308172857962c61c94f78fbd">
+                <div class="ttname"><a
+                        href="../../d3/d4d/structmm_1_1_serialized.html#a7d108150308172857962c61c94f78fbd">mm::Serialized::operator=</a>
+                </div>
+                <div class="ttdeci">Serialized &amp; operator=(const Serialized &amp;old)</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.cpp:69</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_serialized_html_aa3eb7eb50d6b343993c08a4d369af8b2">
+                <div class="ttname"><a
+                        href="../../d3/d4d/structmm_1_1_serialized.html#aa3eb7eb50d6b343993c08a4d369af8b2">mm::Serialized::get_str</a>
+                </div>
+                <div class="ttdeci">const std::string get_str() const noexcept(false)</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.cpp:88</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_serialized_html_a7ac660741c58dec6ffe85a006b9846ae">
+                <div class="ttname"><a
+                        href="../../d3/d4d/structmm_1_1_serialized.html#a7ac660741c58dec6ffe85a006b9846ae">mm::Serialized::operator&lt;&lt;</a>
+                </div>
+                <div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Serialized
+                    &amp;data)
+                </div>
             </div>
             <div class="ttc" id="namespacemm_html_ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a">
                 <div class="ttname"><a
                         href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a">mm::INTEGER</a>
                 </div>
-                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:25</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:26</div>
             </div>
             <div class="ttc" id="unionmm_1_1_serialized_union_html_ab1b4916d7e61e14280d62aecf668d402">
                 <div class="ttname"><a
                         href="../../de/dac/unionmm_1_1_serialized_union.html#ab1b4916d7e61e14280d62aecf668d402">mm::SerializedUnion::integer</a>
                 </div>
                 <div class="ttdeci">int integer</div>
-                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:36</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:37</div>
             </div>
             <div class="ttc" id="namespacemm_html_ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331">
                 <div class="ttname"><a
                         href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331">mm::REAL</a>
                 </div>
-                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:26</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:27</div>
             </div>
             <div class="ttc" id="classmm_1_1_i_serializable_html">
                 <div class="ttname"><a href="../../dc/df3/classmm_1_1_i_serializable.html">mm::ISerializable</a></div>
                 <div class="ttdoc">Funziona come un interfaccia, qualunque classe che erediti da questa potrà essere
                     letta o scritta nel...
                 </div>
-                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:96</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:97</div>
             </div>
             <div class="ttc" id="namespacemm_html">
                 <div class="ttname"><a href="../../d0/d04/namespacemm.html">mm</a></div>
                 <div class="ttdef"><b>Definition:</b> Configuration.hpp:14</div>
             </div>
+            <div class="ttc" id="structmm_1_1_serialized_html_acd3c339c1766f6dbc0313669e7582361">
+                <div class="ttname"><a
+                        href="../../d3/d4d/structmm_1_1_serialized.html#acd3c339c1766f6dbc0313669e7582361">mm::Serialized::get_real</a>
+                </div>
+                <div class="ttdeci">double get_real() const noexcept(false)</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.cpp:104</div>
+            </div>
             <div class="ttc" id="namespacemm_html_a7ab9a5d20c82db4778995f35e6aa6abb">
                 <div class="ttname"><a href="../../d0/d04/namespacemm.html#a7ab9a5d20c82db4778995f35e6aa6abb">mm::operator&lt;&lt;</a>
                 </div>
                 <div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Serialized &amp;data)</div>
-                <div class="ttdef"><b>Definition:</b> ISerializable.cpp:18</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.cpp:19</div>
+            </div>
+            <div class="ttc" id="classmm_1_1_i_serializable_html_a20a59e2324c8dbf6fefe4d11ae89d0fb">
+                <div class="ttname"><a
+                        href="../../dc/df3/classmm_1_1_i_serializable.html#a20a59e2324c8dbf6fefe4d11ae89d0fb">mm::ISerializable::serialize</a>
+                </div>
+                <div class="ttdeci">virtual std::map&lt; std::string, Serialized &gt; serialize() const =0</div>
             </div>
             <div class="ttc" id="namespacemm_html_ad5a796af6d7145f51e84a73ed35a601c">
                 <div class="ttname"><a href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601c">mm::StoredTypes</a>
                 </div>
                 <div class="ttdeci">StoredTypes</div>
                 <div class="ttdoc">Enumerazione dei tipi che utilizati di SQLite3.</div>
-                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:24</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:25</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_serialized_html_a259c2695619d6ba052fd8a3885a341ef">
+                <div class="ttname"><a
+                        href="../../d3/d4d/structmm_1_1_serialized.html#a259c2695619d6ba052fd8a3885a341ef">mm::Serialized::get_int</a>
+                </div>
+                <div class="ttdeci">int get_int() const noexcept(false)</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.cpp:96</div>
             </div>
             <div class="ttc" id="unionmm_1_1_serialized_union_html_a8d0497571c8ac717f7f49226477f13bf">
                 <div class="ttname"><a
                         href="../../de/dac/unionmm_1_1_serialized_union.html#a8d0497571c8ac717f7f49226477f13bf">mm::SerializedUnion::text</a>
                 </div>
                 <div class="ttdeci">char * text</div>
-                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:35</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:36</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_serialized_html_a14f147b31fbf90a95379bbd919875362">
+                <div class="ttname"><a
+                        href="../../d3/d4d/structmm_1_1_serialized.html#a14f147b31fbf90a95379bbd919875362">mm::Serialized::Serialized</a>
+                </div>
+                <div class="ttdeci">Serialized() noexcept</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.cpp:31</div>
             </div>
             <div class="ttc" id="unionmm_1_1_serialized_union_html_a315b1f30581d381d4ce1bb980641a200">
                 <div class="ttname"><a
                         href="../../de/dac/unionmm_1_1_serialized_union.html#a315b1f30581d381d4ce1bb980641a200">mm::SerializedUnion::real</a>
                 </div>
                 <div class="ttdeci">double real</div>
-                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:37</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:38</div>
             </div>
             <div class="ttc" id="structmm_1_1_serialized_html">
                 <div class="ttname"><a href="../../d3/d4d/structmm_1_1_serialized.html">mm::Serialized</a></div>
                 <div class="ttdoc">Rappresenta un dato da scrivere o estratto dal database.</div>
-                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:48</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:49</div>
+            </div>
+            <div class="ttc" id="classmm_1_1_i_serializable_html_a69c0c514e11e386b6cb1fbd03f14da17">
+                <div class="ttname"><a
+                        href="../../dc/df3/classmm_1_1_i_serializable.html#a69c0c514e11e386b6cb1fbd03f14da17">mm::ISerializable::get_primary_key</a>
+                </div>
+                <div class="ttdeci">virtual std::vector&lt; std::string &gt; get_primary_key() const =0</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_serialized_html_af1414a72ff10e038d96f6f33f352b2dc">
+                <div class="ttname"><a
+                        href="../../d3/d4d/structmm_1_1_serialized.html#af1414a72ff10e038d96f6f33f352b2dc">mm::Serialized::~Serialized</a>
+                </div>
+                <div class="ttdeci">~Serialized() noexcept</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.cpp:52</div>
             </div>
             <div class="ttc" id="namespacemm_html_ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5">
                 <div class="ttname"><a
                         href="../../d0/d04/namespacemm.html#ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5">mm::TEXT</a>
                 </div>
-                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:27</div>
+                <div class="ttdef"><b>Definition:</b> ISerializable.hpp:28</div>
             </div>
         </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -400,7 +507,7 @@
         <li class="navelem"><a class="el" href="../../d3/d1b/_i_serializable_8hpp.html">ISerializable.hpp</a></li>
         <li class="footer">Generato da
             <a href="http://www.doxygen.org/index.html">
-                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13
+                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.14
         </li>
     </ul>
 </div>

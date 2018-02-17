@@ -9,7 +9,7 @@ var classmm_1_1model_1_1_patient =
         ["get_first_name", "d6/d4a/classmm_1_1model_1_1_patient.html#a3661b2666d368492511ed3bad79c0389", null],
         ["get_fiscal_code", "d6/d4a/classmm_1_1model_1_1_patient.html#a29590c6ce9d2b19dbdff3330ee5e4523", null],
         ["get_last_name", "d6/d4a/classmm_1_1model_1_1_patient.html#a88c0051957b5a6f172cdc35432505923", null],
-        ["get_prescriptions", "d6/d4a/classmm_1_1model_1_1_patient.html#a2a33032170e0cadf905dd263a3364b65", null],
+        ["get_prescriptions", "d6/d4a/classmm_1_1model_1_1_patient.html#ac13776eadc56f98bf353dd412f9c2f51", null],
         ["get_primary_key", "d6/d4a/classmm_1_1model_1_1_patient.html#ae85640f3cb3d34bb57e1129ef46a0cbf", null],
         ["get_risk_factors", "d6/d4a/classmm_1_1model_1_1_patient.html#a7ab70bc4aafc95f687c29d02ac398e06", null],
         ["get_table_name", "d6/d4a/classmm_1_1model_1_1_patient.html#abe79da3e4fabd80e039ae4880dfa76cb", null],

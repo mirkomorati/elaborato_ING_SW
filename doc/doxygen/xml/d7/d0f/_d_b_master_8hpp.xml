@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d7/d0f/_d_b_master_8hpp" kind="file" language="C++">
         <compoundname>DBMaster.hpp</compoundname>
         <includes local="no">sqlite3.h</includes>
@@ -13,7 +13,9 @@
         <includedby refid="dc/d00/_authentication_8hpp" local="yes">code/model/Authentication.hpp</includedby>
         <includedby refid="df/de8/_add_prescription_dialog_8cpp" local="yes">code/gui/AddPrescriptionDialog.cpp
         </includedby>
+        <includedby refid="d6/d9e/_drug_window_8cpp" local="yes">code/gui/DrugWindow.cpp</includedby>
         <includedby refid="d8/d35/_patient_window_8cpp" local="yes">code/gui/PatientWindow.cpp</includedby>
+        <includedby refid="d1/d16/_prescription_window_8cpp" local="yes">code/gui/PrescriptionWindow.cpp</includedby>
         <includedby refid="d7/daf/_med_h_8cpp" local="yes">code/MedH.cpp</includedby>
         <includedby refid="d3/da6/_doctor_8cpp" local="yes">code/model/Doctor.cpp</includedby>
         <includedby refid="d0/d77/_patient_8cpp" local="yes">code/model/Patient.cpp</includedby>
@@ -25,6 +27,8 @@
                 <childnode refid="28" relation="include">
                 </childnode>
                 <childnode refid="32" relation="include">
+                </childnode>
+                <childnode refid="30" relation="include">
                 </childnode>
             </node>
             <node id="29">
@@ -58,31 +62,39 @@
             </node>
         </incdepgraph>
         <invincdepgraph>
+            <node id="37">
+                <label>code/gui/DrugWindow.cpp</label>
+                <link refid="d6/d9e/_drug_window_8cpp"/>
+            </node>
             <node id="34">
                 <label>code/DBMaster.cpp</label>
                 <link refid="d7/d71/_d_b_master_8cpp"/>
             </node>
-            <node id="37">
+            <node id="38">
                 <label>code/gui/LoginWindow.cpp</label>
                 <link refid="d9/d07/_login_window_8cpp"/>
             </node>
-            <node id="39">
+            <node id="41">
                 <label>code/MedH.cpp</label>
                 <link refid="d7/daf/_med_h_8cpp"/>
+            </node>
+            <node id="40">
+                <label>code/gui/PrescriptionWindow.cpp</label>
+                <link refid="d1/d16/_prescription_window_8cpp"/>
             </node>
             <node id="35">
                 <label>code/gui/AddPatientDialog.cpp</label>
                 <link refid="db/db5/_add_patient_dialog_8cpp"/>
             </node>
-            <node id="41">
+            <node id="43">
                 <label>code/gui/AddPrescriptionDialog.cpp</label>
                 <link refid="df/de8/_add_prescription_dialog_8cpp"/>
             </node>
-            <node id="40">
+            <node id="42">
                 <label>code/model/Authentication.cpp</label>
                 <link refid="d6/d6e/_authentication_8cpp"/>
             </node>
-            <node id="38">
+            <node id="39">
                 <label>code/gui/PatientWindow.cpp</label>
                 <link refid="d8/d35/_patient_window_8cpp"/>
             </node>
@@ -95,20 +107,24 @@
                 </childnode>
                 <childnode refid="36" relation="include">
                 </childnode>
-                <childnode refid="41" relation="include">
+                <childnode refid="43" relation="include">
                 </childnode>
-                <childnode refid="38" relation="include">
+                <childnode refid="37" relation="include">
                 </childnode>
                 <childnode refid="39" relation="include">
                 </childnode>
-                <childnode refid="42" relation="include">
+                <childnode refid="40" relation="include">
                 </childnode>
-                <childnode refid="43" relation="include">
+                <childnode refid="41" relation="include">
                 </childnode>
                 <childnode refid="44" relation="include">
                 </childnode>
+                <childnode refid="45" relation="include">
+                </childnode>
+                <childnode refid="46" relation="include">
+                </childnode>
             </node>
-            <node id="44">
+            <node id="46">
                 <label>code/model/Prescription.cpp</label>
                 <link refid="d5/db1/_prescription_8cpp"/>
             </node>
@@ -125,12 +141,16 @@
                 </childnode>
                 <childnode refid="40" relation="include">
                 </childnode>
+                <childnode refid="41" relation="include">
+                </childnode>
+                <childnode refid="42" relation="include">
+                </childnode>
             </node>
-            <node id="42">
+            <node id="44">
                 <label>code/model/Doctor.cpp</label>
                 <link refid="d3/da6/_doctor_8cpp"/>
             </node>
-            <node id="43">
+            <node id="45">
                 <label>code/model/Patient.cpp</label>
                 <link refid="d0/d77/_patient_8cpp"/>
             </node>
@@ -644,7 +664,37 @@
             <codeline lineno="118">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="119">
+            <codeline lineno="127">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal"><sp/>exists(
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>table_name,
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>id_name,
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">id</highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="128">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="129">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -652,10 +702,10 @@
                     <sp/>};
                 </highlight>
             </codeline>
-            <codeline lineno="120">
+            <codeline lineno="130">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="124" refid="dc/d8a/classmm_1_1record__not__found__error" refkind="compound">
+            <codeline lineno="134" refid="dc/d8a/classmm_1_1record__not__found__error" refkind="compound">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -671,7 +721,7 @@
                     <sp/>:<sp/>std::runtime_error<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="125">
+            <codeline lineno="135">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -681,7 +731,7 @@
                 <highlight class="keyword">public</highlight>
                 <highlight class="normal">:</highlight>
             </codeline>
-            <codeline lineno="126">
+            <codeline lineno="136">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -702,10 +752,10 @@
                 <highlight class="normal"><sp/>std::string<sp/>&amp;msg);
                 </highlight>
             </codeline>
-            <codeline lineno="127">
+            <codeline lineno="137">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="128">
+            <codeline lineno="138">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -730,10 +780,10 @@
                 <highlight class="normal"><sp/>*msg);
                 </highlight>
             </codeline>
-            <codeline lineno="129">
+            <codeline lineno="139">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="130">
+            <codeline lineno="140">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -743,7 +793,7 @@
                 <highlight class="keyword">private</highlight>
                 <highlight class="normal">:</highlight>
             </codeline>
-            <codeline lineno="131">
+            <codeline lineno="141">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -769,10 +819,10 @@
                 <highlight class="keyword">override</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="132">
+            <codeline lineno="142">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="133">
+            <codeline lineno="143">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -780,13 +830,13 @@
                     <sp/>};
                 </highlight>
             </codeline>
-            <codeline lineno="134">
+            <codeline lineno="144">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="135">
+            <codeline lineno="145">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="136">
+            <codeline lineno="146">
                 <highlight class="normal"></highlight>
                 <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_DBMASTER_HPP
                 </highlight>

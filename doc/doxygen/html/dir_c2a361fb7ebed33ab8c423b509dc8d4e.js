@@ -8,6 +8,7 @@ var dir_c2a361fb7ebed33ab8c423b509dc8d4e =
         ]],
         ["Drug.cpp", "d1/d9e/_drug_8cpp.html", null],
         ["Drug.hpp", "dd/df9/_drug_8hpp.html", [
+            ["DrugTreeModel", "d2/d52/structmm_1_1model_1_1_drug_tree_model.html", "d2/d52/structmm_1_1model_1_1_drug_tree_model"],
             ["Drug", "db/d9b/classmm_1_1model_1_1_drug.html", "db/d9b/classmm_1_1model_1_1_drug"],
             ["TreeModel", "d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model.html", "d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model"]
         ]],

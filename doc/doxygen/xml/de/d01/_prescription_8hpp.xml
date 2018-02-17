@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="de/d01/_prescription_8hpp" kind="file" language="C++">
         <compoundname>Prescription.hpp</compoundname>
         <includes local="no">vector</includes>
@@ -12,131 +12,186 @@
         <includedby refid="d0/da9/_patient_8hpp" local="yes">code/model/Patient.hpp</includedby>
         <includedby refid="d5/d46/_custom_widgets_8hpp" local="yes">code/gui/view/CustomWidgets.hpp</includedby>
         <includedby refid="dd/dc5/_doctor_8hpp" local="yes">code/model/Doctor.hpp</includedby>
+        <includedby refid="d1/d16/_prescription_window_8cpp" local="yes">code/gui/PrescriptionWindow.cpp</includedby>
         <includedby refid="d5/db1/_prescription_8cpp" local="yes">code/model/Prescription.cpp</includedby>
         <incdepgraph>
-            <node id="756">
+            <node id="1028">
                 <label>code/model/Prescription.hpp</label>
                 <link refid="de/d01/_prescription_8hpp"/>
-                <childnode refid="757" relation="include">
+                <childnode refid="1029" relation="include">
                 </childnode>
-                <childnode refid="758" relation="include">
+                <childnode refid="1030" relation="include">
                 </childnode>
-                <childnode refid="759" relation="include">
+                <childnode refid="1031" relation="include">
                 </childnode>
-                <childnode refid="760" relation="include">
+                <childnode refid="1032" relation="include">
                 </childnode>
-                <childnode refid="761" relation="include">
+                <childnode refid="1033" relation="include">
                 </childnode>
-                <childnode refid="762" relation="include">
+                <childnode refid="1034" relation="include">
                 </childnode>
             </node>
-            <node id="761">
+            <node id="1033">
                 <label>../interfaces/ISerializable.hpp</label>
                 <link refid="d3/d1b/_i_serializable_8hpp"/>
-                <childnode refid="758" relation="include">
+                <childnode refid="1030" relation="include">
                 </childnode>
-                <childnode refid="759" relation="include">
+                <childnode refid="1031" relation="include">
+                </childnode>
+                <childnode refid="1029" relation="include">
                 </childnode>
             </node>
-            <node id="758">
+            <node id="1030">
                 <label>string</label>
             </node>
-            <node id="759">
+            <node id="1031">
                 <label>map</label>
             </node>
-            <node id="760">
+            <node id="1032">
                 <label>gtkmm/treemodelcolumn.h</label>
             </node>
-            <node id="757">
+            <node id="1035">
+                <label>gtkmm/treemodel.h</label>
+            </node>
+            <node id="1029">
                 <label>vector</label>
             </node>
-            <node id="762">
+            <node id="1036">
+                <label>iostream</label>
+            </node>
+            <node id="1034">
                 <label>Drug.hpp</label>
                 <link refid="dd/df9/_drug_8hpp"/>
-                <childnode refid="758" relation="include">
+                <childnode refid="1030" relation="include">
                 </childnode>
-                <childnode refid="757" relation="include">
+                <childnode refid="1029" relation="include">
                 </childnode>
-                <childnode refid="759" relation="include">
+                <childnode refid="1031" relation="include">
                 </childnode>
-                <childnode refid="760" relation="include">
+                <childnode refid="1032" relation="include">
                 </childnode>
-                <childnode refid="761" relation="include">
+                <childnode refid="1035" relation="include">
+                </childnode>
+                <childnode refid="1036" relation="include">
+                </childnode>
+                <childnode refid="1033" relation="include">
                 </childnode>
             </node>
         </incdepgraph>
         <invincdepgraph>
-            <node id="771">
+            <node id="1047">
                 <label>code/gui/PatientWindow.hpp</label>
                 <link refid="dd/de0/_patient_window_8hpp"/>
-                <childnode refid="772" relation="include">
+                <childnode refid="1046" relation="include">
                 </childnode>
-                <childnode refid="767" relation="include">
+                <childnode refid="1043" relation="include">
                 </childnode>
             </node>
-            <node id="773">
+            <node id="1045">
+                <label>code/gui/DrugWindow.cpp</label>
+                <link refid="d6/d9e/_drug_window_8cpp"/>
+            </node>
+            <node id="1048">
                 <label>code/gui/view/CustomWidgets.cpp</label>
                 <link refid="d1/dea/_custom_widgets_8cpp"/>
             </node>
-            <node id="763">
+            <node id="1037">
                 <label>code/model/Prescription.hpp</label>
                 <link refid="de/d01/_prescription_8hpp"/>
-                <childnode refid="764" relation="include">
+                <childnode refid="1038" relation="include">
                 </childnode>
-                <childnode refid="770" relation="include">
+                <childnode refid="1040" relation="include">
                 </childnode>
-                <childnode refid="766" relation="include">
+                <childnode refid="1049" relation="include">
                 </childnode>
-                <childnode refid="774" relation="include">
+                <childnode refid="1050" relation="include">
+                </childnode>
+                <childnode refid="1053" relation="include">
                 </childnode>
             </node>
-            <node id="766">
+            <node id="1049">
                 <label>code/model/Doctor.hpp</label>
                 <link refid="dd/dc5/_doctor_8hpp"/>
-                <childnode refid="767" relation="include">
+                <childnode refid="1045" relation="include">
                 </childnode>
-                <childnode refid="768" relation="include">
+                <childnode refid="1043" relation="include">
+                </childnode>
+                <childnode refid="1050" relation="include">
+                </childnode>
+                <childnode refid="1051" relation="include">
                 </childnode>
             </node>
-            <node id="770">
+            <node id="1044">
+                <label>code/gui/DrugWindow.hpp</label>
+                <link refid="dd/d02/_drug_window_8hpp"/>
+                <childnode refid="1045" relation="include">
+                </childnode>
+                <childnode refid="1046" relation="include">
+                </childnode>
+            </node>
+            <node id="1040">
                 <label>code/gui/view/CustomWidgets.hpp</label>
                 <link refid="d5/d46/_custom_widgets_8hpp"/>
-                <childnode refid="771" relation="include">
+                <childnode refid="1041" relation="include">
                 </childnode>
-                <childnode refid="773" relation="include">
+                <childnode refid="1044" relation="include">
+                </childnode>
+                <childnode refid="1047" relation="include">
+                </childnode>
+                <childnode refid="1048" relation="include">
                 </childnode>
             </node>
-            <node id="765">
+            <node id="1050">
+                <label>code/gui/PrescriptionWindow.cpp</label>
+                <link refid="d1/d16/_prescription_window_8cpp"/>
+            </node>
+            <node id="1041">
+                <label>code/gui/AddPrescriptionDialog.hpp</label>
+                <link refid="d0/d1e/_add_prescription_dialog_8hpp"/>
+                <childnode refid="1042" relation="include">
+                </childnode>
+                <childnode refid="1043" relation="include">
+                </childnode>
+            </node>
+            <node id="1039">
                 <label>code/gui/AddPatientDialog.cpp</label>
                 <link refid="db/db5/_add_patient_dialog_8cpp"/>
             </node>
-            <node id="764">
+            <node id="1042">
+                <label>code/gui/AddPrescriptionDialog.cpp</label>
+                <link refid="df/de8/_add_prescription_dialog_8cpp"/>
+            </node>
+            <node id="1038">
                 <label>code/model/Patient.hpp</label>
                 <link refid="d0/da9/_patient_8hpp"/>
-                <childnode refid="765" relation="include">
+                <childnode refid="1039" relation="include">
                 </childnode>
-                <childnode refid="766" relation="include">
+                <childnode refid="1040" relation="include">
                 </childnode>
-                <childnode refid="769" relation="include">
+                <childnode refid="1042" relation="include">
+                </childnode>
+                <childnode refid="1049" relation="include">
+                </childnode>
+                <childnode refid="1052" relation="include">
                 </childnode>
             </node>
-            <node id="767">
+            <node id="1043">
                 <label>code/gui/PatientWindow.cpp</label>
                 <link refid="d8/d35/_patient_window_8cpp"/>
             </node>
-            <node id="772">
+            <node id="1046">
                 <label>code/gui/MainWindow.cpp</label>
                 <link refid="d5/da5/_main_window_8cpp"/>
             </node>
-            <node id="774">
+            <node id="1053">
                 <label>code/model/Prescription.cpp</label>
                 <link refid="d5/db1/_prescription_8cpp"/>
             </node>
-            <node id="768">
+            <node id="1051">
                 <label>code/model/Doctor.cpp</label>
                 <link refid="d3/da6/_doctor_8cpp"/>
             </node>
-            <node id="769">
+            <node id="1052">
                 <label>code/model/Patient.cpp</label>
                 <link refid="d0/d77/_patient_8cpp"/>
             </node>
@@ -583,11 +638,41 @@
                     <sp/>
                     <sp/>
                     <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">unsigned</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>generateID();
+                </highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
                 </highlight>
                 <highlight class="keyword">public</highlight>
                 <highlight class="normal">:</highlight>
             </codeline>
-            <codeline lineno="40">
+            <codeline lineno="42">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -607,10 +692,10 @@
                 </highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="41">
+            <codeline lineno="43">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="42">
+            <codeline lineno="44">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -632,10 +717,10 @@
                 <highlight class="keyword">override</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="43">
+            <codeline lineno="45">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="44">
+            <codeline lineno="46">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -658,10 +743,10 @@
                 </highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="45">
+            <codeline lineno="47">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="46">
+            <codeline lineno="48">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -679,31 +764,6 @@
                 </highlight>
                 <highlight class="keyword">const<sp/>override
                 </highlight>
-                <highlight class="normal">;</highlight>
-            </codeline>
-            <codeline lineno="47">
-                <highlight class="normal"></highlight>
-            </codeline>
-            <codeline lineno="48">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">string</highlight>
-                <highlight class="normal"><sp/>get_patient_id()
-                    <sp/>
-                </highlight>
-                <highlight class="keyword">const</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
             <codeline lineno="49">
@@ -724,8 +784,8 @@
                     <sp/>
                     <sp/>
                 </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>get_prescription_id()
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>get_patient_id()
                     <sp/>
                 </highlight>
                 <highlight class="keyword">const</highlight>
@@ -749,12 +809,8 @@
                     <sp/>
                     <sp/>
                 </highlight>
-                <highlight class="keyword">const</highlight>
-                <highlight class="normal">
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">string</highlight>
-                <highlight class="normal"><sp/>&amp;get_issue_date()
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>get_prescription_id()
                     <sp/>
                 </highlight>
                 <highlight class="keyword">const</highlight>
@@ -783,7 +839,7 @@
                     <sp/>
                 </highlight>
                 <highlight class="keywordtype">string</highlight>
-                <highlight class="normal"><sp/>&amp;get_expire_date()
+                <highlight class="normal"><sp/>&amp;get_issue_date()
                     <sp/>
                 </highlight>
                 <highlight class="keyword">const</highlight>
@@ -807,9 +863,16 @@
                     <sp/>
                     <sp/>
                 </highlight>
-                <highlight class="keywordtype">string</highlight>
-                <highlight class="normal"><sp/>get_drug_ids_as_string();
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
                 </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;get_expire_date()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
             </codeline>
             <codeline lineno="57">
                 <highlight class="normal"></highlight>
@@ -829,12 +892,9 @@
                     <sp/>
                     <sp/>
                 </highlight>
-                <highlight class="keyword">const</highlight>
-                <highlight class="normal"><sp/>vector&lt;Drug&gt;<sp/>get_drugs()
-                    <sp/>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>get_drug_ids_as_string();
                 </highlight>
-                <highlight class="keyword">const</highlight>
-                <highlight class="normal">;</highlight>
             </codeline>
             <codeline lineno="59">
                 <highlight class="normal"></highlight>
@@ -854,8 +914,8 @@
                     <sp/>
                     <sp/>
                 </highlight>
-                <highlight class="keywordtype">string</highlight>
-                <highlight class="normal"><sp/>get_negative_interactions()
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>vector&lt;Drug&gt;<sp/>get_drugs()
                     <sp/>
                 </highlight>
                 <highlight class="keyword">const</highlight>
@@ -879,8 +939,8 @@
                     <sp/>
                     <sp/>
                 </highlight>
-                <highlight class="keywordtype">bool</highlight>
-                <highlight class="normal"><sp/>is_used()
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>get_negative_interactions()
                     <sp/>
                 </highlight>
                 <highlight class="keyword">const</highlight>
@@ -899,11 +959,281 @@
                     <sp/>
                     <sp/>
                     <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal"><sp/>is_used()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="65">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="66">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>set_patient_id(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;patient_id);
+                </highlight>
+            </codeline>
+            <codeline lineno="67">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="68">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>set_prescription_id(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>prescription_id);
+                </highlight>
+            </codeline>
+            <codeline lineno="69">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="70">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>set_issue_date(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;issue_date);
+                </highlight>
+            </codeline>
+            <codeline lineno="71">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="72">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>set_expire_date(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;expire_date);
+                </highlight>
+            </codeline>
+            <codeline lineno="73">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="74">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>set_negative_interactions(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>map&lt;string,<sp/>string&gt;<sp/>&amp;negative_interactions);
+                </highlight>
+            </codeline>
+            <codeline lineno="75">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="76">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>set_used(
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal"><sp/>used);
+                </highlight>
+            </codeline>
+            <codeline lineno="77">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="78">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>add_drug(
+                    <ref refid="db/d9b/classmm_1_1model_1_1_drug" kindref="compound">Drug</ref>
+                    <sp/>&amp;drug);
+                </highlight>
+            </codeline>
+            <codeline lineno="79">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="80">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>add_drug(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;drugName,
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;drugForm);
+                </highlight>
+            </codeline>
+            <codeline lineno="81">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="82">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal"><sp/>is_valid();
+                </highlight>
+            </codeline>
+            <codeline lineno="83">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="84">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
                 </highlight>
                 <highlight class="keyword">private</highlight>
                 <highlight class="normal">:</highlight>
             </codeline>
-            <codeline lineno="65">
+            <codeline lineno="85">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -922,7 +1252,7 @@
                 <highlight class="normal"><sp/>patient_id;
                 </highlight>
             </codeline>
-            <codeline lineno="66">
+            <codeline lineno="86">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -941,7 +1271,7 @@
                 <highlight class="normal"><sp/>prescription_id;
                 </highlight>
             </codeline>
-            <codeline lineno="67">
+            <codeline lineno="87">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -960,7 +1290,7 @@
                 <highlight class="normal"><sp/>issue_date;
                 </highlight>
             </codeline>
-            <codeline lineno="68">
+            <codeline lineno="88">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -979,7 +1309,7 @@
                 <highlight class="normal"><sp/>expire_date;
                 </highlight>
             </codeline>
-            <codeline lineno="69">
+            <codeline lineno="89">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -995,7 +1325,7 @@
                     <sp/>vector&lt;pair&lt;string,<sp/>string&gt;&gt;<sp/>drug_ids;
                 </highlight>
             </codeline>
-            <codeline lineno="70">
+            <codeline lineno="90">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1011,7 +1341,7 @@
                     <sp/>map&lt;string,<sp/>string&gt;<sp/>negative_interactions;
                 </highlight>
             </codeline>
-            <codeline lineno="71">
+            <codeline lineno="91">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1030,7 +1360,7 @@
                 <highlight class="normal"><sp/>used;
                 </highlight>
             </codeline>
-            <codeline lineno="72">
+            <codeline lineno="92">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1042,7 +1372,7 @@
                     <sp/>};
                 </highlight>
             </codeline>
-            <codeline lineno="73">
+            <codeline lineno="93">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1050,13 +1380,13 @@
                     <sp/>}
                 </highlight>
             </codeline>
-            <codeline lineno="74">
+            <codeline lineno="94">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="75">
+            <codeline lineno="95">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="76">
+            <codeline lineno="96">
                 <highlight class="normal"></highlight>
                 <highlight class="preprocessor">#endif<sp/>//_PRESCRIPTION_H
                 </highlight>

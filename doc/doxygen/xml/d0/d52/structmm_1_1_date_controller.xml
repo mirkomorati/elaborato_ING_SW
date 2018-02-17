@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d0/d52/structmm_1_1_date_controller" kind="struct" language="C++" prot="public">
         <compoundname>mm::DateController</compoundname>
         <basecompoundref prot="public" virt="non-virtual">trackable</basecompoundref>
@@ -92,7 +92,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/gui/Widgets.hpp" line="33" column="1" bodyfile="code/gui/Widgets.cpp"
-                          bodystart="22" bodyend="34"/>
+                          bodystart="21" bodyend="35"/>
             </memberdef>
             <memberdef kind="function" id="d0/d52/structmm_1_1_date_controller_1a7474c420c78178ee6ee6a2e66c16803f"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -107,7 +107,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/gui/Widgets.hpp" line="35" column="1" bodyfile="code/gui/Widgets.cpp"
-                          bodystart="50" bodyend="64"/>
+                          bodystart="44" bodyend="58"/>
             </memberdef>
             <memberdef kind="function" id="d0/d52/structmm_1_1_date_controller_1a9e09c31aa55c3389c6919c716bb8b0dc"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -122,7 +122,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/gui/Widgets.hpp" line="37" column="1" bodyfile="code/gui/Widgets.cpp"
-                          bodystart="36" bodyend="48"/>
+                          bodystart="37" bodyend="42"/>
             </memberdef>
             <memberdef kind="function" id="d0/d52/structmm_1_1_date_controller_1a8ebf6bda6699414521e4e299fd59e843"
                        prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -154,7 +154,22 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/gui/Widgets.hpp" line="44" column="1" bodyfile="code/gui/Widgets.cpp"
-                          bodystart="66" bodyend="78"/>
+                          bodystart="60" bodyend="72"/>
+            </memberdef>
+            <memberdef kind="function" id="d0/d52/structmm_1_1_date_controller_1aa7f999d2d5afec5c6724f92cf2856171"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DateController::init</definition>
+                <argsstring>()</argsstring>
+                <name>init</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="50" column="1" bodyfile="code/gui/Widgets.cpp"
+                          bodystart="74" bodyend="81"/>
             </memberdef>
         </sectiondef>
         <briefdescription>
@@ -184,7 +199,7 @@
             </node>
         </collaborationgraph>
         <location file="code/gui/Widgets.hpp" line="30" column="1" bodyfile="code/gui/Widgets.hpp" bodystart="30"
-                  bodyend="49"/>
+                  bodyend="51"/>
         <listofallmembers>
             <member refid="d0/d52/structmm_1_1_date_controller_1a3244d913ab9d7b96e9617f8711e34bd8" prot="public"
                     virt="non-virtual">
@@ -210,6 +225,11 @@
                     virt="non-virtual">
                 <scope>mm::DateController</scope>
                 <name>getDateAsString</name>
+            </member>
+            <member refid="d0/d52/structmm_1_1_date_controller_1aa7f999d2d5afec5c6724f92cf2856171" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DateController</scope>
+                <name>init</name>
             </member>
             <member refid="d0/d52/structmm_1_1_date_controller_1a1e7373cef0b00e63343ef9d30a1e80c5" prot="public"
                     virt="non-virtual">

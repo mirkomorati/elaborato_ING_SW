@@ -1,6 +1,8 @@
 var classmm_1_1model_1_1_prescription =
     [
         ["TreeModel", "d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model.html", "d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model"],
+        ["add_drug", "db/d61/classmm_1_1model_1_1_prescription.html#aa34227766a8ab89f1f47f8ac72de562d", null],
+        ["add_drug", "db/d61/classmm_1_1model_1_1_prescription.html#a3838d3a11a4c86a8fef81750db4fb516", null],
         ["get_drug_ids_as_string", "db/d61/classmm_1_1model_1_1_prescription.html#abbc707b103a6f8b52b94fec5ec7ebf89", null],
         ["get_drugs", "db/d61/classmm_1_1model_1_1_prescription.html#a0dbc18b00e03ec68f3d224d11bf75823", null],
         ["get_expire_date", "db/d61/classmm_1_1model_1_1_prescription.html#a11c574c3fafddc2e278c8aec417d5977", null],
@@ -11,6 +13,13 @@ var classmm_1_1model_1_1_prescription =
         ["get_primary_key", "db/d61/classmm_1_1model_1_1_prescription.html#af521915f8872df18ae4a50ff2a4f59ff", null],
         ["get_table_name", "db/d61/classmm_1_1model_1_1_prescription.html#a8de9a927dc92c0e0b15dac6f930889e3", null],
         ["is_used", "db/d61/classmm_1_1model_1_1_prescription.html#a23ae0807248a2cd86232b11927c9eea2", null],
+        ["is_valid", "db/d61/classmm_1_1model_1_1_prescription.html#aa63e30d0439cd7c06f155641e1b8390d", null],
         ["serialize", "db/d61/classmm_1_1model_1_1_prescription.html#a592ff88dfa9625a383a7b073a64863b1", null],
+        ["set_expire_date", "db/d61/classmm_1_1model_1_1_prescription.html#a3cb9e467c00323e94e4347e308dc67ba", null],
+        ["set_issue_date", "db/d61/classmm_1_1model_1_1_prescription.html#a0d4cc625d7a39ea9f00bc8885380b391", null],
+        ["set_negative_interactions", "db/d61/classmm_1_1model_1_1_prescription.html#a90ab6821dda442d202d8dabf50c52cc3", null],
+        ["set_patient_id", "db/d61/classmm_1_1model_1_1_prescription.html#a7854a3ef7a7fa8e15bc7a5570e1d0946", null],
+        ["set_prescription_id", "db/d61/classmm_1_1model_1_1_prescription.html#a2514cc052803d493974172dad8659806", null],
+        ["set_used", "db/d61/classmm_1_1model_1_1_prescription.html#a25c7a50956777551b938990157d0046a", null],
         ["unserialize", "db/d61/classmm_1_1model_1_1_prescription.html#a6c38e4ee2fca09b18d61aaa214316b9e", null]
     ];

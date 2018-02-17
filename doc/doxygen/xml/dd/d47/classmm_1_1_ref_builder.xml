@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="dd/d47/classmm_1_1_ref_builder" kind="class" language="C++" prot="public">
         <compoundname>mm::RefBuilder</compoundname>
         <includes refid="dc/db8/_ref_builder_8hpp" local="no">RefBuilder.hpp</includes>
@@ -20,8 +20,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/RefBuilder.hpp" line="34" column="1" bodyfile="code/gui/RefBuilder.hpp"
-                          bodystart="34" bodyend="-1"/>
+                <location file="code/gui/RefBuilder.hpp" line="39" column="1" bodyfile="code/gui/RefBuilder.hpp"
+                          bodystart="39" bodyend="-1"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="private-attrib">
@@ -37,8 +37,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/RefBuilder.hpp" line="35" column="1" bodyfile="code/gui/RefBuilder.hpp"
-                          bodystart="35" bodyend="-1"/>
+                <location file="code/gui/RefBuilder.hpp" line="40" column="1" bodyfile="code/gui/RefBuilder.hpp"
+                          bodystart="40" bodyend="-1"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="public-static-func">
@@ -119,6 +119,34 @@
                 <location file="code/gui/RefBuilder.hpp" line="26" column="1" bodyfile="code/gui/RefBuilder.hpp"
                           bodystart="26" bodyend="28"/>
             </memberdef>
+            <memberdef kind="function" id="dd/d47/classmm_1_1_ref_builder_1a428724036811e6b9ecc6c50c42209a74"
+                       prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+                <templateparamlist>
+                    <param>
+                        <type>typename T</type>
+                    </param>
+                </templateparamlist>
+                <type>void</type>
+                <definition>void mm::RefBuilder::get_widget_derived</definition>
+                <argsstring>(const Glib::ustring &amp;name, T &amp;widget)</argsstring>
+                <name>get_widget_derived</name>
+                <param>
+                    <type>const Glib::ustring &amp;</type>
+                    <declname>name</declname>
+                </param>
+                <param>
+                    <type>T &amp;</type>
+                    <declname>widget</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/RefBuilder.hpp" line="31" column="1" bodyfile="code/gui/RefBuilder.hpp"
+                          bodystart="31" bodyend="33"/>
+            </memberdef>
         </sectiondef>
         <sectiondef kind="private-func">
             <memberdef kind="function" id="dd/d47/classmm_1_1_ref_builder_1ad127ac58b1c0dab7faf97011f91b4ae7"
@@ -133,7 +161,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/RefBuilder.hpp" line="31" column="1" bodyfile="code/gui/RefBuilder.cpp"
+                <location file="code/gui/RefBuilder.hpp" line="36" column="1" bodyfile="code/gui/RefBuilder.cpp"
                           bodystart="21" bodyend="45"/>
             </memberdef>
         </sectiondef>
@@ -145,13 +173,13 @@
         <detaileddescription>
         </detaileddescription>
         <collaborationgraph>
-            <node id="150">
+            <node id="190">
                 <label>mm::RefBuilder</label>
                 <link refid="dd/d47/classmm_1_1_ref_builder"/>
             </node>
         </collaborationgraph>
         <location file="code/gui/RefBuilder.hpp" line="15" column="1" bodyfile="code/gui/RefBuilder.hpp" bodystart="15"
-                  bodyend="36"/>
+                  bodyend="41"/>
         <listofallmembers>
             <member refid="dd/d47/classmm_1_1_ref_builder_1a1c46de2b1ff68aebfc85692a99827753" prot="public"
                     virt="non-virtual">
@@ -162,6 +190,11 @@
                     virt="non-virtual">
                 <scope>mm::RefBuilder</scope>
                 <name>get_widget</name>
+            </member>
+            <member refid="dd/d47/classmm_1_1_ref_builder_1a428724036811e6b9ecc6c50c42209a74" prot="public"
+                    virt="non-virtual">
+                <scope>mm::RefBuilder</scope>
+                <name>get_widget_derived</name>
             </member>
             <member refid="dd/d47/classmm_1_1_ref_builder_1ab405e3dfe231b3a89834e4b57ac51780" prot="private"
                     virt="non-virtual">

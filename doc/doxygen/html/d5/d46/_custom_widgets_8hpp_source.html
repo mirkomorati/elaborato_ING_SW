@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-    <meta name="generator" content="Doxygen 1.8.13"/>
+    <meta name="generator" content="Doxygen 1.8.14"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>MedH: File sorgente code/gui/view/CustomWidgets.hpp</title>
     <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -14,8 +14,9 @@
     <script type="text/javascript" src="../../navtreedata.js"></script>
     <script type="text/javascript" src="../../navtree.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(document).ready(initResizable);
-    </script>
+        /* @license-end */</script>
     <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../../search/searchdata.js"></script>
     <script type="text/javascript" src="../../search/search.js"></script>
@@ -40,20 +41,23 @@
         </table>
     </div>
     <!-- end header part -->
-    <!-- Generato da Doxygen 1.8.13 -->
+    <!-- Generato da Doxygen 1.8.14 -->
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         var searchBox = new SearchBox("searchBox", "../../search", false, 'Cerca');
+        /* @license-end */
     </script>
     <script type="text/javascript" src="../../menudata.js"></script>
     <script type="text/javascript" src="../../menu.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(function () {
             initMenu('../../', true, false, 'search.php', 'Cerca');
             $(document).ready(function () {
                 init_search();
             });
         });
-    </script>
+        /* @license-end */</script>
     <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -67,9 +71,11 @@
     </div>
 </div>
 <script type="text/javascript">
+    /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
     $(document).ready(function () {
         initNavTree('d5/d46/_custom_widgets_8hpp_source.html', '../../');
     });
+    /* @license-end */
 </script>
 <div id="doc-content">
     <!-- window showing the filter options -->
@@ -126,105 +132,475 @@
             </div>
             <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;gtkmm/hvpaned.h&gt;</span>
             </div>
-            <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../../model/Prescription.hpp&quot;</span>
+            <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;gtkmm/listboxrow.h&gt;</span>
             </div>
-            <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-            <div class="line"><a name="l00020"></a><span class="lineno"><a class="line"
-                                                                           href="../../d7/d7c/namespacemm_1_1view.html">   20</a></span>&#160;<span
+            <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../../model/Prescription.hpp&quot;</span>
+            </div>
+            <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;../../utils/Date.hpp&quot;</span>
+            </div>
+            <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;../../model/Patient.hpp&quot;</span>
+            </div>
+            <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+            <div class="line"><a name="l00023"></a><span class="lineno"><a class="line"
+                                                                           href="../../d7/d7c/namespacemm_1_1view.html">   23</a></span>&#160;<span
                     class="keyword">namespace </span><a class="code" href="../../d7/d7c/namespacemm_1_1view.html">mm::view</a>
                 {
             </div>
-            <div class="line"><a name="l00021"></a><span class="lineno"><a class="line"
-                                                                           href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html">   21</a></span>&#160;
+            <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+            <div class="line"><a name="l00025"></a><span class="lineno"><a class="line"
+                                                                           href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html">   25</a></span>&#160;
                 <span class="keyword">class </span><a class="code"
                                                       href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html">PrescriptionExpander</a>
                 : <span class="keyword">public</span> Gtk::Expander {
             </div>
-            <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="comment">// label objects</span>
+            <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; <span
+                    class="comment">/*</span></div>
+            <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">            // label objects</span>
             </div>
-            <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; std::pair&lt;Gtk::Label,
-                Gtk::Label&gt; expirationDate;
+            <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">            std::pair&lt;Gtk::Label, Gtk::Label&gt; expirationDate;</span>
             </div>
-            <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; std::pair&lt;Gtk::Label,
-                Gtk::Label&gt; prescriptionID;
+            <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">            std::pair&lt;Gtk::Label, Gtk::Label&gt; prescriptionID;</span>
             </div>
-            <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; std::pair&lt;Gtk::Label,
-                Gtk::Label&gt; issueDate;
+            <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">            std::pair&lt;Gtk::Label, Gtk::Label&gt; issueDate;</span>
             </div>
-            <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; Gtk::Button gotoButton;</div>
-            <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; Gtk::Box labelBox;</div>
-            <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-            <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; <span class="comment">// content objects</span>
+            <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">            Gtk::HBox labelBox;</span>
             </div>
-            <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; Gtk::HPaned contentPaned;
+            <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">            Gtk::CheckButton used;</span>
             </div>
-            <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; Gtk::Frame detailsFrame;
+            <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span>
             </div>
-            <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; Gtk::Grid detailsGrid;</div>
-            <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; Gtk::Label interactionsLabel;
+            <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">            // content objects</span>
             </div>
-            <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; Gtk::TextView
-                interactionsTextView;
+            <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">            Gtk::HBox contentBox;</span>
             </div>
-            <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; Glib::RefPtr&lt;Gtk::TextBuffer&gt;
-                interactionsBuffer;
+            <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">            Gtk::Frame detailsFrame;</span>
             </div>
-            <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; Gtk::ScrolledWindow
-                interactionsScrolled;
+            <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">            Gtk::Label interactionLabel;</span>
             </div>
-            <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; Gtk::CheckButton used;</div>
-            <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; Gtk::TreeView drugTreeView;
+            <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">            Gtk::Frame drugFrame;</span>
             </div>
-            <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; Glib::RefPtr&lt;Gtk::ListStore&gt;
+            <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">            Gtk::TreeView drugTreeView;</span>
+            </div>
+            <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">            Glib::RefPtr&lt;Gtk::ListStore&gt; drugListStore;</span>
+            </div>
+            <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span>
+            </div>
+            <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">            const int id;</span>
+            </div>
+            <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">        */</span>
+            </div>
+            <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <span
+                    class="comment">/*</span></div>
+            <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">        struct TreeModel : public Gtk::TreeModel::ColumnRecord {</span>
+            </div>
+            <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span>
+            </div>
+            <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">            Gtk::TreeModelColumn&lt;Glib::ustring&gt; name;</span>
+            </div>
+            <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>
+            </div>
+            <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">            TreeModel() {</span>
+            </div>
+            <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">                add(name);</span>
+            </div>
+            <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">            };</span>
+            </div>
+            <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">        };</span>
+            </div>
+            <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">         */</span>
+            </div>
+            <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+            <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; <a class="code"
+                                                                                              href="../../d2/d52/structmm_1_1model_1_1_drug_tree_model.html">model::DrugTreeModel</a>
+                drugColumns;
+            </div>
+            <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; Glib::RefPtr&lt;Gtk::ListStore&gt;
                 drugListStore;
             </div>
-            <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-            <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; <span
+            <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; Gtk::TreeView drugTreeView;
+            </div>
+            <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; <span
                     class="keyword">const</span> <span class="keywordtype">int</span> id;
             </div>
-            <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-            <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; <span
+            <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; Glib::ustring issueDateText;
+            </div>
+            <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+            <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; std::pair&lt;Gtk::Label,
+                Gtk::Label&gt; expirationDate;
+            </div>
+            <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; std::pair&lt;Gtk::Label,
+                Gtk::Label&gt; prescriptionID;
+            </div>
+            <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; std::pair&lt;Gtk::Label,
+                Gtk::Label&gt; issueDate;
+            </div>
+            <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+            <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; Gtk::HBox labelBox;</div>
+            <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; Gtk::HBox contentBox;</div>
+            <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; Gtk::CheckButton used;</div>
+            <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+            <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; <span class="comment">// content objects</span>
+            </div>
+            <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; Gtk::Frame detailsFrame;
+            </div>
+            <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; Gtk::Label interactionLabel;
+            </div>
+            <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; Gtk::Frame drugFrame;</div>
+            <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+            <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; <span
                     class="keyword">public</span>:
             </div>
-            <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <a class="code"
-                                                                                              href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#ac39b2410139956ef3f707caf1b23dc26">PrescriptionExpander</a>(<span
-                    class="keyword">const</span> <a class="code"
-                                                    href="../../db/d61/classmm_1_1model_1_1_prescription.html">mm::model::Prescription</a>
+            <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; <span class="keyword">explicit</span>
+                <a class="code"
+                   href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#ac39b2410139956ef3f707caf1b23dc26">PrescriptionExpander</a>(<span
+                        class="keyword">const</span> <a class="code"
+                                                        href="../../db/d61/classmm_1_1model_1_1_prescription.html">mm::model::Prescription</a>
                 &amp;prescription);
             </div>
-            <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-            <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; <a class="code"
+            <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+            <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; <a class="code"
                                                                                               href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#ac39b2410139956ef3f707caf1b23dc26">PrescriptionExpander</a>()
                 = <span class="keyword">delete</span>;
             </div>
-            <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-            <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; <a class="code"
+            <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+            <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; <span
+                    class="keyword">virtual</span> <a class="code"
+                                                      href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#a8011da18b2ee9bf91ca672813c6c4e27">~PrescriptionExpander</a>();
+            </div>
+            <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+            <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; <a class="code"
                                                                                               href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html">PrescriptionExpander</a>
                 &amp;<a class="code"
                         href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#a21d6e2894f4c17fc279510f4fadd8eff">operator=</a>(<a
                         class="code" href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html">PrescriptionExpander</a>
                 &amp;) = <span class="keyword">delete</span>;
             </div>
-            <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-            <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span
+            <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+            <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span
+                    class="comment">/*</span></div>
+            <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">        bool operator&lt;(const PrescriptionExpander &amp;r) const {</span>
+            </div>
+            <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">            return mm::util::Date(this-&gt;issueDate.second.get_text()) &lt; mm::util::Date(r.issueDate.second.get_text());</span>
+            </div>
+            <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">        }</span>
+            </div>
+            <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span
+                    class="comment">*/</span></div>
+            <div class="line"><a name="l00088"></a><span class="lineno"><a class="line"
+                                                                           href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#a761cc50a6326cc40496a9346a872e734">   88</a></span>&#160;
+                <span class="keywordtype">bool</span> <a class="code"
+                                                         href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#a761cc50a6326cc40496a9346a872e734">operator&lt;</a>(<span
+                        class="keyword">const</span> <a class="code"
+                                                        href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html">PrescriptionExpander</a>
+                &amp;r)<span class="keyword"> const </span>{
+            </div>
+            <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; <span class="keywordflow">return</span>
+                <a class="code" href="../../df/d88/structmm_1_1util_1_1_date.html">mm::util::Date</a>(issueDateText)
+                &lt; <a class="code" href="../../df/d88/structmm_1_1util_1_1_date.html">mm::util::Date</a>(r.issueDateText);
+            </div>
+            <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; }</div>
+            <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+            <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; Glib::ustring <a class="code"
+                                                                                                            href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#aff3761ec2d61ceeb5871e21a39a35bdb">get_name</a>()
+                <span class="keyword">const</span>;
+            </div>
+            <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+            <div class="line"><a name="l00094"></a><span class="lineno"><a class="line"
+                                                                           href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#a3604c2f026067d71ff619036a9615694">   94</a></span>&#160;
+                <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code"
+                                                                                             href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#a3604c2f026067d71ff619036a9615694">operator&gt;</a>(<span
+                        class="keyword">const</span> <a class="code"
+                                                        href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html">PrescriptionExpander</a>
+                &amp;rhs)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> rhs &lt; *<span
+                        class="keyword">this</span>; }
+            </div>
+            <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+            <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; <span
                     class="keywordtype">int</span> <a class="code"
                                                       href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#a63f5113e028e8d9e7eb09981dc28e602">getID</a>()
                 <span class="keyword">const</span>;
             </div>
-            <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; };</div>
-            <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-            <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-            <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-            <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif //ELABORATO_ING_SW_CUSTOMWIDGETS_HPP</span>
+            <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; };</div>
+            <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+            <div class="line"><a name="l00099"></a><span class="lineno"><a class="line"
+                                                                           href="../../dd/d38/classmm_1_1view_1_1_patient_expander.html">   99</a></span>&#160;
+                <span class="keyword">class </span><a class="code"
+                                                      href="../../dd/d38/classmm_1_1view_1_1_patient_expander.html">PatientExpander</a>
+                : <span class="keyword">public</span> Gtk::Expander {
+            </div>
+            <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; <span class="comment">// label widgets</span>
+            </div>
+            <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; Gtk::HBox labelBox;</div>
+            <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; std::pair&lt;Gtk::Label,
+                Gtk::Label&gt; name;
+            </div>
+            <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; std::pair&lt;Gtk::Label,
+                Gtk::Label&gt; lastName;
+            </div>
+            <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; std::pair&lt;Gtk::Label,
+                Gtk::Label&gt; fiscalCode;
+            </div>
+            <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+            <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; <span class="comment">// content widgets</span>
+            </div>
+            <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; Gtk::Frame prescriptionFrame;
+            </div>
+            <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; Gtk::TreeView
+                prescriptionTreeView;
+            </div>
+            <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; Glib::RefPtr&lt;Gtk::ListStore&gt;
+                prescriptionListStore;
+            </div>
+            <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+            <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; <span
+                    class="keyword">public</span>:
+            </div>
+            <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; <a class="code"
+                                                                                              href="../../dd/d38/classmm_1_1view_1_1_patient_expander.html#a07daa447ceef9466613982c707d62eed">PatientExpander</a>(<span
+                    class="keyword">const</span> <a class="code" href="../../d6/d4a/classmm_1_1model_1_1_patient.html">mm::model::Patient</a>
+                &amp;patient, <span class="keyword">const</span> <a class="code"
+                                                                    href="../../db/d9b/classmm_1_1model_1_1_drug.html">mm::model::Drug</a>
+                &amp;drug,
+            </div>
+            <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; <span
+                    class="keyword">const</span> <a class="code" href="../../df/d88/structmm_1_1util_1_1_date.html">mm::util::Date</a>
+                &amp;start = <a class="code"
+                                href="../../df/d88/structmm_1_1util_1_1_date.html#af0758fad7ef32fd535db3295136466eb">mm::util::Date::get_current_date</a>(),
+            </div>
+            <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; <span
+                    class="keyword">const</span> <a class="code" href="../../df/d88/structmm_1_1util_1_1_date.html">mm::util::Date</a>
+                &amp;end = <a class="code"
+                              href="../../df/d88/structmm_1_1util_1_1_date.html#af0758fad7ef32fd535db3295136466eb">mm::util::Date::get_current_date</a>());
+            </div>
+            <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; };</div>
+            <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+            <div class="line"><a name="l00117"></a><span class="lineno"><a class="line"
+                                                                           href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html">  117</a></span>&#160;
+                <span class="keyword">class </span><a class="code"
+                                                      href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html">DrugEntry</a>
+                : <span class="keyword">public</span> Gtk::ListBoxRow {
+            </div>
+            <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; <span
+                    class="keyword">public</span>:
+            </div>
+            <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; <a class="code"
+                                                                                              href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html#a7ad0e954cd9933565be5a86d6a808249">DrugEntry</a>()
+                = <span class="keyword">delete</span>;
+            </div>
+            <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+            <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; <a class="code"
+                                                                                              href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html#a7ad0e954cd9933565be5a86d6a808249">DrugEntry</a>(<span
+                    class="keyword">const</span> Glib::ustring &amp;drug);
+            </div>
+            <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+            <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; sigc::signal&lt;void,
+                mm::view::DrugEntry *&gt; <a class="code"
+                                             href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html#aa7a9f1fd2d7a48a803314fa2c9a86370">signal_removed</a>();
+            </div>
+            <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+            <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; <span
+                    class="keyword">const</span> <span class="keywordtype">string</span> <a class="code"
+                                                                                            href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html#ada43ec12abdaf70f4c3070b6e7f9806d">get_drugName</a>()
+                <span class="keyword">const</span>;
+            </div>
+            <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+            <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; <span
+                    class="keyword">const</span> <span class="keywordtype">string</span> <a class="code"
+                                                                                            href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html#a9034293f6c4dbe85af9d02751684d845">get_drugForm</a>()
+                <span class="keyword">const</span>;
+            </div>
+            <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+            <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; <span class="keyword">protected</span>:
+            </div>
+            <div class="line"><a name="l00130"></a><span class="lineno"><a class="line"
+                                                                           href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html#a34bee6e0f8a4722c4e41b333eac49f60">  130</a></span>&#160;
+                sigc::signal&lt;void, mm::view::DrugEntry *&gt; <span class="keyword">remove</span>;
+            </div>
+            <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+            <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; <span
+                    class="keyword">private</span>:
+            </div>
+            <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; Gtk::Entry entry;</div>
+            <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; Gtk::Button button;</div>
+            <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; Gtk::Grid grid;</div>
+            <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; Glib::ustring drug;</div>
+            <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+            <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; <span class="keywordtype">void</span>
+                removeHandler();
+            </div>
+            <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; };</div>
+            <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+            <div class="line"><a name="l00141"></a><span class="lineno"><a class="line"
+                                                                           href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html">  141</a></span>&#160;
+                <span class="keyword">class </span><a class="code"
+                                                      href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html">InteractionEntry</a>
+                : <span class="keyword">public</span> Gtk::ListBoxRow {
+            </div>
+            <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; <span
+                    class="keyword">public</span>:
+            </div>
+            <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; <a class="code"
+                                                                                              href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html#a6ee26295e5dd8871a0cf801014a8cc34">InteractionEntry</a>()
+                = <span class="keyword">delete</span>;
+            </div>
+            <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+            <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; <a class="code"
+                                                                                              href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html#a6ee26295e5dd8871a0cf801014a8cc34">InteractionEntry</a>(<span
+                    class="keyword">const</span> Glib::ustring &amp;drug1, <span class="keyword">const</span>
+                Glib::ustring &amp;drug2);
+            </div>
+            <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+            <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; sigc::signal&lt;void,
+                mm::view::InteractionEntry *&gt; <a class="code"
+                                                    href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html#a48fc0d3c44a4d0b5364d822ebbdf07a1">signal_removed</a>();
+            </div>
+            <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+            <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; <span
+                    class="keyword">const</span> <span class="keywordtype">string</span> &amp;<a class="code"
+                                                                                                 href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html#a1f579cbaf213f6e602e8d2b67109a1c2">get_drug1</a>()
+                <span class="keyword">const</span>;
+            </div>
+            <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+            <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; <span
+                    class="keyword">const</span> <span class="keywordtype">string</span> &amp;<a class="code"
+                                                                                                 href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html#a58a4843226a5b149541eda7b1905eb85">get_drug2</a>()
+                <span class="keyword">const</span>;
+            </div>
+            <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+            <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; <span class="keyword">protected</span>:
+            </div>
+            <div class="line"><a name="l00154"></a><span class="lineno"><a class="line"
+                                                                           href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html#ac17d59c180df431cfffd90501d6845ef">  154</a></span>&#160;
+                sigc::signal&lt;void, mm::view::InteractionEntry *&gt; <span class="keyword">remove</span>;
+            </div>
+            <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+            <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; <span
+                    class="keyword">private</span>:
+            </div>
+            <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; Gtk::Entry entry;</div>
+            <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; Gtk::Button button;</div>
+            <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; Gtk::Grid grid;</div>
+            <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; <span class="keywordtype">string</span>
+                drug1;
+            </div>
+            <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; <span class="keywordtype">string</span>
+                drug2;
+            </div>
+            <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+            <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; <span class="keywordtype">void</span>
+                removeHandler();
+            </div>
+            <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; };</div>
+            <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+            <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+            <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+            <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#endif //ELABORATO_ING_SW_CUSTOMWIDGETS_HPP</span>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_drug_entry_html_ada43ec12abdaf70f4c3070b6e7f9806d">
+                <div class="ttname"><a
+                        href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html#ada43ec12abdaf70f4c3070b6e7f9806d">mm::view::DrugEntry::get_drugName</a>
+                </div>
+                <div class="ttdeci">const string get_drugName() const</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.cpp:317</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_interaction_entry_html_a1f579cbaf213f6e602e8d2b67109a1c2">
+                <div class="ttname"><a
+                        href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html#a1f579cbaf213f6e602e8d2b67109a1c2">mm::view::InteractionEntry::get_drug1</a>
+                </div>
+                <div class="ttdeci">const string &amp; get_drug1() const</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.cpp:352</div>
+            </div>
+            <div class="ttc" id="structmm_1_1model_1_1_drug_tree_model_html">
+                <div class="ttname"><a href="../../d2/d52/structmm_1_1model_1_1_drug_tree_model.html">mm::model::DrugTreeModel</a>
+                </div>
+                <div class="ttdef"><b>Definition:</b> Drug.hpp:21</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_interaction_entry_html_a58a4843226a5b149541eda7b1905eb85">
+                <div class="ttname"><a
+                        href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html#a58a4843226a5b149541eda7b1905eb85">mm::view::InteractionEntry::get_drug2</a>
+                </div>
+                <div class="ttdeci">const string &amp; get_drug2() const</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.cpp:356</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_interaction_entry_html">
+                <div class="ttname"><a href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html">mm::view::InteractionEntry</a>
+                </div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.hpp:141</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_interaction_entry_html_a48fc0d3c44a4d0b5364d822ebbdf07a1">
+                <div class="ttname"><a
+                        href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html#a48fc0d3c44a4d0b5364d822ebbdf07a1">mm::view::InteractionEntry::signal_removed</a>
+                </div>
+                <div class="ttdeci">sigc::signal&lt; void, mm::view::InteractionEntry * &gt; signal_removed()</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.cpp:348</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_drug_entry_html_a9034293f6c4dbe85af9d02751684d845">
+                <div class="ttname"><a
+                        href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html#a9034293f6c4dbe85af9d02751684d845">mm::view::DrugEntry::get_drugForm</a>
+                </div>
+                <div class="ttdeci">const string get_drugForm() const</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.cpp:322</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_drug_entry_html_a7ad0e954cd9933565be5a86d6a808249">
+                <div class="ttname"><a
+                        href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html#a7ad0e954cd9933565be5a86d6a808249">mm::view::DrugEntry::DrugEntry</a>
+                </div>
+                <div class="ttdeci">DrugEntry()=delete</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_prescription_expander_html_a761cc50a6326cc40496a9346a872e734">
+                <div class="ttname"><a
+                        href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#a761cc50a6326cc40496a9346a872e734">mm::view::PrescriptionExpander::operator&lt;</a>
+                </div>
+                <div class="ttdeci">bool operator&lt;(const PrescriptionExpander &amp;r) const</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.hpp:88</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_prescription_expander_html_a3604c2f026067d71ff619036a9615694">
+                <div class="ttname"><a
+                        href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#a3604c2f026067d71ff619036a9615694">mm::view::PrescriptionExpander::operator&gt;</a>
+                </div>
+                <div class="ttdeci">bool operator&gt;(const PrescriptionExpander &amp;rhs) const</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.hpp:94</div>
+            </div>
+            <div class="ttc" id="classmm_1_1model_1_1_patient_html">
+                <div class="ttname"><a href="../../d6/d4a/classmm_1_1model_1_1_patient.html">mm::model::Patient</a>
+                </div>
+                <div class="ttdef"><b>Definition:</b> Patient.hpp:19</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_prescription_expander_html_aff3761ec2d61ceeb5871e21a39a35bdb">
+                <div class="ttname"><a
+                        href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#aff3761ec2d61ceeb5871e21a39a35bdb">mm::view::PrescriptionExpander::get_name</a>
+                </div>
+                <div class="ttdeci">Glib::ustring get_name() const</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.cpp:288</div>
+            </div>
+            <div class="ttc" id="structmm_1_1util_1_1_date_html_af0758fad7ef32fd535db3295136466eb">
+                <div class="ttname"><a
+                        href="../../df/d88/structmm_1_1util_1_1_date.html#af0758fad7ef32fd535db3295136466eb">mm::util::Date::get_current_date</a>
+                </div>
+                <div class="ttdeci">static Date get_current_date()</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:140</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_prescription_expander_html_a8011da18b2ee9bf91ca672813c6c4e27">
+                <div class="ttname"><a
+                        href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#a8011da18b2ee9bf91ca672813c6c4e27">mm::view::PrescriptionExpander::~PrescriptionExpander</a>
+                </div>
+                <div class="ttdeci">virtual ~PrescriptionExpander()</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.cpp:267</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_interaction_entry_html_a6ee26295e5dd8871a0cf801014a8cc34">
+                <div class="ttname"><a
+                        href="../../d8/ded/classmm_1_1view_1_1_interaction_entry.html#a6ee26295e5dd8871a0cf801014a8cc34">mm::view::InteractionEntry::InteractionEntry</a>
+                </div>
+                <div class="ttdeci">InteractionEntry()=delete</div>
             </div>
             <div class="ttc" id="classmm_1_1view_1_1_prescription_expander_html">
                 <div class="ttname"><a href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html">mm::view::PrescriptionExpander</a>
                 </div>
-                <div class="ttdef"><b>Definition:</b> CustomWidgets.hpp:21</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.hpp:25</div>
             </div>
             <div class="ttc" id="namespacemm_1_1view_html">
                 <div class="ttname"><a href="../../d7/d7c/namespacemm_1_1view.html">mm::view</a></div>
-                <div class="ttdef"><b>Definition:</b> CustomWidgets.hpp:20</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.hpp:23</div>
             </div>
             <div class="ttc" id="classmm_1_1view_1_1_prescription_expander_html_a21d6e2894f4c17fc279510f4fadd8eff">
                 <div class="ttname"><a
@@ -232,17 +608,51 @@
                 </div>
                 <div class="ttdeci">PrescriptionExpander &amp; operator=(PrescriptionExpander &amp;)=delete</div>
             </div>
+            <div class="ttc" id="classmm_1_1model_1_1_drug_html">
+                <div class="ttname"><a href="../../db/d9b/classmm_1_1model_1_1_drug.html">mm::model::Drug</a></div>
+                <div class="ttdef"><b>Definition:</b> Drug.hpp:40</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_drug_entry_html_aa7a9f1fd2d7a48a803314fa2c9a86370">
+                <div class="ttname"><a
+                        href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html#aa7a9f1fd2d7a48a803314fa2c9a86370">mm::view::DrugEntry::signal_removed</a>
+                </div>
+                <div class="ttdeci">sigc::signal&lt; void, mm::view::DrugEntry * &gt; signal_removed()</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.cpp:313</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_drug_entry_html">
+                <div class="ttname"><a href="../../d4/d82/classmm_1_1view_1_1_drug_entry.html">mm::view::DrugEntry</a>
+                </div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.hpp:117</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_patient_expander_html_a07daa447ceef9466613982c707d62eed">
+                <div class="ttname"><a
+                        href="../../dd/d38/classmm_1_1view_1_1_patient_expander.html#a07daa447ceef9466613982c707d62eed">mm::view::PatientExpander::PatientExpander</a>
+                </div>
+                <div class="ttdeci">PatientExpander(const mm::model::Patient &amp;patient, const mm::model::Drug &amp;drug,
+                    const mm::util::Date &amp;start=mm::util::Date::get_current_date(), const mm::util::Date &amp;end=mm::util::Date::get_current_date())
+                </div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.cpp:360</div>
+            </div>
+            <div class="ttc" id="structmm_1_1util_1_1_date_html">
+                <div class="ttname"><a href="../../df/d88/structmm_1_1util_1_1_date.html">mm::util::Date</a></div>
+                <div class="ttdef"><b>Definition:</b> Date.hpp:14</div>
+            </div>
             <div class="ttc" id="classmm_1_1model_1_1_prescription_html">
                 <div class="ttname"><a href="../../db/d61/classmm_1_1model_1_1_prescription.html">mm::model::Prescription</a>
                 </div>
                 <div class="ttdef"><b>Definition:</b> Prescription.hpp:21</div>
+            </div>
+            <div class="ttc" id="classmm_1_1view_1_1_patient_expander_html">
+                <div class="ttname"><a href="../../dd/d38/classmm_1_1view_1_1_patient_expander.html">mm::view::PatientExpander</a>
+                </div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.hpp:99</div>
             </div>
             <div class="ttc" id="classmm_1_1view_1_1_prescription_expander_html_a63f5113e028e8d9e7eb09981dc28e602">
                 <div class="ttname"><a
                         href="../../dc/ddf/classmm_1_1view_1_1_prescription_expander.html#a63f5113e028e8d9e7eb09981dc28e602">mm::view::PrescriptionExpander::getID</a>
                 </div>
                 <div class="ttdeci">int getID() const</div>
-                <div class="ttdef"><b>Definition:</b> CustomWidgets.cpp:110</div>
+                <div class="ttdef"><b>Definition:</b> CustomWidgets.cpp:263</div>
             </div>
             <div class="ttc" id="classmm_1_1view_1_1_prescription_expander_html_ac39b2410139956ef3f707caf1b23dc26">
                 <div class="ttname"><a
@@ -261,7 +671,7 @@
         <li class="navelem"><a class="el" href="../../d5/d46/_custom_widgets_8hpp.html">CustomWidgets.hpp</a></li>
         <li class="footer">Generato da
             <a href="http://www.doxygen.org/index.html">
-                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13
+                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.14
         </li>
     </ul>
 </div>

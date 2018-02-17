@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d2/dac/_add_patient_dialog_8hpp" kind="file" language="C++">
         <compoundname>AddPatientDialog.hpp</compoundname>
         <includes local="no">gtkmm/entry.h</includes>
@@ -8,107 +8,139 @@
         <includes local="no">gtkmm/comboboxtext.h</includes>
         <includes refid="dc/de6/_dialog_8hpp" local="yes">Dialog.hpp</includes>
         <includes refid="dc/d55/_widgets_8hpp" local="yes">Widgets.hpp</includes>
+        <includes refid="d2/dce/string_utils_8hpp" local="yes">../utils/stringUtils.hpp</includes>
         <includedby refid="db/db5/_add_patient_dialog_8cpp" local="yes">code/gui/AddPatientDialog.cpp</includedby>
         <includedby refid="d8/d35/_patient_window_8cpp" local="yes">code/gui/PatientWindow.cpp</includedby>
         <incdepgraph>
-            <node id="110">
+            <node id="127">
+                <label>../utils/stringUtils.hpp</label>
+                <link refid="d2/dce/string_utils_8hpp"/>
+                <childnode refid="128" relation="include">
+                </childnode>
+                <childnode refid="129" relation="include">
+                </childnode>
+                <childnode refid="130" relation="include">
+                </childnode>
+                <childnode refid="131" relation="include">
+                </childnode>
+            </node>
+            <node id="120">
                 <label>IObserver.hpp</label>
                 <link refid="d5/d40/_i_observer_8hpp"/>
-                <childnode refid="111" relation="include">
+                <childnode refid="121" relation="include">
                 </childnode>
-                <childnode refid="112" relation="include">
+                <childnode refid="122" relation="include">
                 </childnode>
             </node>
-            <node id="103">
+            <node id="112">
                 <label>gtkmm/entry.h</label>
             </node>
-            <node id="114">
+            <node id="124">
                 <label>fmt/format.h</label>
             </node>
-            <node id="102">
+            <node id="131">
+                <label>iterator</label>
+            </node>
+            <node id="128">
+                <label>string</label>
+            </node>
+            <node id="111">
                 <label>code/gui/AddPatientDialog.hpp</label>
                 <link refid="d2/dac/_add_patient_dialog_8hpp"/>
-                <childnode refid="103" relation="include">
-                </childnode>
-                <childnode refid="104" relation="include">
-                </childnode>
-                <childnode refid="105" relation="include">
-                </childnode>
-                <childnode refid="106" relation="include">
+                <childnode refid="112" relation="include">
                 </childnode>
                 <childnode refid="113" relation="include">
-                </childnode>
-            </node>
-            <node id="104">
-                <label>gtkmm/button.h</label>
-            </node>
-            <node id="115">
-                <label>../utils/Date.hpp</label>
-                <link refid="d8/d63/_date_8hpp"/>
-                <childnode refid="116" relation="include">
-                </childnode>
-            </node>
-            <node id="116">
-                <label>iostream</label>
-            </node>
-            <node id="113">
-                <label>Widgets.hpp</label>
-                <link refid="dc/d55/_widgets_8hpp"/>
-                <childnode refid="103" relation="include">
-                </childnode>
-                <childnode refid="105" relation="include">
                 </childnode>
                 <childnode refid="114" relation="include">
                 </childnode>
                 <childnode refid="115" relation="include">
                 </childnode>
+                <childnode refid="123" relation="include">
+                </childnode>
+                <childnode refid="127" relation="include">
+                </childnode>
             </node>
-            <node id="107">
+            <node id="117">
+                <label>gtkmm/dialog.h</label>
+            </node>
+            <node id="130">
+                <label>vector</label>
+            </node>
+            <node id="129">
+                <label>sstream</label>
+            </node>
+            <node id="113">
+                <label>gtkmm/button.h</label>
+            </node>
+            <node id="125">
+                <label>../utils/Date.hpp</label>
+                <link refid="d8/d63/_date_8hpp"/>
+                <childnode refid="126" relation="include">
+                </childnode>
+            </node>
+            <node id="126">
+                <label>iostream</label>
+            </node>
+            <node id="123">
+                <label>Widgets.hpp</label>
+                <link refid="dc/d55/_widgets_8hpp"/>
+                <childnode refid="112" relation="include">
+                </childnode>
+                <childnode refid="114" relation="include">
+                </childnode>
+                <childnode refid="124" relation="include">
+                </childnode>
+                <childnode refid="125" relation="include">
+                </childnode>
+            </node>
+            <node id="116">
                 <label>sigc++/trackable.h</label>
             </node>
-            <node id="111">
+            <node id="121">
                 <label>mutex</label>
             </node>
-            <node id="106">
+            <node id="115">
                 <label>Dialog.hpp</label>
                 <link refid="dc/de6/_dialog_8hpp"/>
-                <childnode refid="107" relation="include">
+                <childnode refid="116" relation="include">
                 </childnode>
-                <childnode refid="108" relation="include">
+                <childnode refid="117" relation="include">
+                </childnode>
+                <childnode refid="118" relation="include">
                 </childnode>
             </node>
-            <node id="112">
+            <node id="122">
                 <label>thread</label>
             </node>
-            <node id="108">
+            <node id="118">
                 <label>../interfaces/ISubject.hpp</label>
                 <link refid="d1/d25/_i_subject_8hpp"/>
-                <childnode refid="109" relation="include">
+                <childnode refid="119" relation="include">
                 </childnode>
-                <childnode refid="110" relation="include">
+                <childnode refid="120" relation="include">
                 </childnode>
             </node>
-            <node id="109">
+            <node id="119">
                 <label>set</label>
             </node>
-            <node id="105">
+            <node id="114">
                 <label>gtkmm/comboboxtext.h</label>
             </node>
         </incdepgraph>
         <invincdepgraph>
-            <node id="117">
+            <node id="132">
                 <label>code/gui/AddPatientDialog.hpp</label>
                 <link refid="d2/dac/_add_patient_dialog_8hpp"/>
-                <childnode refid="118" relation="include">
+                <childnode refid="133" relation="include">
                 </childnode>
-                <childnode refid="119" relation="include">
+                <childnode refid="134" relation="include">
                 </childnode>
             </node>
-            <node id="118">
+            <node id="133">
                 <label>code/gui/AddPatientDialog.cpp</label>
                 <link refid="db/db5/_add_patient_dialog_8cpp"/>
             </node>
-            <node id="119">
+            <node id="134">
                 <label>code/gui/PatientWindow.cpp</label>
                 <link refid="d8/d35/_patient_window_8cpp"/>
             </node>
@@ -187,8 +219,14 @@
             </codeline>
             <codeline lineno="13">
                 <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../utils/stringUtils.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="14">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="15">
                 <highlight class="normal"></highlight>
                 <highlight class="keyword">namespace
                     <sp/>
@@ -198,7 +236,7 @@
                     <sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="15" refid="d7/d32/classmm_1_1_add_patient_dialog" refkind="compound">
+            <codeline lineno="16" refid="d7/d32/classmm_1_1_add_patient_dialog" refkind="compound">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -220,7 +258,7 @@
                     <sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="16">
+            <codeline lineno="17">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -230,7 +268,7 @@
                 <highlight class="keyword">public</highlight>
                 <highlight class="normal">:</highlight>
             </codeline>
-            <codeline lineno="17">
+            <codeline lineno="18">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -244,10 +282,10 @@
                          kindref="member">AddPatientDialog</ref>();
                 </highlight>
             </codeline>
-            <codeline lineno="18">
+            <codeline lineno="19">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="19">
+            <codeline lineno="20">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -268,10 +306,10 @@
                 <highlight class="keyword">override</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="20">
+            <codeline lineno="21">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="21">
+            <codeline lineno="22">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -292,10 +330,10 @@
                 <highlight class="keyword">override</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="22">
+            <codeline lineno="23">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="23">
+            <codeline lineno="24">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -305,17 +343,21 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <ref refid="d7/d32/classmm_1_1_add_patient_dialog_1ab78d97d19d77fe6f47fbcd8af6a7b709"
+                    <ref refid="d7/d32/classmm_1_1_add_patient_dialog_1a7c4f7d1dd42d139bffbe54bb478b1f82"
                          kindref="member">~AddPatientDialog</ref>()
                     <sp/>
                 </highlight>
                 <highlight class="keyword">override</highlight>
+                <highlight class="normal"><sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">default</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="24">
+            <codeline lineno="25">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="25">
+            <codeline lineno="26">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -336,10 +378,10 @@
                 <highlight class="keyword">override</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="26">
+            <codeline lineno="27">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="27">
+            <codeline lineno="28">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -349,10 +391,10 @@
                 <highlight class="keyword">private</highlight>
                 <highlight class="normal">:</highlight>
             </codeline>
-            <codeline lineno="28">
+            <codeline lineno="29">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="29">
+            <codeline lineno="30">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -370,10 +412,34 @@
                 <highlight class="keyword">override</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="30">
+            <codeline lineno="31">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="31">
+            <codeline lineno="32">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>dispose(
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" kindref="member">
+                        notify</ref>);
+                </highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="34">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -388,10 +454,10 @@
                 <highlight class="normal"><sp/>okHandler();
                 </highlight>
             </codeline>
-            <codeline lineno="32">
+            <codeline lineno="35">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="33">
+            <codeline lineno="36">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -406,10 +472,10 @@
                 <highlight class="normal"><sp/>cancelHandler();
                 </highlight>
             </codeline>
-            <codeline lineno="34">
+            <codeline lineno="37">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="35">
+            <codeline lineno="38">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -424,10 +490,10 @@
                 <highlight class="normal"><sp/>is_active;
                 </highlight>
             </codeline>
-            <codeline lineno="36">
+            <codeline lineno="39">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="37">
+            <codeline lineno="40">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -439,7 +505,7 @@
                     <sp/>Gtk::Button<sp/>*ok_button;
                 </highlight>
             </codeline>
-            <codeline lineno="38">
+            <codeline lineno="41">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -451,10 +517,10 @@
                     <sp/>Gtk::Button<sp/>*cancel_button;
                 </highlight>
             </codeline>
-            <codeline lineno="39">
+            <codeline lineno="42">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="40">
+            <codeline lineno="43">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -468,7 +534,7 @@
                     <sp/>first_name;
                 </highlight>
             </codeline>
-            <codeline lineno="41">
+            <codeline lineno="44">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -482,7 +548,7 @@
                     <sp/>last_name;
                 </highlight>
             </codeline>
-            <codeline lineno="42">
+            <codeline lineno="45">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -496,7 +562,7 @@
                     <sp/>fiscal_code;
                 </highlight>
             </codeline>
-            <codeline lineno="43">
+            <codeline lineno="46">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -510,7 +576,7 @@
                     <sp/>street;
                 </highlight>
             </codeline>
-            <codeline lineno="44">
+            <codeline lineno="47">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -524,7 +590,7 @@
                     <sp/>civic;
                 </highlight>
             </codeline>
-            <codeline lineno="45">
+            <codeline lineno="48">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -538,7 +604,7 @@
                     <sp/>zip_code;
                 </highlight>
             </codeline>
-            <codeline lineno="46">
+            <codeline lineno="49">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -552,7 +618,7 @@
                     <sp/>city;
                 </highlight>
             </codeline>
-            <codeline lineno="47">
+            <codeline lineno="50">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -566,7 +632,7 @@
                     <sp/>country;
                 </highlight>
             </codeline>
-            <codeline lineno="48">
+            <codeline lineno="51">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -580,7 +646,7 @@
                     <sp/>birth_city;
                 </highlight>
             </codeline>
-            <codeline lineno="49">
+            <codeline lineno="52">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -594,7 +660,7 @@
                     <sp/>birth_country;
                 </highlight>
             </codeline>
-            <codeline lineno="50">
+            <codeline lineno="53">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -608,7 +674,7 @@
                     <sp/>riskFactors;
                 </highlight>
             </codeline>
-            <codeline lineno="51">
+            <codeline lineno="54">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -622,7 +688,7 @@
                     <sp/>birthDate;
                 </highlight>
             </codeline>
-            <codeline lineno="52">
+            <codeline lineno="55">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -630,16 +696,16 @@
                     <sp/>};
                 </highlight>
             </codeline>
-            <codeline lineno="53">
+            <codeline lineno="56">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="54">
+            <codeline lineno="57">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="55">
+            <codeline lineno="58">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="56">
+            <codeline lineno="59">
                 <highlight class="normal"></highlight>
                 <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_ADDPATIENTDIALOG_HPP
                 </highlight>

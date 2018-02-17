@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d1/d50/namespacemm_1_1util" kind="namespace" language="C++">
         <compoundname>mm::util</compoundname>
         <innerclass refid="df/d88/structmm_1_1util_1_1_date" prot="public">mm::util::Date</innerclass>

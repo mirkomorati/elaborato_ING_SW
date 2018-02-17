@@ -4,6 +4,7 @@ var structmm_1_1_date_controller =
         ["DateController", "d0/d52/structmm_1_1_date_controller.html#a591167277348214a72634a4bbc9272ad", null],
         ["getDate", "d0/d52/structmm_1_1_date_controller.html#aa3c0122bfcc36e8d8b43c8ca7ca76197", null],
         ["getDateAsString", "d0/d52/structmm_1_1_date_controller.html#a8ebf6bda6699414521e4e299fd59e843", null],
+        ["init", "d0/d52/structmm_1_1_date_controller.html#aa7f999d2d5afec5c6724f92cf2856171", null],
         ["onDateChanged", "d0/d52/structmm_1_1_date_controller.html#a7474c420c78178ee6ee6a2e66c16803f", null],
         ["reset", "d0/d52/structmm_1_1_date_controller.html#a9e09c31aa55c3389c6919c716bb8b0dc", null],
         ["day", "d0/d52/structmm_1_1_date_controller.html#a332df89b4a88fe3ace3d6d86934a575d", null],

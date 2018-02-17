@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d0/da9/_patient_8hpp" kind="file" language="C++">
         <compoundname>Patient.hpp</compoundname>
         <includes local="no">vector</includes>
@@ -9,106 +9,185 @@
         <includes refid="d3/d1b/_i_serializable_8hpp" local="yes">../interfaces/ISerializable.hpp</includes>
         <includes refid="de/d01/_prescription_8hpp" local="yes">Prescription.hpp</includes>
         <includedby refid="db/db5/_add_patient_dialog_8cpp" local="yes">code/gui/AddPatientDialog.cpp</includedby>
+        <includedby refid="d5/d46/_custom_widgets_8hpp" local="yes">code/gui/view/CustomWidgets.hpp</includedby>
+        <includedby refid="df/de8/_add_prescription_dialog_8cpp" local="yes">code/gui/AddPrescriptionDialog.cpp
+        </includedby>
         <includedby refid="dd/dc5/_doctor_8hpp" local="yes">code/model/Doctor.hpp</includedby>
         <includedby refid="d0/d77/_patient_8cpp" local="yes">code/model/Patient.cpp</includedby>
         <incdepgraph>
-            <node id="735">
+            <node id="994">
                 <label>Prescription.hpp</label>
                 <link refid="de/d01/_prescription_8hpp"/>
-                <childnode refid="730" relation="include">
+                <childnode refid="989" relation="include">
                 </childnode>
-                <childnode refid="731" relation="include">
+                <childnode refid="990" relation="include">
                 </childnode>
-                <childnode refid="734" relation="include">
+                <childnode refid="993" relation="include">
                 </childnode>
-                <childnode refid="732" relation="include">
+                <childnode refid="991" relation="include">
                 </childnode>
-                <childnode refid="733" relation="include">
+                <childnode refid="992" relation="include">
                 </childnode>
-                <childnode refid="736" relation="include">
+                <childnode refid="995" relation="include">
                 </childnode>
             </node>
-            <node id="733">
+            <node id="992">
                 <label>../interfaces/ISerializable.hpp</label>
                 <link refid="d3/d1b/_i_serializable_8hpp"/>
-                <childnode refid="731" relation="include">
+                <childnode refid="990" relation="include">
                 </childnode>
-                <childnode refid="734" relation="include">
+                <childnode refid="993" relation="include">
+                </childnode>
+                <childnode refid="989" relation="include">
                 </childnode>
             </node>
-            <node id="731">
+            <node id="990">
                 <label>string</label>
             </node>
-            <node id="734">
+            <node id="993">
                 <label>map</label>
             </node>
-            <node id="732">
+            <node id="991">
                 <label>gtkmm/treemodelcolumn.h</label>
             </node>
-            <node id="730">
+            <node id="996">
+                <label>gtkmm/treemodel.h</label>
+            </node>
+            <node id="989">
                 <label>vector</label>
             </node>
-            <node id="729">
+            <node id="988">
                 <label>code/model/Patient.hpp</label>
                 <link refid="d0/da9/_patient_8hpp"/>
-                <childnode refid="730" relation="include">
+                <childnode refid="989" relation="include">
                 </childnode>
-                <childnode refid="731" relation="include">
+                <childnode refid="990" relation="include">
                 </childnode>
-                <childnode refid="732" relation="include">
+                <childnode refid="991" relation="include">
                 </childnode>
-                <childnode refid="733" relation="include">
+                <childnode refid="992" relation="include">
                 </childnode>
-                <childnode refid="735" relation="include">
+                <childnode refid="994" relation="include">
                 </childnode>
             </node>
-            <node id="736">
+            <node id="997">
+                <label>iostream</label>
+            </node>
+            <node id="995">
                 <label>Drug.hpp</label>
                 <link refid="dd/df9/_drug_8hpp"/>
-                <childnode refid="731" relation="include">
+                <childnode refid="990" relation="include">
                 </childnode>
-                <childnode refid="730" relation="include">
+                <childnode refid="989" relation="include">
                 </childnode>
-                <childnode refid="734" relation="include">
+                <childnode refid="993" relation="include">
                 </childnode>
-                <childnode refid="732" relation="include">
+                <childnode refid="991" relation="include">
                 </childnode>
-                <childnode refid="733" relation="include">
+                <childnode refid="996" relation="include">
+                </childnode>
+                <childnode refid="997" relation="include">
+                </childnode>
+                <childnode refid="992" relation="include">
                 </childnode>
             </node>
         </incdepgraph>
         <invincdepgraph>
-            <node id="739">
-                <label>code/model/Doctor.hpp</label>
-                <link refid="dd/dc5/_doctor_8hpp"/>
-                <childnode refid="740" relation="include">
+            <node id="1007">
+                <label>code/gui/PatientWindow.hpp</label>
+                <link refid="dd/de0/_patient_window_8hpp"/>
+                <childnode refid="1006" relation="include">
                 </childnode>
-                <childnode refid="741" relation="include">
+                <childnode refid="1003" relation="include">
                 </childnode>
             </node>
-            <node id="738">
+            <node id="1005">
+                <label>code/gui/DrugWindow.cpp</label>
+                <link refid="d6/d9e/_drug_window_8cpp"/>
+            </node>
+            <node id="1008">
+                <label>code/gui/view/CustomWidgets.cpp</label>
+                <link refid="d1/dea/_custom_widgets_8cpp"/>
+            </node>
+            <node id="1009">
+                <label>code/model/Doctor.hpp</label>
+                <link refid="dd/dc5/_doctor_8hpp"/>
+                <childnode refid="1005" relation="include">
+                </childnode>
+                <childnode refid="1003" relation="include">
+                </childnode>
+                <childnode refid="1010" relation="include">
+                </childnode>
+                <childnode refid="1011" relation="include">
+                </childnode>
+            </node>
+            <node id="1004">
+                <label>code/gui/DrugWindow.hpp</label>
+                <link refid="dd/d02/_drug_window_8hpp"/>
+                <childnode refid="1005" relation="include">
+                </childnode>
+                <childnode refid="1006" relation="include">
+                </childnode>
+            </node>
+            <node id="1000">
+                <label>code/gui/view/CustomWidgets.hpp</label>
+                <link refid="d5/d46/_custom_widgets_8hpp"/>
+                <childnode refid="1001" relation="include">
+                </childnode>
+                <childnode refid="1004" relation="include">
+                </childnode>
+                <childnode refid="1007" relation="include">
+                </childnode>
+                <childnode refid="1008" relation="include">
+                </childnode>
+            </node>
+            <node id="1010">
+                <label>code/gui/PrescriptionWindow.cpp</label>
+                <link refid="d1/d16/_prescription_window_8cpp"/>
+            </node>
+            <node id="1001">
+                <label>code/gui/AddPrescriptionDialog.hpp</label>
+                <link refid="d0/d1e/_add_prescription_dialog_8hpp"/>
+                <childnode refid="1002" relation="include">
+                </childnode>
+                <childnode refid="1003" relation="include">
+                </childnode>
+            </node>
+            <node id="999">
                 <label>code/gui/AddPatientDialog.cpp</label>
                 <link refid="db/db5/_add_patient_dialog_8cpp"/>
             </node>
-            <node id="737">
+            <node id="1002">
+                <label>code/gui/AddPrescriptionDialog.cpp</label>
+                <link refid="df/de8/_add_prescription_dialog_8cpp"/>
+            </node>
+            <node id="998">
                 <label>code/model/Patient.hpp</label>
                 <link refid="d0/da9/_patient_8hpp"/>
-                <childnode refid="738" relation="include">
+                <childnode refid="999" relation="include">
                 </childnode>
-                <childnode refid="739" relation="include">
+                <childnode refid="1000" relation="include">
                 </childnode>
-                <childnode refid="742" relation="include">
+                <childnode refid="1002" relation="include">
+                </childnode>
+                <childnode refid="1009" relation="include">
+                </childnode>
+                <childnode refid="1012" relation="include">
                 </childnode>
             </node>
-            <node id="740">
+            <node id="1003">
                 <label>code/gui/PatientWindow.cpp</label>
                 <link refid="d8/d35/_patient_window_8cpp"/>
             </node>
-            <node id="741">
+            <node id="1006">
+                <label>code/gui/MainWindow.cpp</label>
+                <link refid="d5/da5/_main_window_8cpp"/>
+            </node>
+            <node id="1011">
                 <label>code/model/Doctor.cpp</label>
                 <link refid="d3/da6/_doctor_8cpp"/>
             </node>
-            <node id="742">
+            <node id="1012">
                 <label>code/model/Patient.cpp</label>
                 <link refid="d0/d77/_patient_8cpp"/>
             </node>
@@ -882,8 +961,11 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>vector&lt;Prescription&gt;<sp/>get_prescriptions();
+                    <sp/>vector&lt;Prescription&gt;<sp/>get_prescriptions()
+                    <sp/>
                 </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
             </codeline>
             <codeline lineno="63">
                 <highlight class="normal"></highlight>

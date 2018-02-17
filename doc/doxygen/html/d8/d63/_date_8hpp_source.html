@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-    <meta name="generator" content="Doxygen 1.8.13"/>
+    <meta name="generator" content="Doxygen 1.8.14"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>MedH: File sorgente code/utils/Date.hpp</title>
     <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -15,8 +15,9 @@
     <script type="text/javascript" src="../../navtreedata.js"></script>
     <script type="text/javascript" src="../../navtree.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(document).ready(initResizable);
-    </script>
+        /* @license-end */</script>
     <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../../search/searchdata.js"></script>
     <script type="text/javascript" src="../../search/search.js"></script>
@@ -41,20 +42,23 @@
         </table>
     </div>
     <!-- end header part -->
-    <!-- Generato da Doxygen 1.8.13 -->
+    <!-- Generato da Doxygen 1.8.14 -->
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         var searchBox = new SearchBox("searchBox", "../../search", false, 'Cerca');
+        /* @license-end */
     </script>
     <script type="text/javascript" src="../../menudata.js"></script>
     <script type="text/javascript" src="../../menu.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(function () {
             initMenu('../../', true, false, 'search.php', 'Cerca');
             $(document).ready(function () {
                 init_search();
             });
         });
-    </script>
+        /* @license-end */</script>
     <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -68,9 +72,11 @@
     </div>
 </div>
 <script type="text/javascript">
+    /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
     $(document).ready(function () {
         initNavTree('d8/d63/_date_8hpp_source.html', '../../');
     });
+    /* @license-end */
 </script>
 <div id="doc-content">
     <!-- window showing the filter options -->
@@ -271,10 +277,17 @@
                 <span class="keyword">static</span> <span class="keyword">inline</span> <span
                         class="keywordtype">bool</span> <a class="code"
                                                            href="../../df/d88/structmm_1_1util_1_1_date.html#a89c7d3f4d8af79878a28815ffbe2e536">is_leap_year</a>(<span
-                        class="keywordtype">int</span> year) {
+                        class="keywordtype">int</span> <a class="code"
+                                                          href="../../df/d88/structmm_1_1util_1_1_date.html#a318909ff98468f29c7912fa9cffea079">year</a>)
+                {
             </div>
             <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; <span class="keywordflow">return</span>
-                (year % 4 == 0 and year % 100 != 0) or year % 400 == 0;
+                (<a class="code" href="../../df/d88/structmm_1_1util_1_1_date.html#a318909ff98468f29c7912fa9cffea079">year</a>
+                % 4 == 0 and <a class="code"
+                                href="../../df/d88/structmm_1_1util_1_1_date.html#a318909ff98468f29c7912fa9cffea079">year</a>
+                % 100 != 0) or <a class="code"
+                                  href="../../df/d88/structmm_1_1util_1_1_date.html#a318909ff98468f29c7912fa9cffea079">year</a>
+                % 400 == 0;
             </div>
             <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; };</div>
             <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; };</div>
@@ -287,42 +300,42 @@
                         href="../../df/d88/structmm_1_1util_1_1_date.html#ae875de5d40ab9dfa1f1e22cb8a847b60">mm::util::Date::add_months</a>
                 </div>
                 <div class="ttdeci">void add_months(unsigned int months)</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:147</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:148</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_a9aaf2c2d5171e081541831c4a756232e">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#a9aaf2c2d5171e081541831c4a756232e">mm::util::Date::Date</a>
                 </div>
                 <div class="ttdeci">Date()</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:18</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:19</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_aec9077b20de935d88cc03e4c454915a3">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#aec9077b20de935d88cc03e4c454915a3">mm::util::Date::operator&lt;=</a>
                 </div>
                 <div class="ttdeci">bool operator&lt;=(const Date &amp;rhs) const</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:48</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:49</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_a9f2556bcc1150f5542d59b2f9078ee1b">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#a9f2556bcc1150f5542d59b2f9078ee1b">mm::util::Date::operator!=</a>
                 </div>
                 <div class="ttdeci">bool operator!=(const Date &amp;rhs) const</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:36</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:37</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_a9140b9c53f02f7385af15684c81c5ed0">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#a9140b9c53f02f7385af15684c81c5ed0">mm::util::Date::set_from_str</a>
                 </div>
                 <div class="ttdeci">void set_from_str(std::string str)</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:21</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:22</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_acb395628bc3074f0f5f782e39f7ecbbf">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#acb395628bc3074f0f5f782e39f7ecbbf">mm::util::Date::operator&lt;</a>
                 </div>
                 <div class="ttdeci">bool operator&lt;(const Date &amp;rhs) const</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:40</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:41</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_a89c7d3f4d8af79878a28815ffbe2e536">
                 <div class="ttname"><a
@@ -354,14 +367,14 @@
                         href="../../df/d88/structmm_1_1util_1_1_date.html#a5ca08a73148a58f47847a30040eee70b">mm::util::Date::add_years</a>
                 </div>
                 <div class="ttdeci">void add_years(unsigned int years)</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:167</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:168</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_af0758fad7ef32fd535db3295136466eb">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#af0758fad7ef32fd535db3295136466eb">mm::util::Date::get_current_date</a>
                 </div>
                 <div class="ttdeci">static Date get_current_date()</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:139</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:140</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_a018f3e7261b88c9a47aae5b08120b331">
                 <div class="ttname"><a
@@ -375,42 +388,42 @@
                         href="../../df/d88/structmm_1_1util_1_1_date.html#ad5ed2bc80bbaa949aa13707a73064345">mm::util::Date::get_current_day</a>
                 </div>
                 <div class="ttdeci">static int get_current_day()</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:94</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:95</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_afec17843da4296a2341290107901eaa5">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#afec17843da4296a2341290107901eaa5">mm::util::Date::get_current_year</a>
                 </div>
                 <div class="ttdeci">static int get_current_year()</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:88</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:89</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_a9aecce8821f2448c0d2d36a5fbf455b1">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#a9aecce8821f2448c0d2d36a5fbf455b1">mm::util::Date::operator+=</a>
                 </div>
                 <div class="ttdeci">void operator+=(int days)</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:106</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:107</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_a36a932c021e6e5e9ebed44752b78fd7c">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#a36a932c021e6e5e9ebed44752b78fd7c">mm::util::Date::operator+</a>
                 </div>
                 <div class="ttdeci">Date operator+(int days)</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:122</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:123</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_aa32e7e2771581a860a49a59cdbcec8f8">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#aa32e7e2771581a860a49a59cdbcec8f8">mm::util::Date::get_as_text</a>
                 </div>
                 <div class="ttdeci">const std::string get_as_text()</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:72</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:73</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_ab3da347f3603aa3a7fe057a5a0d012d2">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#ab3da347f3603aa3a7fe057a5a0d012d2">mm::util::Date::get_current_month</a>
                 </div>
                 <div class="ttdeci">static int get_current_month()</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:100</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:101</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html">
                 <div class="ttname"><a href="../../df/d88/structmm_1_1util_1_1_date.html">mm::util::Date</a></div>
@@ -421,7 +434,7 @@
                         href="../../df/d88/structmm_1_1util_1_1_date.html#ae4b2c74f7e6ebfed3daaafc999af31ba">mm::util::Date::is_valid</a>
                 </div>
                 <div class="ttdeci">bool is_valid()</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:79</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:80</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_a318909ff98468f29c7912fa9cffea079">
                 <div class="ttname"><a
@@ -435,21 +448,21 @@
                         href="../../df/d88/structmm_1_1util_1_1_date.html#a5b070fd2cd4a72cf74849abd9244b6d3">mm::util::Date::operator&gt;</a>
                 </div>
                 <div class="ttdeci">bool operator&gt;(const Date &amp;rhs) const</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:44</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:45</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_ab0dc9872f7646c748d492afcff696a0d">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#ab0dc9872f7646c748d492afcff696a0d">mm::util::Date::operator&gt;=</a>
                 </div>
                 <div class="ttdeci">bool operator&gt;=(const Date &amp;rhs) const</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:60</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:61</div>
             </div>
             <div class="ttc" id="structmm_1_1util_1_1_date_html_a55071cbbf31cd8956cd4a7d5116e0d95">
                 <div class="ttname"><a
                         href="../../df/d88/structmm_1_1util_1_1_date.html#a55071cbbf31cd8956cd4a7d5116e0d95">mm::util::Date::operator==</a>
                 </div>
                 <div class="ttdeci">bool operator==(const Date &amp;rhs) const</div>
-                <div class="ttdef"><b>Definition:</b> Date.cpp:30</div>
+                <div class="ttdef"><b>Definition:</b> Date.cpp:31</div>
             </div>
         </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -461,7 +474,7 @@
         <li class="navelem"><a class="el" href="../../d8/d63/_date_8hpp.html">Date.hpp</a></li>
         <li class="footer">Generato da
             <a href="http://www.doxygen.org/index.html">
-                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13
+                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.14
         </li>
     </ul>
 </div>

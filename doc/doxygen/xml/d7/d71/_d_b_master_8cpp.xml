@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d7/d71/_d_b_master_8cpp" kind="file" language="C++">
         <compoundname>DBMaster.cpp</compoundname>
         <includes refid="d7/d0f/_d_b_master_8hpp" local="yes">DBMaster.hpp</includes>
@@ -29,6 +29,8 @@
                 <childnode refid="17" relation="include">
                 </childnode>
                 <childnode refid="21" relation="include">
+                </childnode>
+                <childnode refid="19" relation="include">
                 </childnode>
             </node>
             <node id="18">
@@ -2455,7 +2457,7 @@
                 <highlight class="keywordflow">throw</highlight>
                 <highlight class="normal"><sp/>std::runtime_error(fmt::format(
                 </highlight>
-                <highlight class="stringliteral">&quot;cannot<sp/>execute<sp/>insert<sp/>statement:<sp/>\&quot;{}\&quot;\nsqlite
+                <highlight class="stringliteral">&quot;cannot<sp/>execute<sp/>select<sp/>statement:<sp/>\&quot;{}\&quot;\nsqlite
                     <sp/>error:<sp/>{}&quot;
                 </highlight>
                 <highlight class="normal">,<sp/>query.str(),
@@ -4820,9 +4822,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>
-                    <ref refid="da/d0d/classmm_1_1_d_b_master_1a9e8092b67a249a273668ad042a4084e2" kindref="member">
-                        extract_from_db</ref>(obj,<sp/>{
+                    <sp/>extract_from_db(obj,<sp/>{
                 </highlight>
                 <highlight class="keywordtype">id</highlight>
                 <highlight class="normal">});</highlight>
@@ -5223,6 +5223,344 @@
                 <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="318">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="da/d0d/classmm_1_1_d_b_master_1a16926fd78511ec82ea52da00b84a5d9d" kindref="member">
+                        mm::DBMaster::exists</ref>(
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>table_name,
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>id_name,
+                    <sp/>
+                    <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">mm::Serialized</ref>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">id</highlight>
+                <highlight class="normal">)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="319">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>query;
+                </highlight>
+            </codeline>
+            <codeline lineno="320">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>sqlite3_stmt<sp/>*stmt;
+                </highlight>
+            </codeline>
+            <codeline lineno="321">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="322">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">switch</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keywordtype">id</highlight>
+                <highlight class="normal">.get_type())<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="323">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a"
+                         kindref="member">INTEGER</ref>:
+                </highlight>
+            </codeline>
+            <codeline lineno="324">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>query<sp/>=<sp/>fmt::format(
+                </highlight>
+                <highlight class="stringliteral">&quot;select<sp/>count(1)<sp/>from<sp/>{}<sp/>where<sp/>{}<sp/>=<sp/>{}&quot;
+                </highlight>
+                <highlight class="normal">,<sp/>table_name,<sp/>id_name,<sp/>to_string(
+                </highlight>
+                <highlight class="keywordtype">id</highlight>
+                <highlight class="normal">.get_int()));</highlight>
+            </codeline>
+            <codeline lineno="325">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">break</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="326">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331"
+                         kindref="member">REAL</ref>:
+                </highlight>
+            </codeline>
+            <codeline lineno="327">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>query<sp/>=<sp/>fmt::format(
+                </highlight>
+                <highlight class="stringliteral">&quot;select<sp/>count(1)<sp/>from<sp/>{}<sp/>where<sp/>{}<sp/>=<sp/>{}&quot;
+                </highlight>
+                <highlight class="normal">,<sp/>table_name,<sp/>id_name,<sp/>to_string(
+                </highlight>
+                <highlight class="keywordtype">id</highlight>
+                <highlight class="normal">.get_real()));</highlight>
+            </codeline>
+            <codeline lineno="328">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">break</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="329">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5"
+                         kindref="member">TEXT</ref>:
+                </highlight>
+            </codeline>
+            <codeline lineno="330">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>query<sp/>=<sp/>fmt::format(
+                </highlight>
+                <highlight class="stringliteral">&quot;select<sp/>count(1)<sp/>from<sp/>{}<sp/>where<sp/>{}<sp/>=<sp/>{}&quot;
+                </highlight>
+                <highlight class="normal">,<sp/>table_name,<sp/>id_name,
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">id</highlight>
+                <highlight class="normal">.get_str());</highlight>
+            </codeline>
+            <codeline lineno="331">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">break</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="332">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="333">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="334">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(sqlite3_prepare(db,<sp/>query.c_str(),<sp/>-1,<sp/>&amp;stmt,
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">nullptr</highlight>
+                <highlight class="normal">)<sp/>!=<sp/>SQLITE_OK)
+                </highlight>
+            </codeline>
+            <codeline lineno="335">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal"><sp/>std::runtime_error(fmt::format(
+                </highlight>
+                <highlight class="stringliteral">&quot;cannot<sp/>prepare<sp/>statement<sp/>with<sp/>query<sp/>{}&quot;
+                </highlight>
+                <highlight class="normal">,<sp/>query));
+                </highlight>
+            </codeline>
+            <codeline lineno="336">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="337">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>rc<sp/>=<sp/>sqlite3_step(stmt);
+                </highlight>
+            </codeline>
+            <codeline lineno="338">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="339">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(rc<sp/>==<sp/>SQLITE_ERROR)
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal"><sp/>std::runtime_error(fmt::format(
+                </highlight>
+                <highlight class="stringliteral">&quot;cannot<sp/>exec<sp/>query<sp/>{}&quot;
+                </highlight>
+                <highlight class="normal">,<sp/>query));
+                </highlight>
+            </codeline>
+            <codeline lineno="340">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="341">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>rc<sp/>==<sp/>SQLITE_ROW<sp/>and<sp/>sqlite3_column_int(stmt,<sp/>0)<sp/>&gt;=
+                    <sp/>1;
+                </highlight>
+            </codeline>
+            <codeline lineno="342">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="343">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="344">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="345">
                 <highlight class="normal"><ref
                         refid="dc/d8a/classmm_1_1record__not__found__error_1a3457a336328538174f06d4023b7474c8"
                         kindref="member">mm::record_not_found_error::record_not_found_error</ref>(
@@ -5235,7 +5573,7 @@
                 <highlight class="normal"><sp/>*msg)
                 </highlight>
             </codeline>
-            <codeline lineno="319">
+            <codeline lineno="346">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -5249,10 +5587,10 @@
                     <ref refid="d8/dcc/namespacestd" kindref="compound">std</ref>::runtime_error(msg)<sp/>{}
                 </highlight>
             </codeline>
-            <codeline lineno="320">
+            <codeline lineno="347">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="321">
+            <codeline lineno="348">
                 <highlight class="normal"><ref
                         refid="dc/d8a/classmm_1_1record__not__found__error_1a3457a336328538174f06d4023b7474c8"
                         kindref="member">mm::record_not_found_error::record_not_found_error</ref>(
@@ -5261,7 +5599,7 @@
                 <highlight class="normal"><sp/>std::string<sp/>&amp;msg)
                 </highlight>
             </codeline>
-            <codeline lineno="322">
+            <codeline lineno="349">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -5275,10 +5613,10 @@
                     <ref refid="d8/dcc/namespacestd" kindref="compound">std</ref>::runtime_error(msg)<sp/>{}
                 </highlight>
             </codeline>
-            <codeline lineno="323">
+            <codeline lineno="350">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="324">
+            <codeline lineno="351">
                 <highlight class="normal"></highlight>
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">
@@ -5288,7 +5626,7 @@
                 <highlight class="normal"><sp/>*mm::record_not_found_error::what()<sp/>const<sp/>noexcept<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="325">
+            <codeline lineno="352">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -5299,10 +5637,10 @@
                 <highlight class="normal"><sp/>std::runtime_error::what();
                 </highlight>
             </codeline>
-            <codeline lineno="326">
+            <codeline lineno="353">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="327">
+            <codeline lineno="354">
                 <highlight class="normal"></highlight>
             </codeline>
         </programlisting>

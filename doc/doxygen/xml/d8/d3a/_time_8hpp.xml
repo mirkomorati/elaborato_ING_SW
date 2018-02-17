@@ -1,36 +1,48 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d8/d3a/_time_8hpp" kind="file" language="C++">
         <compoundname>Time.hpp</compoundname>
         <includedby refid="dd/dc5/_doctor_8hpp" local="yes">code/model/Doctor.hpp</includedby>
         <includedby refid="db/d84/_time_8cpp" local="yes">code/utils/Time.cpp</includedby>
         <invincdepgraph>
-            <node id="829">
+            <node id="1120">
+                <label>code/gui/DrugWindow.cpp</label>
+                <link refid="d6/d9e/_drug_window_8cpp"/>
+            </node>
+            <node id="1119">
                 <label>code/model/Doctor.hpp</label>
                 <link refid="dd/dc5/_doctor_8hpp"/>
-                <childnode refid="830" relation="include">
+                <childnode refid="1120" relation="include">
                 </childnode>
-                <childnode refid="831" relation="include">
+                <childnode refid="1121" relation="include">
+                </childnode>
+                <childnode refid="1122" relation="include">
+                </childnode>
+                <childnode refid="1123" relation="include">
                 </childnode>
             </node>
-            <node id="832">
+            <node id="1122">
+                <label>code/gui/PrescriptionWindow.cpp</label>
+                <link refid="d1/d16/_prescription_window_8cpp"/>
+            </node>
+            <node id="1124">
                 <label>code/utils/Time.cpp</label>
                 <link refid="db/d84/_time_8cpp"/>
             </node>
-            <node id="828">
+            <node id="1118">
                 <label>code/utils/Time.hpp</label>
                 <link refid="d8/d3a/_time_8hpp"/>
-                <childnode refid="829" relation="include">
+                <childnode refid="1119" relation="include">
                 </childnode>
-                <childnode refid="832" relation="include">
+                <childnode refid="1124" relation="include">
                 </childnode>
             </node>
-            <node id="830">
+            <node id="1121">
                 <label>code/gui/PatientWindow.cpp</label>
                 <link refid="d8/d35/_patient_window_8cpp"/>
             </node>
-            <node id="831">
+            <node id="1123">
                 <label>code/model/Doctor.cpp</label>
                 <link refid="d3/da6/_doctor_8cpp"/>
             </node>

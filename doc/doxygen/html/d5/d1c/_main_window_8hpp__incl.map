@@ -1,6 +1,6 @@
 <map id="code/gui/MainWindow.hpp" name="code/gui/MainWindow.hpp">
-<area shape="rect" id="node4" href="$de/d0b/_window_8hpp.html" title="Window.hpp" alt="" coords="221,79,315,104"/>
-<area shape="rect" id="node10" href="$dc/de6/_dialog_8hpp.html" title="Dialog.hpp" alt="" coords="339,79,424,104"/>
-<area shape="rect" id="node5" href="$d1/d25/_i_subject_8hpp.html" title="../interfaces/ISubject.hpp" alt="" coords="184,152,352,177"/>
-<area shape="rect" id="node7" href="$d5/d40/_i_observer_8hpp.html" title="IObserver.hpp" alt="" coords="263,225,368,251"/>
+<area shape="rect" id="node5" href="$de/d0b/_window_8hpp.html" title="Window.hpp" alt="" coords="297,79,391,104"/>
+<area shape="rect" id="node11" href="$dc/de6/_dialog_8hpp.html" title="Dialog.hpp" alt="" coords="444,79,529,104"/>
+<area shape="rect" id="node6" href="$d1/d25/_i_subject_8hpp.html" title="../interfaces/ISubject.hpp" alt="" coords="244,152,412,177"/>
+<area shape="rect" id="node8" href="$d5/d40/_i_observer_8hpp.html" title="IObserver.hpp" alt="" coords="323,225,428,251"/>
 </map>

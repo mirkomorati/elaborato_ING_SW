@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="df/d88/structmm_1_1util_1_1_date" kind="struct" language="C++" prot="public">
         <compoundname>mm::util::Date</compoundname>
         <includes refid="d8/d63/_date_8hpp" local="no">Date.hpp</includes>
@@ -84,8 +84,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="15" column="1" bodyfile="code/utils/Date.cpp" bodystart="15"
-                          bodyend="16"/>
+                <location file="code/utils/Date.hpp" line="15" column="1" bodyfile="code/utils/Date.cpp" bodystart="16"
+                          bodyend="17"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a9aaf2c2d5171e081541831c4a756232e"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -99,8 +99,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="17" column="1" bodyfile="code/utils/Date.cpp" bodystart="18"
-                          bodyend="19"/>
+                <location file="code/utils/Date.hpp" line="17" column="1" bodyfile="code/utils/Date.cpp" bodystart="19"
+                          bodyend="20"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a9065cbdea26e95cfbb6537a5ba06f45d"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -118,8 +118,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="19" column="1" bodyfile="code/utils/Date.cpp" bodystart="143"
-                          bodyend="145"/>
+                <location file="code/utils/Date.hpp" line="19" column="1" bodyfile="code/utils/Date.cpp" bodystart="144"
+                          bodyend="146"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a9140b9c53f02f7385af15684c81c5ed0"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -137,8 +137,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="21" column="1" bodyfile="code/utils/Date.cpp" bodystart="21"
-                          bodyend="28"/>
+                <location file="code/utils/Date.hpp" line="21" column="1" bodyfile="code/utils/Date.cpp" bodystart="22"
+                          bodyend="29"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1aa32e7e2771581a860a49a59cdbcec8f8"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -152,8 +152,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="23" column="1" bodyfile="code/utils/Date.cpp" bodystart="72"
-                          bodyend="77"/>
+                <location file="code/utils/Date.hpp" line="23" column="1" bodyfile="code/utils/Date.cpp" bodystart="73"
+                          bodyend="78"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1ae4b2c74f7e6ebfed3daaafc999af31ba"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -167,8 +167,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="25" column="1" bodyfile="code/utils/Date.cpp" bodystart="79"
-                          bodyend="86"/>
+                <location file="code/utils/Date.hpp" line="25" column="1" bodyfile="code/utils/Date.cpp" bodystart="80"
+                          bodyend="87"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a55071cbbf31cd8956cd4a7d5116e0d95"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -187,8 +187,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="27" column="1" bodyfile="code/utils/Date.cpp" bodystart="30"
-                          bodyend="34"/>
+                <location file="code/utils/Date.hpp" line="27" column="1" bodyfile="code/utils/Date.cpp" bodystart="31"
+                          bodyend="35"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a9f2556bcc1150f5542d59b2f9078ee1b"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -207,8 +207,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="29" column="1" bodyfile="code/utils/Date.cpp" bodystart="36"
-                          bodyend="38"/>
+                <location file="code/utils/Date.hpp" line="29" column="1" bodyfile="code/utils/Date.cpp" bodystart="37"
+                          bodyend="39"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1acb395628bc3074f0f5f782e39f7ecbbf"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -227,8 +227,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="31" column="1" bodyfile="code/utils/Date.cpp" bodystart="40"
-                          bodyend="42"/>
+                <location file="code/utils/Date.hpp" line="31" column="1" bodyfile="code/utils/Date.cpp" bodystart="41"
+                          bodyend="43"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a5b070fd2cd4a72cf74849abd9244b6d3"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -247,8 +247,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="33" column="1" bodyfile="code/utils/Date.cpp" bodystart="44"
-                          bodyend="46"/>
+                <location file="code/utils/Date.hpp" line="33" column="1" bodyfile="code/utils/Date.cpp" bodystart="45"
+                          bodyend="47"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1aec9077b20de935d88cc03e4c454915a3"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -267,8 +267,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="35" column="1" bodyfile="code/utils/Date.cpp" bodystart="48"
-                          bodyend="58"/>
+                <location file="code/utils/Date.hpp" line="35" column="1" bodyfile="code/utils/Date.cpp" bodystart="49"
+                          bodyend="59"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1ab0dc9872f7646c748d492afcff696a0d"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -287,8 +287,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="37" column="1" bodyfile="code/utils/Date.cpp" bodystart="60"
-                          bodyend="70"/>
+                <location file="code/utils/Date.hpp" line="37" column="1" bodyfile="code/utils/Date.cpp" bodystart="61"
+                          bodyend="71"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a9aecce8821f2448c0d2d36a5fbf455b1"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -306,8 +306,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="39" column="1" bodyfile="code/utils/Date.cpp" bodystart="106"
-                          bodyend="120"/>
+                <location file="code/utils/Date.hpp" line="39" column="1" bodyfile="code/utils/Date.cpp" bodystart="107"
+                          bodyend="121"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a36a932c021e6e5e9ebed44752b78fd7c"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -327,8 +327,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="41" column="1" bodyfile="code/utils/Date.cpp" bodystart="122"
-                          bodyend="137"/>
+                <location file="code/utils/Date.hpp" line="41" column="1" bodyfile="code/utils/Date.cpp" bodystart="123"
+                          bodyend="138"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1ae875de5d40ab9dfa1f1e22cb8a847b60"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -346,8 +346,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="48" column="1" bodyfile="code/utils/Date.cpp" bodystart="147"
-                          bodyend="165"/>
+                <location file="code/utils/Date.hpp" line="48" column="1" bodyfile="code/utils/Date.cpp" bodystart="148"
+                          bodyend="166"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a5ca08a73148a58f47847a30040eee70b"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -365,8 +365,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="50" column="1" bodyfile="code/utils/Date.cpp" bodystart="167"
-                          bodyend="169"/>
+                <location file="code/utils/Date.hpp" line="50" column="1" bodyfile="code/utils/Date.cpp" bodystart="168"
+                          bodyend="170"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="friend">
@@ -408,8 +408,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="56" column="1" bodyfile="code/utils/Date.cpp" bodystart="94"
-                          bodyend="98"/>
+                <location file="code/utils/Date.hpp" line="56" column="1" bodyfile="code/utils/Date.cpp" bodystart="95"
+                          bodyend="99"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1ab3da347f3603aa3a7fe057a5a0d012d2"
                        prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -423,8 +423,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="58" column="1" bodyfile="code/utils/Date.cpp" bodystart="100"
-                          bodyend="104"/>
+                <location file="code/utils/Date.hpp" line="58" column="1" bodyfile="code/utils/Date.cpp" bodystart="101"
+                          bodyend="105"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1afec17843da4296a2341290107901eaa5"
                        prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -438,8 +438,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="60" column="1" bodyfile="code/utils/Date.cpp" bodystart="88"
-                          bodyend="92"/>
+                <location file="code/utils/Date.hpp" line="60" column="1" bodyfile="code/utils/Date.cpp" bodystart="89"
+                          bodyend="93"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1af0758fad7ef32fd535db3295136466eb"
                        prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -455,8 +455,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/utils/Date.hpp" line="62" column="1" bodyfile="code/utils/Date.cpp" bodystart="139"
-                          bodyend="141"/>
+                <location file="code/utils/Date.hpp" line="62" column="1" bodyfile="code/utils/Date.cpp" bodystart="140"
+                          bodyend="142"/>
             </memberdef>
             <memberdef kind="function" id="df/d88/structmm_1_1util_1_1_date_1a89c7d3f4d8af79878a28815ffbe2e536"
                        prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">

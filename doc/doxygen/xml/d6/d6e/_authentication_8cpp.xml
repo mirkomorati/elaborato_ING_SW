@@ -1,91 +1,93 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d6/d6e/_authentication_8cpp" kind="file" language="C++">
         <compoundname>Authentication.cpp</compoundname>
         <includes refid="dc/d00/_authentication_8hpp" local="yes">Authentication.hpp</includes>
         <incdepgraph>
-            <node id="625">
+            <node id="867">
                 <label>IObserver.hpp</label>
                 <link refid="d5/d40/_i_observer_8hpp"/>
-                <childnode refid="626" relation="include">
+                <childnode refid="868" relation="include">
                 </childnode>
-                <childnode refid="627" relation="include">
+                <childnode refid="869" relation="include">
                 </childnode>
             </node>
-            <node id="621">
+            <node id="863">
                 <label>interfaces/ISerializable.hpp</label>
                 <link refid="d3/d1b/_i_serializable_8hpp"/>
-                <childnode refid="618" relation="include">
+                <childnode refid="860" relation="include">
                 </childnode>
-                <childnode refid="622" relation="include">
+                <childnode refid="864" relation="include">
+                </childnode>
+                <childnode refid="862" relation="include">
                 </childnode>
             </node>
-            <node id="619">
+            <node id="861">
                 <label>stdexcept</label>
             </node>
-            <node id="618">
+            <node id="860">
                 <label>string</label>
             </node>
-            <node id="622">
+            <node id="864">
                 <label>map</label>
             </node>
-            <node id="617">
+            <node id="859">
                 <label>sqlite3.h</label>
             </node>
-            <node id="628">
+            <node id="870">
                 <label>tuple</label>
             </node>
-            <node id="620">
+            <node id="862">
                 <label>vector</label>
             </node>
-            <node id="614">
+            <node id="856">
                 <label>code/model/Authentication.cpp</label>
                 <link refid="d6/d6e/_authentication_8cpp"/>
-                <childnode refid="615" relation="include">
+                <childnode refid="857" relation="include">
                 </childnode>
             </node>
-            <node id="616">
+            <node id="858">
                 <label>../DBMaster.hpp</label>
                 <link refid="d7/d0f/_d_b_master_8hpp"/>
-                <childnode refid="617" relation="include">
+                <childnode refid="859" relation="include">
                 </childnode>
-                <childnode refid="618" relation="include">
+                <childnode refid="860" relation="include">
                 </childnode>
-                <childnode refid="619" relation="include">
+                <childnode refid="861" relation="include">
                 </childnode>
-                <childnode refid="620" relation="include">
+                <childnode refid="862" relation="include">
                 </childnode>
-                <childnode refid="621" relation="include">
+                <childnode refid="863" relation="include">
                 </childnode>
             </node>
-            <node id="626">
+            <node id="868">
                 <label>mutex</label>
             </node>
-            <node id="627">
+            <node id="869">
                 <label>thread</label>
             </node>
-            <node id="623">
+            <node id="865">
                 <label>../interfaces/ISubject.hpp</label>
                 <link refid="d1/d25/_i_subject_8hpp"/>
-                <childnode refid="624" relation="include">
+                <childnode refid="866" relation="include">
                 </childnode>
-                <childnode refid="625" relation="include">
+                <childnode refid="867" relation="include">
                 </childnode>
             </node>
-            <node id="624">
+            <node id="866">
                 <label>set</label>
             </node>
-            <node id="615">
+            <node id="857">
                 <label>Authentication.hpp</label>
                 <link refid="dc/d00/_authentication_8hpp"/>
-                <childnode refid="616" relation="include">
+                <childnode refid="858" relation="include">
                 </childnode>
-                <childnode refid="623" relation="include">
+                <childnode refid="865" relation="include">
                 </childnode>
-                <childnode refid="620" relation="include">
+                <childnode refid="862" relation="include">
                 </childnode>
-                <childnode refid="628" relation="include">
+                <childnode refid="870" relation="include">
                 </childnode>
             </node>
         </incdepgraph>
@@ -379,11 +381,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>
-                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aeb7a295a6770bf778d747903045fe288"
-                         kindref="member">user_name
-                    </ref>
-                    <sp/>=<sp/>map[
+                    <sp/>user_name<sp/>=<sp/>map[
                 </highlight>
                 <highlight class="stringliteral">&quot;name&quot;</highlight>
                 <highlight class="normal">].get_str();</highlight>
@@ -393,11 +391,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>
-                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1adc6b1c53cf3e012f10c8b315a1df364f"
-                         kindref="member">password
-                    </ref>
-                    <sp/>=<sp/>map[
+                    <sp/>password<sp/>=<sp/>map[
                 </highlight>
                 <highlight class="stringliteral">&quot;password&quot;</highlight>
                 <highlight class="normal">].get_str();</highlight>
@@ -407,11 +401,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>
-                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a3b3c96185f5ad0c1e9ea15cd401ce064"
-                         kindref="member">regional_id
-                    </ref>
-                    <sp/>=<sp/>map[
+                    <sp/>regional_id<sp/>=<sp/>map[
                 </highlight>
                 <highlight class="stringliteral">&quot;regional_id&quot;</highlight>
                 <highlight class="normal">].get_int();</highlight>
@@ -526,25 +516,13 @@
                 <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="52">
-                <highlight class="normal">mm::model::authentication::Login::Login()<sp/>:
-                    <sp/>
-                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aeb7a295a6770bf778d747903045fe288"
-                         kindref="member">user_name</ref>(
+                <highlight class="normal">mm::model::authentication::Login::Login()<sp/>:<sp/>user_name(
                 </highlight>
                 <highlight class="stringliteral">&quot;&quot;</highlight>
-                <highlight class="normal">),
-                    <sp/>
-                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1adc6b1c53cf3e012f10c8b315a1df364f"
-                         kindref="member">password</ref>(
+                <highlight class="normal">),<sp/>password(
                 </highlight>
                 <highlight class="stringliteral">&quot;&quot;</highlight>
-                <highlight class="normal">),
-                    <sp/>
-                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a3b3c96185f5ad0c1e9ea15cd401ce064"
-                         kindref="member">regional_id</ref>(-999),
-                    <sp/>
-                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aa74e292b2be0f1e2146576108e74db97"
-                         kindref="member">is_changed</ref>(false)<sp/>{}
+                <highlight class="normal">),<sp/>regional_id(-999),<sp/>is_changed(false)<sp/>{}
                 </highlight>
             </codeline>
             <codeline lineno="53">

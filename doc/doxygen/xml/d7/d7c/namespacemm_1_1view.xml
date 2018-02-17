@@ -1,8 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d7/d7c/namespacemm_1_1view" kind="namespace" language="C++">
         <compoundname>mm::view</compoundname>
+        <innerclass refid="d4/d82/classmm_1_1view_1_1_drug_entry" prot="public">mm::view::DrugEntry</innerclass>
+        <innerclass refid="d8/ded/classmm_1_1view_1_1_interaction_entry" prot="public">mm::view::InteractionEntry
+        </innerclass>
+        <innerclass refid="dd/d38/classmm_1_1view_1_1_patient_expander" prot="public">mm::view::PatientExpander
+        </innerclass>
         <innerclass refid="dc/ddf/classmm_1_1view_1_1_prescription_expander" prot="public">
             mm::view::PrescriptionExpander
         </innerclass>
@@ -10,6 +15,6 @@
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
-        <location file="code/gui/view/CustomWidgets.hpp" line="20" column="1"/>
+        <location file="code/gui/view/CustomWidgets.hpp" line="23" column="1"/>
     </compounddef>
 </doxygen>

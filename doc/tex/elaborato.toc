@@ -1,0 +1,11 @@
+\select@language {italian}
+\select@language {italian}
+\contentsline {section}{\numberline {1}Introduzione}{2}{section.1}
+\contentsline {section}{\numberline {2}Requisiti Funzionali}{2}{section.2}
+\contentsline {section}{\numberline {3}Scelte Progettuali}{3}{section.3}
+\contentsline {section}{\numberline {4}UML}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Use Cases}{3}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Activity Diagram}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Class Diagram}{7}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Sequence Diagram}{7}{subsection.4.4}
+\contentsline {section}{\numberline {5}Conclusioni}{7}{section.5}

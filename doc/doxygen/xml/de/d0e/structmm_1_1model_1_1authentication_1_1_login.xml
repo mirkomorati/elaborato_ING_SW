@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kind="struct" language="C++" prot="public">
         <compoundname>mm::model::authentication::Login</compoundname>
         <basecompoundref refid="dc/df3/classmm_1_1_i_serializable" prot="public" virt="non-virtual">mm::ISerializable
@@ -22,8 +22,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="20" column="1"
-                          bodyfile="code/model/Authentication.hpp" bodystart="20" bodyend="-1"/>
+                <location file="code/model/Authentication.hpp" line="27" column="1"
+                          bodyfile="code/model/Authentication.hpp" bodystart="27" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable"
                        id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aeb7a295a6770bf778d747903045fe288"
@@ -38,8 +38,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="21" column="1"
-                          bodyfile="code/model/Authentication.hpp" bodystart="21" bodyend="-1"/>
+                <location file="code/model/Authentication.hpp" line="28" column="1"
+                          bodyfile="code/model/Authentication.hpp" bodystart="28" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable"
                        id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1adc6b1c53cf3e012f10c8b315a1df364f"
@@ -54,8 +54,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="22" column="1"
-                          bodyfile="code/model/Authentication.hpp" bodystart="22" bodyend="-1"/>
+                <location file="code/model/Authentication.hpp" line="29" column="1"
+                          bodyfile="code/model/Authentication.hpp" bodystart="29" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable"
                        id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a3b3c96185f5ad0c1e9ea15cd401ce064"
@@ -70,8 +70,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="23" column="1"
-                          bodyfile="code/model/Authentication.hpp" bodystart="23" bodyend="-1"/>
+                <location file="code/model/Authentication.hpp" line="30" column="1"
+                          bodyfile="code/model/Authentication.hpp" bodystart="30" bodyend="-1"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="friend">
@@ -91,12 +91,42 @@
                     <declname>psw</declname>
                 </param>
                 <briefdescription>
+                    <para>Si occupa di porre in uno stato valido l&apos;oggetto del singleton <ref
+                            refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">Login</ref>.
+                    </para>
                 </briefdescription>
                 <detaileddescription>
+                    <para>Se usr e psw corrispondono ad una coppia nome utente e password nel database inizializza <ref
+                            refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">Login
+                    </ref> e ritorna true
+                    </para>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>usr</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>stringa contenente lo username</para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>psw</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>stringa contenente la password</para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                        <simplesect kind="return">
+                            <para>true in caso l&apos;utente sia trovato false altrimenti</para>
+                        </simplesect>
+                    </para>
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="18" column="1"/>
+                <location file="code/model/Authentication.hpp" line="25" column="1"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="public-func">
@@ -116,7 +146,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="25" column="1"
+                <location file="code/model/Authentication.hpp" line="32" column="1"
                           bodyfile="code/model/Authentication.cpp" bodystart="24" bodyend="30"/>
             </memberdef>
             <memberdef kind="function"
@@ -138,7 +168,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="27" column="1"
+                <location file="code/model/Authentication.hpp" line="34" column="1"
                           bodyfile="code/model/Authentication.cpp" bodystart="32" bodyend="36"/>
             </memberdef>
             <memberdef kind="function"
@@ -157,7 +187,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="29" column="1"
+                <location file="code/model/Authentication.hpp" line="36" column="1"
                           bodyfile="code/model/Authentication.cpp" bodystart="38" bodyend="40"/>
             </memberdef>
             <memberdef kind="function"
@@ -176,7 +206,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="31" column="1"
+                <location file="code/model/Authentication.hpp" line="38" column="1"
                           bodyfile="code/model/Authentication.cpp" bodystart="42" bodyend="44"/>
             </memberdef>
             <memberdef kind="function"
@@ -187,12 +217,13 @@
                 <argsstring>()</argsstring>
                 <name>logout</name>
                 <briefdescription>
+                    <para>Permette di effettuare il logout rendendo l&apos;oggetto in uno stato non valido.</para>
                 </briefdescription>
                 <detaileddescription>
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="35" column="1"
+                <location file="code/model/Authentication.hpp" line="53" column="1"
                           bodyfile="code/model/Authentication.cpp" bodystart="64" bodyend="69"/>
             </memberdef>
             <memberdef kind="function"
@@ -203,12 +234,18 @@
                 <argsstring>() const</argsstring>
                 <name>isLog</name>
                 <briefdescription>
+                    <para>permette di controllare se l&apos;oggetto è in uno stato valido o meno</para>
                 </briefdescription>
                 <detaileddescription>
+                    <para>
+                        <simplesect kind="return">
+                            <para>true se l&apos;utente è connesso, false altrimenti</para>
+                        </simplesect>
+                    </para>
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="37" column="1"
+                <location file="code/model/Authentication.hpp" line="60" column="1"
                           bodyfile="code/model/Authentication.cpp" bodystart="71" bodyend="73"/>
             </memberdef>
         </sectiondef>
@@ -225,12 +262,26 @@
                 <argsstring>()</argsstring>
                 <name>get_instance</name>
                 <briefdescription>
+                    <para>Ritorna un istanza di tipo <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login"
+                                                          kindref="compound">Login</ref>.
+                    </para>
                 </briefdescription>
                 <detaileddescription>
+                    <para>Se il login non è stato creato mediante la funzione check_login L&apos;oggetto ritornato sarà
+                        non valido e la funzione isLog su di esso ritornerà false
+                    </para>
+                    <para>
+                        <simplesect kind="return">
+                            <para>un oggetto di tipo <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login"
+                                                          kindref="compound">Login
+                            </ref>
+                            </para>
+                        </simplesect>
+                    </para>
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="33" column="1"
+                <location file="code/model/Authentication.hpp" line="48" column="1"
                           bodyfile="code/model/Authentication.cpp" bodystart="46" bodyend="50"/>
             </memberdef>
         </sectiondef>
@@ -248,7 +299,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="41" column="1"
+                <location file="code/model/Authentication.hpp" line="64" column="1"
                           bodyfile="code/model/Authentication.cpp" bodystart="52" bodyend="52"/>
             </memberdef>
             <memberdef kind="function"
@@ -271,7 +322,7 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="43" column="1"/>
+                <location file="code/model/Authentication.hpp" line="66" column="1"/>
             </memberdef>
             <memberdef kind="function"
                        id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1ac74a15ab0d5994a16885df2d02149436"
@@ -297,52 +348,57 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Authentication.hpp" line="45" column="1"
+                <location file="code/model/Authentication.hpp" line="68" column="1"
                           bodyfile="code/model/Authentication.cpp" bodystart="55" bodyend="62"/>
             </memberdef>
         </sectiondef>
         <briefdescription>
+            <para>classe che rappresenta la una sessione di login</para>
         </briefdescription>
         <detaileddescription>
+            <para>Un oggetto di questo tipo può essere creato in modo solo dalla funzione check_login se il login è già
+                stato effettuato si può usare la funzione get_instance per accedere ai dati relativi all&apos;utente
+                connesso, per sapere se la sessione è valida si può usare la funzione isLog.
+            </para>
         </detaileddescription>
         <inheritancegraph>
-            <node id="88">
+            <node id="114">
                 <label>mm::ISerializable</label>
                 <link refid="dc/df3/classmm_1_1_i_serializable"/>
             </node>
-            <node id="89">
+            <node id="115">
                 <label>mm::ISubject</label>
                 <link refid="d1/dd2/classmm_1_1_i_subject"/>
             </node>
-            <node id="87">
+            <node id="113">
                 <label>mm::model::authentication::Login</label>
                 <link refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login"/>
-                <childnode refid="88" relation="public-inheritance">
+                <childnode refid="114" relation="public-inheritance">
                 </childnode>
-                <childnode refid="89" relation="public-inheritance">
+                <childnode refid="115" relation="public-inheritance">
                 </childnode>
             </node>
         </inheritancegraph>
         <collaborationgraph>
-            <node id="91">
+            <node id="117">
                 <label>mm::ISerializable</label>
                 <link refid="dc/df3/classmm_1_1_i_serializable"/>
             </node>
-            <node id="92">
+            <node id="118">
                 <label>mm::ISubject</label>
                 <link refid="d1/dd2/classmm_1_1_i_subject"/>
             </node>
-            <node id="90">
+            <node id="116">
                 <label>mm::model::authentication::Login</label>
                 <link refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login"/>
-                <childnode refid="91" relation="public-inheritance">
+                <childnode refid="117" relation="public-inheritance">
                 </childnode>
-                <childnode refid="92" relation="public-inheritance">
+                <childnode refid="118" relation="public-inheritance">
                 </childnode>
             </node>
         </collaborationgraph>
-        <location file="code/model/Authentication.hpp" line="17" column="1" bodyfile="code/model/Authentication.hpp"
-                  bodystart="17" bodyend="46"/>
+        <location file="code/model/Authentication.hpp" line="24" column="1" bodyfile="code/model/Authentication.hpp"
+                  bodystart="24" bodyend="69"/>
         <listofallmembers>
             <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
                     virt="non-virtual">
@@ -400,6 +456,11 @@
                 <name>logout</name>
             </member>
             <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
                     virt="non-virtual">
                 <scope>mm::model::authentication::Login</scope>
                 <name>notify</name>

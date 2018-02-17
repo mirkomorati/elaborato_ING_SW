@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="dc/d00/_authentication_8hpp" kind="file" language="C++">
         <compoundname>Authentication.hpp</compoundname>
         <includes refid="d7/d0f/_d_b_master_8hpp" local="yes">../DBMaster.hpp</includes>
@@ -8,122 +8,138 @@
         <includes local="no">vector</includes>
         <includes local="no">tuple</includes>
         <includedby refid="db/db5/_add_patient_dialog_8cpp" local="yes">code/gui/AddPatientDialog.cpp</includedby>
+        <includedby refid="d6/d9e/_drug_window_8cpp" local="yes">code/gui/DrugWindow.cpp</includedby>
         <includedby refid="d9/d07/_login_window_8cpp" local="yes">code/gui/LoginWindow.cpp</includedby>
         <includedby refid="d8/d35/_patient_window_8cpp" local="yes">code/gui/PatientWindow.cpp</includedby>
+        <includedby refid="d1/d16/_prescription_window_8cpp" local="yes">code/gui/PrescriptionWindow.cpp</includedby>
         <includedby refid="d7/daf/_med_h_8cpp" local="yes">code/MedH.cpp</includedby>
         <includedby refid="d6/d6e/_authentication_8cpp" local="yes">code/model/Authentication.cpp</includedby>
         <incdepgraph>
-            <node id="640">
+            <node id="882">
                 <label>IObserver.hpp</label>
                 <link refid="d5/d40/_i_observer_8hpp"/>
-                <childnode refid="641" relation="include">
+                <childnode refid="883" relation="include">
                 </childnode>
-                <childnode refid="642" relation="include">
+                <childnode refid="884" relation="include">
                 </childnode>
             </node>
-            <node id="636">
+            <node id="878">
                 <label>interfaces/ISerializable.hpp</label>
                 <link refid="d3/d1b/_i_serializable_8hpp"/>
-                <childnode refid="633" relation="include">
+                <childnode refid="875" relation="include">
                 </childnode>
-                <childnode refid="637" relation="include">
+                <childnode refid="879" relation="include">
+                </childnode>
+                <childnode refid="877" relation="include">
                 </childnode>
             </node>
-            <node id="634">
+            <node id="876">
                 <label>stdexcept</label>
             </node>
-            <node id="633">
+            <node id="875">
                 <label>string</label>
             </node>
-            <node id="637">
+            <node id="879">
                 <label>map</label>
             </node>
-            <node id="632">
+            <node id="874">
                 <label>sqlite3.h</label>
             </node>
-            <node id="643">
+            <node id="885">
                 <label>tuple</label>
             </node>
-            <node id="635">
+            <node id="877">
                 <label>vector</label>
             </node>
-            <node id="631">
+            <node id="873">
                 <label>../DBMaster.hpp</label>
                 <link refid="d7/d0f/_d_b_master_8hpp"/>
-                <childnode refid="632" relation="include">
+                <childnode refid="874" relation="include">
                 </childnode>
-                <childnode refid="633" relation="include">
+                <childnode refid="875" relation="include">
                 </childnode>
-                <childnode refid="634" relation="include">
+                <childnode refid="876" relation="include">
                 </childnode>
-                <childnode refid="635" relation="include">
+                <childnode refid="877" relation="include">
                 </childnode>
-                <childnode refid="636" relation="include">
+                <childnode refid="878" relation="include">
                 </childnode>
             </node>
-            <node id="641">
+            <node id="883">
                 <label>mutex</label>
             </node>
-            <node id="642">
+            <node id="884">
                 <label>thread</label>
             </node>
-            <node id="638">
+            <node id="880">
                 <label>../interfaces/ISubject.hpp</label>
                 <link refid="d1/d25/_i_subject_8hpp"/>
-                <childnode refid="639" relation="include">
+                <childnode refid="881" relation="include">
                 </childnode>
-                <childnode refid="640" relation="include">
+                <childnode refid="882" relation="include">
                 </childnode>
             </node>
-            <node id="639">
+            <node id="881">
                 <label>set</label>
             </node>
-            <node id="630">
+            <node id="872">
                 <label>code/model/Authentication.hpp</label>
                 <link refid="dc/d00/_authentication_8hpp"/>
-                <childnode refid="631" relation="include">
+                <childnode refid="873" relation="include">
                 </childnode>
-                <childnode refid="638" relation="include">
+                <childnode refid="880" relation="include">
                 </childnode>
-                <childnode refid="635" relation="include">
+                <childnode refid="877" relation="include">
                 </childnode>
-                <childnode refid="643" relation="include">
+                <childnode refid="885" relation="include">
                 </childnode>
             </node>
         </incdepgraph>
         <invincdepgraph>
-            <node id="646">
+            <node id="888">
+                <label>code/gui/DrugWindow.cpp</label>
+                <link refid="d6/d9e/_drug_window_8cpp"/>
+            </node>
+            <node id="889">
                 <label>code/gui/LoginWindow.cpp</label>
                 <link refid="d9/d07/_login_window_8cpp"/>
             </node>
-            <node id="648">
+            <node id="892">
                 <label>code/MedH.cpp</label>
                 <link refid="d7/daf/_med_h_8cpp"/>
             </node>
-            <node id="645">
+            <node id="891">
+                <label>code/gui/PrescriptionWindow.cpp</label>
+                <link refid="d1/d16/_prescription_window_8cpp"/>
+            </node>
+            <node id="887">
                 <label>code/gui/AddPatientDialog.cpp</label>
                 <link refid="db/db5/_add_patient_dialog_8cpp"/>
             </node>
-            <node id="649">
+            <node id="893">
                 <label>code/model/Authentication.cpp</label>
                 <link refid="d6/d6e/_authentication_8cpp"/>
             </node>
-            <node id="647">
+            <node id="890">
                 <label>code/gui/PatientWindow.cpp</label>
                 <link refid="d8/d35/_patient_window_8cpp"/>
             </node>
-            <node id="644">
+            <node id="886">
                 <label>code/model/Authentication.hpp</label>
                 <link refid="dc/d00/_authentication_8hpp"/>
-                <childnode refid="645" relation="include">
+                <childnode refid="887" relation="include">
                 </childnode>
-                <childnode refid="646" relation="include">
+                <childnode refid="888" relation="include">
                 </childnode>
-                <childnode refid="647" relation="include">
+                <childnode refid="889" relation="include">
                 </childnode>
-                <childnode refid="648" relation="include">
+                <childnode refid="890" relation="include">
                 </childnode>
-                <childnode refid="649" relation="include">
+                <childnode refid="891" relation="include">
+                </childnode>
+                <childnode refid="892" relation="include">
+                </childnode>
+                <childnode refid="893" relation="include">
                 </childnode>
             </node>
         </invincdepgraph>
@@ -241,7 +257,7 @@
             <codeline lineno="16">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="17" refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" refkind="compound">
+            <codeline lineno="24" refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" refkind="compound">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -277,7 +293,7 @@
                     <sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="18">
+            <codeline lineno="25">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -307,10 +323,10 @@
                          kindref="member">check_login</ref>(std::string<sp/>usr,<sp/>std::string<sp/>psw);
                 </highlight>
             </codeline>
-            <codeline lineno="19">
+            <codeline lineno="26">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="20"
+            <codeline lineno="27"
                       refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aa74e292b2be0f1e2146576108e74db97"
                       refkind="member">
                 <highlight class="normal">
@@ -338,7 +354,7 @@
                          kindref="member">is_changed</ref>;
                 </highlight>
             </codeline>
-            <codeline lineno="21"
+            <codeline lineno="28"
                       refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aeb7a295a6770bf778d747903045fe288"
                       refkind="member">
                 <highlight class="normal">
@@ -363,7 +379,7 @@
                          kindref="member">user_name</ref>;
                 </highlight>
             </codeline>
-            <codeline lineno="22"
+            <codeline lineno="29"
                       refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1adc6b1c53cf3e012f10c8b315a1df364f"
                       refkind="member">
                 <highlight class="normal">
@@ -388,7 +404,7 @@
                          kindref="member">password</ref>;
                 </highlight>
             </codeline>
-            <codeline lineno="23"
+            <codeline lineno="30"
                       refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a3b3c96185f5ad0c1e9ea15cd401ce064"
                       refkind="member">
                 <highlight class="normal">
@@ -416,10 +432,10 @@
                          kindref="member">regional_id</ref>;
                 </highlight>
             </codeline>
-            <codeline lineno="24">
+            <codeline lineno="31">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="25">
+            <codeline lineno="32">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -445,10 +461,10 @@
                 </highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="26">
+            <codeline lineno="33">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="27">
+            <codeline lineno="34">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -477,10 +493,10 @@
                 <highlight class="keyword">override</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="28">
+            <codeline lineno="35">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="29">
+            <codeline lineno="36">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -510,10 +526,10 @@
                 </highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="30">
+            <codeline lineno="37">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="31">
+            <codeline lineno="38">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -539,10 +555,10 @@
                 </highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="32">
+            <codeline lineno="39">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="33">
+            <codeline lineno="48">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -570,10 +586,10 @@
                         kindref="member">get_instance</ref>();
                 </highlight>
             </codeline>
-            <codeline lineno="34">
+            <codeline lineno="49">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="35">
+            <codeline lineno="53">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -599,10 +615,10 @@
                          kindref="member">logout</ref>();
                 </highlight>
             </codeline>
-            <codeline lineno="36">
+            <codeline lineno="54">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="37">
+            <codeline lineno="60">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -631,13 +647,13 @@
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="38">
+            <codeline lineno="61">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="39">
+            <codeline lineno="62">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="40">
+            <codeline lineno="63">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -655,7 +671,7 @@
                 <highlight class="keyword">private</highlight>
                 <highlight class="normal">:</highlight>
             </codeline>
-            <codeline lineno="41">
+            <codeline lineno="64">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -680,10 +696,10 @@
                     <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">Login</ref>();
                 </highlight>
             </codeline>
-            <codeline lineno="42">
+            <codeline lineno="65">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="43">
+            <codeline lineno="66">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -713,10 +729,10 @@
                 <highlight class="keywordflow">default</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="44">
+            <codeline lineno="67">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="45">
+            <codeline lineno="68">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -744,7 +760,7 @@
                     <sp/>&amp;other);
                 </highlight>
             </codeline>
-            <codeline lineno="46">
+            <codeline lineno="69">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -760,10 +776,10 @@
                     <sp/>};
                 </highlight>
             </codeline>
-            <codeline lineno="47">
+            <codeline lineno="70">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="48">
+            <codeline lineno="81">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -781,11 +797,11 @@
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
                     <sp/>
-                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a5023cb987e79151f2a1ed18b9a86a3e8"
+                    <ref refid="d6/d54/namespacemm_1_1model_1_1authentication_1aeb56a39665f657663af73f37a6341f11"
                          kindref="member">check_login</ref>(std::string<sp/>usr,<sp/>std::string<sp/>psw);
                 </highlight>
             </codeline>
-            <codeline lineno="49">
+            <codeline lineno="82">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -797,7 +813,7 @@
                     <sp/>}
                 </highlight>
             </codeline>
-            <codeline lineno="50">
+            <codeline lineno="83">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -805,16 +821,16 @@
                     <sp/>}
                 </highlight>
             </codeline>
-            <codeline lineno="51">
+            <codeline lineno="84">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="52">
+            <codeline lineno="85">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="53">
+            <codeline lineno="86">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="54">
+            <codeline lineno="87">
                 <highlight class="normal"></highlight>
                 <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_LOGINMODEL_HPP
                 </highlight>

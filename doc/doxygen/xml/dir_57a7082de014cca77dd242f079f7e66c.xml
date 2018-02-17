@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="dir_57a7082de014cca77dd242f079f7e66c" kind="dir">
         <compoundname>code/interfaces</compoundname>
         <innerfile refid="d5/d40/_i_observer_8hpp">IObserver.hpp</innerfile>

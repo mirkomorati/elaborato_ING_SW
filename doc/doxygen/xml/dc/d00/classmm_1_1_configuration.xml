@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="dc/d00/classmm_1_1_configuration" kind="class" language="C++" prot="public">
         <compoundname>mm::Configuration</compoundname>
         <includes refid="d1/d32/_configuration_8hpp" local="no">Configuration.hpp</includes>
@@ -181,8 +181,7 @@
                         </parameterlist>
                         <simplesect kind="return">
                             <para>Oggetto di tipo <computeroutput>T</computeroutput> contenente i dati presenti nel file
-                                json alla chiave
-                                <computeroutput>key</computeroutput>
+                                json alla chiave <computeroutput>key</computeroutput>
                             </para>
                         </simplesect>
                     </para>
@@ -220,10 +219,9 @@
                     </para>
                     <para>
                         <simplesect kind="return">
-                            <para>Istanza di
-                                <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">
-                                    Configuration
-                                </ref>
+                            <para>Istanza di <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">
+                                Configuration
+                            </ref>
                             </para>
                         </simplesect>
                     </para>

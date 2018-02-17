@@ -5,7 +5,7 @@
  -->
 <!-- Title: mm::model::Drug Pages: 1 -->
 <!--zoomable 486 -->
-<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="initDrugComboBox(evt)">
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
 <style type="text/css"><![CDATA[
 .edge:hover path { stroke: red; }
 .edge:hover polygon { stroke: red; fill: red; }
@@ -132,11 +132,11 @@ var sectionId = 'dynsection-1';
     <!-- Node5 -->
 <g id="node4" class="node">
 <title>Node5</title>
-<polygon fill="none" stroke="#bfbfbf" points="130.5366,-423.5 130.5366,-477.5 260.6626,-477.5 260.6626,-423.5 130.5366,-423.5"/>
-<text text-anchor="middle" x="195.5996" y="-465.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TreeModelColumnRecord</text>
-<polyline fill="none" stroke="#bfbfbf" points="130.5366,-459.5 260.6626,-459.5 "/>
+<polygon fill="none" stroke="#bfbfbf" points="154.2524,-423.5 154.2524,-477.5 236.9468,-477.5 236.9468,-423.5 154.2524,-423.5"/>
+<text text-anchor="middle" x="195.5996" y="-465.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">ColumnRecord</text>
+<polyline fill="none" stroke="#bfbfbf" points="154.2524,-459.5 236.9468,-459.5 "/>
 <text text-anchor="middle" x="195.5996" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="130.5366,-441.5 260.6626,-441.5 "/>
+<polyline fill="none" stroke="#bfbfbf" points="154.2524,-441.5 236.9468,-441.5 "/>
 <text text-anchor="middle" x="195.5996" y="-429.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 </g>
     <!-- Node5&#45;&gt;Node4 -->

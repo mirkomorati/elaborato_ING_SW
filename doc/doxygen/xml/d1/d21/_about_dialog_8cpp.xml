@@ -1,68 +1,73 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d1/d21/_about_dialog_8cpp" kind="file" language="C++">
         <compoundname>AboutDialog.cpp</compoundname>
         <includes refid="d7/ded/_about_dialog_8hpp" local="yes">AboutDialog.hpp</includes>
         <includes refid="dc/db8/_ref_builder_8hpp" local="yes">RefBuilder.hpp</includes>
         <incdepgraph>
-            <node id="51">
+            <node id="54">
                 <label>IObserver.hpp</label>
                 <link refid="d5/d40/_i_observer_8hpp"/>
-                <childnode refid="52" relation="include">
-                </childnode>
-                <childnode refid="53" relation="include">
-                </childnode>
-            </node>
-            <node id="45">
-                <label>code/gui/AboutDialog.cpp</label>
-                <link refid="d1/d21/_about_dialog_8cpp"/>
-                <childnode refid="46" relation="include">
-                </childnode>
-                <childnode refid="54" relation="include">
-                </childnode>
-            </node>
-            <node id="46">
-                <label>AboutDialog.hpp</label>
-                <link refid="d7/ded/_about_dialog_8hpp"/>
-                <childnode refid="47" relation="include">
-                </childnode>
-            </node>
-            <node id="55">
-                <label>gtkmm-3.0/gtkmm.h</label>
-            </node>
-            <node id="54">
-                <label>RefBuilder.hpp</label>
-                <link refid="dc/db8/_ref_builder_8hpp"/>
                 <childnode refid="55" relation="include">
                 </childnode>
-            </node>
-            <node id="48">
-                <label>sigc++/trackable.h</label>
-            </node>
-            <node id="52">
-                <label>mutex</label>
+                <childnode refid="56" relation="include">
+                </childnode>
             </node>
             <node id="47">
-                <label>Dialog.hpp</label>
-                <link refid="dc/de6/_dialog_8hpp"/>
+                <label>code/gui/AboutDialog.cpp</label>
+                <link refid="d1/d21/_about_dialog_8cpp"/>
                 <childnode refid="48" relation="include">
                 </childnode>
+                <childnode refid="57" relation="include">
+                </childnode>
+            </node>
+            <node id="51">
+                <label>gtkmm/dialog.h</label>
+            </node>
+            <node id="48">
+                <label>AboutDialog.hpp</label>
+                <link refid="d7/ded/_about_dialog_8hpp"/>
                 <childnode refid="49" relation="include">
                 </childnode>
             </node>
-            <node id="53">
-                <label>thread</label>
+            <node id="58">
+                <label>gtkmm-3.0/gtkmm.h</label>
+            </node>
+            <node id="57">
+                <label>RefBuilder.hpp</label>
+                <link refid="dc/db8/_ref_builder_8hpp"/>
+                <childnode refid="58" relation="include">
+                </childnode>
+            </node>
+            <node id="50">
+                <label>sigc++/trackable.h</label>
+            </node>
+            <node id="55">
+                <label>mutex</label>
             </node>
             <node id="49">
-                <label>../interfaces/ISubject.hpp</label>
-                <link refid="d1/d25/_i_subject_8hpp"/>
+                <label>Dialog.hpp</label>
+                <link refid="dc/de6/_dialog_8hpp"/>
                 <childnode refid="50" relation="include">
                 </childnode>
                 <childnode refid="51" relation="include">
                 </childnode>
+                <childnode refid="52" relation="include">
+                </childnode>
             </node>
-            <node id="50">
+            <node id="56">
+                <label>thread</label>
+            </node>
+            <node id="52">
+                <label>../interfaces/ISubject.hpp</label>
+                <link refid="d1/d25/_i_subject_8hpp"/>
+                <childnode refid="53" relation="include">
+                </childnode>
+                <childnode refid="54" relation="include">
+                </childnode>
+            </node>
+            <node id="53">
                 <label>set</label>
             </node>
         </incdepgraph>
@@ -152,12 +157,25 @@
                 </highlight>
             </codeline>
             <codeline lineno="13">
-                <highlight class="normal">}</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>dialog-&gt;signal_delete_event().connect(sigc::mem_fun(
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">,<sp/>&amp;<ref
+                        refid="df/d35/classmm_1_1_dialog_1a9864219c61623b484d8f8c161808e136" kindref="member">
+                    mm::AboutDialog::onDelete</ref>));
+                </highlight>
             </codeline>
             <codeline lineno="14">
-                <highlight class="normal"></highlight>
+                <highlight class="normal">}</highlight>
             </codeline>
             <codeline lineno="15">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="16">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -166,7 +184,7 @@
                         mm::AboutDialog::show</ref>()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="16">
+            <codeline lineno="17">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -174,7 +192,7 @@
                     <sp/>Gtk::AboutDialog<sp/>*dialog;
                 </highlight>
             </codeline>
-            <codeline lineno="17">
+            <codeline lineno="18">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -189,7 +207,7 @@
                 <highlight class="normal">,<sp/>dialog);
                 </highlight>
             </codeline>
-            <codeline lineno="18">
+            <codeline lineno="19">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -197,19 +215,19 @@
                     <sp/>dialog-&gt;show();
                 </highlight>
             </codeline>
-            <codeline lineno="19">
+            <codeline lineno="20">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="20">
+            <codeline lineno="21">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="21">
+            <codeline lineno="22">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal"><sp/>mm::AboutDialog::dispose()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="22">
+            <codeline lineno="23">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -217,7 +235,7 @@
                     <sp/>Gtk::Dialog<sp/>*dialog;
                 </highlight>
             </codeline>
-            <codeline lineno="23">
+            <codeline lineno="24">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -232,7 +250,7 @@
                 <highlight class="normal">,<sp/>dialog);
                 </highlight>
             </codeline>
-            <codeline lineno="24">
+            <codeline lineno="25">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -240,7 +258,7 @@
                     <sp/>dialog-&gt;close();
                 </highlight>
             </codeline>
-            <codeline lineno="25">
+            <codeline lineno="26">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -251,7 +269,7 @@
                 <highlight class="keyword">false</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="26">
+            <codeline lineno="27">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -259,13 +277,13 @@
                     <sp/>notify();
                 </highlight>
             </codeline>
-            <codeline lineno="27">
+            <codeline lineno="28">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="28">
+            <codeline lineno="29">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="29">
+            <codeline lineno="30">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
@@ -274,7 +292,7 @@
                         mm::AboutDialog::isActive</ref>()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="30">
+            <codeline lineno="31">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -285,13 +303,13 @@
                 <highlight class="normal"><sp/>active;
                 </highlight>
             </codeline>
-            <codeline lineno="31">
+            <codeline lineno="32">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="32">
+            <codeline lineno="33">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="33">
+            <codeline lineno="34">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -300,16 +318,16 @@
                         mm::AboutDialog::reset</ref>()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="34">
-                <highlight class="normal"></highlight>
-            </codeline>
             <codeline lineno="35">
-                <highlight class="normal">}</highlight>
+                <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="36">
-                <highlight class="normal"></highlight>
+                <highlight class="normal">}</highlight>
             </codeline>
             <codeline lineno="37">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="38">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -325,7 +343,7 @@
                 <highlight class="normal">)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="38">
+            <codeline lineno="39">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -337,21 +355,6 @@
                 </highlight>
                 <highlight class="keywordtype">id</highlight>
                 <highlight class="normal">)<sp/>{
-                </highlight>
-            </codeline>
-            <codeline lineno="39">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordflow">case</highlight>
-                <highlight class="normal"><sp/>Gtk::ResponseType::RESPONSE_CLOSE:
                 </highlight>
             </codeline>
             <codeline lineno="40">
@@ -366,7 +369,7 @@
                     <sp/>
                 </highlight>
                 <highlight class="keywordflow">case</highlight>
-                <highlight class="normal"><sp/>Gtk::ResponseType::RESPONSE_CANCEL:
+                <highlight class="normal"><sp/>Gtk::ResponseType::RESPONSE_CLOSE:
                 </highlight>
             </codeline>
             <codeline lineno="41">
@@ -381,10 +384,25 @@
                     <sp/>
                 </highlight>
                 <highlight class="keywordflow">case</highlight>
-                <highlight class="normal"><sp/>Gtk::ResponseType::RESPONSE_DELETE_EVENT:
+                <highlight class="normal"><sp/>Gtk::ResponseType::RESPONSE_CANCEL:
                 </highlight>
             </codeline>
             <codeline lineno="42">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">case</highlight>
+                <highlight class="normal"><sp/>Gtk::ResponseType::RESPONSE_DELETE_EVENT:
+                </highlight>
+            </codeline>
+            <codeline lineno="43">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -400,7 +418,7 @@
                     <sp/>dispose();
                 </highlight>
             </codeline>
-            <codeline lineno="43">
+            <codeline lineno="44">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -418,10 +436,10 @@
                 <highlight class="keywordflow">break</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="44">
+            <codeline lineno="45">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="45">
+            <codeline lineno="46">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -435,7 +453,7 @@
                 <highlight class="keywordflow">default</highlight>
                 <highlight class="normal">:</highlight>
             </codeline>
-            <codeline lineno="46">
+            <codeline lineno="47">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -457,7 +475,7 @@
                 </highlight>
                 <highlight class="normal">);</highlight>
             </codeline>
-            <codeline lineno="47">
+            <codeline lineno="48">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -465,7 +483,7 @@
                     <sp/>}
                 </highlight>
             </codeline>
-            <codeline lineno="48">
+            <codeline lineno="49">
                 <highlight class="normal">}</highlight>
             </codeline>
         </programlisting>

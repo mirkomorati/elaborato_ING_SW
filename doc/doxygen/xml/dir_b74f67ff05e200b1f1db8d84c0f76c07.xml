@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="dir_b74f67ff05e200b1f1db8d84c0f76c07" kind="dir">
         <compoundname>code/gui/view</compoundname>
         <innerfile refid="d1/dea/_custom_widgets_8cpp">CustomWidgets.cpp</innerfile>

@@ -1,0 +1,794 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d7/dcd/classmm_1_1_drug_window" kind="class" language="C++" prot="public">
+        <compoundname>mm::DrugWindow</compoundname>
+        <basecompoundref refid="d1/d71/classmm_1_1_window" prot="public" virt="non-virtual">mm::Window</basecompoundref>
+        <basecompoundref refid="d7/d9e/classmm_1_1_i_observer" prot="public" virt="non-virtual">mm::IObserver
+        </basecompoundref>
+        <includes refid="dd/d02/_drug_window_8hpp" local="no">DrugWindow.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="d7/dcd/classmm_1_1_drug_window_1ae8052f9255340d48355d7856fb346bce"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">mm::WindowName
+                    </ref>
+                </type>
+                <definition>mm::WindowName mm::DrugWindow::next</definition>
+                <argsstring></argsstring>
+                <name>next</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="42" column="1" bodyfile="code/gui/DrugWindow.hpp"
+                          bodystart="42" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/dcd/classmm_1_1_drug_window_1a457dc4fe25ca7f584a20ec376e397d63"
+                       prot="private" static="no" mutable="no">
+                <type>bool</type>
+                <definition>bool mm::DrugWindow::filterDrugOn</definition>
+                <argsstring></argsstring>
+                <name>filterDrugOn</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="44" column="1" bodyfile="code/gui/DrugWindow.hpp"
+                          bodystart="44" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/dcd/classmm_1_1_drug_window_1a86be3059412466a0167169cb24a9f70f"
+                       prot="private" static="no" mutable="no">
+                <type>bool</type>
+                <definition>bool mm::DrugWindow::filterQuantityOn</definition>
+                <argsstring></argsstring>
+                <name>filterQuantityOn</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="45" column="1" bodyfile="code/gui/DrugWindow.hpp"
+                          bodystart="45" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/dcd/classmm_1_1_drug_window_1aae5c7157a865181c8b09fb8b43cb4812"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
+                </type>
+                <definition>util::Date mm::DrugWindow::filterStartDate</definition>
+                <argsstring></argsstring>
+                <name>filterStartDate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="47" column="1" bodyfile="code/gui/DrugWindow.hpp"
+                          bodystart="47" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/dcd/classmm_1_1_drug_window_1a049a2ecb0325eada6fa1e73c86222a3d"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
+                </type>
+                <definition>util::Date mm::DrugWindow::filterEndDate</definition>
+                <argsstring></argsstring>
+                <name>filterEndDate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="48" column="1" bodyfile="code/gui/DrugWindow.hpp"
+                          bodystart="48" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/dcd/classmm_1_1_drug_window_1a96e7d5a2f1909fe93d34660232b2ce95"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
+                </type>
+                <definition>util::Date mm::DrugWindow::quantityStartDate</definition>
+                <argsstring></argsstring>
+                <name>quantityStartDate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="50" column="1" bodyfile="code/gui/DrugWindow.hpp"
+                          bodystart="50" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/dcd/classmm_1_1_drug_window_1add22e393298a9d91caa1698a254d5ed7"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
+                </type>
+                <definition>util::Date mm::DrugWindow::quantityEndDate</definition>
+                <argsstring></argsstring>
+                <name>quantityEndDate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="51" column="1" bodyfile="code/gui/DrugWindow.hpp"
+                          bodystart="51" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/dcd/classmm_1_1_drug_window_1aeee9b004fcb7989999b3ba51ee7112cc"
+                       prot="private" static="no" mutable="no">
+                <type>Glib::RefPtr&lt; Gtk::ListStore &gt;</type>
+                <definition>Glib::RefPtr&lt;Gtk::ListStore&gt; mm::DrugWindow::drugListStore</definition>
+                <argsstring></argsstring>
+                <name>drugListStore</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="53" column="1" bodyfile="code/gui/DrugWindow.hpp"
+                          bodystart="53" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/dcd/classmm_1_1_drug_window_1ac1efebf1ceff8a0e870306797eae1370"
+                       prot="private" static="no" mutable="no">
+                <type>std::vector&lt; std::unique_ptr&lt; <ref refid="dd/d38/classmm_1_1view_1_1_patient_expander"
+                                                               kindref="compound">view::PatientExpander
+                </ref> &gt; &gt;
+                </type>
+                <definition>std::vector&lt;std::unique_ptr&lt;view::PatientExpander&gt; &gt;
+                    mm::DrugWindow::patientExp
+                </definition>
+                <argsstring></argsstring>
+                <name>patientExp</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="55" column="1" bodyfile="code/gui/DrugWindow.hpp"
+                          bodystart="55" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a7324435f0124010f172507467454d1a5"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::DrugWindow::DrugWindow</definition>
+                <argsstring>()</argsstring>
+                <name>DrugWindow</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="15" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="28" bodyend="34"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a54f331f1c516ce9113a9dade43948a16"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>bool</type>
+                <definition>bool mm::DrugWindow::init</definition>
+                <argsstring>() override</argsstring>
+                <name>init</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10">init</reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="17" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="12" bodyend="18"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1aa33aafc6205abc8c627d0b0a5849895b"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>mm::WindowName mm::DrugWindow::getName</definition>
+                <argsstring>() const override</argsstring>
+                <name>getName</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1a942c9125bf42156a9f7b7f561e412fed">getName
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="19" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="20" bodyend="22"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a571966bdd4a2ecf069cdca69c73726b2"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>mm::WindowName mm::DrugWindow::getNextWindow</definition>
+                <argsstring>() const override</argsstring>
+                <name>getNextWindow</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1a0cd7b4b0feb9505c44503547a161fcd8">getNextWindow
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="21" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="24" bodyend="26"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a98c6d97f491cb648dede0ef3db2b13b2"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::update</definition>
+                <argsstring>() override</argsstring>
+                <name>update</name>
+                <reimplements refid="d7/d9e/classmm_1_1_i_observer_1a6422af04f8e9f3ba9d6d412a3bcdd03e">update
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="23" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="36" bodyend="38"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a4926180df1b7f3dfc1f2b1746522c6fb"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::initHandlers</definition>
+                <argsstring>()</argsstring>
+                <name>initHandlers</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="25" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="40" bodyend="106"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1ac762c909bb394adccd41e1c6e97d8404"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::initTreeView</definition>
+                <argsstring>()</argsstring>
+                <name>initTreeView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="27" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="108" bodyend="129"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a7a43f5981915470da37088a248006c0e"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::updateDrugTreeView</definition>
+                <argsstring>()</argsstring>
+                <name>updateDrugTreeView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="29" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="131" bodyend="159"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a5df5a3991bc26fcf5e4df2c622053c42"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::updateDrugDetailsView</definition>
+                <argsstring>()</argsstring>
+                <name>updateDrugDetailsView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="31" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="226" bodyend="266"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a069d6731dcbf47f32e6be18a8ecb0472"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::updatePatientView</definition>
+                <argsstring>()</argsstring>
+                <name>updatePatientView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="33" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="167" bodyend="224"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1ad88417beac6e778776f939c31e6def7a"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::onSelectedDrug</definition>
+                <argsstring>(const Gtk::TreeModel::Path &amp;, Gtk::TreeViewColumn *)</argsstring>
+                <name>onSelectedDrug</name>
+                <param>
+                    <type>const Gtk::TreeModel::Path &amp;</type>
+                </param>
+                <param>
+                    <type>Gtk::TreeViewColumn *</type>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="35" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="161" bodyend="165"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a2d01e24deaba42b7c24cf5b5457f4298"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::initDrugFilter</definition>
+                <argsstring>()</argsstring>
+                <name>initDrugFilter</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="37" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="268" bodyend="289"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a40c9dca8380e72b7468170db21bcfbe9"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::initQuantityFilter</definition>
+                <argsstring>()</argsstring>
+                <name>initQuantityFilter</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="39" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="291" bodyend="326"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a5f2baab3fe347a3f297a5099f1b6693f"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::DrugWindow::onFilterClose</definition>
+                <argsstring>(GdkEventButton *buttonEvent)</argsstring>
+                <name>onFilterClose</name>
+                <param>
+                    <type>GdkEventButton *</type>
+                    <declname>buttonEvent</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="57" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="328" bodyend="340"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1aa95d1ea3fa8342ba427c1cbec848934b"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::DrugWindow::onFilterOpened</definition>
+                <argsstring>(GdkEventButton *buttonEvent)</argsstring>
+                <name>onFilterOpened</name>
+                <param>
+                    <type>GdkEventButton *</type>
+                    <declname>buttonEvent</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="59" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="342" bodyend="354"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a92f8c6b2c829e418166c7fc2f20ebb8d"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::onSwitchActivate</definition>
+                <argsstring>()</argsstring>
+                <name>onSwitchActivate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="61" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="356" bodyend="365"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a03478c57d6101692a683bf957375b13f"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::onFilterYearChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onFilterYearChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="63" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="367" bodyend="389"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1ac82c4ff64a06ce3a942e26ace664ef14"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::onFilterMonthChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onFilterMonthChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="65" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="391" bodyend="418"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a068f2a58554798bf3394c84fcaabcbf8"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::onQuantityYearChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onQuantityYearChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="67" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="420" bodyend="438"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1ad9ee761635cf4087270baf2897b4996a"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::onQuantitySemesterChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onQuantitySemesterChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="69" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="440" bodyend="462"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1adffa50b673a54cec639fff04a7b33d54"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::onQuantityQuarterChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onQuantityQuarterChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="71" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="464" bodyend="486"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a65f5167d99af60dc2f70a0e6ee249ba0"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::onQuantityMonthChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onQuantityMonthChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="73" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="488" bodyend="510"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dcd/classmm_1_1_drug_window_1a94a7778ec2323f116ade371f70da2d24"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DrugWindow::updateTotalDrug</definition>
+                <argsstring>()</argsstring>
+                <name>updateTotalDrug</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/DrugWindow.hpp" line="75" column="1" bodyfile="code/gui/DrugWindow.cpp"
+                          bodystart="512" bodyend="559"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="64">
+                <label>mm::DrugWindow</label>
+                <link refid="d7/dcd/classmm_1_1_drug_window"/>
+                <childnode refid="65" relation="public-inheritance">
+                </childnode>
+                <childnode refid="68" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="67">
+                <label>trackable</label>
+            </node>
+            <node id="66">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="68">
+                <label>mm::IObserver</label>
+                <link refid="d7/d9e/classmm_1_1_i_observer"/>
+            </node>
+            <node id="65">
+                <label>mm::Window</label>
+                <link refid="d1/d71/classmm_1_1_window"/>
+                <childnode refid="66" relation="public-inheritance">
+                </childnode>
+                <childnode refid="67" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="69">
+                <label>mm::DrugWindow</label>
+                <link refid="d7/dcd/classmm_1_1_drug_window"/>
+                <childnode refid="70" relation="public-inheritance">
+                </childnode>
+                <childnode refid="73" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="72">
+                <label>trackable</label>
+            </node>
+            <node id="71">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="73">
+                <label>mm::IObserver</label>
+                <link refid="d7/d9e/classmm_1_1_i_observer"/>
+            </node>
+            <node id="70">
+                <label>mm::Window</label>
+                <link refid="d1/d71/classmm_1_1_window"/>
+                <childnode refid="71" relation="public-inheritance">
+                </childnode>
+                <childnode refid="72" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/DrugWindow.hpp" line="13" column="1" bodyfile="code/gui/DrugWindow.hpp" bodystart="13"
+                  bodyend="76"/>
+        <listofallmembers>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>attach</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>detach</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1aeee9b004fcb7989999b3ba51ee7112cc" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>drugListStore</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a7324435f0124010f172507467454d1a5" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>DrugWindow</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a457dc4fe25ca7f584a20ec376e397d63" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>filterDrugOn</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a049a2ecb0325eada6fa1e73c86222a3d" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>filterEndDate</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a86be3059412466a0167169cb24a9f70f" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>filterQuantityOn</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1aae5c7157a865181c8b09fb8b43cb4812" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>filterStartDate</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1aa33aafc6205abc8c627d0b0a5849895b" prot="public"
+                    virt="virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>getName</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a571966bdd4a2ecf069cdca69c73726b2" prot="public"
+                    virt="virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>getNextWindow</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a54f331f1c516ce9113a9dade43948a16" prot="public"
+                    virt="virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>init</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a2d01e24deaba42b7c24cf5b5457f4298" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>initDrugFilter</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a4926180df1b7f3dfc1f2b1746522c6fb" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>initHandlers</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a40c9dca8380e72b7468170db21bcfbe9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>initQuantityFilter</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1ac762c909bb394adccd41e1c6e97d8404" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>initTreeView</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1ae8052f9255340d48355d7856fb346bce" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>next</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a5f2baab3fe347a3f297a5099f1b6693f" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>onFilterClose</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1ac82c4ff64a06ce3a942e26ace664ef14" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>onFilterMonthChanged</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1aa95d1ea3fa8342ba427c1cbec848934b" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>onFilterOpened</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a03478c57d6101692a683bf957375b13f" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>onFilterYearChanged</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a65f5167d99af60dc2f70a0e6ee249ba0" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>onQuantityMonthChanged</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1adffa50b673a54cec639fff04a7b33d54" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>onQuantityQuarterChanged</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1ad9ee761635cf4087270baf2897b4996a" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>onQuantitySemesterChanged</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a068f2a58554798bf3394c84fcaabcbf8" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>onQuantityYearChanged</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1ad88417beac6e778776f939c31e6def7a" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>onSelectedDrug</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a92f8c6b2c829e418166c7fc2f20ebb8d" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>onSwitchActivate</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1ac1efebf1ceff8a0e870306797eae1370" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>patientExp</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1add22e393298a9d91caa1698a254d5ed7" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>quantityEndDate</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a96e7d5a2f1909fe93d34660232b2ce95" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>quantityStartDate</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a98c6d97f491cb648dede0ef3db2b13b2" prot="public"
+                    virt="virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>update</name>
+            </member>
+            <member refid="d7/d9e/classmm_1_1_i_observer_1add1245a281c47575cc0e42449635a9fd" prot="public"
+                    virt="virtual" ambiguityscope="mm::IObserver::">
+                <scope>mm::DrugWindow</scope>
+                <name>update</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a5df5a3991bc26fcf5e4df2c622053c42" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>updateDrugDetailsView</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a7a43f5981915470da37088a248006c0e" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>updateDrugTreeView</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a069d6731dcbf47f32e6be18a8ecb0472" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>updatePatientView</name>
+            </member>
+            <member refid="d7/dcd/classmm_1_1_drug_window_1a94a7778ec2323f116ade371f70da2d24" prot="private"
+                    virt="non-virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>updateTotalDrug</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" prot="public"
+                    virt="virtual">
+                <scope>mm::DrugWindow</scope>
+                <name>~ISubject</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

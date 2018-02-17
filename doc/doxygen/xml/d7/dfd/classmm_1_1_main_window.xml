@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d7/dfd/classmm_1_1_main_window" kind="class" language="C++" prot="public">
         <compoundname>mm::MainWindow</compoundname>
         <basecompoundref refid="d1/d71/classmm_1_1_window" prot="public" virt="non-virtual">mm::Window</basecompoundref>
@@ -22,8 +22,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/MainWindow.hpp" line="16" column="1" bodyfile="code/gui/MainWindow.hpp"
-                          bodystart="16" bodyend="-1"/>
+                <location file="code/gui/MainWindow.hpp" line="17" column="1" bodyfile="code/gui/MainWindow.hpp"
+                          bodystart="17" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="d7/dfd/classmm_1_1_main_window_1a3e0496c6cb45823813b373112d99fada"
                        prot="private" static="no" mutable="no">
@@ -40,43 +40,44 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/MainWindow.hpp" line="17" column="1" bodyfile="code/gui/MainWindow.hpp"
-                          bodystart="17" bodyend="-1"/>
+                <location file="code/gui/MainWindow.hpp" line="18" column="1" bodyfile="code/gui/MainWindow.hpp"
+                          bodystart="18" bodyend="-1"/>
             </memberdef>
-            <memberdef kind="variable" id="d7/dfd/classmm_1_1_main_window_1a9afbfe449eae150e699e7717c00a6610"
+            <memberdef kind="variable" id="d7/dfd/classmm_1_1_main_window_1a0b44419ae99b1b1bb40b42c4d56d9d63"
                        prot="private" static="no" mutable="no">
-                <type>std::unique_ptr&lt; <ref refid="d1/d71/classmm_1_1_window" kindref="compound">Window</ref> &gt;
+                <type>std::array&lt; std::unique_ptr&lt; <ref refid="d1/d71/classmm_1_1_window" kindref="compound">
+                    Window
+                </ref> &gt;, 2 &gt;
                 </type>
-                <definition>std::unique_ptr&lt;Window&gt; mm::MainWindow::activeTabWindow</definition>
+                <definition>std::array&lt;std::unique_ptr&lt;Window&gt;, 2&gt; mm::MainWindow::tabWindows</definition>
                 <argsstring></argsstring>
-                <name>activeTabWindow</name>
+                <name>tabWindows</name>
                 <briefdescription>
                 </briefdescription>
                 <detaileddescription>
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/MainWindow.hpp" line="19" column="1" bodyfile="code/gui/MainWindow.hpp"
-                          bodystart="19" bodyend="-1"/>
+                <location file="code/gui/MainWindow.hpp" line="20" column="1" bodyfile="code/gui/MainWindow.hpp"
+                          bodystart="20" bodyend="-1"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="public-func">
             <memberdef kind="function" id="d7/dfd/classmm_1_1_main_window_1a1094273a8ac991a50e4612efa8174fdd"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
                 <type>bool</type>
-                <definition>bool mm::MainWindow::initDrugComboBox</definition>
+                <definition>bool mm::MainWindow::init</definition>
                 <argsstring>() override</argsstring>
-                <name>initDrugComboBox</name>
-                <reimplements refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10">initDrugComboBox
-                </reimplements>
+                <name>init</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10">init</reimplements>
                 <briefdescription>
                 </briefdescription>
                 <detaileddescription>
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/MainWindow.hpp" line="22" column="1" bodyfile="code/gui/MainWindow.cpp"
-                          bodystart="10" bodyend="20"/>
+                <location file="code/gui/MainWindow.hpp" line="23" column="1" bodyfile="code/gui/MainWindow.cpp"
+                          bodystart="13" bodyend="23"/>
             </memberdef>
             <memberdef kind="function" id="d7/dfd/classmm_1_1_main_window_1a8cfdfeb6ad47afff06fa6b1b7fdc0c88"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
@@ -94,8 +95,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/MainWindow.hpp" line="24" column="1" bodyfile="code/gui/MainWindow.cpp"
-                          bodystart="22" bodyend="24"/>
+                <location file="code/gui/MainWindow.hpp" line="25" column="1" bodyfile="code/gui/MainWindow.cpp"
+                          bodystart="25" bodyend="27"/>
             </memberdef>
             <memberdef kind="function" id="d7/dfd/classmm_1_1_main_window_1aa1511ad7bed8d47cd35415d0a3a1161e"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
@@ -113,8 +114,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/MainWindow.hpp" line="26" column="1" bodyfile="code/gui/MainWindow.cpp"
-                          bodystart="26" bodyend="28"/>
+                <location file="code/gui/MainWindow.hpp" line="27" column="1" bodyfile="code/gui/MainWindow.cpp"
+                          bodystart="29" bodyend="31"/>
             </memberdef>
             <memberdef kind="function" id="d7/dfd/classmm_1_1_main_window_1ac0fc4875dc774c1b7b1ca59d174a7fc1"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -130,8 +131,38 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/MainWindow.hpp" line="28" column="1" bodyfile="code/gui/MainWindow.cpp"
-                          bodystart="56" bodyend="59"/>
+                <location file="code/gui/MainWindow.hpp" line="29" column="1" bodyfile="code/gui/MainWindow.cpp"
+                          bodystart="59" bodyend="68"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dfd/classmm_1_1_main_window_1ae9a06c62e4efd9fce7334afb032e20d6"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::MainWindow::MainWindow</definition>
+                <argsstring>()</argsstring>
+                <name>MainWindow</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/MainWindow.hpp" line="31" column="1" bodyfile="code/gui/MainWindow.cpp"
+                          bodystart="70" bodyend="71"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/dfd/classmm_1_1_main_window_1a37132df8fb730f15d8eb75f07e5fd92d"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type></type>
+                <definition>mm::MainWindow::~MainWindow</definition>
+                <argsstring>()</argsstring>
+                <name>~MainWindow</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/MainWindow.hpp" line="33" column="1" bodyfile="code/gui/MainWindow.cpp"
+                          bodystart="73" bodyend="76"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="private-func">
@@ -147,8 +178,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/MainWindow.hpp" line="33" column="1" bodyfile="code/gui/MainWindow.cpp"
-                          bodystart="30" bodyend="42"/>
+                <location file="code/gui/MainWindow.hpp" line="38" column="1" bodyfile="code/gui/MainWindow.cpp"
+                          bodystart="33" bodyend="44"/>
             </memberdef>
             <memberdef kind="function" id="d7/dfd/classmm_1_1_main_window_1a721272d1bb6c184d1be80323ddfe153a"
                        prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -162,8 +193,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/MainWindow.hpp" line="36" column="1" bodyfile="code/gui/MainWindow.cpp"
-                          bodystart="44" bodyend="47"/>
+                <location file="code/gui/MainWindow.hpp" line="43" column="1" bodyfile="code/gui/MainWindow.cpp"
+                          bodystart="46" bodyend="49"/>
             </memberdef>
             <memberdef kind="function" id="d7/dfd/classmm_1_1_main_window_1a4532118da4fee9d6cf867679a86c286e"
                        prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -177,31 +208,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/gui/MainWindow.hpp" line="38" column="1" bodyfile="code/gui/MainWindow.cpp"
-                          bodystart="49" bodyend="54"/>
-            </memberdef>
-            <memberdef kind="function" id="d7/dfd/classmm_1_1_main_window_1a7f3d7189c8fa47580667e88ed2ba668e"
-                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void mm::MainWindow::onPageSwitch</definition>
-                <argsstring>(Gtk::Widget *page, guint page_number)</argsstring>
-                <name>onPageSwitch</name>
-                <param>
-                    <type>Gtk::Widget *</type>
-                    <declname>page</declname>
-                </param>
-                <param>
-                    <type>guint</type>
-                    <declname>page_number</declname>
-                </param>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="code/gui/MainWindow.hpp" line="40" column="1" bodyfile="code/gui/MainWindow.cpp"
-                          bodystart="61" bodyend="79"/>
+                <location file="code/gui/MainWindow.hpp" line="45" column="1" bodyfile="code/gui/MainWindow.cpp"
+                          bodystart="51" bodyend="57"/>
             </memberdef>
         </sectiondef>
         <briefdescription>
@@ -209,71 +217,66 @@
         <detaileddescription>
         </detaileddescription>
         <inheritancegraph>
-            <node id="101">
+            <node id="127">
                 <label>mm::MainWindow</label>
                 <link refid="d7/dfd/classmm_1_1_main_window"/>
-                <childnode refid="102" relation="public-inheritance">
+                <childnode refid="128" relation="public-inheritance">
                 </childnode>
-                <childnode refid="105" relation="public-inheritance">
+                <childnode refid="131" relation="public-inheritance">
                 </childnode>
             </node>
-            <node id="104">
+            <node id="130">
                 <label>trackable</label>
             </node>
-            <node id="103">
+            <node id="129">
                 <label>mm::ISubject</label>
                 <link refid="d1/dd2/classmm_1_1_i_subject"/>
             </node>
-            <node id="105">
+            <node id="131">
                 <label>mm::IObserver</label>
                 <link refid="d7/d9e/classmm_1_1_i_observer"/>
             </node>
-            <node id="102">
+            <node id="128">
                 <label>mm::Window</label>
                 <link refid="d1/d71/classmm_1_1_window"/>
-                <childnode refid="103" relation="public-inheritance">
+                <childnode refid="129" relation="public-inheritance">
                 </childnode>
-                <childnode refid="104" relation="public-inheritance">
+                <childnode refid="130" relation="public-inheritance">
                 </childnode>
             </node>
         </inheritancegraph>
         <collaborationgraph>
-            <node id="106">
+            <node id="132">
                 <label>mm::MainWindow</label>
                 <link refid="d7/dfd/classmm_1_1_main_window"/>
-                <childnode refid="107" relation="public-inheritance">
+                <childnode refid="133" relation="public-inheritance">
                 </childnode>
-                <childnode refid="110" relation="public-inheritance">
+                <childnode refid="136" relation="public-inheritance">
                 </childnode>
             </node>
-            <node id="109">
+            <node id="135">
                 <label>trackable</label>
             </node>
-            <node id="108">
+            <node id="134">
                 <label>mm::ISubject</label>
                 <link refid="d1/dd2/classmm_1_1_i_subject"/>
             </node>
-            <node id="110">
+            <node id="136">
                 <label>mm::IObserver</label>
                 <link refid="d7/d9e/classmm_1_1_i_observer"/>
             </node>
-            <node id="107">
+            <node id="133">
                 <label>mm::Window</label>
                 <link refid="d1/d71/classmm_1_1_window"/>
-                <childnode refid="108" relation="public-inheritance">
+                <childnode refid="134" relation="public-inheritance">
                 </childnode>
-                <childnode refid="109" relation="public-inheritance">
+                <childnode refid="135" relation="public-inheritance">
                 </childnode>
             </node>
         </collaborationgraph>
-        <location file="code/gui/MainWindow.hpp" line="14" column="1" bodyfile="code/gui/MainWindow.hpp" bodystart="14"
-                  bodyend="42"/>
+        <location file="code/gui/MainWindow.hpp" line="15" column="1" bodyfile="code/gui/MainWindow.hpp" bodystart="15"
+                  bodyend="46"/>
         <listofallmembers>
-            <member refid="d7/dfd/classmm_1_1_main_window_1a9afbfe449eae150e699e7717c00a6610" prot="private"
-                    virt="non-virtual">
-                <scope>mm::MainWindow</scope>
-                <name>activeTabWindow</name>
-            </member>
             <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
                     virt="non-virtual">
                 <scope>mm::MainWindow</scope>
@@ -302,12 +305,17 @@
             <member refid="d7/dfd/classmm_1_1_main_window_1a1094273a8ac991a50e4612efa8174fdd" prot="public"
                     virt="virtual">
                 <scope>mm::MainWindow</scope>
-                <name>initDrugComboBox</name>
+                <name>init</name>
             </member>
             <member refid="d7/dfd/classmm_1_1_main_window_1ac6dfc1405fdf27e72ad12f4aaf048632" prot="private"
                     virt="non-virtual">
                 <scope>mm::MainWindow</scope>
                 <name>initHandlers</name>
+            </member>
+            <member refid="d7/dfd/classmm_1_1_main_window_1ae9a06c62e4efd9fce7334afb032e20d6" prot="public"
+                    virt="non-virtual">
+                <scope>mm::MainWindow</scope>
+                <name>MainWindow</name>
             </member>
             <member refid="d7/dfd/classmm_1_1_main_window_1aa52195114bed3531102f468e548f263c" prot="private"
                     virt="non-virtual">
@@ -315,6 +323,11 @@
                 <name>next</name>
             </member>
             <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::MainWindow</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
                     virt="non-virtual">
                 <scope>mm::MainWindow</scope>
                 <name>notify</name>
@@ -329,13 +342,18 @@
                 <scope>mm::MainWindow</scope>
                 <name>onLogout</name>
             </member>
-            <member refid="d7/dfd/classmm_1_1_main_window_1a7f3d7189c8fa47580667e88ed2ba668e" prot="private"
+            <member refid="d7/dfd/classmm_1_1_main_window_1a0b44419ae99b1b1bb40b42c4d56d9d63" prot="private"
                     virt="non-virtual">
                 <scope>mm::MainWindow</scope>
-                <name>onPageSwitch</name>
+                <name>tabWindows</name>
             </member>
             <member refid="d7/dfd/classmm_1_1_main_window_1ac0fc4875dc774c1b7b1ca59d174a7fc1" prot="public"
                     virt="virtual">
+                <scope>mm::MainWindow</scope>
+                <name>update</name>
+            </member>
+            <member refid="d7/d9e/classmm_1_1_i_observer_1add1245a281c47575cc0e42449635a9fd" prot="public"
+                    virt="virtual" ambiguityscope="mm::IObserver::">
                 <scope>mm::MainWindow</scope>
                 <name>update</name>
             </member>
@@ -343,6 +361,11 @@
                     virt="virtual">
                 <scope>mm::MainWindow</scope>
                 <name>~ISubject</name>
+            </member>
+            <member refid="d7/dfd/classmm_1_1_main_window_1a37132df8fb730f15d8eb75f07e5fd92d" prot="public"
+                    virt="virtual">
+                <scope>mm::MainWindow</scope>
+                <name>~MainWindow</name>
             </member>
         </listofallmembers>
     </compounddef>

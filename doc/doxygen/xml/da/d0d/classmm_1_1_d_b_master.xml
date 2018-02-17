@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="da/d0d/classmm_1_1_d_b_master" kind="class" language="C++" prot="public">
         <compoundname>mm::DBMaster</compoundname>
         <includes refid="d7/d0f/_d_b_master_8hpp" local="no">DBMaster.hpp</includes>
@@ -375,6 +375,67 @@
                 <location file="code/DBMaster.hpp" line="117" column="1" bodyfile="code/DBMaster.cpp" bodystart="213"
                           bodyend="281"/>
             </memberdef>
+            <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a16926fd78511ec82ea52da00b84a5d9d"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::DBMaster::exists</definition>
+                <argsstring>(string table_name, string id_name, Serialized id)</argsstring>
+                <name>exists</name>
+                <param>
+                    <type>string</type>
+                    <declname>table_name</declname>
+                </param>
+                <param>
+                    <type>string</type>
+                    <declname>id_name</declname>
+                </param>
+                <param>
+                    <type>
+                        <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref>
+                    </type>
+                    <declname>id</declname>
+                </param>
+                <briefdescription>
+                    <para>controlla se nella tabella esiste già un elemento.</para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>table_name</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>nome della tabella</para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>id_name</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>nome della colonna presa come id</para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>id</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>valore dell&apos;id</para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                        <simplesect kind="return">
+                            <para></para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="127" column="1" bodyfile="code/DBMaster.cpp" bodystart="318"
+                          bodyend="343"/>
+            </memberdef>
         </sectiondef>
         <sectiondef kind="public-static-func">
             <memberdef kind="function" id="da/d0d/classmm_1_1_d_b_master_1a65586b91e19e610db40ef1d6e81cfd4a"
@@ -441,10 +502,9 @@
                     </para>
                     <para>
                         <simplesect kind="return">
-                            <para>reference ad un oggetto
-                                <ref refid="da/d0d/classmm_1_1_d_b_master" kindref="compound">
-                                    DBMaster
-                                </ref>
+                            <para>reference ad un oggetto <ref refid="da/d0d/classmm_1_1_d_b_master" kindref="compound">
+                                DBMaster
+                            </ref>
                             </para>
                         </simplesect>
                     </para>
@@ -473,7 +533,7 @@
             </node>
         </collaborationgraph>
         <location file="code/DBMaster.hpp" line="25" column="1" bodyfile="code/DBMaster.hpp" bodystart="25"
-                  bodyend="119"/>
+                  bodyend="129"/>
         <listofallmembers>
             <member refid="da/d0d/classmm_1_1_d_b_master_1a187988c8741d0a2c5806919b8d672af0" prot="public"
                     virt="non-virtual">
@@ -499,6 +559,11 @@
                     virt="non-virtual">
                 <scope>mm::DBMaster</scope>
                 <name>DBMaster</name>
+            </member>
+            <member refid="da/d0d/classmm_1_1_d_b_master_1a16926fd78511ec82ea52da00b84a5d9d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DBMaster</scope>
+                <name>exists</name>
             </member>
             <member refid="da/d0d/classmm_1_1_d_b_master_1a9e8092b67a249a273668ad042a4084e2" prot="public"
                     virt="non-virtual">

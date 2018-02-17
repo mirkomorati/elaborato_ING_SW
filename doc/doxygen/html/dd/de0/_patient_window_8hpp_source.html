@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-    <meta name="generator" content="Doxygen 1.8.13"/>
+    <meta name="generator" content="Doxygen 1.8.14"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>MedH: File sorgente code/gui/PatientWindow.hpp</title>
     <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -15,8 +15,9 @@
     <script type="text/javascript" src="../../navtreedata.js"></script>
     <script type="text/javascript" src="../../navtree.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(document).ready(initResizable);
-    </script>
+        /* @license-end */</script>
     <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../../search/searchdata.js"></script>
     <script type="text/javascript" src="../../search/search.js"></script>
@@ -41,20 +42,23 @@
         </table>
     </div>
     <!-- end header part -->
-    <!-- Generato da Doxygen 1.8.13 -->
+    <!-- Generato da Doxygen 1.8.14 -->
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         var searchBox = new SearchBox("searchBox", "../../search", false, 'Cerca');
+        /* @license-end */
     </script>
     <script type="text/javascript" src="../../menudata.js"></script>
     <script type="text/javascript" src="../../menu.js"></script>
     <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
         $(function () {
             initMenu('../../', true, false, 'search.php', 'Cerca');
             $(document).ready(function () {
                 init_search();
             });
         });
-    </script>
+        /* @license-end */</script>
     <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -68,9 +72,11 @@
     </div>
 </div>
 <script type="text/javascript">
+    /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
     $(document).ready(function () {
         initNavTree('dd/de0/_patient_window_8hpp_source.html', '../../');
     });
+    /* @license-end */
 </script>
 <div id="doc-content">
     <!-- window showing the filter options -->
@@ -184,7 +190,7 @@
             </div>
             <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
             <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; <span class="keywordtype">bool</span>
-                <a class="code" href="../../da/d81/classmm_1_1_patient_window.html#a0ad27245769b095559858eeecdbb7089">initDrugComboBox</a>()
+                <a class="code" href="../../da/d81/classmm_1_1_patient_window.html#a0ad27245769b095559858eeecdbb7089">init</a>()
                 <span class="keyword">override</span>;
             </div>
             <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
@@ -205,93 +211,116 @@
                 <span class="keyword">override</span>;
             </div>
             <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-            <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <a class="code"
+            <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <span class="keywordtype">void</span>
+                <a class="code" href="../../da/d81/classmm_1_1_patient_window.html#a461de186f72a8902a9f95a622dc1c02b">update</a>(<span
+                        class="keywordtype">unsigned</span> <span class="keywordtype">int</span> what) <span
+                        class="keyword">override</span>;
+            </div>
+            <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+            <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; <a class="code"
                                                                                               href="../../da/d81/classmm_1_1_patient_window.html#a48de0e9302eb9cb9b33e8641f27f01c1">~PatientWindow</a>()
                 <span class="keyword">override</span>;
             </div>
-            <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-            <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; <span
+            <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+            <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; <span
                     class="keyword">private</span>:
             </div>
-            <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; <span class="comment">//-------------------initDrugComboBox functions-------------------//</span>
-            </div>
-            <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-            <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span class="keywordtype">void</span>
-                initHandlers();
+            <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span class="comment">//-------------------init functions-------------------//</span>
             </div>
             <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
             <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; <span class="keywordtype">void</span>
-                initTreeView();
+                initHandlers();
             </div>
             <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
             <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; <span class="keywordtype">void</span>
-                initFilters();
+                initTreeView();
             </div>
             <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-            <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; <span class="comment">//-------------------signal handlers-------------------//</span>
+            <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; <span class="keywordtype">void</span>
+                initFilters();
             </div>
-            <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; <span class="keywordtype">void</span>
-                onAddPatientClicked();
+            <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+            <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; <span class="comment">//-------------------signal handlers-------------------//</span>
             </div>
-            <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
             <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; <span class="keywordtype">void</span>
-                onAddPrescriptionClicked();
+                onAddPatientClicked();
             </div>
             <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
             <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; <span class="keywordtype">void</span>
-                onSelectedPatient(<span class="keyword">const</span> Gtk::TreeModel::Path &amp;, Gtk::TreeViewColumn *);
+                onAddPrescriptionClicked();
             </div>
             <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
             <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; <span class="keywordtype">void</span>
-                onRemovePatientClicked();
+                onSelectedPatient(<span class="keyword">const</span> Gtk::TreeModel::Path &amp;, Gtk::TreeViewColumn *);
             </div>
             <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
             <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; <span class="keywordtype">void</span>
-                onRemovePrescriptionClicked();
+                onRemovePatientClicked();
             </div>
             <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
             <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; <span class="keywordtype">void</span>
-                onSwitchActivate();
+                onRemovePrescriptionClicked();
             </div>
             <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
             <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; <span class="keywordtype">void</span>
-                onFilterYearChanged();
+                onSwitchActivate();
             </div>
             <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
             <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; <span class="keywordtype">void</span>
-                onFilterQuarterChanged();
+                onFilterYearChanged();
             </div>
             <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
             <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; <span class="keywordtype">void</span>
-                onFilterMonthChanged();
+                onFilterQuarterChanged();
             </div>
             <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
             <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; <span class="keywordtype">void</span>
-                onFilterCustomChanged();
+                onFilterMonthChanged();
             </div>
             <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-            <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; <span class="comment">//-------------------graphics updates-------------------//</span>
+            <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; <span class="keywordtype">void</span>
+                onFilterCustomChanged();
             </div>
             <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-            <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; <span class="keywordtype">void</span>
-                updatePatientTreeView();
+            <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; <span
+                    class="keywordtype">int</span> sortPrescriptionList(Gtk::ListBoxRow *row1, Gtk::ListBoxRow *row2,
+                Gtk::SortType sortType);
             </div>
             <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-            <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; <span class="keywordtype">void</span>
-                updatePrescriptionView();
+            <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; <span class="keywordtype">bool</span>
+                onFilterClose(GdkEventButton *buttonEvent);
             </div>
             <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-            <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; <span class="keywordtype">void</span>
-                updatePatientDetailsView();
+            <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; <span class="keywordtype">bool</span>
+                onFilterOpened(GdkEventButton *buttonEvent);
             </div>
             <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-            <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; <span class="keywordtype">void</span>
+            <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; <span class="comment">//-------------------graphics updates-------------------//</span>
+            </div>
+            <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+            <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; <span class="keywordtype">void</span>
+                updatePatientTreeView();
+            </div>
+            <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+            <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; <span class="keywordtype">void</span>
+                updatePrescriptionView();
+            </div>
+            <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+            <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; <span class="keywordtype">void</span>
+                updatePatientDetailsView();
+            </div>
+            <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+            <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; <span class="keywordtype">void</span>
                 onFilterSemesterChanged();
             </div>
-            <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; };</div>
-            <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
-            <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-            <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif //ELABORATO_ING_SW_PATIENT_WINDOW_HPP</span>
+            <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+            <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; <span class="keywordtype">void</span>
+                sortByPrescriptionHandler();
+            </div>
+            <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; };</div>
+            <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+            <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+            <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif //ELABORATO_ING_SW_PATIENT_WINDOW_HPP</span>
             </div>
             <div class="ttc" id="_widgets_8hpp_html">
                 <div class="ttname"><a href="../../dc/d55/_widgets_8hpp.html">Widgets.hpp</a></div>
@@ -304,14 +333,14 @@
                         href="../../da/d81/classmm_1_1_patient_window.html#a303da04da191185a070454feff15e014">mm::PatientWindow::PatientWindow</a>
                 </div>
                 <div class="ttdeci">PatientWindow()</div>
-                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:17</div>
+                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:22</div>
             </div>
             <div class="ttc" id="classmm_1_1_patient_window_html_ae22b9bce4c7ccdbcc45feb080088a558">
                 <div class="ttname"><a
                         href="../../da/d81/classmm_1_1_patient_window.html#ae22b9bce4c7ccdbcc45feb080088a558">mm::PatientWindow::getNextWindow</a>
                 </div>
                 <div class="ttdeci">WindowName getNextWindow() const override</div>
-                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:138</div>
+                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:161</div>
             </div>
             <div class="ttc" id="_window_8hpp_html">
                 <div class="ttname"><a href="../../de/d0b/_window_8hpp.html">Window.hpp</a></div>
@@ -325,7 +354,7 @@
                         href="../../da/d81/classmm_1_1_patient_window.html#a48de0e9302eb9cb9b33e8641f27f01c1">mm::PatientWindow::~PatientWindow</a>
                 </div>
                 <div class="ttdeci">~PatientWindow() override</div>
-                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:335</div>
+                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:424</div>
             </div>
             <div class="ttc" id="namespacemm_html">
                 <div class="ttname"><a href="../../d0/d04/namespacemm.html">mm</a></div>
@@ -333,10 +362,10 @@
             </div>
             <div class="ttc" id="classmm_1_1_patient_window_html_a0ad27245769b095559858eeecdbb7089">
                 <div class="ttname"><a
-                        href="../../da/d81/classmm_1_1_patient_window.html#a0ad27245769b095559858eeecdbb7089">mm::PatientWindow::initDrugComboBox</a>
+                        href="../../da/d81/classmm_1_1_patient_window.html#a0ad27245769b095559858eeecdbb7089">mm::PatientWindow::init</a>
                 </div>
-                <div class="ttdeci">bool initDrugComboBox() override</div>
-                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:125</div>
+                <div class="ttdeci">bool init() override</div>
+                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:148</div>
             </div>
             <div class="ttc" id="classmm_1_1_i_observer_html">
                 <div class="ttname"><a href="../../d7/d9e/classmm_1_1_i_observer.html">mm::IObserver</a></div>
@@ -347,7 +376,7 @@
                         href="../../da/d81/classmm_1_1_patient_window.html#ab951ab5bf21df2b9450496c6faca5268">mm::PatientWindow::getName</a>
                 </div>
                 <div class="ttdeci">WindowName getName() const override</div>
-                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:134</div>
+                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:157</div>
             </div>
             <div class="ttc" id="_custom_widgets_8hpp_html">
                 <div class="ttname"><a href="../../d5/d46/_custom_widgets_8hpp.html">CustomWidgets.hpp</a></div>
@@ -376,7 +405,7 @@
                         href="../../da/d81/classmm_1_1_patient_window.html#a461de186f72a8902a9f95a622dc1c02b">mm::PatientWindow::update</a>
                 </div>
                 <div class="ttdeci">void update() override</div>
-                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:142</div>
+                <div class="ttdef"><b>Definition:</b> PatientWindow.cpp:165</div>
             </div>
         </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -388,7 +417,7 @@
         <li class="navelem"><a class="el" href="../../dd/de0/_patient_window_8hpp.html">PatientWindow.hpp</a></li>
         <li class="footer">Generato da
             <a href="http://www.doxygen.org/index.html">
-                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13
+                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.14
         </li>
     </ul>
 </div>

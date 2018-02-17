@@ -1,50 +1,56 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="dc/d1f/_date_8cpp" kind="file" language="C++">
         <compoundname>Date.cpp</compoundname>
         <includes refid="d8/d63/_date_8hpp" local="yes">Date.hpp</includes>
         <includes refid="d2/dce/string_utils_8hpp" local="yes">stringUtils.hpp</includes>
+        <includes local="no">ctime</includes>
         <incdepgraph>
-            <node id="778">
+            <node id="1057">
                 <label>stringUtils.hpp</label>
                 <link refid="d2/dce/string_utils_8hpp"/>
-                <childnode refid="779" relation="include">
+                <childnode refid="1058" relation="include">
                 </childnode>
-                <childnode refid="780" relation="include">
+                <childnode refid="1059" relation="include">
                 </childnode>
-                <childnode refid="781" relation="include">
+                <childnode refid="1060" relation="include">
                 </childnode>
-                <childnode refid="782" relation="include">
+                <childnode refid="1061" relation="include">
                 </childnode>
             </node>
-            <node id="782">
+            <node id="1061">
                 <label>iterator</label>
             </node>
-            <node id="779">
+            <node id="1058">
                 <label>string</label>
             </node>
-            <node id="781">
+            <node id="1062">
+                <label>ctime</label>
+            </node>
+            <node id="1060">
                 <label>vector</label>
             </node>
-            <node id="780">
+            <node id="1059">
                 <label>sstream</label>
             </node>
-            <node id="776">
+            <node id="1055">
                 <label>Date.hpp</label>
                 <link refid="d8/d63/_date_8hpp"/>
-                <childnode refid="777" relation="include">
+                <childnode refid="1056" relation="include">
                 </childnode>
             </node>
-            <node id="777">
+            <node id="1056">
                 <label>iostream</label>
             </node>
-            <node id="775">
+            <node id="1054">
                 <label>code/utils/Date.cpp</label>
                 <link refid="dc/d1f/_date_8cpp"/>
-                <childnode refid="776" relation="include">
+                <childnode refid="1055" relation="include">
                 </childnode>
-                <childnode refid="778" relation="include">
+                <childnode refid="1057" relation="include">
+                </childnode>
+                <childnode refid="1062" relation="include">
                 </childnode>
             </node>
         </incdepgraph>
@@ -69,8 +75,14 @@
             </codeline>
             <codeline lineno="9">
                 <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;ctime&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="15">
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="16">
                 <highlight class="normal"><ref
                         refid="df/d88/structmm_1_1util_1_1_date_1a9aaf2c2d5171e081541831c4a756232e" kindref="member">
                     mm::util::Date::Date</ref>(
@@ -87,25 +99,25 @@
                 <highlight class="normal"><sp/>year)<sp/>:<sp/>day(day),<sp/>month(month),<sp/>year(year)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="16">
+            <codeline lineno="17">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="17">
+            <codeline lineno="18">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="18">
+            <codeline lineno="19">
                 <highlight class="normal"><ref
                         refid="df/d88/structmm_1_1util_1_1_date_1a9aaf2c2d5171e081541831c4a756232e" kindref="member">
                     mm::util::Date::Date</ref>()<sp/>:<sp/>day(-1),<sp/>month(-1),<sp/>year(-1)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="19">
+            <codeline lineno="20">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="20">
+            <codeline lineno="21">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="21">
+            <codeline lineno="22">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -114,7 +126,7 @@
                         mm::util::Date::set_from_str</ref>(std::string<sp/>str)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="22">
+            <codeline lineno="23">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -131,7 +143,7 @@
                 <highlight class="charliteral">&apos;/&apos;</highlight>
                 <highlight class="normal">);</highlight>
             </codeline>
-            <codeline lineno="23">
+            <codeline lineno="24">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -149,10 +161,10 @@
                 </highlight>
                 <highlight class="normal">);</highlight>
             </codeline>
-            <codeline lineno="24">
+            <codeline lineno="25">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="25">
+            <codeline lineno="26">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -160,7 +172,7 @@
                     <sp/>day<sp/>=<sp/>std::stoi(token_vector[0]);
                 </highlight>
             </codeline>
-            <codeline lineno="26">
+            <codeline lineno="27">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -168,7 +180,7 @@
                     <sp/>month<sp/>=<sp/>std::stoi(token_vector[1]);
                 </highlight>
             </codeline>
-            <codeline lineno="27">
+            <codeline lineno="28">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -176,13 +188,13 @@
                     <sp/>year<sp/>=<sp/>std::stoi(token_vector[2]);
                 </highlight>
             </codeline>
-            <codeline lineno="28">
+            <codeline lineno="29">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="29">
+            <codeline lineno="30">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="30">
+            <codeline lineno="31">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
@@ -201,7 +213,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="31">
+            <codeline lineno="32">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -216,7 +228,7 @@
                     <sp/>&amp;&amp;
                 </highlight>
             </codeline>
-            <codeline lineno="32">
+            <codeline lineno="33">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -235,7 +247,7 @@
                     <sp/>&amp;&amp;
                 </highlight>
             </codeline>
-            <codeline lineno="33">
+            <codeline lineno="34">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -252,13 +264,13 @@
                     year</ref>;
                 </highlight>
             </codeline>
-            <codeline lineno="34">
+            <codeline lineno="35">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="35">
+            <codeline lineno="36">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="36">
+            <codeline lineno="37">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
@@ -277,7 +289,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="37">
+            <codeline lineno="38">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -290,13 +302,13 @@
                 <highlight class="keyword">this</highlight>
                 <highlight class="normal">);</highlight>
             </codeline>
-            <codeline lineno="38">
+            <codeline lineno="39">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="39">
+            <codeline lineno="40">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="40">
+            <codeline lineno="41">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
@@ -315,7 +327,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="41">
+            <codeline lineno="42">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -329,13 +341,13 @@
                 <highlight class="normal"><sp/>&gt;=<sp/>rhs);
                 </highlight>
             </codeline>
-            <codeline lineno="42">
+            <codeline lineno="43">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="43">
+            <codeline lineno="44">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="44">
+            <codeline lineno="45">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
@@ -354,7 +366,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="45">
+            <codeline lineno="46">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -368,13 +380,13 @@
                 <highlight class="normal"><sp/>&lt;=<sp/>rhs);
                 </highlight>
             </codeline>
-            <codeline lineno="46">
+            <codeline lineno="47">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="47">
+            <codeline lineno="48">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="48">
+            <codeline lineno="49">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
@@ -393,7 +405,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="49">
+            <codeline lineno="50">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -413,7 +425,7 @@
                 <highlight class="keyword">true</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="50">
+            <codeline lineno="51">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -437,7 +449,7 @@
                 <highlight class="keyword">false</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="51">
+            <codeline lineno="52">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -448,7 +460,7 @@
                 <highlight class="normal"><sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="52">
+            <codeline lineno="53">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -472,7 +484,7 @@
                 <highlight class="keyword">true</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="53">
+            <codeline lineno="54">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -500,7 +512,7 @@
                 <highlight class="keyword">false</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="54">
+            <codeline lineno="55">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -515,7 +527,7 @@
                 <highlight class="normal"><sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="55">
+            <codeline lineno="56">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -536,20 +548,12 @@
                     day</ref>;
                 </highlight>
             </codeline>
-            <codeline lineno="56">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>}
-                </highlight>
-            </codeline>
             <codeline lineno="57">
                 <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
                     <sp/>
                     <sp/>
                     <sp/>
@@ -557,12 +561,20 @@
                 </highlight>
             </codeline>
             <codeline lineno="58">
-                <highlight class="normal">}</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
             </codeline>
             <codeline lineno="59">
-                <highlight class="normal"></highlight>
+                <highlight class="normal">}</highlight>
             </codeline>
             <codeline lineno="60">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="61">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
@@ -581,7 +593,7 @@
                 </highlight>
                 <highlight class="normal">{</highlight>
             </codeline>
-            <codeline lineno="61">
+            <codeline lineno="62">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -601,7 +613,7 @@
                 <highlight class="keyword">true</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="62">
+            <codeline lineno="63">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -625,7 +637,7 @@
                 <highlight class="keyword">false</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="63">
+            <codeline lineno="64">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -636,7 +648,7 @@
                 <highlight class="normal"><sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="64">
+            <codeline lineno="65">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -660,7 +672,7 @@
                 <highlight class="keyword">true</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="65">
+            <codeline lineno="66">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -688,7 +700,7 @@
                 <highlight class="keyword">false</highlight>
                 <highlight class="normal">;</highlight>
             </codeline>
-            <codeline lineno="66">
+            <codeline lineno="67">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -703,7 +715,7 @@
                 <highlight class="normal"><sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="67">
+            <codeline lineno="68">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -724,20 +736,12 @@
                     day</ref>;
                 </highlight>
             </codeline>
-            <codeline lineno="68">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>}
-                </highlight>
-            </codeline>
             <codeline lineno="69">
                 <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
                     <sp/>
                     <sp/>
                     <sp/>
@@ -745,12 +749,20 @@
                 </highlight>
             </codeline>
             <codeline lineno="70">
-                <highlight class="normal">}</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
             </codeline>
             <codeline lineno="71">
-                <highlight class="normal"></highlight>
+                <highlight class="normal">}</highlight>
             </codeline>
             <codeline lineno="72">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="73">
                 <highlight class="normal"></highlight>
                 <highlight class="keyword">const</highlight>
                 <highlight class="normal"><sp/>std::string
@@ -759,7 +771,7 @@
                         mm::util::Date::get_as_text</ref>()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="73">
+            <codeline lineno="74">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -772,7 +784,7 @@
                 <highlight class="normal"><ref refid="d8/dcc/namespacestd" kindref="compound">std</ref>;
                 </highlight>
             </codeline>
-            <codeline lineno="74">
+            <codeline lineno="75">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -780,12 +792,20 @@
                     <sp/>stringstream<sp/>ss;
                 </highlight>
             </codeline>
-            <codeline lineno="75">
+            <codeline lineno="76">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>ss<sp/>&lt;&lt;<sp/>day<sp/>&lt;&lt;<sp/>
+                    <sp/>ss<sp/>&lt;&lt;<sp/>(day<sp/>&lt;<sp/>10<sp/>?
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;0&quot;</highlight>
+                <highlight class="normal"><sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;&quot;</highlight>
+                <highlight class="normal">)<sp/>&lt;&lt;<sp/>day<sp/>&lt;&lt;<sp/>
                 </highlight>
                 <highlight class="stringliteral">&quot;/&quot;</highlight>
                 <highlight class="normal"><sp/>&lt;&lt;<sp/>(month<sp/>&lt;<sp/>10<sp/>?
@@ -802,7 +822,7 @@
                 <highlight class="normal"><sp/>&lt;&lt;<sp/>year;
                 </highlight>
             </codeline>
-            <codeline lineno="76">
+            <codeline lineno="77">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -813,13 +833,13 @@
                 <highlight class="normal"><sp/>ss.str();
                 </highlight>
             </codeline>
-            <codeline lineno="77">
+            <codeline lineno="78">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="78">
+            <codeline lineno="79">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="79">
+            <codeline lineno="80">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
                 <highlight class="normal">
@@ -828,7 +848,7 @@
                         mm::util::Date::is_valid</ref>()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="80">
+            <codeline lineno="81">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -838,21 +858,6 @@
                 <highlight class="keywordflow">return</highlight>
                 <highlight class="normal"><sp/>(day<sp/>&gt;<sp/>0<sp/>and<sp/>month<sp/>&gt;<sp/>0<sp/>and<sp/>year
                     <sp/>&gt;<sp/>0)<sp/>and
-                </highlight>
-            </codeline>
-            <codeline lineno="81">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>((((day<sp/>&gt;=<sp/>1<sp/>and<sp/>day<sp/>&lt;=<sp/>31)<sp/>and
                 </highlight>
             </codeline>
             <codeline lineno="82">
@@ -867,16 +872,30 @@
                     <sp/>
                     <sp/>
                     <sp/>
+                    <sp/>((((day<sp/>&gt;=<sp/>1<sp/>and<sp/>day<sp/>&lt;=<sp/>31)<sp/>and
+                </highlight>
+            </codeline>
+            <codeline lineno="83">
+                <highlight class="normal">
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>(month<sp/>==<sp/>1<sp/>or<sp/>month<sp/>==<sp/>3<sp/>or<sp/>month<sp/>==<sp/>5<sp/>or
                     <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>(month<sp/>==<sp/>1<sp/>or<sp/>month<sp/>==<sp/>3<sp/>or<sp/>month<sp/>==<sp/>5<sp/>or<sp/>
                     month<sp/>==<sp/>7<sp/>or<sp/>month<sp/>==<sp/>8<sp/>or<sp/>month<sp/>==<sp/>10<sp/>or<sp/>month
                     <sp/>==<sp/>12)))<sp/>or
                 </highlight>
             </codeline>
-            <codeline lineno="83">
+            <codeline lineno="84">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -893,7 +912,7 @@
                     <sp/>month<sp/>==<sp/>6<sp/>or<sp/>month<sp/>==<sp/>9<sp/>or<sp/>month<sp/>==<sp/>11))<sp/>or
                 </highlight>
             </codeline>
-            <codeline lineno="84">
+            <codeline lineno="85">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -906,12 +925,11 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>((day<sp/>&gt;=<sp/>1<sp/>and<sp/>day<sp/>&lt;=<sp/>28)<sp/>and<sp/>(month<sp/>==<sp/>2))
-                    <sp/>
+                    <sp/>((day<sp/>&gt;=<sp/>1<sp/>and<sp/>day<sp/>&lt;=<sp/>28)<sp/>and<sp/>(month<sp/>==<sp/>2))<sp/>
                     or
                 </highlight>
             </codeline>
-            <codeline lineno="85">
+            <codeline lineno="86">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -928,13 +946,13 @@
                     <sp/>or<sp/>(year<sp/>%<sp/>4<sp/>==<sp/>0<sp/>and<sp/>year<sp/>%<sp/>100<sp/>!=<sp/>0)))));
                 </highlight>
             </codeline>
-            <codeline lineno="86">
+            <codeline lineno="87">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="87">
+            <codeline lineno="88">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="88">
+            <codeline lineno="89">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">int</highlight>
                 <highlight class="normal">
@@ -943,7 +961,7 @@
                         mm::util::Date::get_current_year</ref>()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="89">
+            <codeline lineno="90">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -953,7 +971,7 @@
                 <highlight class="keyword">nullptr</highlight>
                 <highlight class="normal">);</highlight>
             </codeline>
-            <codeline lineno="90">
+            <codeline lineno="91">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -961,7 +979,7 @@
                     <sp/>std::tm<sp/>*time_p<sp/>=<sp/>std::localtime(&amp;t);
                 </highlight>
             </codeline>
-            <codeline lineno="91">
+            <codeline lineno="92">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -972,13 +990,13 @@
                 <highlight class="normal"><sp/>time_p-&gt;tm_year<sp/>+<sp/>1900;
                 </highlight>
             </codeline>
-            <codeline lineno="92">
+            <codeline lineno="93">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="93">
+            <codeline lineno="94">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="94">
+            <codeline lineno="95">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">int</highlight>
                 <highlight class="normal">
@@ -987,7 +1005,7 @@
                         mm::util::Date::get_current_day</ref>()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="95">
+            <codeline lineno="96">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -997,7 +1015,7 @@
                 <highlight class="keyword">nullptr</highlight>
                 <highlight class="normal">);</highlight>
             </codeline>
-            <codeline lineno="96">
+            <codeline lineno="97">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1005,7 +1023,7 @@
                     <sp/>std::tm<sp/>*time_p<sp/>=<sp/>std::localtime(&amp;t);
                 </highlight>
             </codeline>
-            <codeline lineno="97">
+            <codeline lineno="98">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1016,13 +1034,13 @@
                 <highlight class="normal"><sp/>time_p-&gt;tm_mday;
                 </highlight>
             </codeline>
-            <codeline lineno="98">
+            <codeline lineno="99">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="99">
+            <codeline lineno="100">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="100">
+            <codeline lineno="101">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">int</highlight>
                 <highlight class="normal">
@@ -1031,7 +1049,7 @@
                         mm::util::Date::get_current_month</ref>()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="101">
+            <codeline lineno="102">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1041,7 +1059,7 @@
                 <highlight class="keyword">nullptr</highlight>
                 <highlight class="normal">);</highlight>
             </codeline>
-            <codeline lineno="102">
+            <codeline lineno="103">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1049,7 +1067,7 @@
                     <sp/>std::tm<sp/>*time_p<sp/>=<sp/>std::localtime(&amp;t);
                 </highlight>
             </codeline>
-            <codeline lineno="103">
+            <codeline lineno="104">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1060,13 +1078,13 @@
                 <highlight class="normal"><sp/>time_p-&gt;tm_mon<sp/>+<sp/>1;
                 </highlight>
             </codeline>
-            <codeline lineno="104">
+            <codeline lineno="105">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="105">
+            <codeline lineno="106">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="106">
+            <codeline lineno="107">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -1078,7 +1096,7 @@
                 <highlight class="normal"><sp/>days)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="107">
+            <codeline lineno="108">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1090,7 +1108,7 @@
                     <sp/>30,<sp/>31,<sp/>31,<sp/>30,<sp/>31,<sp/>30,<sp/>31};
                 </highlight>
             </codeline>
-            <codeline lineno="108">
+            <codeline lineno="109">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1098,7 +1116,7 @@
                     <sp/>day<sp/>+=<sp/>days;
                 </highlight>
             </codeline>
-            <codeline lineno="109">
+            <codeline lineno="110">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1109,7 +1127,7 @@
                 <highlight class="normal"><sp/>(day<sp/>&gt;<sp/>days_per_month[month])<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="110">
+            <codeline lineno="111">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1125,7 +1143,7 @@
                     <sp/>!=<sp/>0)<sp/>||<sp/>year<sp/>%<sp/>400<sp/>==<sp/>0)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="111">
+            <codeline lineno="112">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1141,7 +1159,7 @@
                     <sp/>days_per_month[2]<sp/>=<sp/>29;
                 </highlight>
             </codeline>
-            <codeline lineno="112">
+            <codeline lineno="113">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1153,7 +1171,7 @@
                     <sp/>}
                 </highlight>
             </codeline>
-            <codeline lineno="113">
+            <codeline lineno="114">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1165,18 +1183,6 @@
                     <sp/>day<sp/>-=<sp/>days_per_month[month];
                 </highlight>
             </codeline>
-            <codeline lineno="114">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>month++;
-                </highlight>
-            </codeline>
             <codeline lineno="115">
                 <highlight class="normal">
                     <sp/>
@@ -1186,10 +1192,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordflow">if</highlight>
-                <highlight class="normal"><sp/>(month<sp/>&gt;<sp/>12)<sp/>{
+                    <sp/>month++;
                 </highlight>
             </codeline>
             <codeline lineno="116">
@@ -1202,10 +1205,9 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>month<sp/>=<sp/>1;
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(month<sp/>&gt;<sp/>12)<sp/>{
                 </highlight>
             </codeline>
             <codeline lineno="117">
@@ -1221,7 +1223,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>year++;
+                    <sp/>month<sp/>=<sp/>1;
                 </highlight>
             </codeline>
             <codeline lineno="118">
@@ -1233,7 +1235,11 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>}
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>year++;
                 </highlight>
             </codeline>
             <codeline lineno="119">
@@ -1241,16 +1247,28 @@
                     <sp/>
                     <sp/>
                     <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
                     <sp/>}
                 </highlight>
             </codeline>
             <codeline lineno="120">
-                <highlight class="normal">}</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
             </codeline>
             <codeline lineno="121">
-                <highlight class="normal"></highlight>
+                <highlight class="normal">}</highlight>
             </codeline>
             <codeline lineno="122">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="123">
                 <highlight class="normal">
                     <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">mm::util::Date</ref>
                     <sp/>
@@ -1261,7 +1279,7 @@
                 <highlight class="normal"><sp/>days)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="123">
+            <codeline lineno="124">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1273,7 +1291,7 @@
                     <sp/>30,<sp/>31,<sp/>31,<sp/>30,<sp/>31,<sp/>30,<sp/>31};
                 </highlight>
             </codeline>
-            <codeline lineno="124">
+            <codeline lineno="125">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1281,7 +1299,7 @@
                     <sp/>day<sp/>+=<sp/>days;
                 </highlight>
             </codeline>
-            <codeline lineno="125">
+            <codeline lineno="126">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1292,7 +1310,7 @@
                 <highlight class="normal"><sp/>(day<sp/>&gt;<sp/>days_per_month[month])<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="126">
+            <codeline lineno="127">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1308,7 +1326,7 @@
                     <sp/>!=<sp/>0)<sp/>||<sp/>year<sp/>%<sp/>400<sp/>==<sp/>0)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="127">
+            <codeline lineno="128">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1324,7 +1342,7 @@
                     <sp/>days_per_month[2]<sp/>=<sp/>29;
                 </highlight>
             </codeline>
-            <codeline lineno="128">
+            <codeline lineno="129">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1336,7 +1354,7 @@
                     <sp/>}
                 </highlight>
             </codeline>
-            <codeline lineno="129">
+            <codeline lineno="130">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1348,18 +1366,6 @@
                     <sp/>day<sp/>-=<sp/>days_per_month[month];
                 </highlight>
             </codeline>
-            <codeline lineno="130">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>month++;
-                </highlight>
-            </codeline>
             <codeline lineno="131">
                 <highlight class="normal">
                     <sp/>
@@ -1369,10 +1375,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordflow">if</highlight>
-                <highlight class="normal"><sp/>(month<sp/>&gt;<sp/>12)<sp/>{
+                    <sp/>month++;
                 </highlight>
             </codeline>
             <codeline lineno="132">
@@ -1385,10 +1388,9 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>month<sp/>=<sp/>1;
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(month<sp/>&gt;<sp/>12)<sp/>{
                 </highlight>
             </codeline>
             <codeline lineno="133">
@@ -1404,7 +1406,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>year++;
+                    <sp/>month<sp/>=<sp/>1;
                 </highlight>
             </codeline>
             <codeline lineno="134">
@@ -1416,11 +1418,19 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>}
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>year++;
                 </highlight>
             </codeline>
             <codeline lineno="135">
                 <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
                     <sp/>
                     <sp/>
                     <sp/>
@@ -1432,19 +1442,27 @@
                     <sp/>
                     <sp/>
                     <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="137">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
                     <sp/>
                 </highlight>
                 <highlight class="keywordflow">return</highlight>
                 <highlight class="normal"><sp/>{day,<sp/>month,<sp/>year};
                 </highlight>
             </codeline>
-            <codeline lineno="137">
+            <codeline lineno="138">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="138">
+            <codeline lineno="139">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="139">
+            <codeline lineno="140">
                 <highlight class="normal">
                     <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">mm::util::Date</ref>
                     <sp/>
@@ -1452,7 +1470,7 @@
                         mm::util::Date::get_current_date</ref>()<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="140">
+            <codeline lineno="141">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1471,13 +1489,13 @@
                         util::Date::get_current_year</ref>()};
                 </highlight>
             </codeline>
-            <codeline lineno="141">
+            <codeline lineno="142">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="142">
+            <codeline lineno="143">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="143">
+            <codeline lineno="144">
                 <highlight class="normal"><ref
                         refid="df/d88/structmm_1_1util_1_1_date_1a9aaf2c2d5171e081541831c4a756232e" kindref="member">
                     mm::util::Date::Date</ref>(
@@ -1486,7 +1504,7 @@
                 <highlight class="normal"><sp/>std::string<sp/>&amp;str)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="144">
+            <codeline lineno="145">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1494,13 +1512,13 @@
                     <sp/>set_from_str(str);
                 </highlight>
             </codeline>
-            <codeline lineno="145">
+            <codeline lineno="146">
                 <highlight class="normal">}</highlight>
             </codeline>
-            <codeline lineno="146">
+            <codeline lineno="147">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="147">
+            <codeline lineno="148">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -1516,7 +1534,7 @@
                 <highlight class="normal"><sp/>months)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="148">
+            <codeline lineno="149">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1528,10 +1546,10 @@
                     <sp/>30,<sp/>31,<sp/>31,<sp/>30,<sp/>31,<sp/>30,<sp/>31};
                 </highlight>
             </codeline>
-            <codeline lineno="149">
+            <codeline lineno="150">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="150">
+            <codeline lineno="151">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1542,10 +1560,10 @@
                 <highlight class="normal"><sp/>(is_leap_year(year))<sp/>days_per_month[2]<sp/>=<sp/>28;
                 </highlight>
             </codeline>
-            <codeline lineno="151">
+            <codeline lineno="152">
                 <highlight class="normal"></highlight>
             </codeline>
-            <codeline lineno="152">
+            <codeline lineno="153">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1556,7 +1574,7 @@
                 <highlight class="normal"><sp/>(months<sp/>&gt;<sp/>0)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="153">
+            <codeline lineno="154">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1571,7 +1589,7 @@
                 <highlight class="normal"><sp/>(++month<sp/>&gt;<sp/>12)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="154">
+            <codeline lineno="155">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1590,7 +1608,7 @@
                 <highlight class="normal"><sp/>(is_leap_year(++year))<sp/>days_per_month[2]<sp/>=<sp/>28;
                 </highlight>
             </codeline>
-            <codeline lineno="155">
+            <codeline lineno="156">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1609,7 +1627,7 @@
                 <highlight class="normal"><sp/>days_per_month[2]<sp/>=<sp/>29;
                 </highlight>
             </codeline>
-            <codeline lineno="156">
+            <codeline lineno="157">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1625,7 +1643,7 @@
                     <sp/>month<sp/>=<sp/>1;
                 </highlight>
             </codeline>
-            <codeline lineno="157">
+            <codeline lineno="158">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1639,25 +1657,6 @@
                 </highlight>
                 <highlight class="keywordflow">else</highlight>
                 <highlight class="normal"><sp/>{
-                </highlight>
-            </codeline>
-            <codeline lineno="158">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordflow">if</highlight>
-                <highlight class="normal"><sp/>(day<sp/>&gt;<sp/>days_per_month[month])<sp/>{
                 </highlight>
             </codeline>
             <codeline lineno="159">
@@ -1674,10 +1673,9 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>day<sp/>-=<sp/>days_per_month[month];
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(day<sp/>&gt;<sp/>days_per_month[month])<sp/>{
                 </highlight>
             </codeline>
             <codeline lineno="160">
@@ -1697,7 +1695,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>++month;
+                    <sp/>day<sp/>-=<sp/>days_per_month[month];
                 </highlight>
             </codeline>
             <codeline lineno="161">
@@ -1713,11 +1711,19 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>}
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>++month;
                 </highlight>
             </codeline>
             <codeline lineno="162">
                 <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
                     <sp/>
                     <sp/>
                     <sp/>
@@ -1737,7 +1743,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>--months;
+                    <sp/>}
                 </highlight>
             </codeline>
             <codeline lineno="164">
@@ -1745,16 +1751,28 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>}
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>--months;
                 </highlight>
             </codeline>
             <codeline lineno="165">
-                <highlight class="normal">}</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
             </codeline>
             <codeline lineno="166">
-                <highlight class="normal"></highlight>
+                <highlight class="normal">}</highlight>
             </codeline>
             <codeline lineno="167">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="168">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">void</highlight>
                 <highlight class="normal">
@@ -1770,7 +1788,7 @@
                 <highlight class="normal"><sp/>years)<sp/>{
                 </highlight>
             </codeline>
-            <codeline lineno="168">
+            <codeline lineno="169">
                 <highlight class="normal">
                     <sp/>
                     <sp/>
@@ -1778,7 +1796,7 @@
                     <sp/>add_months(years<sp/>*<sp/>12);
                 </highlight>
             </codeline>
-            <codeline lineno="169">
+            <codeline lineno="170">
                 <highlight class="normal">}</highlight>
             </codeline>
         </programlisting>

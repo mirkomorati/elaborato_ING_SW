@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="dd/d38/classmm_1_1view_1_1_patient_expander" kind="class" language="C++" prot="public">
+        <compoundname>mm::view::PatientExpander</compoundname>
+        <basecompoundref prot="public" virt="non-virtual">Expander</basecompoundref>
+        <includes refid="d5/d46/_custom_widgets_8hpp" local="no">CustomWidgets.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable"
+                       id="dd/d38/classmm_1_1view_1_1_patient_expander_1aeb0061e68f6d6eca01fd84b31ab34336"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::HBox</type>
+                <definition>Gtk::HBox mm::view::PatientExpander::labelBox</definition>
+                <argsstring></argsstring>
+                <name>labelBox</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="101" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="101" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dd/d38/classmm_1_1view_1_1_patient_expander_1aba671cda736309b5fa15f7944b4f2d39"
+                       prot="private" static="no" mutable="no">
+                <type>std::pair&lt; Gtk::Label, Gtk::Label &gt;</type>
+                <definition>std::pair&lt;Gtk::Label, Gtk::Label&gt; mm::view::PatientExpander::name</definition>
+                <argsstring></argsstring>
+                <name>name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="102" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="102" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dd/d38/classmm_1_1view_1_1_patient_expander_1a64c340d81f1668b0131eb8c16509997a"
+                       prot="private" static="no" mutable="no">
+                <type>std::pair&lt; Gtk::Label, Gtk::Label &gt;</type>
+                <definition>std::pair&lt;Gtk::Label, Gtk::Label&gt; mm::view::PatientExpander::lastName</definition>
+                <argsstring></argsstring>
+                <name>lastName</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="103" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="103" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dd/d38/classmm_1_1view_1_1_patient_expander_1a01a5a46c69a586d461af6bbf996635b7"
+                       prot="private" static="no" mutable="no">
+                <type>std::pair&lt; Gtk::Label, Gtk::Label &gt;</type>
+                <definition>std::pair&lt;Gtk::Label, Gtk::Label&gt; mm::view::PatientExpander::fiscalCode</definition>
+                <argsstring></argsstring>
+                <name>fiscalCode</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="104" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="104" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dd/d38/classmm_1_1view_1_1_patient_expander_1ac1e1a7bb9a3f38ec33b8caf9dda66d98"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Frame</type>
+                <definition>Gtk::Frame mm::view::PatientExpander::prescriptionFrame</definition>
+                <argsstring></argsstring>
+                <name>prescriptionFrame</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="107" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="107" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dd/d38/classmm_1_1view_1_1_patient_expander_1a5ac3ac4772cd7e5a78ef1285d0bf933a"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::TreeView</type>
+                <definition>Gtk::TreeView mm::view::PatientExpander::prescriptionTreeView</definition>
+                <argsstring></argsstring>
+                <name>prescriptionTreeView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="108" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="108" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dd/d38/classmm_1_1view_1_1_patient_expander_1a3b96a337fb94f63cda727cd6da034eb4"
+                       prot="private" static="no" mutable="no">
+                <type>Glib::RefPtr&lt; Gtk::ListStore &gt;</type>
+                <definition>Glib::RefPtr&lt;Gtk::ListStore&gt; mm::view::PatientExpander::prescriptionListStore
+                </definition>
+                <argsstring></argsstring>
+                <name>prescriptionListStore</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="109" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="109" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function"
+                       id="dd/d38/classmm_1_1view_1_1_patient_expander_1a07daa447ceef9466613982c707d62eed" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::view::PatientExpander::PatientExpander</definition>
+                <argsstring>(const mm::model::Patient &amp;patient, const mm::model::Drug &amp;drug, const
+                    mm::util::Date &amp;start=mm::util::Date::get_current_date(), const mm::util::Date &amp;end=mm::util::Date::get_current_date())
+                </argsstring>
+                <name>PatientExpander</name>
+                <param>
+                    <type>const <ref refid="d6/d4a/classmm_1_1model_1_1_patient" kindref="compound">mm::model::Patient
+                    </ref> &amp;
+                    </type>
+                    <declname>patient</declname>
+                </param>
+                <param>
+                    <type>const <ref refid="db/d9b/classmm_1_1model_1_1_drug" kindref="compound">mm::model::Drug</ref> &amp;
+                    </type>
+                    <declname>drug</declname>
+                </param>
+                <param>
+                    <type>const <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">mm::util::Date</ref> &amp;
+                    </type>
+                    <declname>start</declname>
+                    <defval><ref refid="df/d88/structmm_1_1util_1_1_date_1af0758fad7ef32fd535db3295136466eb"
+                                 kindref="member">mm::util::Date::get_current_date</ref>()
+                    </defval>
+                </param>
+                <param>
+                    <type>const <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">mm::util::Date</ref> &amp;
+                    </type>
+                    <declname>end</declname>
+                    <defval><ref refid="df/d88/structmm_1_1util_1_1_date_1af0758fad7ef32fd535db3295136466eb"
+                                 kindref="member">mm::util::Date::get_current_date</ref>()
+                    </defval>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="112" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="360" bodyend="443"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="151">
+                <label>mm::view::PatientExpander</label>
+                <link refid="dd/d38/classmm_1_1view_1_1_patient_expander"/>
+                <childnode refid="152" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="152">
+                <label>Gtk::Expander</label>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="153">
+                <label>mm::view::PatientExpander</label>
+                <link refid="dd/d38/classmm_1_1view_1_1_patient_expander"/>
+                <childnode refid="154" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="154">
+                <label>Gtk::Expander</label>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/view/CustomWidgets.hpp" line="99" column="1" bodyfile="code/gui/view/CustomWidgets.hpp"
+                  bodystart="99" bodyend="115"/>
+        <listofallmembers>
+            <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1a01a5a46c69a586d461af6bbf996635b7"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PatientExpander</scope>
+                <name>fiscalCode</name>
+            </member>
+            <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1aeb0061e68f6d6eca01fd84b31ab34336"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PatientExpander</scope>
+                <name>labelBox</name>
+            </member>
+            <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1a64c340d81f1668b0131eb8c16509997a"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PatientExpander</scope>
+                <name>lastName</name>
+            </member>
+            <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1aba671cda736309b5fa15f7944b4f2d39"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PatientExpander</scope>
+                <name>name</name>
+            </member>
+            <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1a07daa447ceef9466613982c707d62eed" prot="public"
+                    virt="non-virtual">
+                <scope>mm::view::PatientExpander</scope>
+                <name>PatientExpander</name>
+            </member>
+            <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1ac1e1a7bb9a3f38ec33b8caf9dda66d98"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PatientExpander</scope>
+                <name>prescriptionFrame</name>
+            </member>
+            <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1a3b96a337fb94f63cda727cd6da034eb4"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PatientExpander</scope>
+                <name>prescriptionListStore</name>
+            </member>
+            <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1a5ac3ac4772cd7e5a78ef1285d0bf933a"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PatientExpander</scope>
+                <name>prescriptionTreeView</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

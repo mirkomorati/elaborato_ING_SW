@@ -3,13 +3,13 @@
 \subsection*{Composti}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}
-\end{DoxyCompactItemize}
+struct \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}}
+\begin{DoxyCompactList}\small\item\em classe che rappresenta la una sessione di login \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Funzioni}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{namespacemm_1_1model_1_1authentication_aeb56a39665f657663af73f37a6341f11}{check\+\_\+login} (std\+::string usr, std\+::string psw)
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{namespacemm_1_1model_1_1authentication_aeb56a39665f657663af73f37a6341f11}{check\+\_\+login}} (std\+::string usr, std\+::string psw)
+\begin{DoxyCompactList}\small\item\em Si occupa di porre in uno stato valido l\textquotesingle{}oggetto del singleton \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Documentazione delle funzioni}
@@ -19,3 +19,19 @@ bool \hyperlink{namespacemm_1_1model_1_1authentication_aeb56a39665f657663af73f37
 \subsubsection{\texorpdfstring{check\+\_\+login()}{check\_login()}}
 {\footnotesize\ttfamily bool mm\+::model\+::authentication\+::check\+\_\+login (\begin{DoxyParamCaption}\item[{std\+::string}]{usr,  }\item[{std\+::string}]{psw }\end{DoxyParamCaption})}
 
+
+
+Si occupa di porre in uno stato valido l\textquotesingle{}oggetto del singleton \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}}. 
+
+Se usr e psw corrispondono ad una coppia nome utente e password nel database inizializza \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}} e ritorna true
+
+
+\begin{DoxyParams}{Parametri}
+{\em usr} & stringa contenente lo username \\
+\hline
+{\em psw} & stringa contenente la password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+true in caso l\textquotesingle{}utente sia trovato false altrimenti 
+\end{DoxyReturn}

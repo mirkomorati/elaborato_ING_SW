@@ -9,7 +9,8 @@ var indexSectionsWithContent =
         6: "j",
         7: "sw",
         8: "dilmprt",
-        9: "co"
+        9: "co",
+        10: "u"
     };
 
 var indexSectionNames =
@@ -23,7 +24,8 @@ var indexSectionNames =
         6: "typedefs",
         7: "enums",
         8: "enumvalues",
-        9: "related"
+        9: "related",
+        10: "defines"
     };
 
 var indexSectionLabels =
@@ -37,6 +39,7 @@ var indexSectionLabels =
         6: "Ridefinizioni di tipo (typedef)",
         7: "Tipi enumerati (enum)",
         8: "Valori del tipo enumerato",
-        9: "Friend"
+        9: "Friend",
+        10: "Definizioni"
     };
 

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d1/d9e/_drug_8cpp" kind="file" language="C++">
         <compoundname>Drug.cpp</compoundname>
         <includes local="no">sstream</includes>
@@ -8,59 +8,68 @@
         <includes local="no">iomanip</includes>
         <includes refid="dd/df9/_drug_8hpp" local="yes">Drug.hpp</includes>
         <incdepgraph>
-            <node id="685">
+            <node id="934">
                 <label>iomanip</label>
             </node>
-            <node id="682">
+            <node id="931">
                 <label>code/model/Drug.cpp</label>
                 <link refid="d1/d9e/_drug_8cpp"/>
-                <childnode refid="683" relation="include">
+                <childnode refid="932" relation="include">
                 </childnode>
-                <childnode refid="684" relation="include">
+                <childnode refid="933" relation="include">
                 </childnode>
-                <childnode refid="685" relation="include">
+                <childnode refid="934" relation="include">
                 </childnode>
-                <childnode refid="686" relation="include">
+                <childnode refid="935" relation="include">
                 </childnode>
             </node>
-            <node id="691">
+            <node id="941">
                 <label>../interfaces/ISerializable.hpp</label>
                 <link refid="d3/d1b/_i_serializable_8hpp"/>
-                <childnode refid="687" relation="include">
+                <childnode refid="936" relation="include">
                 </childnode>
-                <childnode refid="689" relation="include">
+                <childnode refid="938" relation="include">
+                </childnode>
+                <childnode refid="937" relation="include">
                 </childnode>
             </node>
-            <node id="687">
+            <node id="936">
                 <label>string</label>
             </node>
-            <node id="689">
+            <node id="938">
                 <label>map</label>
             </node>
-            <node id="690">
+            <node id="939">
                 <label>gtkmm/treemodelcolumn.h</label>
             </node>
-            <node id="688">
+            <node id="940">
+                <label>gtkmm/treemodel.h</label>
+            </node>
+            <node id="937">
                 <label>vector</label>
             </node>
-            <node id="683">
+            <node id="932">
                 <label>sstream</label>
             </node>
-            <node id="684">
+            <node id="933">
                 <label>iostream</label>
             </node>
-            <node id="686">
+            <node id="935">
                 <label>Drug.hpp</label>
                 <link refid="dd/df9/_drug_8hpp"/>
-                <childnode refid="687" relation="include">
+                <childnode refid="936" relation="include">
                 </childnode>
-                <childnode refid="688" relation="include">
+                <childnode refid="937" relation="include">
                 </childnode>
-                <childnode refid="689" relation="include">
+                <childnode refid="938" relation="include">
                 </childnode>
-                <childnode refid="690" relation="include">
+                <childnode refid="939" relation="include">
                 </childnode>
-                <childnode refid="691" relation="include">
+                <childnode refid="940" relation="include">
+                </childnode>
+                <childnode refid="933" relation="include">
+                </childnode>
+                <childnode refid="941" relation="include">
                 </childnode>
             </node>
         </incdepgraph>
@@ -1232,6 +1241,9 @@
             </codeline>
             <codeline lineno="138">
                 <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="139">
+                <highlight class="normal"></highlight>
             </codeline>
         </programlisting>
         <location file="code/model/Drug.cpp"/>

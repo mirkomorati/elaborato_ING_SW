@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d7/daf/_med_h_8cpp" kind="file" language="C++">
         <compoundname>MedH.cpp</compoundname>
         <includes refid="db/d45/_med_h_8hpp" local="yes">MedH.hpp</includes>
@@ -12,180 +12,192 @@
         <includes refid="db/d41/_main_window_8hpp" local="yes">gui/MainWindow.hpp</includes>
         <includes local="no">spdlog/spdlog.h</includes>
         <incdepgraph>
-            <node id="576">
+            <node id="816">
                 <label>interfaces/IObserver.hpp</label>
                 <link refid="d5/d40/_i_observer_8hpp"/>
-                <childnode refid="577" relation="include">
+                <childnode refid="817" relation="include">
                 </childnode>
-                <childnode refid="578" relation="include">
+                <childnode refid="818" relation="include">
                 </childnode>
             </node>
-            <node id="582">
+            <node id="822">
                 <label>Configuration.hpp</label>
                 <link refid="d1/d32/_configuration_8hpp"/>
-                <childnode refid="583" relation="include">
+                <childnode refid="823" relation="include">
                 </childnode>
-                <childnode refid="584" relation="include">
+                <childnode refid="824" relation="include">
                 </childnode>
-                <childnode refid="585" relation="include">
+                <childnode refid="825" relation="include">
                 </childnode>
             </node>
-            <node id="573">
+            <node id="813">
                 <label>code/MedH.cpp</label>
                 <link refid="d7/daf/_med_h_8cpp"/>
-                <childnode refid="574" relation="include">
+                <childnode refid="814" relation="include">
                 </childnode>
-                <childnode refid="582" relation="include">
+                <childnode refid="822" relation="include">
                 </childnode>
-                <childnode refid="586" relation="include">
+                <childnode refid="826" relation="include">
                 </childnode>
-                <childnode refid="592" relation="include">
+                <childnode refid="832" relation="include">
                 </childnode>
-                <childnode refid="593" relation="include">
+                <childnode refid="833" relation="include">
                 </childnode>
-                <childnode refid="594" relation="include">
+                <childnode refid="834" relation="include">
                 </childnode>
-                <childnode refid="596" relation="include">
+                <childnode refid="836" relation="include">
                 </childnode>
-                <childnode refid="601" relation="include">
+                <childnode refid="843" relation="include">
                 </childnode>
             </node>
-            <node id="579">
+            <node id="819">
                 <label>gui/Window.hpp</label>
                 <link refid="de/d0b/_window_8hpp"/>
-                <childnode refid="580" relation="include">
+                <childnode refid="820" relation="include">
                 </childnode>
             </node>
-            <node id="590">
+            <node id="830">
                 <label>interfaces/ISerializable.hpp</label>
                 <link refid="d3/d1b/_i_serializable_8hpp"/>
-                <childnode refid="583" relation="include">
+                <childnode refid="823" relation="include">
                 </childnode>
-                <childnode refid="591" relation="include">
+                <childnode refid="831" relation="include">
+                </childnode>
+                <childnode refid="829" relation="include">
                 </childnode>
             </node>
-            <node id="598">
+            <node id="838">
                 <label>gtkmm/widget.h</label>
             </node>
-            <node id="588">
+            <node id="828">
                 <label>stdexcept</label>
             </node>
-            <node id="583">
+            <node id="823">
                 <label>string</label>
             </node>
-            <node id="591">
+            <node id="831">
                 <label>map</label>
             </node>
-            <node id="584">
+            <node id="824">
                 <label>json.hpp</label>
             </node>
-            <node id="587">
+            <node id="842">
+                <label>gtkmm/dialog.h</label>
+            </node>
+            <node id="827">
                 <label>sqlite3.h</label>
             </node>
-            <node id="585">
+            <node id="825">
                 <label>fstream</label>
             </node>
-            <node id="574">
+            <node id="814">
                 <label>MedH.hpp</label>
                 <link refid="db/d45/_med_h_8hpp"/>
-                <childnode refid="575" relation="include">
+                <childnode refid="815" relation="include">
                 </childnode>
-                <childnode refid="576" relation="include">
+                <childnode refid="816" relation="include">
                 </childnode>
-                <childnode refid="579" relation="include">
+                <childnode refid="819" relation="include">
                 </childnode>
             </node>
-            <node id="601">
+            <node id="843">
                 <label>spdlog/spdlog.h</label>
             </node>
-            <node id="595">
+            <node id="835">
                 <label>tuple</label>
             </node>
-            <node id="575">
+            <node id="815">
                 <label>gtkmm-3.0/gtkmm.h</label>
             </node>
-            <node id="589">
+            <node id="829">
                 <label>vector</label>
             </node>
-            <node id="596">
+            <node id="836">
                 <label>gui/MainWindow.hpp</label>
                 <link refid="db/d41/_main_window_8hpp"/>
-                <childnode refid="597" relation="include">
+                <childnode refid="837" relation="include">
                 </childnode>
-                <childnode refid="598" relation="include">
+                <childnode refid="838" relation="include">
                 </childnode>
-                <childnode refid="579" relation="include">
+                <childnode refid="839" relation="include">
                 </childnode>
-                <childnode refid="599" relation="include">
+                <childnode refid="819" relation="include">
+                </childnode>
+                <childnode refid="840" relation="include">
                 </childnode>
             </node>
-            <node id="597">
+            <node id="839">
+                <label>array</label>
+            </node>
+            <node id="837">
                 <label>glib.h</label>
             </node>
-            <node id="592">
+            <node id="832">
                 <label>gui/RefBuilder.hpp</label>
                 <link refid="dc/db8/_ref_builder_8hpp"/>
-                <childnode refid="575" relation="include">
+                <childnode refid="815" relation="include">
                 </childnode>
             </node>
-            <node id="600">
+            <node id="841">
                 <label>sigc++/trackable.h</label>
             </node>
-            <node id="586">
+            <node id="826">
                 <label>DBMaster.hpp</label>
                 <link refid="d7/d0f/_d_b_master_8hpp"/>
-                <childnode refid="587" relation="include">
+                <childnode refid="827" relation="include">
                 </childnode>
-                <childnode refid="583" relation="include">
+                <childnode refid="823" relation="include">
                 </childnode>
-                <childnode refid="588" relation="include">
+                <childnode refid="828" relation="include">
                 </childnode>
-                <childnode refid="589" relation="include">
+                <childnode refid="829" relation="include">
                 </childnode>
-                <childnode refid="590" relation="include">
+                <childnode refid="830" relation="include">
                 </childnode>
             </node>
-            <node id="577">
+            <node id="817">
                 <label>mutex</label>
             </node>
-            <node id="593">
+            <node id="833">
                 <label>gui/LoginWindow.hpp</label>
                 <link refid="db/d18/_login_window_8hpp"/>
-                <childnode refid="579" relation="include">
+                <childnode refid="819" relation="include">
                 </childnode>
             </node>
-            <node id="599">
+            <node id="840">
                 <label>Dialog.hpp</label>
                 <link refid="dc/de6/_dialog_8hpp"/>
-                <childnode refid="600" relation="include">
+                <childnode refid="841" relation="include">
                 </childnode>
-                <childnode refid="580" relation="include">
+                <childnode refid="842" relation="include">
+                </childnode>
+                <childnode refid="820" relation="include">
                 </childnode>
             </node>
-            <node id="578">
+            <node id="818">
                 <label>thread</label>
             </node>
-            <node id="580">
+            <node id="820">
                 <label>../interfaces/ISubject.hpp</label>
                 <link refid="d1/d25/_i_subject_8hpp"/>
-                <childnode refid="581" relation="include">
+                <childnode refid="821" relation="include">
                 </childnode>
-                <childnode refid="576" relation="include">
+                <childnode refid="816" relation="include">
                 </childnode>
             </node>
-            <node id="581">
+            <node id="821">
                 <label>set</label>
             </node>
-            <node id="594">
+            <node id="834">
                 <label>model/Authentication.hpp</label>
                 <link refid="dc/d00/_authentication_8hpp"/>
-                <childnode refid="586" relation="include">
+                <childnode refid="826" relation="include">
                 </childnode>
-                <childnode refid="580" relation="include">
+                <childnode refid="820" relation="include">
                 </childnode>
-                <childnode refid="589" relation="include">
+                <childnode refid="829" relation="include">
                 </childnode>
-                <childnode refid="595" relation="include">
+                <childnode refid="835" relation="include">
                 </childnode>
             </node>
         </incdepgraph>
@@ -325,7 +337,14 @@
             <codeline lineno="20">
                 <highlight class="normal"></highlight>
                 <highlight class="keywordtype">bool</highlight>
-                <highlight class="normal"><sp/>mm::MedH::initDrugComboBox()<sp/>{
+                <highlight class="normal"><sp/>mm::MedH::init(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>argc,
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal"><sp/>**argv)<sp/>{
                 </highlight>
             </codeline>
             <codeline lineno="21">
@@ -333,7 +352,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>Glib::initDrugComboBox();
+                    <sp/>Glib::init();
                 </highlight>
             </codeline>
             <codeline lineno="22">
@@ -388,8 +407,7 @@
             </codeline>
             <codeline lineno="28">
                 <highlight class="normal"></highlight>
-                <highlight class="preprocessor">#error<sp/>&quot;Config<sp/>file<sp/>path<sp/>not<sp/>provvided
-                    <sp/>
+                <highlight class="preprocessor">#error<sp/>&quot;Config<sp/>file<sp/>path<sp/>not<sp/>provvided<sp/>
                     compile<sp/>using<sp/>-DCONFIG_FILE=config_file_path&quot;
                 </highlight>
                 <highlight class="normal"></highlight>
@@ -524,8 +542,7 @@
                     <sp/>
                     <sp/>console-&gt;error(
                 </highlight>
-                <highlight class="stringliteral">&quot;No<sp/>configuration<sp/>file<sp/>provvided!<sp/>use:<sp/>{}
-                    <sp/>
+                <highlight class="stringliteral">&quot;No<sp/>configuration<sp/>file<sp/>provvided!<sp/>use:<sp/>{}<sp/>
                     file_path&quot;
                 </highlight>
                 <highlight class="normal">,<sp/>argv[0]);
@@ -730,8 +747,7 @@
                     <sp/>
                     <sp/>error-&gt;info(
                 </highlight>
-                <highlight class="stringliteral">&quot;cannot<sp/>get<sp/>the<sp/>debug<sp/>flag<sp/>in
-                    <sp/>
+                <highlight class="stringliteral">&quot;cannot<sp/>get<sp/>the<sp/>debug<sp/>flag<sp/>in<sp/>
                     configuration...<sp/>default<sp/>mode<sp/>applied:<sp/>No<sp/>debug&quot;
                 </highlight>
                 <highlight class="normal">);</highlight>
@@ -942,7 +958,7 @@
                     <sp/>
                 </highlight>
                 <highlight class="keywordflow">if</highlight>
-                <highlight class="normal"><sp/>(not<sp/>initDrugComboBox())
+                <highlight class="normal"><sp/>(not<sp/>init(argc,<sp/>argv))
                     <sp/>
                 </highlight>
                 <highlight class="keywordflow">throw</highlight>
@@ -957,7 +973,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>this-&gt;app<sp/>=<sp/>Gtk::Application::create(argc,<sp/>argv,<sp/>appID);
+                    <sp/>app<sp/>=<sp/>Gtk::Application::create(argc,<sp/>argv,<sp/>appID);
                 </highlight>
             </codeline>
             <codeline lineno="79">
@@ -968,7 +984,7 @@
                     <sp/>
                 </highlight>
                 <highlight class="keywordflow">if</highlight>
-                <highlight class="normal"><sp/>(not<sp/>window-&gt;initDrugComboBox())
+                <highlight class="normal"><sp/>(not<sp/>window-&gt;init())
                     <sp/>
                 </highlight>
                 <highlight class="keywordflow">throw</highlight>
@@ -1388,7 +1404,7 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>window-&gt;initDrugComboBox();
+                    <sp/>window-&gt;init();
                 </highlight>
             </codeline>
             <codeline lineno="110">
@@ -1402,6 +1418,156 @@
                 <highlight class="normal">);</highlight>
             </codeline>
             <codeline lineno="111">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="112">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="113">
+                <highlight class="normal"><ref refid="df/d1a/classmm_1_1_med_h_1a6fe53e9376821a1aae7d5a3a32d203c3"
+                                               kindref="member">mm::MedH::~MedH</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="114">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::Window<sp/>*mainWindow;
+                </highlight>
+            </codeline>
+            <codeline lineno="115">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::Dialog<sp/>*aboutDialog;
+                </highlight>
+            </codeline>
+            <codeline lineno="116">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::Dialog<sp/>*addPatientDialog;
+                </highlight>
+            </codeline>
+            <codeline lineno="117">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::Dialog<sp/>*addPrescriptionDialog;
+                </highlight>
+            </codeline>
+            <codeline lineno="118">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="dd/d47/classmm_1_1_ref_builder_1a1c46de2b1ff68aebfc85692a99827753" kindref="member">
+                        RefBuilder::get_instance</ref>().<ref
+                        refid="dd/d47/classmm_1_1_ref_builder_1a67812973516cbeddf488360424685153" kindref="member">
+                    get_widget</ref>(
+                </highlight>
+                <highlight class="stringliteral">&quot;mainWindow&quot;</highlight>
+                <highlight class="normal">,<sp/>mainWindow);
+                </highlight>
+            </codeline>
+            <codeline lineno="119">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="dd/d47/classmm_1_1_ref_builder_1a1c46de2b1ff68aebfc85692a99827753" kindref="member">
+                        RefBuilder::get_instance</ref>().<ref
+                        refid="dd/d47/classmm_1_1_ref_builder_1a67812973516cbeddf488360424685153" kindref="member">
+                    get_widget</ref>(
+                </highlight>
+                <highlight class="stringliteral">&quot;aboutDialog&quot;</highlight>
+                <highlight class="normal">,<sp/>aboutDialog);
+                </highlight>
+            </codeline>
+            <codeline lineno="120">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="dd/d47/classmm_1_1_ref_builder_1a1c46de2b1ff68aebfc85692a99827753" kindref="member">
+                        RefBuilder::get_instance</ref>().<ref
+                        refid="dd/d47/classmm_1_1_ref_builder_1a67812973516cbeddf488360424685153" kindref="member">
+                    get_widget</ref>(
+                </highlight>
+                <highlight class="stringliteral">&quot;addPatientDialog&quot;</highlight>
+                <highlight class="normal">,<sp/>addPatientDialog);
+                </highlight>
+            </codeline>
+            <codeline lineno="121">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="dd/d47/classmm_1_1_ref_builder_1a1c46de2b1ff68aebfc85692a99827753" kindref="member">
+                        RefBuilder::get_instance</ref>().<ref
+                        refid="dd/d47/classmm_1_1_ref_builder_1a67812973516cbeddf488360424685153" kindref="member">
+                    get_widget</ref>(
+                </highlight>
+                <highlight class="stringliteral">&quot;addPrescriptionDialog&quot;</highlight>
+                <highlight class="normal">,<sp/>addPrescriptionDialog);
+                </highlight>
+            </codeline>
+            <codeline lineno="122">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="123">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">delete</highlight>
+                <highlight class="normal"><sp/>mainWindow;
+                </highlight>
+            </codeline>
+            <codeline lineno="124">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">delete</highlight>
+                <highlight class="normal"><sp/>aboutDialog;
+                </highlight>
+            </codeline>
+            <codeline lineno="125">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">delete</highlight>
+                <highlight class="normal"><sp/>addPatientDialog;
+                </highlight>
+            </codeline>
+            <codeline lineno="126">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">delete</highlight>
+                <highlight class="normal"><sp/>addPrescriptionDialog;
+                </highlight>
+            </codeline>
+            <codeline lineno="127">
                 <highlight class="normal">}</highlight>
             </codeline>
         </programlisting>

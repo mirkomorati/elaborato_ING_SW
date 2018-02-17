@@ -5,7 +5,7 @@
  -->
 <!-- Title: code/gui/Widgets.hpp Pages: 1 -->
 <!--zoomable 157 -->
-<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="initDrugComboBox(evt)">
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
 <style type="text/css"><![CDATA[
 .edge:hover path { stroke: red; }
 .edge:hover polygon { stroke: red; fill: red; }

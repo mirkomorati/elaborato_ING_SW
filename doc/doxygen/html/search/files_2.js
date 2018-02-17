@@ -10,5 +10,7 @@ var searchData =
         ['doctor_2ecpp', ['Doctor.cpp', ['../d3/da6/_doctor_8cpp.html', 1, '']]],
         ['doctor_2ehpp', ['Doctor.hpp', ['../dd/dc5/_doctor_8hpp.html', 1, '']]],
         ['drug_2ecpp', ['Drug.cpp', ['../d1/d9e/_drug_8cpp.html', 1, '']]],
-        ['drug_2ehpp', ['Drug.hpp', ['../dd/df9/_drug_8hpp.html', 1, '']]]
+        ['drug_2ehpp', ['Drug.hpp', ['../dd/df9/_drug_8hpp.html', 1, '']]],
+        ['drugwindow_2ecpp', ['DrugWindow.cpp', ['../d6/d9e/_drug_window_8cpp.html', 1, '']]],
+        ['drugwindow_2ehpp', ['DrugWindow.hpp', ['../dd/d02/_drug_window_8hpp.html', 1, '']]]
     ];

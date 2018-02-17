@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="db/d61/classmm_1_1model_1_1_prescription" kind="class" language="C++" prot="public">
         <compoundname>mm::model::Prescription</compoundname>
         <basecompoundref refid="dc/df3/classmm_1_1_i_serializable" prot="public" virt="non-virtual">mm::ISerializable
@@ -48,8 +48,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="65" column="1" bodyfile="code/model/Prescription.hpp"
-                          bodystart="65" bodyend="-1"/>
+                <location file="code/model/Prescription.hpp" line="85" column="1" bodyfile="code/model/Prescription.hpp"
+                          bodystart="85" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="db/d61/classmm_1_1model_1_1_prescription_1ad1fd7bf313c200f431bb465d217382b9"
                        prot="private" static="no" mutable="no">
@@ -63,8 +63,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="66" column="1" bodyfile="code/model/Prescription.hpp"
-                          bodystart="66" bodyend="-1"/>
+                <location file="code/model/Prescription.hpp" line="86" column="1" bodyfile="code/model/Prescription.hpp"
+                          bodystart="86" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="db/d61/classmm_1_1model_1_1_prescription_1a10cddeaf73c612f421bc735c47b6fe15"
                        prot="private" static="no" mutable="no">
@@ -78,8 +78,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="67" column="1" bodyfile="code/model/Prescription.hpp"
-                          bodystart="67" bodyend="-1"/>
+                <location file="code/model/Prescription.hpp" line="87" column="1" bodyfile="code/model/Prescription.hpp"
+                          bodystart="87" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="db/d61/classmm_1_1model_1_1_prescription_1a3675ed36ae529dbcfc9d9e9b23d42783"
                        prot="private" static="no" mutable="no">
@@ -93,8 +93,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="68" column="1" bodyfile="code/model/Prescription.hpp"
-                          bodystart="68" bodyend="-1"/>
+                <location file="code/model/Prescription.hpp" line="88" column="1" bodyfile="code/model/Prescription.hpp"
+                          bodystart="88" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="db/d61/classmm_1_1model_1_1_prescription_1a37ce849a8d628a29a34faf40da8b85a4"
                        prot="private" static="no" mutable="no">
@@ -108,8 +108,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="69" column="1" bodyfile="code/model/Prescription.hpp"
-                          bodystart="69" bodyend="-1"/>
+                <location file="code/model/Prescription.hpp" line="89" column="1" bodyfile="code/model/Prescription.hpp"
+                          bodystart="89" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="db/d61/classmm_1_1model_1_1_prescription_1a95b0a9203f4bdc0adbf1b74ab3f53f05"
                        prot="private" static="no" mutable="no">
@@ -123,8 +123,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="70" column="1" bodyfile="code/model/Prescription.hpp"
-                          bodystart="70" bodyend="-1"/>
+                <location file="code/model/Prescription.hpp" line="90" column="1" bodyfile="code/model/Prescription.hpp"
+                          bodystart="90" bodyend="-1"/>
             </memberdef>
             <memberdef kind="variable" id="db/d61/classmm_1_1model_1_1_prescription_1a6fbfe8be1a5d9e257d4d3e56ffdd77b0"
                        prot="private" static="no" mutable="no">
@@ -138,8 +138,25 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="71" column="1" bodyfile="code/model/Prescription.hpp"
-                          bodystart="71" bodyend="-1"/>
+                <location file="code/model/Prescription.hpp" line="91" column="1" bodyfile="code/model/Prescription.hpp"
+                          bodystart="91" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-static-func">
+            <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a56439663fa7d275978b7e38c83960476"
+                       prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>unsigned int</type>
+                <definition>unsigned int mm::model::Prescription::generateID</definition>
+                <argsstring>()</argsstring>
+                <name>generateID</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Prescription.hpp" line="39" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="142" bodyend="153"/>
             </memberdef>
         </sectiondef>
         <sectiondef kind="public-func">
@@ -159,8 +176,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="40" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="14" bodyend="38"/>
+                <location file="code/model/Prescription.hpp" line="42" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="15" bodyend="39"/>
             </memberdef>
             <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a6c38e4ee2fca09b18d61aaa214316b9e"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -180,8 +197,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="42" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="40" bodyend="76"/>
+                <location file="code/model/Prescription.hpp" line="44" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="41" bodyend="77"/>
             </memberdef>
             <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a8de9a927dc92c0e0b15dac6f930889e3"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
@@ -198,8 +215,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="44" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="78" bodyend="80"/>
+                <location file="code/model/Prescription.hpp" line="46" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="79" bodyend="81"/>
             </memberdef>
             <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1af521915f8872df18ae4a50ff2a4f59ff"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
@@ -216,8 +233,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="46" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="82" bodyend="84"/>
+                <location file="code/model/Prescription.hpp" line="48" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="83" bodyend="85"/>
             </memberdef>
             <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a90cbaab7bb67d3d135e622e58a8f108d"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -231,8 +248,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="48" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="86" bodyend="88"/>
+                <location file="code/model/Prescription.hpp" line="50" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="87" bodyend="89"/>
             </memberdef>
             <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a6179b066586ebb5a1dc0d8f6a6c11a45"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -246,8 +263,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="50" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="90" bodyend="92"/>
+                <location file="code/model/Prescription.hpp" line="52" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="91" bodyend="93"/>
             </memberdef>
             <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1acb29f51441390f5c0e5c483d82ba1514"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -261,8 +278,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="52" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="94" bodyend="96"/>
+                <location file="code/model/Prescription.hpp" line="54" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="95" bodyend="97"/>
             </memberdef>
             <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a11c574c3fafddc2e278c8aec417d5977"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -276,8 +293,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="54" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="98" bodyend="100"/>
+                <location file="code/model/Prescription.hpp" line="56" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="99" bodyend="101"/>
             </memberdef>
             <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1abbc707b103a6f8b52b94fec5ec7ebf89"
                        prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -291,8 +308,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="56" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="102" bodyend="110"/>
+                <location file="code/model/Prescription.hpp" line="58" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="103" bodyend="111"/>
             </memberdef>
             <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a0dbc18b00e03ec68f3d224d11bf75823"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -307,8 +324,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="58" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="126" bodyend="139"/>
+                <location file="code/model/Prescription.hpp" line="60" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="127" bodyend="140"/>
             </memberdef>
             <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a1656851efd03bd54f3615d90856e9829"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -322,8 +339,8 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="60" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="112" bodyend="120"/>
+                <location file="code/model/Prescription.hpp" line="62" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="113" bodyend="121"/>
             </memberdef>
             <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a23ae0807248a2cd86232b11927c9eea2"
                        prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -337,8 +354,181 @@
                 </detaileddescription>
                 <inbodydescription>
                 </inbodydescription>
-                <location file="code/model/Prescription.hpp" line="62" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="122" bodyend="124"/>
+                <location file="code/model/Prescription.hpp" line="64" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="123" bodyend="125"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a7854a3ef7a7fa8e15bc7a5570e1d0946"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Prescription::set_patient_id</definition>
+                <argsstring>(const string &amp;patient_id)</argsstring>
+                <name>set_patient_id</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>patient_id</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Prescription.hpp" line="66" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="155" bodyend="157"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a2514cc052803d493974172dad8659806"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Prescription::set_prescription_id</definition>
+                <argsstring>(int prescription_id)</argsstring>
+                <name>set_prescription_id</name>
+                <param>
+                    <type>int</type>
+                    <declname>prescription_id</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Prescription.hpp" line="68" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="159" bodyend="161"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a0d4cc625d7a39ea9f00bc8885380b391"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Prescription::set_issue_date</definition>
+                <argsstring>(const string &amp;issue_date)</argsstring>
+                <name>set_issue_date</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>issue_date</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Prescription.hpp" line="70" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="163" bodyend="165"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a3cb9e467c00323e94e4347e308dc67ba"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Prescription::set_expire_date</definition>
+                <argsstring>(const string &amp;expire_date)</argsstring>
+                <name>set_expire_date</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>expire_date</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Prescription.hpp" line="72" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="167" bodyend="169"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a90ab6821dda442d202d8dabf50c52cc3"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Prescription::set_negative_interactions</definition>
+                <argsstring>(const map&lt; string, string &gt; &amp;negative_interactions)</argsstring>
+                <name>set_negative_interactions</name>
+                <param>
+                    <type>const map&lt; string, string &gt; &amp;</type>
+                    <declname>negative_interactions</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Prescription.hpp" line="74" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="171" bodyend="173"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a25c7a50956777551b938990157d0046a"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Prescription::set_used</definition>
+                <argsstring>(bool used)</argsstring>
+                <name>set_used</name>
+                <param>
+                    <type>bool</type>
+                    <declname>used</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Prescription.hpp" line="76" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="175" bodyend="177"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1aa34227766a8ab89f1f47f8ac72de562d"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Prescription::add_drug</definition>
+                <argsstring>(Drug &amp;drug)</argsstring>
+                <name>add_drug</name>
+                <param>
+                    <type>
+                        <ref refid="db/d9b/classmm_1_1model_1_1_drug" kindref="compound">Drug</ref> &amp;
+                    </type>
+                    <declname>drug</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Prescription.hpp" line="78" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="179" bodyend="182"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1a3838d3a11a4c86a8fef81750db4fb516"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Prescription::add_drug</definition>
+                <argsstring>(const string &amp;drugName, const string &amp;drugForm)</argsstring>
+                <name>add_drug</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>drugName</declname>
+                </param>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>drugForm</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Prescription.hpp" line="80" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="184" bodyend="187"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d61/classmm_1_1model_1_1_prescription_1aa63e30d0439cd7c06f155641e1b8390d"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::model::Prescription::is_valid</definition>
+                <argsstring>()</argsstring>
+                <name>is_valid</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Prescription.hpp" line="82" column="1" bodyfile="code/model/Prescription.cpp"
+                          bodystart="189" bodyend="191"/>
             </memberdef>
         </sectiondef>
         <briefdescription>
@@ -346,44 +536,54 @@
         <detaileddescription>
         </detaileddescription>
         <inheritancegraph>
-            <node id="136">
+            <node id="166">
                 <label>mm::ISerializable</label>
                 <link refid="dc/df3/classmm_1_1_i_serializable"/>
             </node>
-            <node id="135">
+            <node id="165">
                 <label>mm::model::Prescription</label>
                 <link refid="db/d61/classmm_1_1model_1_1_prescription"/>
-                <childnode refid="136" relation="public-inheritance">
+                <childnode refid="166" relation="public-inheritance">
                 </childnode>
             </node>
         </inheritancegraph>
         <collaborationgraph>
-            <node id="138">
+            <node id="168">
                 <label>mm::ISerializable</label>
                 <link refid="dc/df3/classmm_1_1_i_serializable"/>
             </node>
-            <node id="137">
+            <node id="167">
                 <label>mm::model::Prescription</label>
                 <link refid="db/d61/classmm_1_1model_1_1_prescription"/>
-                <childnode refid="138" relation="public-inheritance">
+                <childnode refid="168" relation="public-inheritance">
                 </childnode>
-                <childnode refid="139" relation="usage">
+                <childnode refid="169" relation="usage">
                     <edgelabel>+prescriptionTreeModel</edgelabel>
                 </childnode>
             </node>
-            <node id="139">
+            <node id="169">
                 <label>mm::model::Prescription::TreeModel</label>
                 <link refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model"/>
-                <childnode refid="140" relation="public-inheritance">
+                <childnode refid="170" relation="public-inheritance">
                 </childnode>
             </node>
-            <node id="140">
+            <node id="170">
                 <label>TreeModelColumnRecord</label>
             </node>
         </collaborationgraph>
         <location file="code/model/Prescription.hpp" line="21" column="1" bodyfile="code/model/Prescription.hpp"
-                  bodystart="21" bodyend="72"/>
+                  bodystart="21" bodyend="92"/>
         <listofallmembers>
+            <member refid="db/d61/classmm_1_1model_1_1_prescription_1aa34227766a8ab89f1f47f8ac72de562d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Prescription</scope>
+                <name>add_drug</name>
+            </member>
+            <member refid="db/d61/classmm_1_1model_1_1_prescription_1a3838d3a11a4c86a8fef81750db4fb516" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Prescription</scope>
+                <name>add_drug</name>
+            </member>
             <member refid="db/d61/classmm_1_1model_1_1_prescription_1a37ce849a8d628a29a34faf40da8b85a4" prot="private"
                     virt="non-virtual">
                 <scope>mm::model::Prescription</scope>
@@ -393,6 +593,11 @@
                     virt="non-virtual">
                 <scope>mm::model::Prescription</scope>
                 <name>expire_date</name>
+            </member>
+            <member refid="db/d61/classmm_1_1model_1_1_prescription_1a56439663fa7d275978b7e38c83960476" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Prescription</scope>
+                <name>generateID</name>
             </member>
             <member refid="db/d61/classmm_1_1model_1_1_prescription_1abbc707b103a6f8b52b94fec5ec7ebf89" prot="public"
                     virt="non-virtual">
@@ -444,6 +649,11 @@
                 <scope>mm::model::Prescription</scope>
                 <name>is_used</name>
             </member>
+            <member refid="db/d61/classmm_1_1model_1_1_prescription_1aa63e30d0439cd7c06f155641e1b8390d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Prescription</scope>
+                <name>is_valid</name>
+            </member>
             <member refid="db/d61/classmm_1_1model_1_1_prescription_1a10cddeaf73c612f421bc735c47b6fe15" prot="private"
                     virt="non-virtual">
                 <scope>mm::model::Prescription</scope>
@@ -473,6 +683,36 @@
                     virt="virtual">
                 <scope>mm::model::Prescription</scope>
                 <name>serialize</name>
+            </member>
+            <member refid="db/d61/classmm_1_1model_1_1_prescription_1a3cb9e467c00323e94e4347e308dc67ba" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Prescription</scope>
+                <name>set_expire_date</name>
+            </member>
+            <member refid="db/d61/classmm_1_1model_1_1_prescription_1a0d4cc625d7a39ea9f00bc8885380b391" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Prescription</scope>
+                <name>set_issue_date</name>
+            </member>
+            <member refid="db/d61/classmm_1_1model_1_1_prescription_1a90ab6821dda442d202d8dabf50c52cc3" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Prescription</scope>
+                <name>set_negative_interactions</name>
+            </member>
+            <member refid="db/d61/classmm_1_1model_1_1_prescription_1a7854a3ef7a7fa8e15bc7a5570e1d0946" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Prescription</scope>
+                <name>set_patient_id</name>
+            </member>
+            <member refid="db/d61/classmm_1_1model_1_1_prescription_1a2514cc052803d493974172dad8659806" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Prescription</scope>
+                <name>set_prescription_id</name>
+            </member>
+            <member refid="db/d61/classmm_1_1model_1_1_prescription_1a25c7a50956777551b938990157d0046a" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Prescription</scope>
+                <name>set_used</name>
             </member>
             <member refid="db/d61/classmm_1_1model_1_1_prescription_1a6c38e4ee2fca09b18d61aaa214316b9e" prot="public"
                     virt="non-virtual">

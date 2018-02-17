@@ -1,16 +1,23 @@
 var hierarchy =
     [
+        ["ColumnRecord", null, [
+            ["mm::model::Drug::TreeModel", "d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model.html", null],
+            ["mm::model::DrugTreeModel", "d2/d52/structmm_1_1model_1_1_drug_tree_model.html", null]
+        ]],
         ["mm::Configuration", "dc/d00/classmm_1_1_configuration.html", null],
         ["mm::util::Date", "df/d88/structmm_1_1util_1_1_date.html", null],
         ["mm::util::DateBy", "d5/da8/structmm_1_1util_1_1_date_by.html", null],
         ["mm::DBMaster", "da/d0d/classmm_1_1_d_b_master.html", null],
         ["Expander", null, [
+            ["mm::view::PatientExpander", "dd/d38/classmm_1_1view_1_1_patient_expander.html", null],
             ["mm::view::PrescriptionExpander", "dc/ddf/classmm_1_1view_1_1_prescription_expander.html", null]
         ]],
         ["mm::IObserver", "d7/d9e/classmm_1_1_i_observer.html", [
+            ["mm::DrugWindow", "d7/dcd/classmm_1_1_drug_window.html", null],
             ["mm::MainWindow", "d7/dfd/classmm_1_1_main_window.html", null],
             ["mm::MedH", "df/d1a/classmm_1_1_med_h.html", null],
-            ["mm::PatientWindow", "da/d81/classmm_1_1_patient_window.html", null]
+            ["mm::PatientWindow", "da/d81/classmm_1_1_patient_window.html", null],
+            ["mm::PrescriptionWindow", "da/d8f/classmm_1_1_prescription_window.html", null]
         ]],
         ["mm::ISerializable", "dc/df3/classmm_1_1_i_serializable.html", [
             ["mm::model::authentication::Login", "de/d0e/structmm_1_1model_1_1authentication_1_1_login.html", null],
@@ -27,10 +34,16 @@ var hierarchy =
             ]],
             ["mm::model::authentication::Login", "de/d0e/structmm_1_1model_1_1authentication_1_1_login.html", null],
             ["mm::Window", "d1/d71/classmm_1_1_window.html", [
+                ["mm::DrugWindow", "d7/dcd/classmm_1_1_drug_window.html", null],
                 ["mm::LoginWindow", "d3/d0c/classmm_1_1_login_window.html", null],
                 ["mm::MainWindow", "d7/dfd/classmm_1_1_main_window.html", null],
-                ["mm::PatientWindow", "da/d81/classmm_1_1_patient_window.html", null]
+                ["mm::PatientWindow", "da/d81/classmm_1_1_patient_window.html", null],
+                ["mm::PrescriptionWindow", "da/d8f/classmm_1_1_prescription_window.html", null]
             ]]
+        ]],
+        ["ListBoxRow", null, [
+            ["mm::view::DrugEntry", "d4/d82/classmm_1_1view_1_1_drug_entry.html", null],
+            ["mm::view::InteractionEntry", "d8/ded/classmm_1_1view_1_1_interaction_entry.html", null]
         ]],
         ["mm::RefBuilder", "dd/d47/classmm_1_1_ref_builder.html", null],
         ["runtime_error", null, [
@@ -48,7 +61,6 @@ var hierarchy =
             ["mm::Window", "d1/d71/classmm_1_1_window.html", null]
         ]],
         ["TreeModelColumnRecord", null, [
-            ["mm::model::Drug::TreeModel", "d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model.html", null],
             ["mm::model::Patient::TreeModel", "d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model.html", null],
             ["mm::model::Prescription::TreeModel", "d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model.html", null]
         ]]

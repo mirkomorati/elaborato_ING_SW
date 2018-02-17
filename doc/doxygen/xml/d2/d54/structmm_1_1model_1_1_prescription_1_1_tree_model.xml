@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.8.13">
+         version="1.8.14">
     <compounddef id="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model" kind="struct" language="C++"
                  prot="public">
         <compoundname>mm::model::Prescription::TreeModel</compoundname>
@@ -161,7 +161,7 @@
                 <inbodydescription>
                 </inbodydescription>
                 <location file="code/model/Prescription.hpp" line="24" column="1" bodyfile="code/model/Prescription.cpp"
-                          bodystart="141" bodyend="150"/>
+                          bodystart="193" bodyend="202"/>
             </memberdef>
         </sectiondef>
         <briefdescription>
@@ -169,24 +169,24 @@
         <detaileddescription>
         </detaileddescription>
         <inheritancegraph>
-            <node id="165">
+            <node id="201">
                 <label>mm::model::Prescription::TreeModel</label>
                 <link refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model"/>
-                <childnode refid="166" relation="public-inheritance">
+                <childnode refid="202" relation="public-inheritance">
                 </childnode>
             </node>
-            <node id="166">
+            <node id="202">
                 <label>TreeModelColumnRecord</label>
             </node>
         </inheritancegraph>
         <collaborationgraph>
-            <node id="167">
+            <node id="203">
                 <label>mm::model::Prescription::TreeModel</label>
                 <link refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model"/>
-                <childnode refid="168" relation="public-inheritance">
+                <childnode refid="204" relation="public-inheritance">
                 </childnode>
             </node>
-            <node id="168">
+            <node id="204">
                 <label>TreeModelColumnRecord</label>
             </node>
         </collaborationgraph>
