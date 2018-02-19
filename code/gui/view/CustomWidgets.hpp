@@ -23,34 +23,6 @@
 namespace mm::view {
 
     class PrescriptionExpander : public Gtk::Expander {
-        /*
-            // label objects
-            std::pair<Gtk::Label, Gtk::Label> expirationDate;
-            std::pair<Gtk::Label, Gtk::Label> prescriptionID;
-            std::pair<Gtk::Label, Gtk::Label> issueDate;
-            Gtk::HBox labelBox;
-            Gtk::CheckButton used;
-
-            // content objects
-            Gtk::HBox contentBox;
-            Gtk::Frame detailsFrame;
-            Gtk::Label interactionLabel;
-            Gtk::Frame drugFrame;
-            Gtk::TreeView drugTreeView;
-            Glib::RefPtr<Gtk::ListStore> drugListStore;
-
-            const int id;
-        */
-        /*
-        struct TreeModel : public Gtk::TreeModel::ColumnRecord {
-
-            Gtk::TreeModelColumn<Glib::ustring> name;
-
-            TreeModel() {
-                add(name);
-            };
-        };
-         */
 
         model::Drug::TreeModel drugColumns;
         Glib::RefPtr<Gtk::ListStore> drugListStore;
@@ -80,11 +52,6 @@ namespace mm::view {
 
         PrescriptionExpander &operator=(PrescriptionExpander &) = delete;
 
-/*
-        bool operator<(const PrescriptionExpander &r) const {
-            return mm::util::Date(this->issueDate.second.get_text()) < mm::util::Date(r.issueDate.second.get_text());
-        }
-*/
         bool operator<(const PrescriptionExpander &r) const {
             return mm::util::Date(issueDateText) < mm::util::Date(r.issueDateText);
         }
@@ -102,6 +69,7 @@ namespace mm::view {
         std::pair<Gtk::Label, Gtk::Label> name;
         std::pair<Gtk::Label, Gtk::Label> lastName;
         std::pair<Gtk::Label, Gtk::Label> fiscalCode;
+        std::pair<Gtk::Label, Gtk::Label> quantity;
 
         // content widgets
         Gtk::Frame prescriptionFrame;

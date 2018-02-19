@@ -6,8 +6,6 @@
 #include "AddPrescriptionDialog.hpp"
 #include "RefBuilder.hpp"
 #include "../DBMaster.hpp"
-#include "../model/Patient.hpp"
-#include "../utils/Date.hpp"
 #include "../utils/stringUtils.hpp"
 
 #define UPDATE_NOTHING 0
@@ -135,9 +133,11 @@ void mm::AddPrescriptionDialog::reset() {
         is_active = false;
         return;
     }
+    drugComboBox->remove_all();
+    initDrugComboBox();
 
-    if (drugComboBox->get_active_text().empty()) initDrugComboBox();
-    if (monthComboBox->get_active_text().empty()) initMonthComboBox();
+    monthComboBox->remove_all();
+    initMonthComboBox();
 
     monthComboBox->set_active_text("1");
     monthLabel->set_text("Mese");

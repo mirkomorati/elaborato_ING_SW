@@ -363,12 +363,14 @@ mm::view::PatientExpander::PatientExpander(const mm::model::Patient &patient, co
         name("<b>Nome:</b>", ""),
         lastName("<b>Cognome:</b>", ""),
         fiscalCode("<b>Codice Fiscale</b>", ""),
+        quantity("<b>Q.tà</b>", ""),
         prescriptionListStore(Gtk::ListStore::create(model::Prescription::prescriptionTreeModel)) {
 
 
     name.first.set_use_markup(true);
     lastName.first.set_use_markup(true);
     fiscalCode.first.set_use_markup(true);
+    quantity.first.set_use_markup(true);
 
     labelBox.pack_start(name.first, true, true);
     labelBox.pack_start(name.second, true, true);
@@ -376,6 +378,8 @@ mm::view::PatientExpander::PatientExpander(const mm::model::Patient &patient, co
     labelBox.pack_start(lastName.second, true, true);
     labelBox.pack_start(fiscalCode.first, true, true);
     labelBox.pack_start(fiscalCode.second, true, true);
+    labelBox.pack_end(quantity.second, true, true);
+    labelBox.pack_end(quantity.first, true, true);
 
     name.second.set_text(patient.get_first_name());
     lastName.second.set_text(patient.get_last_name());
@@ -405,6 +409,7 @@ mm::view::PatientExpander::PatientExpander(const mm::model::Patient &patient, co
     }
 
     std::vector<mm::model::Prescription> filteredPrescriptions;
+    int prescription_count = 0;
 
     for (auto &p : patient.get_prescriptions()) {
         auto drugs = p.get_drugs();
@@ -412,15 +417,19 @@ mm::view::PatientExpander::PatientExpander(const mm::model::Patient &patient, co
             if (end > start) {
                 util::Date issue;
                 issue.set_from_str(p.get_issue_date());
-                if (issue >= start and issue <= end)
+                if (issue >= start and issue <= end) {
                     filteredPrescriptions.emplace_back(p);
+                    ++prescription_count;
+                }
 
             } else {
                 filteredPrescriptions.emplace_back(p);
+                ++prescription_count;
             }
         }
     }
 
+    quantity.second.set_text(Glib::ustring::format(prescription_count));
     prescriptionTreeView.set_model(prescriptionListStore);
 
     prescriptionListStore->clear();

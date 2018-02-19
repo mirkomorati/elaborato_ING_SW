@@ -25,7 +25,7 @@ mm::DateController::DateController(const std::string &dayId, const std::string &
     refBuilder.get_widget(yearId, year);
 
     // Devo fare l'init solo la prima volta, altrimenti vado a raddoppiare/ecc gli elementi
-    if (day->get_active_text().empty()) init();
+    init();
     reset(); // NB. quando si effettua un set da sw viene lanciato un signal changed... se si sposta
     // il reset dopo aver definito i gestori dei segnali crasha tutto.
 
@@ -72,6 +72,9 @@ mm::util::Date mm::DateController::getDate() {
 }
 
 void mm::DateController::init() {
+    day->remove_all();
+    month->remove_all();
+    year->remove_all();
     for (int i = 1; i <= 31; i++)
         day->append(Glib::ustring::format(i));
     for (int i = 1; i <= 12; i++)

@@ -109,6 +109,7 @@ void mm::DrugWindow::initTreeView() {
     Gtk::TreeView *drugTreeView;
 
     RefBuilder::get_instance().get_widget("drugTreeView", drugTreeView);
+    drugTreeView->remove_all_columns();
 
     drugTreeView->append_column("Nome", model::Drug::drugTreeModel.name);
     drugTreeView->append_column("Forma Farmaceutica", model::Drug::drugTreeModel.pharmaceutical_form);
@@ -213,8 +214,12 @@ void mm::DrugWindow::updatePatientView() {
         }
 
         if (flag) {
-            std::unique_ptr<view::PatientExpander> exp(
-                    new view::PatientExpander(patient, drug, filterStartDate, filterEndDate));
+            std::unique_ptr<view::PatientExpander> exp;
+            if (filterDrugOn)
+                exp.reset(new view::PatientExpander(patient, drug, filterStartDate, filterEndDate));
+            else
+                exp.reset(new view::PatientExpander(patient, drug));
+
             patientList->append(*exp);
             patientExp.push_back(std::move(exp));
         }
