@@ -1,14 +1,14 @@
 \select@language {italian}
 \select@language {italian}
 \contentsline {section}{\numberline {1}Introduzione}{2}{section.1}
-\contentsline {section}{\numberline {2}Requisiti Funzionali}{2}{section.2}
+\contentsline {section}{\numberline {2}Requisiti}{2}{section.2}
 \contentsline {section}{\numberline {3}UML}{3}{section.3}
-\contentsline {subsection}{\numberline {3.1}Use Case}{3}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Activity Diagram}{4}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Class Diagram}{4}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Sequence Diagram}{4}{subsection.3.4}
-\contentsline {section}{\numberline {4}Scelte Progettuali}{6}{section.4}
-\contentsline {subsection}{\numberline {4.1}MVC Pattern}{6}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Singleton}{6}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Observer}{6}{subsection.4.3}
-\contentsline {section}{\numberline {5}Conclusioni}{6}{section.5}
+\contentsline {subsection}{\numberline {3.1}Use Cases}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Activity Diagram}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Class Diagram}{10}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Sequence Diagram}{11}{subsection.3.4}
+\contentsline {section}{\numberline {4}Scelte Progettuali}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}MVC Pattern}{13}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Singleton Pattern}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Observer Pattern}{13}{subsection.4.3}
+\contentsline {section}{\numberline {5}Conclusioni}{13}{section.5}
