@@ -109,6 +109,7 @@ void mm::DrugWindow::initTreeView() {
     Gtk::TreeView *drugTreeView;
 
     RefBuilder::get_instance().get_widget("drugTreeView", drugTreeView);
+    drugTreeView->remove_all_columns();
 
     drugTreeView->append_column("Nome", model::Drug::drugTreeModel.name);
     drugTreeView->append_column("Forma Farmaceutica", model::Drug::drugTreeModel.pharmaceutical_form);

@@ -55,6 +55,14 @@ void mm::AddPatientDialog::okHandler() {
     birth_date = birthDate.getDateAsString();
     patient.set_birth_date(birth_date);
 
+    if (street.text().empty() or civic.text().empty() or zip_code.text().empty() or city.text().empty()
+        or birth_city.text().empty() or birth_country.text().empty()) {
+        Gtk::Label *error;
+        refBuilder.get_widget("addPatientError", error);
+        error->set_visible(true);
+        return;
+    }
+
 
     address = fmt::format("{} {}, {}, {}, {}", street.text(), civic.text(), zip_code.text(), city.text(),
                           country.text());
@@ -66,6 +74,14 @@ void mm::AddPatientDialog::okHandler() {
     patient.set_birth_place(birth_address);
 
     if (patient.is_valid()) {
+        if (DBMaster::get_instance().exists(patient.get_table_name(),
+                                            patient.get_primary_key()[0],
+                                            patient.get_fiscal_code())) {
+            Gtk::Label *error;
+            refBuilder.get_widget("addPatientError", error);
+            error->set_visible(true);
+            return;
+        }
         DBMaster::get_instance().add_to_db(patient);
         dispose(true);
     } else {

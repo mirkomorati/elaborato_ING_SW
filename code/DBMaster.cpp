@@ -322,18 +322,18 @@ bool mm::DBMaster::exists(string table_name, string id_name, mm::Serialized id) 
 
     switch (id.get_type()) {
         case INTEGER:
-            query = fmt::format("select count(1) from {} where {} = {}", table_name, id_name, to_string(id.get_int()));
+            query = fmt::format("select count(*) from {} where {} = {}", table_name, id_name, to_string(id.get_int()));
             break;
         case REAL:
-            query = fmt::format("select count(1) from {} where {} = {}", table_name, id_name, to_string(id.get_real()));
+            query = fmt::format("select count(*) from {} where {} = {}", table_name, id_name, to_string(id.get_real()));
             break;
         case TEXT:
-            query = fmt::format("select count(1) from {} where {} = {}", table_name, id_name, id.get_str());
+            query = fmt::format("select count(*) from {} where {} = '{}'", table_name, id_name, id.get_str());
             break;
     }
 
     if (sqlite3_prepare(db, query.c_str(), -1, &stmt, nullptr) != SQLITE_OK)
-        throw std::runtime_error(fmt::format("cannot prepare statement with query {}", query));
+        throw std::runtime_error(fmt::format("cannot prepare statement with query {} {}", query, sqlite3_errmsg(db)));
 
     auto rc = sqlite3_step(stmt);
 
