@@ -18,24 +18,6 @@
 using namespace std;
 namespace mm {
     namespace model {
-        struct DrugTreeModel : public Gtk::TreeModel::ColumnRecord {
-
-            Gtk::TreeModelColumn<Glib::ustring> name;
-            Gtk::TreeModelColumn<Glib::ustring> pharmaceutical_form;
-            Gtk::TreeModelColumn<Glib::ustring> ATC_classification;
-            Gtk::TreeModelColumn<Glib::ustring> contraindications;
-            Gtk::TreeModelColumn<Glib::ustring> active_principles;
-            Gtk::TreeModelColumn<Glib::ustring> price;
-
-            DrugTreeModel() {
-                add(name);
-                add(pharmaceutical_form);
-                add(ATC_classification);
-                add(contraindications);
-                add(active_principles);
-                add(price);
-            };
-        };
 
         class Drug : public ISerializable {
         public:

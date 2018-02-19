@@ -52,7 +52,7 @@ namespace mm::view {
         };
          */
 
-        model::DrugTreeModel drugColumns;
+        model::Drug::TreeModel drugColumns;
         Glib::RefPtr<Gtk::ListStore> drugListStore;
         Gtk::TreeView drugTreeView;
         const int id;
