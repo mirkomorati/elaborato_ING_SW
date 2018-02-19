@@ -116,7 +116,7 @@ void mm::DrugWindow::initTreeView() {
     drugTreeView->set_model(drugListStore);
 
     for (int i = 0; i <= 2; i++) {
-        drugTreeView->get_column(i)->set_min_width(100);
+        drugTreeView->get_column(i)->set_min_width(120);
         drugTreeView->get_column(i)->set_resizable(true);
         drugTreeView->get_column_cell_renderer(i)->property_xalign().set_value(0);
         drugTreeView->get_column(i)->set_sort_column(i);

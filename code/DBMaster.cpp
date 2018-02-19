@@ -27,6 +27,7 @@ mm::DBMaster::DBMaster() noexcept(false) {
     assert(not DBMaster::db_file_name.empty());
 
     if (sqlite3_open(DBMaster::db_file_name.c_str(), &db)) {
+        cout << sqlite3_errmsg(db) << endl;
         throw std::runtime_error(fmt::format("Error cannot open database from file: {}", DBMaster::db_file_name));
     }
 }

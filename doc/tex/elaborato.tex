@@ -9,12 +9,27 @@
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
+\usepackage{calc}
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
 \usepackage{amssymb}
 \usepackage{hyperref}
-\usepackage{geometry}[margin=2.3cm]
+\usepackage[a4paper]{geometry}
+\usepackage[section]{placeins}
+
+%\geometry{hmargin=2.3cm}
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.25in
+\textheight=9in
+\headsep=0.25in
+
+	
 \usepackage[normalem]{ulem} % [normalem] prevents the package from changing the default behavior of `\emph` to underline.
 \usepackage{fancyhdr}
 \usepackage{array}
@@ -22,8 +37,6 @@
 \renewcommand{\baselinestretch}{1.1} 
 
 \newcommand{\hmwkTitle}{Elaborato\ Ingegneria Del Software}
-\newcommand{\hmwkClass}{Architettura degli Elaboratori}
-\newcommand{\hmwkAuthorName}{Mirko Morati,\ Noè Murr}
 
 \pagestyle{fancy}
 \lhead{\nouppercase{\leftmark}}
@@ -35,18 +48,22 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-\title{
-	\vspace{2in}
-	\textmd{\textbf{\hmwkClass:\\ \hmwkTitle}}\\
-	\vspace{0.1in}\large{\textit{\hmwkAuthorName}}
-	\vspace{3in}
-}
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
 
 \newcolumntype{L}{>{\arraybackslash}m{10cm}}
+
 \newcommand{\safeImage}[1]{%
-\IfFileExists{#1}{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{#1}}{\includegraphics{example-image-a}}
+	\begin{figure}[!htb]
+		\centering
+	\IfFileExists{#1}{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{#1}}{\includegraphics{example-image-a}}
+	\end{figure}
 }
+
 \newcommand{\usecase}[6]{%
+\begin{table}[!h]
+	\centering
 \begin{tabular}{| >{\bfseries} l | L |}
 	\hline
 	ID&{#1}\\\hline
@@ -55,9 +72,9 @@
 	Sequenza&{#4}\\\hline
 	Postcondizioni&{#5}\\\hline
 \end{tabular}
-\begin{center}
-	\safeImage{#6}
-\end{center}
+\end{table}
+
+\safeImage{#6}
 }
 
 \begin{document}
@@ -92,8 +109,9 @@ Obiettivo dell'elaborato è la progettazione di un prototipo software per la ges
 In questa relazione ci proponiamo di raccogliere la documentazione sviluppata e di fornire spiegazioni e dettagli sulle scelte progettuali ed implementative. 
 
 \section{Requisiti Funzionali}
-Di seguito viene riportato il testo dell'elaborato, evidenziando i requisiti funzionali identificati con una linea tratteggiata.
+Di seguito viene riportato il testo dell'elaborato. I requisiti funzionali vengono identificati con una linea tratteggiata.
 
+\begin{changemargin}{1cm}{0.5cm} 
 Si vuole progettare un sistema informativo per gestire le prescrizioni di farmaci da parte dei medici di base di una regione. Il medico di base effettua la prescrizione di farmaci su richiesta del paziente (nel caso di farmaci legati a malattie croniche del paziente stesso) o in seguito alla visita. Nel caso di prescrizione su richiesta, il paziente può richiedere la prescrizione alla segreteria del medico che si occuperà di raccogliere le richieste, far preparare le ricette al medico e consegnare le prescrizioni ai pazienti.
 
 I farmaci potranno essere prescritti anche da eventuali medici consorziati con il medico di base di riferimento o in caso di assenza del medico di base, dal medico sostituto designato.
@@ -107,14 +125,14 @@ I farmaci potranno essere prescritti anche da eventuali medici consorziati con i
 \dashuline{In ogni prescrizione possono apparire al più 5 farmaci}. \dashuline{Ogni farmaco è caratterizzato da nome commerciale univoco, dal costo, dalla forma farmaceutica, dalle controindicazioni, e dalla sua classificazione secondo il sistema ATC (Anatomico-Terapeutico-Chimico)}. \dashuline{Per ogni farmaco si tiene traccia dei principi attivi contenuti: per ogni principio attivo di un farmaco sono indicati la quantità contenuta in ogni unità di farmaco (ad esempio, “500 mg per compressa” o “120 mg per ml”). Per ogni principio attivo sono memorizzati un nome univoco, una sua descrizione e l’effetto principale}. \dashuline{Il medico può poi specificare quali prescrizioni contengono farmaci che potrebbero interagire con risultati negativi per il paziente. In tal caso sono specificate le coppie di farmaci della stessa prescrizione che possono interagire}.
 
 \dashuline{Il medico può richiedere al sistema di visualizzare la quantità di un certo farmaco prescritta ai suoi pazienti su base mensile, trimestrale, semestrale o annuale. Può anche visualizzare la lista dei pazienti a cui ha prescritto un certo farmaco e la lista delle eventuali reazione avverse comunicate all'agenzia di riferimento}.
-
-\section{Scelte Progettuali}
+\end{changemargin}
 
 \section{UML}
-\subsection{Use Cases}
+\subsection{Use Case}
 % Sequence diagram per i principali use cases insieme alle schede
 \usecase{UC1}{Medico}{}{}{}{}
-\usecase{UC2}{}{}{}{}{Vista_farmaci.png}
+
+\usecase{UC2}{Medico}{}{}{}{Vista_farmaci.png}
 
 \subsection{Activity Diagram}
 \safeImage{Aggiunta_prescrizione.png}
@@ -122,6 +140,11 @@ I farmaci potranno essere prescritti anche da eventuali medici consorziati con i
 \subsection{Class Diagram}
 
 \subsection{Sequence Diagram}
+
+\section{Scelte Progettuali}
+\subsection{MVC Pattern}
+\subsection{Singleton}
+\subsection{Observer}
 
 \section{Conclusioni}
 

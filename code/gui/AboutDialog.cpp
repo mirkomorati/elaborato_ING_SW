@@ -22,7 +22,7 @@ void mm::AboutDialog::show() {
 void mm::AboutDialog::dispose() {
     Gtk::Dialog *dialog;
     RefBuilder::get_instance().get_widget("aboutDialog", dialog);
-    dialog->hide();
+    dialog->close();
     active = false;
     notify();
 }
