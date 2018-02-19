@@ -214,8 +214,12 @@ void mm::DrugWindow::updatePatientView() {
         }
 
         if (flag) {
-            std::unique_ptr<view::PatientExpander> exp(
-                    new view::PatientExpander(patient, drug, filterStartDate, filterEndDate));
+            std::unique_ptr<view::PatientExpander> exp;
+            if (filterDrugOn)
+                exp.reset(new view::PatientExpander(patient, drug, filterStartDate, filterEndDate));
+            else
+                exp.reset(new view::PatientExpander(patient, drug));
+
             patientList->append(*exp);
             patientExp.push_back(std::move(exp));
         }
