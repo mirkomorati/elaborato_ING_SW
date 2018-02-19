@@ -323,6 +323,7 @@
                     <child>
                       <object class="GtkGrid">
                         <property name="visible">True</property>
+                        <property name="sensitive">False</property>
                         <property name="can_focus">False</property>
                         <child>
                           <object class="GtkCheckButton">
