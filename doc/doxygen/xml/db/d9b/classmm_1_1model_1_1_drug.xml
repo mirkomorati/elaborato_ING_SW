@@ -1,0 +1,588 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="db/d9b/classmm_1_1model_1_1_drug" kind="class" language="C++" prot="public">
+        <compoundname>mm::model::Drug</compoundname>
+        <basecompoundref refid="dc/df3/classmm_1_1_i_serializable" prot="public" virt="non-virtual">mm::ISerializable
+        </basecompoundref>
+        <includes refid="dd/df9/_drug_8hpp" local="no">Drug.hpp</includes>
+        <innerclass refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model" prot="public">mm::model::Drug::TreeModel
+        </innerclass>
+        <sectiondef kind="public-static-attrib">
+            <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1a9169612d0fc3b3b25063a1686be30af9"
+                       prot="public" static="yes" mutable="no">
+                <type>
+                    <ref refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model" kindref="compound">TreeModel</ref>
+                </type>
+                <definition>mm::model::Drug::TreeModel mm::model::Drug::drugTreeModel</definition>
+                <argsstring></argsstring>
+                <name>drugTreeModel</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Project Elaborato_ING_SW
+                        <simplesect kind="author">
+                            <para>Noè Murr, Mirko Morati</para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="54" column="1" bodyfile="code/model/Drug.hpp" bodystart="54"
+                          bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1a05bb9d162be5e9805817c06e1357e989"
+                       prot="private" static="no" mutable="no">
+                <type>string</type>
+                <definition>string mm::model::Drug::name</definition>
+                <argsstring></argsstring>
+                <name>name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="92" column="1" bodyfile="code/model/Drug.hpp" bodystart="92"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1a22780b8f1efeacb013b9440557cce200"
+                       prot="private" static="no" mutable="no">
+                <type>float</type>
+                <definition>float mm::model::Drug::price</definition>
+                <argsstring></argsstring>
+                <name>price</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="93" column="1" bodyfile="code/model/Drug.hpp" bodystart="93"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1a2f237e89aba2d10b6b9379db15aab3d4"
+                       prot="private" static="no" mutable="no">
+                <type>string</type>
+                <definition>string mm::model::Drug::pharmaceutical_form</definition>
+                <argsstring></argsstring>
+                <name>pharmaceutical_form</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="94" column="1" bodyfile="code/model/Drug.hpp" bodystart="94"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1a4e4747f249e626820a5187ddad52b712"
+                       prot="private" static="no" mutable="no">
+                <type>vector&lt; string &gt;</type>
+                <definition>vector&lt;string&gt; mm::model::Drug::contraindications</definition>
+                <argsstring></argsstring>
+                <name>contraindications</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="95" column="1" bodyfile="code/model/Drug.hpp" bodystart="95"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1abf4bce995dc92e09a15a0edb4776d87f"
+                       prot="private" static="no" mutable="no">
+                <type>string</type>
+                <definition>string mm::model::Drug::ATC_classification</definition>
+                <argsstring></argsstring>
+                <name>ATC_classification</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="96" column="1" bodyfile="code/model/Drug.hpp" bodystart="96"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="db/d9b/classmm_1_1model_1_1_drug_1a5e9e0de0f4357e8a12b3a07b1c5addb5"
+                       prot="private" static="no" mutable="no">
+                <type>vector&lt; pair&lt; string, string &gt; &gt;</type>
+                <definition>vector&lt;pair&lt;string, string&gt; &gt; mm::model::Drug::active_principles</definition>
+                <argsstring></argsstring>
+                <name>active_principles</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="97" column="1" bodyfile="code/model/Drug.hpp" bodystart="97"
+                          bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a23f6e0538f52bd77fb8fa511392889a6"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::model::Drug::Drug</definition>
+                <argsstring>(const string &amp;name, float price)</argsstring>
+                <name>Drug</name>
+                <param>
+                    <type>const string &amp;</type>
+                    <declname>name</declname>
+                </param>
+                <param>
+                    <type>float</type>
+                    <declname>price</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="57" column="1" bodyfile="code/model/Drug.cpp" bodystart="72"
+                          bodyend="72"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a60cb5ecb3ed21da2f7f7e8bc94a1019d"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::model::Drug::Drug</definition>
+                <argsstring>()=default</argsstring>
+                <name>Drug</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="59" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a5d4fa5bf5e4700f833547c5114764c7b"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>map&lt; string, <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref> &gt;
+                </type>
+                <definition>map&lt; string, mm::Serialized &gt; mm::model::Drug::serialize</definition>
+                <argsstring>() const override</argsstring>
+                <name>serialize</name>
+                <reimplements refid="dc/df3/classmm_1_1_i_serializable_1a20a59e2324c8dbf6fefe4d11ae89d0fb">serialize
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="61" column="1" bodyfile="code/model/Drug.cpp" bodystart="14"
+                          bodyend="38"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1adc9cd19eb2d0c3c271c01c41cf10d600"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::Drug::unserialize</definition>
+                <argsstring>(map&lt; string, Serialized &gt; map) override</argsstring>
+                <name>unserialize</name>
+                <param>
+                    <type>map&lt; string, <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized
+                    </ref> &gt;
+                    </type>
+                    <declname>map</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="63" column="1" bodyfile="code/model/Drug.cpp" bodystart="40"
+                          bodyend="62"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a7fa9dbb569b89f397d4b865b778b3751"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>string</type>
+                <definition>string mm::model::Drug::get_table_name</definition>
+                <argsstring>() const override</argsstring>
+                <name>get_table_name</name>
+                <reimplements refid="dc/df3/classmm_1_1_i_serializable_1a9717e6da47fcbac3ffa2e68152464e0a">
+                    get_table_name
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="65" column="1" bodyfile="code/model/Drug.cpp" bodystart="64"
+                          bodyend="66"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a019770ab95f95f34bbc204c4c3860bfa"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>vector&lt; string &gt;</type>
+                <definition>vector&lt; string &gt; mm::model::Drug::get_primary_key</definition>
+                <argsstring>() const override</argsstring>
+                <name>get_primary_key</name>
+                <reimplements refid="dc/df3/classmm_1_1_i_serializable_1a69c0c514e11e386b6cb1fbd03f14da17">
+                    get_primary_key
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="67" column="1" bodyfile="code/model/Drug.cpp" bodystart="68"
+                          bodyend="70"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1ac01bfb91a074b57a3ba3b5b6f567e726"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string &amp;</type>
+                <definition>const string &amp; mm::model::Drug::get_name</definition>
+                <argsstring>() const</argsstring>
+                <name>get_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="69" column="1" bodyfile="code/model/Drug.cpp" bodystart="74"
+                          bodyend="76"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a0add6ee0680f5028d0e820033ebada20"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>float</type>
+                <definition>float mm::model::Drug::get_price</definition>
+                <argsstring>() const</argsstring>
+                <name>get_price</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="71" column="1" bodyfile="code/model/Drug.cpp" bodystart="78"
+                          bodyend="80"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a2435614b64f13687d25b04f7d9335c9a"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string &amp;</type>
+                <definition>const string &amp; mm::model::Drug::get_pharmaceutical_form</definition>
+                <argsstring>() const</argsstring>
+                <name>get_pharmaceutical_form</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="73" column="1" bodyfile="code/model/Drug.cpp" bodystart="82"
+                          bodyend="84"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a9116e111f2a546dbc35fd5e08863f37a"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const vector&lt; string &gt; &amp;</type>
+                <definition>const vector&lt; string &gt; &amp; mm::model::Drug::get_contraindications</definition>
+                <argsstring>() const</argsstring>
+                <name>get_contraindications</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="75" column="1" bodyfile="code/model/Drug.cpp" bodystart="86"
+                          bodyend="88"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a71f9f7d210a2fd7fbad86e61affd9105"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string</type>
+                <definition>const string mm::model::Drug::get_contraindications_as_string</definition>
+                <argsstring>() const</argsstring>
+                <name>get_contraindications_as_string</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="77" column="1" bodyfile="code/model/Drug.cpp" bodystart="98"
+                          bodyend="105"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a64a1e99b4702d83b9c94379d14b4873b"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string</type>
+                <definition>const string mm::model::Drug::get_ATC_classification</definition>
+                <argsstring>() const</argsstring>
+                <name>get_ATC_classification</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="79" column="1" bodyfile="code/model/Drug.cpp" bodystart="90"
+                          bodyend="92"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a809666171510a2511573fa65d4dcd7cb"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const vector&lt; pair&lt; string, string &gt; &gt; &amp;</type>
+                <definition>const vector&lt; pair&lt; string, string &gt; &gt; &amp;
+                    mm::model::Drug::get_active_principles
+                </definition>
+                <argsstring>() const</argsstring>
+                <name>get_active_principles</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="81" column="1" bodyfile="code/model/Drug.cpp" bodystart="94"
+                          bodyend="96"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1aaa9a406540607aed5845bb6af20b1231"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string</type>
+                <definition>const string mm::model::Drug::get_active_principles_as_string</definition>
+                <argsstring>() const</argsstring>
+                <name>get_active_principles_as_string</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="83" column="1" bodyfile="code/model/Drug.cpp" bodystart="107"
+                          bodyend="115"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1ab5bfd8748a32b0cb366c4bf29633f00a"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string</type>
+                <definition>const string mm::model::Drug::get_price_as_string</definition>
+                <argsstring>() const</argsstring>
+                <name>get_price_as_string</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="85" column="1" bodyfile="code/model/Drug.cpp" bodystart="117"
+                          bodyend="121"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a15151e60eef91b544c63d8ff55db7bab"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::model::Drug::operator==</definition>
+                <argsstring>(const Drug &amp;rhs) const</argsstring>
+                <name>operator==</name>
+                <param>
+                    <type>const <ref refid="db/d9b/classmm_1_1model_1_1_drug" kindref="compound">Drug</ref> &amp;
+                    </type>
+                    <declname>rhs</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="87" column="1" bodyfile="code/model/Drug.cpp" bodystart="127"
+                          bodyend="129"/>
+            </memberdef>
+            <memberdef kind="function" id="db/d9b/classmm_1_1model_1_1_drug_1a51d9c5692835cab9d206580ccf8d0e1e"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::model::Drug::operator!=</definition>
+                <argsstring>(const Drug &amp;rhs) const</argsstring>
+                <name>operator!=</name>
+                <param>
+                    <type>const <ref refid="db/d9b/classmm_1_1model_1_1_drug" kindref="compound">Drug</ref> &amp;
+                    </type>
+                    <declname>rhs</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="89" column="1" bodyfile="code/model/Drug.cpp" bodystart="123"
+                          bodyend="125"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="50">
+                <label>mm::model::Drug</label>
+                <link refid="db/d9b/classmm_1_1model_1_1_drug"/>
+                <childnode refid="51" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="51">
+                <label>mm::ISerializable</label>
+                <link refid="dc/df3/classmm_1_1_i_serializable"/>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="52">
+                <label>mm::model::Drug</label>
+                <link refid="db/d9b/classmm_1_1model_1_1_drug"/>
+                <childnode refid="53" relation="public-inheritance">
+                </childnode>
+                <childnode refid="54" relation="usage">
+                    <edgelabel>+drugTreeModel</edgelabel>
+                </childnode>
+            </node>
+            <node id="53">
+                <label>mm::ISerializable</label>
+                <link refid="dc/df3/classmm_1_1_i_serializable"/>
+            </node>
+            <node id="55">
+                <label>ColumnRecord</label>
+            </node>
+            <node id="54">
+                <label>mm::model::Drug::TreeModel</label>
+                <link refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model"/>
+                <childnode refid="55" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/model/Drug.hpp" line="40" column="1" bodyfile="code/model/Drug.hpp" bodystart="40"
+                  bodyend="98"/>
+        <listofallmembers>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a5e9e0de0f4357e8a12b3a07b1c5addb5" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>active_principles</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1abf4bce995dc92e09a15a0edb4776d87f" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>ATC_classification</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a4e4747f249e626820a5187ddad52b712" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>contraindications</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a23f6e0538f52bd77fb8fa511392889a6" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>Drug</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a60cb5ecb3ed21da2f7f7e8bc94a1019d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>Drug</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a9169612d0fc3b3b25063a1686be30af9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>drugTreeModel</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a809666171510a2511573fa65d4dcd7cb" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>get_active_principles</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1aaa9a406540607aed5845bb6af20b1231" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>get_active_principles_as_string</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a64a1e99b4702d83b9c94379d14b4873b" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>get_ATC_classification</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a9116e111f2a546dbc35fd5e08863f37a" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>get_contraindications</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a71f9f7d210a2fd7fbad86e61affd9105" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>get_contraindications_as_string</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1ac01bfb91a074b57a3ba3b5b6f567e726" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>get_name</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a2435614b64f13687d25b04f7d9335c9a" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>get_pharmaceutical_form</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a0add6ee0680f5028d0e820033ebada20" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>get_price</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1ab5bfd8748a32b0cb366c4bf29633f00a" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>get_price_as_string</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a019770ab95f95f34bbc204c4c3860bfa" prot="public"
+                    virt="virtual">
+                <scope>mm::model::Drug</scope>
+                <name>get_primary_key</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a7fa9dbb569b89f397d4b865b778b3751" prot="public"
+                    virt="virtual">
+                <scope>mm::model::Drug</scope>
+                <name>get_table_name</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a05bb9d162be5e9805817c06e1357e989" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>name</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a51d9c5692835cab9d206580ccf8d0e1e" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>operator!=</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a15151e60eef91b544c63d8ff55db7bab" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>operator==</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a2f237e89aba2d10b6b9379db15aab3d4" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>pharmaceutical_form</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a22780b8f1efeacb013b9440557cce200" prot="private"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>price</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1a5d4fa5bf5e4700f833547c5114764c7b" prot="public"
+                    virt="virtual">
+                <scope>mm::model::Drug</scope>
+                <name>serialize</name>
+            </member>
+            <member refid="db/d9b/classmm_1_1model_1_1_drug_1adc9cd19eb2d0c3c271c01c41cf10d600" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::Drug</scope>
+                <name>unserialize</name>
+            </member>
+            <member refid="dc/df3/classmm_1_1_i_serializable_1a8e5329b3b23cd0dff0ea8f5f63bab996" prot="public"
+                    virt="pure-virtual" ambiguityscope="mm::ISerializable::">
+                <scope>mm::model::Drug</scope>
+                <name>unserialize</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="dir_c2a361fb7ebed33ab8c423b509dc8d4e" kind="dir">
+        <compoundname>code/model</compoundname>
+        <innerfile refid="d6/d6e/_authentication_8cpp">Authentication.cpp</innerfile>
+        <innerfile refid="dc/d00/_authentication_8hpp">Authentication.hpp</innerfile>
+        <innerfile refid="d3/da6/_doctor_8cpp">Doctor.cpp</innerfile>
+        <innerfile refid="dd/dc5/_doctor_8hpp">Doctor.hpp</innerfile>
+        <innerfile refid="d1/d9e/_drug_8cpp">Drug.cpp</innerfile>
+        <innerfile refid="dd/df9/_drug_8hpp">Drug.hpp</innerfile>
+        <innerfile refid="d0/d77/_patient_8cpp">Patient.cpp</innerfile>
+        <innerfile refid="d0/da9/_patient_8hpp">Patient.hpp</innerfile>
+        <innerfile refid="d5/db1/_prescription_8cpp">Prescription.cpp</innerfile>
+        <innerfile refid="de/d01/_prescription_8hpp">Prescription.hpp</innerfile>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="code/model/"/>
+    </compounddef>
+</doxygen>

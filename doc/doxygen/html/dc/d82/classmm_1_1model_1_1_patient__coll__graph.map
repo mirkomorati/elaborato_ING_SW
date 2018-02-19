@@ -1,0 +1,4 @@
+<map id="mm::model::Patient" name="mm::model::Patient">
+<area shape="rect" id="node2" href="$dc/df3/classmm_1_1_i_serializable.html" title="Funziona come un interfaccia, qualunque classe che erediti da questa potrà essere letta o scritta nel..." alt="" coords="5,155,146,268"/>
+<area shape="rect" id="node3" href="$d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model.html" title="{mm::model::Patient\l::TreeModel\n|+ first_name\l+ last_name\l+ fiscal_code\l+ birth_date\l+ birth_place\l+ address\l+ risk_factors\l|+ TreeModel()\l}" alt="" coords="170,128,306,295"/>
+</map>

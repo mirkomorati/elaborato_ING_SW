@@ -1,0 +1,1537 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="dd/df9/_drug_8hpp" kind="file" language="C++">
+        <compoundname>Drug.hpp</compoundname>
+        <includes local="no">string</includes>
+        <includes local="no">vector</includes>
+        <includes local="no">map</includes>
+        <includes local="no">gtkmm/treemodelcolumn.h</includes>
+        <includes local="no">gtkmm/treemodel.h</includes>
+        <includes local="no">iostream</includes>
+        <includes refid="d3/d1b/_i_serializable_8hpp" local="yes">../interfaces/ISerializable.hpp</includes>
+        <includedby refid="de/d01/_prescription_8hpp" local="yes">code/model/Prescription.hpp</includedby>
+        <includedby refid="dd/dc5/_doctor_8hpp" local="yes">code/model/Doctor.hpp</includedby>
+        <includedby refid="d1/d9e/_drug_8cpp" local="yes">code/model/Drug.cpp</includedby>
+        <incdepgraph>
+            <node id="950">
+                <label>../interfaces/ISerializable.hpp</label>
+                <link refid="d3/d1b/_i_serializable_8hpp"/>
+                <childnode refid="944" relation="include">
+                </childnode>
+                <childnode refid="946" relation="include">
+                </childnode>
+                <childnode refid="945" relation="include">
+                </childnode>
+            </node>
+            <node id="944">
+                <label>string</label>
+            </node>
+            <node id="946">
+                <label>map</label>
+            </node>
+            <node id="947">
+                <label>gtkmm/treemodelcolumn.h</label>
+            </node>
+            <node id="948">
+                <label>gtkmm/treemodel.h</label>
+            </node>
+            <node id="945">
+                <label>vector</label>
+            </node>
+            <node id="949">
+                <label>iostream</label>
+            </node>
+            <node id="943">
+                <label>code/model/Drug.hpp</label>
+                <link refid="dd/df9/_drug_8hpp"/>
+                <childnode refid="944" relation="include">
+                </childnode>
+                <childnode refid="945" relation="include">
+                </childnode>
+                <childnode refid="946" relation="include">
+                </childnode>
+                <childnode refid="947" relation="include">
+                </childnode>
+                <childnode refid="948" relation="include">
+                </childnode>
+                <childnode refid="949" relation="include">
+                </childnode>
+                <childnode refid="950" relation="include">
+                </childnode>
+            </node>
+        </incdepgraph>
+        <invincdepgraph>
+            <node id="962">
+                <label>code/gui/PatientWindow.hpp</label>
+                <link refid="dd/de0/_patient_window_8hpp"/>
+                <childnode refid="961" relation="include">
+                </childnode>
+                <childnode refid="958" relation="include">
+                </childnode>
+            </node>
+            <node id="960">
+                <label>code/gui/DrugWindow.cpp</label>
+                <link refid="d6/d9e/_drug_window_8cpp"/>
+            </node>
+            <node id="963">
+                <label>code/gui/view/CustomWidgets.cpp</label>
+                <link refid="d1/dea/_custom_widgets_8cpp"/>
+            </node>
+            <node id="969">
+                <label>code/model/Drug.cpp</label>
+                <link refid="d1/d9e/_drug_8cpp"/>
+            </node>
+            <node id="952">
+                <label>code/model/Prescription.hpp</label>
+                <link refid="de/d01/_prescription_8hpp"/>
+                <childnode refid="953" relation="include">
+                </childnode>
+                <childnode refid="955" relation="include">
+                </childnode>
+                <childnode refid="964" relation="include">
+                </childnode>
+                <childnode refid="965" relation="include">
+                </childnode>
+                <childnode refid="968" relation="include">
+                </childnode>
+            </node>
+            <node id="964">
+                <label>code/model/Doctor.hpp</label>
+                <link refid="dd/dc5/_doctor_8hpp"/>
+                <childnode refid="960" relation="include">
+                </childnode>
+                <childnode refid="958" relation="include">
+                </childnode>
+                <childnode refid="965" relation="include">
+                </childnode>
+                <childnode refid="966" relation="include">
+                </childnode>
+            </node>
+            <node id="959">
+                <label>code/gui/DrugWindow.hpp</label>
+                <link refid="dd/d02/_drug_window_8hpp"/>
+                <childnode refid="960" relation="include">
+                </childnode>
+                <childnode refid="961" relation="include">
+                </childnode>
+            </node>
+            <node id="955">
+                <label>code/gui/view/CustomWidgets.hpp</label>
+                <link refid="d5/d46/_custom_widgets_8hpp"/>
+                <childnode refid="956" relation="include">
+                </childnode>
+                <childnode refid="959" relation="include">
+                </childnode>
+                <childnode refid="962" relation="include">
+                </childnode>
+                <childnode refid="963" relation="include">
+                </childnode>
+            </node>
+            <node id="965">
+                <label>code/gui/PrescriptionWindow.cpp</label>
+                <link refid="d1/d16/_prescription_window_8cpp"/>
+            </node>
+            <node id="956">
+                <label>code/gui/AddPrescriptionDialog.hpp</label>
+                <link refid="d0/d1e/_add_prescription_dialog_8hpp"/>
+                <childnode refid="957" relation="include">
+                </childnode>
+                <childnode refid="958" relation="include">
+                </childnode>
+            </node>
+            <node id="954">
+                <label>code/gui/AddPatientDialog.cpp</label>
+                <link refid="db/db5/_add_patient_dialog_8cpp"/>
+            </node>
+            <node id="957">
+                <label>code/gui/AddPrescriptionDialog.cpp</label>
+                <link refid="df/de8/_add_prescription_dialog_8cpp"/>
+            </node>
+            <node id="953">
+                <label>code/model/Patient.hpp</label>
+                <link refid="d0/da9/_patient_8hpp"/>
+                <childnode refid="954" relation="include">
+                </childnode>
+                <childnode refid="955" relation="include">
+                </childnode>
+                <childnode refid="957" relation="include">
+                </childnode>
+                <childnode refid="964" relation="include">
+                </childnode>
+                <childnode refid="967" relation="include">
+                </childnode>
+            </node>
+            <node id="958">
+                <label>code/gui/PatientWindow.cpp</label>
+                <link refid="d8/d35/_patient_window_8cpp"/>
+            </node>
+            <node id="951">
+                <label>code/model/Drug.hpp</label>
+                <link refid="dd/df9/_drug_8hpp"/>
+                <childnode refid="952" relation="include">
+                </childnode>
+                <childnode refid="964" relation="include">
+                </childnode>
+                <childnode refid="969" relation="include">
+                </childnode>
+            </node>
+            <node id="961">
+                <label>code/gui/MainWindow.cpp</label>
+                <link refid="d5/da5/_main_window_8cpp"/>
+            </node>
+            <node id="968">
+                <label>code/model/Prescription.cpp</label>
+                <link refid="d5/db1/_prescription_8cpp"/>
+            </node>
+            <node id="966">
+                <label>code/model/Doctor.cpp</label>
+                <link refid="d3/da6/_doctor_8cpp"/>
+            </node>
+            <node id="967">
+                <label>code/model/Patient.cpp</label>
+                <link refid="d0/d77/_patient_8cpp"/>
+            </node>
+        </invincdepgraph>
+        <innerclass refid="d2/d52/structmm_1_1model_1_1_drug_tree_model" prot="public">mm::model::DrugTreeModel
+        </innerclass>
+        <innerclass refid="db/d9b/classmm_1_1model_1_1_drug" prot="public">mm::model::Drug</innerclass>
+        <innerclass refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model" prot="public">mm::model::Drug::TreeModel
+        </innerclass>
+        <innernamespace refid="d0/d04/namespacemm">mm</innernamespace>
+        <innernamespace refid="dd/d7f/namespacemm_1_1model">mm::model</innernamespace>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1"></codeline>
+            <codeline lineno="7">
+                <highlight class="preprocessor">#ifndef<sp/>_MEDICINE_H
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#define<sp/>_MEDICINE_H
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;string&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;vector&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;map&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;gtkmm/treemodelcolumn.h&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;gtkmm/treemodel.h&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;iostream&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../interfaces/ISerializable.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">using<sp/>namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal"><ref refid="d8/dcc/namespacestd" kindref="compound">std</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm" kindref="compound">mm</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal">model<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="21" refid="d2/d52/structmm_1_1model_1_1_drug_tree_model" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">struct
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d2/d52/structmm_1_1model_1_1_drug_tree_model" kindref="compound">DrugTreeModel</ref>
+                    <sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal"><sp/>Gtk::TreeModel::ColumnRecord<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="23"
+                      refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aae1c93a96cd321861445996965814405"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aae1c93a96cd321861445996965814405"
+                         kindref="member">name</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="24"
+                      refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aa93ee13951feb310e5b31775ebf74609"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aa93ee13951feb310e5b31775ebf74609"
+                         kindref="member">pharmaceutical_form</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="25"
+                      refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a0462c8a43912e7d9b24d302899c73ddd"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a0462c8a43912e7d9b24d302899c73ddd"
+                         kindref="member">ATC_classification</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="26"
+                      refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a6c23e14f0c72622e29de9a8d2534dbdd"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a6c23e14f0c72622e29de9a8d2534dbdd"
+                         kindref="member">contraindications</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="27"
+                      refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aa4e0565da99c9e2e41dc8ed416c66903"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aa4e0565da99c9e2e41dc8ed416c66903"
+                         kindref="member">active_principles</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="28"
+                      refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a19f5c8676ecd88d4bb8b6f5d161d8a6b"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a19f5c8676ecd88d4bb8b6f5d161d8a6b"
+                         kindref="member">price</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="30"
+                      refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a4fe945eeb529bbd8d3f19aa7797764d9"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a4fe945eeb529bbd8d3f19aa7797764d9"
+                         kindref="member">DrugTreeModel</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(name);
+                </highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(pharmaceutical_form);
+                </highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(ATC_classification);
+                </highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(contraindications);
+                </highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(active_principles);
+                </highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(price);
+                </highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="40" refid="db/d9b/classmm_1_1model_1_1_drug" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">class
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="db/d9b/classmm_1_1model_1_1_drug" kindref="compound">Drug</ref>
+                    <sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="dc/df3/classmm_1_1_i_serializable" kindref="compound">ISerializable</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="42" refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">struct
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model" kindref="compound">TreeModel</ref>
+                    <sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal"><sp/>Gtk::TreeModel::ColumnRecord<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="43">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model" kindref="compound">TreeModel</ref>()
+                    <sp/>noexcept;
+                </highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="45"
+                      refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a21ecd0c62d35f3a4f2e16253d5faa09c"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a21ecd0c62d35f3a4f2e16253d5faa09c"
+                         kindref="member">name</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="46"
+                      refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a29443772824bbfc47d5c61e5e5c46050"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a29443772824bbfc47d5c61e5e5c46050"
+                         kindref="member">pharmaceutical_form</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="47"
+                      refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1abdc7bfea0985a9082361575803b78d0e"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1abdc7bfea0985a9082361575803b78d0e"
+                         kindref="member">ATC_classification</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="48"
+                      refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a975dd1b785590092258796e842cd5bf5"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a975dd1b785590092258796e842cd5bf5"
+                         kindref="member">contraindications</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="49"
+                      refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a0ad53d6e45f9001d07e350ab7866f1da"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a0ad53d6e45f9001d07e350ab7866f1da"
+                         kindref="member">active_principles</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="50"
+                      refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a89b06b1ccb81a349452bdb9273867269"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Gtk::TreeModelColumn&lt;Glib::ustring&gt;<sp/>
+                    <ref refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a89b06b1ccb81a349452bdb9273867269"
+                         kindref="member">price</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="51">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="52">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="53">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="54" refid="db/d9b/classmm_1_1model_1_1_drug_1a9169612d0fc3b3b25063a1686be30af9"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model" kindref="compound">TreeModel</ref>
+                    <sp/>
+                    <ref refid="db/d9b/classmm_1_1model_1_1_drug_1a9169612d0fc3b3b25063a1686be30af9" kindref="member">
+                        drugTreeModel</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="55">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="56">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="57">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="db/d9b/classmm_1_1model_1_1_drug" kindref="compound">Drug</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;name,
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">float</highlight>
+                <highlight class="normal"><sp/>price);
+                </highlight>
+            </codeline>
+            <codeline lineno="58">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="59">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="db/d9b/classmm_1_1model_1_1_drug" kindref="compound">Drug</ref>()<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">default</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="60">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="61">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>map&lt;string,<sp/>Serialized&gt;<sp/>serialize()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const<sp/>override
+                </highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="62">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="63">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>unserialize(map&lt;string,<sp/>Serialized&gt;<sp/>map)
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">override</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="64">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="65">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>get_table_name()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const<sp/>override
+                </highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="66">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="67">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>vector&lt;string&gt;<sp/>get_primary_key()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const<sp/>override
+                </highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="68">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="69">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;get_name()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="70">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="71">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">float</highlight>
+                <highlight class="normal"><sp/>get_price()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="72">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="73">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;get_pharmaceutical_form()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="74">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="75">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>vector&lt;string&gt;<sp/>&amp;get_contraindications()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="76">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="77">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>get_contraindications_as_string()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="78">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="79">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>get_ATC_classification()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="80">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="81">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>vector&lt;pair&lt;string,<sp/>string&gt;&gt;<sp/>&amp;get_active_principles()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="82">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="83">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>get_active_principles_as_string()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="84">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="85">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>get_price_as_string()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="86">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="87">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal"><sp/>operator==(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d9b/classmm_1_1model_1_1_drug" kindref="compound">Drug</ref>
+                    <sp/>&amp;rhs)
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="88">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="89">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal"><sp/>operator!=(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="db/d9b/classmm_1_1model_1_1_drug" kindref="compound">Drug</ref>
+                    <sp/>&amp;rhs)
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="90">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="91">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">private</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="92">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>name;
+                </highlight>
+            </codeline>
+            <codeline lineno="93">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">float</highlight>
+                <highlight class="normal"><sp/>price;
+                </highlight>
+            </codeline>
+            <codeline lineno="94">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>pharmaceutical_form;
+                </highlight>
+            </codeline>
+            <codeline lineno="95">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>vector&lt;string&gt;<sp/>contraindications;
+                </highlight>
+            </codeline>
+            <codeline lineno="96">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>ATC_classification;
+                </highlight>
+            </codeline>
+            <codeline lineno="97">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>vector&lt;pair&lt;string,<sp/>string&gt;&gt;<sp/>active_principles;
+                </highlight>
+            </codeline>
+            <codeline lineno="98">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="99">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="100">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="101">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="102">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#endif<sp/>//_MEDICINE_H
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/model/Drug.hpp"/>
+    </compounddef>
+</doxygen>

@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d7/d49/_widgets_8cpp" kind="file" language="C++">
+        <compoundname>Widgets.cpp</compoundname>
+        <includes local="no">iostream</includes>
+        <includes local="no">spdlog/spdlog.h</includes>
+        <includes refid="dc/d55/_widgets_8hpp" local="yes">Widgets.hpp</includes>
+        <includes refid="dc/db8/_ref_builder_8hpp" local="yes">RefBuilder.hpp</includes>
+        <incdepgraph>
+            <node id="655">
+                <label>gtkmm/entry.h</label>
+            </node>
+            <node id="657">
+                <label>fmt/format.h</label>
+            </node>
+            <node id="653">
+                <label>spdlog/spdlog.h</label>
+            </node>
+            <node id="651">
+                <label>code/gui/Widgets.cpp</label>
+                <link refid="d7/d49/_widgets_8cpp"/>
+                <childnode refid="652" relation="include">
+                </childnode>
+                <childnode refid="653" relation="include">
+                </childnode>
+                <childnode refid="654" relation="include">
+                </childnode>
+                <childnode refid="659" relation="include">
+                </childnode>
+            </node>
+            <node id="660">
+                <label>gtkmm-3.0/gtkmm.h</label>
+            </node>
+            <node id="659">
+                <label>RefBuilder.hpp</label>
+                <link refid="dc/db8/_ref_builder_8hpp"/>
+                <childnode refid="660" relation="include">
+                </childnode>
+            </node>
+            <node id="658">
+                <label>../utils/Date.hpp</label>
+                <link refid="d8/d63/_date_8hpp"/>
+                <childnode refid="652" relation="include">
+                </childnode>
+            </node>
+            <node id="652">
+                <label>iostream</label>
+            </node>
+            <node id="654">
+                <label>Widgets.hpp</label>
+                <link refid="dc/d55/_widgets_8hpp"/>
+                <childnode refid="655" relation="include">
+                </childnode>
+                <childnode refid="656" relation="include">
+                </childnode>
+                <childnode refid="657" relation="include">
+                </childnode>
+                <childnode refid="658" relation="include">
+                </childnode>
+            </node>
+            <node id="656">
+                <label>gtkmm/comboboxtext.h</label>
+            </node>
+        </incdepgraph>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Mirko<sp/>Morati<sp/>on<sp/>02/12/17.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;iostream&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;spdlog/spdlog.h&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/d55/_widgets_8hpp" kindref="compound">
+                    Widgets.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/db8/_ref_builder_8hpp"
+                                                                        kindref="compound">RefBuilder.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller_1ad4d3a1e3dc08262fe244e8c9bc0a455c"
+                         kindref="member">mm::EntryController::entryTextChanged</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>Glib::ustring<sp/>&amp;,
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>*)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller_1ab41f377d1a98b2bf967c81dc1dc7f391"
+                         kindref="member">entry
+                    </ref>
+                    <sp/>==
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">nullptr</highlight>
+                <highlight class="normal">)
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Glib::ustring<sp/>n_text<sp/>=
+                    <sp/>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller_1ab41f377d1a98b2bf967c81dc1dc7f391"
+                         kindref="member">entry</ref>-&gt;get_text().uppercase();
+                </highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller_1ab41f377d1a98b2bf967c81dc1dc7f391"
+                         kindref="member">entry</ref>-&gt;set_text(n_text);
+                </highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal"><ref
+                        refid="d0/d9e/structmm_1_1_entry_controller_1a8669618dd4526580cdb3cd88f9d16e52"
+                        kindref="member">mm::EntryController::EntryController</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;entryId)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="dd/d47/classmm_1_1_ref_builder_1a1c46de2b1ff68aebfc85692a99827753" kindref="member">
+                        RefBuilder::get_instance</ref>().<ref
+                        refid="dd/d47/classmm_1_1_ref_builder_1a67812973516cbeddf488360424685153" kindref="member">
+                    get_widget</ref>(entryId,<sp/>entry);
+                </highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;entry-&gt;signal_insert_text().connect(sigc::mem_fun(
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">,<sp/>&amp;<ref
+                        refid="d0/d9e/structmm_1_1_entry_controller_1ad4d3a1e3dc08262fe244e8c9bc0a455c"
+                        kindref="member">mm::EntryController::entryTextChanged</ref>));
+                </highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal"><ref
+                        refid="d0/d52/structmm_1_1_date_controller_1a3244d913ab9d7b96e9617f8711e34bd8" kindref="member">
+                    mm::DateController::DateController</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;dayId,
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;monthId,
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;yearId)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>refBuilder<sp/>=
+                    <sp/>
+                    <ref refid="dd/d47/classmm_1_1_ref_builder_1a1c46de2b1ff68aebfc85692a99827753" kindref="member">
+                        RefBuilder::get_instance</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>refBuilder.get_widget(dayId,<sp/>day);
+                </highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>refBuilder.get_widget(monthId,<sp/>month);
+                </highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>refBuilder.get_widget(yearId,<sp/>year);
+                </highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>Devo<sp/>fare<sp/>l&apos;init<sp/>solo<sp/>la<sp/>prima<sp/>volta,
+                    <sp/>altrimenti<sp/>vado<sp/>a<sp/>raddoppiare/ecc<sp/>gli<sp/>elementi
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(day-&gt;get_active_text().empty())<sp/>init();
+                </highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>reset();
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>NB.<sp/>quando<sp/>si<sp/>effettua<sp/>un<sp/>set<sp/>da<sp/>sw<sp/>
+                    viene<sp/>lanciato<sp/>un<sp/>signal<sp/>changed...<sp/>se<sp/>si<sp/>sposta
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>il<sp/>reset<sp/>dopo<sp/>aver<sp/>definito<sp/>i<sp/>gestori<sp/>dei
+                    <sp/>segnali<sp/>crasha<sp/>tutto.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>day-&gt;signal_changed().connect(sigc::mem_fun(
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">,<sp/>&amp;<ref
+                        refid="d0/d52/structmm_1_1_date_controller_1a7474c420c78178ee6ee6a2e66c16803f" kindref="member">
+                    mm::DateController::onDateChanged</ref>));
+                </highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>month-&gt;signal_changed().connect(sigc::mem_fun(
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">,<sp/>&amp;<ref
+                        refid="d0/d52/structmm_1_1_date_controller_1a7474c420c78178ee6ee6a2e66c16803f" kindref="member">
+                    mm::DateController::onDateChanged</ref>));
+                </highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>year-&gt;signal_changed().connect(sigc::mem_fun(
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">,<sp/>&amp;<ref
+                        refid="d0/d52/structmm_1_1_date_controller_1a7474c420c78178ee6ee6a2e66c16803f" kindref="member">
+                    mm::DateController::onDateChanged</ref>));
+                </highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1a9e09c31aa55c3389c6919c716bb8b0dc"
+                         kindref="member">mm::DateController::reset</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>day-&gt;set_active_text(Glib::ustring::format(<ref
+                        refid="df/d88/structmm_1_1util_1_1_date_1ad5ed2bc80bbaa949aa13707a73064345" kindref="member">
+                    util::Date::get_current_day</ref>()));
+                </highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>month-&gt;set_active_text(Glib::ustring(<ref
+                        refid="df/d88/structmm_1_1util_1_1_date_1ab3da347f3603aa3a7fe057a5a0d012d2" kindref="member">
+                    util::Date::get_current_month</ref>()<sp/>&lt;<sp/>10<sp/>?
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;0&quot;</highlight>
+                <highlight class="normal"><sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;&quot;</highlight>
+                <highlight class="normal">).append(</highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Glib::ustring::format(<ref
+                        refid="df/d88/structmm_1_1util_1_1_date_1ab3da347f3603aa3a7fe057a5a0d012d2" kindref="member">
+                    util::Date::get_current_month</ref>())));
+                </highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>year-&gt;set_active_text(Glib::ustring::format(<ref
+                        refid="df/d88/structmm_1_1util_1_1_date_1afec17843da4296a2341290107901eaa5" kindref="member">
+                    util::Date::get_current_year</ref>()));
+                </highlight>
+            </codeline>
+            <codeline lineno="42">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="43">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1a7474c420c78178ee6ee6a2e66c16803f"
+                         kindref="member">mm::DateController::onDateChanged</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="45">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>date<sp/>=<sp/>getDate();
+                </highlight>
+            </codeline>
+            <codeline lineno="46">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="47">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(!date.is_valid())<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="48">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>((date.day<sp/>&gt;=<sp/>29<sp/>&amp;&amp;<sp/>date.day<sp/>&lt;=<sp/>31)
+                    <sp/>&amp;&amp;<sp/>date.month<sp/>==<sp/>2)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="49">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>day-&gt;set_active_text(Glib::ustring(
+                </highlight>
+                <highlight class="stringliteral">&quot;28&quot;</highlight>
+                <highlight class="normal">));</highlight>
+            </codeline>
+            <codeline lineno="50">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>month-&gt;set_active_text(Glib::ustring(
+                </highlight>
+                <highlight class="stringliteral">&quot;02&quot;</highlight>
+                <highlight class="normal">));</highlight>
+            </codeline>
+            <codeline lineno="51">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>year-&gt;set_active_text(Glib::ustring::format(date.year));
+                </highlight>
+            </codeline>
+            <codeline lineno="52">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">else</highlight>
+                <highlight class="normal"><sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="53">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>day-&gt;set_active_text(Glib::ustring(
+                </highlight>
+                <highlight class="stringliteral">&quot;30&quot;</highlight>
+                <highlight class="normal">));</highlight>
+            </codeline>
+            <codeline lineno="54">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>month-&gt;set_active_text(Glib::ustring::format((date.month<sp/>&lt;<sp/>10<sp/>?
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;0&quot;</highlight>
+                <highlight class="normal"><sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;&quot;</highlight>
+                <highlight class="normal">),<sp/>date.month));
+                </highlight>
+            </codeline>
+            <codeline lineno="55">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>year-&gt;set_active_text(Glib::ustring::format(date.year));
+                </highlight>
+            </codeline>
+            <codeline lineno="56">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="57">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="58">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="59">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="60">
+                <highlight class="normal">
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">mm::util::Date</ref>
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1aa3c0122bfcc36e8d8b43c8ca7ca76197"
+                         kindref="member">mm::DateController::getDate</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="61">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>tmpDay,<sp/>tmpMonth,<sp/>tmpYear;
+                </highlight>
+            </codeline>
+            <codeline lineno="62">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="63">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">try</highlight>
+                <highlight class="normal"><sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="64">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>tmpDay<sp/>=<sp/>std::stoi(day-&gt;get_active_text().c_str());
+                </highlight>
+            </codeline>
+            <codeline lineno="65">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>tmpMonth<sp/>=<sp/>std::stoi(month-&gt;get_active_text().c_str());
+                </highlight>
+            </codeline>
+            <codeline lineno="66">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>tmpYear<sp/>=<sp/>std::stoi(year-&gt;get_active_text().c_str());
+                </highlight>
+            </codeline>
+            <codeline lineno="67">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">catch</highlight>
+                <highlight class="normal"><sp/>(...)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="68">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal"><sp/>std::logic_error(
+                </highlight>
+                <highlight class="stringliteral">&quot;wrong<sp/>data<sp/>from<sp/>a<sp/>combo<sp/>box?!<sp/>that&apos;s
+                    <sp/>no<sp/>good!&quot;
+                </highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="69">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="70">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="71">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>{tmpDay,<sp/>tmpMonth,<sp/>tmpYear};
+                </highlight>
+            </codeline>
+            <codeline lineno="72">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="73">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="74">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d0/d52/structmm_1_1_date_controller_1aa7f999d2d5afec5c6724f92cf2856171"
+                         kindref="member">mm::DateController::init</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="75">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>31;<sp/>i++)
+                </highlight>
+            </codeline>
+            <codeline lineno="76">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>day-&gt;append(Glib::ustring::format(i));
+                </highlight>
+            </codeline>
+            <codeline lineno="77">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>12;<sp/>i++)
+                </highlight>
+            </codeline>
+            <codeline lineno="78">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>month-&gt;append(Glib::ustring((i<sp/>&lt;<sp/>10<sp/>?
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;0&quot;</highlight>
+                <highlight class="normal"><sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;&quot;</highlight>
+                <highlight class="normal">)).append(Glib::ustring::format(i)));</highlight>
+            </codeline>
+            <codeline lineno="79">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>i<sp/>=
+                    <sp/>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date_1afec17843da4296a2341290107901eaa5" kindref="member">
+                        util::Date::get_current_year</ref>();<sp/>i<sp/>&gt;=<sp/>1920;<sp/>i--)
+                </highlight>
+            </codeline>
+            <codeline lineno="80">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>year-&gt;append(Glib::ustring::format(i));
+                </highlight>
+            </codeline>
+            <codeline lineno="81">
+                <highlight class="normal">}</highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/gui/Widgets.cpp"/>
+    </compounddef>
+</doxygen>

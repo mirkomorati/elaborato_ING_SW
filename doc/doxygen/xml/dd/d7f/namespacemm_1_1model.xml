@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="dd/d7f/namespacemm_1_1model" kind="namespace" language="C++">
+        <compoundname>mm::model</compoundname>
+        <innerclass refid="d6/d2e/classmm_1_1model_1_1_doctor" prot="public">mm::model::Doctor</innerclass>
+        <innerclass refid="db/d9b/classmm_1_1model_1_1_drug" prot="public">mm::model::Drug</innerclass>
+        <innerclass refid="d2/d52/structmm_1_1model_1_1_drug_tree_model" prot="public">mm::model::DrugTreeModel
+        </innerclass>
+        <innerclass refid="d6/d4a/classmm_1_1model_1_1_patient" prot="public">mm::model::Patient</innerclass>
+        <innerclass refid="db/d61/classmm_1_1model_1_1_prescription" prot="public">mm::model::Prescription</innerclass>
+        <innernamespace refid="d6/d54/namespacemm_1_1model_1_1authentication">mm::model::authentication</innernamespace>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="code/model/Authentication.hpp" line="14" column="1"/>
+    </compounddef>
+</doxygen>

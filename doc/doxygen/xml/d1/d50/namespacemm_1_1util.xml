@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d1/d50/namespacemm_1_1util" kind="namespace" language="C++">
+        <compoundname>mm::util</compoundname>
+        <innerclass refid="df/d88/structmm_1_1util_1_1_date" prot="public">mm::util::Date</innerclass>
+        <innerclass refid="d5/da8/structmm_1_1util_1_1_date_by" prot="public">mm::util::DateBy</innerclass>
+        <innernamespace refid="da/de0/namespacemm_1_1util_1_1str">mm::util::str</innernamespace>
+        <sectiondef kind="func">
+            <memberdef kind="function" id="d1/d50/namespacemm_1_1util_1a86bb3df244e56f6252ddc9d9be2c1b8a" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>std::ostream &amp;</type>
+                <definition>std::ostream &amp; mm::util::operator&lt;&lt;</definition>
+                <argsstring>(std::ostream &amp;os, const DateBy &amp;by)</argsstring>
+                <name>operator&lt;&lt;</name>
+                <param>
+                    <type>std::ostream &amp;</type>
+                    <declname>os</declname>
+                </param>
+                <param>
+                    <type>const <ref refid="d5/da8/structmm_1_1util_1_1_date_by" kindref="compound">DateBy</ref> &amp;
+                    </type>
+                    <declname>by</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/utils/DateBy.hpp" line="23" column="1" bodyfile="code/utils/DateBy.cpp"
+                          bodystart="10" bodyend="13"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="code/utils/Date.hpp" line="13" column="1"/>
+    </compounddef>
+</doxygen>

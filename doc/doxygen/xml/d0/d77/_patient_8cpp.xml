@@ -1,0 +1,1536 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d0/d77/_patient_8cpp" kind="file" language="C++">
+        <compoundname>Patient.cpp</compoundname>
+        <includes local="no">sstream</includes>
+        <includes local="no">regex</includes>
+        <includes local="no">spdlog/spdlog.h</includes>
+        <includes refid="d0/da9/_patient_8hpp" local="yes">Patient.hpp</includes>
+        <includes refid="d7/d0f/_d_b_master_8hpp" local="yes">../DBMaster.hpp</includes>
+        <incdepgraph>
+            <node id="980">
+                <label>Prescription.hpp</label>
+                <link refid="de/d01/_prescription_8hpp"/>
+                <childnode refid="975" relation="include">
+                </childnode>
+                <childnode refid="976" relation="include">
+                </childnode>
+                <childnode refid="979" relation="include">
+                </childnode>
+                <childnode refid="977" relation="include">
+                </childnode>
+                <childnode refid="978" relation="include">
+                </childnode>
+                <childnode refid="981" relation="include">
+                </childnode>
+            </node>
+            <node id="978">
+                <label>../interfaces/ISerializable.hpp</label>
+                <link refid="d3/d1b/_i_serializable_8hpp"/>
+                <childnode refid="976" relation="include">
+                </childnode>
+                <childnode refid="979" relation="include">
+                </childnode>
+                <childnode refid="975" relation="include">
+                </childnode>
+            </node>
+            <node id="986">
+                <label>stdexcept</label>
+            </node>
+            <node id="976">
+                <label>string</label>
+            </node>
+            <node id="979">
+                <label>map</label>
+            </node>
+            <node id="972">
+                <label>regex</label>
+            </node>
+            <node id="985">
+                <label>sqlite3.h</label>
+            </node>
+            <node id="977">
+                <label>gtkmm/treemodelcolumn.h</label>
+            </node>
+            <node id="982">
+                <label>gtkmm/treemodel.h</label>
+            </node>
+            <node id="973">
+                <label>spdlog/spdlog.h</label>
+            </node>
+            <node id="975">
+                <label>vector</label>
+            </node>
+            <node id="971">
+                <label>sstream</label>
+            </node>
+            <node id="974">
+                <label>Patient.hpp</label>
+                <link refid="d0/da9/_patient_8hpp"/>
+                <childnode refid="975" relation="include">
+                </childnode>
+                <childnode refid="976" relation="include">
+                </childnode>
+                <childnode refid="977" relation="include">
+                </childnode>
+                <childnode refid="978" relation="include">
+                </childnode>
+                <childnode refid="980" relation="include">
+                </childnode>
+            </node>
+            <node id="983">
+                <label>iostream</label>
+            </node>
+            <node id="984">
+                <label>../DBMaster.hpp</label>
+                <link refid="d7/d0f/_d_b_master_8hpp"/>
+                <childnode refid="985" relation="include">
+                </childnode>
+                <childnode refid="976" relation="include">
+                </childnode>
+                <childnode refid="986" relation="include">
+                </childnode>
+                <childnode refid="975" relation="include">
+                </childnode>
+                <childnode refid="978" relation="include">
+                </childnode>
+            </node>
+            <node id="981">
+                <label>Drug.hpp</label>
+                <link refid="dd/df9/_drug_8hpp"/>
+                <childnode refid="976" relation="include">
+                </childnode>
+                <childnode refid="975" relation="include">
+                </childnode>
+                <childnode refid="979" relation="include">
+                </childnode>
+                <childnode refid="977" relation="include">
+                </childnode>
+                <childnode refid="982" relation="include">
+                </childnode>
+                <childnode refid="983" relation="include">
+                </childnode>
+                <childnode refid="978" relation="include">
+                </childnode>
+            </node>
+            <node id="970">
+                <label>code/model/Patient.cpp</label>
+                <link refid="d0/d77/_patient_8cpp"/>
+                <childnode refid="971" relation="include">
+                </childnode>
+                <childnode refid="972" relation="include">
+                </childnode>
+                <childnode refid="973" relation="include">
+                </childnode>
+                <childnode refid="974" relation="include">
+                </childnode>
+                <childnode refid="984" relation="include">
+                </childnode>
+            </node>
+        </incdepgraph>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1"></codeline>
+            <codeline lineno="7">
+                <highlight class="preprocessor">#include<sp/>&lt;sstream&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;regex&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;spdlog/spdlog.h&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/da9/_patient_8hpp" kindref="compound">
+                    Patient.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;../DBMaster.hpp&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal">
+                    <ref refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model" kindref="compound">
+                        mm::model::Patient::TreeModel
+                    </ref>
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1af2fe625b7bf2e3308df51daaff966281"
+                         kindref="member">mm::model::Patient::patientTreeModel</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal">map&lt;string,<sp/>mm::Serialized&gt;<sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1ae3ac219cd109e8c53daaf9b2758c3a0e"
+                         kindref="member">mm::model::Patient::serialize</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>map&lt;string,<sp/>Serialized&gt;<sp/>serialized_map;
+                </highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;first_name&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>first_name;
+                </highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;last_name&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>last_name;
+                </highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;fiscal_code&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>fiscal_code;
+                </highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;address&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>address;
+                </highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;birth_date&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>birth_date;
+                </highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;birth_place&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>birth_place;
+                </highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;doctor_id&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>doctor_id;
+                </highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>stringstream<sp/>risk_list;
+                </highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keywordtype">size_t</highlight>
+                <highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>risk_factors.size();<sp/>i++)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>risk_list<sp/>&lt;&lt;<sp/>risk_factors[i];
+                </highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(i<sp/>&lt;<sp/>risk_factors.size()<sp/>-<sp/>1)<sp/>risk_list<sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;;&quot;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>serialized_map[
+                </highlight>
+                <highlight class="stringliteral">&quot;risk_factors&quot;</highlight>
+                <highlight class="normal">]<sp/>=<sp/>risk_list.str();
+                </highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>serialized_map;
+                </highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a7e1d8cbfc2cdd653281dce87497c6065"
+                         kindref="member">mm::model::Patient::unserialize</ref>(map&lt;string,<sp/>
+                    mm::Serialized&gt;<sp/>map)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>first_name<sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;first_name&quot;</highlight>
+                <highlight class="normal">].get_str();</highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>last_name<sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;last_name&quot;</highlight>
+                <highlight class="normal">].get_str();</highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>fiscal_code<sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;fiscal_code&quot;</highlight>
+                <highlight class="normal">].get_str();</highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>address<sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;address&quot;</highlight>
+                <highlight class="normal">].get_str();</highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>birth_date<sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;birth_date&quot;</highlight>
+                <highlight class="normal">].get_str();</highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>birth_place<sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;birth_place&quot;</highlight>
+                <highlight class="normal">].get_str();</highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>doctor_id<sp/>=<sp/>map[
+                </highlight>
+                <highlight class="stringliteral">&quot;doctor_id&quot;</highlight>
+                <highlight class="normal">].get_int();</highlight>
+            </codeline>
+            <codeline lineno="42">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>istringstream<sp/>risk_list(map[
+                </highlight>
+                <highlight class="stringliteral">&quot;risk_factors&quot;</highlight>
+                <highlight class="normal">].get_str());</highlight>
+            </codeline>
+            <codeline lineno="43">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>tmp;
+                </highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">while</highlight>
+                <highlight class="normal"><sp/>(getline(risk_list,<sp/>tmp,
+                    <sp/>
+                </highlight>
+                <highlight class="charliteral">&apos;;&apos;</highlight>
+                <highlight class="normal">))<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="45">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>risk_factors.push_back(tmp);
+                </highlight>
+            </codeline>
+            <codeline lineno="46">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="47">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="48">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="49">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1abe79da3e4fabd80e039ae4880dfa76cb"
+                         kindref="member">mm::model::Patient::get_table_name</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="50">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;patients&quot;</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="51">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="52">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="53">
+                <highlight class="normal">vector&lt;string&gt;<sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1ae85640f3cb3d34bb57e1129ef46a0cbf"
+                         kindref="member">mm::model::Patient::get_primary_key</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="54">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>{
+                </highlight>
+                <highlight class="stringliteral">&quot;fiscal_code&quot;</highlight>
+                <highlight class="normal">};</highlight>
+            </codeline>
+            <codeline lineno="55">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="56">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="57">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;<ref
+                        refid="d6/d4a/classmm_1_1model_1_1_patient_1a3661b2666d368492511ed3bad79c0389" kindref="member">
+                    mm::model::Patient::get_first_name</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="58">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>first_name;
+                </highlight>
+            </codeline>
+            <codeline lineno="59">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="60">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="61">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;<ref
+                        refid="d6/d4a/classmm_1_1model_1_1_patient_1a88c0051957b5a6f172cdc35432505923" kindref="member">
+                    mm::model::Patient::get_last_name</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="62">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>last_name;
+                </highlight>
+            </codeline>
+            <codeline lineno="63">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="64">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="65">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;<ref
+                        refid="d6/d4a/classmm_1_1model_1_1_patient_1ac54b024c619d6f31c72766a01bc5d0ee" kindref="member">
+                    mm::model::Patient::get_birth_date</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="66">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>birth_date;
+                </highlight>
+            </codeline>
+            <codeline lineno="67">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="68">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="69">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;<ref
+                        refid="d6/d4a/classmm_1_1model_1_1_patient_1a4e4770a79fef23b54026e013586e61fa" kindref="member">
+                    mm::model::Patient::get_birth_place</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="70">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>birth_place;
+                </highlight>
+            </codeline>
+            <codeline lineno="71">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="72">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="73">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;<ref
+                        refid="d6/d4a/classmm_1_1model_1_1_patient_1a0db04bf2c2ae5b9eb6417f4b6e74a84a" kindref="member">
+                    mm::model::Patient::get_address</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="74">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>address;
+                </highlight>
+            </codeline>
+            <codeline lineno="75">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="76">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="77">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a7ab70bc4aafc95f687c29d02ac398e06"
+                         kindref="member">mm::model::Patient::get_risk_factors</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="78">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>ostringstream<sp/>ss;
+                </highlight>
+            </codeline>
+            <codeline lineno="79">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>copy(risk_factors.begin(),<sp/>risk_factors.end(),
+                </highlight>
+            </codeline>
+            <codeline lineno="80">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>ostream_iterator&lt;string&gt;(ss,
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;,<sp/>&quot;
+                </highlight>
+                <highlight class="normal">));</highlight>
+            </codeline>
+            <codeline lineno="81">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>ret<sp/>=<sp/>ss.str();
+                </highlight>
+            </codeline>
+            <codeline lineno="82">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>ret;
+                </highlight>
+            </codeline>
+            <codeline lineno="83">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="84">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="85">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;<ref
+                        refid="d6/d4a/classmm_1_1model_1_1_patient_1a29590c6ce9d2b19dbdff3330ee5e4523" kindref="member">
+                    mm::model::Patient::get_fiscal_code</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="86">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>fiscal_code;
+                </highlight>
+            </codeline>
+            <codeline lineno="87">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="88">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="89">
+                <highlight class="normal">vector&lt;mm::model::Prescription&gt;<sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1ac13776eadc56f98bf353dd412f9c2f51"
+                         kindref="member">mm::model::Patient::get_prescriptions</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="90">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>vector&lt;Prescription&gt;<sp/>prescriptions;
+                </highlight>
+            </codeline>
+            <codeline lineno="91">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>rows<sp/>=
+                    <sp/>
+                    <ref refid="da/d0d/classmm_1_1_d_b_master_1a1f3b04e515b1999d3900353c0054f498" kindref="member">
+                        DBMaster::get_instance</ref>().<ref
+                            refid="da/d0d/classmm_1_1_d_b_master_1aef9d7063da9d7b4e0fb0a20a6d06368f" kindref="member">
+                        get_rows</ref>(
+                </highlight>
+                <highlight class="stringliteral">&quot;prescriptions&quot;</highlight>
+                <highlight class="normal">,
+                    <sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;patient_id&quot;</highlight>
+                <highlight class="normal">,</highlight>
+            </codeline>
+            <codeline lineno="92">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>fiscal_code);
+                </highlight>
+            </codeline>
+            <codeline lineno="93">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>&amp;row<sp/>:<sp/>rows)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="94">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>Prescription<sp/>tmp;
+                </highlight>
+            </codeline>
+            <codeline lineno="95">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>tmp.unserialize(row);
+                </highlight>
+            </codeline>
+            <codeline lineno="96">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>prescriptions.push_back(tmp);
+                </highlight>
+            </codeline>
+            <codeline lineno="97">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="98">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="99">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>prescriptions;
+                </highlight>
+            </codeline>
+            <codeline lineno="100">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="101">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="102">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="103">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a8b8dd8c6de5963a717cf192ca10c605e"
+                         kindref="member">mm::model::Patient::set_first_name</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;first_name)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="104">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;first_name<sp/>=<sp/>first_name;
+                </highlight>
+            </codeline>
+            <codeline lineno="105">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="106">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="107">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a4883fc926a6693a2a6fd2b50ab2ded0e"
+                         kindref="member">mm::model::Patient::set_last_name</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;last_name)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="108">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;last_name<sp/>=<sp/>last_name;
+                </highlight>
+            </codeline>
+            <codeline lineno="109">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="110">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="111">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a45485e586eb4a908ed4c7a51059fc131"
+                         kindref="member">mm::model::Patient::set_fiscal_code</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;fiscal_code)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="112">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;fiscal_code<sp/>=<sp/>fiscal_code;
+                </highlight>
+            </codeline>
+            <codeline lineno="113">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="114">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="115">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1ad73008977024e6ca48e5c687eb27b996"
+                         kindref="member">mm::model::Patient::set_birth_date</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;birth_date)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="116">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;birth_date<sp/>=<sp/>birth_date;
+                </highlight>
+            </codeline>
+            <codeline lineno="117">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="118">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="119">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a6dc732f738425cc729764fdf16d667f0"
+                         kindref="member">mm::model::Patient::set_birth_place</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;birth_place)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="120">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;birth_place<sp/>=<sp/>birth_place;
+                </highlight>
+            </codeline>
+            <codeline lineno="121">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="122">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="123">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a4e19f86233b55b4dec59f947f1dfe32a"
+                         kindref="member">mm::model::Patient::set_address</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">string</highlight>
+                <highlight class="normal"><sp/>&amp;address)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="124">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;address<sp/>=<sp/>address;
+                </highlight>
+            </codeline>
+            <codeline lineno="125">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="126">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="127">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a9dda6ce10296ab196cd5681b8e9a1091"
+                         kindref="member">mm::model::Patient::set_doctor_id</ref>(
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>doctor_id)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="128">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>this-&gt;doctor_id<sp/>=<sp/>doctor_id;
+                </highlight>
+            </codeline>
+            <codeline lineno="129">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="130">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="131">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a69367747ebc66b1b4e2fdf961811d83d"
+                         kindref="member">mm::model::Patient::operator==</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient" kindref="compound">mm::model::Patient</ref>
+                    <sp/>&amp;rhs)
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="132">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>fiscal_code<sp/>==<sp/>rhs.fiscal_code;
+                </highlight>
+            </codeline>
+            <codeline lineno="133">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="134">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="135">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a96fe68d415c82b084ca75e87aefe8314"
+                         kindref="member">mm::model::Patient::operator!=</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient" kindref="compound">mm::model::Patient</ref>
+                    <sp/>&amp;rhs)
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="136">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>!(rhs<sp/>==<sp/>*
+                </highlight>
+                <highlight class="keyword">this</highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="137">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="138">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="139">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d6/d4a/classmm_1_1model_1_1_patient_1a5f9da3f880ef1adc4bc5443ea407f48f"
+                         kindref="member">mm::model::Patient::is_valid</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="140">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>!first_name.empty()
+                </highlight>
+            </codeline>
+            <codeline lineno="141">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>&amp;&amp;<sp/>!last_name.empty()
+                </highlight>
+            </codeline>
+            <codeline lineno="142">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>&amp;&amp;<sp/>!fiscal_code.empty()
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>todo<sp/>use<sp/>fiscalCodeIsValid()<sp/>for<sp/>now<sp/>it<sp/>does
+                    <sp/>not<sp/>work.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="143">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>&amp;&amp;<sp/>!birth_date.empty()
+                </highlight>
+            </codeline>
+            <codeline lineno="144">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>&amp;&amp;<sp/>!birth_place.empty()
+                </highlight>
+            </codeline>
+            <codeline lineno="145">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>&amp;&amp;<sp/>!address.empty()
+                </highlight>
+            </codeline>
+            <codeline lineno="146">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>&amp;&amp;<sp/>doctor_id<sp/>!=<sp/>0;
+                </highlight>
+            </codeline>
+            <codeline lineno="147">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="148">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="149">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal"><sp/>mm::model::Patient::fiscalCodeIsValid()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="150">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>todo<sp/>regex<sp/>non<sp/>perfetta<sp/>ma<sp/>valida
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="151">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>std::regex<sp/>regex(
+                </highlight>
+                <highlight class="stringliteral">
+                    &quot;^[A-Z]{6}[A-Z0-9]{2}[A-Z][A-Z0-9]{2}[A-Z][A-Z0-9]{3}[A-Z]$&quot;
+                </highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="152">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>!fiscal_code.empty()<sp/>&amp;&amp;<sp/>std::regex_match(fiscal_code,
+                    <sp/>regex);
+                </highlight>
+            </codeline>
+            <codeline lineno="153">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="154">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="155">
+                <highlight class="normal"><ref
+                        refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a53ebc678daee18b03328be60d1c69bf4"
+                        kindref="member">mm::model::Patient::TreeModel::TreeModel</ref>()<sp/>noexcept<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="156">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(first_name);
+                </highlight>
+            </codeline>
+            <codeline lineno="157">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(last_name);
+                </highlight>
+            </codeline>
+            <codeline lineno="158">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(fiscal_code);
+                </highlight>
+            </codeline>
+            <codeline lineno="159">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(birth_date);
+                </highlight>
+            </codeline>
+            <codeline lineno="160">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(birth_place);
+                </highlight>
+            </codeline>
+            <codeline lineno="161">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(address);
+                </highlight>
+            </codeline>
+            <codeline lineno="162">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>add(risk_factors);
+                </highlight>
+            </codeline>
+            <codeline lineno="163">
+                <highlight class="normal">}</highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/model/Patient.cpp"/>
+    </compounddef>
+</doxygen>

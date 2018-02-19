@@ -1,0 +1,207 @@
+\hypertarget{structmm_1_1model_1_1authentication_1_1_login}{}\section{Riferimenti per la struct mm\+:\+:model\+:\+:authentication\+:\+:Login}
+\label{structmm_1_1model_1_1authentication_1_1_login}\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+
+
+classe che rappresenta la una sessione di login  
+
+
+
+
+{\ttfamily \#include $<$Authentication.\+hpp$>$}
+
+
+
+Diagramma delle classi per mm\+:\+:model\+:\+:authentication\+:\+:Login
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{dc/d2d/structmm_1_1model_1_1authentication_1_1_login__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagramma di collaborazione per mm\+:\+:model\+:\+:authentication\+:\+:Login\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{d8/dc8/structmm_1_1model_1_1authentication_1_1_login__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$ \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_a69ec1a769ef1659b8ed39d5e23c24333}{serialize}} () const override
+\item 
+void \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_ac2429ce08624b0c425feced836b77d62}{unserialize}} (map$<$ string, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$ map) override
+\item 
+string \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_afc72adef91be3d97ce4751b8a2357613}{get\+\_\+table\+\_\+name}} () const override
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_a56f5da26be2d64baa78d0c81d99c8221}{get\+\_\+primary\+\_\+key}} () const override
+\item 
+void \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_a23843b088a1c1e0a668e9013ca6768ad}{logout}} ()
+\begin{DoxyCompactList}\small\item\em Permette di effettuare il logout rendendo l\textquotesingle{}oggetto in uno stato non valido. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_aec29ca0fab75c7691c7939970646b39b}{is\+Log}} () const
+\begin{DoxyCompactList}\small\item\em permette di controllare se l\textquotesingle{}oggetto è in uno stato valido o meno \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membri pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}} \& \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_a37112a637ed012c96a96c5a2366f4220}{get\+\_\+instance}} ()
+\begin{DoxyCompactList}\small\item\em Ritorna un istanza di tipo \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_aa74e292b2be0f1e2146576108e74db97}{is\+\_\+changed}}
+\item 
+std\+::string \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_aeb7a295a6770bf778d747903045fe288}{user\+\_\+name}}
+\item 
+std\+::string \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_adc6b1c53cf3e012f10c8b315a1df364f}{password}}
+\item 
+int \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_a3b3c96185f5ad0c1e9ea15cd401ce064}{regional\+\_\+id}}
+\end{DoxyCompactItemize}
+\subsection*{Friend}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_a5023cb987e79151f2a1ed18b9a86a3e8}{check\+\_\+login}} (std\+::string usr, std\+::string psw)
+\begin{DoxyCompactList}\small\item\em Si occupa di porre in uno stato valido l\textquotesingle{}oggetto del singleton \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+classe che rappresenta la una sessione di login 
+
+Un oggetto di questo tipo può essere creato in modo solo dalla funzione check\+\_\+login se il login è già stato effettuato si può usare la funzione get\+\_\+instance per accedere ai dati relativi all\textquotesingle{}utente connesso, per sapere se la sessione è valida si può usare la funzione is\+Log. 
+
+\subsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_a37112a637ed012c96a96c5a2366f4220}\label{structmm_1_1model_1_1authentication_1_1_login_a37112a637ed012c96a96c5a2366f4220}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!get\+\_\+instance@{get\+\_\+instance}}
+\index{get\+\_\+instance@{get\+\_\+instance}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{get\+\_\+instance()}{get\_instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{mm\+::model\+::authentication\+::\+Login}} \& mm\+::model\+::authentication\+::\+Login\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ritorna un istanza di tipo \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}}. 
+
+Se il login non è stato creato mediante la funzione check\+\_\+login L\textquotesingle{}oggetto ritornato sarà non valido e la funzione is\+Log su di esso ritornerà false
+
+\begin{DoxyReturn}{Restituisce}
+un oggetto di tipo \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_a56f5da26be2d64baa78d0c81d99c8221}\label{structmm_1_1model_1_1authentication_1_1_login_a56f5da26be2d64baa78d0c81d99c8221}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!get\+\_\+primary\+\_\+key@{get\+\_\+primary\+\_\+key}}
+\index{get\+\_\+primary\+\_\+key@{get\+\_\+primary\+\_\+key}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{get\+\_\+primary\+\_\+key()}{get\_primary\_key()}}
+{\footnotesize\ttfamily vector$<$ string $>$ mm\+::model\+::authentication\+::\+Login\+::get\+\_\+primary\+\_\+key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{classmm_1_1_i_serializable_a69c0c514e11e386b6cb1fbd03f14da17}{mm\+::\+I\+Serializable}}.
+
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_afc72adef91be3d97ce4751b8a2357613}\label{structmm_1_1model_1_1authentication_1_1_login_afc72adef91be3d97ce4751b8a2357613}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!get\+\_\+table\+\_\+name@{get\+\_\+table\+\_\+name}}
+\index{get\+\_\+table\+\_\+name@{get\+\_\+table\+\_\+name}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{get\+\_\+table\+\_\+name()}{get\_table\_name()}}
+{\footnotesize\ttfamily string mm\+::model\+::authentication\+::\+Login\+::get\+\_\+table\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{classmm_1_1_i_serializable_a9717e6da47fcbac3ffa2e68152464e0a}{mm\+::\+I\+Serializable}}.
+
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_aec29ca0fab75c7691c7939970646b39b}\label{structmm_1_1model_1_1authentication_1_1_login_aec29ca0fab75c7691c7939970646b39b}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!is\+Log@{is\+Log}}
+\index{is\+Log@{is\+Log}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{is\+Log()}{isLog()}}
+{\footnotesize\ttfamily bool mm\+::model\+::authentication\+::\+Login\+::is\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+permette di controllare se l\textquotesingle{}oggetto è in uno stato valido o meno 
+
+\begin{DoxyReturn}{Restituisce}
+true se l\textquotesingle{}utente è connesso, false altrimenti 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_a23843b088a1c1e0a668e9013ca6768ad}\label{structmm_1_1model_1_1authentication_1_1_login_a23843b088a1c1e0a668e9013ca6768ad}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!logout@{logout}}
+\index{logout@{logout}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily void mm\+::model\+::authentication\+::\+Login\+::logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permette di effettuare il logout rendendo l\textquotesingle{}oggetto in uno stato non valido. 
+
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_a69ec1a769ef1659b8ed39d5e23c24333}\label{structmm_1_1model_1_1authentication_1_1_login_a69ec1a769ef1659b8ed39d5e23c24333}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!serialize@{serialize}}
+\index{serialize@{serialize}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily map$<$ string, \mbox{\hyperlink{structmm_1_1_serialized}{mm\+::\+Serialized}} $>$ mm\+::model\+::authentication\+::\+Login\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{classmm_1_1_i_serializable_a20a59e2324c8dbf6fefe4d11ae89d0fb}{mm\+::\+I\+Serializable}}.
+
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_ac2429ce08624b0c425feced836b77d62}\label{structmm_1_1model_1_1authentication_1_1_login_ac2429ce08624b0c425feced836b77d62}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!unserialize@{unserialize}}
+\index{unserialize@{unserialize}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{unserialize()}{unserialize()}}
+{\footnotesize\ttfamily void mm\+::model\+::authentication\+::\+Login\+::unserialize (\begin{DoxyParamCaption}\item[{map$<$ string, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Documentazione dei friend e delle funzioni collegate}
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_a5023cb987e79151f2a1ed18b9a86a3e8}\label{structmm_1_1model_1_1authentication_1_1_login_a5023cb987e79151f2a1ed18b9a86a3e8}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!check\+\_\+login@{check\+\_\+login}}
+\index{check\+\_\+login@{check\+\_\+login}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{check\+\_\+login}{check\_login}}
+{\footnotesize\ttfamily bool check\+\_\+login (\begin{DoxyParamCaption}\item[{std\+::string}]{usr,  }\item[{std\+::string}]{psw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Si occupa di porre in uno stato valido l\textquotesingle{}oggetto del singleton \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}}. 
+
+Se usr e psw corrispondono ad una coppia nome utente e password nel database inizializza \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login}{Login}} e ritorna true
+
+
+\begin{DoxyParams}{Parametri}
+{\em usr} & stringa contenente lo username \\
+\hline
+{\em psw} & stringa contenente la password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+true in caso l\textquotesingle{}utente sia trovato false altrimenti 
+\end{DoxyReturn}
+
+
+\subsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_aa74e292b2be0f1e2146576108e74db97}\label{structmm_1_1model_1_1authentication_1_1_login_aa74e292b2be0f1e2146576108e74db97}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!is\+\_\+changed@{is\+\_\+changed}}
+\index{is\+\_\+changed@{is\+\_\+changed}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{is\+\_\+changed}{is\_changed}}
+{\footnotesize\ttfamily bool mm\+::model\+::authentication\+::\+Login\+::is\+\_\+changed}
+
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_adc6b1c53cf3e012f10c8b315a1df364f}\label{structmm_1_1model_1_1authentication_1_1_login_adc6b1c53cf3e012f10c8b315a1df364f}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!password@{password}}
+\index{password@{password}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily std\+::string mm\+::model\+::authentication\+::\+Login\+::password}
+
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_a3b3c96185f5ad0c1e9ea15cd401ce064}\label{structmm_1_1model_1_1authentication_1_1_login_a3b3c96185f5ad0c1e9ea15cd401ce064}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!regional\+\_\+id@{regional\+\_\+id}}
+\index{regional\+\_\+id@{regional\+\_\+id}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{regional\+\_\+id}{regional\_id}}
+{\footnotesize\ttfamily int mm\+::model\+::authentication\+::\+Login\+::regional\+\_\+id}
+
+\mbox{\Hypertarget{structmm_1_1model_1_1authentication_1_1_login_aeb7a295a6770bf778d747903045fe288}\label{structmm_1_1model_1_1authentication_1_1_login_aeb7a295a6770bf778d747903045fe288}} 
+\index{mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}!user\+\_\+name@{user\+\_\+name}}
+\index{user\+\_\+name@{user\+\_\+name}!mm\+::model\+::authentication\+::\+Login@{mm\+::model\+::authentication\+::\+Login}}
+\subsubsection{\texorpdfstring{user\+\_\+name}{user\_name}}
+{\footnotesize\ttfamily std\+::string mm\+::model\+::authentication\+::\+Login\+::user\+\_\+name}
+
+
+
+La documentazione per questa struct è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
+\item 
+code/model/\mbox{\hyperlink{_authentication_8hpp}{Authentication.\+hpp}}\item 
+code/model/\mbox{\hyperlink{_authentication_8cpp}{Authentication.\+cpp}}\end{DoxyCompactItemize}

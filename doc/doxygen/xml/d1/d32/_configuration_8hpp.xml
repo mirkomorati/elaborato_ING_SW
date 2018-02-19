@@ -1,0 +1,768 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d1/d32/_configuration_8hpp" kind="file" language="C++">
+        <compoundname>Configuration.hpp</compoundname>
+        <includes local="no">string</includes>
+        <includes local="no">json.hpp</includes>
+        <includes local="no">fstream</includes>
+        <includedby refid="d2/ddf/_configuration_8cpp" local="yes">code/Configuration.cpp</includedby>
+        <includedby refid="d9/d0c/_ref_builder_8cpp" local="yes">code/gui/RefBuilder.cpp</includedby>
+        <includedby refid="d7/daf/_med_h_8cpp" local="yes">code/MedH.cpp</includedby>
+        <incdepgraph>
+            <node id="6">
+                <label>code/Configuration.hpp</label>
+                <link refid="d1/d32/_configuration_8hpp"/>
+                <childnode refid="7" relation="include">
+                </childnode>
+                <childnode refid="8" relation="include">
+                </childnode>
+                <childnode refid="9" relation="include">
+                </childnode>
+            </node>
+            <node id="7">
+                <label>string</label>
+            </node>
+            <node id="8">
+                <label>json.hpp</label>
+            </node>
+            <node id="9">
+                <label>fstream</label>
+            </node>
+        </incdepgraph>
+        <invincdepgraph>
+            <node id="10">
+                <label>code/Configuration.hpp</label>
+                <link refid="d1/d32/_configuration_8hpp"/>
+                <childnode refid="11" relation="include">
+                </childnode>
+                <childnode refid="12" relation="include">
+                </childnode>
+                <childnode refid="13" relation="include">
+                </childnode>
+            </node>
+            <node id="13">
+                <label>code/MedH.cpp</label>
+                <link refid="d7/daf/_med_h_8cpp"/>
+            </node>
+            <node id="11">
+                <label>code/Configuration.cpp</label>
+                <link refid="d2/ddf/_configuration_8cpp"/>
+            </node>
+            <node id="12">
+                <label>code/gui/RefBuilder.cpp</label>
+                <link refid="d9/d0c/_ref_builder_8cpp"/>
+            </node>
+        </invincdepgraph>
+        <innerclass refid="d3/d00/classmm_1_1key__not__found__error" prot="public">mm::key_not_found_error</innerclass>
+        <innerclass refid="dc/d00/classmm_1_1_configuration" prot="public">mm::Configuration</innerclass>
+        <innernamespace refid="d0/d04/namespacemm">mm</innernamespace>
+        <sectiondef kind="typedef">
+            <memberdef kind="typedef" id="d1/d32/_configuration_8hpp_1ab701e3ac61a85b337ec5c1abaad6742d" prot="public"
+                       static="no">
+                <type>nlohmann::json</type>
+                <definition>using json = nlohmann::json</definition>
+                <argsstring></argsstring>
+                <name>json</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/Configuration.hpp" line="12" column="1" bodyfile="code/Configuration.hpp"
+                          bodystart="12" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Noè<sp/>Murr<sp/>on<sp/>03/06/2017.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#ifndef<sp/>ELABORATO_ING_SW_CONFIGURATION_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#define<sp/>ELABORATO_ING_SW_CONFIGURATION_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;string&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;json.hpp&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&lt;fstream&gt;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="12" refid="d1/d32/_configuration_8hpp_1ab701e3ac61a85b337ec5c1abaad6742d"
+                      refkind="member">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">using</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d1/d32/_configuration_8hpp_1ab701e3ac61a85b337ec5c1abaad6742d" kindref="member">json
+                    </ref>
+                    <sp/>=
+                    <sp/>
+                    <ref refid="d1/d32/_configuration_8hpp_1ab701e3ac61a85b337ec5c1abaad6742d" kindref="member">
+                        nlohmann::json</ref>;
+                </highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="14" refid="d0/d04/namespacemm" refkind="compound">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm" kindref="compound">mm</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="18" refid="d3/d00/classmm_1_1key__not__found__error" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">class
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d3/d00/classmm_1_1key__not__found__error" kindref="compound">key_not_found_error</ref>
+                    <sp/>:<sp/>std::runtime_error<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d3/d00/classmm_1_1key__not__found__error_1a2dbffa57a8ad2c3d80151f0d7b75814b"
+                         kindref="member">key_not_found_error</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;what);
+                </highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d3/d00/classmm_1_1key__not__found__error_1a2dbffa57a8ad2c3d80151f0d7b75814b"
+                         kindref="member">key_not_found_error</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal"><sp/>*what);
+                </highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">private</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal"><sp/>*what()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>noexcept
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">override</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="36" refid="dc/d00/classmm_1_1_configuration" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">class
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">Configuration</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">private</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>config_file_name;
+                </highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">Configuration</ref>
+                    <sp/>*instance;
+                </highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="41">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d1/d32/_configuration_8hpp_1ab701e3ac61a85b337ec5c1abaad6742d" kindref="member">json
+                    </ref>
+                    <sp/>config;
+                </highlight>
+            </codeline>
+            <codeline lineno="42">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="43">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">private</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="44">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">Configuration</ref>()<sp/>noexcept(
+                </highlight>
+                <highlight class="keyword">false</highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="45">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="46">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>~<ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">Configuration</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="47">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="48">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="49">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>disallow<sp/>default<sp/>constructor<sp/>and<sp/>assign<sp/>operator
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="50">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">Configuration</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">Configuration</ref>
+                    <sp/>&amp;old)<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">delete</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="51">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="52">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">Configuration</ref>
+                    <sp/>&amp;<ref refid="dc/d00/classmm_1_1_configuration_1a3077aebf459758dce4be716a8ddcb090"
+                                   kindref="member">operator=</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">Configuration</ref>
+                    <sp/>&amp;old)<sp/>=
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">delete</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="53">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="64">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="dc/d00/classmm_1_1_configuration" kindref="compound">Configuration</ref>
+                    <sp/>&amp;<ref refid="dc/d00/classmm_1_1_configuration_1a5cfc5ea56062f53ef9fbd274f6dbe79e"
+                                   kindref="member">get_instance</ref>()<sp/>noexcept(
+                </highlight>
+                <highlight class="keyword">false</highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="65">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="71">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;<ref
+                        refid="dc/d00/classmm_1_1_configuration_1a631c8525beb91fb55d72eb6b58d2d68f" kindref="member">
+                    get_config_file_name</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="72">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="80">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">static</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="dc/d00/classmm_1_1_configuration_1ad526b28d1a7f8c6f854352b840d2d7b4" kindref="member">
+                        set_config_file_name</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;config_file_name);
+                </highlight>
+            </codeline>
+            <codeline lineno="81">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="92">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">template</highlight>
+                <highlight class="normal">&lt;</highlight>
+                <highlight class="keyword">typename</highlight>
+                <highlight class="normal"><sp/>T&gt;
+                </highlight>
+            </codeline>
+            <codeline lineno="93" refid="dc/d00/classmm_1_1_configuration_1a30374c407050b9fb3f05dd3c2c01202d"
+                      refkind="member">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>T
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">get</highlight>
+                <highlight class="normal">(</highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;key)
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>noexcept(
+                </highlight>
+                <highlight class="keyword">false</highlight>
+                <highlight class="normal">)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="94">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(config.find(key)<sp/>==<sp/>config.end())<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="95">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>std::stringstream<sp/>ss;
+                </highlight>
+            </codeline>
+            <codeline lineno="96">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>ss<sp/>&lt;&lt;<sp/>
+                </highlight>
+                <highlight class="stringliteral">&quot;cannot<sp/>find<sp/>key:<sp/>&quot;
+                </highlight>
+                <highlight class="normal"><sp/>&lt;&lt;<sp/>key;
+                </highlight>
+            </codeline>
+            <codeline lineno="97">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d00/classmm_1_1key__not__found__error" kindref="compound">key_not_found_error</ref>
+                    (ss.str());
+                </highlight>
+            </codeline>
+            <codeline lineno="98">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="99">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">return</highlight>
+                <highlight class="normal"><sp/>config[key].get&lt;T&gt;();
+                </highlight>
+            </codeline>
+            <codeline lineno="100">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="101">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="102">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="103">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="104">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="105">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="106">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_CONFIGURATION_HPP
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/Configuration.hpp"/>
+    </compounddef>
+</doxygen>

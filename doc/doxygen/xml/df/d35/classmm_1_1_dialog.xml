@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="df/d35/classmm_1_1_dialog" kind="class" language="C++" prot="public" abstract="yes">
+        <compoundname>mm::Dialog</compoundname>
+        <basecompoundref refid="d1/dd2/classmm_1_1_i_subject" prot="public" virt="non-virtual">mm::ISubject
+        </basecompoundref>
+        <basecompoundref prot="public" virt="non-virtual">trackable</basecompoundref>
+        <derivedcompoundref refid="d7/d05/classmm_1_1_about_dialog" prot="public" virt="non-virtual">mm::AboutDialog
+        </derivedcompoundref>
+        <derivedcompoundref refid="d7/d32/classmm_1_1_add_patient_dialog" prot="public" virt="non-virtual">
+            mm::AddPatientDialog
+        </derivedcompoundref>
+        <derivedcompoundref refid="db/d16/classmm_1_1_add_prescription_dialog" prot="public" virt="non-virtual">
+            mm::AddPrescriptionDialog
+        </derivedcompoundref>
+        <includes refid="dc/de6/_dialog_8hpp" local="no">Dialog.hpp</includes>
+        <sectiondef kind="protected-func">
+            <memberdef kind="function" id="df/d35/classmm_1_1_dialog_1a9864219c61623b484d8f8c161808e136"
+                       prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+                <type>bool</type>
+                <definition>virtual bool mm::Dialog::onDelete</definition>
+                <argsstring>(GdkEventAny *any_event)</argsstring>
+                <name>onDelete</name>
+                <param>
+                    <type>GdkEventAny *</type>
+                    <declname>any_event</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Dialog.hpp" line="15" column="1" bodyfile="code/gui/Dialog.hpp" bodystart="15"
+                          bodyend="18"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="df/d35/classmm_1_1_dialog_1afda4b0dc7c0ac027c4b8fdb95713700f" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+                <type>void</type>
+                <definition>virtual void mm::Dialog::show</definition>
+                <argsstring>()=0</argsstring>
+                <name>show</name>
+                <reimplementedby refid="d7/d05/classmm_1_1_about_dialog_1a9e06dc12f6950b74ccf6ccece693f108">show
+                </reimplementedby>
+                <reimplementedby refid="d7/d32/classmm_1_1_add_patient_dialog_1a0247912794984eb19c43842ab9037708">show
+                </reimplementedby>
+                <reimplementedby refid="db/d16/classmm_1_1_add_prescription_dialog_1aa1c86141b2d45e141684bd99d557b8e4">
+                    show
+                </reimplementedby>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Dialog.hpp" line="20" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d35/classmm_1_1_dialog_1a3f2e361836af48ee3808f4dd6e4f8e48" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+                <type>void</type>
+                <definition>virtual void mm::Dialog::dispose</definition>
+                <argsstring>()=0</argsstring>
+                <name>dispose</name>
+                <reimplementedby refid="d7/d05/classmm_1_1_about_dialog_1a19077d54c5cbf3ebc7492040a63d1830">dispose
+                </reimplementedby>
+                <reimplementedby refid="db/d16/classmm_1_1_add_prescription_dialog_1aacb58c7617be2323d91cd5ab2f28e354">
+                    dispose
+                </reimplementedby>
+                <reimplementedby refid="d7/d32/classmm_1_1_add_patient_dialog_1aae8f2895b071b7a931bcc9fbdc3b1c37">
+                    dispose
+                </reimplementedby>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Dialog.hpp" line="21" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d35/classmm_1_1_dialog_1a22abaf4e90b6fdca5c20039f6b9e15ac" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+                <type>bool</type>
+                <definition>virtual bool mm::Dialog::isActive</definition>
+                <argsstring>()=0</argsstring>
+                <name>isActive</name>
+                <reimplementedby refid="d7/d05/classmm_1_1_about_dialog_1adc8aec0378d9d146c78eaf9a204dbf27">isActive
+                </reimplementedby>
+                <reimplementedby refid="d7/d32/classmm_1_1_add_patient_dialog_1a459a8acbec1c8a5a87e00f23402d3b5d">
+                    isActive
+                </reimplementedby>
+                <reimplementedby refid="db/d16/classmm_1_1_add_prescription_dialog_1a4ff93500e8fd90512dc4575147b2c910">
+                    isActive
+                </reimplementedby>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Dialog.hpp" line="22" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d35/classmm_1_1_dialog_1abe6e5ac072c12c06971f60491f079d80" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+                <type>void</type>
+                <definition>virtual void mm::Dialog::reset</definition>
+                <argsstring>()=0</argsstring>
+                <name>reset</name>
+                <reimplementedby refid="d7/d05/classmm_1_1_about_dialog_1a21f5b0a7c9d8e43baab78e073d7ade2b">reset
+                </reimplementedby>
+                <reimplementedby refid="d7/d32/classmm_1_1_add_patient_dialog_1a64c8c2ea3b1c69a858f4eaec1854270a">
+                    reset
+                </reimplementedby>
+                <reimplementedby refid="db/d16/classmm_1_1_add_prescription_dialog_1a6ace04587432a197436bb04c7b68d60d">
+                    reset
+                </reimplementedby>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Dialog.hpp" line="23" column="1"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="40">
+                <label>mm::AboutDialog</label>
+                <link refid="d7/d05/classmm_1_1_about_dialog"/>
+                <childnode refid="37" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="39">
+                <label>trackable</label>
+            </node>
+            <node id="38">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="41">
+                <label>mm::AddPatientDialog</label>
+                <link refid="d7/d32/classmm_1_1_add_patient_dialog"/>
+                <childnode refid="37" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="42">
+                <label>mm::AddPrescriptionDialog</label>
+                <link refid="db/d16/classmm_1_1_add_prescription_dialog"/>
+                <childnode refid="37" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="37">
+                <label>mm::Dialog</label>
+                <link refid="df/d35/classmm_1_1_dialog"/>
+                <childnode refid="38" relation="public-inheritance">
+                </childnode>
+                <childnode refid="39" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="45">
+                <label>trackable</label>
+            </node>
+            <node id="44">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="43">
+                <label>mm::Dialog</label>
+                <link refid="df/d35/classmm_1_1_dialog"/>
+                <childnode refid="44" relation="public-inheritance">
+                </childnode>
+                <childnode refid="45" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/Dialog.hpp" line="13" column="1" bodyfile="code/gui/Dialog.hpp" bodystart="13"
+                  bodyend="24"/>
+        <listofallmembers>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Dialog</scope>
+                <name>attach</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Dialog</scope>
+                <name>detach</name>
+            </member>
+            <member refid="df/d35/classmm_1_1_dialog_1a3f2e361836af48ee3808f4dd6e4f8e48" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::Dialog</scope>
+                <name>dispose</name>
+            </member>
+            <member refid="df/d35/classmm_1_1_dialog_1a22abaf4e90b6fdca5c20039f6b9e15ac" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::Dialog</scope>
+                <name>isActive</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Dialog</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Dialog</scope>
+                <name>notify</name>
+            </member>
+            <member refid="df/d35/classmm_1_1_dialog_1a9864219c61623b484d8f8c161808e136" prot="protected"
+                    virt="virtual">
+                <scope>mm::Dialog</scope>
+                <name>onDelete</name>
+            </member>
+            <member refid="df/d35/classmm_1_1_dialog_1abe6e5ac072c12c06971f60491f079d80" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::Dialog</scope>
+                <name>reset</name>
+            </member>
+            <member refid="df/d35/classmm_1_1_dialog_1afda4b0dc7c0ac027c4b8fdb95713700f" prot="public"
+                    virt="pure-virtual">
+                <scope>mm::Dialog</scope>
+                <name>show</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" prot="public"
+                    virt="virtual">
+                <scope>mm::Dialog</scope>
+                <name>~ISubject</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

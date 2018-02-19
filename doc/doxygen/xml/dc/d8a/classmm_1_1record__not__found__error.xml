@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="dc/d8a/classmm_1_1record__not__found__error" kind="class" language="C++" prot="public">
+        <compoundname>mm::record_not_found_error</compoundname>
+        <basecompoundref prot="private" virt="non-virtual">runtime_error</basecompoundref>
+        <includes refid="d7/d0f/_d_b_master_8hpp" local="no">DBMaster.hpp</includes>
+        <sectiondef kind="public-func">
+            <memberdef kind="function"
+                       id="dc/d8a/classmm_1_1record__not__found__error_1a3457a336328538174f06d4023b7474c8" prot="public"
+                       static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::record_not_found_error::record_not_found_error</definition>
+                <argsstring>(const std::string &amp;msg)</argsstring>
+                <name>record_not_found_error</name>
+                <param>
+                    <type>const std::string &amp;</type>
+                    <declname>msg</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="136" column="1" bodyfile="code/DBMaster.cpp" bodystart="348"
+                          bodyend="349"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="dc/d8a/classmm_1_1record__not__found__error_1aa8bc0fb2788b4442295f85103fa94e2b" prot="public"
+                       static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::record_not_found_error::record_not_found_error</definition>
+                <argsstring>(const char *msg)</argsstring>
+                <name>record_not_found_error</name>
+                <param>
+                    <type>const char *</type>
+                    <declname>msg</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="138" column="1" bodyfile="code/DBMaster.cpp" bodystart="345"
+                          bodyend="346"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function"
+                       id="dc/d8a/classmm_1_1record__not__found__error_1a717de31a5a66442baa65e695d09c50ff"
+                       prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const char *</type>
+                <definition>const char * mm::record_not_found_error::what</definition>
+                <argsstring>() const noexcept override</argsstring>
+                <name>what</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/DBMaster.hpp" line="141" column="1" bodyfile="code/DBMaster.cpp" bodystart="351"
+                          bodyend="353"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+            <para>eccezione che indica che un oggetto non è presente nel database</para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="186">
+                <label>runtime_error</label>
+            </node>
+            <node id="185">
+                <label>mm::record_not_found_error</label>
+                <link refid="dc/d8a/classmm_1_1record__not__found__error"/>
+                <childnode refid="186" relation="private-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="188">
+                <label>runtime_error</label>
+            </node>
+            <node id="187">
+                <label>mm::record_not_found_error</label>
+                <link refid="dc/d8a/classmm_1_1record__not__found__error"/>
+                <childnode refid="188" relation="private-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/DBMaster.hpp" line="134" column="1" bodyfile="code/DBMaster.hpp" bodystart="134"
+                  bodyend="143"/>
+        <listofallmembers>
+            <member refid="dc/d8a/classmm_1_1record__not__found__error_1a3457a336328538174f06d4023b7474c8" prot="public"
+                    virt="non-virtual">
+                <scope>mm::record_not_found_error</scope>
+                <name>record_not_found_error</name>
+            </member>
+            <member refid="dc/d8a/classmm_1_1record__not__found__error_1aa8bc0fb2788b4442295f85103fa94e2b" prot="public"
+                    virt="non-virtual">
+                <scope>mm::record_not_found_error</scope>
+                <name>record_not_found_error</name>
+            </member>
+            <member refid="dc/d8a/classmm_1_1record__not__found__error_1a717de31a5a66442baa65e695d09c50ff"
+                    prot="private" virt="non-virtual">
+                <scope>mm::record_not_found_error</scope>
+                <name>what</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

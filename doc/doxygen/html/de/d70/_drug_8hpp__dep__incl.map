@@ -1,0 +1,20 @@
+<map id="code/model/Drug.hpp" name="code/model/Drug.hpp">
+<area shape="rect" id="node2" href="$de/d01/_prescription_8hpp.html" title="code/model/Prescription.hpp" alt="" coords="451,79,641,104"/>
+<area shape="rect" id="node14" href="$dd/dc5/_doctor_8hpp.html" title="code/model/Doctor.hpp" alt="" coords="322,225,480,251"/>
+<area shape="rect" id="node19" href="$d1/d9e/_drug_8cpp.html" title="code/model/Drug.cpp" alt="" coords="665,79,813,104"/>
+<area shape="rect" id="node3" href="$d0/da9/_patient_8hpp.html" title="code/model/Patient.hpp" alt="" coords="821,152,983,177"/>
+<area shape="rect" id="node5" href="$d5/d46/_custom_widgets_8hpp.html" title="code/gui/view/CustomWidgets.hpp" alt="" coords="635,225,860,251"/>
+<area shape="rect" id="node15" href="$d1/d16/_prescription_window_8cpp.html" title="code/gui/PrescriptionWindow.cpp" alt="" coords="211,305,428,331"/>
+<area shape="rect" id="node18" href="$d5/db1/_prescription_8cpp.html" title="code/model/Prescription.cpp" alt="" coords="605,152,794,177"/>
+<area shape="rect" id="node4" href="$db/db5/_add_patient_dialog_8cpp.html" title="code/gui/AddPatientDialog.cpp" alt="" coords="884,225,1088,251"/>
+<area shape="rect" id="node7" href="$df/de8/_add_prescription_dialog_8cpp.html" title="code/gui/AddPrescription\lDialog.cpp" alt="" coords="1143,385,1312,424"/>
+<area shape="rect" id="node17" href="$d0/d77/_patient_8cpp.html" title="code/model/Patient.cpp" alt="" coords="1410,225,1570,251"/>
+<area shape="rect" id="node6" href="$d0/d1e/_add_prescription_dialog_8hpp.html" title="code/gui/AddPrescription\lDialog.hpp" alt="" coords="917,299,1087,337"/>
+<area shape="rect" id="node9" href="$dd/d02/_drug_window_8hpp.html" title="code/gui/DrugWindow.hpp" alt="" coords="452,305,629,331"/>
+<area shape="rect" id="node12" href="$dd/de0/_patient_window_8hpp.html" title="code/gui/PatientWindow.hpp" alt="" coords="653,305,842,331"/>
+<area shape="rect" id="node13" href="$d1/dea/_custom_widgets_8cpp.html" title="code/gui/view/CustomWidgets.cpp" alt="" coords="1111,305,1336,331"/>
+<area shape="rect" id="node8" href="$d8/d35/_patient_window_8cpp.html" title="code/gui/PatientWindow.cpp" alt="" coords="785,392,974,417"/>
+<area shape="rect" id="node10" href="$d6/d9e/_drug_window_8cpp.html" title="code/gui/DrugWindow.cpp" alt="" coords="143,392,320,417"/>
+<area shape="rect" id="node11" href="$d5/da5/_main_window_8cpp.html" title="code/gui/MainWindow.cpp" alt="" coords="518,392,694,417"/>
+<area shape="rect" id="node16" href="$d3/da6/_doctor_8cpp.html" title="code/model/Doctor.cpp" alt="" coords="29,305,186,331"/>
+</map>

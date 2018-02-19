@@ -1,0 +1,909 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="da/d81/classmm_1_1_patient_window" kind="class" language="C++" prot="public">
+        <compoundname>mm::PatientWindow</compoundname>
+        <basecompoundref refid="d1/d71/classmm_1_1_window" prot="public" virt="non-virtual">mm::Window</basecompoundref>
+        <basecompoundref refid="d7/d9e/classmm_1_1_i_observer" prot="public" virt="non-virtual">mm::IObserver
+        </basecompoundref>
+        <includes refid="dd/de0/_patient_window_8hpp" local="no">PatientWindow.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="da/d81/classmm_1_1_patient_window_1a56b8ca6d4ae8bbce8488e7333391b844"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>WindowName mm::PatientWindow::next</definition>
+                <argsstring></argsstring>
+                <name>next</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="20" column="1" bodyfile="code/gui/PatientWindow.hpp"
+                          bodystart="20" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="da/d81/classmm_1_1_patient_window_1ac5920b30f7aa069259f0ed0f14878e68"
+                       prot="private" static="no" mutable="no">
+                <type>std::list&lt; std::unique_ptr&lt; <ref refid="df/d35/classmm_1_1_dialog" kindref="compound">
+                    Dialog
+                </ref> &gt; &gt;
+                </type>
+                <definition>std::list&lt;std::unique_ptr&lt;Dialog&gt; &gt; mm::PatientWindow::dialogList</definition>
+                <argsstring></argsstring>
+                <name>dialogList</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="21" column="1" bodyfile="code/gui/PatientWindow.hpp"
+                          bodystart="21" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="da/d81/classmm_1_1_patient_window_1a5635b943606bdb596f6a4984bdfa98e1"
+                       prot="private" static="no" mutable="no">
+                <type>std::vector&lt; std::unique_ptr&lt; <ref refid="dc/ddf/classmm_1_1view_1_1_prescription_expander"
+                                                               kindref="compound">view::PrescriptionExpander
+                </ref> &gt; &gt;
+                </type>
+                <definition>std::vector&lt;std::unique_ptr&lt;view::PrescriptionExpander&gt; &gt;
+                    mm::PatientWindow::prescriptionsExp
+                </definition>
+                <argsstring></argsstring>
+                <name>prescriptionsExp</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="22" column="1" bodyfile="code/gui/PatientWindow.hpp"
+                          bodystart="22" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="da/d81/classmm_1_1_patient_window_1a58a7c8e1eb1d8751a5f9e4fa770934b8"
+                       prot="private" static="no" mutable="no">
+                <type>Glib::RefPtr&lt; Gtk::ListStore &gt;</type>
+                <definition>Glib::RefPtr&lt;Gtk::ListStore&gt; mm::PatientWindow::patientListStore</definition>
+                <argsstring></argsstring>
+                <name>patientListStore</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="25" column="1" bodyfile="code/gui/PatientWindow.hpp"
+                          bodystart="25" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="da/d81/classmm_1_1_patient_window_1a9e1bb542227a874751c69887725a4133"
+                       prot="private" static="no" mutable="no">
+                <type>bool</type>
+                <definition>bool mm::PatientWindow::filterOn</definition>
+                <argsstring></argsstring>
+                <name>filterOn</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="28" column="1" bodyfile="code/gui/PatientWindow.hpp"
+                          bodystart="28" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="da/d81/classmm_1_1_patient_window_1af9e3daff5ae7998d44b6b7878d8cf671"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
+                </type>
+                <definition>util::Date mm::PatientWindow::filterStartDate</definition>
+                <argsstring></argsstring>
+                <name>filterStartDate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="29" column="1" bodyfile="code/gui/PatientWindow.hpp"
+                          bodystart="29" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="da/d81/classmm_1_1_patient_window_1a7c38045d0c01adea208c70503ca7274c"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
+                </type>
+                <definition>util::Date mm::PatientWindow::filterEndDate</definition>
+                <argsstring></argsstring>
+                <name>filterEndDate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="30" column="1" bodyfile="code/gui/PatientWindow.hpp"
+                          bodystart="30" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="da/d81/classmm_1_1_patient_window_1ac3db03a777a31105100e70042a1c9d86"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d52/structmm_1_1_date_controller" kindref="compound">DateController</ref>
+                </type>
+                <definition>DateController mm::PatientWindow::customFilterFromDateController</definition>
+                <argsstring></argsstring>
+                <name>customFilterFromDateController</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="31" column="1" bodyfile="code/gui/PatientWindow.hpp"
+                          bodystart="31" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="da/d81/classmm_1_1_patient_window_1aedfe2d5a25eec14d96b1990b946088a7"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d52/structmm_1_1_date_controller" kindref="compound">DateController</ref>
+                </type>
+                <definition>DateController mm::PatientWindow::customFilterToDateController</definition>
+                <argsstring></argsstring>
+                <name>customFilterToDateController</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="32" column="1" bodyfile="code/gui/PatientWindow.hpp"
+                          bodystart="32" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a303da04da191185a070454feff15e014"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::PatientWindow::PatientWindow</definition>
+                <argsstring>()</argsstring>
+                <name>PatientWindow</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="35" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="22" bodyend="29"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a0ad27245769b095559858eeecdbb7089"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>bool</type>
+                <definition>bool mm::PatientWindow::init</definition>
+                <argsstring>() override</argsstring>
+                <name>init</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10">init</reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="37" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="148" bodyend="155"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1ab951ab5bf21df2b9450496c6faca5268"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>mm::WindowName mm::PatientWindow::getName</definition>
+                <argsstring>() const override</argsstring>
+                <name>getName</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1a942c9125bf42156a9f7b7f561e412fed">getName
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="39" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="157" bodyend="159"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1ae22b9bce4c7ccdbcc45feb080088a558"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>mm::WindowName mm::PatientWindow::getNextWindow</definition>
+                <argsstring>() const override</argsstring>
+                <name>getNextWindow</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1a0cd7b4b0feb9505c44503547a161fcd8">getNextWindow
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="41" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="161" bodyend="163"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a461de186f72a8902a9f95a622dc1c02b"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::update</definition>
+                <argsstring>() override</argsstring>
+                <name>update</name>
+                <reimplements refid="d7/d9e/classmm_1_1_i_observer_1a6422af04f8e9f3ba9d6d412a3bcdd03e">update
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="43" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="165" bodyend="167"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a315f5e823a0261db4fb88b4e31333d53"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::update</definition>
+                <argsstring>(unsigned int what) override</argsstring>
+                <name>update</name>
+                <reimplements refid="d7/d9e/classmm_1_1_i_observer_1add1245a281c47575cc0e42449635a9fd">update
+                </reimplements>
+                <param>
+                    <type>unsigned int</type>
+                    <declname>what</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="45" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="169" bodyend="197"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a48de0e9302eb9cb9b33e8641f27f01c1"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::PatientWindow::~PatientWindow</definition>
+                <argsstring>() override</argsstring>
+                <name>~PatientWindow</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="47" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="424" bodyend="436"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1ab993efac247dd18449dbdc0238681fd5"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::initHandlers</definition>
+                <argsstring>()</argsstring>
+                <name>initHandlers</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="52" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="31" bodyend="125"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1ac2bc17fce9830257a14f9fc30b53dd0d"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::initTreeView</definition>
+                <argsstring>()</argsstring>
+                <name>initTreeView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="54" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="127" bodyend="146"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a529b8ebdd287959a49292729671a73c7"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::initFilters</definition>
+                <argsstring>()</argsstring>
+                <name>initFilters</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="56" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="449" bodyend="484"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1aab3236478432f91777f6524e290b4c2f"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::onAddPatientClicked</definition>
+                <argsstring>()</argsstring>
+                <name>onAddPatientClicked</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="59" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="208" bodyend="214"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a34a60139c261b0409028a5826d11a978"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::onAddPrescriptionClicked</definition>
+                <argsstring>()</argsstring>
+                <name>onAddPrescriptionClicked</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="61" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="199" bodyend="206"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1ab595f03fd21641c3648b56c995a51547"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::onSelectedPatient</definition>
+                <argsstring>(const Gtk::TreeModel::Path &amp;, Gtk::TreeViewColumn *)</argsstring>
+                <name>onSelectedPatient</name>
+                <param>
+                    <type>const Gtk::TreeModel::Path &amp;</type>
+                </param>
+                <param>
+                    <type>Gtk::TreeViewColumn *</type>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="63" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="329" bodyend="332"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1aac1be2d8538cfa53bb66041bd8dae472"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::onRemovePatientClicked</definition>
+                <argsstring>()</argsstring>
+                <name>onRemovePatientClicked</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="65" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="374" bodyend="422"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a8a4bd9120942b66fb83bbefdabbd0988"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::onRemovePrescriptionClicked</definition>
+                <argsstring>()</argsstring>
+                <name>onRemovePrescriptionClicked</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="67" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="620" bodyend="674"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1ad2f9048779671b4fd4ed118792fc77a5"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::onSwitchActivate</definition>
+                <argsstring>()</argsstring>
+                <name>onSwitchActivate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="69" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="438" bodyend="447"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1ad1b91f5fc1b356a8797e257392c9e95a"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::onFilterYearChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onFilterYearChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="71" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="486" bodyend="508"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a9463b24e70d06015a51e295eb7783d29"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::onFilterQuarterChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onFilterQuarterChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="73" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="539" bodyend="566"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1afc03cde44c13ded29b60eded7b0defd2"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::onFilterMonthChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onFilterMonthChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="75" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="568" bodyend="595"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a6401f94989d4d5c7584e0bd6ed186f23"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::onFilterCustomChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onFilterCustomChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="77" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="597" bodyend="618"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a00ff4cd31cdac808545ec74124d4e096"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int mm::PatientWindow::sortPrescriptionList</definition>
+                <argsstring>(Gtk::ListBoxRow *row1, Gtk::ListBoxRow *row2, Gtk::SortType sortType)</argsstring>
+                <name>sortPrescriptionList</name>
+                <param>
+                    <type>Gtk::ListBoxRow *</type>
+                    <declname>row1</declname>
+                </param>
+                <param>
+                    <type>Gtk::ListBoxRow *</type>
+                    <declname>row2</declname>
+                </param>
+                <param>
+                    <type>Gtk::SortType</type>
+                    <declname>sortType</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="79" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="315" bodyend="327"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1af351668eefc17179d714b0ae794ea0d4"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::PatientWindow::onFilterClose</definition>
+                <argsstring>(GdkEventButton *buttonEvent)</argsstring>
+                <name>onFilterClose</name>
+                <param>
+                    <type>GdkEventButton *</type>
+                    <declname>buttonEvent</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="81" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="694" bodyend="706"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1aa87e237db0c078942088439f874a251a"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::PatientWindow::onFilterOpened</definition>
+                <argsstring>(GdkEventButton *buttonEvent)</argsstring>
+                <name>onFilterOpened</name>
+                <param>
+                    <type>GdkEventButton *</type>
+                    <declname>buttonEvent</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="83" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="708" bodyend="720"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a3201425aef61fa907be8d3d212657f1d"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::updatePatientTreeView</definition>
+                <argsstring>()</argsstring>
+                <name>updatePatientTreeView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="87" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="216" bodyend="246"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a0c1f9da33a1fd0cc614dcc2b23a639fe"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::updatePrescriptionView</definition>
+                <argsstring>()</argsstring>
+                <name>updatePrescriptionView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="89" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="248" bodyend="313"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1a7ddb38c61d571bbe384c143f0aeaf7e8"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::updatePatientDetailsView</definition>
+                <argsstring>()</argsstring>
+                <name>updatePatientDetailsView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="91" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="334" bodyend="372"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1ac95d94f85afcd287ea8443cb25edfd8f"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::onFilterSemesterChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onFilterSemesterChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="93" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="510" bodyend="537"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d81/classmm_1_1_patient_window_1ada4b7d2d52c8fa96e31b2db7d800ac9e"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PatientWindow::sortByPrescriptionHandler</definition>
+                <argsstring>()</argsstring>
+                <name>sortByPrescriptionHandler</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PatientWindow.hpp" line="95" column="1" bodyfile="code/gui/PatientWindow.cpp"
+                          bodystart="676" bodyend="692"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="155">
+                <label>mm::PatientWindow</label>
+                <link refid="da/d81/classmm_1_1_patient_window"/>
+                <childnode refid="156" relation="public-inheritance">
+                </childnode>
+                <childnode refid="159" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="158">
+                <label>trackable</label>
+            </node>
+            <node id="157">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="159">
+                <label>mm::IObserver</label>
+                <link refid="d7/d9e/classmm_1_1_i_observer"/>
+            </node>
+            <node id="156">
+                <label>mm::Window</label>
+                <link refid="d1/d71/classmm_1_1_window"/>
+                <childnode refid="157" relation="public-inheritance">
+                </childnode>
+                <childnode refid="158" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="160">
+                <label>mm::PatientWindow</label>
+                <link refid="da/d81/classmm_1_1_patient_window"/>
+                <childnode refid="161" relation="public-inheritance">
+                </childnode>
+                <childnode refid="164" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="163">
+                <label>trackable</label>
+            </node>
+            <node id="162">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="164">
+                <label>mm::IObserver</label>
+                <link refid="d7/d9e/classmm_1_1_i_observer"/>
+            </node>
+            <node id="161">
+                <label>mm::Window</label>
+                <link refid="d1/d71/classmm_1_1_window"/>
+                <childnode refid="162" relation="public-inheritance">
+                </childnode>
+                <childnode refid="163" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/PatientWindow.hpp" line="18" column="1" bodyfile="code/gui/PatientWindow.hpp"
+                  bodystart="18" bodyend="96"/>
+        <listofallmembers>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>attach</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1ac3db03a777a31105100e70042a1c9d86" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>customFilterFromDateController</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1aedfe2d5a25eec14d96b1990b946088a7" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>customFilterToDateController</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" prot="public"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>detach</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1ac5920b30f7aa069259f0ed0f14878e68" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>dialogList</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a7c38045d0c01adea208c70503ca7274c" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>filterEndDate</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a9e1bb542227a874751c69887725a4133" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>filterOn</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1af9e3daff5ae7998d44b6b7878d8cf671" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>filterStartDate</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1ab951ab5bf21df2b9450496c6faca5268" prot="public"
+                    virt="virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>getName</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1ae22b9bce4c7ccdbcc45feb080088a558" prot="public"
+                    virt="virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>getNextWindow</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a0ad27245769b095559858eeecdbb7089" prot="public"
+                    virt="virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>init</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a529b8ebdd287959a49292729671a73c7" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>initFilters</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1ab993efac247dd18449dbdc0238681fd5" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>initHandlers</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1ac2bc17fce9830257a14f9fc30b53dd0d" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>initTreeView</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a56b8ca6d4ae8bbce8488e7333391b844" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>next</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>notify</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1aab3236478432f91777f6524e290b4c2f" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onAddPatientClicked</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a34a60139c261b0409028a5826d11a978" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onAddPrescriptionClicked</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1af351668eefc17179d714b0ae794ea0d4" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onFilterClose</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a6401f94989d4d5c7584e0bd6ed186f23" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onFilterCustomChanged</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1afc03cde44c13ded29b60eded7b0defd2" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onFilterMonthChanged</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1aa87e237db0c078942088439f874a251a" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onFilterOpened</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a9463b24e70d06015a51e295eb7783d29" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onFilterQuarterChanged</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1ac95d94f85afcd287ea8443cb25edfd8f" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onFilterSemesterChanged</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1ad1b91f5fc1b356a8797e257392c9e95a" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onFilterYearChanged</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1aac1be2d8538cfa53bb66041bd8dae472" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onRemovePatientClicked</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a8a4bd9120942b66fb83bbefdabbd0988" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onRemovePrescriptionClicked</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1ab595f03fd21641c3648b56c995a51547" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onSelectedPatient</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1ad2f9048779671b4fd4ed118792fc77a5" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>onSwitchActivate</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a58a7c8e1eb1d8751a5f9e4fa770934b8" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>patientListStore</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a303da04da191185a070454feff15e014" prot="public"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>PatientWindow</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a5635b943606bdb596f6a4984bdfa98e1" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>prescriptionsExp</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1ada4b7d2d52c8fa96e31b2db7d800ac9e" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>sortByPrescriptionHandler</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a00ff4cd31cdac808545ec74124d4e096" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>sortPrescriptionList</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a461de186f72a8902a9f95a622dc1c02b" prot="public"
+                    virt="virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>update</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a315f5e823a0261db4fb88b4e31333d53" prot="public"
+                    virt="virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>update</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a7ddb38c61d571bbe384c143f0aeaf7e8" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>updatePatientDetailsView</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a3201425aef61fa907be8d3d212657f1d" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>updatePatientTreeView</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a0c1f9da33a1fd0cc614dcc2b23a639fe" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>updatePrescriptionView</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" prot="public"
+                    virt="virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>~ISubject</name>
+            </member>
+            <member refid="da/d81/classmm_1_1_patient_window_1a48de0e9302eb9cb9b33e8641f27f01c1" prot="public"
+                    virt="non-virtual">
+                <scope>mm::PatientWindow</scope>
+                <name>~PatientWindow</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

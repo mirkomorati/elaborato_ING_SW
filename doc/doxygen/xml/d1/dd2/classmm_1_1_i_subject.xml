@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d1/dd2/classmm_1_1_i_subject" kind="class" language="C++" prot="public">
+        <compoundname>mm::ISubject</compoundname>
+        <derivedcompoundref refid="df/d35/classmm_1_1_dialog" prot="public" virt="non-virtual">mm::Dialog
+        </derivedcompoundref>
+        <derivedcompoundref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" prot="public"
+                            virt="non-virtual">mm::model::authentication::Login
+        </derivedcompoundref>
+        <derivedcompoundref refid="d1/d71/classmm_1_1_window" prot="public" virt="non-virtual">mm::Window
+        </derivedcompoundref>
+        <includes refid="d1/d25/_i_subject_8hpp" local="no">ISubject.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="d1/dd2/classmm_1_1_i_subject_1a139b047da0aa62c6f4db20df62bf0aec"
+                       prot="private" static="no" mutable="no">
+                <type>std::set&lt; <ref refid="d7/d9e/classmm_1_1_i_observer" kindref="compound">IObserver</ref> * &gt;
+                </type>
+                <definition>std::set&lt;IObserver *&gt; mm::ISubject::observer_set</definition>
+                <argsstring></argsstring>
+                <name>observer_set</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISubject.hpp" line="25" column="1"
+                          bodyfile="code/interfaces/ISubject.hpp" bodystart="25" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::ISubject::attach</definition>
+                <argsstring>(IObserver *obj) noexcept</argsstring>
+                <name>attach</name>
+                <param>
+                    <type>
+                        <ref refid="d7/d9e/classmm_1_1_i_observer" kindref="compound">IObserver</ref>
+                        *
+                    </type>
+                    <declname>obj</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISubject.hpp" line="28" column="1"
+                          bodyfile="code/interfaces/ISubject.cpp" bodystart="8" bodyend="10"/>
+            </memberdef>
+            <memberdef kind="function" id="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::ISubject::detach</definition>
+                <argsstring>(IObserver *obj) noexcept(false)</argsstring>
+                <name>detach</name>
+                <param>
+                    <type>
+                        <ref refid="d7/d9e/classmm_1_1_i_observer" kindref="compound">IObserver</ref>
+                        *
+                    </type>
+                    <declname>obj</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISubject.hpp" line="30" column="1"
+                          bodyfile="code/interfaces/ISubject.cpp" bodystart="12" bodyend="14"/>
+            </memberdef>
+            <memberdef kind="function" id="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::ISubject::notify</definition>
+                <argsstring>() const</argsstring>
+                <name>notify</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISubject.hpp" line="32" column="1"
+                          bodyfile="code/interfaces/ISubject.cpp" bodystart="16" bodyend="23"/>
+            </memberdef>
+            <memberdef kind="function" id="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::ISubject::notify</definition>
+                <argsstring>(unsigned int what) const</argsstring>
+                <name>notify</name>
+                <param>
+                    <type>unsigned int</type>
+                    <declname>what</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISubject.hpp" line="34" column="1"
+                          bodyfile="code/interfaces/ISubject.cpp" bodystart="29" bodyend="34"/>
+            </memberdef>
+            <memberdef kind="function" id="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type></type>
+                <definition>mm::ISubject::~ISubject</definition>
+                <argsstring>()</argsstring>
+                <name>~ISubject</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISubject.hpp" line="36" column="1"
+                          bodyfile="code/interfaces/ISubject.cpp" bodystart="25" bodyend="27"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="105">
+                <label>mm::MainWindow</label>
+                <link refid="d7/dfd/classmm_1_1_main_window"/>
+                <childnode refid="102" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="103">
+                <label>mm::DrugWindow</label>
+                <link refid="d7/dcd/classmm_1_1_drug_window"/>
+                <childnode refid="102" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="107">
+                <label>mm::PrescriptionWindow</label>
+                <link refid="da/d8f/classmm_1_1_prescription_window"/>
+                <childnode refid="102" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="106">
+                <label>mm::PatientWindow</label>
+                <link refid="da/d81/classmm_1_1_patient_window"/>
+                <childnode refid="102" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="98">
+                <label>mm::AboutDialog</label>
+                <link refid="d7/d05/classmm_1_1_about_dialog"/>
+                <childnode refid="97" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="96">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="99">
+                <label>mm::AddPatientDialog</label>
+                <link refid="d7/d32/classmm_1_1_add_patient_dialog"/>
+                <childnode refid="97" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="104">
+                <label>mm::LoginWindow</label>
+                <link refid="d3/d0c/classmm_1_1_login_window"/>
+                <childnode refid="102" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="101">
+                <label>mm::model::authentication::Login</label>
+                <link refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login"/>
+                <childnode refid="96" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="100">
+                <label>mm::AddPrescriptionDialog</label>
+                <link refid="db/d16/classmm_1_1_add_prescription_dialog"/>
+                <childnode refid="97" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="97">
+                <label>mm::Dialog</label>
+                <link refid="df/d35/classmm_1_1_dialog"/>
+                <childnode refid="96" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="102">
+                <label>mm::Window</label>
+                <link refid="d1/d71/classmm_1_1_window"/>
+                <childnode refid="96" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="108">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+        </collaborationgraph>
+        <location file="code/interfaces/ISubject.hpp" line="24" column="1" bodyfile="code/interfaces/ISubject.hpp"
+                  bodystart="24" bodyend="38"/>
+        <listofallmembers>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::ISubject</scope>
+                <name>attach</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" prot="public"
+                    virt="non-virtual">
+                <scope>mm::ISubject</scope>
+                <name>detach</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::ISubject</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
+                    virt="non-virtual">
+                <scope>mm::ISubject</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a139b047da0aa62c6f4db20df62bf0aec" prot="private"
+                    virt="non-virtual">
+                <scope>mm::ISubject</scope>
+                <name>observer_set</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" prot="public"
+                    virt="virtual">
+                <scope>mm::ISubject</scope>
+                <name>~ISubject</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

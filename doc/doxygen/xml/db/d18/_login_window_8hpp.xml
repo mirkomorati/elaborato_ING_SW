@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="db/d18/_login_window_8hpp" kind="file" language="C++">
+        <compoundname>LoginWindow.hpp</compoundname>
+        <includes refid="de/d0b/_window_8hpp" local="yes">Window.hpp</includes>
+        <includedby refid="d9/d07/_login_window_8cpp" local="yes">code/gui/LoginWindow.cpp</includedby>
+        <includedby refid="d7/daf/_med_h_8cpp" local="yes">code/MedH.cpp</includedby>
+        <incdepgraph>
+            <node id="346">
+                <label>IObserver.hpp</label>
+                <link refid="d5/d40/_i_observer_8hpp"/>
+                <childnode refid="347" relation="include">
+                </childnode>
+                <childnode refid="348" relation="include">
+                </childnode>
+            </node>
+            <node id="343">
+                <label>Window.hpp</label>
+                <link refid="de/d0b/_window_8hpp"/>
+                <childnode refid="344" relation="include">
+                </childnode>
+            </node>
+            <node id="347">
+                <label>mutex</label>
+            </node>
+            <node id="342">
+                <label>code/gui/LoginWindow.hpp</label>
+                <link refid="db/d18/_login_window_8hpp"/>
+                <childnode refid="343" relation="include">
+                </childnode>
+            </node>
+            <node id="348">
+                <label>thread</label>
+            </node>
+            <node id="344">
+                <label>../interfaces/ISubject.hpp</label>
+                <link refid="d1/d25/_i_subject_8hpp"/>
+                <childnode refid="345" relation="include">
+                </childnode>
+                <childnode refid="346" relation="include">
+                </childnode>
+            </node>
+            <node id="345">
+                <label>set</label>
+            </node>
+        </incdepgraph>
+        <invincdepgraph>
+            <node id="350">
+                <label>code/gui/LoginWindow.cpp</label>
+                <link refid="d9/d07/_login_window_8cpp"/>
+            </node>
+            <node id="351">
+                <label>code/MedH.cpp</label>
+                <link refid="d7/daf/_med_h_8cpp"/>
+            </node>
+            <node id="349">
+                <label>code/gui/LoginWindow.hpp</label>
+                <link refid="db/d18/_login_window_8hpp"/>
+                <childnode refid="350" relation="include">
+                </childnode>
+                <childnode refid="351" relation="include">
+                </childnode>
+            </node>
+        </invincdepgraph>
+        <innerclass refid="d3/d0c/classmm_1_1_login_window" prot="public">mm::LoginWindow</innerclass>
+        <innernamespace refid="d0/d04/namespacemm">mm</innernamespace>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Noè<sp/>Murr<sp/>on<sp/>29/11/2017.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#ifndef<sp/>ELABORATO_ING_SW_LOGINWINDOW_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#define<sp/>ELABORATO_ING_SW_LOGINWINDOW_HPP
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d0b/_window_8hpp" kindref="compound">
+                    Window.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal"></highlight>
+                <highlight class="keyword">namespace
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d0/d04/namespacemm" kindref="compound">mm</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="11" refid="d3/d0c/classmm_1_1_login_window" refkind="compound">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">class
+                    <sp/>
+                </highlight>
+                <highlight class="normal">
+                    <ref refid="d3/d0c/classmm_1_1_login_window" kindref="compound">LoginWindow</ref>
+                    <sp/>:
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d1/d71/classmm_1_1_window" kindref="compound">Window</ref>
+                    <sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                    <sp/>next;
+                </highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">public</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d3/d0c/classmm_1_1_login_window_1ad27cc1365af4fec51bd7afb1a9d49cf5" kindref="member">
+                        LoginWindow</ref>();
+                </highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d3/d0c/classmm_1_1_login_window_1a4040d7c1f85fc76e1f60ef13f92bef1c" kindref="member">
+                        init</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">override</highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                    <sp/>
+                    <ref refid="d3/d0c/classmm_1_1_login_window_1aa0597e725bfb2df984f526112080aaf7" kindref="member">
+                        getName</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const<sp/>override
+                </highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                    <sp/>
+                    <ref refid="d3/d0c/classmm_1_1_login_window_1a399eb7e1a310016ff83b7aa6a9d69722" kindref="member">
+                        getNextWindow</ref>()
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">const<sp/>override
+                </highlight>
+                <highlight class="normal">;</highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keyword">private</highlight>
+                <highlight class="normal">:</highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal"><sp/>onLoginButtonClicked();
+                </highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">bool</highlight>
+                <highlight class="normal"><sp/>onKeyPressed(GdkEventKey<sp/>*event);
+                </highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>};
+                </highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#endif<sp/>//ELABORATO_ING_SW_LOGINWINDOW_HPP
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/gui/LoginWindow.hpp"/>
+    </compounddef>
+</doxygen>

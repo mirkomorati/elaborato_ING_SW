@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="de/dd9/_i_subject_8cpp" kind="file" language="C++">
+        <compoundname>ISubject.cpp</compoundname>
+        <includes refid="d5/d40/_i_observer_8hpp" local="yes">IObserver.hpp</includes>
+        <includes refid="d1/d25/_i_subject_8hpp" local="yes">ISubject.hpp</includes>
+        <incdepgraph>
+            <node id="767">
+                <label>IObserver.hpp</label>
+                <link refid="d5/d40/_i_observer_8hpp"/>
+                <childnode refid="768" relation="include">
+                </childnode>
+                <childnode refid="769" relation="include">
+                </childnode>
+            </node>
+            <node id="766">
+                <label>code/interfaces/ISubject.cpp</label>
+                <link refid="de/dd9/_i_subject_8cpp"/>
+                <childnode refid="767" relation="include">
+                </childnode>
+                <childnode refid="770" relation="include">
+                </childnode>
+            </node>
+            <node id="768">
+                <label>mutex</label>
+            </node>
+            <node id="769">
+                <label>thread</label>
+            </node>
+            <node id="770">
+                <label>ISubject.hpp</label>
+                <link refid="d1/d25/_i_subject_8hpp"/>
+                <childnode refid="771" relation="include">
+                </childnode>
+                <childnode refid="767" relation="include">
+                </childnode>
+            </node>
+            <node id="771">
+                <label>set</label>
+            </node>
+        </incdepgraph>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <programlisting>
+            <codeline lineno="1">
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="2">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//<sp/>Created<sp/>by<sp/>Noè<sp/>Murr<sp/>on<sp/>19/09/2017.
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="3">
+                <highlight class="normal"></highlight>
+                <highlight class="comment">//</highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="4">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="5">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="d5/d40/_i_observer_8hpp"
+                                                                        kindref="compound">IObserver.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="6">
+                <highlight class="normal"></highlight>
+                <highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d25/_i_subject_8hpp"
+                                                                        kindref="compound">ISubject.hpp</ref>&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="7">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="8">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" kindref="member">
+                        mm::ISubject::attach</ref>(
+                    <ref refid="d7/d9e/classmm_1_1_i_observer" kindref="compound">mm::IObserver</ref>
+                    <sp/>*obj)<sp/>noexcept<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="9">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>observer_set.insert(obj);
+                </highlight>
+            </codeline>
+            <codeline lineno="10">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="11">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="12">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" kindref="member">
+                        mm::ISubject::detach</ref>(
+                    <ref refid="d7/d9e/classmm_1_1_i_observer" kindref="compound">mm::IObserver</ref>
+                    <sp/>*obj)<sp/>noexcept(
+                </highlight>
+                <highlight class="keyword">false</highlight>
+                <highlight class="normal">)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="13">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">if</highlight>
+                <highlight class="normal"><sp/>(observer_set.erase(obj)<sp/>==<sp/>0)
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">throw</highlight>
+                <highlight class="normal"><sp/>observer_not_found_error(
+                </highlight>
+                <highlight class="stringliteral">&quot;cannot<sp/>find<sp/>observer<sp/>obj&quot;
+                </highlight>
+                <highlight class="normal">);</highlight>
+            </codeline>
+            <codeline lineno="14">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="15">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="16">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" kindref="member">
+                        mm::ISubject::notify</ref>()
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="17">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>set<sp/>is<sp/>necessary<sp/>cause<sp/>
+                    if<sp/>the<sp/>update<sp/>function<sp/>destroyes<sp/>the<sp/>&quot;this&quot;
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="18">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="comment">//<sp/>object<sp/>we<sp/>fall<sp/>in<sp/>an<sp/>undefined<sp/>behaviuor
+                </highlight>
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="19">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>std::set&lt;IObserver<sp/>*&gt;<sp/>observer_copy_set<sp/>=<sp/>observer_set;
+                </highlight>
+            </codeline>
+            <codeline lineno="20">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>obs<sp/>:<sp/>observer_copy_set)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="21">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>obs-&gt;update();
+                </highlight>
+            </codeline>
+            <codeline lineno="22">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="23">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="24">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="25">
+                <highlight class="normal"><ref refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57"
+                                               kindref="member">mm::ISubject::~ISubject</ref>()<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="26">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>observer_set.clear();
+                </highlight>
+            </codeline>
+            <codeline lineno="27">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="28">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="29">
+                <highlight class="normal"></highlight>
+                <highlight class="keywordtype">void</highlight>
+                <highlight class="normal">
+                    <sp/>
+                    <ref refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" kindref="member">
+                        mm::ISubject::notify</ref>(
+                </highlight>
+                <highlight class="keywordtype">unsigned</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">int</highlight>
+                <highlight class="normal"><sp/>what)
+                </highlight>
+                <highlight class="keyword"><sp/>const
+                    <sp/>
+                </highlight>
+                <highlight class="normal">{</highlight>
+            </codeline>
+            <codeline lineno="30">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>std::set&lt;IObserver<sp/>*&gt;<sp/>observer_copy_set<sp/>=<sp/>observer_set;
+                </highlight>
+            </codeline>
+            <codeline lineno="31">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                </highlight>
+                <highlight class="keywordflow">for</highlight>
+                <highlight class="normal"><sp/>(
+                </highlight>
+                <highlight class="keyword">auto</highlight>
+                <highlight class="normal"><sp/>obs<sp/>:<sp/>observer_copy_set)<sp/>{
+                </highlight>
+            </codeline>
+            <codeline lineno="32">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>obs-&gt;update(what);
+                </highlight>
+            </codeline>
+            <codeline lineno="33">
+                <highlight class="normal">
+                    <sp/>
+                    <sp/>
+                    <sp/>
+                    <sp/>}
+                </highlight>
+            </codeline>
+            <codeline lineno="34">
+                <highlight class="normal">}</highlight>
+            </codeline>
+            <codeline lineno="35">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="36">
+                <highlight class="normal"><ref
+                        refid="da/df7/classmm_1_1observer__not__found__error_1a967227c100638d8d978f8ee3dd6c70b4"
+                        kindref="member">mm::observer_not_found_error::observer_not_found_error</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::string<sp/>&amp;error)<sp/>:<sp/>runtime_error(error)<sp/>{}
+                </highlight>
+            </codeline>
+            <codeline lineno="37">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="38">
+                <highlight class="normal"><ref
+                        refid="da/df7/classmm_1_1observer__not__found__error_1a967227c100638d8d978f8ee3dd6c70b4"
+                        kindref="member">mm::observer_not_found_error::observer_not_found_error</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal">
+                    <sp/>
+                </highlight>
+                <highlight class="keywordtype">char</highlight>
+                <highlight class="normal"><sp/>*error)<sp/>:<sp/>runtime_error(error)<sp/>{}
+                </highlight>
+            </codeline>
+            <codeline lineno="39">
+                <highlight class="normal"></highlight>
+            </codeline>
+            <codeline lineno="40">
+                <highlight class="normal"><ref
+                        refid="da/df7/classmm_1_1observer__not__found__error_1a967227c100638d8d978f8ee3dd6c70b4"
+                        kindref="member">mm::observer_not_found_error::observer_not_found_error</ref>(
+                </highlight>
+                <highlight class="keyword">const</highlight>
+                <highlight class="normal"><sp/>std::runtime_error<sp/>&amp;error)<sp/>:<sp/>runtime_error(error)<sp/>{}
+                </highlight>
+            </codeline>
+        </programlisting>
+        <location file="code/interfaces/ISubject.cpp"/>
+    </compounddef>
+</doxygen>

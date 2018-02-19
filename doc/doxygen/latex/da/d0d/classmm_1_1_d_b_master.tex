@@ -1,0 +1,227 @@
+\hypertarget{classmm_1_1_d_b_master}{}\section{Riferimenti per la classe mm\+:\+:D\+B\+Master}
+\label{classmm_1_1_d_b_master}\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+
+
+Singleton che rappresenta il database, contiene tutte le funzioni necessarie per scrivere un oggetto di tipo derivato da \mbox{\hyperlink{classmm_1_1_i_serializable}{I\+Serializable}} e per leggerlo. Nasconde le chiamate alle A\+PI C di sqlite3.  
+
+
+
+
+{\ttfamily \#include $<$D\+B\+Master.\+hpp$>$}
+
+
+
+Diagramma di collaborazione per mm\+:\+:D\+B\+Master\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{d7/d6f/classmm_1_1_d_b_master__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmm_1_1_d_b_master_a7571cbb3fe77a491d57595ec9bc86abf}{D\+B\+Master}} (const \mbox{\hyperlink{classmm_1_1_d_b_master}{D\+B\+Master}} \&old)=delete
+\item 
+const \mbox{\hyperlink{classmm_1_1_d_b_master}{D\+B\+Master}} \& \mbox{\hyperlink{classmm_1_1_d_b_master_af556b0856b79cb8bff3da0565badeac0}{operator=}} (const \mbox{\hyperlink{classmm_1_1_d_b_master}{D\+B\+Master}} \&old)=delete
+\item 
+void \mbox{\hyperlink{classmm_1_1_d_b_master_a187988c8741d0a2c5806919b8d672af0}{add\+\_\+to\+\_\+db}} (const \mbox{\hyperlink{classmm_1_1_i_serializable}{I\+Serializable}} \&obj)
+\begin{DoxyCompactList}\small\item\em aggiunge un oggetto serializzabile ad database \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmm_1_1_d_b_master_a4d5d51bf4b3437294a52fcd3747520d3}{remove\+\_\+from\+\_\+db}} (const \mbox{\hyperlink{classmm_1_1_i_serializable}{I\+Serializable}} \&obj)
+\begin{DoxyCompactList}\small\item\em rimuove un oggetto serializzabile dal database \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmm_1_1_d_b_master_a9e8092b67a249a273668ad042a4084e2}{extract\+\_\+from\+\_\+db}} (\mbox{\hyperlink{classmm_1_1_i_serializable}{I\+Serializable}} \&obj, initializer\+\_\+list$<$ \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$ ids)
+\begin{DoxyCompactList}\small\item\em estrae un oggetto serializzabile dal database \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmm_1_1_d_b_master_a68c25d223994752e8b4d6156a23651f2}{extract\+\_\+from\+\_\+db}} (\mbox{\hyperlink{classmm_1_1_i_serializable}{I\+Serializable}} \&obj, const \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} \&id)
+\begin{DoxyCompactList}\small\item\em shortcut per la versione che accetta un initializer\+\_\+list per poterla chiamare con un solo id in modo semplice \end{DoxyCompactList}\item 
+vector$<$ map$<$ string, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$ $>$ \mbox{\hyperlink{classmm_1_1_d_b_master_aef9d7063da9d7b4e0fb0a20a6d06368f}{get\+\_\+rows}} (string table\+\_\+name, string id\+\_\+name=\char`\"{}\char`\"{}, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} id=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em estrae un insieme di righe da una tabella \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmm_1_1_d_b_master_a16926fd78511ec82ea52da00b84a5d9d}{exists}} (string table\+\_\+name, string id\+\_\+name, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} id)
+\begin{DoxyCompactList}\small\item\em controlla se nella tabella esiste già un elemento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membri pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+static const string \& \mbox{\hyperlink{classmm_1_1_d_b_master_a65586b91e19e610db40ef1d6e81cfd4a}{get\+\_\+db\+\_\+file\+\_\+name}} ()
+\item 
+static void \mbox{\hyperlink{classmm_1_1_d_b_master_a3346d25779e18ed7ad70eed0d89347e9}{set\+\_\+db\+\_\+file\+\_\+name}} (const string \&db\+\_\+file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em imposta il path nel quale trovare il database \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classmm_1_1_d_b_master}{D\+B\+Master}} \& \mbox{\hyperlink{classmm_1_1_d_b_master_a1f3b04e515b1999d3900353c0054f498}{get\+\_\+instance}} () noexcept(false)
+\begin{DoxyCompactList}\small\item\em restituisce una reference (non costante) all\textquotesingle{}oggetto db \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Singleton che rappresenta il database, contiene tutte le funzioni necessarie per scrivere un oggetto di tipo derivato da \mbox{\hyperlink{classmm_1_1_i_serializable}{I\+Serializable}} e per leggerlo. Nasconde le chiamate alle A\+PI C di sqlite3. 
+
+È un singleton di tipo lazy. Prima di chiamare get\+\_\+instance è sempre necessario informare la classe del path del database chiamando set\+\_\+db\+\_\+name 
+
+\subsection{Documentazione dei costruttori e dei distruttori}
+\mbox{\Hypertarget{classmm_1_1_d_b_master_a7571cbb3fe77a491d57595ec9bc86abf}\label{classmm_1_1_d_b_master_a7571cbb3fe77a491d57595ec9bc86abf}} 
+\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}!D\+B\+Master@{D\+B\+Master}}
+\index{D\+B\+Master@{D\+B\+Master}!mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+\subsubsection{\texorpdfstring{D\+B\+Master()}{DBMaster()}}
+{\footnotesize\ttfamily mm\+::\+D\+B\+Master\+::\+D\+B\+Master (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmm_1_1_d_b_master}{D\+B\+Master}} \&}]{old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\subsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{classmm_1_1_d_b_master_a187988c8741d0a2c5806919b8d672af0}\label{classmm_1_1_d_b_master_a187988c8741d0a2c5806919b8d672af0}} 
+\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}!add\+\_\+to\+\_\+db@{add\+\_\+to\+\_\+db}}
+\index{add\+\_\+to\+\_\+db@{add\+\_\+to\+\_\+db}!mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+\subsubsection{\texorpdfstring{add\+\_\+to\+\_\+db()}{add\_to\_db()}}
+{\footnotesize\ttfamily void mm\+::\+D\+B\+Master\+::add\+\_\+to\+\_\+db (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmm_1_1_i_serializable}{I\+Serializable}} \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+aggiunge un oggetto serializzabile ad database 
+
+Questo metodo può eseguire o un U\+P\+D\+A\+TE o un I\+N\+S\+E\+RT a seconda che l\textquotesingle{}oggetto sia già presente o meno nel db. Può lanciare eccezioni del tipo std\+::runtime error in caso di errore
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\tt in}  & {\em obj} & un oggetto serializzabile (che estende la classe \mbox{\hyperlink{classmm_1_1_i_serializable}{I\+Serializable}}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmm_1_1_d_b_master_a16926fd78511ec82ea52da00b84a5d9d}\label{classmm_1_1_d_b_master_a16926fd78511ec82ea52da00b84a5d9d}} 
+\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}!exists@{exists}}
+\index{exists@{exists}!mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+\subsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool mm\+::\+D\+B\+Master\+::exists (\begin{DoxyParamCaption}\item[{string}]{table\+\_\+name,  }\item[{string}]{id\+\_\+name,  }\item[{\mbox{\hyperlink{structmm_1_1_serialized}{mm\+::\+Serialized}}}]{id }\end{DoxyParamCaption})}
+
+
+
+controlla se nella tabella esiste già un elemento. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em table\+\_\+name} & nome della tabella \\
+\hline
+{\em id\+\_\+name} & nome della colonna presa come id \\
+\hline
+{\em id} & valore dell\textquotesingle{}id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmm_1_1_d_b_master_a9e8092b67a249a273668ad042a4084e2}\label{classmm_1_1_d_b_master_a9e8092b67a249a273668ad042a4084e2}} 
+\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}!extract\+\_\+from\+\_\+db@{extract\+\_\+from\+\_\+db}}
+\index{extract\+\_\+from\+\_\+db@{extract\+\_\+from\+\_\+db}!mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+\subsubsection{\texorpdfstring{extract\+\_\+from\+\_\+db()}{extract\_from\_db()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mm\+::\+D\+B\+Master\+::extract\+\_\+from\+\_\+db (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmm_1_1_i_serializable}{mm\+::\+I\+Serializable}} \&}]{obj,  }\item[{initializer\+\_\+list$<$ \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$}]{ids }\end{DoxyParamCaption})}
+
+
+
+estrae un oggetto serializzabile dal database 
+
+Può lanciare eccezioni di tipo std\+::runtime\+\_\+error in caso di errore di comunicazione col database oppure può lanciare eccezioni del tipo record\+\_\+no\+\_\+found\+\_\+error nel caso in cui l\textquotesingle{}oggetto con gli id specificati non sia presente nel db
+
+N.\+B. l\textquotesingle{}oggetto passato in obj viene modificato e qualsiasi dato in esso contenuto viene sovrascritto
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\tt out}  & {\em obj} & un oggetto serializzabile (che estende la classe \mbox{\hyperlink{classmm_1_1_i_serializable}{I\+Serializable}}) in cui salvare i dati del db \\
+\hline
+\mbox{\tt in}  & {\em ids} & lista di oggetti di tipo \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} che servono da primary key nel database \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmm_1_1_d_b_master_a68c25d223994752e8b4d6156a23651f2}\label{classmm_1_1_d_b_master_a68c25d223994752e8b4d6156a23651f2}} 
+\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}!extract\+\_\+from\+\_\+db@{extract\+\_\+from\+\_\+db}}
+\index{extract\+\_\+from\+\_\+db@{extract\+\_\+from\+\_\+db}!mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+\subsubsection{\texorpdfstring{extract\+\_\+from\+\_\+db()}{extract\_from\_db()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mm\+::\+D\+B\+Master\+::extract\+\_\+from\+\_\+db (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmm_1_1_i_serializable}{mm\+::\+I\+Serializable}} \&}]{obj,  }\item[{const \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} \&}]{id }\end{DoxyParamCaption})}
+
+
+
+shortcut per la versione che accetta un initializer\+\_\+list per poterla chiamare con un solo id in modo semplice 
+
+\mbox{\Hypertarget{classmm_1_1_d_b_master_a65586b91e19e610db40ef1d6e81cfd4a}\label{classmm_1_1_d_b_master_a65586b91e19e610db40ef1d6e81cfd4a}} 
+\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}!get\+\_\+db\+\_\+file\+\_\+name@{get\+\_\+db\+\_\+file\+\_\+name}}
+\index{get\+\_\+db\+\_\+file\+\_\+name@{get\+\_\+db\+\_\+file\+\_\+name}!mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+\subsubsection{\texorpdfstring{get\+\_\+db\+\_\+file\+\_\+name()}{get\_db\_file\_name()}}
+{\footnotesize\ttfamily const std\+::string \& mm\+::\+D\+B\+Master\+::get\+\_\+db\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classmm_1_1_d_b_master_a1f3b04e515b1999d3900353c0054f498}\label{classmm_1_1_d_b_master_a1f3b04e515b1999d3900353c0054f498}} 
+\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}!get\+\_\+instance@{get\+\_\+instance}}
+\index{get\+\_\+instance@{get\+\_\+instance}!mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+\subsubsection{\texorpdfstring{get\+\_\+instance()}{get\_instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmm_1_1_d_b_master}{mm\+::\+D\+B\+Master}} \& mm\+::\+D\+B\+Master\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+restituisce una reference (non costante) all\textquotesingle{}oggetto db 
+
+Siccome il distruttore è privato non è possibile che quella reference venga distrutta al di fuori della classe
+
+\begin{DoxyReturn}{Restituisce}
+reference ad un oggetto \mbox{\hyperlink{classmm_1_1_d_b_master}{D\+B\+Master}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmm_1_1_d_b_master_aef9d7063da9d7b4e0fb0a20a6d06368f}\label{classmm_1_1_d_b_master_aef9d7063da9d7b4e0fb0a20a6d06368f}} 
+\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}!get\+\_\+rows@{get\+\_\+rows}}
+\index{get\+\_\+rows@{get\+\_\+rows}!mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+\subsubsection{\texorpdfstring{get\+\_\+rows()}{get\_rows()}}
+{\footnotesize\ttfamily vector$<$ map$<$ string, \mbox{\hyperlink{structmm_1_1_serialized}{mm\+::\+Serialized}} $>$ $>$ mm\+::\+D\+B\+Master\+::get\+\_\+rows (\begin{DoxyParamCaption}\item[{string}]{table\+\_\+name,  }\item[{string}]{id\+\_\+name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{structmm_1_1_serialized}{mm\+::\+Serialized}}}]{id = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+estrae un insieme di righe da una tabella 
+
+Se non vengono passati i parametri id\+\_\+name e id il metodo ritorna tutte le righe della tabella altrimenti ritorna solo le righe che hanno quell\textquotesingle{}id e quell\textquotesingle{}id\+\_\+name
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\tt in}  & {\em table\+\_\+name} & Parametro obbligatorio che contiene il nome della tabella dal quale estrarre le righe \\
+\hline
+\mbox{\tt in}  & {\em id\+\_\+name} & Parametro opzionale che contiene il nome della colonna presa come id \\
+\hline
+\mbox{\tt in}  & {\em id} & Parametro opzionale che contiene il valore che deve essere contenuto nella colonna id\+\_\+name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+Un vettore di mappe di stringe e serialized ogni mappa rappresenta una riga dove una colonna è identificata dalla stringa ed il contenuto dall\textquotesingle{}oggetto serialized 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmm_1_1_d_b_master_af556b0856b79cb8bff3da0565badeac0}\label{classmm_1_1_d_b_master_af556b0856b79cb8bff3da0565badeac0}} 
+\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}!operator=@{operator=}}
+\index{operator=@{operator=}!mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classmm_1_1_d_b_master}{D\+B\+Master}}\& mm\+::\+D\+B\+Master\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmm_1_1_d_b_master}{D\+B\+Master}} \&}]{old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classmm_1_1_d_b_master_a4d5d51bf4b3437294a52fcd3747520d3}\label{classmm_1_1_d_b_master_a4d5d51bf4b3437294a52fcd3747520d3}} 
+\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}!remove\+\_\+from\+\_\+db@{remove\+\_\+from\+\_\+db}}
+\index{remove\+\_\+from\+\_\+db@{remove\+\_\+from\+\_\+db}!mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+\subsubsection{\texorpdfstring{remove\+\_\+from\+\_\+db()}{remove\_from\_db()}}
+{\footnotesize\ttfamily void mm\+::\+D\+B\+Master\+::remove\+\_\+from\+\_\+db (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmm_1_1_i_serializable}{I\+Serializable}} \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+rimuove un oggetto serializzabile dal database 
+
+Può lanciare eccezioni di tipo std\+::runtime\+\_\+error in caso di errore di comunicazione col database
+
+N.\+B. sia che l\textquotesingle{}operazione vada a buon fine o meno l\textquotesingle{}oggetto non viene modificato
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\tt in}  & {\em obj} & un oggetto serializzabile (che estende la classe \mbox{\hyperlink{classmm_1_1_i_serializable}{I\+Serializable}}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmm_1_1_d_b_master_a3346d25779e18ed7ad70eed0d89347e9}\label{classmm_1_1_d_b_master_a3346d25779e18ed7ad70eed0d89347e9}} 
+\index{mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}!set\+\_\+db\+\_\+file\+\_\+name@{set\+\_\+db\+\_\+file\+\_\+name}}
+\index{set\+\_\+db\+\_\+file\+\_\+name@{set\+\_\+db\+\_\+file\+\_\+name}!mm\+::\+D\+B\+Master@{mm\+::\+D\+B\+Master}}
+\subsubsection{\texorpdfstring{set\+\_\+db\+\_\+file\+\_\+name()}{set\_db\_file\_name()}}
+{\footnotesize\ttfamily void mm\+::\+D\+B\+Master\+::set\+\_\+db\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{const string \&}]{db\+\_\+file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+imposta il path nel quale trovare il database 
+
+Questa funzione deve sempre essere chiamata prima di una qualsiasi chiamata a get\+\_\+instance 
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\tt in}  & {\em db\+\_\+file\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+
+
+La documentazione per questa classe è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
+\item 
+code/\mbox{\hyperlink{_d_b_master_8hpp}{D\+B\+Master.\+hpp}}\item 
+code/\mbox{\hyperlink{_d_b_master_8cpp}{D\+B\+Master.\+cpp}}\end{DoxyCompactItemize}

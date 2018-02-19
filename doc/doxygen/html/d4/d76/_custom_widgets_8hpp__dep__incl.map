@@ -1,0 +1,10 @@
+<map id="code/gui/view/CustomWidgets.hpp" name="code/gui/view/CustomWidgets.hpp">
+<area shape="rect" id="node2" href="$d0/d1e/_add_prescription_dialog_8hpp.html" title="code/gui/AddPrescription\lDialog.hpp" alt="" coords="104,79,274,117"/>
+<area shape="rect" id="node5" href="$dd/d02/_drug_window_8hpp.html" title="code/gui/DrugWindow.hpp" alt="" coords="511,85,688,111"/>
+<area shape="rect" id="node8" href="$dd/de0/_patient_window_8hpp.html" title="code/gui/PatientWindow.hpp" alt="" coords="298,85,488,111"/>
+<area shape="rect" id="node9" href="$d1/dea/_custom_widgets_8cpp.html" title="code/gui/view/CustomWidgets.cpp" alt="" coords="712,85,937,111"/>
+<area shape="rect" id="node3" href="$df/de8/_add_prescription_dialog_8cpp.html" title="code/gui/AddPrescription\lDialog.cpp" alt="" coords="5,165,175,204"/>
+<area shape="rect" id="node4" href="$d8/d35/_patient_window_8cpp.html" title="code/gui/PatientWindow.cpp" alt="" coords="198,172,387,197"/>
+<area shape="rect" id="node6" href="$d6/d9e/_drug_window_8cpp.html" title="code/gui/DrugWindow.cpp" alt="" coords="611,172,788,197"/>
+<area shape="rect" id="node7" href="$d5/da5/_main_window_8cpp.html" title="code/gui/MainWindow.cpp" alt="" coords="411,172,588,197"/>
+</map>

@@ -1,0 +1,48 @@
+\hypertarget{_i_serializable_8hpp}{}\section{Riferimenti per il file code/interfaces/\+I\+Serializable.hpp}
+\label{_i_serializable_8hpp}\index{code/interfaces/\+I\+Serializable.\+hpp@{code/interfaces/\+I\+Serializable.\+hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Grafo delle dipendenze di inclusione per I\+Serializable.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{d5/df9/_i_serializable_8hpp__incl}
+\end{center}
+\end{figure}
+Questo grafo mostra quali altri file includono direttamente o indirettamente questo file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d51/_i_serializable_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Composti}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionmm_1_1_serialized_union}{mm\+::\+Serialized\+Union}}
+\begin{DoxyCompactList}\small\item\em Union che permette di stivare i tre diversi tipi di dati della enum Stored\+Types. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmm_1_1_serialized}{mm\+::\+Serialized}}
+\begin{DoxyCompactList}\small\item\em Rappresenta un dato da scrivere o estratto dal database. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmm_1_1_i_serializable}{mm\+::\+I\+Serializable}}
+\begin{DoxyCompactList}\small\item\em Funziona come un interfaccia, qualunque classe che erediti da questa potrà essere letta o scritta nel database dal singleton \mbox{\hyperlink{classmm_1_1_d_b_master}{D\+B\+Master}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespace}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemm}{mm}}
+\end{DoxyCompactItemize}
+\subsection*{Tipi enumerati (enum)}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacemm_ad5a796af6d7145f51e84a73ed35a601c}{mm\+::\+Stored\+Types}} \{ \mbox{\hyperlink{namespacemm_ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a}{mm\+::\+I\+N\+T\+E\+G\+ER}}, 
+\mbox{\hyperlink{namespacemm_ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331}{mm\+::\+R\+E\+AL}}, 
+\mbox{\hyperlink{namespacemm_ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5}{mm\+::\+T\+E\+XT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerazione dei tipi che utilizati di S\+Q\+Lite3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacemm_a7ab9a5d20c82db4778995f35e6aa6abb}{mm\+::operator$<$$<$}} (std\+::ostream \&os, const Serialized \&data)
+\end{DoxyCompactItemize}

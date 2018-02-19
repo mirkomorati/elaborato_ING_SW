@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d8/ded/classmm_1_1view_1_1_interaction_entry" kind="class" language="C++" prot="public">
+        <compoundname>mm::view::InteractionEntry</compoundname>
+        <basecompoundref prot="public" virt="non-virtual">ListBoxRow</basecompoundref>
+        <includes refid="d5/d46/_custom_widgets_8hpp" local="no">CustomWidgets.hpp</includes>
+        <sectiondef kind="protected-attrib">
+            <memberdef kind="variable"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1ac17d59c180df431cfffd90501d6845ef"
+                       prot="protected" static="no" mutable="no">
+                <type>sigc::signal&lt; void, <ref refid="d8/ded/classmm_1_1view_1_1_interaction_entry"
+                                                  kindref="compound">mm::view::InteractionEntry
+                </ref> * &gt;
+                </type>
+                <definition>sigc::signal&lt;void, mm::view::InteractionEntry *&gt; mm::view::InteractionEntry::remove
+                </definition>
+                <argsstring></argsstring>
+                <name>remove</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="154" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="154" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1a7eab807cf9cdfb29b37635b03f217161"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Entry</type>
+                <definition>Gtk::Entry mm::view::InteractionEntry::entry</definition>
+                <argsstring></argsstring>
+                <name>entry</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="157" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="157" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1a6292c760a65c48fcba74501bb03ddce3"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Button</type>
+                <definition>Gtk::Button mm::view::InteractionEntry::button</definition>
+                <argsstring></argsstring>
+                <name>button</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="158" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="158" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1a643f1d327f40ead9968f9450bd177db2"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Grid</type>
+                <definition>Gtk::Grid mm::view::InteractionEntry::grid</definition>
+                <argsstring></argsstring>
+                <name>grid</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="159" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="159" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1aea1ba9c4447273cc7cac5c18699c8639"
+                       prot="private" static="no" mutable="no">
+                <type>string</type>
+                <definition>string mm::view::InteractionEntry::drug1</definition>
+                <argsstring></argsstring>
+                <name>drug1</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="160" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="160" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1ab42fd3da251b59607c48560d6becf1b9"
+                       prot="private" static="no" mutable="no">
+                <type>string</type>
+                <definition>string mm::view::InteractionEntry::drug2</definition>
+                <argsstring></argsstring>
+                <name>drug2</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="161" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="161" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1a6ee26295e5dd8871a0cf801014a8cc34"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::view::InteractionEntry::InteractionEntry</definition>
+                <argsstring>()=delete</argsstring>
+                <name>InteractionEntry</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="143" column="1"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1a1e3a924b7b218109d2df6b4ebbc557f0"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::view::InteractionEntry::InteractionEntry</definition>
+                <argsstring>(const Glib::ustring &amp;drug1, const Glib::ustring &amp;drug2)</argsstring>
+                <name>InteractionEntry</name>
+                <param>
+                    <type>const Glib::ustring &amp;</type>
+                    <declname>drug1</declname>
+                </param>
+                <param>
+                    <type>const Glib::ustring &amp;</type>
+                    <declname>drug2</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="145" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="327" bodyend="342"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1a48fc0d3c44a4d0b5364d822ebbdf07a1"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>sigc::signal&lt; void, <ref refid="d8/ded/classmm_1_1view_1_1_interaction_entry"
+                                                  kindref="compound">mm::view::InteractionEntry
+                </ref> * &gt;
+                </type>
+                <definition>sigc::signal&lt; void, mm::view::InteractionEntry * &gt;
+                    mm::view::InteractionEntry::signal_removed
+                </definition>
+                <argsstring>()</argsstring>
+                <name>signal_removed</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="147" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="348" bodyend="350"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1a1f579cbaf213f6e602e8d2b67109a1c2"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string &amp;</type>
+                <definition>const string &amp; mm::view::InteractionEntry::get_drug1</definition>
+                <argsstring>() const</argsstring>
+                <name>get_drug1</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="149" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="352" bodyend="354"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1a58a4843226a5b149541eda7b1905eb85"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const string &amp;</type>
+                <definition>const string &amp; mm::view::InteractionEntry::get_drug2</definition>
+                <argsstring>() const</argsstring>
+                <name>get_drug2</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="151" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="356" bodyend="358"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function"
+                       id="d8/ded/classmm_1_1view_1_1_interaction_entry_1a44a91c9d076764617278a2357dee8264"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::view::InteractionEntry::removeHandler</definition>
+                <argsstring>()</argsstring>
+                <name>removeHandler</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="163" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="344" bodyend="346"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="79">
+                <label>ListBoxRow</label>
+            </node>
+            <node id="78">
+                <label>mm::view::InteractionEntry</label>
+                <link refid="d8/ded/classmm_1_1view_1_1_interaction_entry"/>
+                <childnode refid="79" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="81">
+                <label>ListBoxRow</label>
+            </node>
+            <node id="80">
+                <label>mm::view::InteractionEntry</label>
+                <link refid="d8/ded/classmm_1_1view_1_1_interaction_entry"/>
+                <childnode refid="81" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/view/CustomWidgets.hpp" line="141" column="1"
+                  bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="141" bodyend="164"/>
+        <listofallmembers>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a6292c760a65c48fcba74501bb03ddce3"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>button</name>
+            </member>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1aea1ba9c4447273cc7cac5c18699c8639"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>drug1</name>
+            </member>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1ab42fd3da251b59607c48560d6becf1b9"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>drug2</name>
+            </member>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a7eab807cf9cdfb29b37635b03f217161"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>entry</name>
+            </member>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a1f579cbaf213f6e602e8d2b67109a1c2"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>get_drug1</name>
+            </member>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a58a4843226a5b149541eda7b1905eb85"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>get_drug2</name>
+            </member>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a643f1d327f40ead9968f9450bd177db2"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>grid</name>
+            </member>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a6ee26295e5dd8871a0cf801014a8cc34"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>InteractionEntry</name>
+            </member>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a1e3a924b7b218109d2df6b4ebbc557f0"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>InteractionEntry</name>
+            </member>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1ac17d59c180df431cfffd90501d6845ef"
+                    prot="protected" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>remove</name>
+            </member>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a44a91c9d076764617278a2357dee8264"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>removeHandler</name>
+            </member>
+            <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a48fc0d3c44a4d0b5364d822ebbdf07a1"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::InteractionEntry</scope>
+                <name>signal_removed</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

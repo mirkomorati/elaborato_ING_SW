@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d0/d9e/structmm_1_1_entry_controller" kind="struct" language="C++" prot="public">
+        <compoundname>mm::EntryController</compoundname>
+        <basecompoundref prot="public" virt="non-virtual">trackable</basecompoundref>
+        <includes refid="dc/d55/_widgets_8hpp" local="no">Widgets.hpp</includes>
+        <sectiondef kind="public-attrib">
+            <memberdef kind="variable" id="d0/d9e/structmm_1_1_entry_controller_1ab41f377d1a98b2bf967c81dc1dc7f391"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::Entry *</type>
+                <definition>Gtk::Entry* mm::EntryController::entry</definition>
+                <argsstring></argsstring>
+                <name>entry</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="27" column="1" bodyfile="code/gui/Widgets.hpp"
+                          bodystart="27" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d0/d9e/structmm_1_1_entry_controller_1a8669618dd4526580cdb3cd88f9d16e52"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::EntryController::EntryController</definition>
+                <argsstring>()=delete</argsstring>
+                <name>EntryController</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="16" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="d0/d9e/structmm_1_1_entry_controller_1a8c99741ce10e997c35b397cef397fa6d"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::EntryController::EntryController</definition>
+                <argsstring>(const std::string &amp;entryId)</argsstring>
+                <name>EntryController</name>
+                <param>
+                    <type>const std::string &amp;</type>
+                    <declname>entryId</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="18" column="1" bodyfile="code/gui/Widgets.cpp"
+                          bodystart="16" bodyend="19"/>
+            </memberdef>
+            <memberdef kind="function" id="d0/d9e/structmm_1_1_entry_controller_1ad4d3a1e3dc08262fe244e8c9bc0a455c"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::EntryController::entryTextChanged</definition>
+                <argsstring>(const Glib::ustring &amp;, int *)</argsstring>
+                <name>entryTextChanged</name>
+                <param>
+                    <type>const Glib::ustring &amp;</type>
+                </param>
+                <param>
+                    <type>int *</type>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="20" column="1" bodyfile="code/gui/Widgets.cpp"
+                          bodystart="10" bodyend="14"/>
+            </memberdef>
+            <memberdef kind="function" id="d0/d9e/structmm_1_1_entry_controller_1a8eb56a968a567d1641c47d0f08b23f6f"
+                       prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::EntryController::reset</definition>
+                <argsstring>()</argsstring>
+                <name>reset</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="23" column="1" bodyfile="code/gui/Widgets.hpp"
+                          bodystart="23" bodyend="23"/>
+            </memberdef>
+            <memberdef kind="function" id="d0/d9e/structmm_1_1_entry_controller_1a8665e8b7d74b0f8c807d5b3ad418e535"
+                       prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+                <type>std::string</type>
+                <definition>std::string mm::EntryController::text</definition>
+                <argsstring>()</argsstring>
+                <name>text</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="25" column="1" bodyfile="code/gui/Widgets.hpp"
+                          bodystart="25" bodyend="25"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="74">
+                <label>mm::EntryController</label>
+                <link refid="d0/d9e/structmm_1_1_entry_controller"/>
+                <childnode refid="75" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="75">
+                <label>trackable</label>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="76">
+                <label>mm::EntryController</label>
+                <link refid="d0/d9e/structmm_1_1_entry_controller"/>
+                <childnode refid="77" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="77">
+                <label>trackable</label>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/Widgets.hpp" line="15" column="1" bodyfile="code/gui/Widgets.hpp" bodystart="15"
+                  bodyend="28"/>
+        <listofallmembers>
+            <member refid="d0/d9e/structmm_1_1_entry_controller_1ab41f377d1a98b2bf967c81dc1dc7f391" prot="public"
+                    virt="non-virtual">
+                <scope>mm::EntryController</scope>
+                <name>entry</name>
+            </member>
+            <member refid="d0/d9e/structmm_1_1_entry_controller_1a8669618dd4526580cdb3cd88f9d16e52" prot="public"
+                    virt="non-virtual">
+                <scope>mm::EntryController</scope>
+                <name>EntryController</name>
+            </member>
+            <member refid="d0/d9e/structmm_1_1_entry_controller_1a8c99741ce10e997c35b397cef397fa6d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::EntryController</scope>
+                <name>EntryController</name>
+            </member>
+            <member refid="d0/d9e/structmm_1_1_entry_controller_1ad4d3a1e3dc08262fe244e8c9bc0a455c" prot="public"
+                    virt="non-virtual">
+                <scope>mm::EntryController</scope>
+                <name>entryTextChanged</name>
+            </member>
+            <member refid="d0/d9e/structmm_1_1_entry_controller_1a8eb56a968a567d1641c47d0f08b23f6f" prot="public"
+                    virt="non-virtual">
+                <scope>mm::EntryController</scope>
+                <name>reset</name>
+            </member>
+            <member refid="d0/d9e/structmm_1_1_entry_controller_1a8665e8b7d74b0f8c807d5b3ad418e535" prot="public"
+                    virt="non-virtual">
+                <scope>mm::EntryController</scope>
+                <name>text</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

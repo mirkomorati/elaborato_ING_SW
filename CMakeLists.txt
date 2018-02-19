@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 project(elaborato_ING_SW)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_CXX_FLAGS -Wextra)
 
@@ -12,13 +12,16 @@ if (${CMAKE_BUILD_TYPE} MATCHES Debug)
     add_definitions(-DDEBUG)
 endif (${CMAKE_BUILD_TYPE} MATCHES Debug)
 
-# icon files to copy in the bundle
-set(OSX_ICON_FILES ${CMAKE_SOURCE_DIR}/glade/med-h.icns)
-# set where in the bundle to put the icns files
-set_source_files_properties(${OSX_ICON_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
-
 find_package(PkgConfig REQUIRED)
 find_package(SQLite3 REQUIRED)
+find_package(FMT REQUIRED)
+
+if (UNIX AND NOT APPLE)
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+    find_path(SPDLOG_INCLUDE_DIRS spdlog)
+    include_directories(${SPDLOG_INCLUDE_DIRS}/spdlog)
+    message("-- ${SPDLOG_INCLUDE_DIRS}")
+endif ()
 
 pkg_check_modules(GTKMM REQUIRED gtkmm-3.0)
 
@@ -29,35 +32,56 @@ include_directories(${SQLITE3_INCLUDE_DIRS})
 
 add_definitions(${GTKMM_CFLAGS} ${GTKMM_CFLAGS_OTHER})
 
-set(SRC_DIR code/src)
-set(HDR_DIR code/hdr)
-set(MAIN_DIR code/mains)
-
 include_directories(${CMAKE_SOURCE_DIR}/inc)
 
-file(GLOB_RECURSE SRC "${SRC_DIR}/*.cpp")
-file(GLOB_RECURSE HDR "${HDR_DIR}/*.hpp")
-set(MAIN_CLI ${MAIN_DIR}/main_cli.cpp)
-set(MAIN ${MAIN_DIR}/main.cpp)
-set(MAIN_WINDOW ${MAIN_DIR}/main_window.cpp)
-set(MAIN_BUNDLE ${MAIN_DIR}/main_bundle.cpp)
+file(GLOB_RECURSE SRC "code/*.cpp")
+file(GLOB_RECURSE HDR "code/*.hpp")
 
-add_executable(elaborato ${MAIN} ${SRC} ${HDR})
-add_executable(elaborato_cli ${MAIN_CLI} ${SRC} ${HDR})
-add_executable(window ${MAIN_WINDOW} ${SRC} ${HDR})
+set(MAIN code/main.cpp)
 
-add_executable(med-h MACOSX_BUNDLE ${MAIN_BUNDLE} ${SRC} ${HDR} ${OSX_ICON_FILES})
 
-# configure CMake to use a custom Info.plist
-set_target_properties(med-h PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/tmp/med-h-Info.plist)
+#file(GLOB_RECURSE SRC "code2/*.cpp")
+#file(GLOB_RECURSE HDR "code2/*.hpp")
 
-target_link_libraries(elaborato ${GTKMM_LDFLAGS})
-target_link_libraries(elaborato ${SQLITE3_LIBRARIES})
-target_link_libraries(elaborato_cli ${SQLITE3_LIBRARIES})
-target_link_libraries(elaborato_cli ${GTKMM_LDFLAGS})
-target_link_libraries(window ${GTKMM_LDFLAGS})
-target_link_libraries(window ${SQLITE3_LIBRARIES})
+#set(MAIN code2/main.cpp)
+
+set(GLADE_FILES ${CMAKE_SOURCE_DIR}/glade/mainWindow.glade ${CMAKE_SOURCE_DIR}/glade/style.css ${CMAKE_SOURCE_DIR}/glade/logoverona.png)
+set(CONF_FILE ${CMAKE_SOURCE_DIR}/tmp/config.json)
+
+if (APPLE)
+    # icon files to copy in the bundle
+    set(OSX_ICON_FILES ${CMAKE_SOURCE_DIR}/glade/med-h.icns)
+    file(GLOB_RECURSE OSX_ICON_SET ${CMAKE_SOURCE_DIR}/glade/icons.iconset/*.png)
+    file(GLOB_RECURSE ICONS ${CMAKE_SOURCE_DIR}/glade/graphics/*.png)
+
+    # set where in the bundle to put the icns files
+    set_source_files_properties(${OSX_ICON_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
+    set_source_files_properties(${ICONS} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/glade)
+    set_source_files_properties(${OSX_ICON_SET} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/icon.iconset)
+    set_source_files_properties(${CONF_FILE} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
+
+    # set where to put in the bundle the glade file
+    set_source_files_properties(${GLADE_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/glade)
+
+    # setting up the defined variable GLADE_FILE_NAME
+    add_definitions(-DGLADE_FILE_NAME="../Resources/glade/mainWindow.glade"
+            -DGLADE_CSS_FILE="../Resources/glade/style.css" -DCONFIG_FILE="../Resources/config.json")
+
+    add_executable(med-h MACOSX_BUNDLE ${MAIN} ${SRC} ${HDR} ${OSX_ICON_FILES} ${OSX_ICON_SET} ${GLADE_FILES} ${CONF_FILE} ${ICONS})
+
+    # configure CMake to use a custom Info.plist
+    set_target_properties(med-h PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/tmp/med-h-Info.plist)
+
+endif (APPLE)
+
+if (UNIX AND NOT APPLE)
+    add_definitions(-DGLADE_FILE_NAME="glade/mainWindow.glade"
+            -DGLADE_CSS_FILE="glade/style.css" -DCONFIG_FILE="tmp/config.json")
+
+    add_executable(med-h ${MAIN} ${SRC} ${HDR} ${GLADE_FILES} ${CONF_FILE})
+endif (UNIX AND NOT APPLE)
+
 target_link_libraries(med-h ${GTKMM_LDFLAGS})
 target_link_libraries(med-h ${SQLITE3_LIBRARIES})
-
+target_link_libraries(med-h fmt)
 

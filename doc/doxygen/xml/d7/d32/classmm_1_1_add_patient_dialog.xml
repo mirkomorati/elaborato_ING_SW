@@ -1,0 +1,612 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d7/d32/classmm_1_1_add_patient_dialog" kind="class" language="C++" prot="public">
+        <compoundname>mm::AddPatientDialog</compoundname>
+        <basecompoundref refid="df/d35/classmm_1_1_dialog" prot="public" virt="non-virtual">mm::Dialog</basecompoundref>
+        <includes refid="d2/dac/_add_patient_dialog_8hpp" local="no">AddPatientDialog.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a2797cace49662c0fdd7f319ca3a88e95"
+                       prot="private" static="no" mutable="no">
+                <type>bool</type>
+                <definition>bool mm::AddPatientDialog::is_active</definition>
+                <argsstring></argsstring>
+                <name>is_active</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="38" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="38" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a5333e97b5c2aa3bfb9a8d202fe97c39b"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Button *</type>
+                <definition>Gtk::Button* mm::AddPatientDialog::ok_button</definition>
+                <argsstring></argsstring>
+                <name>ok_button</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="40" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="40" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1ac440e8fd9713a4bfb6d56deb3180e9a8"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Button *</type>
+                <definition>Gtk::Button* mm::AddPatientDialog::cancel_button</definition>
+                <argsstring></argsstring>
+                <name>cancel_button</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="41" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="41" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a5bfcb366c07d17a7e3cf9a27ede52326"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                </type>
+                <definition>EntryController mm::AddPatientDialog::first_name</definition>
+                <argsstring></argsstring>
+                <name>first_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="43" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="43" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a3e9eb9c3a7c843bb7c3628464414d423"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                </type>
+                <definition>EntryController mm::AddPatientDialog::last_name</definition>
+                <argsstring></argsstring>
+                <name>last_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="44" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="44" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a979240bd925db658fda7665e2579befc"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                </type>
+                <definition>EntryController mm::AddPatientDialog::fiscal_code</definition>
+                <argsstring></argsstring>
+                <name>fiscal_code</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="45" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="45" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a3f39e70623a58b25700fddb1db3178fd"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                </type>
+                <definition>EntryController mm::AddPatientDialog::street</definition>
+                <argsstring></argsstring>
+                <name>street</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="46" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="46" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a4fbef1a9ffe0fa2454c67d16bd5bd784"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                </type>
+                <definition>EntryController mm::AddPatientDialog::civic</definition>
+                <argsstring></argsstring>
+                <name>civic</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="47" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="47" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a729defb46e48fe2cb2221e40f772df4f"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                </type>
+                <definition>EntryController mm::AddPatientDialog::zip_code</definition>
+                <argsstring></argsstring>
+                <name>zip_code</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="48" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="48" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a2f677acc1bb7feba6f474578dfa90f43"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                </type>
+                <definition>EntryController mm::AddPatientDialog::city</definition>
+                <argsstring></argsstring>
+                <name>city</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="49" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="49" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1aeb5717e50bd86e3bfaad542d4de9ddd3"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                </type>
+                <definition>EntryController mm::AddPatientDialog::country</definition>
+                <argsstring></argsstring>
+                <name>country</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="50" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="50" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a19f976cfa28a7734ad19d43501fc854f"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                </type>
+                <definition>EntryController mm::AddPatientDialog::birth_city</definition>
+                <argsstring></argsstring>
+                <name>birth_city</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="51" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="51" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a82301d8894ba881b0b2f427a8ff68b2e"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                </type>
+                <definition>EntryController mm::AddPatientDialog::birth_country</definition>
+                <argsstring></argsstring>
+                <name>birth_country</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="52" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="52" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1a2319e761427f547c09f7ec1a7ccfdff2"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d9e/structmm_1_1_entry_controller" kindref="compound">EntryController</ref>
+                </type>
+                <definition>EntryController mm::AddPatientDialog::riskFactors</definition>
+                <argsstring></argsstring>
+                <name>riskFactors</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="53" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="53" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d7/d32/classmm_1_1_add_patient_dialog_1aa20d9625f61a4a8fc6608a1a796b1e42"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d52/structmm_1_1_date_controller" kindref="compound">DateController</ref>
+                </type>
+                <definition>DateController mm::AddPatientDialog::birthDate</definition>
+                <argsstring></argsstring>
+                <name>birthDate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="54" column="1"
+                          bodyfile="code/gui/AddPatientDialog.hpp" bodystart="54" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1ad81abcf242a1c103f76c1fd4c6406b57"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::AddPatientDialog::AddPatientDialog</definition>
+                <argsstring>()</argsstring>
+                <name>AddPatientDialog</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="18" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="14" bodyend="32"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a0247912794984eb19c43842ab9037708"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>void</type>
+                <definition>void mm::AddPatientDialog::show</definition>
+                <argsstring>() override</argsstring>
+                <name>show</name>
+                <reimplements refid="df/d35/classmm_1_1_dialog_1afda4b0dc7c0ac027c4b8fdb95713700f">show</reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="20" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="34" bodyend="39"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a459a8acbec1c8a5a87e00f23402d3b5d"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>bool</type>
+                <definition>bool mm::AddPatientDialog::isActive</definition>
+                <argsstring>() override</argsstring>
+                <name>isActive</name>
+                <reimplements refid="df/d35/classmm_1_1_dialog_1a22abaf4e90b6fdca5c20039f6b9e15ac">isActive
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="22" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="41" bodyend="43"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a7c4f7d1dd42d139bffbe54bb478b1f82"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::AddPatientDialog::~AddPatientDialog</definition>
+                <argsstring>() override=default</argsstring>
+                <name>~AddPatientDialog</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="24" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a64c8c2ea3b1c69a858f4eaec1854270a"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>void</type>
+                <definition>void mm::AddPatientDialog::reset</definition>
+                <argsstring>() override</argsstring>
+                <name>reset</name>
+                <reimplements refid="df/d35/classmm_1_1_dialog_1abe6e5ac072c12c06971f60491f079d80">reset</reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="26" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="97" bodyend="109"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1aae8f2895b071b7a931bcc9fbdc3b1c37"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>void</type>
+                <definition>void mm::AddPatientDialog::dispose</definition>
+                <argsstring>() override</argsstring>
+                <name>dispose</name>
+                <reimplements refid="df/d35/classmm_1_1_dialog_1a3f2e361836af48ee3808f4dd6e4f8e48">dispose
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="30" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="82" bodyend="84"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1af69efcbeb9c15d2529dd84396a70f3bd"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AddPatientDialog::dispose</definition>
+                <argsstring>(bool notify)</argsstring>
+                <name>dispose</name>
+                <param>
+                    <type>bool</type>
+                    <declname>notify</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="32" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="86" bodyend="95"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a12f3f4fdd12cf97f161f8879130db857"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AddPatientDialog::okHandler</definition>
+                <argsstring>()</argsstring>
+                <name>okHandler</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="34" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="45" bodyend="76"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d32/classmm_1_1_add_patient_dialog_1a40b7756449bda543baec9695aaef7d05"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AddPatientDialog::cancelHandler</definition>
+                <argsstring>()</argsstring>
+                <name>cancelHandler</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AddPatientDialog.hpp" line="36" column="1"
+                          bodyfile="code/gui/AddPatientDialog.cpp" bodystart="78" bodyend="80"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="11">
+                <label>trackable</label>
+            </node>
+            <node id="10">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="8">
+                <label>mm::AddPatientDialog</label>
+                <link refid="d7/d32/classmm_1_1_add_patient_dialog"/>
+                <childnode refid="9" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="9">
+                <label>mm::Dialog</label>
+                <link refid="df/d35/classmm_1_1_dialog"/>
+                <childnode refid="10" relation="public-inheritance">
+                </childnode>
+                <childnode refid="11" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="15">
+                <label>trackable</label>
+            </node>
+            <node id="14">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="12">
+                <label>mm::AddPatientDialog</label>
+                <link refid="d7/d32/classmm_1_1_add_patient_dialog"/>
+                <childnode refid="13" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="13">
+                <label>mm::Dialog</label>
+                <link refid="df/d35/classmm_1_1_dialog"/>
+                <childnode refid="14" relation="public-inheritance">
+                </childnode>
+                <childnode refid="15" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/AddPatientDialog.hpp" line="16" column="1" bodyfile="code/gui/AddPatientDialog.hpp"
+                  bodystart="16" bodyend="55"/>
+        <listofallmembers>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1ad81abcf242a1c103f76c1fd4c6406b57" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>AddPatientDialog</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>attach</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a19f976cfa28a7734ad19d43501fc854f" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>birth_city</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a82301d8894ba881b0b2f427a8ff68b2e" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>birth_country</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1aa20d9625f61a4a8fc6608a1a796b1e42" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>birthDate</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1ac440e8fd9713a4bfb6d56deb3180e9a8" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>cancel_button</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a40b7756449bda543baec9695aaef7d05" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>cancelHandler</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a2f677acc1bb7feba6f474578dfa90f43" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>city</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a4fbef1a9ffe0fa2454c67d16bd5bd784" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>civic</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1aeb5717e50bd86e3bfaad542d4de9ddd3" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>country</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>detach</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1aae8f2895b071b7a931bcc9fbdc3b1c37" prot="private"
+                    virt="virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>dispose</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1af69efcbeb9c15d2529dd84396a70f3bd" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>dispose</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a5bfcb366c07d17a7e3cf9a27ede52326" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>first_name</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a979240bd925db658fda7665e2579befc" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>fiscal_code</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a2797cace49662c0fdd7f319ca3a88e95" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>is_active</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a459a8acbec1c8a5a87e00f23402d3b5d" prot="public"
+                    virt="virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>isActive</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a3e9eb9c3a7c843bb7c3628464414d423" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>last_name</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a5333e97b5c2aa3bfb9a8d202fe97c39b" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>ok_button</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a12f3f4fdd12cf97f161f8879130db857" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>okHandler</name>
+            </member>
+            <member refid="df/d35/classmm_1_1_dialog_1a9864219c61623b484d8f8c161808e136" prot="protected"
+                    virt="virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>onDelete</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a64c8c2ea3b1c69a858f4eaec1854270a" prot="public"
+                    virt="virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>reset</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a2319e761427f547c09f7ec1a7ccfdff2" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>riskFactors</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a0247912794984eb19c43842ab9037708" prot="public"
+                    virt="virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>show</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a3f39e70623a58b25700fddb1db3178fd" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>street</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a729defb46e48fe2cb2221e40f772df4f" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>zip_code</name>
+            </member>
+            <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a7c4f7d1dd42d139bffbe54bb478b1f82" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>~AddPatientDialog</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" prot="public"
+                    virt="virtual">
+                <scope>mm::AddPatientDialog</scope>
+                <name>~ISubject</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

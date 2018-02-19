@@ -1,0 +1,211 @@
+\hypertarget{classmm_1_1model_1_1_drug}{}\section{Riferimenti per la classe mm\+:\+:model\+:\+:Drug}
+\label{classmm_1_1model_1_1_drug}\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+
+
+{\ttfamily \#include $<$Drug.\+hpp$>$}
+
+
+
+Diagramma delle classi per mm\+:\+:model\+:\+:Drug
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{d1/d98/classmm_1_1model_1_1_drug__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagramma di collaborazione per mm\+:\+:model\+:\+:Drug\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d7/d98/classmm_1_1model_1_1_drug__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Composti}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmm_1_1model_1_1_drug_1_1_tree_model}{Tree\+Model}}
+\end{DoxyCompactItemize}
+\subsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmm_1_1model_1_1_drug_a23f6e0538f52bd77fb8fa511392889a6}{Drug}} (const string \&name, float price)
+\item 
+\mbox{\hyperlink{classmm_1_1model_1_1_drug_a60cb5ecb3ed21da2f7f7e8bc94a1019d}{Drug}} ()=default
+\item 
+map$<$ string, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$ \mbox{\hyperlink{classmm_1_1model_1_1_drug_a5d4fa5bf5e4700f833547c5114764c7b}{serialize}} () const override
+\item 
+void \mbox{\hyperlink{classmm_1_1model_1_1_drug_adc9cd19eb2d0c3c271c01c41cf10d600}{unserialize}} (map$<$ string, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$ map) override
+\item 
+string \mbox{\hyperlink{classmm_1_1model_1_1_drug_a7fa9dbb569b89f397d4b865b778b3751}{get\+\_\+table\+\_\+name}} () const override
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{classmm_1_1model_1_1_drug_a019770ab95f95f34bbc204c4c3860bfa}{get\+\_\+primary\+\_\+key}} () const override
+\item 
+const string \& \mbox{\hyperlink{classmm_1_1model_1_1_drug_ac01bfb91a074b57a3ba3b5b6f567e726}{get\+\_\+name}} () const
+\item 
+float \mbox{\hyperlink{classmm_1_1model_1_1_drug_a0add6ee0680f5028d0e820033ebada20}{get\+\_\+price}} () const
+\item 
+const string \& \mbox{\hyperlink{classmm_1_1model_1_1_drug_a2435614b64f13687d25b04f7d9335c9a}{get\+\_\+pharmaceutical\+\_\+form}} () const
+\item 
+const vector$<$ string $>$ \& \mbox{\hyperlink{classmm_1_1model_1_1_drug_a9116e111f2a546dbc35fd5e08863f37a}{get\+\_\+contraindications}} () const
+\item 
+const string \mbox{\hyperlink{classmm_1_1model_1_1_drug_a71f9f7d210a2fd7fbad86e61affd9105}{get\+\_\+contraindications\+\_\+as\+\_\+string}} () const
+\item 
+const string \mbox{\hyperlink{classmm_1_1model_1_1_drug_a64a1e99b4702d83b9c94379d14b4873b}{get\+\_\+\+A\+T\+C\+\_\+classification}} () const
+\item 
+const vector$<$ pair$<$ string, string $>$ $>$ \& \mbox{\hyperlink{classmm_1_1model_1_1_drug_a809666171510a2511573fa65d4dcd7cb}{get\+\_\+active\+\_\+principles}} () const
+\item 
+const string \mbox{\hyperlink{classmm_1_1model_1_1_drug_aaa9a406540607aed5845bb6af20b1231}{get\+\_\+active\+\_\+principles\+\_\+as\+\_\+string}} () const
+\item 
+const string \mbox{\hyperlink{classmm_1_1model_1_1_drug_ab5bfd8748a32b0cb366c4bf29633f00a}{get\+\_\+price\+\_\+as\+\_\+string}} () const
+\item 
+bool \mbox{\hyperlink{classmm_1_1model_1_1_drug_a15151e60eef91b544c63d8ff55db7bab}{operator==}} (const \mbox{\hyperlink{classmm_1_1model_1_1_drug}{Drug}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{classmm_1_1model_1_1_drug_a51d9c5692835cab9d206580ccf8d0e1e}{operator!=}} (const \mbox{\hyperlink{classmm_1_1model_1_1_drug}{Drug}} \&rhs) const
+\end{DoxyCompactItemize}
+\subsection*{Attributi pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structmm_1_1model_1_1_drug_1_1_tree_model}{Tree\+Model}} \mbox{\hyperlink{classmm_1_1model_1_1_drug_a9169612d0fc3b3b25063a1686be30af9}{drug\+Tree\+Model}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione dei costruttori e dei distruttori}
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a23f6e0538f52bd77fb8fa511392889a6}\label{classmm_1_1model_1_1_drug_a23f6e0538f52bd77fb8fa511392889a6}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!Drug@{Drug}}
+\index{Drug@{Drug}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{Drug()}{Drug()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mm\+::model\+::\+Drug\+::\+Drug (\begin{DoxyParamCaption}\item[{const string \&}]{name,  }\item[{float}]{price }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a60cb5ecb3ed21da2f7f7e8bc94a1019d}\label{classmm_1_1model_1_1_drug_a60cb5ecb3ed21da2f7f7e8bc94a1019d}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!Drug@{Drug}}
+\index{Drug@{Drug}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{Drug()}{Drug()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mm\+::model\+::\+Drug\+::\+Drug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\subsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a809666171510a2511573fa65d4dcd7cb}\label{classmm_1_1model_1_1_drug_a809666171510a2511573fa65d4dcd7cb}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!get\+\_\+active\+\_\+principles@{get\+\_\+active\+\_\+principles}}
+\index{get\+\_\+active\+\_\+principles@{get\+\_\+active\+\_\+principles}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{get\+\_\+active\+\_\+principles()}{get\_active\_principles()}}
+{\footnotesize\ttfamily const vector$<$ pair$<$ string, string $>$ $>$ \& mm\+::model\+::\+Drug\+::get\+\_\+active\+\_\+principles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_aaa9a406540607aed5845bb6af20b1231}\label{classmm_1_1model_1_1_drug_aaa9a406540607aed5845bb6af20b1231}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!get\+\_\+active\+\_\+principles\+\_\+as\+\_\+string@{get\+\_\+active\+\_\+principles\+\_\+as\+\_\+string}}
+\index{get\+\_\+active\+\_\+principles\+\_\+as\+\_\+string@{get\+\_\+active\+\_\+principles\+\_\+as\+\_\+string}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{get\+\_\+active\+\_\+principles\+\_\+as\+\_\+string()}{get\_active\_principles\_as\_string()}}
+{\footnotesize\ttfamily const string mm\+::model\+::\+Drug\+::get\+\_\+active\+\_\+principles\+\_\+as\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a64a1e99b4702d83b9c94379d14b4873b}\label{classmm_1_1model_1_1_drug_a64a1e99b4702d83b9c94379d14b4873b}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!get\+\_\+\+A\+T\+C\+\_\+classification@{get\+\_\+\+A\+T\+C\+\_\+classification}}
+\index{get\+\_\+\+A\+T\+C\+\_\+classification@{get\+\_\+\+A\+T\+C\+\_\+classification}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{get\+\_\+\+A\+T\+C\+\_\+classification()}{get\_ATC\_classification()}}
+{\footnotesize\ttfamily const string mm\+::model\+::\+Drug\+::get\+\_\+\+A\+T\+C\+\_\+classification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a9116e111f2a546dbc35fd5e08863f37a}\label{classmm_1_1model_1_1_drug_a9116e111f2a546dbc35fd5e08863f37a}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!get\+\_\+contraindications@{get\+\_\+contraindications}}
+\index{get\+\_\+contraindications@{get\+\_\+contraindications}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{get\+\_\+contraindications()}{get\_contraindications()}}
+{\footnotesize\ttfamily const vector$<$ string $>$ \& mm\+::model\+::\+Drug\+::get\+\_\+contraindications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a71f9f7d210a2fd7fbad86e61affd9105}\label{classmm_1_1model_1_1_drug_a71f9f7d210a2fd7fbad86e61affd9105}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!get\+\_\+contraindications\+\_\+as\+\_\+string@{get\+\_\+contraindications\+\_\+as\+\_\+string}}
+\index{get\+\_\+contraindications\+\_\+as\+\_\+string@{get\+\_\+contraindications\+\_\+as\+\_\+string}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{get\+\_\+contraindications\+\_\+as\+\_\+string()}{get\_contraindications\_as\_string()}}
+{\footnotesize\ttfamily const string mm\+::model\+::\+Drug\+::get\+\_\+contraindications\+\_\+as\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_ac01bfb91a074b57a3ba3b5b6f567e726}\label{classmm_1_1model_1_1_drug_ac01bfb91a074b57a3ba3b5b6f567e726}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{get\+\_\+name()}{get\_name()}}
+{\footnotesize\ttfamily const string \& mm\+::model\+::\+Drug\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a2435614b64f13687d25b04f7d9335c9a}\label{classmm_1_1model_1_1_drug_a2435614b64f13687d25b04f7d9335c9a}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!get\+\_\+pharmaceutical\+\_\+form@{get\+\_\+pharmaceutical\+\_\+form}}
+\index{get\+\_\+pharmaceutical\+\_\+form@{get\+\_\+pharmaceutical\+\_\+form}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{get\+\_\+pharmaceutical\+\_\+form()}{get\_pharmaceutical\_form()}}
+{\footnotesize\ttfamily const string \& mm\+::model\+::\+Drug\+::get\+\_\+pharmaceutical\+\_\+form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a0add6ee0680f5028d0e820033ebada20}\label{classmm_1_1model_1_1_drug_a0add6ee0680f5028d0e820033ebada20}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!get\+\_\+price@{get\+\_\+price}}
+\index{get\+\_\+price@{get\+\_\+price}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{get\+\_\+price()}{get\_price()}}
+{\footnotesize\ttfamily float mm\+::model\+::\+Drug\+::get\+\_\+price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_ab5bfd8748a32b0cb366c4bf29633f00a}\label{classmm_1_1model_1_1_drug_ab5bfd8748a32b0cb366c4bf29633f00a}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!get\+\_\+price\+\_\+as\+\_\+string@{get\+\_\+price\+\_\+as\+\_\+string}}
+\index{get\+\_\+price\+\_\+as\+\_\+string@{get\+\_\+price\+\_\+as\+\_\+string}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{get\+\_\+price\+\_\+as\+\_\+string()}{get\_price\_as\_string()}}
+{\footnotesize\ttfamily const string mm\+::model\+::\+Drug\+::get\+\_\+price\+\_\+as\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a019770ab95f95f34bbc204c4c3860bfa}\label{classmm_1_1model_1_1_drug_a019770ab95f95f34bbc204c4c3860bfa}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!get\+\_\+primary\+\_\+key@{get\+\_\+primary\+\_\+key}}
+\index{get\+\_\+primary\+\_\+key@{get\+\_\+primary\+\_\+key}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{get\+\_\+primary\+\_\+key()}{get\_primary\_key()}}
+{\footnotesize\ttfamily vector$<$ string $>$ mm\+::model\+::\+Drug\+::get\+\_\+primary\+\_\+key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{classmm_1_1_i_serializable_a69c0c514e11e386b6cb1fbd03f14da17}{mm\+::\+I\+Serializable}}.
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a7fa9dbb569b89f397d4b865b778b3751}\label{classmm_1_1model_1_1_drug_a7fa9dbb569b89f397d4b865b778b3751}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!get\+\_\+table\+\_\+name@{get\+\_\+table\+\_\+name}}
+\index{get\+\_\+table\+\_\+name@{get\+\_\+table\+\_\+name}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{get\+\_\+table\+\_\+name()}{get\_table\_name()}}
+{\footnotesize\ttfamily string mm\+::model\+::\+Drug\+::get\+\_\+table\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{classmm_1_1_i_serializable_a9717e6da47fcbac3ffa2e68152464e0a}{mm\+::\+I\+Serializable}}.
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a51d9c5692835cab9d206580ccf8d0e1e}\label{classmm_1_1model_1_1_drug_a51d9c5692835cab9d206580ccf8d0e1e}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool mm\+::model\+::\+Drug\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmm_1_1model_1_1_drug}{Drug}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a15151e60eef91b544c63d8ff55db7bab}\label{classmm_1_1model_1_1_drug_a15151e60eef91b544c63d8ff55db7bab}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!operator==@{operator==}}
+\index{operator==@{operator==}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool mm\+::model\+::\+Drug\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmm_1_1model_1_1_drug}{Drug}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a5d4fa5bf5e4700f833547c5114764c7b}\label{classmm_1_1model_1_1_drug_a5d4fa5bf5e4700f833547c5114764c7b}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!serialize@{serialize}}
+\index{serialize@{serialize}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily map$<$ string, \mbox{\hyperlink{structmm_1_1_serialized}{mm\+::\+Serialized}} $>$ mm\+::model\+::\+Drug\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{classmm_1_1_i_serializable_a20a59e2324c8dbf6fefe4d11ae89d0fb}{mm\+::\+I\+Serializable}}.
+
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_adc9cd19eb2d0c3c271c01c41cf10d600}\label{classmm_1_1model_1_1_drug_adc9cd19eb2d0c3c271c01c41cf10d600}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!unserialize@{unserialize}}
+\index{unserialize@{unserialize}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{unserialize()}{unserialize()}}
+{\footnotesize\ttfamily void mm\+::model\+::\+Drug\+::unserialize (\begin{DoxyParamCaption}\item[{map$<$ string, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{classmm_1_1model_1_1_drug_a9169612d0fc3b3b25063a1686be30af9}\label{classmm_1_1model_1_1_drug_a9169612d0fc3b3b25063a1686be30af9}} 
+\index{mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}!drug\+Tree\+Model@{drug\+Tree\+Model}}
+\index{drug\+Tree\+Model@{drug\+Tree\+Model}!mm\+::model\+::\+Drug@{mm\+::model\+::\+Drug}}
+\subsubsection{\texorpdfstring{drug\+Tree\+Model}{drugTreeModel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmm_1_1model_1_1_drug_1_1_tree_model}{mm\+::model\+::\+Drug\+::\+Tree\+Model}} mm\+::model\+::\+Drug\+::drug\+Tree\+Model\hspace{0.3cm}{\ttfamily [static]}}
+
+Project Elaborato\+\_\+\+I\+N\+G\+\_\+\+SW \begin{DoxyAuthor}{Autore}
+Noè Murr, Mirko Morati 
+\end{DoxyAuthor}
+
+
+La documentazione per questa classe è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
+\item 
+code/model/\mbox{\hyperlink{_drug_8hpp}{Drug.\+hpp}}\item 
+code/model/\mbox{\hyperlink{_drug_8cpp}{Drug.\+cpp}}\end{DoxyCompactItemize}

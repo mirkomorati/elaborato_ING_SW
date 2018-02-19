@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="dir_b52c80b7fda602b2cf8039a593632a4a" kind="dir">
+        <compoundname>code/utils</compoundname>
+        <innerfile refid="dc/d1f/_date_8cpp">Date.cpp</innerfile>
+        <innerfile refid="d8/d63/_date_8hpp">Date.hpp</innerfile>
+        <innerfile refid="d3/d69/_date_by_8cpp">DateBy.cpp</innerfile>
+        <innerfile refid="d9/da3/_date_by_8hpp">DateBy.hpp</innerfile>
+        <innerfile refid="d4/dc3/os_8hpp">os.hpp</innerfile>
+        <innerfile refid="d2/dce/string_utils_8hpp">stringUtils.hpp</innerfile>
+        <innerfile refid="db/d84/_time_8cpp">Time.cpp</innerfile>
+        <innerfile refid="d8/d3a/_time_8hpp">Time.hpp</innerfile>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="code/utils/"/>
+    </compounddef>
+</doxygen>

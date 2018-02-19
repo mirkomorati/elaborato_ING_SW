@@ -1,0 +1,2009 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd"
+              version="1.8.14">
+    <compound refid="d7/d05/classmm_1_1_about_dialog" kind="class">
+        <name>mm::AboutDialog</name>
+        <member refid="d7/d05/classmm_1_1_about_dialog_1ad607d81be4917809b5d0daf8407c5767" kind="variable">
+            <name>active</name>
+        </member>
+        <member refid="d7/d05/classmm_1_1_about_dialog_1a19077d54c5cbf3ebc7492040a63d1830" kind="function">
+            <name>dispose</name>
+        </member>
+        <member refid="d7/d05/classmm_1_1_about_dialog_1a489ffce563c6dae1dfef30518a778197" kind="function">
+            <name>AboutDialog</name>
+        </member>
+        <member refid="d7/d05/classmm_1_1_about_dialog_1a9e06dc12f6950b74ccf6ccece693f108" kind="function">
+            <name>show</name>
+        </member>
+        <member refid="d7/d05/classmm_1_1_about_dialog_1adc8aec0378d9d146c78eaf9a204dbf27" kind="function">
+            <name>isActive</name>
+        </member>
+        <member refid="d7/d05/classmm_1_1_about_dialog_1a21f5b0a7c9d8e43baab78e073d7ade2b" kind="function">
+            <name>reset</name>
+        </member>
+        <member refid="d7/d05/classmm_1_1_about_dialog_1a9a5feecb03e737d3bdbbf2a97dd7fbc4" kind="function">
+            <name>onResponse</name>
+        </member>
+    </compound>
+    <compound refid="d7/d32/classmm_1_1_add_patient_dialog" kind="class">
+        <name>mm::AddPatientDialog</name>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a2797cace49662c0fdd7f319ca3a88e95" kind="variable">
+            <name>is_active</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a5333e97b5c2aa3bfb9a8d202fe97c39b" kind="variable">
+            <name>ok_button</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1ac440e8fd9713a4bfb6d56deb3180e9a8" kind="variable">
+            <name>cancel_button</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a5bfcb366c07d17a7e3cf9a27ede52326" kind="variable">
+            <name>first_name</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a3e9eb9c3a7c843bb7c3628464414d423" kind="variable">
+            <name>last_name</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a979240bd925db658fda7665e2579befc" kind="variable">
+            <name>fiscal_code</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a3f39e70623a58b25700fddb1db3178fd" kind="variable">
+            <name>street</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a4fbef1a9ffe0fa2454c67d16bd5bd784" kind="variable">
+            <name>civic</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a729defb46e48fe2cb2221e40f772df4f" kind="variable">
+            <name>zip_code</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a2f677acc1bb7feba6f474578dfa90f43" kind="variable">
+            <name>city</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1aeb5717e50bd86e3bfaad542d4de9ddd3" kind="variable">
+            <name>country</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a19f976cfa28a7734ad19d43501fc854f" kind="variable">
+            <name>birth_city</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a82301d8894ba881b0b2f427a8ff68b2e" kind="variable">
+            <name>birth_country</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a2319e761427f547c09f7ec1a7ccfdff2" kind="variable">
+            <name>riskFactors</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1aa20d9625f61a4a8fc6608a1a796b1e42" kind="variable">
+            <name>birthDate</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1ad81abcf242a1c103f76c1fd4c6406b57" kind="function">
+            <name>AddPatientDialog</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a0247912794984eb19c43842ab9037708" kind="function">
+            <name>show</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a459a8acbec1c8a5a87e00f23402d3b5d" kind="function">
+            <name>isActive</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a7c4f7d1dd42d139bffbe54bb478b1f82" kind="function">
+            <name>~AddPatientDialog</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a64c8c2ea3b1c69a858f4eaec1854270a" kind="function">
+            <name>reset</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1aae8f2895b071b7a931bcc9fbdc3b1c37" kind="function">
+            <name>dispose</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1af69efcbeb9c15d2529dd84396a70f3bd" kind="function">
+            <name>dispose</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a12f3f4fdd12cf97f161f8879130db857" kind="function">
+            <name>okHandler</name>
+        </member>
+        <member refid="d7/d32/classmm_1_1_add_patient_dialog_1a40b7756449bda543baec9695aaef7d05" kind="function">
+            <name>cancelHandler</name>
+        </member>
+    </compound>
+    <compound refid="db/d16/classmm_1_1_add_prescription_dialog" kind="class">
+        <name>mm::AddPrescriptionDialog</name>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1af3b9a51c58e2084d79d7cae5736a37ba" kind="variable">
+            <name>is_active</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1aefadb51fa6241de2187dccae5c2ce507" kind="variable">
+            <name>ok_button</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a4d43416b15c6b89afc244d24ad7d3a11" kind="variable">
+            <name>cancel_button</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a73c986e3f8f8e787a56794f1f804bf5e" kind="variable">
+            <name>drugAdd</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a1fabb88b09fe3a717c3095d2e5af1274" kind="variable">
+            <name>interactionAdd</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a1b4bc36aeb66236b8940d4e6ee0b00e3" kind="variable">
+            <name>drugComboBox</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a71bbab2ffd8040619e9f364b24425568" kind="variable">
+            <name>monthComboBox</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a4f30b77dc5fa455932dd1bbff1a96dd0" kind="variable">
+            <name>interactionComboBox1</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1aadd61704fdc0c42586a2e6ece1121eaf" kind="variable">
+            <name>interactionComboBox2</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1afe0a48855f5a6866970197f93070ff6a" kind="variable">
+            <name>interactionListBox</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a87702eaf839fc63e01e04bc438840d06" kind="variable">
+            <name>drugListBox</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1aa4f2da1763d4e1595d1cdb8147042977" kind="variable">
+            <name>drugEntries</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a91003433df2fb595a0719ff89d0a779f" kind="variable">
+            <name>interactionEntries</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a0956469781e124fbfd283212bf1796ec" kind="function">
+            <name>AddPrescriptionDialog</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1aa1c86141b2d45e141684bd99d557b8e4" kind="function">
+            <name>show</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1aacb58c7617be2323d91cd5ab2f28e354" kind="function">
+            <name>dispose</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a4ff93500e8fd90512dc4575147b2c910" kind="function">
+            <name>isActive</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a6ace04587432a197436bb04c7b68d60d" kind="function">
+            <name>reset</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1aef188f7c530ca399b6bd44bbb4472085" kind="function">
+            <name>~AddPrescriptionDialog</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a5b527af041e75b199a053bb131c6ca29" kind="function">
+            <name>okHandler</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1af8fa2d00cb2466e91d8025a5e107c620" kind="function">
+            <name>cancelHandler</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1addba1a21d2362c67ec7abee99aa7aecf" kind="function">
+            <name>drugAddHandler</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a3c9c41f2fde98b410e8e4f65b5f500ac" kind="function">
+            <name>drugRemoveHandler</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a0b32c3d0972bee04ae8f2844e45fa548" kind="function">
+            <name>interactionRemoveHandler</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1ad8caab72c6d5ea2faeb40aad49ae00ee" kind="function">
+            <name>initDrugComboBox</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a1ee0258ac9001e6d3fc5d5b8a81b9677" kind="function">
+            <name>initMonthComboBox</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1ab3e403207ab943b7b55e6919199ef159" kind="function">
+            <name>monthValidityChanged</name>
+        </member>
+        <member refid="db/d16/classmm_1_1_add_prescription_dialog_1a7cfcff64af3ed8cf9001e42e6833cc28" kind="function">
+            <name>interactionAddHandler</name>
+        </member>
+    </compound>
+    <compound refid="dc/d00/classmm_1_1_configuration" kind="class">
+        <name>mm::Configuration</name>
+        <member refid="dc/d00/classmm_1_1_configuration_1a8dccac7a32ed403f2ad4889a6a5d594e" kind="variable">
+            <name>config_file_name</name>
+        </member>
+        <member refid="dc/d00/classmm_1_1_configuration_1aca106c2a721a20e255c6d8e0065b8a2c" kind="variable">
+            <name>instance</name>
+        </member>
+        <member refid="dc/d00/classmm_1_1_configuration_1a08825788b15157f02b89764197c7e1d0" kind="variable">
+            <name>config</name>
+        </member>
+        <member refid="dc/d00/classmm_1_1_configuration_1ab0a2d79f7deee49d16fb788c88e228d9" kind="function">
+            <name>Configuration</name>
+        </member>
+        <member refid="dc/d00/classmm_1_1_configuration_1a97da12ef9d53614d68144d17a6e35ed0" kind="function">
+            <name>~Configuration</name>
+        </member>
+        <member refid="dc/d00/classmm_1_1_configuration_1a71e5c0e1ad7d82d6a14895a4e85d83b7" kind="function">
+            <name>Configuration</name>
+        </member>
+        <member refid="dc/d00/classmm_1_1_configuration_1a3077aebf459758dce4be716a8ddcb090" kind="function">
+            <name>operator=</name>
+        </member>
+        <member refid="dc/d00/classmm_1_1_configuration_1a30374c407050b9fb3f05dd3c2c01202d" kind="function">
+            <name>get</name>
+        </member>
+        <member refid="dc/d00/classmm_1_1_configuration_1a5cfc5ea56062f53ef9fbd274f6dbe79e" kind="function">
+            <name>get_instance</name>
+        </member>
+        <member refid="dc/d00/classmm_1_1_configuration_1a631c8525beb91fb55d72eb6b58d2d68f" kind="function">
+            <name>get_config_file_name</name>
+        </member>
+        <member refid="dc/d00/classmm_1_1_configuration_1ad526b28d1a7f8c6f854352b840d2d7b4" kind="function">
+            <name>set_config_file_name</name>
+        </member>
+    </compound>
+    <compound refid="df/d88/structmm_1_1util_1_1_date" kind="struct">
+        <name>mm::util::Date</name>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a6a697c80be4f09cdb4ee400721314d87" kind="variable">
+            <name>day</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a018f3e7261b88c9a47aae5b08120b331" kind="variable">
+            <name>month</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a318909ff98468f29c7912fa9cffea079" kind="variable">
+            <name>year</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1afe2513fbf246f7f3e61e7d1a06d0e6d0" kind="function">
+            <name>Date</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a9aaf2c2d5171e081541831c4a756232e" kind="function">
+            <name>Date</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a9065cbdea26e95cfbb6537a5ba06f45d" kind="function">
+            <name>Date</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a9140b9c53f02f7385af15684c81c5ed0" kind="function">
+            <name>set_from_str</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1aa32e7e2771581a860a49a59cdbcec8f8" kind="function">
+            <name>get_as_text</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1ae4b2c74f7e6ebfed3daaafc999af31ba" kind="function">
+            <name>is_valid</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a55071cbbf31cd8956cd4a7d5116e0d95" kind="function">
+            <name>operator==</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a9f2556bcc1150f5542d59b2f9078ee1b" kind="function">
+            <name>operator!=</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1acb395628bc3074f0f5f782e39f7ecbbf" kind="function">
+            <name>operator&lt;</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a5b070fd2cd4a72cf74849abd9244b6d3" kind="function">
+            <name>operator&gt;</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1aec9077b20de935d88cc03e4c454915a3" kind="function">
+            <name>operator&lt;=</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1ab0dc9872f7646c748d492afcff696a0d" kind="function">
+            <name>operator&gt;=</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a9aecce8821f2448c0d2d36a5fbf455b1" kind="function">
+            <name>operator+=</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a36a932c021e6e5e9ebed44752b78fd7c" kind="function">
+            <name>operator+</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1ae875de5d40ab9dfa1f1e22cb8a847b60" kind="function">
+            <name>add_months</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a5ca08a73148a58f47847a30040eee70b" kind="function">
+            <name>add_years</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a1862604492a841a6b98e1a3061d95b96" kind="friend">
+            <name>operator&lt;&lt;</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1ad5ed2bc80bbaa949aa13707a73064345" kind="function">
+            <name>get_current_day</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1ab3da347f3603aa3a7fe057a5a0d012d2" kind="function">
+            <name>get_current_month</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1afec17843da4296a2341290107901eaa5" kind="function">
+            <name>get_current_year</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1af0758fad7ef32fd535db3295136466eb" kind="function">
+            <name>get_current_date</name>
+        </member>
+        <member refid="df/d88/structmm_1_1util_1_1_date_1a89c7d3f4d8af79878a28815ffbe2e536" kind="function">
+            <name>is_leap_year</name>
+        </member>
+    </compound>
+    <compound refid="d5/da8/structmm_1_1util_1_1_date_by" kind="struct">
+        <name>mm::util::DateBy</name>
+        <member refid="d5/da8/structmm_1_1util_1_1_date_by_1a4adb77c6560794be119e39b374498b68" kind="variable">
+            <name>date</name>
+        </member>
+        <member refid="d5/da8/structmm_1_1util_1_1_date_by_1ae431f5029222a6ec9293c4c4564834f3" kind="variable">
+            <name>by</name>
+        </member>
+        <member refid="d5/da8/structmm_1_1util_1_1_date_by_1a2e30c048476714b88489a1a90a1f976c" kind="function">
+            <name>DateBy</name>
+        </member>
+        <member refid="d5/da8/structmm_1_1util_1_1_date_by_1aee4b77cd66c6fc86b3346dcb9fc9992a" kind="friend">
+            <name>operator&lt;&lt;</name>
+        </member>
+    </compound>
+    <compound refid="d0/d52/structmm_1_1_date_controller" kind="struct">
+        <name>mm::DateController</name>
+        <member refid="d0/d52/structmm_1_1_date_controller_1a332df89b4a88fe3ace3d6d86934a575d" kind="variable">
+            <name>day</name>
+        </member>
+        <member refid="d0/d52/structmm_1_1_date_controller_1a1e7373cef0b00e63343ef9d30a1e80c5" kind="variable">
+            <name>month</name>
+        </member>
+        <member refid="d0/d52/structmm_1_1_date_controller_1a36179406cda47b8c18d1a84945a5e61c" kind="variable">
+            <name>year</name>
+        </member>
+        <member refid="d0/d52/structmm_1_1_date_controller_1a3244d913ab9d7b96e9617f8711e34bd8" kind="function">
+            <name>DateController</name>
+        </member>
+        <member refid="d0/d52/structmm_1_1_date_controller_1a591167277348214a72634a4bbc9272ad" kind="function">
+            <name>DateController</name>
+        </member>
+        <member refid="d0/d52/structmm_1_1_date_controller_1a7474c420c78178ee6ee6a2e66c16803f" kind="function">
+            <name>onDateChanged</name>
+        </member>
+        <member refid="d0/d52/structmm_1_1_date_controller_1a9e09c31aa55c3389c6919c716bb8b0dc" kind="function">
+            <name>reset</name>
+        </member>
+        <member refid="d0/d52/structmm_1_1_date_controller_1a8ebf6bda6699414521e4e299fd59e843" kind="function">
+            <name>getDateAsString</name>
+        </member>
+        <member refid="d0/d52/structmm_1_1_date_controller_1aa3c0122bfcc36e8d8b43c8ca7ca76197" kind="function">
+            <name>getDate</name>
+        </member>
+        <member refid="d0/d52/structmm_1_1_date_controller_1aa7f999d2d5afec5c6724f92cf2856171" kind="function">
+            <name>init</name>
+        </member>
+    </compound>
+    <compound refid="da/d0d/classmm_1_1_d_b_master" kind="class">
+        <name>mm::DBMaster</name>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a80f3c2198870e9c0586601bd482232b9" kind="variable">
+            <name>db</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1aa7370086a6e5a10fefd028b08f07947d" kind="variable">
+            <name>db_file_name</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a10c45be15107e144768a62dd38407f40" kind="variable">
+            <name>instance</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a6c831c2decb7f59db00c7409fe2293a3" kind="function">
+            <name>DBMaster</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a5bb82e10f43d32c2572c6f1e2cfa2f6c" kind="function">
+            <name>~DBMaster</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a7571cbb3fe77a491d57595ec9bc86abf" kind="function">
+            <name>DBMaster</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1af556b0856b79cb8bff3da0565badeac0" kind="function">
+            <name>operator=</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a187988c8741d0a2c5806919b8d672af0" kind="function">
+            <name>add_to_db</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a4d5d51bf4b3437294a52fcd3747520d3" kind="function">
+            <name>remove_from_db</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a9e8092b67a249a273668ad042a4084e2" kind="function">
+            <name>extract_from_db</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a68c25d223994752e8b4d6156a23651f2" kind="function">
+            <name>extract_from_db</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1aef9d7063da9d7b4e0fb0a20a6d06368f" kind="function">
+            <name>get_rows</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a16926fd78511ec82ea52da00b84a5d9d" kind="function">
+            <name>exists</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a65586b91e19e610db40ef1d6e81cfd4a" kind="function">
+            <name>get_db_file_name</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a3346d25779e18ed7ad70eed0d89347e9" kind="function">
+            <name>set_db_file_name</name>
+        </member>
+        <member refid="da/d0d/classmm_1_1_d_b_master_1a1f3b04e515b1999d3900353c0054f498" kind="function">
+            <name>get_instance</name>
+        </member>
+    </compound>
+    <compound refid="df/d35/classmm_1_1_dialog" kind="class">
+        <name>mm::Dialog</name>
+        <member refid="df/d35/classmm_1_1_dialog_1a9864219c61623b484d8f8c161808e136" kind="function">
+            <name>onDelete</name>
+        </member>
+        <member refid="df/d35/classmm_1_1_dialog_1afda4b0dc7c0ac027c4b8fdb95713700f" kind="function">
+            <name>show</name>
+        </member>
+        <member refid="df/d35/classmm_1_1_dialog_1a3f2e361836af48ee3808f4dd6e4f8e48" kind="function">
+            <name>dispose</name>
+        </member>
+        <member refid="df/d35/classmm_1_1_dialog_1a22abaf4e90b6fdca5c20039f6b9e15ac" kind="function">
+            <name>isActive</name>
+        </member>
+        <member refid="df/d35/classmm_1_1_dialog_1abe6e5ac072c12c06971f60491f079d80" kind="function">
+            <name>reset</name>
+        </member>
+    </compound>
+    <compound refid="d6/d2e/classmm_1_1model_1_1_doctor" kind="class">
+        <name>mm::model::Doctor</name>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a84d6e576267f8d8ca059b75c8ba70141" kind="variable">
+            <name>first_name</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1aa4c0157bd75d2fbc561484390757b465" kind="variable">
+            <name>last_name</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a5aeb22f1e5edf2db5d481b6caa2b5c7b" kind="variable">
+            <name>birth_date</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a3e56813467e841c9399dd1631762950f" kind="variable">
+            <name>birth_place</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a24caa8c63cdcd5048080fa3dfdf1325d" kind="variable">
+            <name>fiscal_code</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a1c557756aa71af4815bd90ce81eec97c" kind="variable">
+            <name>regional_id</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a1e40104230daf6ee631dde4b90a6eaa3" kind="variable">
+            <name>specialization</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a500c489c276036d2f9da133a2c9b549d" kind="variable">
+            <name>patients</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1ac0e1b01659e5033d0c758ca6a45a2649" kind="function">
+            <name>get_patients_from_db</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a38a5a7d04ea625f39422cb320af18800" kind="function">
+            <name>get_prescriptions</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a76bf6b545709c7a784e4320b11f587bf" kind="function">
+            <name>get_prescriptions</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1ace64e6e74d0e39244c349fe5570ff974" kind="function">
+            <name>get_drugs</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a8b761c1dfbe10348eb99c0397e811e0a" kind="function">
+            <name>get_patients</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a989fbde1a8784d8139d8add9066ab9b1" kind="function">
+            <name>get_patients</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a89aa97cb00bfa2352c2a4f276554e738" kind="function">
+            <name>get_patient_from_fiscal_code</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1ac33c8e6a13054d0c7aea1cf6aec4368f" kind="function">
+            <name>get_first_name</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a86a186641c22223ecb9951112befa3e9" kind="function">
+            <name>get_last_name</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1afa648dfa2f37c1de94a742bd58682899" kind="function">
+            <name>get_birth_date</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a14283e664d8689ad296e46969c129cad" kind="function">
+            <name>get_birth_place</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a2171a9cb9c8a24ad0c0331edae957910" kind="function">
+            <name>serialize</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a20bedf6695024e1930d033995a2ec5bf" kind="function">
+            <name>unserialize</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1af4c37e48f9e5ff26f2295678f10afaa3" kind="function">
+            <name>get_table_name</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a935989cbe2274076c2b409126d4faccd" kind="function">
+            <name>get_primary_key</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1ad49c6f0fdc31a96edaeada72ba88ceec" kind="function">
+            <name>get_fiscal_code</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1a26810a7e1e0682d2dbb7c92ac3a8247b" kind="function">
+            <name>get_regional_id</name>
+        </member>
+        <member refid="d6/d2e/classmm_1_1model_1_1_doctor_1ab5b807b5ce91d9f20603f091e62fe17a" kind="function">
+            <name>get_specialization</name>
+        </member>
+    </compound>
+    <compound refid="db/d9b/classmm_1_1model_1_1_drug" kind="class">
+        <name>mm::model::Drug</name>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a9169612d0fc3b3b25063a1686be30af9" kind="variable">
+            <name>drugTreeModel</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a05bb9d162be5e9805817c06e1357e989" kind="variable">
+            <name>name</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a22780b8f1efeacb013b9440557cce200" kind="variable">
+            <name>price</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a2f237e89aba2d10b6b9379db15aab3d4" kind="variable">
+            <name>pharmaceutical_form</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a4e4747f249e626820a5187ddad52b712" kind="variable">
+            <name>contraindications</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1abf4bce995dc92e09a15a0edb4776d87f" kind="variable">
+            <name>ATC_classification</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a5e9e0de0f4357e8a12b3a07b1c5addb5" kind="variable">
+            <name>active_principles</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a23f6e0538f52bd77fb8fa511392889a6" kind="function">
+            <name>Drug</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a60cb5ecb3ed21da2f7f7e8bc94a1019d" kind="function">
+            <name>Drug</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a5d4fa5bf5e4700f833547c5114764c7b" kind="function">
+            <name>serialize</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1adc9cd19eb2d0c3c271c01c41cf10d600" kind="function">
+            <name>unserialize</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a7fa9dbb569b89f397d4b865b778b3751" kind="function">
+            <name>get_table_name</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a019770ab95f95f34bbc204c4c3860bfa" kind="function">
+            <name>get_primary_key</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1ac01bfb91a074b57a3ba3b5b6f567e726" kind="function">
+            <name>get_name</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a0add6ee0680f5028d0e820033ebada20" kind="function">
+            <name>get_price</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a2435614b64f13687d25b04f7d9335c9a" kind="function">
+            <name>get_pharmaceutical_form</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a9116e111f2a546dbc35fd5e08863f37a" kind="function">
+            <name>get_contraindications</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a71f9f7d210a2fd7fbad86e61affd9105" kind="function">
+            <name>get_contraindications_as_string</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a64a1e99b4702d83b9c94379d14b4873b" kind="function">
+            <name>get_ATC_classification</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a809666171510a2511573fa65d4dcd7cb" kind="function">
+            <name>get_active_principles</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1aaa9a406540607aed5845bb6af20b1231" kind="function">
+            <name>get_active_principles_as_string</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1ab5bfd8748a32b0cb366c4bf29633f00a" kind="function">
+            <name>get_price_as_string</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a15151e60eef91b544c63d8ff55db7bab" kind="function">
+            <name>operator==</name>
+        </member>
+        <member refid="db/d9b/classmm_1_1model_1_1_drug_1a51d9c5692835cab9d206580ccf8d0e1e" kind="function">
+            <name>operator!=</name>
+        </member>
+    </compound>
+    <compound refid="d4/d82/classmm_1_1view_1_1_drug_entry" kind="class">
+        <name>mm::view::DrugEntry</name>
+        <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a34bee6e0f8a4722c4e41b333eac49f60" kind="variable">
+            <name>remove</name>
+        </member>
+        <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a6d36fd6633e305d4293f5d0980d9cccd" kind="variable">
+            <name>entry</name>
+        </member>
+        <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1aece7d8f9ce78895e6fd27de83ac15a90" kind="variable">
+            <name>button</name>
+        </member>
+        <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a326093161e2a038e328b03bc7826fc3b" kind="variable">
+            <name>grid</name>
+        </member>
+        <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1ae384b9b748ad21f9f10f5b3a0cb92e03" kind="variable">
+            <name>drug</name>
+        </member>
+        <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a7ad0e954cd9933565be5a86d6a808249" kind="function">
+            <name>DrugEntry</name>
+        </member>
+        <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1ac1fceaa91adf2812b93c1e1388068c27" kind="function">
+            <name>DrugEntry</name>
+        </member>
+        <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1aa7a9f1fd2d7a48a803314fa2c9a86370" kind="function">
+            <name>signal_removed</name>
+        </member>
+        <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1ada43ec12abdaf70f4c3070b6e7f9806d" kind="function">
+            <name>get_drugName</name>
+        </member>
+        <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a9034293f6c4dbe85af9d02751684d845" kind="function">
+            <name>get_drugForm</name>
+        </member>
+        <member refid="d4/d82/classmm_1_1view_1_1_drug_entry_1a1f669b8aec76bb35218c0273b1600226" kind="function">
+            <name>removeHandler</name>
+        </member>
+    </compound>
+    <compound refid="d2/d52/structmm_1_1model_1_1_drug_tree_model" kind="struct">
+        <name>mm::model::DrugTreeModel</name>
+        <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aae1c93a96cd321861445996965814405" kind="variable">
+            <name>name</name>
+        </member>
+        <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aa93ee13951feb310e5b31775ebf74609" kind="variable">
+            <name>pharmaceutical_form</name>
+        </member>
+        <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a0462c8a43912e7d9b24d302899c73ddd" kind="variable">
+            <name>ATC_classification</name>
+        </member>
+        <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a6c23e14f0c72622e29de9a8d2534dbdd" kind="variable">
+            <name>contraindications</name>
+        </member>
+        <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aa4e0565da99c9e2e41dc8ed416c66903" kind="variable">
+            <name>active_principles</name>
+        </member>
+        <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a19f5c8676ecd88d4bb8b6f5d161d8a6b" kind="variable">
+            <name>price</name>
+        </member>
+        <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a4fe945eeb529bbd8d3f19aa7797764d9" kind="function">
+            <name>DrugTreeModel</name>
+        </member>
+    </compound>
+    <compound refid="d7/dcd/classmm_1_1_drug_window" kind="class">
+        <name>mm::DrugWindow</name>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1ae8052f9255340d48355d7856fb346bce" kind="variable">
+            <name>next</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a457dc4fe25ca7f584a20ec376e397d63" kind="variable">
+            <name>filterDrugOn</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a86be3059412466a0167169cb24a9f70f" kind="variable">
+            <name>filterQuantityOn</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1aae5c7157a865181c8b09fb8b43cb4812" kind="variable">
+            <name>filterStartDate</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a049a2ecb0325eada6fa1e73c86222a3d" kind="variable">
+            <name>filterEndDate</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a96e7d5a2f1909fe93d34660232b2ce95" kind="variable">
+            <name>quantityStartDate</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1add22e393298a9d91caa1698a254d5ed7" kind="variable">
+            <name>quantityEndDate</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1aeee9b004fcb7989999b3ba51ee7112cc" kind="variable">
+            <name>drugListStore</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1ac1efebf1ceff8a0e870306797eae1370" kind="variable">
+            <name>patientExp</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a7324435f0124010f172507467454d1a5" kind="function">
+            <name>DrugWindow</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a54f331f1c516ce9113a9dade43948a16" kind="function">
+            <name>init</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1aa33aafc6205abc8c627d0b0a5849895b" kind="function">
+            <name>getName</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a571966bdd4a2ecf069cdca69c73726b2" kind="function">
+            <name>getNextWindow</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a98c6d97f491cb648dede0ef3db2b13b2" kind="function">
+            <name>update</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a4926180df1b7f3dfc1f2b1746522c6fb" kind="function">
+            <name>initHandlers</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1ac762c909bb394adccd41e1c6e97d8404" kind="function">
+            <name>initTreeView</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a7a43f5981915470da37088a248006c0e" kind="function">
+            <name>updateDrugTreeView</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a5df5a3991bc26fcf5e4df2c622053c42" kind="function">
+            <name>updateDrugDetailsView</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a069d6731dcbf47f32e6be18a8ecb0472" kind="function">
+            <name>updatePatientView</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1ad88417beac6e778776f939c31e6def7a" kind="function">
+            <name>onSelectedDrug</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a2d01e24deaba42b7c24cf5b5457f4298" kind="function">
+            <name>initDrugFilter</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a40c9dca8380e72b7468170db21bcfbe9" kind="function">
+            <name>initQuantityFilter</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a5f2baab3fe347a3f297a5099f1b6693f" kind="function">
+            <name>onFilterClose</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1aa95d1ea3fa8342ba427c1cbec848934b" kind="function">
+            <name>onFilterOpened</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a92f8c6b2c829e418166c7fc2f20ebb8d" kind="function">
+            <name>onSwitchActivate</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a03478c57d6101692a683bf957375b13f" kind="function">
+            <name>onFilterYearChanged</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1ac82c4ff64a06ce3a942e26ace664ef14" kind="function">
+            <name>onFilterMonthChanged</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a068f2a58554798bf3394c84fcaabcbf8" kind="function">
+            <name>onQuantityYearChanged</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1ad9ee761635cf4087270baf2897b4996a" kind="function">
+            <name>onQuantitySemesterChanged</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1adffa50b673a54cec639fff04a7b33d54" kind="function">
+            <name>onQuantityQuarterChanged</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a65f5167d99af60dc2f70a0e6ee249ba0" kind="function">
+            <name>onQuantityMonthChanged</name>
+        </member>
+        <member refid="d7/dcd/classmm_1_1_drug_window_1a94a7778ec2323f116ade371f70da2d24" kind="function">
+            <name>updateTotalDrug</name>
+        </member>
+    </compound>
+    <compound refid="d0/d9e/structmm_1_1_entry_controller" kind="struct">
+        <name>mm::EntryController</name>
+        <member refid="d0/d9e/structmm_1_1_entry_controller_1ab41f377d1a98b2bf967c81dc1dc7f391" kind="variable">
+            <name>entry</name>
+        </member>
+        <member refid="d0/d9e/structmm_1_1_entry_controller_1a8669618dd4526580cdb3cd88f9d16e52" kind="function">
+            <name>EntryController</name>
+        </member>
+        <member refid="d0/d9e/structmm_1_1_entry_controller_1a8c99741ce10e997c35b397cef397fa6d" kind="function">
+            <name>EntryController</name>
+        </member>
+        <member refid="d0/d9e/structmm_1_1_entry_controller_1ad4d3a1e3dc08262fe244e8c9bc0a455c" kind="function">
+            <name>entryTextChanged</name>
+        </member>
+        <member refid="d0/d9e/structmm_1_1_entry_controller_1a8eb56a968a567d1641c47d0f08b23f6f" kind="function">
+            <name>reset</name>
+        </member>
+        <member refid="d0/d9e/structmm_1_1_entry_controller_1a8665e8b7d74b0f8c807d5b3ad418e535" kind="function">
+            <name>text</name>
+        </member>
+    </compound>
+    <compound refid="d8/ded/classmm_1_1view_1_1_interaction_entry" kind="class">
+        <name>mm::view::InteractionEntry</name>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1ac17d59c180df431cfffd90501d6845ef" kind="variable">
+            <name>remove</name>
+        </member>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a7eab807cf9cdfb29b37635b03f217161" kind="variable">
+            <name>entry</name>
+        </member>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a6292c760a65c48fcba74501bb03ddce3" kind="variable">
+            <name>button</name>
+        </member>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a643f1d327f40ead9968f9450bd177db2" kind="variable">
+            <name>grid</name>
+        </member>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1aea1ba9c4447273cc7cac5c18699c8639" kind="variable">
+            <name>drug1</name>
+        </member>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1ab42fd3da251b59607c48560d6becf1b9" kind="variable">
+            <name>drug2</name>
+        </member>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a6ee26295e5dd8871a0cf801014a8cc34" kind="function">
+            <name>InteractionEntry</name>
+        </member>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a1e3a924b7b218109d2df6b4ebbc557f0" kind="function">
+            <name>InteractionEntry</name>
+        </member>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a48fc0d3c44a4d0b5364d822ebbdf07a1" kind="function">
+            <name>signal_removed</name>
+        </member>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a1f579cbaf213f6e602e8d2b67109a1c2" kind="function">
+            <name>get_drug1</name>
+        </member>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a58a4843226a5b149541eda7b1905eb85" kind="function">
+            <name>get_drug2</name>
+        </member>
+        <member refid="d8/ded/classmm_1_1view_1_1_interaction_entry_1a44a91c9d076764617278a2357dee8264" kind="function">
+            <name>removeHandler</name>
+        </member>
+    </compound>
+    <compound refid="d7/d9e/classmm_1_1_i_observer" kind="class">
+        <name>mm::IObserver</name>
+        <member refid="d7/d9e/classmm_1_1_i_observer_1a6422af04f8e9f3ba9d6d412a3bcdd03e" kind="function">
+            <name>update</name>
+        </member>
+        <member refid="d7/d9e/classmm_1_1_i_observer_1add1245a281c47575cc0e42449635a9fd" kind="function">
+            <name>update</name>
+        </member>
+    </compound>
+    <compound refid="dc/df3/classmm_1_1_i_serializable" kind="class">
+        <name>mm::ISerializable</name>
+        <member refid="dc/df3/classmm_1_1_i_serializable_1a20a59e2324c8dbf6fefe4d11ae89d0fb" kind="function">
+            <name>serialize</name>
+        </member>
+        <member refid="dc/df3/classmm_1_1_i_serializable_1a8e5329b3b23cd0dff0ea8f5f63bab996" kind="function">
+            <name>unserialize</name>
+        </member>
+        <member refid="dc/df3/classmm_1_1_i_serializable_1a9717e6da47fcbac3ffa2e68152464e0a" kind="function">
+            <name>get_table_name</name>
+        </member>
+        <member refid="dc/df3/classmm_1_1_i_serializable_1a69c0c514e11e386b6cb1fbd03f14da17" kind="function">
+            <name>get_primary_key</name>
+        </member>
+    </compound>
+    <compound refid="d1/dd2/classmm_1_1_i_subject" kind="class">
+        <name>mm::ISubject</name>
+        <member refid="d1/dd2/classmm_1_1_i_subject_1a139b047da0aa62c6f4db20df62bf0aec" kind="variable">
+            <name>observer_set</name>
+        </member>
+        <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" kind="function">
+            <name>attach</name>
+        </member>
+        <member refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" kind="function">
+            <name>detach</name>
+        </member>
+        <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" kind="function">
+            <name>notify</name>
+        </member>
+        <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" kind="function">
+            <name>notify</name>
+        </member>
+        <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" kind="function">
+            <name>~ISubject</name>
+        </member>
+    </compound>
+    <compound refid="d3/d00/classmm_1_1key__not__found__error" kind="class">
+        <name>mm::key_not_found_error</name>
+        <member refid="d3/d00/classmm_1_1key__not__found__error_1a2dbffa57a8ad2c3d80151f0d7b75814b" kind="function">
+            <name>key_not_found_error</name>
+        </member>
+        <member refid="d3/d00/classmm_1_1key__not__found__error_1a650fb3f9d373793d9ba049e863eeef2d" kind="function">
+            <name>key_not_found_error</name>
+        </member>
+        <member refid="d3/d00/classmm_1_1key__not__found__error_1ac6a2a52aff176e9cfc8643176c28cf8e" kind="function">
+            <name>what</name>
+        </member>
+    </compound>
+    <compound refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kind="struct">
+        <name>mm::model::authentication::Login</name>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aa74e292b2be0f1e2146576108e74db97"
+                kind="variable">
+            <name>is_changed</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aeb7a295a6770bf778d747903045fe288"
+                kind="variable">
+            <name>user_name</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1adc6b1c53cf3e012f10c8b315a1df364f"
+                kind="variable">
+            <name>password</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a3b3c96185f5ad0c1e9ea15cd401ce064"
+                kind="variable">
+            <name>regional_id</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a5023cb987e79151f2a1ed18b9a86a3e8"
+                kind="friend">
+            <name>check_login</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a69ec1a769ef1659b8ed39d5e23c24333"
+                kind="function">
+            <name>serialize</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1ac2429ce08624b0c425feced836b77d62"
+                kind="function">
+            <name>unserialize</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1afc72adef91be3d97ce4751b8a2357613"
+                kind="function">
+            <name>get_table_name</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a56f5da26be2d64baa78d0c81d99c8221"
+                kind="function">
+            <name>get_primary_key</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a23843b088a1c1e0a668e9013ca6768ad"
+                kind="function">
+            <name>logout</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aec29ca0fab75c7691c7939970646b39b"
+                kind="function">
+            <name>isLog</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a37112a637ed012c96a96c5a2366f4220"
+                kind="function">
+            <name>get_instance</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1af60878fb3e6057fec0697bf90d2c3cc6"
+                kind="function">
+            <name>Login</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1af8ebf13989bd56aa5b8281b579caa2c2"
+                kind="function">
+            <name>Login</name>
+        </member>
+        <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1ac74a15ab0d5994a16885df2d02149436"
+                kind="function">
+            <name>operator=</name>
+        </member>
+    </compound>
+    <compound refid="d3/d0c/classmm_1_1_login_window" kind="class">
+        <name>mm::LoginWindow</name>
+        <member refid="d3/d0c/classmm_1_1_login_window_1adc672eb9e34aa4f947fbfe3b4554eb62" kind="variable">
+            <name>next</name>
+        </member>
+        <member refid="d3/d0c/classmm_1_1_login_window_1ad27cc1365af4fec51bd7afb1a9d49cf5" kind="function">
+            <name>LoginWindow</name>
+        </member>
+        <member refid="d3/d0c/classmm_1_1_login_window_1a4040d7c1f85fc76e1f60ef13f92bef1c" kind="function">
+            <name>init</name>
+        </member>
+        <member refid="d3/d0c/classmm_1_1_login_window_1aa0597e725bfb2df984f526112080aaf7" kind="function">
+            <name>getName</name>
+        </member>
+        <member refid="d3/d0c/classmm_1_1_login_window_1a399eb7e1a310016ff83b7aa6a9d69722" kind="function">
+            <name>getNextWindow</name>
+        </member>
+        <member refid="d3/d0c/classmm_1_1_login_window_1a10f465724f98ed4fbc33df79e981a606" kind="function">
+            <name>onLoginButtonClicked</name>
+        </member>
+        <member refid="d3/d0c/classmm_1_1_login_window_1a56bec59f35f677f5b150ef01af8da7ad" kind="function">
+            <name>onKeyPressed</name>
+        </member>
+    </compound>
+    <compound refid="d7/dfd/classmm_1_1_main_window" kind="class">
+        <name>mm::MainWindow</name>
+        <member refid="d7/dfd/classmm_1_1_main_window_1aa52195114bed3531102f468e548f263c" kind="variable">
+            <name>next</name>
+        </member>
+        <member refid="d7/dfd/classmm_1_1_main_window_1a3e0496c6cb45823813b373112d99fada" kind="variable">
+            <name>dialogList</name>
+        </member>
+        <member refid="d7/dfd/classmm_1_1_main_window_1a0b44419ae99b1b1bb40b42c4d56d9d63" kind="variable">
+            <name>tabWindows</name>
+        </member>
+        <member refid="d7/dfd/classmm_1_1_main_window_1a1094273a8ac991a50e4612efa8174fdd" kind="function">
+            <name>init</name>
+        </member>
+        <member refid="d7/dfd/classmm_1_1_main_window_1a8cfdfeb6ad47afff06fa6b1b7fdc0c88" kind="function">
+            <name>getName</name>
+        </member>
+        <member refid="d7/dfd/classmm_1_1_main_window_1aa1511ad7bed8d47cd35415d0a3a1161e" kind="function">
+            <name>getNextWindow</name>
+        </member>
+        <member refid="d7/dfd/classmm_1_1_main_window_1ac0fc4875dc774c1b7b1ca59d174a7fc1" kind="function">
+            <name>update</name>
+        </member>
+        <member refid="d7/dfd/classmm_1_1_main_window_1ae9a06c62e4efd9fce7334afb032e20d6" kind="function">
+            <name>MainWindow</name>
+        </member>
+        <member refid="d7/dfd/classmm_1_1_main_window_1a37132df8fb730f15d8eb75f07e5fd92d" kind="function">
+            <name>~MainWindow</name>
+        </member>
+        <member refid="d7/dfd/classmm_1_1_main_window_1ac6dfc1405fdf27e72ad12f4aaf048632" kind="function">
+            <name>initHandlers</name>
+        </member>
+        <member refid="d7/dfd/classmm_1_1_main_window_1a721272d1bb6c184d1be80323ddfe153a" kind="function">
+            <name>onLogout</name>
+        </member>
+        <member refid="d7/dfd/classmm_1_1_main_window_1a4532118da4fee9d6cf867679a86c286e" kind="function">
+            <name>onAboutClicked</name>
+        </member>
+    </compound>
+    <compound refid="df/d1a/classmm_1_1_med_h" kind="class">
+        <name>mm::MedH</name>
+        <member refid="df/d1a/classmm_1_1_med_h_1a4c063815ea825e833d9549a43a26f7cc" kind="variable">
+            <name>window</name>
+        </member>
+        <member refid="df/d1a/classmm_1_1_med_h_1a01c83fc7ed2627ae66440e1dbd2bac74" kind="variable">
+            <name>appID</name>
+        </member>
+        <member refid="df/d1a/classmm_1_1_med_h_1a6bbf4476e1953d62562d35cb1f9c4218" kind="variable">
+            <name>app</name>
+        </member>
+        <member refid="df/d1a/classmm_1_1_med_h_1a42dd3db886d41a34d43019c7fee1bd03" kind="function">
+            <name>init</name>
+        </member>
+        <member refid="df/d1a/classmm_1_1_med_h_1a6c9a80752905319a9321ce49acfda3fd" kind="function">
+            <name>update</name>
+        </member>
+        <member refid="df/d1a/classmm_1_1_med_h_1a60861cff31fe5bc04e0002c6dabd5a9b" kind="function">
+            <name>MedH</name>
+        </member>
+        <member refid="df/d1a/classmm_1_1_med_h_1aa34d2244a28a72dac6028e70317eb40b" kind="function">
+            <name>run</name>
+        </member>
+        <member refid="df/d1a/classmm_1_1_med_h_1a6fe53e9376821a1aae7d5a3a32d203c3" kind="function">
+            <name>~MedH</name>
+        </member>
+    </compound>
+    <compound refid="da/df7/classmm_1_1observer__not__found__error" kind="class">
+        <name>mm::observer_not_found_error</name>
+        <member refid="da/df7/classmm_1_1observer__not__found__error_1a967227c100638d8d978f8ee3dd6c70b4"
+                kind="function">
+            <name>observer_not_found_error</name>
+        </member>
+        <member refid="da/df7/classmm_1_1observer__not__found__error_1a7bf8977aad52f25ac981ec9b7c961ba0"
+                kind="function">
+            <name>observer_not_found_error</name>
+        </member>
+        <member refid="da/df7/classmm_1_1observer__not__found__error_1a60ab7d1412fcd906c7976e686f9b936b"
+                kind="function">
+            <name>observer_not_found_error</name>
+        </member>
+    </compound>
+    <compound refid="d6/d4a/classmm_1_1model_1_1_patient" kind="class">
+        <name>mm::model::Patient</name>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1af2fe625b7bf2e3308df51daaff966281" kind="variable">
+            <name>patientTreeModel</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a2715b7c0a7671f4c285bebfb7dbf282c" kind="variable">
+            <name>first_name</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a6c924517d4259c0f664f6d1b9fa15bec" kind="variable">
+            <name>last_name</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a8e6f4a5987251570bc3520e866a89a62" kind="variable">
+            <name>fiscal_code</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a77ec9a7f6dde2ceeeefaa62ac4a20e4c" kind="variable">
+            <name>birth_date</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a89c5eaf9e8e19a742cc96bf5bd9e9e2b" kind="variable">
+            <name>birth_place</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ad8f2f24df48e61637a4dd65a53082edd" kind="variable">
+            <name>address</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a0426a5295204efd3ee0d5fc78f58a757" kind="variable">
+            <name>doctor_id</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1aadcb26496bd94cea5f9e4bea74bd6c6b" kind="variable">
+            <name>risk_factors</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ad15758bdb4995cf5f0b2830eef2b4b43" kind="function">
+            <name>Patient</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ad9b2919b2efa8f1e7f6d405757d73ccb" kind="function">
+            <name>~Patient</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ae3ac219cd109e8c53daaf9b2758c3a0e" kind="function">
+            <name>serialize</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a7e1d8cbfc2cdd653281dce87497c6065" kind="function">
+            <name>unserialize</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1abe79da3e4fabd80e039ae4880dfa76cb" kind="function">
+            <name>get_table_name</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ae85640f3cb3d34bb57e1129ef46a0cbf" kind="function">
+            <name>get_primary_key</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a3661b2666d368492511ed3bad79c0389" kind="function">
+            <name>get_first_name</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a88c0051957b5a6f172cdc35432505923" kind="function">
+            <name>get_last_name</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ac54b024c619d6f31c72766a01bc5d0ee" kind="function">
+            <name>get_birth_date</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a4e4770a79fef23b54026e013586e61fa" kind="function">
+            <name>get_birth_place</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a0db04bf2c2ae5b9eb6417f4b6e74a84a" kind="function">
+            <name>get_address</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a29590c6ce9d2b19dbdff3330ee5e4523" kind="function">
+            <name>get_fiscal_code</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a7ab70bc4aafc95f687c29d02ac398e06" kind="function">
+            <name>get_risk_factors</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ac13776eadc56f98bf353dd412f9c2f51" kind="function">
+            <name>get_prescriptions</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a8b8dd8c6de5963a717cf192ca10c605e" kind="function">
+            <name>set_first_name</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a4883fc926a6693a2a6fd2b50ab2ded0e" kind="function">
+            <name>set_last_name</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a45485e586eb4a908ed4c7a51059fc131" kind="function">
+            <name>set_fiscal_code</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1ad73008977024e6ca48e5c687eb27b996" kind="function">
+            <name>set_birth_date</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a6dc732f738425cc729764fdf16d667f0" kind="function">
+            <name>set_birth_place</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a4e19f86233b55b4dec59f947f1dfe32a" kind="function">
+            <name>set_address</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a9dda6ce10296ab196cd5681b8e9a1091" kind="function">
+            <name>set_doctor_id</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a5f9da3f880ef1adc4bc5443ea407f48f" kind="function">
+            <name>is_valid</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a69367747ebc66b1b4e2fdf961811d83d" kind="function">
+            <name>operator==</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a96fe68d415c82b084ca75e87aefe8314" kind="function">
+            <name>operator!=</name>
+        </member>
+        <member refid="d6/d4a/classmm_1_1model_1_1_patient_1a03b2c5d72ded745093bbc847b190197d" kind="function">
+            <name>fiscalCodeIsValid</name>
+        </member>
+    </compound>
+    <compound refid="dd/d38/classmm_1_1view_1_1_patient_expander" kind="class">
+        <name>mm::view::PatientExpander</name>
+        <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1aeb0061e68f6d6eca01fd84b31ab34336" kind="variable">
+            <name>labelBox</name>
+        </member>
+        <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1aba671cda736309b5fa15f7944b4f2d39" kind="variable">
+            <name>name</name>
+        </member>
+        <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1a64c340d81f1668b0131eb8c16509997a" kind="variable">
+            <name>lastName</name>
+        </member>
+        <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1a01a5a46c69a586d461af6bbf996635b7" kind="variable">
+            <name>fiscalCode</name>
+        </member>
+        <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1ac1e1a7bb9a3f38ec33b8caf9dda66d98" kind="variable">
+            <name>prescriptionFrame</name>
+        </member>
+        <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1a5ac3ac4772cd7e5a78ef1285d0bf933a" kind="variable">
+            <name>prescriptionTreeView</name>
+        </member>
+        <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1a3b96a337fb94f63cda727cd6da034eb4" kind="variable">
+            <name>prescriptionListStore</name>
+        </member>
+        <member refid="dd/d38/classmm_1_1view_1_1_patient_expander_1a07daa447ceef9466613982c707d62eed" kind="function">
+            <name>PatientExpander</name>
+        </member>
+    </compound>
+    <compound refid="da/d81/classmm_1_1_patient_window" kind="class">
+        <name>mm::PatientWindow</name>
+        <member refid="da/d81/classmm_1_1_patient_window_1a56b8ca6d4ae8bbce8488e7333391b844" kind="variable">
+            <name>next</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1ac5920b30f7aa069259f0ed0f14878e68" kind="variable">
+            <name>dialogList</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a5635b943606bdb596f6a4984bdfa98e1" kind="variable">
+            <name>prescriptionsExp</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a58a7c8e1eb1d8751a5f9e4fa770934b8" kind="variable">
+            <name>patientListStore</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a9e1bb542227a874751c69887725a4133" kind="variable">
+            <name>filterOn</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1af9e3daff5ae7998d44b6b7878d8cf671" kind="variable">
+            <name>filterStartDate</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a7c38045d0c01adea208c70503ca7274c" kind="variable">
+            <name>filterEndDate</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1ac3db03a777a31105100e70042a1c9d86" kind="variable">
+            <name>customFilterFromDateController</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1aedfe2d5a25eec14d96b1990b946088a7" kind="variable">
+            <name>customFilterToDateController</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a303da04da191185a070454feff15e014" kind="function">
+            <name>PatientWindow</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a0ad27245769b095559858eeecdbb7089" kind="function">
+            <name>init</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1ab951ab5bf21df2b9450496c6faca5268" kind="function">
+            <name>getName</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1ae22b9bce4c7ccdbcc45feb080088a558" kind="function">
+            <name>getNextWindow</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a461de186f72a8902a9f95a622dc1c02b" kind="function">
+            <name>update</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a315f5e823a0261db4fb88b4e31333d53" kind="function">
+            <name>update</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a48de0e9302eb9cb9b33e8641f27f01c1" kind="function">
+            <name>~PatientWindow</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1ab993efac247dd18449dbdc0238681fd5" kind="function">
+            <name>initHandlers</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1ac2bc17fce9830257a14f9fc30b53dd0d" kind="function">
+            <name>initTreeView</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a529b8ebdd287959a49292729671a73c7" kind="function">
+            <name>initFilters</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1aab3236478432f91777f6524e290b4c2f" kind="function">
+            <name>onAddPatientClicked</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a34a60139c261b0409028a5826d11a978" kind="function">
+            <name>onAddPrescriptionClicked</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1ab595f03fd21641c3648b56c995a51547" kind="function">
+            <name>onSelectedPatient</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1aac1be2d8538cfa53bb66041bd8dae472" kind="function">
+            <name>onRemovePatientClicked</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a8a4bd9120942b66fb83bbefdabbd0988" kind="function">
+            <name>onRemovePrescriptionClicked</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1ad2f9048779671b4fd4ed118792fc77a5" kind="function">
+            <name>onSwitchActivate</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1ad1b91f5fc1b356a8797e257392c9e95a" kind="function">
+            <name>onFilterYearChanged</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a9463b24e70d06015a51e295eb7783d29" kind="function">
+            <name>onFilterQuarterChanged</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1afc03cde44c13ded29b60eded7b0defd2" kind="function">
+            <name>onFilterMonthChanged</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a6401f94989d4d5c7584e0bd6ed186f23" kind="function">
+            <name>onFilterCustomChanged</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a00ff4cd31cdac808545ec74124d4e096" kind="function">
+            <name>sortPrescriptionList</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1af351668eefc17179d714b0ae794ea0d4" kind="function">
+            <name>onFilterClose</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1aa87e237db0c078942088439f874a251a" kind="function">
+            <name>onFilterOpened</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a3201425aef61fa907be8d3d212657f1d" kind="function">
+            <name>updatePatientTreeView</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a0c1f9da33a1fd0cc614dcc2b23a639fe" kind="function">
+            <name>updatePrescriptionView</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1a7ddb38c61d571bbe384c143f0aeaf7e8" kind="function">
+            <name>updatePatientDetailsView</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1ac95d94f85afcd287ea8443cb25edfd8f" kind="function">
+            <name>onFilterSemesterChanged</name>
+        </member>
+        <member refid="da/d81/classmm_1_1_patient_window_1ada4b7d2d52c8fa96e31b2db7d800ac9e" kind="function">
+            <name>sortByPrescriptionHandler</name>
+        </member>
+    </compound>
+    <compound refid="db/d61/classmm_1_1model_1_1_prescription" kind="class">
+        <name>mm::model::Prescription</name>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a5dd928aaafb51cd30d4183df7697ce49" kind="variable">
+            <name>prescriptionTreeModel</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a21787e3b7d149e7cf10e8f6dc8dd6b08" kind="variable">
+            <name>patient_id</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1ad1fd7bf313c200f431bb465d217382b9" kind="variable">
+            <name>prescription_id</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a10cddeaf73c612f421bc735c47b6fe15" kind="variable">
+            <name>issue_date</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a3675ed36ae529dbcfc9d9e9b23d42783" kind="variable">
+            <name>expire_date</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a37ce849a8d628a29a34faf40da8b85a4" kind="variable">
+            <name>drug_ids</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a95b0a9203f4bdc0adbf1b74ab3f53f05" kind="variable">
+            <name>negative_interactions</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a6fbfe8be1a5d9e257d4d3e56ffdd77b0" kind="variable">
+            <name>used</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a56439663fa7d275978b7e38c83960476" kind="function">
+            <name>generateID</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a592ff88dfa9625a383a7b073a64863b1" kind="function">
+            <name>serialize</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a6c38e4ee2fca09b18d61aaa214316b9e" kind="function">
+            <name>unserialize</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a8de9a927dc92c0e0b15dac6f930889e3" kind="function">
+            <name>get_table_name</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1af521915f8872df18ae4a50ff2a4f59ff" kind="function">
+            <name>get_primary_key</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a90cbaab7bb67d3d135e622e58a8f108d" kind="function">
+            <name>get_patient_id</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a6179b066586ebb5a1dc0d8f6a6c11a45" kind="function">
+            <name>get_prescription_id</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1acb29f51441390f5c0e5c483d82ba1514" kind="function">
+            <name>get_issue_date</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a11c574c3fafddc2e278c8aec417d5977" kind="function">
+            <name>get_expire_date</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1abbc707b103a6f8b52b94fec5ec7ebf89" kind="function">
+            <name>get_drug_ids_as_string</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a0dbc18b00e03ec68f3d224d11bf75823" kind="function">
+            <name>get_drugs</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a1656851efd03bd54f3615d90856e9829" kind="function">
+            <name>get_negative_interactions</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a23ae0807248a2cd86232b11927c9eea2" kind="function">
+            <name>is_used</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a7854a3ef7a7fa8e15bc7a5570e1d0946" kind="function">
+            <name>set_patient_id</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a2514cc052803d493974172dad8659806" kind="function">
+            <name>set_prescription_id</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a0d4cc625d7a39ea9f00bc8885380b391" kind="function">
+            <name>set_issue_date</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a3cb9e467c00323e94e4347e308dc67ba" kind="function">
+            <name>set_expire_date</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a90ab6821dda442d202d8dabf50c52cc3" kind="function">
+            <name>set_negative_interactions</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a25c7a50956777551b938990157d0046a" kind="function">
+            <name>set_used</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1aa34227766a8ab89f1f47f8ac72de562d" kind="function">
+            <name>add_drug</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1a3838d3a11a4c86a8fef81750db4fb516" kind="function">
+            <name>add_drug</name>
+        </member>
+        <member refid="db/d61/classmm_1_1model_1_1_prescription_1aa63e30d0439cd7c06f155641e1b8390d" kind="function">
+            <name>is_valid</name>
+        </member>
+    </compound>
+    <compound refid="dc/ddf/classmm_1_1view_1_1_prescription_expander" kind="class">
+        <name>mm::view::PrescriptionExpander</name>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a0903b7edf2a7dc26fcccba310c671e1b"
+                kind="variable">
+            <name>drugColumns</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a30dc89418a2897e97d7c00f06236fbdd"
+                kind="variable">
+            <name>drugListStore</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a3f0fc6dae5711434f7359726962a22b0"
+                kind="variable">
+            <name>drugTreeView</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aae29dc0cddf533d08417a0335195523a"
+                kind="variable">
+            <name>id</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aa85c2af19dd962f48287aada0f9cbccf"
+                kind="variable">
+            <name>issueDateText</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a7fef1206b884c4be08dccccb726843d2"
+                kind="variable">
+            <name>expirationDate</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aae2947e2c3de0a543ab4997b2551c3ee"
+                kind="variable">
+            <name>prescriptionID</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a5aa651f28a68a95eec8382700ac3622a"
+                kind="variable">
+            <name>issueDate</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a161adcc2338f20ef778e6c615603e569"
+                kind="variable">
+            <name>labelBox</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a28c0159e6dec8617c5880efdad45a802"
+                kind="variable">
+            <name>contentBox</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1ad97ed8353cbb992ece9b5a50d4283232"
+                kind="variable">
+            <name>used</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1ae1d50a2d76cb77ecc9d3edbb57f81a06"
+                kind="variable">
+            <name>detailsFrame</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a976383a955bc67a414e4e8fe8ffce3e9"
+                kind="variable">
+            <name>interactionLabel</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a432ad4f12b40d682aa1a0838a0e36d78"
+                kind="variable">
+            <name>drugFrame</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a12b5e974972ebdd42478c59c08e3f219"
+                kind="function">
+            <name>PrescriptionExpander</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1ac39b2410139956ef3f707caf1b23dc26"
+                kind="function">
+            <name>PrescriptionExpander</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a8011da18b2ee9bf91ca672813c6c4e27"
+                kind="function">
+            <name>~PrescriptionExpander</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a21d6e2894f4c17fc279510f4fadd8eff"
+                kind="function">
+            <name>operator=</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a761cc50a6326cc40496a9346a872e734"
+                kind="function">
+            <name>operator&lt;</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aff3761ec2d61ceeb5871e21a39a35bdb"
+                kind="function">
+            <name>get_name</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a3604c2f026067d71ff619036a9615694"
+                kind="function">
+            <name>operator&gt;</name>
+        </member>
+        <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a63f5113e028e8d9e7eb09981dc28e602"
+                kind="function">
+            <name>getID</name>
+        </member>
+    </compound>
+    <compound refid="da/d8f/classmm_1_1_prescription_window" kind="class">
+        <name>mm::PrescriptionWindow</name>
+        <member refid="da/d8f/classmm_1_1_prescription_window_1a4af06eedb0dee093206325e25af79965" kind="variable">
+            <name>next</name>
+        </member>
+        <member refid="da/d8f/classmm_1_1_prescription_window_1a253bf6e26cc5df9b0c444e35692aaaf4" kind="variable">
+            <name>prescriptionListStore</name>
+        </member>
+        <member refid="da/d8f/classmm_1_1_prescription_window_1ad40a15a976a851f81fad2c7ec9116555" kind="function">
+            <name>PrescriptionWindow</name>
+        </member>
+        <member refid="da/d8f/classmm_1_1_prescription_window_1a4764fe59cd6aeaa46c7fd8820dd4102b" kind="function">
+            <name>init</name>
+        </member>
+        <member refid="da/d8f/classmm_1_1_prescription_window_1a0770b1cfa7eef3bfa990d7ddeeb03a39" kind="function">
+            <name>getName</name>
+        </member>
+        <member refid="da/d8f/classmm_1_1_prescription_window_1aec9558aea3a0fb15e3148ebf4c9e8d40" kind="function">
+            <name>getNextWindow</name>
+        </member>
+        <member refid="da/d8f/classmm_1_1_prescription_window_1a51195815f64b79179e3dafbb89b785e8" kind="function">
+            <name>update</name>
+        </member>
+        <member refid="da/d8f/classmm_1_1_prescription_window_1a9bbfc2a3609dbd684593daf3ed0a5d8b" kind="function">
+            <name>initTreeView</name>
+        </member>
+        <member refid="da/d8f/classmm_1_1_prescription_window_1afbc03814e7f3675b66a5c5fb4024c597" kind="function">
+            <name>updatePrescriptionTreeView</name>
+        </member>
+        <member refid="da/d8f/classmm_1_1_prescription_window_1abfb51759b0e8ca960be0413f9e55253a" kind="function">
+            <name>onSortCompareByDate</name>
+        </member>
+    </compound>
+    <compound refid="dc/d8a/classmm_1_1record__not__found__error" kind="class">
+        <name>mm::record_not_found_error</name>
+        <member refid="dc/d8a/classmm_1_1record__not__found__error_1a3457a336328538174f06d4023b7474c8" kind="function">
+            <name>record_not_found_error</name>
+        </member>
+        <member refid="dc/d8a/classmm_1_1record__not__found__error_1aa8bc0fb2788b4442295f85103fa94e2b" kind="function">
+            <name>record_not_found_error</name>
+        </member>
+        <member refid="dc/d8a/classmm_1_1record__not__found__error_1a717de31a5a66442baa65e695d09c50ff" kind="function">
+            <name>what</name>
+        </member>
+    </compound>
+    <compound refid="dd/d47/classmm_1_1_ref_builder" kind="class">
+        <name>mm::RefBuilder</name>
+        <member refid="dd/d47/classmm_1_1_ref_builder_1ab405e3dfe231b3a89834e4b57ac51780" kind="variable">
+            <name>instance</name>
+        </member>
+        <member refid="dd/d47/classmm_1_1_ref_builder_1a6cf9ac1d4a3e858f35e9b9108d996b65" kind="variable">
+            <name>refBuilder</name>
+        </member>
+        <member refid="dd/d47/classmm_1_1_ref_builder_1a1c46de2b1ff68aebfc85692a99827753" kind="function">
+            <name>get_instance</name>
+        </member>
+        <member refid="dd/d47/classmm_1_1_ref_builder_1a67812973516cbeddf488360424685153" kind="function">
+            <name>get_widget</name>
+        </member>
+        <member refid="dd/d47/classmm_1_1_ref_builder_1a428724036811e6b9ecc6c50c42209a74" kind="function">
+            <name>get_widget_derived</name>
+        </member>
+        <member refid="dd/d47/classmm_1_1_ref_builder_1ad127ac58b1c0dab7faf97011f91b4ae7" kind="function">
+            <name>RefBuilder</name>
+        </member>
+    </compound>
+    <compound refid="d3/d4d/structmm_1_1_serialized" kind="struct">
+        <name>mm::Serialized</name>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a0b04612e6ed7f3da463a07e6405588e4" kind="variable">
+            <name>data</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1aceee986b86426f4f851466147e078234" kind="variable">
+            <name>type</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a7ac660741c58dec6ffe85a006b9846ae" kind="friend">
+            <name>operator&lt;&lt;</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a9a257b31c4426077a3bd460d1e6cbd89" kind="function">
+            <name>get_type</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1ac0e23433a34f0d326042907895a03353" kind="function">
+            <name>isType</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1aa3eb7eb50d6b343993c08a4d369af8b2" kind="function">
+            <name>get_str</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a259c2695619d6ba052fd8a3885a341ef" kind="function">
+            <name>get_int</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1acd3c339c1766f6dbc0313669e7582361" kind="function">
+            <name>get_real</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a440d7e6daeb9e6c2ca286a2eee1fc24d" kind="function">
+            <name>Serialized</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a1fcb5290740858b4a800f6b4d48e3c74" kind="function">
+            <name>Serialized</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a2d29dc6d2cb8eed1a768a378b1d61b8f" kind="function">
+            <name>Serialized</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1ae11ee0c67ffaed5dfc69bf52f33ebcca" kind="function">
+            <name>Serialized</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a8e5cff9af77398dfa1f398a83bb9d642" kind="function">
+            <name>Serialized</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1af64564defb439c3167375d2984c0653d" kind="function">
+            <name>Serialized</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a7d108150308172857962c61c94f78fbd" kind="function">
+            <name>operator=</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a47c193b8439645264f62af1887cbfb2f" kind="function">
+            <name>operator int</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a4c753eedf42e36e51e8de52c2ae8917d" kind="function">
+            <name>operator std::string</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a3462f388a68a546a738038e5ce235b21" kind="function">
+            <name>operator double</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1af1414a72ff10e038d96f6f33f352b2dc" kind="function">
+            <name>~Serialized</name>
+        </member>
+        <member refid="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362" kind="function">
+            <name>Serialized</name>
+        </member>
+    </compound>
+    <compound refid="de/dac/unionmm_1_1_serialized_union" kind="union">
+        <name>mm::SerializedUnion</name>
+        <member refid="de/dac/unionmm_1_1_serialized_union_1a8d0497571c8ac717f7f49226477f13bf" kind="variable">
+            <name>text</name>
+        </member>
+        <member refid="de/dac/unionmm_1_1_serialized_union_1ab1b4916d7e61e14280d62aecf668d402" kind="variable">
+            <name>integer</name>
+        </member>
+        <member refid="de/dac/unionmm_1_1_serialized_union_1a315b1f30581d381d4ce1bb980641a200" kind="variable">
+            <name>real</name>
+        </member>
+    </compound>
+    <compound refid="d4/d0c/struct_time" kind="struct">
+        <name>Time</name>
+        <member refid="d4/d0c/struct_time_1a4eda0725cd2272762ceae3336ca07db6" kind="variable">
+            <name>seconds</name>
+        </member>
+        <member refid="d4/d0c/struct_time_1acdca8b13b904057dfec90b68f3092bc4" kind="variable">
+            <name>minutes</name>
+        </member>
+        <member refid="d4/d0c/struct_time_1aa207ff7d820b4c32f22e1474a931b195" kind="variable">
+            <name>hours</name>
+        </member>
+        <member refid="d4/d0c/struct_time_1ab9a42b7809f059a61d89123fb6cd0cf5" kind="function">
+            <name>get_time</name>
+        </member>
+        <member refid="d4/d0c/struct_time_1a76fe3565c8497fe80720123aa0b988fb" kind="function">
+            <name>set_time</name>
+        </member>
+    </compound>
+    <compound refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model" kind="struct">
+        <name>mm::model::Patient::TreeModel</name>
+        <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1adf28688b198a38740eaff550b3c2c1fb"
+                kind="variable">
+            <name>first_name</name>
+        </member>
+        <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a0ed75cd3b4f8d2378abe0de229e4c052"
+                kind="variable">
+            <name>last_name</name>
+        </member>
+        <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1aa2fecd995942eb8662bda71300bb6ae9"
+                kind="variable">
+            <name>fiscal_code</name>
+        </member>
+        <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1ac1420b4e9a91af21da1bb6be8dd73c9b"
+                kind="variable">
+            <name>birth_date</name>
+        </member>
+        <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a9c168aebc887200f36b69740e73b3067"
+                kind="variable">
+            <name>birth_place</name>
+        </member>
+        <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a32f489915cba3373fa445c35d7137192"
+                kind="variable">
+            <name>address</name>
+        </member>
+        <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a3acdb3bd280b1f59d8d94f5d2806db21"
+                kind="variable">
+            <name>risk_factors</name>
+        </member>
+        <member refid="d6/d29/structmm_1_1model_1_1_patient_1_1_tree_model_1a53ebc678daee18b03328be60d1c69bf4"
+                kind="function">
+            <name>TreeModel</name>
+        </member>
+    </compound>
+    <compound refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model" kind="struct">
+        <name>mm::model::Prescription::TreeModel</name>
+        <member refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1a814d7cb9f3f9abe35883bab3c56bc328"
+                kind="variable">
+            <name>patient_id</name>
+        </member>
+        <member refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1ab999486fd371dff7158dcf40f6ef003e"
+                kind="variable">
+            <name>issue_date</name>
+        </member>
+        <member refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1a51a87cac9a623149e021404730aed780"
+                kind="variable">
+            <name>expire_date</name>
+        </member>
+        <member refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1a57ca54db8aa2c95df49cc1c12b1ec48a"
+                kind="variable">
+            <name>drug_ids</name>
+        </member>
+        <member refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1ab9c6e53985f8fba26f6b423ba4e3e12c"
+                kind="variable">
+            <name>prescription_id</name>
+        </member>
+        <member refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1a12e1a81bee0d65dd04ab6aa7111d486b"
+                kind="variable">
+            <name>negative_interactions</name>
+        </member>
+        <member refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1abaa5eab3650e690c64385bd364526250"
+                kind="variable">
+            <name>used</name>
+        </member>
+        <member refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1ac2c97db08c6a4b24f124b4c1fd8aeaf5"
+                kind="variable">
+            <name>bill_id</name>
+        </member>
+        <member refid="d2/d54/structmm_1_1model_1_1_prescription_1_1_tree_model_1a3b6f84fdc2b7a9f83e4c9ec7594a534d"
+                kind="function">
+            <name>TreeModel</name>
+        </member>
+    </compound>
+    <compound refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model" kind="struct">
+        <name>mm::model::Drug::TreeModel</name>
+        <member refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a21ecd0c62d35f3a4f2e16253d5faa09c"
+                kind="variable">
+            <name>name</name>
+        </member>
+        <member refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a29443772824bbfc47d5c61e5e5c46050"
+                kind="variable">
+            <name>pharmaceutical_form</name>
+        </member>
+        <member refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1abdc7bfea0985a9082361575803b78d0e"
+                kind="variable">
+            <name>ATC_classification</name>
+        </member>
+        <member refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a975dd1b785590092258796e842cd5bf5"
+                kind="variable">
+            <name>contraindications</name>
+        </member>
+        <member refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a0ad53d6e45f9001d07e350ab7866f1da"
+                kind="variable">
+            <name>active_principles</name>
+        </member>
+        <member refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1a89b06b1ccb81a349452bdb9273867269"
+                kind="variable">
+            <name>price</name>
+        </member>
+        <member refid="d3/d3d/structmm_1_1model_1_1_drug_1_1_tree_model_1ae0aec47ef95a2143bea49ed0058d5778"
+                kind="function">
+            <name>TreeModel</name>
+        </member>
+    </compound>
+    <compound refid="d1/d71/classmm_1_1_window" kind="class">
+        <name>mm::Window</name>
+        <member refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10" kind="function">
+            <name>init</name>
+        </member>
+        <member refid="d1/d71/classmm_1_1_window_1a942c9125bf42156a9f7b7f561e412fed" kind="function">
+            <name>getName</name>
+        </member>
+        <member refid="d1/d71/classmm_1_1_window_1a0cd7b4b0feb9505c44503547a161fcd8" kind="function">
+            <name>getNextWindow</name>
+        </member>
+    </compound>
+    <compound refid="d0/d04/namespacemm" kind="namespace">
+        <name>mm</name>
+        <member refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kind="enum">
+            <name>WindowName</name>
+        </member>
+        <member refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca625866ddfe14a6b663c4b95ee85c96f3"
+                kind="enumvalue">
+            <name>LOGIN</name>
+        </member>
+        <member refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93cafd935ea5cffd64386f1549c51642164e"
+                kind="enumvalue">
+            <name>MAIN</name>
+        </member>
+        <member refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93cadde39aa33fd198a60d8046fbdf5e631f"
+                kind="enumvalue">
+            <name>PATIENT</name>
+        </member>
+        <member refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca59fb5a42d012d17664b7e9e30b54928b"
+                kind="enumvalue">
+            <name>PRESCRIPTION</name>
+        </member>
+        <member refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93ca72cf6d0691540154498bec70aa8556f6"
+                kind="enumvalue">
+            <name>DRUG</name>
+        </member>
+        <member refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601c" kind="enum">
+            <name>StoredTypes</name>
+        </member>
+        <member refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca119c99336926ef6e9520a5bbf9518a9a"
+                kind="enumvalue">
+            <name>INTEGER</name>
+        </member>
+        <member refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601caac9e9001649c4d59b7b51aabfb92f331"
+                kind="enumvalue">
+            <name>REAL</name>
+        </member>
+        <member refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601ca7c167dd1f2b3ccf8ed3938f0c4838ef5"
+                kind="enumvalue">
+            <name>TEXT</name>
+        </member>
+        <member refid="d0/d04/namespacemm_1a7ab9a5d20c82db4778995f35e6aa6abb" kind="function">
+            <name>operator&lt;&lt;</name>
+        </member>
+    </compound>
+    <compound refid="dd/d7f/namespacemm_1_1model" kind="namespace">
+        <name>mm::model</name>
+    </compound>
+    <compound refid="d6/d54/namespacemm_1_1model_1_1authentication" kind="namespace">
+        <name>mm::model::authentication</name>
+        <member refid="d6/d54/namespacemm_1_1model_1_1authentication_1aeb56a39665f657663af73f37a6341f11"
+                kind="function">
+            <name>check_login</name>
+        </member>
+    </compound>
+    <compound refid="d1/d50/namespacemm_1_1util" kind="namespace">
+        <name>mm::util</name>
+        <member refid="d1/d50/namespacemm_1_1util_1a86bb3df244e56f6252ddc9d9be2c1b8a" kind="function">
+            <name>operator&lt;&lt;</name>
+        </member>
+    </compound>
+    <compound refid="da/de0/namespacemm_1_1util_1_1str" kind="namespace">
+        <name>mm::util::str</name>
+        <member refid="da/de0/namespacemm_1_1util_1_1str_1a0d736c6931c50f009683998b5b4cdcaa" kind="function">
+            <name>split</name>
+        </member>
+        <member refid="da/de0/namespacemm_1_1util_1_1str_1a8e83f696879551bdc931a85f037a4671" kind="function">
+            <name>split</name>
+        </member>
+    </compound>
+    <compound refid="d7/d7c/namespacemm_1_1view" kind="namespace">
+        <name>mm::view</name>
+    </compound>
+    <compound refid="d8/dcc/namespacestd" kind="namespace">
+        <name>std</name>
+    </compound>
+    <compound refid="d2/ddf/_configuration_8cpp" kind="file">
+        <name>Configuration.cpp</name>
+    </compound>
+    <compound refid="d1/d32/_configuration_8hpp" kind="file">
+        <name>Configuration.hpp</name>
+        <member refid="d1/d32/_configuration_8hpp_1ab701e3ac61a85b337ec5c1abaad6742d" kind="typedef">
+            <name>json</name>
+        </member>
+    </compound>
+    <compound refid="d7/d71/_d_b_master_8cpp" kind="file">
+        <name>DBMaster.cpp</name>
+    </compound>
+    <compound refid="d7/d0f/_d_b_master_8hpp" kind="file">
+        <name>DBMaster.hpp</name>
+    </compound>
+    <compound refid="d1/d21/_about_dialog_8cpp" kind="file">
+        <name>AboutDialog.cpp</name>
+    </compound>
+    <compound refid="d7/ded/_about_dialog_8hpp" kind="file">
+        <name>AboutDialog.hpp</name>
+    </compound>
+    <compound refid="db/db5/_add_patient_dialog_8cpp" kind="file">
+        <name>AddPatientDialog.cpp</name>
+        <member refid="db/db5/_add_patient_dialog_8cpp_1a9a3825351aa51e8cae61bc7ee977a8a8" kind="define">
+            <name>UPDATE_NOTHING</name>
+        </member>
+    </compound>
+    <compound refid="d2/dac/_add_patient_dialog_8hpp" kind="file">
+        <name>AddPatientDialog.hpp</name>
+    </compound>
+    <compound refid="df/de8/_add_prescription_dialog_8cpp" kind="file">
+        <name>AddPrescriptionDialog.cpp</name>
+        <member refid="df/de8/_add_prescription_dialog_8cpp_1a9a3825351aa51e8cae61bc7ee977a8a8" kind="define">
+            <name>UPDATE_NOTHING</name>
+        </member>
+        <member refid="df/de8/_add_prescription_dialog_8cpp_1ac2bb715531f93dcd7ed3b76d56614fd7" kind="define">
+            <name>UPDATE_PRESCRIPTIONS</name>
+        </member>
+    </compound>
+    <compound refid="d0/d1e/_add_prescription_dialog_8hpp" kind="file">
+        <name>AddPrescriptionDialog.hpp</name>
+    </compound>
+    <compound refid="dc/de6/_dialog_8hpp" kind="file">
+        <name>Dialog.hpp</name>
+    </compound>
+    <compound refid="d6/d9e/_drug_window_8cpp" kind="file">
+        <name>DrugWindow.cpp</name>
+    </compound>
+    <compound refid="dd/d02/_drug_window_8hpp" kind="file">
+        <name>DrugWindow.hpp</name>
+    </compound>
+    <compound refid="d9/d07/_login_window_8cpp" kind="file">
+        <name>LoginWindow.cpp</name>
+    </compound>
+    <compound refid="db/d18/_login_window_8hpp" kind="file">
+        <name>LoginWindow.hpp</name>
+    </compound>
+    <compound refid="d5/da5/_main_window_8cpp" kind="file">
+        <name>MainWindow.cpp</name>
+    </compound>
+    <compound refid="db/d41/_main_window_8hpp" kind="file">
+        <name>MainWindow.hpp</name>
+    </compound>
+    <compound refid="d8/d35/_patient_window_8cpp" kind="file">
+        <name>PatientWindow.cpp</name>
+        <member refid="d8/d35/_patient_window_8cpp_1a9a3825351aa51e8cae61bc7ee977a8a8" kind="define">
+            <name>UPDATE_NOTHING</name>
+        </member>
+        <member refid="d8/d35/_patient_window_8cpp_1a94adc0f72476cceae4b66789d47a4d96" kind="define">
+            <name>UPDATE_PATIENTS</name>
+        </member>
+        <member refid="d8/d35/_patient_window_8cpp_1ac2bb715531f93dcd7ed3b76d56614fd7" kind="define">
+            <name>UPDATE_PRESCRIPTIONS</name>
+        </member>
+        <member refid="d8/d35/_patient_window_8cpp_1a7228f8aa1989f905d6e71645a540e56c" kind="define">
+            <name>UPDATE_DETAILS</name>
+        </member>
+    </compound>
+    <compound refid="dd/de0/_patient_window_8hpp" kind="file">
+        <name>PatientWindow.hpp</name>
+    </compound>
+    <compound refid="d1/d16/_prescription_window_8cpp" kind="file">
+        <name>PrescriptionWindow.cpp</name>
+    </compound>
+    <compound refid="d5/db1/_prescription_window_8hpp" kind="file">
+        <name>PrescriptionWindow.hpp</name>
+    </compound>
+    <compound refid="d9/d0c/_ref_builder_8cpp" kind="file">
+        <name>RefBuilder.cpp</name>
+    </compound>
+    <compound refid="dc/db8/_ref_builder_8hpp" kind="file">
+        <name>RefBuilder.hpp</name>
+    </compound>
+    <compound refid="d1/dea/_custom_widgets_8cpp" kind="file">
+        <name>CustomWidgets.cpp</name>
+    </compound>
+    <compound refid="d5/d46/_custom_widgets_8hpp" kind="file">
+        <name>CustomWidgets.hpp</name>
+    </compound>
+    <compound refid="d7/d49/_widgets_8cpp" kind="file">
+        <name>Widgets.cpp</name>
+    </compound>
+    <compound refid="dc/d55/_widgets_8hpp" kind="file">
+        <name>Widgets.hpp</name>
+    </compound>
+    <compound refid="de/d0b/_window_8hpp" kind="file">
+        <name>Window.hpp</name>
+    </compound>
+    <compound refid="d5/d40/_i_observer_8hpp" kind="file">
+        <name>IObserver.hpp</name>
+    </compound>
+    <compound refid="d8/d8a/_i_serializable_8cpp" kind="file">
+        <name>ISerializable.cpp</name>
+    </compound>
+    <compound refid="d3/d1b/_i_serializable_8hpp" kind="file">
+        <name>ISerializable.hpp</name>
+    </compound>
+    <compound refid="de/dd9/_i_subject_8cpp" kind="file">
+        <name>ISubject.cpp</name>
+    </compound>
+    <compound refid="d1/d25/_i_subject_8hpp" kind="file">
+        <name>ISubject.hpp</name>
+    </compound>
+    <compound refid="df/d0a/main_8cpp" kind="file">
+        <name>main.cpp</name>
+        <member refid="df/d0a/main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function">
+            <name>main</name>
+        </member>
+    </compound>
+    <compound refid="d7/daf/_med_h_8cpp" kind="file">
+        <name>MedH.cpp</name>
+    </compound>
+    <compound refid="db/d45/_med_h_8hpp" kind="file">
+        <name>MedH.hpp</name>
+    </compound>
+    <compound refid="d6/d6e/_authentication_8cpp" kind="file">
+        <name>Authentication.cpp</name>
+    </compound>
+    <compound refid="dc/d00/_authentication_8hpp" kind="file">
+        <name>Authentication.hpp</name>
+    </compound>
+    <compound refid="d3/da6/_doctor_8cpp" kind="file">
+        <name>Doctor.cpp</name>
+    </compound>
+    <compound refid="dd/dc5/_doctor_8hpp" kind="file">
+        <name>Doctor.hpp</name>
+    </compound>
+    <compound refid="d1/d9e/_drug_8cpp" kind="file">
+        <name>Drug.cpp</name>
+    </compound>
+    <compound refid="dd/df9/_drug_8hpp" kind="file">
+        <name>Drug.hpp</name>
+    </compound>
+    <compound refid="d0/d77/_patient_8cpp" kind="file">
+        <name>Patient.cpp</name>
+    </compound>
+    <compound refid="d0/da9/_patient_8hpp" kind="file">
+        <name>Patient.hpp</name>
+    </compound>
+    <compound refid="d5/db1/_prescription_8cpp" kind="file">
+        <name>Prescription.cpp</name>
+    </compound>
+    <compound refid="de/d01/_prescription_8hpp" kind="file">
+        <name>Prescription.hpp</name>
+    </compound>
+    <compound refid="dc/d1f/_date_8cpp" kind="file">
+        <name>Date.cpp</name>
+    </compound>
+    <compound refid="d8/d63/_date_8hpp" kind="file">
+        <name>Date.hpp</name>
+    </compound>
+    <compound refid="d3/d69/_date_by_8cpp" kind="file">
+        <name>DateBy.cpp</name>
+    </compound>
+    <compound refid="d9/da3/_date_by_8hpp" kind="file">
+        <name>DateBy.hpp</name>
+    </compound>
+    <compound refid="d4/dc3/os_8hpp" kind="file">
+        <name>os.hpp</name>
+    </compound>
+    <compound refid="d2/dce/string_utils_8hpp" kind="file">
+        <name>stringUtils.hpp</name>
+    </compound>
+    <compound refid="db/d84/_time_8cpp" kind="file">
+        <name>Time.cpp</name>
+    </compound>
+    <compound refid="d8/d3a/_time_8hpp" kind="file">
+        <name>Time.hpp</name>
+    </compound>
+    <compound refid="dir_050edd66366d13764f98250ef6db77f6" kind="dir">
+        <name>code</name>
+    </compound>
+    <compound refid="dir_3aa1edc5113eb71597736b7aa27b7402" kind="dir">
+        <name>code/gui</name>
+    </compound>
+    <compound refid="dir_57a7082de014cca77dd242f079f7e66c" kind="dir">
+        <name>code/interfaces</name>
+    </compound>
+    <compound refid="dir_c2a361fb7ebed33ab8c423b509dc8d4e" kind="dir">
+        <name>code/model</name>
+    </compound>
+    <compound refid="dir_b52c80b7fda602b2cf8039a593632a4a" kind="dir">
+        <name>code/utils</name>
+    </compound>
+    <compound refid="dir_b74f67ff05e200b1f1db8d84c0f76c07" kind="dir">
+        <name>code/gui/view</name>
+    </compound>
+</doxygenindex>

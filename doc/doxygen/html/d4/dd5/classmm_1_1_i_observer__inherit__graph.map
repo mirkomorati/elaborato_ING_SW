@@ -1,0 +1,7 @@
+<map id="mm::IObserver" name="mm::IObserver">
+<area shape="rect" id="node2" href="$d7/dcd/classmm_1_1_drug_window.html" title="{mm::DrugWindow\n||+ DrugWindow()\l+ init()\l+ getName()\l+ getNextWindow()\l+ update()\l+ initHandlers()\l+ initTreeView()\l+ updateDrugTreeView()\l+ updateDrugDetailsView()\l+ updatePatientView()\l+ onSelectedDrug()\l+ initDrugFilter()\l+ initQuantityFilter()\l}" alt="" coords="5,140,186,373"/>
+<area shape="rect" id="node3" href="$d7/dfd/classmm_1_1_main_window.html" title="{mm::MainWindow\n||+ init()\l+ getName()\l+ getNextWindow()\l+ update()\l+ MainWindow()\l+ ~MainWindow()\l}" alt="" coords="210,187,345,327"/>
+<area shape="rect" id="node4" href="$df/d1a/classmm_1_1_med_h.html" title="Classe che rappresenta il programma in se. " alt="" coords="368,207,455,307"/>
+<area shape="rect" id="node5" href="$da/d81/classmm_1_1_patient_window.html" title="{mm::PatientWindow\n||+ PatientWindow()\l+ init()\l+ getName()\l+ getNextWindow()\l+ update()\l+ update()\l+ ~PatientWindow()\l}" alt="" coords="479,180,619,333"/>
+<area shape="rect" id="node6" href="$da/d8f/classmm_1_1_prescription_window.html" title="{mm::PrescriptionWindow\n||+ PrescriptionWindow()\l+ init()\l+ getName()\l+ getNextWindow()\l+ update()\l}" alt="" coords="643,193,812,320"/>
+</map>

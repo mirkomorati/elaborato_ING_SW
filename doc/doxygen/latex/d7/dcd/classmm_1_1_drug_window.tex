@@ -1,0 +1,161 @@
+\hypertarget{classmm_1_1_drug_window}{}\section{Riferimenti per la classe mm\+:\+:Drug\+Window}
+\label{classmm_1_1_drug_window}\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+
+
+{\ttfamily \#include $<$Drug\+Window.\+hpp$>$}
+
+
+
+Diagramma delle classi per mm\+:\+:Drug\+Window
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{d6/d16/classmm_1_1_drug_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagramma di collaborazione per mm\+:\+:Drug\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{d8/d52/classmm_1_1_drug_window__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmm_1_1_drug_window_a7324435f0124010f172507467454d1a5}{Drug\+Window}} ()
+\item 
+bool \mbox{\hyperlink{classmm_1_1_drug_window_a54f331f1c516ce9113a9dade43948a16}{init}} () override
+\item 
+\mbox{\hyperlink{namespacemm_a4e9d92e04f65dbf2fc1963947da0d93c}{Window\+Name}} \mbox{\hyperlink{classmm_1_1_drug_window_aa33aafc6205abc8c627d0b0a5849895b}{get\+Name}} () const override
+\item 
+\mbox{\hyperlink{namespacemm_a4e9d92e04f65dbf2fc1963947da0d93c}{Window\+Name}} \mbox{\hyperlink{classmm_1_1_drug_window_a571966bdd4a2ecf069cdca69c73726b2}{get\+Next\+Window}} () const override
+\item 
+void \mbox{\hyperlink{classmm_1_1_drug_window_a98c6d97f491cb648dede0ef3db2b13b2}{update}} () override
+\item 
+void \mbox{\hyperlink{classmm_1_1_drug_window_a4926180df1b7f3dfc1f2b1746522c6fb}{init\+Handlers}} ()
+\item 
+void \mbox{\hyperlink{classmm_1_1_drug_window_ac762c909bb394adccd41e1c6e97d8404}{init\+Tree\+View}} ()
+\item 
+void \mbox{\hyperlink{classmm_1_1_drug_window_a7a43f5981915470da37088a248006c0e}{update\+Drug\+Tree\+View}} ()
+\item 
+void \mbox{\hyperlink{classmm_1_1_drug_window_a5df5a3991bc26fcf5e4df2c622053c42}{update\+Drug\+Details\+View}} ()
+\item 
+void \mbox{\hyperlink{classmm_1_1_drug_window_a069d6731dcbf47f32e6be18a8ecb0472}{update\+Patient\+View}} ()
+\item 
+void \mbox{\hyperlink{classmm_1_1_drug_window_ad88417beac6e778776f939c31e6def7a}{on\+Selected\+Drug}} (const Gtk\+::\+Tree\+Model\+::\+Path \&, Gtk\+::\+Tree\+View\+Column $\ast$)
+\item 
+void \mbox{\hyperlink{classmm_1_1_drug_window_a2d01e24deaba42b7c24cf5b5457f4298}{init\+Drug\+Filter}} ()
+\item 
+void \mbox{\hyperlink{classmm_1_1_drug_window_a40c9dca8380e72b7468170db21bcfbe9}{init\+Quantity\+Filter}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione dei costruttori e dei distruttori}
+\mbox{\Hypertarget{classmm_1_1_drug_window_a7324435f0124010f172507467454d1a5}\label{classmm_1_1_drug_window_a7324435f0124010f172507467454d1a5}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!Drug\+Window@{Drug\+Window}}
+\index{Drug\+Window@{Drug\+Window}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{Drug\+Window()}{DrugWindow()}}
+{\footnotesize\ttfamily mm\+::\+Drug\+Window\+::\+Drug\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{classmm_1_1_drug_window_aa33aafc6205abc8c627d0b0a5849895b}\label{classmm_1_1_drug_window_aa33aafc6205abc8c627d0b0a5849895b}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemm_a4e9d92e04f65dbf2fc1963947da0d93c}{mm\+::\+Window\+Name}} mm\+::\+Drug\+Window\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{classmm_1_1_window_a942c9125bf42156a9f7b7f561e412fed}{mm\+::\+Window}}.
+
+\mbox{\Hypertarget{classmm_1_1_drug_window_a571966bdd4a2ecf069cdca69c73726b2}\label{classmm_1_1_drug_window_a571966bdd4a2ecf069cdca69c73726b2}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!get\+Next\+Window@{get\+Next\+Window}}
+\index{get\+Next\+Window@{get\+Next\+Window}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{get\+Next\+Window()}{getNextWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemm_a4e9d92e04f65dbf2fc1963947da0d93c}{mm\+::\+Window\+Name}} mm\+::\+Drug\+Window\+::get\+Next\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{classmm_1_1_window_a0cd7b4b0feb9505c44503547a161fcd8}{mm\+::\+Window}}.
+
+\mbox{\Hypertarget{classmm_1_1_drug_window_a54f331f1c516ce9113a9dade43948a16}\label{classmm_1_1_drug_window_a54f331f1c516ce9113a9dade43948a16}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!init@{init}}
+\index{init@{init}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool mm\+::\+Drug\+Window\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{classmm_1_1_window_aba03fbf4761b2f106352baecf5996e10}{mm\+::\+Window}}.
+
+\mbox{\Hypertarget{classmm_1_1_drug_window_a2d01e24deaba42b7c24cf5b5457f4298}\label{classmm_1_1_drug_window_a2d01e24deaba42b7c24cf5b5457f4298}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!init\+Drug\+Filter@{init\+Drug\+Filter}}
+\index{init\+Drug\+Filter@{init\+Drug\+Filter}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{init\+Drug\+Filter()}{initDrugFilter()}}
+{\footnotesize\ttfamily void mm\+::\+Drug\+Window\+::init\+Drug\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1_drug_window_a4926180df1b7f3dfc1f2b1746522c6fb}\label{classmm_1_1_drug_window_a4926180df1b7f3dfc1f2b1746522c6fb}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!init\+Handlers@{init\+Handlers}}
+\index{init\+Handlers@{init\+Handlers}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{init\+Handlers()}{initHandlers()}}
+{\footnotesize\ttfamily void mm\+::\+Drug\+Window\+::init\+Handlers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1_drug_window_a40c9dca8380e72b7468170db21bcfbe9}\label{classmm_1_1_drug_window_a40c9dca8380e72b7468170db21bcfbe9}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!init\+Quantity\+Filter@{init\+Quantity\+Filter}}
+\index{init\+Quantity\+Filter@{init\+Quantity\+Filter}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{init\+Quantity\+Filter()}{initQuantityFilter()}}
+{\footnotesize\ttfamily void mm\+::\+Drug\+Window\+::init\+Quantity\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1_drug_window_ac762c909bb394adccd41e1c6e97d8404}\label{classmm_1_1_drug_window_ac762c909bb394adccd41e1c6e97d8404}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!init\+Tree\+View@{init\+Tree\+View}}
+\index{init\+Tree\+View@{init\+Tree\+View}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{init\+Tree\+View()}{initTreeView()}}
+{\footnotesize\ttfamily void mm\+::\+Drug\+Window\+::init\+Tree\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1_drug_window_ad88417beac6e778776f939c31e6def7a}\label{classmm_1_1_drug_window_ad88417beac6e778776f939c31e6def7a}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!on\+Selected\+Drug@{on\+Selected\+Drug}}
+\index{on\+Selected\+Drug@{on\+Selected\+Drug}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{on\+Selected\+Drug()}{onSelectedDrug()}}
+{\footnotesize\ttfamily void mm\+::\+Drug\+Window\+::on\+Selected\+Drug (\begin{DoxyParamCaption}\item[{const Gtk\+::\+Tree\+Model\+::\+Path \&}]{,  }\item[{Gtk\+::\+Tree\+View\+Column $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1_drug_window_a98c6d97f491cb648dede0ef3db2b13b2}\label{classmm_1_1_drug_window_a98c6d97f491cb648dede0ef3db2b13b2}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!update@{update}}
+\index{update@{update}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void mm\+::\+Drug\+Window\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{classmm_1_1_i_observer_a6422af04f8e9f3ba9d6d412a3bcdd03e}{mm\+::\+I\+Observer}}.
+
+\mbox{\Hypertarget{classmm_1_1_drug_window_a5df5a3991bc26fcf5e4df2c622053c42}\label{classmm_1_1_drug_window_a5df5a3991bc26fcf5e4df2c622053c42}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!update\+Drug\+Details\+View@{update\+Drug\+Details\+View}}
+\index{update\+Drug\+Details\+View@{update\+Drug\+Details\+View}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{update\+Drug\+Details\+View()}{updateDrugDetailsView()}}
+{\footnotesize\ttfamily void mm\+::\+Drug\+Window\+::update\+Drug\+Details\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1_drug_window_a7a43f5981915470da37088a248006c0e}\label{classmm_1_1_drug_window_a7a43f5981915470da37088a248006c0e}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!update\+Drug\+Tree\+View@{update\+Drug\+Tree\+View}}
+\index{update\+Drug\+Tree\+View@{update\+Drug\+Tree\+View}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{update\+Drug\+Tree\+View()}{updateDrugTreeView()}}
+{\footnotesize\ttfamily void mm\+::\+Drug\+Window\+::update\+Drug\+Tree\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmm_1_1_drug_window_a069d6731dcbf47f32e6be18a8ecb0472}\label{classmm_1_1_drug_window_a069d6731dcbf47f32e6be18a8ecb0472}} 
+\index{mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}!update\+Patient\+View@{update\+Patient\+View}}
+\index{update\+Patient\+View@{update\+Patient\+View}!mm\+::\+Drug\+Window@{mm\+::\+Drug\+Window}}
+\subsubsection{\texorpdfstring{update\+Patient\+View()}{updatePatientView()}}
+{\footnotesize\ttfamily void mm\+::\+Drug\+Window\+::update\+Patient\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+La documentazione per questa classe è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
+\item 
+code/gui/\mbox{\hyperlink{_drug_window_8hpp}{Drug\+Window.\+hpp}}\item 
+code/gui/\mbox{\hyperlink{_drug_window_8cpp}{Drug\+Window.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\hypertarget{classmm_1_1_i_serializable}{}\section{Riferimenti per la classe mm\+:\+:I\+Serializable}
+\label{classmm_1_1_i_serializable}\index{mm\+::\+I\+Serializable@{mm\+::\+I\+Serializable}}
+
+
+Funziona come un interfaccia, qualunque classe che erediti da questa potrà essere letta o scritta nel database dal singleton \mbox{\hyperlink{classmm_1_1_d_b_master}{D\+B\+Master}}.  
+
+
+
+
+{\ttfamily \#include $<$I\+Serializable.\+hpp$>$}
+
+
+
+Diagramma delle classi per mm\+:\+:I\+Serializable
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d4e/classmm_1_1_i_serializable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagramma di collaborazione per mm\+:\+:I\+Serializable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{db/dc2/classmm_1_1_i_serializable__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::map$<$ std\+::string, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$ \mbox{\hyperlink{classmm_1_1_i_serializable_a20a59e2324c8dbf6fefe4d11ae89d0fb}{serialize}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classmm_1_1_i_serializable_a8e5329b3b23cd0dff0ea8f5f63bab996}{unserialize}} (std\+::map$<$ std\+::string, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$)=0
+\item 
+virtual std\+::string \mbox{\hyperlink{classmm_1_1_i_serializable_a9717e6da47fcbac3ffa2e68152464e0a}{get\+\_\+table\+\_\+name}} () const =0
+\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmm_1_1_i_serializable_a69c0c514e11e386b6cb1fbd03f14da17}{get\+\_\+primary\+\_\+key}} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Funziona come un interfaccia, qualunque classe che erediti da questa potrà essere letta o scritta nel database dal singleton \mbox{\hyperlink{classmm_1_1_d_b_master}{D\+B\+Master}}. 
+
+\subsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{classmm_1_1_i_serializable_a69c0c514e11e386b6cb1fbd03f14da17}\label{classmm_1_1_i_serializable_a69c0c514e11e386b6cb1fbd03f14da17}} 
+\index{mm\+::\+I\+Serializable@{mm\+::\+I\+Serializable}!get\+\_\+primary\+\_\+key@{get\+\_\+primary\+\_\+key}}
+\index{get\+\_\+primary\+\_\+key@{get\+\_\+primary\+\_\+key}!mm\+::\+I\+Serializable@{mm\+::\+I\+Serializable}}
+\subsubsection{\texorpdfstring{get\+\_\+primary\+\_\+key()}{get\_primary\_key()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ mm\+::\+I\+Serializable\+::get\+\_\+primary\+\_\+key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementato in \mbox{\hyperlink{classmm_1_1model_1_1_drug_a019770ab95f95f34bbc204c4c3860bfa}{mm\+::model\+::\+Drug}}, \mbox{\hyperlink{classmm_1_1model_1_1_doctor_a935989cbe2274076c2b409126d4faccd}{mm\+::model\+::\+Doctor}}, \mbox{\hyperlink{classmm_1_1model_1_1_prescription_af521915f8872df18ae4a50ff2a4f59ff}{mm\+::model\+::\+Prescription}}, \mbox{\hyperlink{classmm_1_1model_1_1_patient_ae85640f3cb3d34bb57e1129ef46a0cbf}{mm\+::model\+::\+Patient}}, e \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_a56f5da26be2d64baa78d0c81d99c8221}{mm\+::model\+::authentication\+::\+Login}}.
+
+\mbox{\Hypertarget{classmm_1_1_i_serializable_a9717e6da47fcbac3ffa2e68152464e0a}\label{classmm_1_1_i_serializable_a9717e6da47fcbac3ffa2e68152464e0a}} 
+\index{mm\+::\+I\+Serializable@{mm\+::\+I\+Serializable}!get\+\_\+table\+\_\+name@{get\+\_\+table\+\_\+name}}
+\index{get\+\_\+table\+\_\+name@{get\+\_\+table\+\_\+name}!mm\+::\+I\+Serializable@{mm\+::\+I\+Serializable}}
+\subsubsection{\texorpdfstring{get\+\_\+table\+\_\+name()}{get\_table\_name()}}
+{\footnotesize\ttfamily virtual std\+::string mm\+::\+I\+Serializable\+::get\+\_\+table\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementato in \mbox{\hyperlink{classmm_1_1model_1_1_drug_a7fa9dbb569b89f397d4b865b778b3751}{mm\+::model\+::\+Drug}}, \mbox{\hyperlink{classmm_1_1model_1_1_doctor_af4c37e48f9e5ff26f2295678f10afaa3}{mm\+::model\+::\+Doctor}}, \mbox{\hyperlink{classmm_1_1model_1_1_prescription_a8de9a927dc92c0e0b15dac6f930889e3}{mm\+::model\+::\+Prescription}}, \mbox{\hyperlink{classmm_1_1model_1_1_patient_abe79da3e4fabd80e039ae4880dfa76cb}{mm\+::model\+::\+Patient}}, e \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_afc72adef91be3d97ce4751b8a2357613}{mm\+::model\+::authentication\+::\+Login}}.
+
+\mbox{\Hypertarget{classmm_1_1_i_serializable_a20a59e2324c8dbf6fefe4d11ae89d0fb}\label{classmm_1_1_i_serializable_a20a59e2324c8dbf6fefe4d11ae89d0fb}} 
+\index{mm\+::\+I\+Serializable@{mm\+::\+I\+Serializable}!serialize@{serialize}}
+\index{serialize@{serialize}!mm\+::\+I\+Serializable@{mm\+::\+I\+Serializable}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily virtual std\+::map$<$std\+::string, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}}$>$ mm\+::\+I\+Serializable\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementato in \mbox{\hyperlink{classmm_1_1model_1_1_drug_a5d4fa5bf5e4700f833547c5114764c7b}{mm\+::model\+::\+Drug}}, \mbox{\hyperlink{classmm_1_1model_1_1_doctor_a2171a9cb9c8a24ad0c0331edae957910}{mm\+::model\+::\+Doctor}}, \mbox{\hyperlink{classmm_1_1model_1_1_prescription_a592ff88dfa9625a383a7b073a64863b1}{mm\+::model\+::\+Prescription}}, \mbox{\hyperlink{classmm_1_1model_1_1_patient_ae3ac219cd109e8c53daaf9b2758c3a0e}{mm\+::model\+::\+Patient}}, e \mbox{\hyperlink{structmm_1_1model_1_1authentication_1_1_login_a69ec1a769ef1659b8ed39d5e23c24333}{mm\+::model\+::authentication\+::\+Login}}.
+
+\mbox{\Hypertarget{classmm_1_1_i_serializable_a8e5329b3b23cd0dff0ea8f5f63bab996}\label{classmm_1_1_i_serializable_a8e5329b3b23cd0dff0ea8f5f63bab996}} 
+\index{mm\+::\+I\+Serializable@{mm\+::\+I\+Serializable}!unserialize@{unserialize}}
+\index{unserialize@{unserialize}!mm\+::\+I\+Serializable@{mm\+::\+I\+Serializable}}
+\subsubsection{\texorpdfstring{unserialize()}{unserialize()}}
+{\footnotesize\ttfamily virtual void mm\+::\+I\+Serializable\+::unserialize (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+code/interfaces/\mbox{\hyperlink{_i_serializable_8hpp}{I\+Serializable.\+hpp}}\end{DoxyCompactItemize}

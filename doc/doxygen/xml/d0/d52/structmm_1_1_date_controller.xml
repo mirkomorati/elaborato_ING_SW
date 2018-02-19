@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d0/d52/structmm_1_1_date_controller" kind="struct" language="C++" prot="public">
+        <compoundname>mm::DateController</compoundname>
+        <basecompoundref prot="public" virt="non-virtual">trackable</basecompoundref>
+        <includes refid="dc/d55/_widgets_8hpp" local="no">Widgets.hpp</includes>
+        <sectiondef kind="public-attrib">
+            <memberdef kind="variable" id="d0/d52/structmm_1_1_date_controller_1a332df89b4a88fe3ace3d6d86934a575d"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::ComboBoxText *</type>
+                <definition>Gtk::ComboBoxText* mm::DateController::day</definition>
+                <argsstring></argsstring>
+                <name>day</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="46" column="1" bodyfile="code/gui/Widgets.hpp"
+                          bodystart="46" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d0/d52/structmm_1_1_date_controller_1a1e7373cef0b00e63343ef9d30a1e80c5"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::ComboBoxText *</type>
+                <definition>Gtk::ComboBoxText* mm::DateController::month</definition>
+                <argsstring></argsstring>
+                <name>month</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="47" column="1" bodyfile="code/gui/Widgets.hpp"
+                          bodystart="47" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d0/d52/structmm_1_1_date_controller_1a36179406cda47b8c18d1a84945a5e61c"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::ComboBoxText *</type>
+                <definition>Gtk::ComboBoxText* mm::DateController::year</definition>
+                <argsstring></argsstring>
+                <name>year</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="48" column="1" bodyfile="code/gui/Widgets.hpp"
+                          bodystart="48" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d0/d52/structmm_1_1_date_controller_1a3244d913ab9d7b96e9617f8711e34bd8"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::DateController::DateController</definition>
+                <argsstring>()=delete</argsstring>
+                <name>DateController</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="31" column="1"/>
+            </memberdef>
+            <memberdef kind="function" id="d0/d52/structmm_1_1_date_controller_1a591167277348214a72634a4bbc9272ad"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::DateController::DateController</definition>
+                <argsstring>(const std::string &amp;dayId, const std::string &amp;monthId, const std::string &amp;yearId)</argsstring>
+                <name>DateController</name>
+                <param>
+                    <type>const std::string &amp;</type>
+                    <declname>dayId</declname>
+                </param>
+                <param>
+                    <type>const std::string &amp;</type>
+                    <declname>monthId</declname>
+                </param>
+                <param>
+                    <type>const std::string &amp;</type>
+                    <declname>yearId</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="33" column="1" bodyfile="code/gui/Widgets.cpp"
+                          bodystart="21" bodyend="35"/>
+            </memberdef>
+            <memberdef kind="function" id="d0/d52/structmm_1_1_date_controller_1a7474c420c78178ee6ee6a2e66c16803f"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DateController::onDateChanged</definition>
+                <argsstring>()</argsstring>
+                <name>onDateChanged</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="35" column="1" bodyfile="code/gui/Widgets.cpp"
+                          bodystart="44" bodyend="58"/>
+            </memberdef>
+            <memberdef kind="function" id="d0/d52/structmm_1_1_date_controller_1a9e09c31aa55c3389c6919c716bb8b0dc"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DateController::reset</definition>
+                <argsstring>()</argsstring>
+                <name>reset</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="37" column="1" bodyfile="code/gui/Widgets.cpp"
+                          bodystart="37" bodyend="42"/>
+            </memberdef>
+            <memberdef kind="function" id="d0/d52/structmm_1_1_date_controller_1a8ebf6bda6699414521e4e299fd59e843"
+                       prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+                <type>std::string</type>
+                <definition>std::string mm::DateController::getDateAsString</definition>
+                <argsstring>()</argsstring>
+                <name>getDateAsString</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="39" column="1" bodyfile="code/gui/Widgets.hpp"
+                          bodystart="39" bodyend="42"/>
+            </memberdef>
+            <memberdef kind="function" id="d0/d52/structmm_1_1_date_controller_1aa3c0122bfcc36e8d8b43c8ca7ca76197"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>
+                    <ref refid="df/d88/structmm_1_1util_1_1_date" kindref="compound">util::Date</ref>
+                </type>
+                <definition>mm::util::Date mm::DateController::getDate</definition>
+                <argsstring>()</argsstring>
+                <name>getDate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="44" column="1" bodyfile="code/gui/Widgets.cpp"
+                          bodystart="60" bodyend="72"/>
+            </memberdef>
+            <memberdef kind="function" id="d0/d52/structmm_1_1_date_controller_1aa7f999d2d5afec5c6724f92cf2856171"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::DateController::init</definition>
+                <argsstring>()</argsstring>
+                <name>init</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/Widgets.hpp" line="50" column="1" bodyfile="code/gui/Widgets.cpp"
+                          bodystart="74" bodyend="81"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="31">
+                <label>mm::DateController</label>
+                <link refid="d0/d52/structmm_1_1_date_controller"/>
+                <childnode refid="32" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="32">
+                <label>sigc::trackable</label>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="33">
+                <label>mm::DateController</label>
+                <link refid="d0/d52/structmm_1_1_date_controller"/>
+                <childnode refid="34" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="34">
+                <label>sigc::trackable</label>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/Widgets.hpp" line="30" column="1" bodyfile="code/gui/Widgets.hpp" bodystart="30"
+                  bodyend="51"/>
+        <listofallmembers>
+            <member refid="d0/d52/structmm_1_1_date_controller_1a3244d913ab9d7b96e9617f8711e34bd8" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DateController</scope>
+                <name>DateController</name>
+            </member>
+            <member refid="d0/d52/structmm_1_1_date_controller_1a591167277348214a72634a4bbc9272ad" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DateController</scope>
+                <name>DateController</name>
+            </member>
+            <member refid="d0/d52/structmm_1_1_date_controller_1a332df89b4a88fe3ace3d6d86934a575d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DateController</scope>
+                <name>day</name>
+            </member>
+            <member refid="d0/d52/structmm_1_1_date_controller_1aa3c0122bfcc36e8d8b43c8ca7ca76197" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DateController</scope>
+                <name>getDate</name>
+            </member>
+            <member refid="d0/d52/structmm_1_1_date_controller_1a8ebf6bda6699414521e4e299fd59e843" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DateController</scope>
+                <name>getDateAsString</name>
+            </member>
+            <member refid="d0/d52/structmm_1_1_date_controller_1aa7f999d2d5afec5c6724f92cf2856171" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DateController</scope>
+                <name>init</name>
+            </member>
+            <member refid="d0/d52/structmm_1_1_date_controller_1a1e7373cef0b00e63343ef9d30a1e80c5" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DateController</scope>
+                <name>month</name>
+            </member>
+            <member refid="d0/d52/structmm_1_1_date_controller_1a7474c420c78178ee6ee6a2e66c16803f" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DateController</scope>
+                <name>onDateChanged</name>
+            </member>
+            <member refid="d0/d52/structmm_1_1_date_controller_1a9e09c31aa55c3389c6919c716bb8b0dc" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DateController</scope>
+                <name>reset</name>
+            </member>
+            <member refid="d0/d52/structmm_1_1_date_controller_1a36179406cda47b8c18d1a84945a5e61c" prot="public"
+                    virt="non-virtual">
+                <scope>mm::DateController</scope>
+                <name>year</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

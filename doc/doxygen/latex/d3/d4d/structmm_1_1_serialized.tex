@@ -1,0 +1,194 @@
+\hypertarget{structmm_1_1_serialized}{}\section{Riferimenti per la struct mm\+:\+:Serialized}
+\label{structmm_1_1_serialized}\index{mm\+::\+Serialized@{mm\+::\+Serialized}}
+
+
+Rappresenta un dato da scrivere o estratto dal database.  
+
+
+
+
+{\ttfamily \#include $<$I\+Serializable.\+hpp$>$}
+
+
+
+Diagramma di collaborazione per mm\+:\+:Serialized\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{d2/de9/structmm_1_1_serialized__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemm_ad5a796af6d7145f51e84a73ed35a601c}{Stored\+Types}} \mbox{\hyperlink{structmm_1_1_serialized_a9a257b31c4426077a3bd460d1e6cbd89}{get\+\_\+type}} () const noexcept
+\item 
+bool \mbox{\hyperlink{structmm_1_1_serialized_ac0e23433a34f0d326042907895a03353}{is\+Type}} (\mbox{\hyperlink{namespacemm_ad5a796af6d7145f51e84a73ed35a601c}{Stored\+Types}} type) const noexcept
+\item 
+const std\+::string \mbox{\hyperlink{structmm_1_1_serialized_aa3eb7eb50d6b343993c08a4d369af8b2}{get\+\_\+str}} () const noexcept(false)
+\item 
+int \mbox{\hyperlink{structmm_1_1_serialized_a259c2695619d6ba052fd8a3885a341ef}{get\+\_\+int}} () const noexcept(false)
+\item 
+double \mbox{\hyperlink{structmm_1_1_serialized_acd3c339c1766f6dbc0313669e7582361}{get\+\_\+real}} () const noexcept(false)
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized_a440d7e6daeb9e6c2ca286a2eee1fc24d}{Serialized}} (std\+::string data) noexcept
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized_a1fcb5290740858b4a800f6b4d48e3c74}{Serialized}} (const char $\ast$c\+\_\+str) noexcept
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized_a2d29dc6d2cb8eed1a768a378b1d61b8f}{Serialized}} (int data) noexcept
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized_ae11ee0c67ffaed5dfc69bf52f33ebcca}{Serialized}} (double data) noexcept
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized_a8e5cff9af77398dfa1f398a83bb9d642}{Serialized}} (float data) noexcept
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized_af64564defb439c3167375d2984c0653d}{Serialized}} (const \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} \&old) noexcept
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} \& \mbox{\hyperlink{structmm_1_1_serialized_a7d108150308172857962c61c94f78fbd}{operator=}} (const \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} \&old)
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized_a47c193b8439645264f62af1887cbfb2f}{operator int}} () const noexcept(false)
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized_a4c753eedf42e36e51e8de52c2ae8917d}{operator std\+::string}} () const noexcept(false)
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized_a3462f388a68a546a738038e5ce235b21}{operator double}} () const noexcept(false)
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized_af1414a72ff10e038d96f6f33f352b2dc}{$\sim$\+Serialized}} () noexcept
+\item 
+\mbox{\hyperlink{structmm_1_1_serialized_a14f147b31fbf90a95379bbd919875362}{Serialized}} () noexcept
+\end{DoxyCompactItemize}
+\subsection*{Friend}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{structmm_1_1_serialized_a7ac660741c58dec6ffe85a006b9846ae}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} \&data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Rappresenta un dato da scrivere o estratto dal database. 
+
+Questa Classe contiene tutti i metodi e le operazioni necessarie a gestire i dati salvati su database, distingue tra i vari tipi e maschera al programmatore la gestione della memoria relativa alla gestione della union \mbox{\hyperlink{unionmm_1_1_serialized_union}{Serialized\+Union}} che contiene. 
+
+\subsection{Documentazione dei costruttori e dei distruttori}
+\mbox{\Hypertarget{structmm_1_1_serialized_a440d7e6daeb9e6c2ca286a2eee1fc24d}\label{structmm_1_1_serialized_a440d7e6daeb9e6c2ca286a2eee1fc24d}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!Serialized@{Serialized}}
+\index{Serialized@{Serialized}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{Serialized()}{Serialized()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily mm\+::\+Serialized\+::\+Serialized (\begin{DoxyParamCaption}\item[{std\+::string}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_a1fcb5290740858b4a800f6b4d48e3c74}\label{structmm_1_1_serialized_a1fcb5290740858b4a800f6b4d48e3c74}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!Serialized@{Serialized}}
+\index{Serialized@{Serialized}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{Serialized()}{Serialized()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily mm\+::\+Serialized\+::\+Serialized (\begin{DoxyParamCaption}\item[{const char $\ast$}]{c\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_a2d29dc6d2cb8eed1a768a378b1d61b8f}\label{structmm_1_1_serialized_a2d29dc6d2cb8eed1a768a378b1d61b8f}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!Serialized@{Serialized}}
+\index{Serialized@{Serialized}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{Serialized()}{Serialized()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily mm\+::\+Serialized\+::\+Serialized (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_ae11ee0c67ffaed5dfc69bf52f33ebcca}\label{structmm_1_1_serialized_ae11ee0c67ffaed5dfc69bf52f33ebcca}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!Serialized@{Serialized}}
+\index{Serialized@{Serialized}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{Serialized()}{Serialized()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily mm\+::\+Serialized\+::\+Serialized (\begin{DoxyParamCaption}\item[{double}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_a8e5cff9af77398dfa1f398a83bb9d642}\label{structmm_1_1_serialized_a8e5cff9af77398dfa1f398a83bb9d642}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!Serialized@{Serialized}}
+\index{Serialized@{Serialized}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{Serialized()}{Serialized()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily mm\+::\+Serialized\+::\+Serialized (\begin{DoxyParamCaption}\item[{float}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_af64564defb439c3167375d2984c0653d}\label{structmm_1_1_serialized_af64564defb439c3167375d2984c0653d}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!Serialized@{Serialized}}
+\index{Serialized@{Serialized}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{Serialized()}{Serialized()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily mm\+::\+Serialized\+::\+Serialized (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} \&}]{old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_af1414a72ff10e038d96f6f33f352b2dc}\label{structmm_1_1_serialized_af1414a72ff10e038d96f6f33f352b2dc}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!````~Serialized@{$\sim$\+Serialized}}
+\index{````~Serialized@{$\sim$\+Serialized}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{$\sim$\+Serialized()}{~Serialized()}}
+{\footnotesize\ttfamily mm\+::\+Serialized\+::$\sim$\+Serialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_a14f147b31fbf90a95379bbd919875362}\label{structmm_1_1_serialized_a14f147b31fbf90a95379bbd919875362}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!Serialized@{Serialized}}
+\index{Serialized@{Serialized}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{Serialized()}{Serialized()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily mm\+::\+Serialized\+::\+Serialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+\subsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{structmm_1_1_serialized_a259c2695619d6ba052fd8a3885a341ef}\label{structmm_1_1_serialized_a259c2695619d6ba052fd8a3885a341ef}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!get\+\_\+int@{get\+\_\+int}}
+\index{get\+\_\+int@{get\+\_\+int}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{get\+\_\+int()}{get\_int()}}
+{\footnotesize\ttfamily int mm\+::\+Serialized\+::get\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_acd3c339c1766f6dbc0313669e7582361}\label{structmm_1_1_serialized_acd3c339c1766f6dbc0313669e7582361}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!get\+\_\+real@{get\+\_\+real}}
+\index{get\+\_\+real@{get\+\_\+real}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{get\+\_\+real()}{get\_real()}}
+{\footnotesize\ttfamily double mm\+::\+Serialized\+::get\+\_\+real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_aa3eb7eb50d6b343993c08a4d369af8b2}\label{structmm_1_1_serialized_aa3eb7eb50d6b343993c08a4d369af8b2}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!get\+\_\+str@{get\+\_\+str}}
+\index{get\+\_\+str@{get\+\_\+str}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{get\+\_\+str()}{get\_str()}}
+{\footnotesize\ttfamily const std\+::string mm\+::\+Serialized\+::get\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_a9a257b31c4426077a3bd460d1e6cbd89}\label{structmm_1_1_serialized_a9a257b31c4426077a3bd460d1e6cbd89}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!get\+\_\+type@{get\+\_\+type}}
+\index{get\+\_\+type@{get\+\_\+type}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{get\+\_\+type()}{get\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemm_ad5a796af6d7145f51e84a73ed35a601c}{mm\+::\+Stored\+Types}} mm\+::\+Serialized\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_ac0e23433a34f0d326042907895a03353}\label{structmm_1_1_serialized_ac0e23433a34f0d326042907895a03353}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!is\+Type@{is\+Type}}
+\index{is\+Type@{is\+Type}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{is\+Type()}{isType()}}
+{\footnotesize\ttfamily bool mm\+::\+Serialized\+::is\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemm_ad5a796af6d7145f51e84a73ed35a601c}{mm\+::\+Stored\+Types}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Project Elaborato\+\_\+\+I\+N\+G\+\_\+\+SW \begin{DoxyAuthor}{Autore}
+Noè Murr, Mirko Morati 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{structmm_1_1_serialized_a3462f388a68a546a738038e5ce235b21}\label{structmm_1_1_serialized_a3462f388a68a546a738038e5ce235b21}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!operator double@{operator double}}
+\index{operator double@{operator double}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{operator double()}{operator double()}}
+{\footnotesize\ttfamily mm\+::\+Serialized\+::operator double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_a47c193b8439645264f62af1887cbfb2f}\label{structmm_1_1_serialized_a47c193b8439645264f62af1887cbfb2f}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!operator int@{operator int}}
+\index{operator int@{operator int}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{operator int()}{operator int()}}
+{\footnotesize\ttfamily mm\+::\+Serialized\+::operator int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_a4c753eedf42e36e51e8de52c2ae8917d}\label{structmm_1_1_serialized_a4c753eedf42e36e51e8de52c2ae8917d}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!operator std\+::string@{operator std\+::string}}
+\index{operator std\+::string@{operator std\+::string}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{operator std\+::string()}{operator std::string()}}
+{\footnotesize\ttfamily mm\+::\+Serialized\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structmm_1_1_serialized_a7d108150308172857962c61c94f78fbd}\label{structmm_1_1_serialized_a7d108150308172857962c61c94f78fbd}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!operator=@{operator=}}
+\index{operator=@{operator=}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmm_1_1_serialized}{mm\+::\+Serialized}} \& mm\+::\+Serialized\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} \&}]{old }\end{DoxyParamCaption})}
+
+
+
+\subsection{Documentazione dei friend e delle funzioni collegate}
+\mbox{\Hypertarget{structmm_1_1_serialized_a7ac660741c58dec6ffe85a006b9846ae}\label{structmm_1_1_serialized_a7ac660741c58dec6ffe85a006b9846ae}} 
+\index{mm\+::\+Serialized@{mm\+::\+Serialized}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!mm\+::\+Serialized@{mm\+::\+Serialized}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structmm_1_1_serialized}{Serialized}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+La documentazione per questa struct è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
+\item 
+code/interfaces/\mbox{\hyperlink{_i_serializable_8hpp}{I\+Serializable.\+hpp}}\item 
+code/interfaces/\mbox{\hyperlink{_i_serializable_8cpp}{I\+Serializable.\+cpp}}\end{DoxyCompactItemize}

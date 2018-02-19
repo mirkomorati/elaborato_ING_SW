@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="dir_050edd66366d13764f98250ef6db77f6" kind="dir">
+        <compoundname>code</compoundname>
+        <innerdir refid="dir_3aa1edc5113eb71597736b7aa27b7402">code/gui</innerdir>
+        <innerdir refid="dir_57a7082de014cca77dd242f079f7e66c">code/interfaces</innerdir>
+        <innerdir refid="dir_c2a361fb7ebed33ab8c423b509dc8d4e">code/model</innerdir>
+        <innerdir refid="dir_b52c80b7fda602b2cf8039a593632a4a">code/utils</innerdir>
+        <innerfile refid="d2/ddf/_configuration_8cpp">Configuration.cpp</innerfile>
+        <innerfile refid="d1/d32/_configuration_8hpp">Configuration.hpp</innerfile>
+        <innerfile refid="d7/d71/_d_b_master_8cpp">DBMaster.cpp</innerfile>
+        <innerfile refid="d7/d0f/_d_b_master_8hpp">DBMaster.hpp</innerfile>
+        <innerfile refid="df/d0a/main_8cpp">main.cpp</innerfile>
+        <innerfile refid="d7/daf/_med_h_8cpp">MedH.cpp</innerfile>
+        <innerfile refid="db/d45/_med_h_8hpp">MedH.hpp</innerfile>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="code/"/>
+    </compounddef>
+</doxygen>

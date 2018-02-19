@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d2/d52/structmm_1_1model_1_1_drug_tree_model" kind="struct" language="C++" prot="public">
+        <compoundname>mm::model::DrugTreeModel</compoundname>
+        <basecompoundref prot="public" virt="non-virtual">ColumnRecord</basecompoundref>
+        <includes refid="dd/df9/_drug_8hpp" local="no">Drug.hpp</includes>
+        <sectiondef kind="public-attrib">
+            <memberdef kind="variable"
+                       id="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aae1c93a96cd321861445996965814405"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::DrugTreeModel::name</definition>
+                <argsstring></argsstring>
+                <name>name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="23" column="1" bodyfile="code/model/Drug.hpp" bodystart="23"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aa93ee13951feb310e5b31775ebf74609"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::DrugTreeModel::pharmaceutical_form
+                </definition>
+                <argsstring></argsstring>
+                <name>pharmaceutical_form</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="24" column="1" bodyfile="code/model/Drug.hpp" bodystart="24"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a0462c8a43912e7d9b24d302899c73ddd"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::DrugTreeModel::ATC_classification
+                </definition>
+                <argsstring></argsstring>
+                <name>ATC_classification</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="25" column="1" bodyfile="code/model/Drug.hpp" bodystart="25"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a6c23e14f0c72622e29de9a8d2534dbdd"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::DrugTreeModel::contraindications
+                </definition>
+                <argsstring></argsstring>
+                <name>contraindications</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="26" column="1" bodyfile="code/model/Drug.hpp" bodystart="26"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aa4e0565da99c9e2e41dc8ed416c66903"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::DrugTreeModel::active_principles
+                </definition>
+                <argsstring></argsstring>
+                <name>active_principles</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="27" column="1" bodyfile="code/model/Drug.hpp" bodystart="27"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a19f5c8676ecd88d4bb8b6f5d161d8a6b"
+                       prot="public" static="no" mutable="no">
+                <type>Gtk::TreeModelColumn&lt; Glib::ustring &gt;</type>
+                <definition>Gtk::TreeModelColumn&lt;Glib::ustring&gt; mm::model::DrugTreeModel::price</definition>
+                <argsstring></argsstring>
+                <name>price</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="28" column="1" bodyfile="code/model/Drug.hpp" bodystart="28"
+                          bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function"
+                       id="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a4fe945eeb529bbd8d3f19aa7797764d9"
+                       prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+                <type></type>
+                <definition>mm::model::DrugTreeModel::DrugTreeModel</definition>
+                <argsstring>()</argsstring>
+                <name>DrugTreeModel</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Drug.hpp" line="30" column="1" bodyfile="code/model/Drug.hpp" bodystart="30"
+                          bodyend="37"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="61">
+                <label>Gtk::TreeModel::ColumnRecord</label>
+            </node>
+            <node id="60">
+                <label>mm::model::DrugTreeModel</label>
+                <link refid="d2/d52/structmm_1_1model_1_1_drug_tree_model"/>
+                <childnode refid="61" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="63">
+                <label>Gtk::TreeModel::ColumnRecord</label>
+            </node>
+            <node id="62">
+                <label>mm::model::DrugTreeModel</label>
+                <link refid="d2/d52/structmm_1_1model_1_1_drug_tree_model"/>
+                <childnode refid="63" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/model/Drug.hpp" line="21" column="1" bodyfile="code/model/Drug.hpp" bodystart="21"
+                  bodyend="38"/>
+        <listofallmembers>
+            <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aa4e0565da99c9e2e41dc8ed416c66903"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::DrugTreeModel</scope>
+                <name>active_principles</name>
+            </member>
+            <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a0462c8a43912e7d9b24d302899c73ddd"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::DrugTreeModel</scope>
+                <name>ATC_classification</name>
+            </member>
+            <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a6c23e14f0c72622e29de9a8d2534dbdd"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::DrugTreeModel</scope>
+                <name>contraindications</name>
+            </member>
+            <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a4fe945eeb529bbd8d3f19aa7797764d9"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::DrugTreeModel</scope>
+                <name>DrugTreeModel</name>
+            </member>
+            <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aae1c93a96cd321861445996965814405"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::DrugTreeModel</scope>
+                <name>name</name>
+            </member>
+            <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1aa93ee13951feb310e5b31775ebf74609"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::DrugTreeModel</scope>
+                <name>pharmaceutical_form</name>
+            </member>
+            <member refid="d2/d52/structmm_1_1model_1_1_drug_tree_model_1a19f5c8676ecd88d4bb8b6f5d161d8a6b"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::DrugTreeModel</scope>
+                <name>price</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

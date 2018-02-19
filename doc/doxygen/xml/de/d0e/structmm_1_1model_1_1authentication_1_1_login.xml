@@ -1,0 +1,510 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kind="struct" language="C++" prot="public">
+        <compoundname>mm::model::authentication::Login</compoundname>
+        <basecompoundref refid="dc/df3/classmm_1_1_i_serializable" prot="public" virt="non-virtual">mm::ISerializable
+        </basecompoundref>
+        <basecompoundref refid="d1/dd2/classmm_1_1_i_subject" prot="public" virt="non-virtual">mm::ISubject
+        </basecompoundref>
+        <includes refid="dc/d00/_authentication_8hpp" local="no">Authentication.hpp</includes>
+        <sectiondef kind="public-attrib">
+            <memberdef kind="variable"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aa74e292b2be0f1e2146576108e74db97"
+                       prot="public" static="no" mutable="no">
+                <type>bool</type>
+                <definition>bool mm::model::authentication::Login::is_changed</definition>
+                <argsstring></argsstring>
+                <name>is_changed</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="27" column="1"
+                          bodyfile="code/model/Authentication.hpp" bodystart="27" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aeb7a295a6770bf778d747903045fe288"
+                       prot="public" static="no" mutable="no">
+                <type>std::string</type>
+                <definition>std::string mm::model::authentication::Login::user_name</definition>
+                <argsstring></argsstring>
+                <name>user_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="28" column="1"
+                          bodyfile="code/model/Authentication.hpp" bodystart="28" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1adc6b1c53cf3e012f10c8b315a1df364f"
+                       prot="public" static="no" mutable="no">
+                <type>std::string</type>
+                <definition>std::string mm::model::authentication::Login::password</definition>
+                <argsstring></argsstring>
+                <name>password</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="29" column="1"
+                          bodyfile="code/model/Authentication.hpp" bodystart="29" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a3b3c96185f5ad0c1e9ea15cd401ce064"
+                       prot="public" static="no" mutable="no">
+                <type>int</type>
+                <definition>int mm::model::authentication::Login::regional_id</definition>
+                <argsstring></argsstring>
+                <name>regional_id</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="30" column="1"
+                          bodyfile="code/model/Authentication.hpp" bodystart="30" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="friend">
+            <memberdef kind="friend"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a5023cb987e79151f2a1ed18b9a86a3e8"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>friend bool</type>
+                <definition>bool check_login</definition>
+                <argsstring>(std::string usr, std::string psw)</argsstring>
+                <name>check_login</name>
+                <param>
+                    <type>std::string</type>
+                    <declname>usr</declname>
+                </param>
+                <param>
+                    <type>std::string</type>
+                    <declname>psw</declname>
+                </param>
+                <briefdescription>
+                    <para>Si occupa di porre in uno stato valido l&apos;oggetto del singleton <ref
+                            refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">Login</ref>.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Se usr e psw corrispondono ad una coppia nome utente e password nel database inizializza <ref
+                            refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">Login
+                    </ref> e ritorna true
+                    </para>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>usr</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>stringa contenente lo username</para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>psw</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>stringa contenente la password</para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                        <simplesect kind="return">
+                            <para>true in caso l&apos;utente sia trovato false altrimenti</para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="25" column="1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a69ec1a769ef1659b8ed39d5e23c24333"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>map&lt; string, <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref> &gt;
+                </type>
+                <definition>map&lt; string, mm::Serialized &gt; mm::model::authentication::Login::serialize</definition>
+                <argsstring>() const override</argsstring>
+                <name>serialize</name>
+                <reimplements refid="dc/df3/classmm_1_1_i_serializable_1a20a59e2324c8dbf6fefe4d11ae89d0fb">serialize
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="32" column="1"
+                          bodyfile="code/model/Authentication.cpp" bodystart="24" bodyend="30"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1ac2429ce08624b0c425feced836b77d62"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::authentication::Login::unserialize</definition>
+                <argsstring>(map&lt; string, Serialized &gt; map) override</argsstring>
+                <name>unserialize</name>
+                <param>
+                    <type>map&lt; string, <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized
+                    </ref> &gt;
+                    </type>
+                    <declname>map</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="34" column="1"
+                          bodyfile="code/model/Authentication.cpp" bodystart="32" bodyend="36"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1afc72adef91be3d97ce4751b8a2357613"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>string</type>
+                <definition>string mm::model::authentication::Login::get_table_name</definition>
+                <argsstring>() const override</argsstring>
+                <name>get_table_name</name>
+                <reimplements refid="dc/df3/classmm_1_1_i_serializable_1a9717e6da47fcbac3ffa2e68152464e0a">
+                    get_table_name
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="36" column="1"
+                          bodyfile="code/model/Authentication.cpp" bodystart="38" bodyend="40"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a56f5da26be2d64baa78d0c81d99c8221"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>vector&lt; string &gt;</type>
+                <definition>vector&lt; string &gt; mm::model::authentication::Login::get_primary_key</definition>
+                <argsstring>() const override</argsstring>
+                <name>get_primary_key</name>
+                <reimplements refid="dc/df3/classmm_1_1_i_serializable_1a69c0c514e11e386b6cb1fbd03f14da17">
+                    get_primary_key
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="38" column="1"
+                          bodyfile="code/model/Authentication.cpp" bodystart="42" bodyend="44"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a23843b088a1c1e0a668e9013ca6768ad"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::model::authentication::Login::logout</definition>
+                <argsstring>()</argsstring>
+                <name>logout</name>
+                <briefdescription>
+                    <para>Permette di effettuare il logout rendendo l&apos;oggetto in uno stato non valido.</para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="53" column="1"
+                          bodyfile="code/model/Authentication.cpp" bodystart="64" bodyend="69"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aec29ca0fab75c7691c7939970646b39b"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::model::authentication::Login::isLog</definition>
+                <argsstring>() const</argsstring>
+                <name>isLog</name>
+                <briefdescription>
+                    <para>permette di controllare se l&apos;oggetto è in uno stato valido o meno</para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>
+                        <simplesect kind="return">
+                            <para>true se l&apos;utente è connesso, false altrimenti</para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="60" column="1"
+                          bodyfile="code/model/Authentication.cpp" bodystart="71" bodyend="73"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-static-func">
+            <memberdef kind="function"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a37112a637ed012c96a96c5a2366f4220"
+                       prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">Login</ref>
+                    &amp;
+                </type>
+                <definition>mm::model::authentication::Login &amp; mm::model::authentication::Login::get_instance
+                </definition>
+                <argsstring>()</argsstring>
+                <name>get_instance</name>
+                <briefdescription>
+                    <para>Ritorna un istanza di tipo <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login"
+                                                          kindref="compound">Login</ref>.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Se il login non è stato creato mediante la funzione check_login L&apos;oggetto ritornato sarà
+                        non valido e la funzione isLog su di esso ritornerà false
+                    </para>
+                    <para>
+                        <simplesect kind="return">
+                            <para>un oggetto di tipo <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login"
+                                                          kindref="compound">Login
+                            </ref>
+                            </para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="48" column="1"
+                          bodyfile="code/model/Authentication.cpp" bodystart="46" bodyend="50"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1af60878fb3e6057fec0697bf90d2c3cc6"
+                       prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::model::authentication::Login::Login</definition>
+                <argsstring>()</argsstring>
+                <name>Login</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="64" column="1"
+                          bodyfile="code/model/Authentication.cpp" bodystart="52" bodyend="52"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1af8ebf13989bd56aa5b8281b579caa2c2"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::model::authentication::Login::Login</definition>
+                <argsstring>(const Login &amp;other)=default</argsstring>
+                <name>Login</name>
+                <param>
+                    <type>const <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">
+                        Login
+                    </ref> &amp;
+                    </type>
+                    <declname>other</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="66" column="1"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1ac74a15ab0d5994a16885df2d02149436"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>
+                    <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">Login</ref>
+                    &amp;
+                </type>
+                <definition>mm::model::authentication::Login &amp; mm::model::authentication::Login::operator=
+                </definition>
+                <argsstring>(const Login &amp;other)</argsstring>
+                <name>operator=</name>
+                <param>
+                    <type>const <ref refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login" kindref="compound">
+                        Login
+                    </ref> &amp;
+                    </type>
+                    <declname>other</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/model/Authentication.hpp" line="68" column="1"
+                          bodyfile="code/model/Authentication.cpp" bodystart="55" bodyend="62"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+            <para>classe che rappresenta la una sessione di login</para>
+        </briefdescription>
+        <detaileddescription>
+            <para>Un oggetto di questo tipo può essere creato in modo solo dalla funzione check_login se il login è già
+                stato effettuato si può usare la funzione get_instance per accedere ai dati relativi all&apos;utente
+                connesso, per sapere se la sessione è valida si può usare la funzione isLog.
+            </para>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="114">
+                <label>mm::ISerializable</label>
+                <link refid="dc/df3/classmm_1_1_i_serializable"/>
+            </node>
+            <node id="115">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="113">
+                <label>mm::model::authentication::Login</label>
+                <link refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login"/>
+                <childnode refid="114" relation="public-inheritance">
+                </childnode>
+                <childnode refid="115" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="117">
+                <label>mm::ISerializable</label>
+                <link refid="dc/df3/classmm_1_1_i_serializable"/>
+            </node>
+            <node id="118">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="116">
+                <label>mm::model::authentication::Login</label>
+                <link refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login"/>
+                <childnode refid="117" relation="public-inheritance">
+                </childnode>
+                <childnode refid="118" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/model/Authentication.hpp" line="24" column="1" bodyfile="code/model/Authentication.hpp"
+                  bodystart="24" bodyend="69"/>
+        <listofallmembers>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>attach</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a5023cb987e79151f2a1ed18b9a86a3e8"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>check_login</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>detach</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a37112a637ed012c96a96c5a2366f4220"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>get_instance</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a56f5da26be2d64baa78d0c81d99c8221"
+                    prot="public" virt="virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>get_primary_key</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1afc72adef91be3d97ce4751b8a2357613"
+                    prot="public" virt="virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>get_table_name</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aa74e292b2be0f1e2146576108e74db97"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>is_changed</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aec29ca0fab75c7691c7939970646b39b"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>isLog</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1af60878fb3e6057fec0697bf90d2c3cc6"
+                    prot="private" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>Login</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1af8ebf13989bd56aa5b8281b579caa2c2"
+                    prot="private" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>Login</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a23843b088a1c1e0a668e9013ca6768ad"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>logout</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
+                    virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>notify</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1ac74a15ab0d5994a16885df2d02149436"
+                    prot="private" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>operator=</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1adc6b1c53cf3e012f10c8b315a1df364f"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>password</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a3b3c96185f5ad0c1e9ea15cd401ce064"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>regional_id</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1a69ec1a769ef1659b8ed39d5e23c24333"
+                    prot="public" virt="virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>serialize</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1ac2429ce08624b0c425feced836b77d62"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>unserialize</name>
+            </member>
+            <member refid="dc/df3/classmm_1_1_i_serializable_1a8e5329b3b23cd0dff0ea8f5f63bab996" prot="public"
+                    virt="pure-virtual" ambiguityscope="mm::ISerializable::">
+                <scope>mm::model::authentication::Login</scope>
+                <name>unserialize</name>
+            </member>
+            <member refid="de/d0e/structmm_1_1model_1_1authentication_1_1_login_1aeb7a295a6770bf778d747903045fe288"
+                    prot="public" virt="non-virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>user_name</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" prot="public"
+                    virt="virtual">
+                <scope>mm::model::authentication::Login</scope>
+                <name>~ISubject</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

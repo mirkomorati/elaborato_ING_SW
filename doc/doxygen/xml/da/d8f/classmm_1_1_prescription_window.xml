@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="da/d8f/classmm_1_1_prescription_window" kind="class" language="C++" prot="public">
+        <compoundname>mm::PrescriptionWindow</compoundname>
+        <basecompoundref refid="d1/d71/classmm_1_1_window" prot="public" virt="non-virtual">mm::Window</basecompoundref>
+        <basecompoundref refid="d7/d9e/classmm_1_1_i_observer" prot="public" virt="non-virtual">mm::IObserver
+        </basecompoundref>
+        <includes refid="d5/db1/_prescription_window_8hpp" local="no">PrescriptionWindow.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="da/d8f/classmm_1_1_prescription_window_1a4af06eedb0dee093206325e25af79965"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>WindowName mm::PrescriptionWindow::next</definition>
+                <argsstring></argsstring>
+                <name>next</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PrescriptionWindow.hpp" line="25" column="1"
+                          bodyfile="code/gui/PrescriptionWindow.hpp" bodystart="25" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="da/d8f/classmm_1_1_prescription_window_1a253bf6e26cc5df9b0c444e35692aaaf4"
+                       prot="private" static="no" mutable="no">
+                <type>Glib::RefPtr&lt; Gtk::ListStore &gt;</type>
+                <definition>Glib::RefPtr&lt;Gtk::ListStore&gt; mm::PrescriptionWindow::prescriptionListStore
+                </definition>
+                <argsstring></argsstring>
+                <name>prescriptionListStore</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PrescriptionWindow.hpp" line="26" column="1"
+                          bodyfile="code/gui/PrescriptionWindow.hpp" bodystart="26" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="da/d8f/classmm_1_1_prescription_window_1ad40a15a976a851f81fad2c7ec9116555"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::PrescriptionWindow::PrescriptionWindow</definition>
+                <argsstring>()</argsstring>
+                <name>PrescriptionWindow</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PrescriptionWindow.hpp" line="14" column="1"
+                          bodyfile="code/gui/PrescriptionWindow.cpp" bodystart="14" bodyend="18"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d8f/classmm_1_1_prescription_window_1a4764fe59cd6aeaa46c7fd8820dd4102b"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>bool</type>
+                <definition>bool mm::PrescriptionWindow::init</definition>
+                <argsstring>() override</argsstring>
+                <name>init</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10">init</reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PrescriptionWindow.hpp" line="16" column="1"
+                          bodyfile="code/gui/PrescriptionWindow.cpp" bodystart="20" bodyend="24"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d8f/classmm_1_1_prescription_window_1a0770b1cfa7eef3bfa990d7ddeeb03a39"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>mm::WindowName mm::PrescriptionWindow::getName</definition>
+                <argsstring>() const override</argsstring>
+                <name>getName</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1a942c9125bf42156a9f7b7f561e412fed">getName
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PrescriptionWindow.hpp" line="18" column="1"
+                          bodyfile="code/gui/PrescriptionWindow.cpp" bodystart="26" bodyend="28"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d8f/classmm_1_1_prescription_window_1aec9558aea3a0fb15e3148ebf4c9e8d40"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>mm::WindowName mm::PrescriptionWindow::getNextWindow</definition>
+                <argsstring>() const override</argsstring>
+                <name>getNextWindow</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1a0cd7b4b0feb9505c44503547a161fcd8">getNextWindow
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PrescriptionWindow.hpp" line="20" column="1"
+                          bodyfile="code/gui/PrescriptionWindow.cpp" bodystart="30" bodyend="32"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d8f/classmm_1_1_prescription_window_1a51195815f64b79179e3dafbb89b785e8"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>void</type>
+                <definition>void mm::PrescriptionWindow::update</definition>
+                <argsstring>() override</argsstring>
+                <name>update</name>
+                <reimplements refid="d7/d9e/classmm_1_1_i_observer_1a6422af04f8e9f3ba9d6d412a3bcdd03e">update
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PrescriptionWindow.hpp" line="22" column="1"
+                          bodyfile="code/gui/PrescriptionWindow.cpp" bodystart="103" bodyend="105"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="da/d8f/classmm_1_1_prescription_window_1a9bbfc2a3609dbd684593daf3ed0a5d8b"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PrescriptionWindow::initTreeView</definition>
+                <argsstring>()</argsstring>
+                <name>initTreeView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PrescriptionWindow.hpp" line="28" column="1"
+                          bodyfile="code/gui/PrescriptionWindow.cpp" bodystart="34" bodyend="70"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d8f/classmm_1_1_prescription_window_1afbc03814e7f3675b66a5c5fb4024c597"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::PrescriptionWindow::updatePrescriptionTreeView</definition>
+                <argsstring>()</argsstring>
+                <name>updatePrescriptionTreeView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PrescriptionWindow.hpp" line="30" column="1"
+                          bodyfile="code/gui/PrescriptionWindow.cpp" bodystart="72" bodyend="101"/>
+            </memberdef>
+            <memberdef kind="function" id="da/d8f/classmm_1_1_prescription_window_1abfb51759b0e8ca960be0413f9e55253a"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int mm::PrescriptionWindow::onSortCompareByDate</definition>
+                <argsstring>(const Gtk::TreeModel::iterator &amp;a, const Gtk::TreeModel::iterator &amp;b)</argsstring>
+                <name>onSortCompareByDate</name>
+                <param>
+                    <type>const Gtk::TreeModel::iterator &amp;</type>
+                    <declname>a</declname>
+                </param>
+                <param>
+                    <type>const Gtk::TreeModel::iterator &amp;</type>
+                    <declname>b</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/PrescriptionWindow.hpp" line="32" column="1"
+                          bodyfile="code/gui/PrescriptionWindow.cpp" bodystart="107" bodyend="117"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="175">
+                <label>mm::PrescriptionWindow</label>
+                <link refid="da/d8f/classmm_1_1_prescription_window"/>
+                <childnode refid="176" relation="public-inheritance">
+                </childnode>
+                <childnode refid="179" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="178">
+                <label>trackable</label>
+            </node>
+            <node id="177">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="179">
+                <label>mm::IObserver</label>
+                <link refid="d7/d9e/classmm_1_1_i_observer"/>
+            </node>
+            <node id="176">
+                <label>mm::Window</label>
+                <link refid="d1/d71/classmm_1_1_window"/>
+                <childnode refid="177" relation="public-inheritance">
+                </childnode>
+                <childnode refid="178" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="180">
+                <label>mm::PrescriptionWindow</label>
+                <link refid="da/d8f/classmm_1_1_prescription_window"/>
+                <childnode refid="181" relation="public-inheritance">
+                </childnode>
+                <childnode refid="184" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="183">
+                <label>trackable</label>
+            </node>
+            <node id="182">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="184">
+                <label>mm::IObserver</label>
+                <link refid="d7/d9e/classmm_1_1_i_observer"/>
+            </node>
+            <node id="181">
+                <label>mm::Window</label>
+                <link refid="d1/d71/classmm_1_1_window"/>
+                <childnode refid="182" relation="public-inheritance">
+                </childnode>
+                <childnode refid="183" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/PrescriptionWindow.hpp" line="12" column="1" bodyfile="code/gui/PrescriptionWindow.hpp"
+                  bodystart="12" bodyend="33"/>
+        <listofallmembers>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>attach</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" prot="public"
+                    virt="non-virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>detach</name>
+            </member>
+            <member refid="da/d8f/classmm_1_1_prescription_window_1a0770b1cfa7eef3bfa990d7ddeeb03a39" prot="public"
+                    virt="virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>getName</name>
+            </member>
+            <member refid="da/d8f/classmm_1_1_prescription_window_1aec9558aea3a0fb15e3148ebf4c9e8d40" prot="public"
+                    virt="virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>getNextWindow</name>
+            </member>
+            <member refid="da/d8f/classmm_1_1_prescription_window_1a4764fe59cd6aeaa46c7fd8820dd4102b" prot="public"
+                    virt="virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>init</name>
+            </member>
+            <member refid="da/d8f/classmm_1_1_prescription_window_1a9bbfc2a3609dbd684593daf3ed0a5d8b" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>initTreeView</name>
+            </member>
+            <member refid="da/d8f/classmm_1_1_prescription_window_1a4af06eedb0dee093206325e25af79965" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>next</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
+                    virt="non-virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>notify</name>
+            </member>
+            <member refid="da/d8f/classmm_1_1_prescription_window_1abfb51759b0e8ca960be0413f9e55253a" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>onSortCompareByDate</name>
+            </member>
+            <member refid="da/d8f/classmm_1_1_prescription_window_1a253bf6e26cc5df9b0c444e35692aaaf4" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>prescriptionListStore</name>
+            </member>
+            <member refid="da/d8f/classmm_1_1_prescription_window_1ad40a15a976a851f81fad2c7ec9116555" prot="public"
+                    virt="non-virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>PrescriptionWindow</name>
+            </member>
+            <member refid="da/d8f/classmm_1_1_prescription_window_1a51195815f64b79179e3dafbb89b785e8" prot="public"
+                    virt="virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>update</name>
+            </member>
+            <member refid="d7/d9e/classmm_1_1_i_observer_1add1245a281c47575cc0e42449635a9fd" prot="public"
+                    virt="virtual" ambiguityscope="mm::IObserver::">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>update</name>
+            </member>
+            <member refid="da/d8f/classmm_1_1_prescription_window_1afbc03814e7f3675b66a5c5fb4024c597" prot="private"
+                    virt="non-virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>updatePrescriptionTreeView</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" prot="public"
+                    virt="virtual">
+                <scope>mm::PrescriptionWindow</scope>
+                <name>~ISubject</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

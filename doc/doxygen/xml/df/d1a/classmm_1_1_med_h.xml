@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="df/d1a/classmm_1_1_med_h" kind="class" language="C++" prot="public">
+        <compoundname>mm::MedH</compoundname>
+        <basecompoundref refid="d7/d9e/classmm_1_1_i_observer" prot="private" virt="non-virtual">mm::IObserver
+        </basecompoundref>
+        <includes refid="db/d45/_med_h_8hpp" local="yes">MedH.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="df/d1a/classmm_1_1_med_h_1a4c063815ea825e833d9549a43a26f7cc" prot="private"
+                       static="no" mutable="no">
+                <type>std::unique_ptr&lt; <ref refid="d1/d71/classmm_1_1_window" kindref="compound">Window</ref> &gt;
+                </type>
+                <definition>std::unique_ptr&lt;Window&gt; mm::MedH::window</definition>
+                <argsstring></argsstring>
+                <name>window</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/MedH.hpp" line="25" column="1" bodyfile="code/MedH.hpp" bodystart="25"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="df/d1a/classmm_1_1_med_h_1a01c83fc7ed2627ae66440e1dbd2bac74" prot="private"
+                       static="no" mutable="no">
+                <type>std::string</type>
+                <definition>std::string mm::MedH::appID</definition>
+                <argsstring></argsstring>
+                <name>appID</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/MedH.hpp" line="26" column="1" bodyfile="code/MedH.hpp" bodystart="26"
+                          bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-attrib">
+            <memberdef kind="variable" id="df/d1a/classmm_1_1_med_h_1a6bbf4476e1953d62562d35cb1f9c4218" prot="public"
+                       static="no" mutable="no">
+                <type>Glib::RefPtr&lt; Gtk::Application &gt;</type>
+                <definition>Glib::RefPtr&lt;Gtk::Application&gt; mm::MedH::app</definition>
+                <argsstring></argsstring>
+                <name>app</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/MedH.hpp" line="34" column="1" bodyfile="code/MedH.hpp" bodystart="34"
+                          bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="df/d1a/classmm_1_1_med_h_1a42dd3db886d41a34d43019c7fee1bd03" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::MedH::init</definition>
+                <argsstring>(int argc, char **argv)</argsstring>
+                <name>init</name>
+                <param>
+                    <type>int</type>
+                    <declname>argc</declname>
+                </param>
+                <param>
+                    <type>char **</type>
+                    <declname>argv</declname>
+                </param>
+                <briefdescription>
+                    <para>metodo che inizializza l&apos;oggetto</para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/MedH.hpp" line="29" column="1" bodyfile="code/MedH.cpp" bodystart="20"
+                          bodyend="74"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d1a/classmm_1_1_med_h_1a6c9a80752905319a9321ce49acfda3fd" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>void</type>
+                <definition>void mm::MedH::update</definition>
+                <argsstring>() override</argsstring>
+                <name>update</name>
+                <reimplements refid="d7/d9e/classmm_1_1_i_observer_1a6422af04f8e9f3ba9d6d412a3bcdd03e">update
+                </reimplements>
+                <briefdescription>
+                    <para>metodo usato dal design pattern Observer</para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/MedH.hpp" line="43" column="1" bodyfile="code/MedH.cpp" bodystart="83"
+                          bodyend="111"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="df/d1a/classmm_1_1_med_h_1a60861cff31fe5bc04e0002c6dabd5a9b" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::MedH::MedH</definition>
+                <argsstring>(int argc, char **argv)</argsstring>
+                <name>MedH</name>
+                <param>
+                    <type>int</type>
+                    <declname>argc</declname>
+                </param>
+                <param>
+                    <type>char **</type>
+                    <declname>argv</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/MedH.hpp" line="32" column="1" bodyfile="code/MedH.cpp" bodystart="76"
+                          bodyend="81"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d1a/classmm_1_1_med_h_1aa34d2244a28a72dac6028e70317eb40b" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int mm::MedH::run</definition>
+                <argsstring>()</argsstring>
+                <name>run</name>
+                <briefdescription>
+                    <para>lancia il main loop del programma.</para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/MedH.hpp" line="37" column="1" bodyfile="code/MedH.cpp" bodystart="14"
+                          bodyend="18"/>
+            </memberdef>
+            <memberdef kind="function" id="df/d1a/classmm_1_1_med_h_1a6fe53e9376821a1aae7d5a3a32d203c3" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type></type>
+                <definition>mm::MedH::~MedH</definition>
+                <argsstring>()</argsstring>
+                <name>~MedH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/MedH.hpp" line="39" column="1" bodyfile="code/MedH.cpp" bodystart="113"
+                          bodyend="127"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+            <para>Classe che rappresenta il programma in se.</para>
+        </briefdescription>
+        <detaileddescription>
+            <para>Per utilizzare tutte le funzionalità del programma <ref refid="df/d1a/classmm_1_1_med_h"
+                                                                          kindref="compound">MedH
+            </ref> compresa l&apos;interfaccia sarà necessario semplicemente creare un oggetto di <ref
+                    refid="df/d1a/classmm_1_1_med_h" kindref="compound">MedH
+            </ref> e richiamarne il metodo run.
+            </para>
+            <para>N.B. È possibile avviare più istanze dell&apos;applicazione purché gli id nel config file siano
+                diversi.
+            </para>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="138">
+                <label>mm::IObserver</label>
+                <link refid="d7/d9e/classmm_1_1_i_observer"/>
+            </node>
+            <node id="137">
+                <label>mm::MedH</label>
+                <link refid="df/d1a/classmm_1_1_med_h"/>
+                <childnode refid="138" relation="private-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="140">
+                <label>mm::IObserver</label>
+                <link refid="d7/d9e/classmm_1_1_i_observer"/>
+            </node>
+            <node id="139">
+                <label>mm::MedH</label>
+                <link refid="df/d1a/classmm_1_1_med_h"/>
+                <childnode refid="140" relation="private-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/MedH.hpp" line="24" column="1" bodyfile="code/MedH.hpp" bodystart="24" bodyend="44"/>
+        <listofallmembers>
+            <member refid="df/d1a/classmm_1_1_med_h_1a6bbf4476e1953d62562d35cb1f9c4218" prot="public"
+                    virt="non-virtual">
+                <scope>mm::MedH</scope>
+                <name>app</name>
+            </member>
+            <member refid="df/d1a/classmm_1_1_med_h_1a01c83fc7ed2627ae66440e1dbd2bac74" prot="private"
+                    virt="non-virtual">
+                <scope>mm::MedH</scope>
+                <name>appID</name>
+            </member>
+            <member refid="df/d1a/classmm_1_1_med_h_1a42dd3db886d41a34d43019c7fee1bd03" prot="private"
+                    virt="non-virtual">
+                <scope>mm::MedH</scope>
+                <name>init</name>
+            </member>
+            <member refid="df/d1a/classmm_1_1_med_h_1a60861cff31fe5bc04e0002c6dabd5a9b" prot="public"
+                    virt="non-virtual">
+                <scope>mm::MedH</scope>
+                <name>MedH</name>
+            </member>
+            <member refid="df/d1a/classmm_1_1_med_h_1aa34d2244a28a72dac6028e70317eb40b" prot="public"
+                    virt="non-virtual">
+                <scope>mm::MedH</scope>
+                <name>run</name>
+            </member>
+            <member refid="df/d1a/classmm_1_1_med_h_1a6c9a80752905319a9321ce49acfda3fd" prot="private" virt="virtual">
+                <scope>mm::MedH</scope>
+                <name>update</name>
+            </member>
+            <member refid="d7/d9e/classmm_1_1_i_observer_1add1245a281c47575cc0e42449635a9fd" prot="private"
+                    virt="virtual" ambiguityscope="mm::IObserver::">
+                <scope>mm::MedH</scope>
+                <name>update</name>
+            </member>
+            <member refid="df/d1a/classmm_1_1_med_h_1a4c063815ea825e833d9549a43a26f7cc" prot="private"
+                    virt="non-virtual">
+                <scope>mm::MedH</scope>
+                <name>window</name>
+            </member>
+            <member refid="df/d1a/classmm_1_1_med_h_1a6fe53e9376821a1aae7d5a3a32d203c3" prot="public" virt="virtual">
+                <scope>mm::MedH</scope>
+                <name>~MedH</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

@@ -1,0 +1,542 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="dc/ddf/classmm_1_1view_1_1_prescription_expander" kind="class" language="C++" prot="public">
+        <compoundname>mm::view::PrescriptionExpander</compoundname>
+        <basecompoundref prot="public" virt="non-virtual">Expander</basecompoundref>
+        <includes refid="d5/d46/_custom_widgets_8hpp" local="no">CustomWidgets.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a0903b7edf2a7dc26fcccba310c671e1b"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d2/d52/structmm_1_1model_1_1_drug_tree_model" kindref="compound">model::DrugTreeModel
+                    </ref>
+                </type>
+                <definition>model::DrugTreeModel mm::view::PrescriptionExpander::drugColumns</definition>
+                <argsstring></argsstring>
+                <name>drugColumns</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="55" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="55" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a30dc89418a2897e97d7c00f06236fbdd"
+                       prot="private" static="no" mutable="no">
+                <type>Glib::RefPtr&lt; Gtk::ListStore &gt;</type>
+                <definition>Glib::RefPtr&lt;Gtk::ListStore&gt; mm::view::PrescriptionExpander::drugListStore
+                </definition>
+                <argsstring></argsstring>
+                <name>drugListStore</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="56" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="56" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a3f0fc6dae5711434f7359726962a22b0"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::TreeView</type>
+                <definition>Gtk::TreeView mm::view::PrescriptionExpander::drugTreeView</definition>
+                <argsstring></argsstring>
+                <name>drugTreeView</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="57" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="57" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aae29dc0cddf533d08417a0335195523a"
+                       prot="private" static="no" mutable="no">
+                <type>const int</type>
+                <definition>const int mm::view::PrescriptionExpander::id</definition>
+                <argsstring></argsstring>
+                <name>id</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="58" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="58" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aa85c2af19dd962f48287aada0f9cbccf"
+                       prot="private" static="no" mutable="no">
+                <type>Glib::ustring</type>
+                <definition>Glib::ustring mm::view::PrescriptionExpander::issueDateText</definition>
+                <argsstring></argsstring>
+                <name>issueDateText</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="59" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="59" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a7fef1206b884c4be08dccccb726843d2"
+                       prot="private" static="no" mutable="no">
+                <type>std::pair&lt; Gtk::Label, Gtk::Label &gt;</type>
+                <definition>std::pair&lt;Gtk::Label, Gtk::Label&gt; mm::view::PrescriptionExpander::expirationDate
+                </definition>
+                <argsstring></argsstring>
+                <name>expirationDate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="61" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="61" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aae2947e2c3de0a543ab4997b2551c3ee"
+                       prot="private" static="no" mutable="no">
+                <type>std::pair&lt; Gtk::Label, Gtk::Label &gt;</type>
+                <definition>std::pair&lt;Gtk::Label, Gtk::Label&gt; mm::view::PrescriptionExpander::prescriptionID
+                </definition>
+                <argsstring></argsstring>
+                <name>prescriptionID</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="62" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="62" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a5aa651f28a68a95eec8382700ac3622a"
+                       prot="private" static="no" mutable="no">
+                <type>std::pair&lt; Gtk::Label, Gtk::Label &gt;</type>
+                <definition>std::pair&lt;Gtk::Label, Gtk::Label&gt; mm::view::PrescriptionExpander::issueDate
+                </definition>
+                <argsstring></argsstring>
+                <name>issueDate</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="63" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="63" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a161adcc2338f20ef778e6c615603e569"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::HBox</type>
+                <definition>Gtk::HBox mm::view::PrescriptionExpander::labelBox</definition>
+                <argsstring></argsstring>
+                <name>labelBox</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="65" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="65" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a28c0159e6dec8617c5880efdad45a802"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::HBox</type>
+                <definition>Gtk::HBox mm::view::PrescriptionExpander::contentBox</definition>
+                <argsstring></argsstring>
+                <name>contentBox</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="66" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="66" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1ad97ed8353cbb992ece9b5a50d4283232"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::CheckButton</type>
+                <definition>Gtk::CheckButton mm::view::PrescriptionExpander::used</definition>
+                <argsstring></argsstring>
+                <name>used</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="67" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="67" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1ae1d50a2d76cb77ecc9d3edbb57f81a06"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Frame</type>
+                <definition>Gtk::Frame mm::view::PrescriptionExpander::detailsFrame</definition>
+                <argsstring></argsstring>
+                <name>detailsFrame</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="70" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="70" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a976383a955bc67a414e4e8fe8ffce3e9"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Label</type>
+                <definition>Gtk::Label mm::view::PrescriptionExpander::interactionLabel</definition>
+                <argsstring></argsstring>
+                <name>interactionLabel</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="71" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="71" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a432ad4f12b40d682aa1a0838a0e36d78"
+                       prot="private" static="no" mutable="no">
+                <type>Gtk::Frame</type>
+                <definition>Gtk::Frame mm::view::PrescriptionExpander::drugFrame</definition>
+                <argsstring></argsstring>
+                <name>drugFrame</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="72" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="72" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a12b5e974972ebdd42478c59c08e3f219"
+                       prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::view::PrescriptionExpander::PrescriptionExpander</definition>
+                <argsstring>(const mm::model::Prescription &amp;prescription)</argsstring>
+                <name>PrescriptionExpander</name>
+                <param>
+                    <type>const <ref refid="db/d61/classmm_1_1model_1_1_prescription" kindref="compound">
+                        mm::model::Prescription
+                    </ref> &amp;
+                    </type>
+                    <declname>prescription</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="75" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="19" bodyend="150"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1ac39b2410139956ef3f707caf1b23dc26"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::view::PrescriptionExpander::PrescriptionExpander</definition>
+                <argsstring>()=delete</argsstring>
+                <name>PrescriptionExpander</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="77" column="1"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a8011da18b2ee9bf91ca672813c6c4e27"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type></type>
+                <definition>mm::view::PrescriptionExpander::~PrescriptionExpander</definition>
+                <argsstring>()</argsstring>
+                <name>~PrescriptionExpander</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="79" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="267" bodyend="286"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a21d6e2894f4c17fc279510f4fadd8eff"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>
+                    <ref refid="dc/ddf/classmm_1_1view_1_1_prescription_expander" kindref="compound">
+                        PrescriptionExpander
+                    </ref> &amp;
+                </type>
+                <definition>PrescriptionExpander&amp; mm::view::PrescriptionExpander::operator=</definition>
+                <argsstring>(PrescriptionExpander &amp;)=delete</argsstring>
+                <name>operator=</name>
+                <param>
+                    <type>
+                        <ref refid="dc/ddf/classmm_1_1view_1_1_prescription_expander" kindref="compound">
+                            PrescriptionExpander
+                        </ref> &amp;
+                    </type>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="81" column="1"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a761cc50a6326cc40496a9346a872e734"
+                       prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::view::PrescriptionExpander::operator&lt;</definition>
+                <argsstring>(const PrescriptionExpander &amp;r) const</argsstring>
+                <name>operator&lt;</name>
+                <param>
+                    <type>const <ref refid="dc/ddf/classmm_1_1view_1_1_prescription_expander" kindref="compound">
+                        PrescriptionExpander
+                    </ref> &amp;
+                    </type>
+                    <declname>r</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="88" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="88" bodyend="90"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aff3761ec2d61ceeb5871e21a39a35bdb"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>Glib::ustring</type>
+                <definition>Glib::ustring mm::view::PrescriptionExpander::get_name</definition>
+                <argsstring>() const</argsstring>
+                <name>get_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="92" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="288" bodyend="290"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a3604c2f026067d71ff619036a9615694"
+                       prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::view::PrescriptionExpander::operator&gt;</definition>
+                <argsstring>(const PrescriptionExpander &amp;rhs) const</argsstring>
+                <name>operator&gt;</name>
+                <param>
+                    <type>const <ref refid="dc/ddf/classmm_1_1view_1_1_prescription_expander" kindref="compound">
+                        PrescriptionExpander
+                    </ref> &amp;
+                    </type>
+                    <declname>rhs</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="94" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.hpp" bodystart="94" bodyend="94"/>
+            </memberdef>
+            <memberdef kind="function"
+                       id="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a63f5113e028e8d9e7eb09981dc28e602"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int mm::view::PrescriptionExpander::getID</definition>
+                <argsstring>() const</argsstring>
+                <name>getID</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/view/CustomWidgets.hpp" line="96" column="1"
+                          bodyfile="code/gui/view/CustomWidgets.cpp" bodystart="263" bodyend="265"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="172">
+                <label>Expander</label>
+            </node>
+            <node id="171">
+                <label>mm::view::PrescriptionExpander</label>
+                <link refid="dc/ddf/classmm_1_1view_1_1_prescription_expander"/>
+                <childnode refid="172" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="174">
+                <label>Expander</label>
+            </node>
+            <node id="173">
+                <label>mm::view::PrescriptionExpander</label>
+                <link refid="dc/ddf/classmm_1_1view_1_1_prescription_expander"/>
+                <childnode refid="174" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/view/CustomWidgets.hpp" line="25" column="1" bodyfile="code/gui/view/CustomWidgets.hpp"
+                  bodystart="25" bodyend="97"/>
+        <listofallmembers>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a28c0159e6dec8617c5880efdad45a802"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>contentBox</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1ae1d50a2d76cb77ecc9d3edbb57f81a06"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>detailsFrame</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a0903b7edf2a7dc26fcccba310c671e1b"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>drugColumns</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a432ad4f12b40d682aa1a0838a0e36d78"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>drugFrame</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a30dc89418a2897e97d7c00f06236fbdd"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>drugListStore</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a3f0fc6dae5711434f7359726962a22b0"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>drugTreeView</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a7fef1206b884c4be08dccccb726843d2"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>expirationDate</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aff3761ec2d61ceeb5871e21a39a35bdb"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>get_name</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a63f5113e028e8d9e7eb09981dc28e602"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>getID</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aae29dc0cddf533d08417a0335195523a"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>id</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a976383a955bc67a414e4e8fe8ffce3e9"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>interactionLabel</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a5aa651f28a68a95eec8382700ac3622a"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>issueDate</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aa85c2af19dd962f48287aada0f9cbccf"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>issueDateText</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a161adcc2338f20ef778e6c615603e569"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>labelBox</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a761cc50a6326cc40496a9346a872e734"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>operator&lt;</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a21d6e2894f4c17fc279510f4fadd8eff"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>operator=</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a3604c2f026067d71ff619036a9615694"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>operator&gt;</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a12b5e974972ebdd42478c59c08e3f219"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>PrescriptionExpander</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1ac39b2410139956ef3f707caf1b23dc26"
+                    prot="public" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>PrescriptionExpander</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1aae2947e2c3de0a543ab4997b2551c3ee"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>prescriptionID</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1ad97ed8353cbb992ece9b5a50d4283232"
+                    prot="private" virt="non-virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>used</name>
+            </member>
+            <member refid="dc/ddf/classmm_1_1view_1_1_prescription_expander_1a8011da18b2ee9bf91ca672813c6c4e27"
+                    prot="public" virt="virtual">
+                <scope>mm::view::PrescriptionExpander</scope>
+                <name>~PrescriptionExpander</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

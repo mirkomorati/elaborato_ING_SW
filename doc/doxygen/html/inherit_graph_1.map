@@ -1,0 +1,23 @@
+<map id="Grafico della gerarchia delle classi" name="Grafico della gerarchia delle classi">
+<area shape="rect" id="node1" href="$d7/d9e/classmm_1_1_i_observer.html" title="mm::IObserver" alt="" coords="211,5,321,31"/>
+<area shape="rect" id="node2" href="$d7/dcd/classmm_1_1_drug_window.html" title="mm::DrugWindow" alt="" coords="430,111,558,136"/>
+<area shape="rect" id="node3" href="$d7/dfd/classmm_1_1_main_window.html" title="mm::MainWindow" alt="" coords="430,169,558,195"/>
+<area shape="rect" id="node4" href="$df/d1a/classmm_1_1_med_h.html" title="Classe che rappresenta il programma in se. " alt="" coords="451,5,537,31"/>
+<area shape="rect" id="node5" href="$da/d81/classmm_1_1_patient_window.html" title="mm::PatientWindow" alt="" coords="424,237,564,263"/>
+<area shape="rect" id="node6" href="$da/d8f/classmm_1_1_prescription_window.html" title="mm::PrescriptionWindow" alt="" coords="410,57,578,83"/>
+<area shape="rect" id="node7" href="$dc/df3/classmm_1_1_i_serializable.html" title="Funziona come un interfaccia, qualunque classe che erediti da questa potrà essere letta o scritta nel..." alt="" coords="5,153,129,179"/>
+<area shape="rect" id="node8" href="$de/d0e/structmm_1_1model_1_1authentication_1_1_login.html" title="classe che rappresenta la una sessione di login " alt="" coords="177,252,355,291"/>
+<area shape="rect" id="node9" href="$d6/d2e/classmm_1_1model_1_1_doctor.html" title="mm::model::Doctor" alt="" coords="199,203,333,228"/>
+<area shape="rect" id="node10" href="$db/d9b/classmm_1_1model_1_1_drug.html" title="mm::model::Drug" alt="" coords="204,55,328,80"/>
+<area shape="rect" id="node11" href="$d6/d4a/classmm_1_1model_1_1_patient.html" title="mm::model::Patient" alt="" coords="198,104,334,129"/>
+<area shape="rect" id="node12" href="$db/d61/classmm_1_1model_1_1_prescription.html" title="mm::model::Prescription" alt="" coords="183,153,348,179"/>
+<area shape="rect" id="node13" href="$d1/dd2/classmm_1_1_i_subject.html" title="mm::ISubject" alt="" coords="18,315,117,340"/>
+<area shape="rect" id="node14" href="$df/d35/classmm_1_1_dialog.html" title="mm::Dialog" alt="" coords="221,364,310,389"/>
+<area shape="rect" id="node18" href="$d1/d71/classmm_1_1_window.html" title="mm::Window" alt="" coords="217,315,315,340"/>
+<area shape="rect" id="node15" href="$d7/d05/classmm_1_1_about_dialog.html" title="mm::AboutDialog" alt="" coords="432,339,556,364"/>
+<area shape="rect" id="node16" href="$d7/d32/classmm_1_1_add_patient_dialog.html" title="mm::AddPatientDialog" alt="" coords="417,388,571,413"/>
+<area shape="rect" id="node17" href="$db/d16/classmm_1_1_add_prescription_dialog.html" title="mm::AddPrescriptionDialog" alt="" coords="403,437,586,463"/>
+<area shape="rect" id="node19" href="$d3/d0c/classmm_1_1_login_window.html" title="mm::LoginWindow" alt="" coords="429,289,560,315"/>
+<area shape="rect" id="node21" href="$d0/d52/structmm_1_1_date_controller.html" title="mm::DateController" alt="" coords="197,413,334,439"/>
+<area shape="rect" id="node22" href="$d0/d9e/structmm_1_1_entry_controller.html" title="mm::EntryController" alt="" coords="196,463,336,488"/>
+</map>

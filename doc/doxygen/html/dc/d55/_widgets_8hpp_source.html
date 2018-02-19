@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="generator" content="Doxygen 1.8.14"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>MedH: File sorgente code/gui/Widgets.hpp</title>
+    <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../jquery.js"></script>
+    <script type="text/javascript" src="../../dynsections.js"></script>
+    <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../resize.js"></script>
+    <script type="text/javascript" src="../../navtreedata.js"></script>
+    <script type="text/javascript" src="../../navtree.js"></script>
+    <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+        $(document).ready(initResizable);
+        /* @license-end */</script>
+    <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../search/searchdata.js"></script>
+    <script type="text/javascript" src="../../search/search.js"></script>
+    <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">MedH
+                        &#160;<span id="projectnumber">0.1.0</span>
+                    </div>
+                    <div id="projectbrief">Elaborato per il corso di Ingegneria del Software 2016-2017, Università degli
+                        Studi di Verona
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <!-- Generato da Doxygen 1.8.14 -->
+    <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+        var searchBox = new SearchBox("searchBox", "../../search", false, 'Cerca');
+        /* @license-end */
+    </script>
+    <script type="text/javascript" src="../../menudata.js"></script>
+    <script type="text/javascript" src="../../menu.js"></script>
+    <script type="text/javascript">
+        /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+        $(function () {
+            initMenu('../../', true, false, 'search.php', 'Cerca');
+            $(document).ready(function () {
+                init_search();
+            });
+        });
+        /* @license-end */</script>
+    <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+    <div id="nav-tree">
+        <div id="nav-tree-contents">
+            <div id="nav-sync" class="sync"></div>
+        </div>
+    </div>
+    <div id="splitbar" style="-moz-user-select:none;"
+         class="ui-resizable-handle">
+    </div>
+</div>
+<script type="text/javascript">
+    /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+    $(document).ready(function () {
+        initNavTree('dc/d55/_widgets_8hpp_source.html', '../../');
+    });
+    /* @license-end */
+</script>
+<div id="doc-content">
+    <!-- window showing the filter options -->
+    <div id="MSearchSelectWindow"
+         onmouseover="return searchBox.OnSearchSelectShow()"
+         onmouseout="return searchBox.OnSearchSelectHide()"
+         onkeydown="return searchBox.OnSearchSelectKey(event)">
+    </div>
+
+    <!-- iframe showing the search results (closed by default) -->
+    <div id="MSearchResultsWindow">
+        <iframe src="javascript:void(0)" frameborder="0"
+                name="MSearchResults" id="MSearchResults">
+        </iframe>
+    </div>
+
+    <div class="header">
+        <div class="headertitle">
+            <div class="title">Widgets.hpp</div>
+        </div>
+    </div><!--header-->
+    <div class="contents">
+        <a href="../../dc/d55/_widgets_8hpp.html">Vai alla documentazione di questo file.</a>
+        <div class="fragment">
+            <div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span
+                    class="comment">//</span></div>
+            <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by Mirko Morati on 02/12/17.</span>
+            </div>
+            <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span
+                    class="comment">//</span></div>
+            <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+            <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef ELABORATO_ING_SW_WIDGETS_HPP</span>
+            </div>
+            <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define ELABORATO_ING_SW_WIDGETS_HPP</span>
+            </div>
+            <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+            <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+            <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;gtkmm/entry.h&gt;</span>
+            </div>
+            <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;gtkmm/comboboxtext.h&gt;</span>
+            </div>
+            <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;fmt/format.h&gt;</span>
+            </div>
+            <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../utils/Date.hpp&quot;</span>
+            </div>
+            <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+            <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a
+                    class="code" href="../../d0/d04/namespacemm.html">mm</a> {
+            </div>
+            <div class="line"><a name="l00015"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d9e/structmm_1_1_entry_controller.html">   15</a></span>&#160;
+                <span class="keyword">struct </span><a class="code"
+                                                       href="../../d0/d9e/structmm_1_1_entry_controller.html">EntryController</a>
+                : <span class="keyword">public</span> sigc::trackable {
+            </div>
+            <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; <a class="code"
+                                                                                              href="../../d0/d9e/structmm_1_1_entry_controller.html#a8669618dd4526580cdb3cd88f9d16e52">EntryController</a>()
+                = <span class="keyword">delete</span>;
+            </div>
+            <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+            <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <a class="code"
+                                                                                              href="../../d0/d9e/structmm_1_1_entry_controller.html#a8669618dd4526580cdb3cd88f9d16e52">EntryController</a>(<span
+                    class="keyword">const</span> std::string &amp;entryId);
+            </div>
+            <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+            <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keywordtype">void</span>
+                <a class="code"
+                   href="../../d0/d9e/structmm_1_1_entry_controller.html#ad4d3a1e3dc08262fe244e8c9bc0a455c">entryTextChanged</a>(<span
+                        class="keyword">const</span> Glib::ustring &amp;, <span class="keywordtype">int</span> *);
+            </div>
+            <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+            <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="comment">// inline per aumentare la leggibilità ma non a scapito delle prestazioni;</span>
+            </div>
+            <div class="line"><a name="l00023"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d9e/structmm_1_1_entry_controller.html#a8eb56a968a567d1641c47d0f08b23f6f">   23</a></span>&#160;
+                <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code"
+                                                                                             href="../../d0/d9e/structmm_1_1_entry_controller.html#a8eb56a968a567d1641c47d0f08b23f6f">reset</a>()
+                { <a class="code"
+                     href="../../d0/d9e/structmm_1_1_entry_controller.html#ab41f377d1a98b2bf967c81dc1dc7f391">entry</a>-&gt;set_text(<span
+                        class="stringliteral">&quot;&quot;</span>); }
+            </div>
+            <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+            <div class="line"><a name="l00025"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d9e/structmm_1_1_entry_controller.html#a8665e8b7d74b0f8c807d5b3ad418e535">   25</a></span>&#160;
+                <span class="keyword">inline</span> std::string <a class="code"
+                                                                   href="../../d0/d9e/structmm_1_1_entry_controller.html#a8665e8b7d74b0f8c807d5b3ad418e535">text</a>()
+                { <span class="keywordflow">return</span> <a class="code"
+                                                             href="../../d0/d9e/structmm_1_1_entry_controller.html#ab41f377d1a98b2bf967c81dc1dc7f391">entry</a>-&gt;get_text();
+                }
+            </div>
+            <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+            <div class="line"><a name="l00027"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d9e/structmm_1_1_entry_controller.html#ab41f377d1a98b2bf967c81dc1dc7f391">   27</a></span>&#160;
+                Gtk::Entry *<a class="code"
+                               href="../../d0/d9e/structmm_1_1_entry_controller.html#ab41f377d1a98b2bf967c81dc1dc7f391">entry</a>;
+            </div>
+            <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; };</div>
+            <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+            <div class="line"><a name="l00030"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d52/structmm_1_1_date_controller.html">   30</a></span>&#160;
+                <span class="keyword">struct </span><a class="code"
+                                                       href="../../d0/d52/structmm_1_1_date_controller.html">DateController</a>
+                : <span class="keyword">public</span> sigc::trackable {
+            </div>
+            <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <a class="code"
+                                                                                              href="../../d0/d52/structmm_1_1_date_controller.html#a3244d913ab9d7b96e9617f8711e34bd8">DateController</a>()
+                = <span class="keyword">delete</span>;
+            </div>
+            <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+            <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <a class="code"
+                                                                                              href="../../d0/d52/structmm_1_1_date_controller.html#a3244d913ab9d7b96e9617f8711e34bd8">DateController</a>(<span
+                    class="keyword">const</span> std::string &amp;dayId, <span class="keyword">const</span> std::string
+                &amp;monthId, <span class="keyword">const</span> std::string &amp;yearId);
+            </div>
+            <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+            <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; <span class="keywordtype">void</span>
+                <a class="code" href="../../d0/d52/structmm_1_1_date_controller.html#a7474c420c78178ee6ee6a2e66c16803f">onDateChanged</a>();
+            </div>
+            <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+            <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; <span class="keywordtype">void</span>
+                <a class="code" href="../../d0/d52/structmm_1_1_date_controller.html#a9e09c31aa55c3389c6919c716bb8b0dc">reset</a>();
+            </div>
+            <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+            <div class="line"><a name="l00039"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d52/structmm_1_1_date_controller.html#a8ebf6bda6699414521e4e299fd59e843">   39</a></span>&#160;
+                <span class="keyword">inline</span> std::string <a class="code"
+                                                                   href="../../d0/d52/structmm_1_1_date_controller.html#a8ebf6bda6699414521e4e299fd59e843">getDateAsString</a>()
+                {
+            </div>
+            <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; <span class="keywordflow">return</span>
+                fmt::format(<span class="stringliteral">&quot;{}/{}/{}&quot;</span>, <a class="code"
+                                                                                        href="../../d0/d52/structmm_1_1_date_controller.html#a332df89b4a88fe3ace3d6d86934a575d">day</a>-&gt;get_active_text().c_str(),
+                <a class="code" href="../../d0/d52/structmm_1_1_date_controller.html#a1e7373cef0b00e63343ef9d30a1e80c5">month</a>-&gt;get_active_text().c_str(),
+            </div>
+            <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; <a class="code"
+                                                                                              href="../../d0/d52/structmm_1_1_date_controller.html#a36179406cda47b8c18d1a84945a5e61c">year</a>-&gt;get_active_text().c_str());
+            </div>
+            <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; }</div>
+            <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+            <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <a class="code"
+                                                                                              href="../../df/d88/structmm_1_1util_1_1_date.html">util::Date</a>
+                <a class="code" href="../../d0/d52/structmm_1_1_date_controller.html#aa3c0122bfcc36e8d8b43c8ca7ca76197">getDate</a>();
+            </div>
+            <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+            <div class="line"><a name="l00046"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d52/structmm_1_1_date_controller.html#a332df89b4a88fe3ace3d6d86934a575d">   46</a></span>&#160;
+                Gtk::ComboBoxText *<a class="code"
+                                      href="../../d0/d52/structmm_1_1_date_controller.html#a332df89b4a88fe3ace3d6d86934a575d">day</a>;
+            </div>
+            <div class="line"><a name="l00047"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d52/structmm_1_1_date_controller.html#a1e7373cef0b00e63343ef9d30a1e80c5">   47</a></span>&#160;
+                Gtk::ComboBoxText *<a class="code"
+                                      href="../../d0/d52/structmm_1_1_date_controller.html#a1e7373cef0b00e63343ef9d30a1e80c5">month</a>;
+            </div>
+            <div class="line"><a name="l00048"></a><span class="lineno"><a class="line"
+                                                                           href="../../d0/d52/structmm_1_1_date_controller.html#a36179406cda47b8c18d1a84945a5e61c">   48</a></span>&#160;
+                Gtk::ComboBoxText *<a class="code"
+                                      href="../../d0/d52/structmm_1_1_date_controller.html#a36179406cda47b8c18d1a84945a5e61c">year</a>;
+            </div>
+            <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+            <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span class="keywordtype">void</span>
+                <a class="code" href="../../d0/d52/structmm_1_1_date_controller.html#aa7f999d2d5afec5c6724f92cf2856171">init</a>();
+            </div>
+            <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; };</div>
+            <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+            <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+            <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+            <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif //ELABORATO_ING_SW_WIDGETS_HPP</span>
+            </div>
+            <div class="ttc" id="structmm_1_1_date_controller_html_a7474c420c78178ee6ee6a2e66c16803f">
+                <div class="ttname"><a
+                        href="../../d0/d52/structmm_1_1_date_controller.html#a7474c420c78178ee6ee6a2e66c16803f">mm::DateController::onDateChanged</a>
+                </div>
+                <div class="ttdeci">void onDateChanged()</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.cpp:44</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_date_controller_html_aa3c0122bfcc36e8d8b43c8ca7ca76197">
+                <div class="ttname"><a
+                        href="../../d0/d52/structmm_1_1_date_controller.html#aa3c0122bfcc36e8d8b43c8ca7ca76197">mm::DateController::getDate</a>
+                </div>
+                <div class="ttdeci">util::Date getDate()</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.cpp:60</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_date_controller_html_a3244d913ab9d7b96e9617f8711e34bd8">
+                <div class="ttname"><a
+                        href="../../d0/d52/structmm_1_1_date_controller.html#a3244d913ab9d7b96e9617f8711e34bd8">mm::DateController::DateController</a>
+                </div>
+                <div class="ttdeci">DateController()=delete</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_entry_controller_html_ad4d3a1e3dc08262fe244e8c9bc0a455c">
+                <div class="ttname"><a
+                        href="../../d0/d9e/structmm_1_1_entry_controller.html#ad4d3a1e3dc08262fe244e8c9bc0a455c">mm::EntryController::entryTextChanged</a>
+                </div>
+                <div class="ttdeci">void entryTextChanged(const Glib::ustring &amp;, int *)</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.cpp:10</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_date_controller_html_a1e7373cef0b00e63343ef9d30a1e80c5">
+                <div class="ttname"><a
+                        href="../../d0/d52/structmm_1_1_date_controller.html#a1e7373cef0b00e63343ef9d30a1e80c5">mm::DateController::month</a>
+                </div>
+                <div class="ttdeci">Gtk::ComboBoxText * month</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.hpp:47</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_entry_controller_html_a8665e8b7d74b0f8c807d5b3ad418e535">
+                <div class="ttname"><a
+                        href="../../d0/d9e/structmm_1_1_entry_controller.html#a8665e8b7d74b0f8c807d5b3ad418e535">mm::EntryController::text</a>
+                </div>
+                <div class="ttdeci">std::string text()</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.hpp:25</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_date_controller_html_a8ebf6bda6699414521e4e299fd59e843">
+                <div class="ttname"><a
+                        href="../../d0/d52/structmm_1_1_date_controller.html#a8ebf6bda6699414521e4e299fd59e843">mm::DateController::getDateAsString</a>
+                </div>
+                <div class="ttdeci">std::string getDateAsString()</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.hpp:39</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_date_controller_html_a9e09c31aa55c3389c6919c716bb8b0dc">
+                <div class="ttname"><a
+                        href="../../d0/d52/structmm_1_1_date_controller.html#a9e09c31aa55c3389c6919c716bb8b0dc">mm::DateController::reset</a>
+                </div>
+                <div class="ttdeci">void reset()</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.cpp:37</div>
+            </div>
+            <div class="ttc" id="namespacemm_html">
+                <div class="ttname"><a href="../../d0/d04/namespacemm.html">mm</a></div>
+                <div class="ttdef"><b>Definition:</b> Configuration.hpp:14</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_entry_controller_html_a8eb56a968a567d1641c47d0f08b23f6f">
+                <div class="ttname"><a
+                        href="../../d0/d9e/structmm_1_1_entry_controller.html#a8eb56a968a567d1641c47d0f08b23f6f">mm::EntryController::reset</a>
+                </div>
+                <div class="ttdeci">void reset()</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.hpp:23</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_date_controller_html_aa7f999d2d5afec5c6724f92cf2856171">
+                <div class="ttname"><a
+                        href="../../d0/d52/structmm_1_1_date_controller.html#aa7f999d2d5afec5c6724f92cf2856171">mm::DateController::init</a>
+                </div>
+                <div class="ttdeci">void init()</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.cpp:74</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_entry_controller_html">
+                <div class="ttname"><a href="../../d0/d9e/structmm_1_1_entry_controller.html">mm::EntryController</a>
+                </div>
+                <div class="ttdef"><b>Definition:</b> Widgets.hpp:15</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_date_controller_html_a332df89b4a88fe3ace3d6d86934a575d">
+                <div class="ttname"><a
+                        href="../../d0/d52/structmm_1_1_date_controller.html#a332df89b4a88fe3ace3d6d86934a575d">mm::DateController::day</a>
+                </div>
+                <div class="ttdeci">Gtk::ComboBoxText * day</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.hpp:46</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_entry_controller_html_ab41f377d1a98b2bf967c81dc1dc7f391">
+                <div class="ttname"><a
+                        href="../../d0/d9e/structmm_1_1_entry_controller.html#ab41f377d1a98b2bf967c81dc1dc7f391">mm::EntryController::entry</a>
+                </div>
+                <div class="ttdeci">Gtk::Entry * entry</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.hpp:27</div>
+            </div>
+            <div class="ttc" id="structmm_1_1util_1_1_date_html">
+                <div class="ttname"><a href="../../df/d88/structmm_1_1util_1_1_date.html">mm::util::Date</a></div>
+                <div class="ttdef"><b>Definition:</b> Date.hpp:14</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_date_controller_html">
+                <div class="ttname"><a href="../../d0/d52/structmm_1_1_date_controller.html">mm::DateController</a>
+                </div>
+                <div class="ttdef"><b>Definition:</b> Widgets.hpp:30</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_entry_controller_html_a8669618dd4526580cdb3cd88f9d16e52">
+                <div class="ttname"><a
+                        href="../../d0/d9e/structmm_1_1_entry_controller.html#a8669618dd4526580cdb3cd88f9d16e52">mm::EntryController::EntryController</a>
+                </div>
+                <div class="ttdeci">EntryController()=delete</div>
+            </div>
+            <div class="ttc" id="structmm_1_1_date_controller_html_a36179406cda47b8c18d1a84945a5e61c">
+                <div class="ttname"><a
+                        href="../../d0/d52/structmm_1_1_date_controller.html#a36179406cda47b8c18d1a84945a5e61c">mm::DateController::year</a>
+                </div>
+                <div class="ttdeci">Gtk::ComboBoxText * year</div>
+                <div class="ttdef"><b>Definition:</b> Widgets.hpp:48</div>
+            </div>
+        </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+        <li class="navelem"><a class="el" href="../../dir_050edd66366d13764f98250ef6db77f6.html">code</a></li>
+        <li class="navelem"><a class="el" href="../../dir_3aa1edc5113eb71597736b7aa27b7402.html">gui</a></li>
+        <li class="navelem"><a class="el" href="../../dc/d55/_widgets_8hpp.html">Widgets.hpp</a></li>
+        <li class="footer">Generato da
+            <a href="http://www.doxygen.org/index.html">
+                <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.14
+        </li>
+    </ul>
+</div>
+</body>
+</html>

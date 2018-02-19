@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d7/d05/classmm_1_1_about_dialog" kind="class" language="C++" prot="public">
+        <compoundname>mm::AboutDialog</compoundname>
+        <basecompoundref refid="df/d35/classmm_1_1_dialog" prot="public" virt="non-virtual">mm::Dialog</basecompoundref>
+        <includes refid="d7/ded/_about_dialog_8hpp" local="no">AboutDialog.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="d7/d05/classmm_1_1_about_dialog_1ad607d81be4917809b5d0daf8407c5767"
+                       prot="private" static="no" mutable="no">
+                <type>bool</type>
+                <definition>bool mm::AboutDialog::active</definition>
+                <argsstring></argsstring>
+                <name>active</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AboutDialog.hpp" line="12" column="1" bodyfile="code/gui/AboutDialog.hpp"
+                          bodystart="12" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="d7/d05/classmm_1_1_about_dialog_1a19077d54c5cbf3ebc7492040a63d1830"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>void</type>
+                <definition>void mm::AboutDialog::dispose</definition>
+                <argsstring>() override</argsstring>
+                <name>dispose</name>
+                <reimplements refid="df/d35/classmm_1_1_dialog_1a3f2e361836af48ee3808f4dd6e4f8e48">dispose
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AboutDialog.hpp" line="14" column="1" bodyfile="code/gui/AboutDialog.cpp"
+                          bodystart="22" bodyend="28"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d7/d05/classmm_1_1_about_dialog_1a489ffce563c6dae1dfef30518a778197"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::AboutDialog::AboutDialog</definition>
+                <argsstring>()</argsstring>
+                <name>AboutDialog</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AboutDialog.hpp" line="17" column="1" bodyfile="code/gui/AboutDialog.cpp"
+                          bodystart="8" bodyend="14"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d05/classmm_1_1_about_dialog_1a9e06dc12f6950b74ccf6ccece693f108"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>void</type>
+                <definition>void mm::AboutDialog::show</definition>
+                <argsstring>() override</argsstring>
+                <name>show</name>
+                <reimplements refid="df/d35/classmm_1_1_dialog_1afda4b0dc7c0ac027c4b8fdb95713700f">show</reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AboutDialog.hpp" line="19" column="1" bodyfile="code/gui/AboutDialog.cpp"
+                          bodystart="16" bodyend="20"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d05/classmm_1_1_about_dialog_1adc8aec0378d9d146c78eaf9a204dbf27"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>bool</type>
+                <definition>bool mm::AboutDialog::isActive</definition>
+                <argsstring>() override</argsstring>
+                <name>isActive</name>
+                <reimplements refid="df/d35/classmm_1_1_dialog_1a22abaf4e90b6fdca5c20039f6b9e15ac">isActive
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AboutDialog.hpp" line="21" column="1" bodyfile="code/gui/AboutDialog.cpp"
+                          bodystart="30" bodyend="32"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d05/classmm_1_1_about_dialog_1a21f5b0a7c9d8e43baab78e073d7ade2b"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>void</type>
+                <definition>void mm::AboutDialog::reset</definition>
+                <argsstring>() override</argsstring>
+                <name>reset</name>
+                <reimplements refid="df/d35/classmm_1_1_dialog_1abe6e5ac072c12c06971f60491f079d80">reset</reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AboutDialog.hpp" line="23" column="1" bodyfile="code/gui/AboutDialog.cpp"
+                          bodystart="34" bodyend="36"/>
+            </memberdef>
+            <memberdef kind="function" id="d7/d05/classmm_1_1_about_dialog_1a9a5feecb03e737d3bdbbf2a97dd7fbc4"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::AboutDialog::onResponse</definition>
+                <argsstring>(int id)</argsstring>
+                <name>onResponse</name>
+                <param>
+                    <type>int</type>
+                    <declname>id</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/AboutDialog.hpp" line="25" column="1" bodyfile="code/gui/AboutDialog.cpp"
+                          bodystart="38" bodyend="49"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="0">
+                <label>mm::AboutDialog</label>
+                <link refid="d7/d05/classmm_1_1_about_dialog"/>
+                <childnode refid="1" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="3">
+                <label>trackable</label>
+            </node>
+            <node id="2">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="1">
+                <label>mm::Dialog</label>
+                <link refid="df/d35/classmm_1_1_dialog"/>
+                <childnode refid="2" relation="public-inheritance">
+                </childnode>
+                <childnode refid="3" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="4">
+                <label>mm::AboutDialog</label>
+                <link refid="d7/d05/classmm_1_1_about_dialog"/>
+                <childnode refid="5" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="7">
+                <label>trackable</label>
+            </node>
+            <node id="6">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="5">
+                <label>mm::Dialog</label>
+                <link refid="df/d35/classmm_1_1_dialog"/>
+                <childnode refid="6" relation="public-inheritance">
+                </childnode>
+                <childnode refid="7" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/AboutDialog.hpp" line="11" column="1" bodyfile="code/gui/AboutDialog.hpp"
+                  bodystart="11" bodyend="26"/>
+        <listofallmembers>
+            <member refid="d7/d05/classmm_1_1_about_dialog_1a489ffce563c6dae1dfef30518a778197" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>AboutDialog</name>
+            </member>
+            <member refid="d7/d05/classmm_1_1_about_dialog_1ad607d81be4917809b5d0daf8407c5767" prot="private"
+                    virt="non-virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>active</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>attach</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>detach</name>
+            </member>
+            <member refid="d7/d05/classmm_1_1_about_dialog_1a19077d54c5cbf3ebc7492040a63d1830" prot="private"
+                    virt="virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>dispose</name>
+            </member>
+            <member refid="d7/d05/classmm_1_1_about_dialog_1adc8aec0378d9d146c78eaf9a204dbf27" prot="public"
+                    virt="virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>isActive</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>notify</name>
+            </member>
+            <member refid="df/d35/classmm_1_1_dialog_1a9864219c61623b484d8f8c161808e136" prot="protected"
+                    virt="virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>onDelete</name>
+            </member>
+            <member refid="d7/d05/classmm_1_1_about_dialog_1a9a5feecb03e737d3bdbbf2a97dd7fbc4" prot="public"
+                    virt="non-virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>onResponse</name>
+            </member>
+            <member refid="d7/d05/classmm_1_1_about_dialog_1a21f5b0a7c9d8e43baab78e073d7ade2b" prot="public"
+                    virt="virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>reset</name>
+            </member>
+            <member refid="d7/d05/classmm_1_1_about_dialog_1a9e06dc12f6950b74ccf6ccece693f108" prot="public"
+                    virt="virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>show</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" prot="public"
+                    virt="virtual">
+                <scope>mm::AboutDialog</scope>
+                <name>~ISubject</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

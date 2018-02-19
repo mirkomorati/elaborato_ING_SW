@@ -1,0 +1,19 @@
+<map id="code/gui/MainWindow.cpp" name="code/gui/MainWindow.cpp">
+<area shape="rect" id="node3" href="$db/d41/_main_window_8hpp.html" title="MainWindow.hpp" alt="" coords="214,79,337,104"/>
+<area shape="rect" id="node16" href="$d5/db1/_prescription_window_8hpp.html" title="PrescriptionWindow.hpp" alt="" coords="505,79,670,104"/>
+<area shape="rect" id="node18" href="$dc/db8/_ref_builder_8hpp.html" title="RefBuilder.hpp" alt="" coords="1974,79,2083,104"/>
+<area shape="rect" id="node20" href="$d7/ded/_about_dialog_8hpp.html" title="AboutDialog.hpp" alt="" coords="361,79,481,104"/>
+<area shape="rect" id="node21" href="$dd/de0/_patient_window_8hpp.html" title="PatientWindow.hpp" alt="" coords="1280,79,1415,104"/>
+<area shape="rect" id="node50" href="$dd/d02/_drug_window_8hpp.html" title="DrugWindow.hpp" alt="" coords="694,79,817,104"/>
+<area shape="rect" id="node7" href="$de/d0b/_window_8hpp.html" title="Window.hpp" alt="" coords="456,152,550,177"/>
+<area shape="rect" id="node13" href="$dc/de6/_dialog_8hpp.html" title="Dialog.hpp" alt="" coords="336,152,421,177"/>
+<area shape="rect" id="node8" href="$d1/d25/_i_subject_8hpp.html" title="../interfaces/ISubject.hpp" alt="" coords="294,225,462,251"/>
+<area shape="rect" id="node10" href="$d5/d40/_i_observer_8hpp.html" title="IObserver.hpp" alt="" coords="374,299,479,324"/>
+<area shape="rect" id="node22" href="$d5/d46/_custom_widgets_8hpp.html" title="view/CustomWidgets.hpp" alt="" coords="1262,152,1433,177"/>
+<area shape="rect" id="node42" href="$d8/d63/_date_8hpp.html" title="../../utils/Date.hpp" alt="" coords="2361,225,2486,251"/>
+<area shape="rect" id="node44" href="$dc/d55/_widgets_8hpp.html" title="Widgets.hpp" alt="" coords="2458,152,2554,177"/>
+<area shape="rect" id="node33" href="$de/d01/_prescription_8hpp.html" title="../../model/Prescription.hpp" alt="" coords="2044,299,2224,324"/>
+<area shape="rect" id="node43" href="$d0/da9/_patient_8hpp.html" title="../../model/Patient.hpp" alt="" coords="2185,225,2336,251"/>
+<area shape="rect" id="node38" href="$d3/d1b/_i_serializable_8hpp.html" title="../interfaces/ISerializable.hpp" alt="" coords="1897,445,2089,471"/>
+<area shape="rect" id="node39" href="$dd/df9/_drug_8hpp.html" title="Drug.hpp" alt="" coords="2299,372,2375,397"/>
+</map>

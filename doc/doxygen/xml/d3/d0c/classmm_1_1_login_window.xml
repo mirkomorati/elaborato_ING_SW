@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d3/d0c/classmm_1_1_login_window" kind="class" language="C++" prot="public">
+        <compoundname>mm::LoginWindow</compoundname>
+        <basecompoundref refid="d1/d71/classmm_1_1_window" prot="public" virt="non-virtual">mm::Window</basecompoundref>
+        <includes refid="db/d18/_login_window_8hpp" local="no">LoginWindow.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="d3/d0c/classmm_1_1_login_window_1adc672eb9e34aa4f947fbfe3b4554eb62"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>WindowName mm::LoginWindow::next</definition>
+                <argsstring></argsstring>
+                <name>next</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/LoginWindow.hpp" line="12" column="1" bodyfile="code/gui/LoginWindow.hpp"
+                          bodystart="12" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d3/d0c/classmm_1_1_login_window_1ad27cc1365af4fec51bd7afb1a9d49cf5"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::LoginWindow::LoginWindow</definition>
+                <argsstring>()</argsstring>
+                <name>LoginWindow</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/LoginWindow.hpp" line="14" column="1" bodyfile="code/gui/LoginWindow.cpp"
+                          bodystart="33" bodyend="33"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d0c/classmm_1_1_login_window_1a4040d7c1f85fc76e1f60ef13f92bef1c"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>bool</type>
+                <definition>bool mm::LoginWindow::init</definition>
+                <argsstring>() override</argsstring>
+                <name>init</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1aba03fbf4761b2f106352baecf5996e10">init</reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/LoginWindow.hpp" line="16" column="1" bodyfile="code/gui/LoginWindow.cpp"
+                          bodystart="11" bodyend="23"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d0c/classmm_1_1_login_window_1aa0597e725bfb2df984f526112080aaf7"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>mm::WindowName mm::LoginWindow::getName</definition>
+                <argsstring>() const override</argsstring>
+                <name>getName</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1a942c9125bf42156a9f7b7f561e412fed">getName
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/LoginWindow.hpp" line="18" column="1" bodyfile="code/gui/LoginWindow.cpp"
+                          bodystart="25" bodyend="27"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d0c/classmm_1_1_login_window_1a399eb7e1a310016ff83b7aa6a9d69722"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1a4e9d92e04f65dbf2fc1963947da0d93c" kindref="member">WindowName</ref>
+                </type>
+                <definition>mm::WindowName mm::LoginWindow::getNextWindow</definition>
+                <argsstring>() const override</argsstring>
+                <name>getNextWindow</name>
+                <reimplements refid="d1/d71/classmm_1_1_window_1a0cd7b4b0feb9505c44503547a161fcd8">getNextWindow
+                </reimplements>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/LoginWindow.hpp" line="20" column="1" bodyfile="code/gui/LoginWindow.cpp"
+                          bodystart="29" bodyend="31"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="d3/d0c/classmm_1_1_login_window_1a10f465724f98ed4fbc33df79e981a606"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void mm::LoginWindow::onLoginButtonClicked</definition>
+                <argsstring>()</argsstring>
+                <name>onLoginButtonClicked</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/LoginWindow.hpp" line="24" column="1" bodyfile="code/gui/LoginWindow.cpp"
+                          bodystart="35" bodyend="63"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d0c/classmm_1_1_login_window_1a56bec59f35f677f5b150ef01af8da7ad"
+                       prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::LoginWindow::onKeyPressed</definition>
+                <argsstring>(GdkEventKey *event)</argsstring>
+                <name>onKeyPressed</name>
+                <param>
+                    <type>GdkEventKey *</type>
+                    <declname>event</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/gui/LoginWindow.hpp" line="26" column="1" bodyfile="code/gui/LoginWindow.cpp"
+                          bodystart="65" bodyend="71"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inheritancegraph>
+            <node id="122">
+                <label>trackable</label>
+            </node>
+            <node id="121">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="119">
+                <label>mm::LoginWindow</label>
+                <link refid="d3/d0c/classmm_1_1_login_window"/>
+                <childnode refid="120" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="120">
+                <label>mm::Window</label>
+                <link refid="d1/d71/classmm_1_1_window"/>
+                <childnode refid="121" relation="public-inheritance">
+                </childnode>
+                <childnode refid="122" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="126">
+                <label>trackable</label>
+            </node>
+            <node id="125">
+                <label>mm::ISubject</label>
+                <link refid="d1/dd2/classmm_1_1_i_subject"/>
+            </node>
+            <node id="123">
+                <label>mm::LoginWindow</label>
+                <link refid="d3/d0c/classmm_1_1_login_window"/>
+                <childnode refid="124" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="124">
+                <label>mm::Window</label>
+                <link refid="d1/d71/classmm_1_1_window"/>
+                <childnode refid="125" relation="public-inheritance">
+                </childnode>
+                <childnode refid="126" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="code/gui/LoginWindow.hpp" line="11" column="1" bodyfile="code/gui/LoginWindow.hpp"
+                  bodystart="11" bodyend="27"/>
+        <listofallmembers>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a76069d8db0c9c3d543154b0c2ce23bc9" prot="public"
+                    virt="non-virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>attach</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a64be1c0b2ad7ee4631a5270dedb7aa88" prot="public"
+                    virt="non-virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>detach</name>
+            </member>
+            <member refid="d3/d0c/classmm_1_1_login_window_1aa0597e725bfb2df984f526112080aaf7" prot="public"
+                    virt="virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>getName</name>
+            </member>
+            <member refid="d3/d0c/classmm_1_1_login_window_1a399eb7e1a310016ff83b7aa6a9d69722" prot="public"
+                    virt="virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>getNextWindow</name>
+            </member>
+            <member refid="d3/d0c/classmm_1_1_login_window_1a4040d7c1f85fc76e1f60ef13f92bef1c" prot="public"
+                    virt="virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>init</name>
+            </member>
+            <member refid="d3/d0c/classmm_1_1_login_window_1ad27cc1365af4fec51bd7afb1a9d49cf5" prot="public"
+                    virt="non-virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>LoginWindow</name>
+            </member>
+            <member refid="d3/d0c/classmm_1_1_login_window_1adc672eb9e34aa4f947fbfe3b4554eb62" prot="private"
+                    virt="non-virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>next</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1ad693fe5eb99bc20bc6d70f30bdf1140d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a6c77bad76084018ccb79106390d97117" prot="public"
+                    virt="non-virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>notify</name>
+            </member>
+            <member refid="d3/d0c/classmm_1_1_login_window_1a56bec59f35f677f5b150ef01af8da7ad" prot="private"
+                    virt="non-virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>onKeyPressed</name>
+            </member>
+            <member refid="d3/d0c/classmm_1_1_login_window_1a10f465724f98ed4fbc33df79e981a606" prot="private"
+                    virt="non-virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>onLoginButtonClicked</name>
+            </member>
+            <member refid="d1/dd2/classmm_1_1_i_subject_1a37235a8b8ef83116c7351c56e17f7f57" prot="public"
+                    virt="virtual">
+                <scope>mm::LoginWindow</scope>
+                <name>~ISubject</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

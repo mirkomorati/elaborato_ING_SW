@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="dir_57a7082de014cca77dd242f079f7e66c" kind="dir">
+        <compoundname>code/interfaces</compoundname>
+        <innerfile refid="d5/d40/_i_observer_8hpp">IObserver.hpp</innerfile>
+        <innerfile refid="d8/d8a/_i_serializable_8cpp">ISerializable.cpp</innerfile>
+        <innerfile refid="d3/d1b/_i_serializable_8hpp">ISerializable.hpp</innerfile>
+        <innerfile refid="de/dd9/_i_subject_8cpp">ISubject.cpp</innerfile>
+        <innerfile refid="d1/d25/_i_subject_8hpp">ISubject.hpp</innerfile>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="code/interfaces/"/>
+    </compounddef>
+</doxygen>

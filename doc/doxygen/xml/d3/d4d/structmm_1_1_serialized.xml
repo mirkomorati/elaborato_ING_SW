@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.8.14">
+    <compounddef id="d3/d4d/structmm_1_1_serialized" kind="struct" language="C++" prot="public">
+        <compoundname>mm::Serialized</compoundname>
+        <includes refid="d3/d1b/_i_serializable_8hpp" local="no">ISerializable.hpp</includes>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="d3/d4d/structmm_1_1_serialized_1a0b04612e6ed7f3da463a07e6405588e4"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="de/dac/unionmm_1_1_serialized_union" kindref="compound">SerializedUnion</ref>
+                </type>
+                <definition>SerializedUnion mm::Serialized::data</definition>
+                <argsstring></argsstring>
+                <name>data</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="53" column="1"
+                          bodyfile="code/interfaces/ISerializable.hpp" bodystart="53" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="d3/d4d/structmm_1_1_serialized_1aceee986b86426f4f851466147e078234"
+                       prot="private" static="no" mutable="no">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601c" kindref="member">StoredTypes
+                    </ref>
+                </type>
+                <definition>StoredTypes mm::Serialized::type</definition>
+                <argsstring></argsstring>
+                <name>type</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="54" column="1"
+                          bodyfile="code/interfaces/ISerializable.hpp" bodystart="54" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="friend">
+            <memberdef kind="friend" id="d3/d4d/structmm_1_1_serialized_1a7ac660741c58dec6ffe85a006b9846ae"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>friend std::ostream &amp;</type>
+                <definition>std::ostream&amp; operator&lt;&lt;</definition>
+                <argsstring>(std::ostream &amp;os, const Serialized &amp;data)</argsstring>
+                <name>operator&lt;&lt;</name>
+                <param>
+                    <type>std::ostream &amp;</type>
+                    <declname>os</declname>
+                </param>
+                <param>
+                    <type>const <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref> &amp;
+                    </type>
+                    <declname>data</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="50" column="1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a9a257b31c4426077a3bd460d1e6cbd89"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>
+                    <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601c" kindref="member">StoredTypes
+                    </ref>
+                </type>
+                <definition>mm::StoredTypes mm::Serialized::get_type</definition>
+                <argsstring>() const noexcept</argsstring>
+                <name>get_type</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="56" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="15" bodyend="17"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1ac0e23433a34f0d326042907895a03353"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool mm::Serialized::isType</definition>
+                <argsstring>(StoredTypes type) const noexcept</argsstring>
+                <name>isType</name>
+                <param>
+                    <type>
+                        <ref refid="d0/d04/namespacemm_1ad5a796af6d7145f51e84a73ed35a601c" kindref="member">
+                            StoredTypes
+                        </ref>
+                    </type>
+                    <declname>type</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Project Elaborato_ING_SW
+                        <simplesect kind="author">
+                            <para>Noè Murr, Mirko Morati</para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="58" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="11" bodyend="13"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1aa3eb7eb50d6b343993c08a4d369af8b2"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>const std::string</type>
+                <definition>const std::string mm::Serialized::get_str</definition>
+                <argsstring>() const noexcept(false)</argsstring>
+                <name>get_str</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="60" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="88" bodyend="94"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a259c2695619d6ba052fd8a3885a341ef"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int mm::Serialized::get_int</definition>
+                <argsstring>() const noexcept(false)</argsstring>
+                <name>get_int</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="62" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="96" bodyend="102"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1acd3c339c1766f6dbc0313669e7582361"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>double</type>
+                <definition>double mm::Serialized::get_real</definition>
+                <argsstring>() const noexcept(false)</argsstring>
+                <name>get_real</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="64" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="104" bodyend="110"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a440d7e6daeb9e6c2ca286a2eee1fc24d"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::Serialized::Serialized</definition>
+                <argsstring>(std::string data) noexcept</argsstring>
+                <name>Serialized</name>
+                <param>
+                    <type>std::string</type>
+                    <declname>data</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="66" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="36" bodyend="40"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a1fcb5290740858b4a800f6b4d48e3c74"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::Serialized::Serialized</definition>
+                <argsstring>(const char *c_str) noexcept</argsstring>
+                <name>Serialized</name>
+                <param>
+                    <type>const char *</type>
+                    <declname>c_str</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="68" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="112" bodyend="113"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a2d29dc6d2cb8eed1a768a378b1d61b8f"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::Serialized::Serialized</definition>
+                <argsstring>(int data) noexcept</argsstring>
+                <name>Serialized</name>
+                <param>
+                    <type>int</type>
+                    <declname>data</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="70" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="42" bodyend="45"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1ae11ee0c67ffaed5dfc69bf52f33ebcca"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::Serialized::Serialized</definition>
+                <argsstring>(double data) noexcept</argsstring>
+                <name>Serialized</name>
+                <param>
+                    <type>double</type>
+                    <declname>data</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="72" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="47" bodyend="50"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a8e5cff9af77398dfa1f398a83bb9d642"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::Serialized::Serialized</definition>
+                <argsstring>(float data) noexcept</argsstring>
+                <name>Serialized</name>
+                <param>
+                    <type>float</type>
+                    <declname>data</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="74" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="127" bodyend="128"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1af64564defb439c3167375d2984c0653d"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::Serialized::Serialized</definition>
+                <argsstring>(const Serialized &amp;old) noexcept</argsstring>
+                <name>Serialized</name>
+                <param>
+                    <type>const <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref> &amp;
+                    </type>
+                    <declname>old</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="76" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="58" bodyend="67"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a7d108150308172857962c61c94f78fbd"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>
+                    <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref> &amp;
+                </type>
+                <definition>mm::Serialized &amp; mm::Serialized::operator=</definition>
+                <argsstring>(const Serialized &amp;old)</argsstring>
+                <name>operator=</name>
+                <param>
+                    <type>const <ref refid="d3/d4d/structmm_1_1_serialized" kindref="compound">Serialized</ref> &amp;
+                    </type>
+                    <declname>old</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="78" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="69" bodyend="86"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a47c193b8439645264f62af1887cbfb2f"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::Serialized::operator int</definition>
+                <argsstring>() const noexcept(false)</argsstring>
+                <name>operator int</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="80" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="115" bodyend="117"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a4c753eedf42e36e51e8de52c2ae8917d"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::Serialized::operator std::string</definition>
+                <argsstring>() const noexcept(false)</argsstring>
+                <name>operator std::string</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="82" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="119" bodyend="121"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a3462f388a68a546a738038e5ce235b21"
+                       prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::Serialized::operator double</definition>
+                <argsstring>() const noexcept(false)</argsstring>
+                <name>operator double</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="84" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="123" bodyend="125"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1af1414a72ff10e038d96f6f33f352b2dc"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::Serialized::~Serialized</definition>
+                <argsstring>() noexcept</argsstring>
+                <name>~Serialized</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="86" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="52" bodyend="56"/>
+            </memberdef>
+            <memberdef kind="function" id="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362"
+                       prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>mm::Serialized::Serialized</definition>
+                <argsstring>() noexcept</argsstring>
+                <name>Serialized</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="code/interfaces/ISerializable.hpp" line="88" column="1"
+                          bodyfile="code/interfaces/ISerializable.cpp" bodystart="31" bodyend="34"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+            <para>Rappresenta un dato da scrivere o estratto dal database.</para>
+        </briefdescription>
+        <detaileddescription>
+            <para>Questa Classe contiene tutti i metodi e le operazioni necessarie a gestire i dati salvati su database,
+                distingue tra i vari tipi e maschera al programmatore la gestione della memoria relativa alla gestione
+                della union <ref refid="de/dac/unionmm_1_1_serialized_union" kindref="compound">SerializedUnion</ref> che
+                contiene.
+            </para>
+        </detaileddescription>
+        <collaborationgraph>
+            <node id="192">
+                <label>mm::Serialized</label>
+                <link refid="d3/d4d/structmm_1_1_serialized"/>
+            </node>
+        </collaborationgraph>
+        <location file="code/interfaces/ISerializable.hpp" line="49" column="1"
+                  bodyfile="code/interfaces/ISerializable.hpp" bodystart="49" bodyend="89"/>
+        <listofallmembers>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a0b04612e6ed7f3da463a07e6405588e4" prot="private"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>data</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a259c2695619d6ba052fd8a3885a341ef" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>get_int</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1acd3c339c1766f6dbc0313669e7582361" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>get_real</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1aa3eb7eb50d6b343993c08a4d369af8b2" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>get_str</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a9a257b31c4426077a3bd460d1e6cbd89" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>get_type</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1ac0e23433a34f0d326042907895a03353" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>isType</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a3462f388a68a546a738038e5ce235b21" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>operator double</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a47c193b8439645264f62af1887cbfb2f" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>operator int</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a4c753eedf42e36e51e8de52c2ae8917d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>operator std::string</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a7ac660741c58dec6ffe85a006b9846ae" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>operator&lt;&lt;</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a7d108150308172857962c61c94f78fbd" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>operator=</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a440d7e6daeb9e6c2ca286a2eee1fc24d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>Serialized</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a1fcb5290740858b4a800f6b4d48e3c74" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>Serialized</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a2d29dc6d2cb8eed1a768a378b1d61b8f" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>Serialized</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1ae11ee0c67ffaed5dfc69bf52f33ebcca" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>Serialized</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a8e5cff9af77398dfa1f398a83bb9d642" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>Serialized</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1af64564defb439c3167375d2984c0653d" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>Serialized</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1a14f147b31fbf90a95379bbd919875362" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>Serialized</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1aceee986b86426f4f851466147e078234" prot="private"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>type</name>
+            </member>
+            <member refid="d3/d4d/structmm_1_1_serialized_1af1414a72ff10e038d96f6f33f352b2dc" prot="public"
+                    virt="non-virtual">
+                <scope>mm::Serialized</scope>
+                <name>~Serialized</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>
