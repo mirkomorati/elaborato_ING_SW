@@ -36,14 +36,17 @@ include_directories(${CMAKE_SOURCE_DIR}/inc)
 
 file(GLOB_RECURSE SRC "code/*.cpp")
 file(GLOB_RECURSE HDR "code/*.hpp")
+file(GLOB_RECURSE TEST_MAIN "test/*.cpp")
+file(GLOB_RECURSE TEST_CODE_MODEL_SRC "code/model/*.cpp")
+file(GLOB_RECURSE TEST_CODE_MODEL_HDR "code/model/*.hpp")
+file(GLOB_RECURSE TEST_CODE_INTERFACE_SRC "code/interfaces/*.cpp")
+file(GLOB_RECURSE TEST_CODE_INTERFACE_HDR "code/interfaces/*.hpp")
+file(GLOB_RECURSE TEST_CODE_UTILS_SRC "code/utils/*.cpp")
+file(GLOB_RECURSE TEST_CODE_UTILS_HDR "code/utils/*.hpp")
+
+set(TEST_CODE "${TEST_CODE_MODEL_SRC} ${TEST_CODE_MODEL_HDR} ${TEST_CODE_INTERFACE_SRC} ${TEST_CODE_INTERFACE_HDR} ${TEST_CODE_UTILS_SRC} ${TEST_CODE_UTILS_HDR} code/DBMaster.hpp code/DBMaster.cpp")
 
 set(MAIN code/main.cpp)
-
-
-#file(GLOB_RECURSE SRC "code2/*.cpp")
-#file(GLOB_RECURSE HDR "code2/*.hpp")
-
-#set(MAIN code2/main.cpp)
 
 set(GLADE_FILES ${CMAKE_SOURCE_DIR}/glade/mainWindow.glade ${CMAKE_SOURCE_DIR}/glade/style.css ${CMAKE_SOURCE_DIR}/glade/logoverona.png)
 set(CONF_FILE ${CMAKE_SOURCE_DIR}/tmp/config.json)
@@ -80,6 +83,12 @@ if (UNIX AND NOT APPLE)
 
     add_executable(med-h ${MAIN} ${SRC} ${HDR} ${GLADE_FILES} ${CONF_FILE})
 endif (UNIX AND NOT APPLE)
+
+add_executable(model_test ${TEST_MAIN} ${TEST_CODE_MODEL_SRC} ${TEST_CODE_MODEL_HDR} ${TEST_CODE_INTERFACE_SRC} ${TEST_CODE_INTERFACE_HDR} ${TEST_CODE_UTILS_SRC} ${TEST_CODE_UTILS_HDR} code/DBMaster.hpp code/DBMaster.cpp)
+
+target_link_libraries(model_test ${SQLITE3_LIBRARIES})
+target_link_libraries(model_test fmt)
+target_link_libraries(model_test ${GTKMM_LDFLAGS})
 
 target_link_libraries(med-h ${GTKMM_LDFLAGS})
 target_link_libraries(med-h ${SQLITE3_LIBRARIES})
