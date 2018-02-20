@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.14)  20 FEB 2018 18:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.14)  20 FEB 2018 20:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -803,18 +803,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] <Vista_paziente.png, id=116, 509.65407pt x 466.74374pt>
-File: Vista_paziente.png Graphic file (type png)
+[2] <nocolori/Vista_paziente.png, id=116, 509.65407pt x 490.83376pt>
+File: nocolori/Vista_paziente.png Graphic file (type png)
 
-<use Vista_paziente.png>
-Package pdftex.def Info: Vista_paziente.png used on input line 160.
-(pdftex.def)             Requested size: 316.17987pt x 289.57042pt.
-
-<Vista_farmaci.png, id=117, 590.95781pt x 394.47375pt>
-File: Vista_farmaci.png Graphic file (type png)
- <use Vista_farmaci.png>
-Package pdftex.def Info: Vista_farmaci.png used on input line 162.
-(pdftex.def)             Requested size: 316.17987pt x 211.05641pt.
+<use nocolori/Vista_paziente.png>
+Package pdftex.def Info: nocolori/Vista_paziente.png used on input line 160.
+(pdftex.def)             Requested size: 316.17987pt x 304.51599pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -822,7 +816,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3 <./Vista_paziente.png>]
+[3] <nocolori/Vista_farmaci.png, id=123, 590.95781pt x 419.31656pt>
+File: nocolori/Vista_farmaci.png Graphic file (type png)
+
+<use nocolori/Vista_farmaci.png>
+Package pdftex.def Info: nocolori/Vista_farmaci.png used on input line 162.
+(pdftex.def)             Requested size: 316.17987pt x 224.34813pt.
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 185.
 
 
@@ -849,6 +848,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--185
  []
 
 
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4 <./nocolori/Vista_paziente.png> <./nocolori/Vista_farmaci.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 209--209
 []\T1/lmtt/l/n/10.95 Il medico preme il pulsante di aggiunta
  []
@@ -874,12 +879,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--209
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[4 <./Vista_farmaci.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 226--226
 []\T1/lmtt/l/n/10.95 Viene selezionato un range tra mese,
  []
@@ -890,6 +889,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--226
  []
 
 
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 241--241
 []|\T1/lmtt/l/n/10.95 UC4: Visualizza pazienti a cui è stato prescritto il
  []
@@ -900,12 +905,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 241--241
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5]
 Underfull \hbox (badness 10000) in paragraph at lines 254--254
 []|\T1/lmtt/l/n/10.95 UC5: Visualizza quantità di farmaco totale
  []
@@ -931,26 +930,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6] <Inserimento_paziente.png, id=180, 889.82437pt x 865.73438pt>
-File: Inserimento_paziente.png Graphic file (type png)
+[6] <nocolori/Inserimento_paziente.png, id=180, 889.82437pt x 865.73438pt>
+File: nocolori/Inserimento_paziente.png Graphic file (type png)
 
-<use Inserimento_paziente.png>
-Package pdftex.def Info: Inserimento_paziente.png used on input line 261.
+<use nocolori/Inserimento_paziente.png>
+Package pdftex.def Info: nocolori/Inserimento_paziente.png used on input line 2
+61.
 (pdftex.def)             Requested size: 451.6875pt x 439.45793pt.
 
-<Inserimento_prescrizione.png, id=181, 716.6775pt x 892.08281pt>
-File: Inserimento_prescrizione.png Graphic file (type png)
+<nocolori/Inserimento_prescrizione.png, id=181, 716.6775pt x 892.08281pt>
+File: nocolori/Inserimento_prescrizione.png Graphic file (type png)
 
-<use Inserimento_prescrizione.png>
-Package pdftex.def Info: Inserimento_prescrizione.png used on input line 262.
+<use nocolori/Inserimento_prescrizione.png>
+Package pdftex.def Info: nocolori/Inserimento_prescrizione.png used on input li
+ne 262.
 (pdftex.def)             Requested size: 451.6875pt x 562.24655pt.
 
-<Visualizza_farmaci_per_paziente.png, id=182, 419.31656pt x 429.10312pt>
-File: Visualizza_farmaci_per_paziente.png Graphic file (type png)
-
-<use Visualizza_farmaci_per_paziente.png>
-Package pdftex.def Info: Visualizza_farmaci_per_paziente.png used on input line
- 263.
+<nocolori/Visualizza_farmaci_per_paziente.png, id=182, 419.31656pt x 429.10312p
+t>
+File: nocolori/Visualizza_farmaci_per_paziente.png Graphic file (type png)
+ <use nocolori/Visualizza_farmaci_per_paziente.png>
+Package pdftex.def Info: nocolori/Visualizza_farmaci_per_paziente.png used on i
+nput line 263.
 (pdftex.def)             Requested size: 451.6875pt x 462.2328pt.
 
 
@@ -959,26 +960,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <./Inserimento_paziente.png>]
+[7 <./nocolori/Inserimento_paziente.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <./Inserimento_prescrizione.png>]
+[8 <./nocolori/Inserimento_prescrizione.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./Visualizza_farmaci_per_paziente.png>]
-<Class_diagram_min.png, id=202, 1246.6575pt x 1750.28906pt>
-File: Class_diagram_min.png Graphic file (type png)
+[9 <./nocolori/Visualizza_farmaci_per_paziente.png>]
+<nocolori/Class_diagram_min.png, id=202, 1246.6575pt x 1750.28906pt>
+File: nocolori/Class_diagram_min.png Graphic file (type png)
 
-<use Class_diagram_min.png>
-Package pdftex.def Info: Class_diagram_min.png used on input line 271.
+<use nocolori/Class_diagram_min.png>
+Package pdftex.def Info: nocolori/Class_diagram_min.png used on input line 271.
+
 (pdftex.def)             Requested size: 406.51599pt x 570.73343pt.
 
 
@@ -987,27 +989,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10 <./Class_diagram_min.png>]
-<Inserimento_paziente_seq.png, id=209, 1082.54437pt x 1103.62312pt>
-File: Inserimento_paziente_seq.png Graphic file (type png)
+[10 <./nocolori/Class_diagram_min.png>]
+<nocolori/Inserimento_paziente_seq.png, id=209, 1082.54437pt x 1103.62312pt>
+File: nocolori/Inserimento_paziente_seq.png Graphic file (type png)
 
-<use Inserimento_paziente_seq.png>
-Package pdftex.def Info: Inserimento_paziente_seq.png used on input line 276.
+<use nocolori/Inserimento_paziente_seq.png>
+Package pdftex.def Info: nocolori/Inserimento_paziente_seq.png used on input li
+ne 276.
 (pdftex.def)             Requested size: 451.6875pt x 460.47054pt.
 
-<Visualizza_prescrizioni_filtrate_seq.png, id=210, 632.3625pt x 747.54282pt>
-File: Visualizza_prescrizioni_filtrate_seq.png Graphic file (type png)
+<nocolori/Visualizza_prescrizioni_filtrate_seq.png, id=210, 632.3625pt x 747.54
+282pt>
+File: nocolori/Visualizza_prescrizioni_filtrate_seq.png Graphic file (type png)
 
-<use Visualizza_prescrizioni_filtrate_seq.png>
-Package pdftex.def Info: Visualizza_prescrizioni_filtrate_seq.png used on input
- line 277.
+ <use nocolori/Visualizza_prescrizioni_filtrate_seq.png>
+Package pdftex.def Info: nocolori/Visualizza_prescrizioni_filtrate_seq.png used
+ on input line 277.
 (pdftex.def)             Requested size: 451.6875pt x 533.96437pt.
 
-<Login_sequence_seq.png, id=211, 1202.99437pt x 645.16031pt>
-File: Login_sequence_seq.png Graphic file (type png)
+<nocolori/Login_sequence_seq.png, id=211, 1202.99437pt x 645.16031pt>
+File: nocolori/Login_sequence_seq.png Graphic file (type png)
 
-<use Login_sequence_seq.png>
-Package pdftex.def Info: Login_sequence_seq.png used on input line 278.
+<use nocolori/Login_sequence_seq.png>
+Package pdftex.def Info: nocolori/Login_sequence_seq.png used on input line 278
+.
 (pdftex.def)             Requested size: 451.6875pt x 242.23969pt.
 
 
@@ -1016,14 +1021,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./Inserimento_paziente_seq.png>]
+[11 <./nocolori/Inserimento_paziente_seq.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./Visualizza_prescrizioni_filtrate_seq.png>]
+[12 <./nocolori/Visualizza_prescrizioni_filtrate_seq.png>]
 LaTeX Font Info:    Try loading font information for TS1+lmr on input line 287.
 
 
@@ -1036,22 +1041,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13 <./Login_sequence_seq.png>] <login.png, id=232, 1397.22pt x 847.165pt>
+[13 <./nocolori/Login_sequence_seq.png>]
+<login.png, id=232, 1397.22pt x 847.165pt>
 File: login.png Graphic file (type png)
-
-<use login.png>
+ <use login.png>
 Package pdftex.def Info: login.png used on input line 322.
 (pdftex.def)             Requested size: 321.82288pt x 195.13098pt.
- <pazienti.png, id=233, 1397.22pt x 847.165pt>
-File: pazienti.png Graphic file (type png)
 
-<use pazienti.png>
+<pazienti.png, id=233, 1397.22pt x 847.165pt>
+File: pazienti.png Graphic file (type png)
+ <use pazienti.png>
 Package pdftex.def Info: pazienti.png used on input line 327.
 (pdftex.def)             Requested size: 321.82288pt x 195.13098pt.
- <farmaci.png, id=234, 1397.22pt x 847.165pt>
-File: farmaci.png Graphic file (type png)
 
-<use farmaci.png>
+<farmaci.png, id=234, 1397.22pt x 847.165pt>
+File: farmaci.png Graphic file (type png)
+ <use farmaci.png>
 Package pdftex.def Info: farmaci.png used on input line 332.
 (pdftex.def)             Requested size: 321.82288pt x 195.13098pt.
 
@@ -1099,8 +1104,8 @@ Package rerunfilecheck Info: File `elaborato.out' has not changed.
 (rerunfilecheck)             Checksum: 6D6776B1D3908F79C4725657B4F3765C;1056.
  ) 
 Here is how much of TeX's memory you used:
- 12371 strings out of 492995
- 177857 string characters out of 6132704
+ 12372 strings out of 492995
+ 178190 string characters out of 6132704
  341408 words of memory out of 5000000
  15583 multiletter control sequences out of 15000+600000
  58662 words of font info for 53 fonts, out of 8000000 for 9000
@@ -1116,7 +1121,7 @@ fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/l
 ocal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texli
 ve/2017/texmf-dist/fonts/type1/public/lm/lmtl10.pfb></usr/local/texlive/2017/te
 xmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on elaborato.pdf (18 pages, 1260013 bytes).
+Output written on elaborato.pdf (18 pages, 1251956 bytes).
 PDF statistics:
  317 PDF objects out of 1000 (max. 8388607)
  257 compressed objects within 3 object streams
