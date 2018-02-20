@@ -21,10 +21,17 @@
 \usepackage[a4paper]{geometry}
 \usepackage[section]{placeins}
 \usepackage{lmodern}
+%\usepackage[scaled=.85]{beramono}
 \usepackage{array}
 \usepackage{subcaption}
-
-
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor  = blue,
+}
 %\geometry{hmargin=2.3cm}
 
 \topmargin=-0.45in
@@ -40,12 +47,12 @@
 
 \renewcommand{\baselinestretch}{1.1} 
 
-\newcommand{\hmwkTitle}{Elaborato\ Ingegneria Del Software}
+\newcommand{\hmwkTitle}{Med-H}
 
 \pagestyle{fancy}
 \lhead{\nouppercase{\leftmark}}
 \rhead{\nouppercase{\rightmark}}
-\chead{}
+\chead{\hmwkTitle}
 \lfoot{}
 \cfoot{\thepage}
 \rfoot{}
@@ -113,11 +120,12 @@
 \newpage
 
 \section{Introduzione}
-Obiettivo dell'elaborato è la progettazione di un prototipo software per la gestione della prescrizione di farmaci da parte dei medici di base di una regione.
+Obiettivo dell'elaborato è la progettazione di un prototipo software per la gestione delle prescrizioni di farmaci da parte dei medici di base di una regione.
+
 In questa relazione ci proponiamo di raccogliere la documentazione sviluppata e di fornire spiegazioni e dettagli sulle scelte progettuali ed implementative. 
 
 \section{Requisiti}
-Di seguito viene riportato il testo dell'elaborato. I requisiti funzionali vengono identificati con una linea tratteggiata.
+Di seguito viene riportato il testo dell'elaborato. I requisiti vengono identificati con una linea tratteggiata.
 
 \begin{changemargin}{1cm}{0.5cm} 
 Si vuole progettare un sistema informativo per gestire le prescrizioni di farmaci da parte dei medici di base di una regione. Il medico di base effettua la prescrizione di farmaci su richiesta del paziente (nel caso di farmaci legati a malattie croniche del paziente stesso) o in seguito alla visita. Nel caso di prescrizione su richiesta, il paziente può richiedere la prescrizione alla segreteria del medico che si occuperà di raccogliere le richieste, far preparare le ricette al medico e consegnare le prescrizioni ai pazienti.
@@ -136,13 +144,15 @@ Si vuole progettare un sistema informativo per gestire le prescrizioni di farmac
 \end{changemargin}
 
 \section{UML}
+In questa sezione sono presentati i diagrammi richiesti per la documentazione del prototipo. 
+
 \subsection{Use Cases}
 % Sequence diagram per i principali use cases insieme alle schede
 Gli use case individuati sono stati suddivisi in due macroaree definite dalla scelta di disposizione della GUI:
 
 \begin{enumerate}[nosep] 
-	\item Vista con focus sul paziente
-	\item Vista con focus sul farmaco.
+	\item Vista con focus sui pazienti
+	\item Vista con focus sui farmaci.
 \end{enumerate}
 
 Di seguito vengono proposte alcune schede descrittive degli use case principali.
@@ -176,7 +186,7 @@ Di seguito vengono proposte alcune schede descrittive degli use case principali.
 
 \usecase{UC2: Inserimento prescrizione.}
 {Medico}
-{Il medico deve aver effettuato il login}
+{Il medico deve aver effettuato il login.}
 {%
 	\begin{enumerate}[label*=\arabic*., nosep]
 		\item Il medico seleziona un paziente.
@@ -246,7 +256,7 @@ Il seguente use case è stato pensato per soddisfare il requisito della visualiz
 \newpage
 \subsection{Activity Diagram}
 I seguenti activity diagram cercano di modellare in modo più dettagliato il flusso d'esecuzione relativo ad alcuni degli use case precedentemente proposti. 
-Si noti che i diagrammi relativi agli use case \texttt{UC4} e \texttt{UC5} risulterebbero molto simili al diagramma presentato dello use case \texttt{UC3}.
+Si noti che i diagrammi relativi agli use case \texttt{UC4} e \texttt{UC5} risulterebbero molto simili al diagramma presentato per lo use case \texttt{UC3}.
 
 \safeImage{Inserimento_paziente.png}
 \safeImage{Inserimento_prescrizione.png}
@@ -268,56 +278,102 @@ Si rimanda al class diagram completo all'Appendice A.
 \safeImage{Login_sequence_seq.png}
 
 \section{Scelte Progettuali}
-Why:
-Linguaggio
-Glade - css
-Gtkmm3
-Configurazione
-Database (banale)
-Motivazioni della gui
-Github - sviluppo semiagile
+\subsection{Sviluppo}
+Abbiamo scelto di sviluppare il prototipo usando il linguaggio C++ in modo da poter ampliare la nostra conoscenza applicando i nuovi standard ad un progetto reale.
+L'obbligo di rispettare dei requisiti applicando dei pattern di programmazione orientata agli oggetti ci ha spinti a ricercare ed implementare soluzioni al di fuori della nostra esperienza.
 
+Uno stimolo in più l'abbiamo ricevuto quando abbiamo deciso di usare la libreria grafica Gtkmm3, un'interfaccia verso la più popolare libreria Gtk+. Alcune delle feature che ci hanno spinto ad operare questa scelta sono state:
+\begin{itemize}[nosep]
+	\item uso dell'ereditarietà per definire nuovi widget
+	\item type-safe signal handlers
+	\item polimorfismo
+	\item management automatico della memoria in C++
+	\item cross-platform
+	\item open source
+\end{itemize}
+
+Oltre a questo abbiamo trovato utile la possibilità di costruire la GUI utilizzando il RAD tool Glade, un designer di interfacce grafiche.
+La definizione dell'interfaccia risiede in un file XML che viene parsato all'inizio del programma ed i widget costruiti vengono resi disponibili tramite una classe singleton (si veda MVC Pattern). 
+Da notare il supporto completo dei componenti agli stili CSS: la libreria non esclude la possibilità di personalizzare l'interfaccia senza passare dal tool né la creazione di temi da parte di utenti.
+
+\subsubsection{Metodologia di Sviluppo}
+Il progetto è stato interamente sviluppato usando Git come sistema di versionamento del codice e Github per l'hosting del repository.
+Abbiamo seguito una metodologia di sviluppo Agile: dopo aver analizzato i requisiti del testo proposto abbiamo diviso il lavoro in due macroaree (logica ed user interface).
+Le aree sono state suddivise in task brevi e di facile implementazione, testando gradualmente il nuovo codice inserito. I design pattern applicati sono stati decisi nella fase di sviluppo valutando di volta in volta le necessità per mantenere il progetto leggibile e scalabile. 
+
+In molte occasioni è stato necessario operare un refactoring del codice per migliorare in efficacia il prototipo. Il sistema di versionamento ci ha permesso di dividere logicamente i task in branch e mantenere una cronologia delle modifiche in modo da poterle eventualmente scartare.
+
+\subsection{Database}
+Siccome si è reso necessario mantenere un insieme di dati persistenti abbiamo deciso di appoggiarci al sistema di database Sqlite3. Purtroppo le nostre competenze in basi di dati all'inizio del progetto erano alquanto scarne, quindi più che essere utilizzato come un vero e proprio RDBMS è stato utilizzato quasi come se i dati fossero organizzati in file.
+
+È stata realizzata una classe di interfacciamento che provvede a nascondere la complessità delle transazioni (si veda Facade Pattern).
+
+\subsection{Organizzazione della GUI}
+È possibile individuare tre sezioni principali della GUI del prototipo, ognuna delle quali cerca di rispondere ad un insieme di requisiti specifici:
+\begin{enumerate}[label=(\alph*)., nosep]
+	\item Login: permette l'autenticazione del medico, prerequisito fondamentale per tutti gli use case definiti. 
+	\item Tab pazienti: il focus è sui pazienti legati al medico autenticato. In questa sezione è possibile vedere, filtrare ed aggiungere le prescrizioni relative ad un paziente (oltre ad altre operazioni), in questo modo è possibile vedere l'elenco di farmaci prescritti ad un paziente in un dato periodo.
+	\item Tab farmaci: il focus è sui farmaci disponibili a database. In questa sezione è possibile per ogni farmaco visualizzare, in un determinato periodo, una lista dei pazienti a cui è stato prescritto con dettagli. È anche possibile visualizzare la quantità di un determinato farmaco prescritta a tutti i pazienti in un determinato periodo. 
+\end{enumerate}
+
+\begin{figure}[H]
+	\begin{subfigure}[t]{\textwidth}
+		\centering
+		\includegraphics[height=0.3\textheight]{login}
+		\caption{Schermata di Login}
+	\end{subfigure}
+\begin{subfigure}[b]{\textwidth}
+	\centering
+	\includegraphics[height=0.3\textheight]{pazienti}
+	\caption{Tab Pazienti}
+\end{subfigure}
+\begin{subfigure}[b]{\textwidth}
+	\centering
+	\includegraphics[height=0.3\textheight]{farmaci}
+	\caption{Tab Farmaci}
+\end{subfigure}
+\end{figure}
 
 \subsection{MVC Pattern}
-Due parole mvc, immagine di intercomunicazione
+L'applicazione del pattern prevede la suddivisione logica delle classi in tre componenti: model, view, controller. 
+Abbiamo adattato il pattern per poterlo sfruttare al meglio nonostante la realizzazione dell'interfaccia grafica in XML abbia reso complicato organizzare la comunicazione tra view e relativi controller.
+La libreria Gtkmm3 mette a disposizione un Builder che si occupa della costruzione della view a partire dall'XML; per rendere disponibili i widget ai controller abbiamo realizzato un singleton che si occupa di fornire un'interfaccia di collegamento.
 
-View in xml
+Svantaggio di questa soluzione è la mancanza di un incapsulamento reale che impedisca ad un controller di accedere ad un widget di una view con cui non dovrebbe avere collegamenti. Questo è un compito lasciato al programmatore.
 
-Custom view in classi
-
-Controller classi
-
-Model classi
+\safeImage[0.7\textwidth]{mvc.png}
 
 \subsection{Singleton Pattern}
-Globali sulle classi
+Per raccogliere insiemi di funzioni che necessitavano di una configurazione, abbiamo ottenuto opportuno utilizzare il singleton pattern. In questo modo abbiamo fornito in tutto il codice la possibilità di utilizzare un insieme di interfacce inizializzate in un punto solo del programma (e "safe").
+Le classi che adottano il pattern sono: 
 
-Sono lazy -> differenza
+\begin{itemize}[nosep]
+	\item DBMaster
+	\item RefBuilder
+	\item Configuration
+	\item Login.
+\end{itemize}
 
-DBMaster
-
-Configuration
-
-RefBuilder
+Da notare che in C++ è possibile definire due implementazioni differenti per il singleton pattern, una lazy e una eager. La nostra implementazione è lazy, ovvero l'istanza della classe viene creata solo alla prima richiesta di utilizzo.
 
 \subsection{Observer Pattern}
-Adattato al modello
-Usato coi dialog -> comodo per gli update asincroni e differenziati
+Anche l'observer pattern è stato adattato al prototipo. Viene utilizzato per sincronizzare i dialog con le rispettive view principali in caso di modifiche che rendono necessario un aggiornamento. 
+
+A differenza del pattern originale la nostra implementazione permette di specificare un parametro nella notifica in modo da poter differenziare gli update in ogni observer.
+Nel prototipo non si è reso necessario (ma rimane possibile) specificare più di un observer per ogni subject. 
+
+\subsection{Facade Pattern}
+Il facade pattern permette di ``mascherare'' per mezzo di un'interfaccia di semplice utilizzo la complessità di un'operazione. È stato adottato nella classe DBMaster per fornire dei metodi che coprano l'utilizzo della libreria (sviluppata in C) per l'accesso al database sqlite.
+
+\section{Validazione}
+La parte di codice ritenuta più critica è quella relativa alle transazioni a database. Abbiamo scritto degli unit test utilizzando la libreria open source Catch2 che permette di creare test case in modo semplice e veloce. 
+
+Per quanto riguarda l'interfaccia utente abbiamo dovuto testarla manualmente in quanto non abbiamo trovato un metodo automatico. È stato anche richiesto ad alcuni colleghi di provare il prodotto in modo da raccogliere feedback sull'esperienza di utilizzo dello stesso.
 
 \section{Conclusioni}
-È un prototipo - manca di funzionalità
+Obiettivo del progetto non era quello di sviluppare un prodotto finito e completo ma di realizzare un prototipo rispettando le linee guida. Per questo non sono state implementate alcune funzionalità e l'interfaccia è rimasta ``grezza''. 
+Al termine del progetto abbiamo convenuto che la scelta della libreria per l'interfaccia grafica non è stata delle più ottimali poiché purtroppo la documentazione manca di validi esempi e non è sempre intuitivo passare dall'idea al codice.
 
-Vantaggi prototipo:
-- interfacciamento easy
-
-Vantaggi codice:
-- facilmente adattabile (estensibile)
-
-Schifi:
-- scelta della libreria grafica pessima -> sarebbe stato meglio qt
-- non siamo capaci di dare i nomi alle cose
-- ridondanza nel codice
-
-
+Il progetto completo può essere trovato alla pagina di \href{https://github.com/mirkomorati/elaborato_ING_SW}{Github}.
 
 \end{document}

@@ -340,12 +340,14 @@ void mm::PatientWindow::updatePatientDetailsView() {
     Gtk::Label *birth_date;
     Gtk::Label *birth_place;
     Gtk::Label *address;
+    Gtk::Label *risk_factors;
 
     refBuilder.get_widget("detailFirstName", first_name);
     refBuilder.get_widget("detailLastName", last_name);
     refBuilder.get_widget("detailFiscalCode", fiscal_code);
     refBuilder.get_widget("detailBirthDate", birth_date);
     refBuilder.get_widget("detailBirthPlace", birth_place);
+    refBuilder.get_widget("detailRiskFactors", risk_factors);
     refBuilder.get_widget("detailAddress", address);
     refBuilder.get_widget("patientTreeView", patientTreeView);
 
@@ -369,6 +371,7 @@ void mm::PatientWindow::updatePatientDetailsView() {
     birth_date->set_label(patient.get_birth_date());
     birth_place->set_label(patient.get_birth_place());
     address->set_label(patient.get_address());
+    risk_factors->set_label(patient.get_risk_factors());
 }
 
 void mm::PatientWindow::onRemovePatientClicked() {

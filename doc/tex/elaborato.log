@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.14)  19 FEB 2018 23:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.14)  20 FEB 2018 18:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -550,64 +550,106 @@ Package caption Info: wrapfig package is loaded.
 \c@subfigure=\count133
 \c@subtable=\count134
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Package option `usenames' ignored on input line 216.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks35
+\minrowclearance=\skip60
+)
+LaTeX Info: Redefining \color on input line 709.
+\rownum=\count135
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 34.
+
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
-\fancy@headwidth=\skip60
-\f@ncyO@elh=\skip61
-\f@ncyO@erh=\skip62
-\f@ncyO@olh=\skip63
-\f@ncyO@orh=\skip64
-\f@ncyO@elf=\skip65
-\f@ncyO@erf=\skip66
-\f@ncyO@olf=\skip67
-\f@ncyO@orf=\skip68
+\fancy@headwidth=\skip61
+\f@ncyO@elh=\skip62
+\f@ncyO@erh=\skip63
+\f@ncyO@olh=\skip64
+\f@ncyO@orh=\skip65
+\f@ncyO@elf=\skip66
+\f@ncyO@erf=\skip67
+\f@ncyO@olf=\skip68
+\f@ncyO@orf=\skip69
 )
 (./elaborato.aux)
 \openout1 = `elaborato.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 87.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 94.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 87.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 94.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \it@ocap on input line 87.
-LaTeX Info: Redefining \it@ccap on input line 87.
+LaTeX Info: Redefining \it@ocap on input line 94.
+LaTeX Info: Redefining \it@ccap on input line 94.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count135
+\scratchcounter=\count136
 \scratchdimen=\dimen145
 \scratchbox=\box40
-\nofMPsegments=\count136
-\nofMParguments=\count137
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count138
+\nofMPsegments=\count137
+\nofMParguments=\count138
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count139
 \MPscratchDim=\dimen146
-\MPnumerator=\count139
-\makeMPintoPDFobject=\count140
-\everyMPtoPDFconversion=\toks36
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
+\everyMPtoPDFconversion=\toks37
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -627,9 +669,9 @@ e
 ))
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 87.
+(lastpage)             ! on input line 94.
 \AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring OFF on input line 87.
+Package hyperref Info: Link coloring ON on input line 94.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -637,11 +679,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count141
+\c@section@level=\count142
 )
-LaTeX Info: Redefining \ref on input line 87.
-LaTeX Info: Redefining \pageref on input line 87.
-LaTeX Info: Redefining \nameref on input line 87.
+LaTeX Info: Redefining \ref on input line 94.
+LaTeX Info: Redefining \pageref on input line 94.
+LaTeX Info: Redefining \nameref on input line 94.
 
 (./elaborato.out) (./elaborato.out)
 \@outlinefile=\write3
@@ -684,10 +726,10 @@ LaTeX Info: Redefining \nameref on input line 87.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<logo.png, id=52, 301.125pt x 299.1175pt>
+<logo.png, id=76, 301.125pt x 299.1175pt>
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 94.
+Package pdftex.def Info: logo.png used on input line 101.
 (pdftex.def)             Requested size: 67.75037pt x 67.29852pt.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
@@ -745,12 +787,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.113 \newpage
+l.120 \newpage
                [1]
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-Overfull \hbox (1.91869pt too wide) in paragraph at lines 133--134
+Overfull \hbox (1.91869pt too wide) in paragraph at lines 141--142
 |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [] 
   |   []
  []
@@ -761,17 +803,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] <Vista_paziente.png, id=86, 509.65407pt x 466.74374pt>
+[2] <Vista_paziente.png, id=116, 509.65407pt x 466.74374pt>
 File: Vista_paziente.png Graphic file (type png)
 
 <use Vista_paziente.png>
-Package pdftex.def Info: Vista_paziente.png used on input line 150.
+Package pdftex.def Info: Vista_paziente.png used on input line 160.
 (pdftex.def)             Requested size: 316.17987pt x 289.57042pt.
- <Vista_farmaci.png, id=87, 590.95781pt x 394.47375pt>
-File: Vista_farmaci.png Graphic file (type png)
 
-<use Vista_farmaci.png>
-Package pdftex.def Info: Vista_farmaci.png used on input line 152.
+<Vista_farmaci.png, id=117, 590.95781pt x 394.47375pt>
+File: Vista_farmaci.png Graphic file (type png)
+ <use Vista_farmaci.png>
+Package pdftex.def Info: Vista_farmaci.png used on input line 162.
 (pdftex.def)             Requested size: 316.17987pt x 211.05641pt.
 
 
@@ -781,53 +823,53 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3 <./Vista_paziente.png>]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 175.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 185.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 []\T1/lmtt/l/n/10.95 Il medico preme il pulsante di aggiunta paziente e
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 []\T1/lmtt/l/n/10.95 Inserisce i dati relativi alla persona ed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 []\T1/lmtt/l/n/10.95 Viene effettuata la validazione dei dati
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 \T1/lmtt/l/n/10.95 Se non sono validi viene visualizzato un
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
 []\T1/lmtt/l/n/10.95 Il medico preme il pulsante di aggiunta
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
 \T1/lmtt/l/n/10.95 prescrizione e viene visualizzato il dialog
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
 []\T1/lmtt/l/n/10.95 Viene effettuata la validazione dei dati
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
 []\T1/lmtt/l/n/10.95 La prescrizione viene aggiunta al
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
 \T1/lmtt/l/n/10.95 Se non sono validi viene visualizzato un
  []
 
@@ -838,22 +880,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4 <./Vista_farmaci.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 216--216
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
 []\T1/lmtt/l/n/10.95 Viene selezionato un range tra mese,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--216
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
 []\T1/lmtt/l/n/10.95 Viene selezionata una data di inizio per
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--231
+Underfull \hbox (badness 10000) in paragraph at lines 241--241
 []|\T1/lmtt/l/n/10.95 UC4: Visualizza pazienti a cui è stato prescritto il
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--231
+Underfull \hbox (badness 10000) in paragraph at lines 241--241
 []\T1/lmtt/l/n/10.95 Viene selezionata una data di inizio per
  []
 
@@ -864,22 +906,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 254--254
 []|\T1/lmtt/l/n/10.95 UC5: Visualizza quantità di farmaco totale
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 254--254
 []\T1/lmtt/l/n/10.95 Il medico può modificare il filtro relativo alla
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 254--254
 []\T1/lmtt/l/n/10.95 Viene selezionato un range tra mese,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 254--254
 []\T1/lmtt/l/n/10.95 Viene selezionata una data di inizio per
  []
 
@@ -889,26 +931,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6] <Inserimento_paziente.png, id=150, 889.82437pt x 865.73438pt>
+[6] <Inserimento_paziente.png, id=180, 889.82437pt x 865.73438pt>
 File: Inserimento_paziente.png Graphic file (type png)
 
 <use Inserimento_paziente.png>
-Package pdftex.def Info: Inserimento_paziente.png used on input line 251.
+Package pdftex.def Info: Inserimento_paziente.png used on input line 261.
 (pdftex.def)             Requested size: 451.6875pt x 439.45793pt.
 
-<Inserimento_prescrizione.png, id=151, 716.6775pt x 892.08281pt>
+<Inserimento_prescrizione.png, id=181, 716.6775pt x 892.08281pt>
 File: Inserimento_prescrizione.png Graphic file (type png)
 
 <use Inserimento_prescrizione.png>
-Package pdftex.def Info: Inserimento_prescrizione.png used on input line 252.
+Package pdftex.def Info: Inserimento_prescrizione.png used on input line 262.
 (pdftex.def)             Requested size: 451.6875pt x 562.24655pt.
 
-<Visualizza_farmaci_per_paziente.png, id=152, 419.31656pt x 429.10312pt>
+<Visualizza_farmaci_per_paziente.png, id=182, 419.31656pt x 429.10312pt>
 File: Visualizza_farmaci_per_paziente.png Graphic file (type png)
 
 <use Visualizza_farmaci_per_paziente.png>
 Package pdftex.def Info: Visualizza_farmaci_per_paziente.png used on input line
- 253.
+ 263.
 (pdftex.def)             Requested size: 451.6875pt x 462.2328pt.
 
 
@@ -932,11 +974,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9 <./Visualizza_farmaci_per_paziente.png>]
-<Class_diagram_min.png, id=172, 1246.6575pt x 1750.28906pt>
+<Class_diagram_min.png, id=202, 1246.6575pt x 1750.28906pt>
 File: Class_diagram_min.png Graphic file (type png)
 
 <use Class_diagram_min.png>
-Package pdftex.def Info: Class_diagram_min.png used on input line 261.
+Package pdftex.def Info: Class_diagram_min.png used on input line 271.
 (pdftex.def)             Requested size: 406.51599pt x 570.73343pt.
 
 
@@ -946,26 +988,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10 <./Class_diagram_min.png>]
-<Inserimento_paziente_seq.png, id=179, 1082.54437pt x 1103.62312pt>
+<Inserimento_paziente_seq.png, id=209, 1082.54437pt x 1103.62312pt>
 File: Inserimento_paziente_seq.png Graphic file (type png)
 
 <use Inserimento_paziente_seq.png>
-Package pdftex.def Info: Inserimento_paziente_seq.png used on input line 266.
+Package pdftex.def Info: Inserimento_paziente_seq.png used on input line 276.
 (pdftex.def)             Requested size: 451.6875pt x 460.47054pt.
 
-<Visualizza_prescrizioni_filtrate_seq.png, id=180, 632.3625pt x 747.54282pt>
+<Visualizza_prescrizioni_filtrate_seq.png, id=210, 632.3625pt x 747.54282pt>
 File: Visualizza_prescrizioni_filtrate_seq.png Graphic file (type png)
 
 <use Visualizza_prescrizioni_filtrate_seq.png>
 Package pdftex.def Info: Visualizza_prescrizioni_filtrate_seq.png used on input
- line 267.
+ line 277.
 (pdftex.def)             Requested size: 451.6875pt x 533.96437pt.
 
-<Login_sequence_seq.png, id=181, 1202.99437pt x 645.16031pt>
+<Login_sequence_seq.png, id=211, 1202.99437pt x 645.16031pt>
 File: Login_sequence_seq.png Graphic file (type png)
 
 <use Login_sequence_seq.png>
-Package pdftex.def Info: Login_sequence_seq.png used on input line 268.
+Package pdftex.def Info: Login_sequence_seq.png used on input line 278.
 (pdftex.def)             Requested size: 451.6875pt x 242.23969pt.
 
 
@@ -982,14 +1024,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12 <./Visualizza_prescrizioni_filtrate_seq.png>]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 287.
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13 <./Login_sequence_seq.png>] 
-AED: lastpage setting LastPage
+[13 <./Login_sequence_seq.png>] <login.png, id=232, 1397.22pt x 847.165pt>
+File: login.png Graphic file (type png)
+
+<use login.png>
+Package pdftex.def Info: login.png used on input line 322.
+(pdftex.def)             Requested size: 321.82288pt x 195.13098pt.
+ <pazienti.png, id=233, 1397.22pt x 847.165pt>
+File: pazienti.png Graphic file (type png)
+
+<use pazienti.png>
+Package pdftex.def Info: pazienti.png used on input line 327.
+(pdftex.def)             Requested size: 321.82288pt x 195.13098pt.
+ <farmaci.png, id=234, 1397.22pt x 847.165pt>
+File: farmaci.png Graphic file (type png)
+
+<use farmaci.png>
+Package pdftex.def Info: farmaci.png used on input line 332.
+(pdftex.def)             Requested size: 321.82288pt x 195.13098pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -997,35 +1062,64 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 320.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 320.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15 <./login.png> <./pazienti.png> <./farmaci.png>]
+<mvc.png, id=250, 442.65375pt x 232.87pt>
+File: mvc.png Graphic file (type png)
+ <use mvc.png>
+Package pdftex.def Info: mvc.png used on input line 344.
+(pdftex.def)             Requested size: 316.17987pt x 166.34442pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16 <./mvc.png>] 
+AED: lastpage setting LastPage
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 379.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 379.
  (./elaborato.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 320.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 320.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 379.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 379.
 Package rerunfilecheck Info: File `elaborato.out' has not changed.
-(rerunfilecheck)             Checksum: 944343F4F3BB2D42890A0CED5825B0A5;672.
+(rerunfilecheck)             Checksum: 6D6776B1D3908F79C4725657B4F3765C;1056.
  ) 
 Here is how much of TeX's memory you used:
- 11609 strings out of 492995
- 167127 string characters out of 6132704
- 318348 words of memory out of 5000000
- 14863 multiletter control sequences out of 15000+600000
- 55307 words of font info for 51 fonts, out of 8000000 for 9000
+ 12371 strings out of 492995
+ 177857 string characters out of 6132704
+ 341408 words of memory out of 5000000
+ 15583 multiletter control sequences out of 15000+600000
+ 58662 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,43p,922b,599s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
-ic/lm/lmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri1
-2.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtl10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on elaborato.pdf (15 pages, 913590 bytes).
+ 42i,13n,43p,922b,618s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
+/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/lm/lmtl10.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on elaborato.pdf (18 pages, 1260013 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 75 named destinations out of 1000 (max. 500000)
- 147 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
+ 89 named destinations out of 1000 (max. 500000)
+ 215 words of extra memory for PDF output out of 10000 (max. 10000000)
 
