@@ -11,14 +11,14 @@
 bool mm::LoginWindow::init() {
     Gtk::Button *button;
     Gtk::Window *window;
-    Gtk::MenuBar *menuBar;
+    Gtk::Box *topInfoBox;
 
-    RefBuilder::get_instance().get_widget("menuBar", menuBar);
+    RefBuilder::get_instance().get_widget("topInfoBox", topInfoBox);
     RefBuilder::get_instance().get_widget("loginButton", button);
     RefBuilder::get_instance().get_widget("mainWindow", window);
     window->signal_key_release_event().connect(sigc::mem_fun(this, &mm::LoginWindow::onKeyPressed));
     button->signal_clicked().connect(sigc::mem_fun(this, &mm::LoginWindow::onLoginButtonClicked));
-    menuBar->set_visible(false);
+    topInfoBox->set_visible(false);
     return true;
 }
 
@@ -38,16 +38,22 @@ void mm::LoginWindow::onLoginButtonClicked() {
 
     Gtk::Entry *name;
     Gtk::Entry *password;
+    Gtk::Label *doctorName;
+    Gtk::Label *doctorID;
 
     refBuilder.get_widget("loginName", name);
     refBuilder.get_widget("loginPassword", password);
+    refBuilder.get_widget("doctorName", doctorName);
+    refBuilder.get_widget("doctorID", doctorID);
+
     log->debug("try to log in with username: {} and password: {}", static_cast<std::string>(name->get_text()),
                static_cast<std::string>(password->get_text()));
 
     if (model::authentication::check_login(name->get_text(), password->get_text())) {
         log->info("log in with user: {}", static_cast<std::string>(name->get_text()));
         next = MAIN;
-
+        doctorName->set_text(model::authentication::Login::get_instance().user_name);
+        doctorID->set_text(Glib::ustring::format(model::authentication::Login::get_instance().regional_id));
         name->set_text("");
         password->set_text("");
         name->grab_focus();
