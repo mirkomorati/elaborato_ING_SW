@@ -36,7 +36,6 @@ void mm::PatientWindow::initHandlers() {
     Gtk::ToolButton *add_prescription_button;
     Gtk::ToolButton *remove_patient_button;
     Gtk::ToolButton *remove_prescription_button;
-    Gtk::ImageMenuItem *aboutMenuItem;
     Gtk::Switch *filterSwitch;
     Gtk::RadioButton *year, *semester, *quarter, *month, *custom;
     Gtk::ComboBoxText *yearCombo;
@@ -54,7 +53,6 @@ void mm::PatientWindow::initHandlers() {
     refBuilder.get_widget("addPrescription", add_prescription_button);
     refBuilder.get_widget("removePatient", remove_patient_button);
     refBuilder.get_widget("removePrescription", remove_prescription_button);
-    refBuilder.get_widget("aboutMenuItem", aboutMenuItem);
     refBuilder.get_widget("filterSwitch", filterSwitch);
     refBuilder.get_widget("yearFilterRadioButton", year);
     refBuilder.get_widget("semesterFilterRadioButton", semester);
