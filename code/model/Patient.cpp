@@ -139,7 +139,7 @@ bool mm::model::Patient::operator!=(const mm::model::Patient &rhs) const {
 bool mm::model::Patient::is_valid() {
     return !first_name.empty()
            && !last_name.empty()
-           && !fiscal_code.empty() // todo use fiscalCodeIsValid() for now it does not work.
+           && fiscalCodeIsValid()
            && !birth_date.empty()
            && !birth_place.empty()
            && !address.empty()
@@ -147,7 +147,6 @@ bool mm::model::Patient::is_valid() {
 }
 
 bool mm::model::Patient::fiscalCodeIsValid() {
-    // todo regex non perfetta ma valida
     std::regex regex("^[A-Z]{6}[A-Z0-9]{2}[A-Z][A-Z0-9]{2}[A-Z][A-Z0-9]{3}[A-Z]$");
     return !fiscal_code.empty() && std::regex_match(fiscal_code, regex);
 }
