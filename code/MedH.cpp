@@ -10,6 +10,7 @@
 #include "model/Authentication.hpp"
 #include "gui/MainWindow.hpp"
 #include <spdlog/spdlog.h>
+#include <spdlog/sinks/stdout_color_sinks.h>
 
 int mm::MedH::run() {
     Gtk::Window *mainWindow;
